@@ -128,9 +128,13 @@
    "source": "Permissions Policy: Skipping unsupported allow value “%S”.",
    "original": "Permissions Policy : valeur allow non prise en charge « %S ».",
    "text": "Permissions Policy : valeur allow non prise en charge ignorée « %S ».",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373304,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/dom/chrome/security/security.properties/?string=340298",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -154,9 +158,13 @@
    "source": "Permissions Policy: Skipping empty allow list for feature: “%S”.",
    "original": "Permissions Policy : liste allow vide pour la fonctionnalité « %S ».",
    "text": "Permissions Policy : liste allow vide ignorée pour la fonctionnalité « %S ».",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373303,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/dom/chrome/security/security.properties/?string=340297",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 154 of 16,964 |
+| **Strings reviewed this run** | 14 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,41 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (7)
 
-_Nothing was fixed._
+- `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — "Crossword" translated as "Mots fléchés" (arrow-word puzzle), a different puzzle type.
+    - Current: `label: Mots fléchés`
+    - Source: `label: Crossword`
+    - Suggest: `label: Mots croisés`
+    - A crossword is "mots croisés" in French; "mots fléchés" is a distinct puzzle format.
+- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — "Skipping" is dropped, so the message no longer says the unsupported value is ignored.
+    - Current: `Permissions Policy : valeur allow non prise en charge « %S ».`
+    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
+    - Suggest: `Permissions Policy : valeur allow non prise en charge « %S » ignorée.`
+    - en-US "Skipping unsupported allow value" indicates the value is skipped; the French omits that information, unlike the parallel string PermissionsPolicyUnsupportedFeatureName which keeps "ignoré".
+- `PermissionsPolicyInvalidEmptyAllowValue` — `dom/chrome/security/security.properties` — The verb "Skipping" (ignored) is dropped, so the message no longer states the list is being skipped.
+    - Current: `Permissions Policy : liste allow vide pour la fonctionnalité « %S ».`
+    - Source: `Permissions Policy: Skipping empty allow list for feature: “%S”.`
+    - Suggest: `Permissions Policy : liste allow vide ignorée pour la fonctionnalité « %S ».`
+    - en-US "Skipping empty allow list for feature" states the item is skipped; the French only reports that the list is empty.
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Verb "exporter" is in the infinitive instead of the imperative, breaking the list of imperatives.
+    - Current: `Réorganisez, supprimez, fusionnez et exporter des pages.`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `Réorganisez, supprimez, fusionnez et exportez des pages.`
+    - The other verbs are imperative (« Réorganisez, supprimez, fusionnez »); « exporter » should be « exportez » to match the en-US imperative "export".
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "right where you browse" (in the browser itself) is rendered as "où que vous soyez" (wherever you are).
+    - Current: `Lisez, annotez et signez des fichiers PDF où que vous soyez.`
+    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
+    - Suggest: `Lisez, annotez et signez des fichiers PDF directement dans votre navigateur.`
+    - The en-US says the PDF tools work right inside the browsing experience, not that they work from anywhere/any location.
+- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
+    - Current: `Le nombre spécifié est invalide`
+    - Source: `The line number entered is invalid.`
+    - Suggest: `Le numéro de ligne saisi est invalide.`
+    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
+- `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
+    - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
+    - Suggest: `Beta`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -91,7 +123,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 410 | **char** |
 | dash | `em` 45, `en` 9 | **em** |
 | nbsp | `total` 4032, `before-punctuation` 1763 | _mixed_ |
-| register | `formal` 2906 | **formal** |
+| register | `formal` 2907 | **formal** |
 
 ---
 
@@ -101,14 +133,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (25)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
+| 2 | Wrong content (says something other than the English) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -122,11 +154,6 @@ _Nothing in this category._
     - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
     - Suggest: `Basculer entre les fenêtres { -smart-window-brand-name } et classiques`
     - en-US says "Switch between Smart and Classic Windows"; the French drops the noun for the second item, leaving "et classique" dangling without a noun.
-- `appmenuitem-relay-description2` — `browser/browser/appmenu.ftl` — "Helps prevent spam" (descriptive, hedged) rendered as an imperative "Limitez le spam", dropping the "helps" hedge and changing the statement into a user instruction.
-    - Current: `Limitez le spam dans votre boîte de réception`
-    - Source: `Helps prevent spam in your inbox`
-    - Suggest: `Aide à limiter le spam dans votre boîte de réception`
-    - The en-US is a description of what the feature does, hedged with "Helps"; the French turns it into an imperative promise to the user.
 - `ipprotection-site-inclusions-callout-description` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as accessing sites from another location, changing the meaning.
     - Current: `Activez-le sur les sites où vous souhaitez renforcer votre confidentialité ou y accéder depuis un autre emplacement`
     - Source: `Turn it on when you want extra privacy or location-based browsing, and off where you don’t.`
@@ -142,11 +169,6 @@ _Nothing in this category._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `pour retrouver une expérience comme neuve ?`
     - The en-US promises a fresh, like-new state after cleanup, not improved browsing performance; the French makes a claim the source does not.
-- `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — "Crossword" translated as "Mots fléchés" (arrow-word puzzle), a different puzzle type.
-    - Current: `label: Mots fléchés`
-    - Source: `label: Crossword`
-    - Suggest: `label: Mots croisés`
-    - A crossword is "mots croisés" in French; "mots fléchés" is a distinct puzzle format.
 - `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
     - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
@@ -162,16 +184,6 @@ _Nothing in this category._
     - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
     - Suggest: `la langue préférée de l’utilisateur`
     - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
-- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — "Skipping" is dropped, so the message no longer says the unsupported value is ignored.
-    - Current: `Permissions Policy : valeur allow non prise en charge « %S ».`
-    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
-    - Suggest: `Permissions Policy : valeur allow non prise en charge « %S » ignorée.`
-    - en-US "Skipping unsupported allow value" indicates the value is skipped; the French omits that information, unlike the parallel string PermissionsPolicyUnsupportedFeatureName which keeps "ignoré".
-- `PermissionsPolicyInvalidEmptyAllowValue` — `dom/chrome/security/security.properties` — The verb "Skipping" (ignored) is dropped, so the message no longer states the list is being skipped.
-    - Current: `Permissions Policy : liste allow vide pour la fonctionnalité « %S ».`
-    - Source: `Permissions Policy: Skipping empty allow list for feature: “%S”.`
-    - Suggest: `Permissions Policy : liste allow vide ignorée pour la fonctionnalité « %S ».`
-    - en-US "Skipping empty allow list for feature" states the item is skipped; the French only reports that the list is empty.
 - `about-sync-log-count` — `toolkit/services/aboutSyncLog.ftl` — "log"/"logs" translated as "entrée(s)" (entries) instead of "journal/journaux", inconsistent with the rest of the file.
     - Current: `[one] { $count } entrée [other] { $count } entrées`
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
@@ -185,11 +197,6 @@ _Nothing in this category._
     - Source: `Log modules to diagnose IP Protection (VPN) issues`
     - Suggest: `Journaliser les modules permettant de diagnostiquer`
     - The source is a description of a logging preset instructing which modules to log; "Modules de journalisation" means "logging modules", a different thing.
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "right where you browse" (in the browser itself) is rendered as "où que vous soyez" (wherever you are).
-    - Current: `Lisez, annotez et signez des fichiers PDF où que vous soyez.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Lisez, annotez et signez des fichiers PDF directement dans votre navigateur.`
-    - The en-US says the PDF tools work right inside the browsing experience, not that they work from anywhere/any location.
 - `pdfjs-open-attachments-inline` — `toolkit/toolkit/about/aboutSupport.ftl` — "Inline" mistranslated as "dans les messages", adding a message context absent from the source.
     - Current: `Ouvrir les PDF joints dans les messages`
     - Source: `Open PDF Attachments Inline`
@@ -208,11 +215,6 @@ _Nothing in this category._
     - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
     - Suggest: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».`
     - The en-US has 'anytime' only once. Saying « à tout moment » twice is a redundancy error that makes the sentence ungrammatical in French.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Verb "exporter" is in the infinitive instead of the imperative, breaking the list of imperatives.
-    - Current: `Réorganisez, supprimez, fusionnez et exporter des pages.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Réorganisez, supprimez, fusionnez et exportez des pages.`
-    - The other verbs are imperative (« Réorganisez, supprimez, fusionnez »); « exporter » should be « exportez » to match the en-US imperative "export".
 
 ### D. Terminology, register & consistency
 
@@ -232,9 +234,6 @@ _Nothing in this category._
     - Source: `(value): Sans-serif accesskey: n`
 - `fonts-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
     - Source: `(value): Serif accesskey: S`
-- `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
-    - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
-    - Suggest: `Beta`
 - `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
     - Source: `Running`
 - `serviceworker-worker-status-running` — `devtools/client/application.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
@@ -242,11 +241,6 @@ _Nothing in this category._
 - `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — about-processes-cpu-almost-idle (.title) — toolkit/toolkit/about/aboutProcesses.ftl:167 — "Temps CPU total" vs "Temps total de CPU" (lines 161/170); align.
     - Source: `(value): < 0.1% title: Total CPU time: { $total }{ $unit }`
     - Suggest: `.title`
-- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
-    - Current: `Le nombre spécifié est invalide`
-    - Source: `The line number entered is invalid.`
-    - Suggest: `Le numéro de ligne saisi est invalide.`
-    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
 
 ### E. Typography, punctuation & spacing
 
@@ -285,8 +279,15 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (73)
+### Fixed to date (80)
 
+- `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-02
+- `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — fixed 2026-11-02
+- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — fixed 2026-11-02
+- `PermissionsPolicyInvalidEmptyAllowValue` — `dom/chrome/security/security.properties` — fixed 2026-11-02
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-11-02
+- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-11-02
+- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — fixed 2026-11-02
 - `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-10-26
 - `genai-prompts-summarize-page` — `browser/browser/genai.ftl` — fixed 2026-10-19
 - `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-10-19
@@ -320,10 +321,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
 - `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
 - `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — fixed 2026-08-24
-- `app-manager-handle-protocol` — `browser/browser/preferences/applicationManager.ftl` — fixed 2026-08-24
-- `content-blocking-rfp-incompatibility-warning` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `preferences-etp-rfp-warning-message` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `settings-redesign-promo` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `urlbar-translations-button2` — `browser/browser/translations.ftl` — fixed 2026-08-24
-- `inactive-css-border-image` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `learn-more` — `devtools/client/tooltips.ftl` — fixed 2026-08-24

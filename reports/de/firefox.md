@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,964 |
+| **Strings reviewed this run** | 0 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is rendered as "kontrollierte" (controlled) instead of "regulierte".
-    - Current: `kontrollierte`
-    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
-    - Suggest: `regulierte`
-    - "Regulated organizations" means organizations that must follow regulations. "Kontrollierte Organisationen" means organizations that are controlled or supervised, which is a different meaning. The standard German equivalent is "regulierte".
-- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
-    - Current: `Suchmaschinen und Tastenkombinationen`
-    - Source: `aria-label: Search engines and shortcuts`
-    - Suggest: `Suchmaschinen und Suchverknüpfungen`
-    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -114,22 +105,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (43)
+## 3. Open findings (42)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
-    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
-    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 23 |
+| 2 | Wrong content (says something other than the English) | 22 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -167,11 +149,6 @@ _Also listed under their own category below._
     - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
     - Suggest: `label: Tabs organisieren`
     - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
-    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
-    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
 - `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
     - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
     - Source: `Try built-in VPN, now site by site`

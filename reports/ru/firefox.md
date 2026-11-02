@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 149 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,68 +18,9 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (12)
+### 🆕 New findings (0)
 
-- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — Product name Firefox Enterprise is translated instead of kept as a brand.
-    - Current: `Корпоративный Firefox`
-    - Source: `Firefox Enterprise`
-    - Suggest: `Firefox Enterprise`
-    - Brand/product names are not translated; 'Firefox Enterprise' is a product name, and rendering it as a descriptive phrase changes the brand.
-- `neterror-loopback-refused-not-running` — `toolkit/toolkit/neterror/netError.ftl` — Wrong case of the negative pronoun used as subject: 'Ничего' instead of 'Ничто'.
-    - Current: `Ничего не принимает соединения`
-    - Source: `Nothing is accepting connections on port { $port }. Check that your local server is running.`
-    - Suggest: `Ничто не принимает соединения`
-    - As the grammatical subject the nominative 'ничто' is required; 'ничего' (genitive) makes the sentence ungrammatical.
-- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — 'выйдет из-под пользователя на сайтах' is an unidiomatic, garbled rendering of 'signs you out of sites'.
-    - Current: `выйдет из-под пользователя на сайтах`
-    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
-    - Suggest: `выполнит выход с сайтов`
-    - 'Выйти из-под пользователя' is slang/ungrammatical in this construction; standard UI phrasing is 'выполнит выход с сайтов'.
-- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) says 'удалит его' (it) instead of the plural 'их'.
-    - Current: `[one] Это действие удалит его`
-    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
-    - Suggest: `[one] Это действие удалит их`
-    - Exact count 1 is handled by [1]; the Russian 'one' category covers 21, 31, 101 etc., where en-US uses 'them'. The singular pronoun is wrong for those counts.
-- `about-logins-confirm-delete-all-dialog-checkbox-label` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) uses singular 'пароль' instead of plural 'пароли'.
-    - Current: `[one] Да, удалить пароль`
-    - Source: `{$count ->} [1] Yes, delete password [other] Yes, delete passwords`
-    - Suggest: `[one] Да, удалить пароли`
-    - Exact count 1 is handled by [1]; the 'one' category covers 21, 31, etc. No number is shown, so the singular noun incorrectly says a single password is deleted.
-- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one]/[few]/[many] variants say 'на каждом устройстве, которое…', while [1] and the single-password string say 'на всех устройствах, которые…'.
-    - Current: `на каждом устройстве, которое синхронизирует ваши пароли`
-    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
-    - Suggest: `на всех устройствах, которые синхронизируют ваши пароли`
-    - The same en-US phrase 'on every device that syncs your passwords' is worded two ways in the same dialog family; it should be consistent.
-- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Russian says the agent couldn't verify a signature, but the source says the agent's own signature failed verification.
-    - Current: `{ $agent } не смог проверить подпись`
-    - Source: `File was blocked because { $agent } failed signature verification.`
-    - Suggest: `{ $agent } не прошёл проверку подписи`
-    - The en-US 'failed signature verification' means the agent's signature was checked and failed. 'не смог проверить подпись' makes the agent the one doing the checking, which is a different fact.
-- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — The feature name is written with English-style capitals instead of the Windows Russian name «Родительский контроль».
-    - Current: `Родительским Контролем`
-    - Source: `Blocked by Parental Controls`
-    - Suggest: `Родительским контролем`
-    - The developer comment asks for the name as Windows displays it. Windows in Russian uses «Родительский контроль», capitalising only the first word.
-- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — "Производит выход из-под пользователя" is an unidiomatic, garbled rendering of "Signs you out".
-    - Current: `Производит выход из-под пользователя`
-    - Source: `Signs you out and may clear shopping carts`
-    - Suggest: `Выполняет выход из учётных записей`
-    - "Выход из-под пользователя" is not valid Russian usage. The en-US means the user is signed out of sites, which Russian normally phrases as "выход из учётных записей".
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path's section name is declined ("вкладок и просмотра") instead of matching the actual section label.
-    - Current: `Посетите настройки <span data-l10n-name="chevron"></span> вкладок и просмотра`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Перейдите в «Настройки» <span data-l10n-name="chevron"></span> «Вкладки и просмотр»`
-    - The chevron marks a navigation path (Settings > Tabs and browsing). Declining the section name into the genitive means the text no longer matches the UI label the user has to find.
-- `onboarding-refresh-fro-tab-layout-title` — `browser/browser/newtab/onboarding.ftl` — "new tab layout" is rendered as "a new layout of a tab" instead of "the layout of the New Tab page".
-    - Current: `Выберите новый макет вкладки`
-    - Source: `Choose a new tab layout`
-    - Suggest: `Выберите макет новой вкладки`
-    - The en-US refers to the layout of the New Tab page. The Russian makes "new" describe the layout ("choose a new layout for a tab"), which changes the meaning.
-- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" is translated as «значки» (icons/badges), which does not mean search shortcuts.
-    - Current: `Поисковые системы и значки`
-    - Source: `aria-label: Search engines and shortcuts`
-    - Suggest: `Поисковые системы и ярлыки`
-    - In en-US, "shortcuts" means the search shortcuts (keywords) for the engines. «значки» means icons or badges, so the list label names the wrong thing.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

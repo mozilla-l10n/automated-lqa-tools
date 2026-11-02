@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-30 @ `2eb8d2e6cb72` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 74 of 17,013 |
+| **Strings reviewed this run** | 0 of 17,013 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -135,15 +135,13 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (11)
+### Dismissed by hand (9)
 
 - `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Correct as is
 - `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Stronger is not more effective
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — On purpose, because the alternative is hard to read "nascondere a qualcuno".
 - `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — Clearer as is
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — That's the OS string.
 - `imported-safari-reading-list` — `browser/browser/migration.ftl` — Elenco lettura is correct
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — On purpose for better flow
 - `migration-imported-safari-reading-list` — `browser/browser/migrationWizard.ftl` — Elenco lettura is correct
 - `noDomMutationBreakpoints` — `devtools/client/debugger.properties` — Element is there
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — Element is there

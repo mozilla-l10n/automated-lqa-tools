@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 158 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `credit-card-capture-save-as-new-payment-method-button` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The feminine adjective "novú" does not agree with the masculine noun "spôsob platby" that this button refers to.
-    - Current: `Uložiť ako novú`
-    - Source: `accessKey: S label: Save as new`
-    - Suggest: `Uložiť ako nový`
-    - The developer comment says this saves the details as a new payment method. The surrounding strings translate "payment method" as "spôsob platby", which is masculine, so the adjective should be "nový". The feminine form looks left over from an older "karta" wording.
-- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — A hyphen with spaces is used as a dash instead of a real dash.
-    - Current: `stiahnutý - predstavuje`
-    - Source: `File not downloaded: Potential security risk.`
-    - Suggest: `stiahnutý – predstavuje`
-    - The locale uses real dashes (en/em) for sentence punctuation; a spaced hyphen is a typographic error.
-- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — A comma is missing before "a preto".
-    - Current: `overiť a preto boli`
-    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
-    - Suggest: `overiť, a preto boli`
-    - Slovak punctuation rules require a comma before "a" when it introduces a consequence clause with "preto".
-- `onboarding-refresh-fro-tab-layout-title` — `browser/browser/newtab/onboarding.ftl` — "New tab layout" (layout of the New Tab page) is rendered as "a new layout of tabs".
-    - Current: `Vyberte si nové rozloženie kariet`
-    - Source: `Choose a new tab layout`
-    - Suggest: `Vyberte si rozloženie novej karty`
-    - In en-US "new tab" modifies "layout": this is the layout of the New Tab page. "nové rozloženie kariet" means a new arrangement of tabs, which is a different thing.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

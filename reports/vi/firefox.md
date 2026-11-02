@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 16,308 |
+| **Strings reviewed this run** | 0 of 16,308 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `downloads-file-moved-or-missing` — `browser/browser/downloads.ftl` — "Missing" is rendered as "deleted" (bị xoá), which states a cause the source does not claim.
-    - Current: `bị di chuyển hoặc bị xoá`
-    - Source: `File moved or missing`
-    - Suggest: `bị di chuyển hoặc bị mất`
-    - The en-US says the file was moved or is missing (the comment says it is no longer at the original folder). "bị xoá" means deleted, which the browser cannot know, and it collides with the separate "File deleted" string.
-- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — "Parental Controls" is rendered as the odd "trình kiểm soát con" instead of the Windows feature name.
-    - Current: `trình kiểm soát con`
-    - Source: `Blocked by Parental Controls`
-    - Suggest: `Kiểm soát của phụ huynh`
-    - The developer comment asks for the Windows feature name to be used consistently. "trình kiểm soát con" reads literally as "child controller" and does not match the Vietnamese Windows name for Parental Controls.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

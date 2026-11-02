@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for en-GB: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `downloads-unblock-tip` — `browser/browser/downloads.ftl` — The en-US word "alternate" is kept where British English uses "alternative".
-    - Current: `alternate download source`
-    - Source: `You can search for an alternate download source or try again later.`
-    - Suggest: `alternative download source`
-    - In British English "alternate" mainly means "every other" or "taking turns"; the sense of "another option" is expressed with "alternative", so the en-US usage reads as unadapted.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

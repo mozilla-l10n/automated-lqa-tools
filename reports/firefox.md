@@ -2,29 +2,17 @@
 
 - **Generated:** 2026-11-02
 - **Locales tracked:** 29 (29 with recorded state)
-- **Findings:** 9,188 raised, 2,148 fixed (23%), 6,370 open
-- **Closed by a person:** 24 dismissed, 16 suppressed by rule
+- **Findings:** 9,178 raised, 2,155 fixed (23%), 6,355 open
+- **Closed by a person:** 22 dismissed, 16 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (15)
+### Reads as a deliberate edit (8)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
-- **`cs`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
-    - Current: `Skryjte při prohlížení svou polohu.`
-    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
-- **`de`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
-    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
-    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
-- **`es-MX`** `about-private-browsing-relay-promo-header` — `browser/browser/aboutPrivateBrowsing.ftl`
-    - The hedge "Help prevent" is dropped, so the text promises that the feature prevents spam.
-    - Current: `Previene el spam`
-    - Suggest: `Ayuda a prevenir el spam`
 - **`es-MX`** `toolbar-button-forget` — `browser/browser/browser.ftl`
     - Tooltip drops "some", claiming the button forgets the browsing history as a whole.
     - Current: `Olvidar el historial de navegación`
@@ -41,30 +29,14 @@ The translation makes the product assert something the en-US never said. Nothing
     - The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
     - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
     - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
-- **`ja`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - The translation drops "Help" and promises outright that the VPN hides your location.
-    - Current: `閲覧時の現在位置を隠します。`
-    - Suggest: `閲覧時の現在位置を隠すのに役立ちます。`
 - **`ja`** `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl`
     - "It stays yours" (you keep ownership of the data) is rendered as "user data stays only here", a claim about where the data is kept.
     - Current: `ユーザーデータはここにしか残りません。`
     - Suggest: `データはあなたのものです。`
-- **`pl`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
-    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
-    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
 - **`ru`** `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl`
     - "don’t clear all of your data" reversed into "do not delete any of your data".
     - Current: `не удаляют какие-либо ваши данные`
     - Suggest: `не удаляют все ваши данные`
-- **`sv-SE`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
-    - Current: `Dölj din plats när du surfar.`
-    - Suggest: `Hjälp till att dölja din plats när du surfar.`
-- **`tr`** `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl`
-    - The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
-    - Current: `İnternette gezinirken konumunuzu gizleyin.`
-    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
 - **`vi`** `pageInfo_Privacy_Encrypted2` — `security/manager/chrome/pippki/pippki.properties`
     - "It is unlikely that anyone read this page" was rendered as "no one could read this page", which turns a likelihood into a guarantee.
     - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
@@ -74,11 +46,11 @@ The translation makes the product assert something the en-US never said. Nothing
     - Current: `toàn bộ các mật khẩu web, email, dữ liệu biểu mẫu, chứng chỉ và khóa cá nhân đã lưu`
     - Suggest: `toàn bộ các mật khẩu web và email, chứng chỉ cá nhân và khóa riêng đã lưu`
 
-### Broken output — impact 1 (1750)
+### Broken output — impact 1 (1749)
 
 The value does not render as intended: a blank string, broken markup, a variable the source never passes.
 
-`sv-SE` 212 · `vi` 212 · `ar` 200 · `pt-PT` 183 · `sk` 152 · `el` 143 · `zh-TW` 140 · `uk` 112 · `fi` 108 · `id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 5 · `zh-CN` 4 · `tr` 3
+`sv-SE` 212 · `vi` 212 · `ar` 200 · `pt-PT` 183 · `sk` 152 · `el` 142 · `zh-TW` 140 · `uk` 112 · `fi` 108 · `id` 66 · `es-AR` 48 · `ru` 44 · `cs` 41 · `hu` 26 · `fy-NL` 12 · `pt-BR` 11 · `nl` 10 · `pl` 10 · `ja` 8 · `en-GB` 5 · `zh-CN` 4 · `tr` 3
 
 - **`ar`** `about-logins-import-report-row-description-modified2` — `browser/browser/aboutLogins.ftl`
     - Gender disagreement: feminine verb and adjective with the masculine noun “الولوج”.
@@ -134,43 +106,43 @@ The value does not render as intended: a blank string, broken markup, a variable
     - The singular branches say “passwords” instead of “password”.
     - Current: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszavakat az összes szinkronizált eszközéről.`
     - Suggest: `[1] Ez eltávolítja a { -brand-short-name }ba mentett jelszót az összes szinkronizált eszközéről.`
-- _…and 1735 more, in the per-locale reports linked below._
+- _…and 1734 more, in the per-locale reports linked below._
 
-### Wrong content — impact 2 (2378)
+### Wrong content — impact 2 (2366)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 13,537 | 3,205 | **357** | 319 | 0 | 0 | 0 |
-| [cs](cs/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,742 | 0 | **254** | 165 | 4 | 0 | 0 |
-| [de](de/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,964 | 0 | **43** | 23 | 42 | 0 | 0 |
-| [el](el/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,742 | 0 | **220** | 212 | 0 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,648 | 94 | **0** | 0 | 15 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,742 | 0 | **20** | 12 | 14 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,714 | 28 | **285** | 157 | 143 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 15,336 | 1,406 | **40** | 22 | 113 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,000 | 742 | **69** | 26 | 205 | 0 | 0 |
-| [fi](fi/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,191 | 551 | **156** | 146 | 0 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,964 | 0 | **33** | 15 | 73 | 1 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,708 | 34 | **486** | 135 | 275 | 4 | 0 |
-| [hu](hu/firefox.md) | 2026-11-02 | incremental | `82e218d9` | 16,718 | 24 | **270** | 153 | 7 | 0 | 0 |
-| [id](id/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 13,893 | 2,849 | **285** | 218 | 2 | 0 | 0 |
-| [it](it/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 17,013 | 0 | **0** | 0 | 74 | 11 | 2 |
-| [ja](ja/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **151** | 78 | 274 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,708 | 34 | **347** | 128 | 127 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,730 | 12 | **85** | 60 | 168 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **546** | 192 | 141 | 5 | 0 |
-| [pt-PT](pt-PT/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **313** | 306 | 0 | 0 | 0 |
-| [ru](ru/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **604** | 315 | 182 | 0 | 0 |
-| [sk](sk/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **225** | 220 | 2 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 15,919 | 823 | **51** | 16 | 44 | 0 | 2 |
-| [sv-SE](sv-SE/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **338** | 311 | 0 | 0 | 0 |
-| [tr](tr/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,715 | 27 | **168** | 64 | 193 | 0 | 0 |
-| [uk](uk/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 15,363 | 1,379 | **202** | 194 | 0 | 0 | 0 |
-| [vi](vi/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,308 | 434 | **498** | 394 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,230 | 512 | **77** | 25 | 50 | 0 | 0 |
-| [zh-TW](zh-TW/firefox.md) | 2026-11-02 | incremental | `961bdfbd` | 16,742 | 0 | **247** | 222 | 0 | 0 | 0 |
+| [ar](ar/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 13,537 | 3,205 | **357** | 319 | 0 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **253** | 164 | 4 | 0 | 0 |
+| [de](de/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,964 | 0 | **42** | 22 | 42 | 0 | 0 |
+| [el](el/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **217** | 209 | 0 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,648 | 94 | **0** | 0 | 15 | 1 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **20** | 12 | 14 | 0 | 12 |
+| [es-AR](es-AR/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,714 | 28 | **285** | 157 | 143 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 15,336 | 1,406 | **40** | 22 | 113 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,000 | 742 | **68** | 25 | 205 | 0 | 0 |
+| [fi](fi/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,191 | 551 | **156** | 146 | 0 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,964 | 0 | **25** | 10 | 80 | 1 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **490** | 138 | 275 | 4 | 0 |
+| [hu](hu/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **270** | 153 | 7 | 0 | 0 |
+| [id](id/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 13,893 | 2,849 | **285** | 218 | 2 | 0 | 0 |
+| [it](it/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 17,013 | 0 | **0** | 0 | 74 | 9 | 2 |
+| [ja](ja/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **150** | 77 | 274 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,732 | 10 | **348** | 129 | 127 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **84** | 59 | 168 | 2 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **546** | 192 | 141 | 5 | 0 |
+| [pt-PT](pt-PT/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **313** | 306 | 0 | 0 | 0 |
+| [ru](ru/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **604** | 315 | 182 | 0 | 0 |
+| [sk](sk/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **225** | 220 | 2 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 15,919 | 823 | **51** | 16 | 44 | 0 | 2 |
+| [sv-SE](sv-SE/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **337** | 310 | 0 | 0 | 0 |
+| [tr](tr/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,715 | 27 | **166** | 62 | 193 | 0 | 0 |
+| [uk](uk/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 15,363 | 1,379 | **202** | 194 | 0 | 0 | 0 |
+| [vi](vi/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,308 | 434 | **498** | 394 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,230 | 512 | **77** | 25 | 50 | 0 | 0 |
+| [zh-TW](zh-TW/firefox.md) | 2026-11-02 | incremental | `ca562c96` | 16,742 | 0 | **246** | 221 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

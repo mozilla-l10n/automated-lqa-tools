@@ -157,6 +157,30 @@
  },
  {
   "category": "C",
+  "check": "llm",
+  "current": "Dit smyt it fan",
+  "dismissed_because": "",
+  "fid": "b397db52907f",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Without \"út\" or \"fuort\", \"smite\" does not mean \"delete\". The parallel string about-logins-confirm-delete-dialog-message correctly uses \"smyt it út\". The same fix applies to the plural form (\"smyt se út\").",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0b304706",
+  "string_id": "about-logins-confirm-delete-all-sync-dialog-message",
+  "suggest": "Dit smyt it út",
+  "summary": "The particle is missing from the separable verb, so \"smyt it fan\" does not mean \"deletes it from\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
   "check": "legacy",
   "current": "bewarren oanmeldingen … te eksportearjen",
   "dismissed_because": "",
@@ -12818,6 +12842,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Ferbinings-tasteanlist:",
+  "dismissed_because": "",
+  "fid": "4439ab82455b",
+  "file": "dom/chrome/security/security.properties",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says explicitly: \"Do not translate Connection-Allowlist.\" It is the name of a policy header.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "514b2d93",
+  "string_id": "ConnectionAllowlistBlocked",
+  "suggest": "Connection-Allowlist:",
+  "summary": "The do-not-translate token \"Connection-Allowlist\" has been translated.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Ferbinings-tasteanlist:",
+  "dismissed_because": "",
+  "fid": "a1942a024d95",
+  "file": "dom/chrome/security/security.properties",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says explicitly: \"Do not translate Connection-Allowlist.\"",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "16bff374",
+  "string_id": "ConnectionAllowlistReportOnlyBlocked",
+  "suggest": "Connection-Allowlist:",
+  "summary": "The do-not-translate token \"Connection-Allowlist\" has been translated.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "Machtigingenbelied",
@@ -18441,6 +18513,30 @@
   "string_id": "url-classifier-search-result-list",
   "suggest": "List mei tabellen",
   "summary": "List fan tabellen → List mei tabellen",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Firefox foar Undernimmingen",
+  "dismissed_because": "",
+  "fid": "03e731c91a76",
+  "file": "toolkit/toolkit/branding/brandings.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "This is a brand term for a product name, and by convention product names are not translated. The term is reused in other strings as the product's name.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ea0c0ac3",
+  "string_id": "-firefox-enterprise-brand-name",
+  "suggest": "Firefox Enterprise",
+  "summary": "The product name \"Firefox Enterprise\" has been translated into Frisian.",
   "suppressed_by": ""
  },
  {

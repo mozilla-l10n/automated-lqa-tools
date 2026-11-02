@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 163 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,47 +18,9 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (0)
 
-- `autofill-payment-methods-require-device-sign-in-checkbox` — `browser/browser/preferences/preferences.ftl` — Access key `o` of `autofill-payment-methods-require-device-sign-in-checkbox` is not present in its label
-    - Current: `o`
-    - Source: `accesskey: o label: Require device sign-in to autofill`
-    - The label is “Απαιτείται σύνδεση συσκευής για αυτόματη συμπλήρωση”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `credit-card-update-saved-payment-method-doorhanger-header` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Adjective is masculine/neuter but «μεθόδου» is feminine, so they don't agree.
-    - Current: `αποθηκευμένου μεθόδου`
-    - Source: `Update saved payment method?`
-    - Suggest: `αποθηκευμένης μεθόδου`
-    - «μέθοδος» is a feminine noun, so its genitive adjective must be «αποθηκευμένης».
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Plural verb «αποθηκεύτηκαν» doesn't agree with the single security code name.
-    - Current: `{ $securityCode } αποθηκεύτηκαν`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $securityCode } αποθηκεύτηκε`
-    - $securityCode is one code name (e.g. "CVV"), so the verb must be singular.
-- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — "It" (the saved password) is translated as «το αρχείο» ("the file").
-    - Current: `Θα διαγραφεί το αρχείο`
-    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
-    - Suggest: `Θα διαγραφεί ο κωδικός πρόσβασης`
-    - The developer comment says this dialog deletes one saved password; nothing about it is a file.
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — "Would block" is translated as a future ("will block") instead of a conditional.
-    - Current: `θα αποκλείσουν`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
-    - Suggest: `θα απέκλειαν`
-    - A report-only policy blocks nothing; the source uses the conditional "would block", which in Greek is «θα απέκλειαν», not the future «θα αποκλείσουν».
-- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [other] variant uses the plural article "τα" before the brand name, which should take the singular neuter "το".
-    - Current: `Διαγράφει από τα { -brand-short-name }`
-    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
-    - Suggest: `Διαγράφει από το { -brand-short-name }`
-    - { -brand-short-name } (Firefox) is singular neuter in Greek, and the other variants of this message correctly use "από το". The plural count refers to the passwords, not the browser, so "τα" is an agreement error.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Misspelling: "διωτικότητα" is missing the initial iota.
-    - Current: `διωτικότητα`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `ιδιωτικότητα`
-    - The word for privacy is "ιδιωτικότητα", as used in the sibling string ipprotection-site-inclusions-callout-description-lapsed-users.
-- `vpn-error-alert-title-1` — `browser/browser/ipProtection.ftl` — Verb is singular but the subject is plural (VPN and rules).
-    - Current: `δεν λειτουργεί`
-    - Source: `VPN and rules aren’t working right now.`
-    - Suggest: `δεν λειτουργούν`
-    - The subject "Το VPN και οι κανόνες" is plural, so the verb must be plural, matching the en-US "aren’t working".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -123,13 +85,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (220)
+## 3. Open findings (217)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 143 |
-| 2 | Wrong content (says something other than the English) | 69 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 142 |
+| 2 | Wrong content (says something other than the English) | 67 |
 | 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -155,11 +117,6 @@ _Nothing reported._
     - Source: `Set to default`
     - Suggest: `Ορισμός ως προεπιλογή`
     - en-US “Set to default” is the action label of a button that sets Firefox as default. «Ορίστηκε» means “was set as default”, telling the user the change is already done. Other default-browser buttons in the tree use «Ορισμός ως προεπιλογή».
-- `spotlight-public-wifi-vpn-body` — `browser/browser/newtab/asrouter.ftl` — "It will help keep you protected" becomes an unqualified promise that the VPN will protect the user.
-    - Current: `Θα σας προστατεύει κατά την περιήγηση`
-    - Source: `To hide your location and browsing activity, consider a Virtual Private Network. It will help keep you protected when browsing in public places like airports and coffee shops.`
-    - Suggest: `Θα σας βοηθήσει να παραμείνετε προστατευμένοι κατά την περιήγηση`
-    - The en-US hedge "will help keep you protected" is deliberate; «Θα σας προστατεύει» asserts protection outright, a guarantee the product does not give.
 - `windows-10-eos-callout-addons-title` — `browser/browser/newtab/asrouter.ftl` — The positive "big impacts" is rendered with a word that in Greek denotes negative repercussions.
     - Current: `μεγάλες επιπτώσεις`
     - Source: `Try add-ons: simple upgrades, big impacts`
@@ -170,11 +127,6 @@ _Nothing reported._
     - Source: `Backing up { -brand-shorter-name } makes it easy to bring your data and privacy settings with you.`
     - Suggest: `τα δεδομένα και τις ρυθμίσεις απορρήτου σας`
     - The en-US promises you can bring both your data and your privacy settings; the Greek genitive makes «δεδομένων» a modifier of «ρυθμίσεις», so only settings are carried over.
-- `newtab-privacy-message-info-2` — `browser/browser/newtab/newtab.ftl` — The hedge "helps stop" is dropped, stating that tracker blocking prevents companies from following the user.
-    - Current: `εμποδίζει την καταγραφή σας από εταιρείες`
-    - Source: `Tracker blocking helps stop companies from following you online.`
-    - Suggest: `βοηθά στο να μην σας καταγράφουν εταιρείες`
-    - en-US "helps stop companies from following you online" is hedged, and neighbouring strings in the same widget keep the hedge («συμβάλλει», «βοηθά»); here it is removed.
 - `newtab-privacy-message-info-6` — `browser/browser/newtab/newtab.ftl` — The hedged "but other browsers might" is turned into a flat assertion that other browsers do sell user data.
     - Current: `σε αντίθεση με άλλα προγράμματα περιήγησης`
     - Source: `Keep your data with { -brand-short-name }. We never sell it, but other browsers might.`
@@ -419,11 +371,6 @@ _Nothing reported._
     - Source: `document.requestStorageAccess() may not be called in a sandboxed iframe without allow-storage-access-by-user-activation in its sandbox attribute.`
     - Suggest: `Το document.requestStorageAccess() δεν μπορεί να κληθεί`
     - en-US “may not be called” is a prohibition, and every sibling string (RequestStorageAccessNested, RequestStorageAccessPermissionsPolicy) renders it as «δεν μπορεί να κληθεί»; here it reads as “it might not be possible”.
-- `ScreenFingerprintingProtectionWarning` — `dom/chrome/dom/dom.properties` — “helps prevent” rendered as an unqualified “prevents”.
-    - Current: `Αυτή η προστασία εμποδίζει τους ιστοτόπους από το να δημιουργήσουν ένα αποτύπωμα`
-    - Source: `Fingerprinting Protection is altering screen.availWidth and screen.availHeight. These values may not match your actual screen dimensions. This protection helps prevent websites building a fingerprint that can be used to…`
-    - Suggest: `Αυτή η προστασία συμβάλλει στο να εμποδίζονται οι ιστότοποι από τη δημιουργία ενός αποτυπώματος`
-    - The source hedges (“helps prevent websites building a fingerprint”); the Greek states the protection does prevent it, a stronger guarantee about the product’s behaviour than Firefox makes.
 - `PESelectorGroupExtraCombinator` — `dom/chrome/layout/css.properties` — “Dangling combinator” rendered as “wavering combination”.
     - Current: `Αμφιταλαντευόμενος συνδυασμός.`
     - Source: `Dangling combinator.`
@@ -434,7 +381,22 @@ _Nothing reported._
     - Source: `Selector expected.`
     - Suggest: `Αναμενόταν επιλογέας.`
     - Everywhere else in this file “selector” is «επιλογέας»; «διαλογέας» is a different word (sorting machine) and is not a CSS term.
-- _…and 39 more; see `state/` for the full list._
+- `EncSpeculationFailMeta` — `dom/chrome/layout/htmlparser.properties` — “encoding” rendered as “encryption”.
+    - Current: `τη μεταετικέτα που δήλωσε την κρυπτογράφηση`
+    - Source: `The start of the document was reparsed, because there were non-ASCII characters before the meta tag that declared the encoding. The meta should be the first child of head without non-ASCII comments before.`
+    - Suggest: `τη μεταετικέτα που δήλωσε την κωδικοποίηση`
+    - The whole string is about character encoding declarations («κωδικοποίηση» throughout the file); «κρυπτογράφηση» means encryption and is a different concept.
+- `CompositorAnimationWarningHasRenderingObserver` — `dom/chrome/layout/layout_errors.properties` — SVG “masking” rendered as “disguise”.
+    - Current: `απόκομμα/μεταμφίεση SVG`
+    - Source: `Animation cannot be run on the compositor because the element has rendering observers (-moz-element or SVG clipping/masking)`
+    - Suggest: `αποκοπή/μάσκα SVG`
+    - “SVG clipping/masking” are the CSS/SVG operations; «μεταμφίεση» means disguise and is not the SVG term.
+- `3` — `dom/chrome/layout/xmlparser.properties` — “no root element found” loses “root”.
+    - Current: `δεν βρέθηκε στοιχείο`
+    - Source: `no root element found`
+    - Suggest: `δεν βρέθηκε ριζικό στοιχείο`
+    - The Expat error is specifically about the missing root element; “no element found” describes a different condition.
+- _…and 36 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
