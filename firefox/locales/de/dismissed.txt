@@ -15,3 +15,7 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+default-browser-guidance-notification-body-instruction-win10 @ browser/browser/defaultBrowserNotification.ftl — auto-suggest (2026-11-02): The quoted label refers to the Windows 10 Settings > Default apps entry, which German Windows displays as "Webbrowser", not to Firefox's desktop-entry-generic-name.
+migration-chrome-windows-password-import-step3 @ browser/browser/migrationWizard.ftl — auto-suggest (2026-11-02): The step describes Chrome's own password-export button, not Firefox's downloadFile.label, so matching Firefox's 'Datei speichern unter…' would be wrong.
+xslt-bad-value @ dom/dom/xslt.ftl — auto-suggest (2026-11-02): The string is an XSLT attribute-value error and contains no history term, so "Chronik" is irrelevant.
+user-context-personal2 @ toolkit/toolkit/global/contextual-identity.ftl — auto-suggest (2026-11-02): "Freizeit" is the long-established German Firefox name for the Personal container (paired with "Arbeit" for Work). It is a deliberate localization choice that keeps the private-vs-work contrast, not a mistranslation.
