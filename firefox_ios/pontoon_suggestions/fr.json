@@ -32,6 +32,492 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=152655",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/AppIconSelection.strings",
+   "string_id": "Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/AppIconSelection.strings",
+     "Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137"
+    ]
+   },
+   "fids": [
+    "6717b6d8e188"
+   ],
+   "findings": [
+    "\"Sunrise\" is misspelled as \"Levé de soleil\" instead of \"Lever de soleil\"."
+   ],
+   "source": "Sunrise",
+   "original": "Levé de soleil",
+   "text": "Lever de soleil",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+   "string_id": "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+     "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2"
+    ]
+   },
+   "fids": [
+    "bd90c129555b"
+   ],
+   "findings": [
+    "The French adds \"et mots de passe\" (and passwords), which the source does not mention; the source only refers to credit cards."
+   ],
+   "source": "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.",
+   "original": "Pour enregistrer et remplir automatiquement les cartes bancaires et mots de passe, activez Face ID, Touch ID ou un code pour l’appareil.",
+   "text": "Pour enregistrer et remplir automatiquement les cartes bancaires, activez Face ID, Touch ID ou un code pour l’appareil.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/JumpBackIn.strings",
+   "string_id": "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/JumpBackIn.strings",
+     "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106"
+    ]
+   },
+   "fids": [
+    "3fa3bcec804f"
+   ],
+   "findings": [
+    "Missing \"où\" in the phrase \"là où vous en étiez\"."
+   ],
+   "source": "Your tabs are syncing! Pick up where you left off on your other device.",
+   "original": "Vos onglets sont synchronisés ! Reprenez là vous en étiez sur votre autre appareil.",
+   "text": "Vos onglets sont synchronisés ! Reprenez là où vous en étiez sur votre autre appareil.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Microsurvey.strings",
+   "string_id": "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Microsurvey.strings",
+     "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129"
+    ]
+   },
+   "fids": [
+    "320c5c466f1e"
+   ],
+   "findings": [
+    "\"Unselected\" (state: not selected) is rendered as \"Désélectionné\", which means \"deselected\" (an action/result of removing a selection)."
+   ],
+   "source": "Unselected",
+   "original": "Désélectionné",
+   "text": "Non sélectionné",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Customization.Intro.Description.v123",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Customization.Intro.Description.v123"
+    ]
+   },
+   "fids": [
+    "cb6426ec4116"
+   ],
+   "findings": [
+    "Ungrammatical phrase: \"à votre propre façon de naviguer\" lacks the verb of adaptation present in the source (\"to match\")."
+   ],
+   "source": "Set your theme and toolbar to match your unique browsing style.",
+   "original": "Configurez le thème et la barre d’outils à votre propre façon de naviguer.",
+   "text": "Configurez le thème et la barre d’outils pour les adapter à votre propre façon de naviguer.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114"
+    ]
+   },
+   "fids": [
+    "35a594af2e5f"
+   ],
+   "findings": [
+    "Agreement error: \"limité\" should agree with the feminine noun \"édition\"."
+   ],
+   "source": "Limited Edition Wallpaper",
+   "original": "Fond d’écran en édition limité",
+   "text": "Fond d’écran en édition limitée",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/PasswordGenerator.strings",
+   "string_id": "PasswordGenerator.Description.v132",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/PasswordGenerator.strings",
+     "PasswordGenerator.Description.v132"
+    ]
+   },
+   "fids": [
+    "3b5af83ad82d"
+   ],
+   "findings": [
+    "\"strong password\" rendered as \"mot de passe compliqué\" instead of the established \"mot de passe robuste/fort\"."
+   ],
+   "source": "Protect your account by using a strong, randomly generated password.",
+   "original": "Protégez votre compte en utilisant un mot de passe compliqué, généré aléatoirement.",
+   "text": "Protégez votre compte en utilisant un mot de passe robuste, généré aléatoirement.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+   "string_id": "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+     "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158"
+    ]
+   },
+   "fids": [
+    "b43497182a42"
+   ],
+   "findings": [
+    "Missing feminine agreement in \"vie privé\"."
+   ],
+   "source": "Private By Design",
+   "original": "Conçu pour protéger votre vie privé",
+   "text": "Conçu pour protéger votre vie privée",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+   "string_id": "QuickAnswers.PrivacyBanner.Title.v158",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+     "QuickAnswers.PrivacyBanner.Title.v158"
+    ]
+   },
+   "fids": [
+    "e5064b80c992"
+   ],
+   "findings": [
+    "Missing feminine agreement in \"vie privé\"."
+   ],
+   "source": "Private by Design",
+   "original": "Conçu pour protéger votre vie privé",
+   "text": "Conçu pour protéger votre vie privée",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Search.GoogleLens.Footnote.v153",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Search.GoogleLens.Footnote.v153"
+    ]
+   },
+   "fids": [
+    "81eb43b50d6f"
+   ],
+   "findings": [
+    "\"your active search engine\" is translated as \"moteur de recherche principal\" (main/primary), changing the meaning."
+   ],
+   "source": "Available only when Google is enabled above and is your active search engine while browsing.",
+   "original": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche principal lors de la navigation.",
+   "text": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche actif lors de la navigation.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+   "string_id": "Summarizer.Error.MissingPageContent.Message.v142",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+     "Summarizer.Error.MissingPageContent.Message.v142"
+    ]
+   },
+   "fids": [
+    "fe0f82dc78ec"
+   ],
+   "findings": [
+    "\"hit summarize\" is rendered as « cliquez » (click) on a touch device, and the source says nothing about clicking."
+   ],
+   "source": "Page is still loading. Wait for it to finish, then hit summarize.",
+   "original": "La page est en cours de chargement. Veuillez attendre qu’elle soit complètement chargée, puis cliquez sur « Résumer ».",
+   "text": "La page est en cours de chargement. Veuillez attendre qu’elle soit complètement chargée, puis appuyez sur « Résumer ».",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+   "string_id": "Summarizer.Error.Unknown.Message.v142",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+     "Summarizer.Error.Unknown.Message.v142"
+    ]
+   },
+   "fids": [
+    "df1309decb33"
+   ],
+   "findings": [
+    "\"summarizing\" is translated as « synthèse » here while every other string in the same feature uses « résumé »."
+   ],
+   "source": "Error summarizing page. Try again later.",
+   "original": "Erreur lors de la synthèse de la page. Réessayez plus tard.",
+   "text": "Erreur lors du résumé de la page. Réessayez plus tard.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Logins.PasscodeRequirement.Warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Logins.PasscodeRequirement.Warning"
+    ]
+   },
+   "fids": [
+    "39e49cf756bd"
+   ],
+   "findings": [
+    "The brand name \"Firefox\" from the source is dropped in the French translation."
+   ],
+   "source": "To use the AutoFill feature for Firefox, you must have a device passcode enabled.",
+   "original": "Pour utiliser la fonctionnalité de remplissage automatique, vous devez avoir un code d’appareil actif.",
+   "text": "Pour utiliser la fonctionnalité de remplissage automatique de Firefox, vous devez avoir un code d’appareil actif.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Quick-Search Engines",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Quick-Search Engines"
+    ]
+   },
+   "fids": [
+    "9c998c54183a"
+   ],
+   "findings": [
+    "Agreement error: \"Moteurs de recherches rapides\" should be \"Moteurs de recherche rapides\"."
+   ],
+   "source": "Quick-Search Engines",
+   "original": "Moteurs de recherches rapides",
+   "text": "Moteurs de recherche rapides",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Search.SuggestSectionTitle.v102",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Search.SuggestSectionTitle.v102"
+    ]
+   },
+   "fids": [
+    "3d8d0d77d9da"
+   ],
+   "findings": [
+    "\"Firefox Suggest\" is a product/feature name and was translated as a sentence \"Firefox suggère\"."
+   ],
+   "source": "Firefox Suggest",
+   "original": "Firefox suggère",
+   "text": "Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.WebsiteData.SelectedConfirmPrompt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.WebsiteData.SelectedConfirmPrompt"
+    ]
+   },
+   "fids": [
+    "a6ead3890737"
+   ],
+   "findings": [
+    "Added \"l’ensemble des\" (all of) which the source does not say for selected items."
+   ],
+   "source": "This action will clear the selected items. It cannot be undone.",
+   "original": "Cette action effacera l’ensemble des éléments sélectionnés et est irréversible.",
+   "text": "Cette action effacera les éléments sélectionnés et est irréversible.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "There was a problem accessing tabs from your other devices. Try again in a few moments.",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "There was a problem accessing tabs from your other devices. Try again in a few moments."
+    ]
+   },
+   "fids": [
+    "96c7066d0bc2"
+   ],
+   "findings": [
+    "\"in a few moments\" translated as \"plus tard\" (later), changing the timing meaning."
+   ],
+   "source": "There was a problem accessing tabs from your other devices. Try again in a few moments.",
+   "original": "Un problème s’est produit en accédant aux onglets de vos autres appareils. Veuillez réessayer plus tard.",
+   "text": "Un problème s’est produit en accédant aux onglets de vos autres appareils. Veuillez réessayer dans quelques instants.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/LoginManager.strings",
+   "string_id": "Clear Search",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/LoginManager.strings",
+     "Clear Search"
+    ]
+   },
+   "fids": [
+    "6a6dde30b528"
+   ],
+   "findings": [
+    "\"Clear Search\" is rendered as plural \"Effacer les recherches\" (clear the searches) instead of clearing the current search field."
+   ],
+   "source": "Clear Search",
+   "original": "Effacer les recherches",
+   "text": "Effacer la recherche",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
   }
  ]
 }
