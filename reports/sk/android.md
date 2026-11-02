@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 51 of 2,583 |
+| **Strings reviewed this run** | 47 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for sk: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Pop-ups" is rendered as "kontextové informácie" (contextual information) instead of pop-up windows, and doesn't match the term used in the sibling string.
+    - Current: `ani kontextové informácie o nich`
+    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
+    - Suggest: `ani kontextové okná o nich`
+    - The source says "pop-ups about them". "Kontextové informácie" means contextual information, not pop-ups. The sibling string ai_controls_block_ai_description translates the same concept as "kontextové okná".
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `preferences_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Privacy report" is translated as "ochrane osobných údajov" in the category header but as "ochrane súkromia" in the toggle directly under it.
-    - Current: `Správa o ochrane osobných údajov`
-    - Source: `Privacy report`
-    - Suggest: `Správa o ochrane súkromia`
-    - The header and the toggle (preferences_privacy_report_title) name the same feature on the same screen. "Ochrana osobných údajov" means personal data protection, not privacy, so the two labels don't match.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -50,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,583 |
-| Missing strings | 0 |
+| Missing strings | 21 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**21 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — 14
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sk/strings.xml` — 7
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -91,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (48)
+## 3. Open findings (49)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 26 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 20 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -159,6 +164,11 @@ _Nothing reported._
     - Source: `After a quick one-time download, %s can summarize pages when you shake your device.`
     - Suggest: `Po rýchlom jednorazovom stiahnutí dokáže %s vytvárať súhrny stránok, keď zatrasiete zariadením.`
     - The en-US says that after a one-time download (of the on-device model), the app can summarize pages on shake. The added "obsahu" (of content) makes it a download of page content, and the word order blurs the fact that the download happens once, before the feature is used.
+- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Pop-ups" is rendered as "kontextové informácie" (contextual information) instead of pop-up windows, and doesn't match the term used in the sibling string.
+    - Current: `ani kontextové informácie o nich`
+    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
+    - Suggest: `ani kontextové okná o nich`
+    - The source says "pop-ups about them". "Kontextové informácie" means contextual information, not pop-ups. The sibling string ai_controls_block_ai_description translates the same concept as "kontextové okná".
 - `bookmark_item_menu_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Item Menu" is translated with the plural "menu of items" instead of the menu of one item.
     - Current: `Ponuka položiek pre %s`
     - Source: `Item Menu for %s`

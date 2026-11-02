@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,391 |
+| **Strings reviewed this run** | 2 of 2,391 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 42 |
 | Strings | 2,391 |
-| Missing strings | 192 |
+| Missing strings | 213 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +63,14 @@ _Nothing retired._
 
 ### Completeness
 
-**192 strings** are not translated yet, concentrated in:
+**213 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 127
+- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 141
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
@@ -102,9 +103,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (124)
+## 3. Open findings (123)
 
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `nova_onboarding_notifications_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The subtitle promises the user will always be protected, where the source only says they will stay up to date on how to stay protected.
     - Current: `لتبقى محميًا دائمًا`
@@ -121,18 +122,13 @@ _Nothing reported._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `كيف اكتشفت Firefox وأنك تستخدمه`
     - The source and the developer comment limit the data to discovery and the fact of use. The Arabic says information about how the user uses Firefox is shared, which is more data collection than the product does.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "helps stop" became "is sufficient to prevent", turning a hedged claim into a guarantee.
-    - Current: `نقرة واحدة كفيلة بمنع الشركات من التجسس`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `نقرة واحدة تساعد في منع الشركات من التجسس`
-    - The source only says one tap helps stop companies from spying. The Arabic says one tap is enough to prevent it, which promises a protection the product does not claim.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 52 |
+| 2 | Wrong content (says something other than the English) | 51 |
 | 3 | Degraded language (grammar, spelling, terminology) | 67 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -327,11 +323,6 @@ _Nothing in this category._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `كيف اكتشفت Firefox وأنك تستخدمه`
     - The source and the developer comment limit the data to discovery and the fact of use. The Arabic says information about how the user uses Firefox is shared, which is more data collection than the product does.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "helps stop" became "is sufficient to prevent", turning a hedged claim into a guarantee.
-    - Current: `نقرة واحدة كفيلة بمنع الشركات من التجسس`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `نقرة واحدة تساعد في منع الشركات من التجسس`
-    - The source only says one tap helps stop companies from spying. The Arabic says one tap is enough to prevent it, which promises a protection the product does not claim.
 - `open_all_warning_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The button label is a noun phrase meaning "the open tabs" when it should be the action "open tabs".
     - Current: `التبويبات المفتوحة`
     - Source: `Open tabs`

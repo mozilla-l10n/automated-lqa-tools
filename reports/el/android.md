@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 23 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,27 +85,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (32)
+## 3. Open findings (30)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The hedge "helps protect" is rendered as a flat claim that the feature protects your data.
-    - Current: `που προστατεύει τα δεδομένα σας`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `που συμβάλλει στην προστασία των δεδομένων σας`
-    - The source says the barrier "helps protect" data across tabs. The Greek says it protects it, which turns a qualified statement into a guarantee the product never made.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The hedge "helps" is dropped, so the Greek says one tap stops companies spying instead of helping to stop them.
-    - Current: `Ένα πάτημα εμποδίζει τις εταιρείες`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Ένα πάτημα βοηθά να εμποδίσετε τις εταιρείες`
-    - The source says one tap 'helps stop' companies spying. The Greek ('εμποδίζει', 'stops') turns that into an unconditional guarantee of protection the product does not make.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
+| 2 | Wrong content (says something other than the English) | 13 |
 | 3 | Degraded language (grammar, spelling, terminology) | 15 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -150,21 +136,11 @@ _Nothing in this category._
     - Source: `Redirect Trackers`
     - Suggest: `Ιχνηλάτες ανακατεύθυνσης`
     - This is a category of trackers, like the sibling title "Ιχνηλάτες κοινωνικών δικτύων". The head noun has to be "ιχνηλάτες", but the Greek puts "redirection" in that position instead.
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The hedge "helps protect" is rendered as a flat claim that the feature protects your data.
-    - Current: `που προστατεύει τα δεδομένα σας`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `που συμβάλλει στην προστασία των δεδομένων σας`
-    - The source says the barrier "helps protect" data across tabs. The Greek says it protects it, which turns a qualified statement into a guarantee the product never made.
 - `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The product name "Firefox Suggest" has been translated.
     - Current: `Προτάσεις Firefox`
     - Source: `Firefox Suggest`
     - Suggest: `Firefox Suggest`
     - Firefox Suggest is a Mozilla product/brand name and is normally kept untranslated. Translating it makes it read like a generic heading instead of the named feature.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The hedge "helps" is dropped, so the Greek says one tap stops companies spying instead of helping to stop them.
-    - Current: `Ένα πάτημα εμποδίζει τις εταιρείες`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Ένα πάτημα βοηθά να εμποδίσετε τις εταιρείες`
-    - The source says one tap 'helps stop' companies spying. The Greek ('εμποδίζει', 'stops') turns that into an unconditional guarantee of protection the product does not make.
 - `preference_doh_max_protection_summary` — `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — The Greek leaves out "security risk", so it promises a generic warning instead of a security risk warning.
     - Current: `Θα βλέπετε μια προειδοποίηση πριν`
     - Source: `%1$s will always use secure DNS. You’ll see a security risk warning before we use your system DNS.`

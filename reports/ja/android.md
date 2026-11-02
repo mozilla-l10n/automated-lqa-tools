@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 37 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,23 @@ Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (3)
 
-- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The loading-indicator description uses the plain verb form 「追加します」 ("will add"), but the string describes an action already in progress.
-    - Current: `署名を追加します`
-    - Source: `Adding signature`
-    - Suggest: `署名を追加中`
-    - According to the developer comment, this is read for a loading indicator while a signature is being added. 「追加します」 sounds like an announcement or instruction, while 「追加中」 states that the work is in progress, which matches "Adding signature".
+- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `%1$s を新しい設定に更新する必要があります。`
+    - Source: `%1$s requires new settings to update.`
+    - Suggest: `%1$s を更新するには新しい設定が必要です。`
+    - The source means the update can't go ahead until new permission settings are approved. The Japanese reads as 'need to update %1$s to new settings', which gets the relationship backwards.
+- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `この拡張機能を新しい設定に更新する必要があります。`
+    - Source: `This extension requires new settings to update.`
+    - Suggest: `この拡張機能を更新するには新しい設定が必要です。`
+    - The source says the update needs new settings to be approved. The Japanese says the extension needs to be updated to new settings.
+- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The dialog title says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `%1$s を新しい設定に更新する必要があります`
+    - Source: `%1$s requires new settings to update`
+    - Suggest: `%1$s を更新するには新しい設定が必要です`
+    - Same misreading as the banner: the source says updating needs new permissions to be approved, not that the extension is updated to new settings.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,7 +59,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -79,7 +89,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 731 | **punctuation** |
+| fullwidth | `punctuation` 734 | **punctuation** |
 
 ---
 
@@ -89,13 +99,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (140)
+## 3. Open findings (143)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 107 |
+| 2 | Wrong content (says something other than the English) | 110 |
 | 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -163,11 +173,26 @@ _Nothing reported._
     - Source: `Supported add-ons checker`
     - Suggest: `対応アドオンチェッカー`
     - Source is "Supported add-ons checker"; the channel is specifically about newly supported add-ons.
+- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `%1$s を新しい設定に更新する必要があります。`
+    - Source: `%1$s requires new settings to update.`
+    - Suggest: `%1$s を更新するには新しい設定が必要です。`
+    - The source means the update can't go ahead until new permission settings are approved. The Japanese reads as 'need to update %1$s to new settings', which gets the relationship backwards.
+- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `この拡張機能を新しい設定に更新する必要があります。`
+    - Source: `This extension requires new settings to update.`
+    - Suggest: `この拡張機能を更新するには新しい設定が必要です。`
+    - The source says the update needs new settings to be approved. The Japanese says the extension needs to be updated to new settings.
 - `mozac_feature_addons_updater_dialog_last_attempt` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "Last attempt:" is rendered as "last check date", adding "日" (date) and changing "attempt" to "check".
     - Current: `最終確認日:`
     - Source: `Last attempt:`
     - Suggest: `前回の試行:`
     - Source label is "Last attempt:" for the last add-on update attempt.
+- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The dialog title says the extension must be updated to new settings, not that its update needs new settings first.
+    - Current: `%1$s を新しい設定に更新する必要があります`
+    - Source: `%1$s requires new settings to update`
+    - Suggest: `%1$s を更新するには新しい設定が必要です`
+    - Same misreading as the banner: the source says updating needs new permissions to be approved, not that the extension is updated to new settings.
 - `mozac_feature_addons_updater_status_no_update_available` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — Adds "アドオン" not present in source; the status field refers to a single add-on's update status, not "no add-ons with updates".
     - Current: `更新可能なアドオンはありません`
     - Source: `No update available`
@@ -393,22 +418,7 @@ _Nothing reported._
     - Source: `Social Media Trackers`
     - Suggest: `ソーシャルメディアトラッカー`
     - The source refers to social media trackers; "SNS メディア" is a redundant/incorrect coinage and inconsistent with the description string which uses ソーシャルネットワーク.
-- `extension_process_crash_dialog_retry_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Button label is translated as an instruction to the user rather than the action "Try restarting extensions".
-    - Current: `拡張機能を再起動してみてください`
-    - Source: `Try restarting extensions`
-    - Suggest: `拡張機能の再起動を試す`
-    - This is a button label; the source is an action the button performs, not a polite request to the user.
-- `felt_privacy_desc_card_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Leave no traces on this device" is mistranslated as "Do not let this device track you".
-    - Current: `この端末を追跡させません`
-    - Source: `Leave no traces on this device`
-    - Suggest: `この端末に痕跡を残しません`
-    - The source says no traces are left on the device; the translation says the device is prevented from tracking, which is a different meaning.
-- `firefox_labs_website_isolation_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "An extra barrier between websites" is rendered vaguely as "追加機能", losing the barrier-between-websites meaning.
-    - Current: `タブ間でデータ保護を強化する追加機能です。`
-    - Source: `An extra barrier between websites that helps protect your data across tabs. May affect performance, stability, website compatibility, and how browsing history is saved.`
-    - Suggest: `ウェブサイト間に追加の隔壁を設け、タブをまたいだデータの保護を助けます。`
-    - The source describes a barrier between websites protecting data across tabs; the translation omits "between websites" and replaces "barrier" with a generic "additional feature".
-- _…and 50 more; see `state/` for the full list._
+- _…and 53 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

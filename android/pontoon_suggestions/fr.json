@@ -114,9 +114,13 @@
    "source": "{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> }\n{ <ul> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Press “Try Again” to switch to online mode and reload the page.{ </li> }\n{ </ul> }",
    "original": "<p>Le navigateur est en mode hors connexion et ne peut pas se connecter à l’adresse indiquée.</p>\n<ul>\n<li>L’appareil est-il connecté au réseau ?</li>\n<li>Cliquez sur le bouton « Réessayer » pour revenir en mode connecté et recharger la page.</li>\n</ul>",
    "text": "<p>Le navigateur est en mode hors connexion et ne peut pas se connecter à l’adresse indiquée.</p>\n<ul>\n<li>L’appareil est-il connecté au réseau ?</li>\n<li>Appuyez sur le bouton « Réessayer » pour revenir en mode connecté et recharger la page.</li>\n</ul>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373310,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196910",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -140,9 +144,13 @@
    "source": "Highlighted",
    "original": "Sélectionné",
    "text": "Mis en évidence",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373312,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/menu/src/main/res/values/strings.xml/?string=213826",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -166,9 +174,13 @@
    "source": "Highlighted",
    "original": "Sélectionné",
    "text": "Mis en évidence",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373313,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/menu2/src/main/res/values/strings.xml/?string=213844",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -244,9 +256,13 @@
    "source": "Access your data on other domains",
    "original": "Accéder aux données d’autres domaines",
    "text": "Accéder à vos données sur d’autres domaines",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373314,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321361",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -348,9 +364,14 @@
    "source": "Use strong password",
    "original": "Utilisez un mot de passe compliqué",
    "text": "Utilisez un mot de passe fort",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "mozac_feature_prompts_suggest_strong_password_2 @ mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373320,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=307295",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -374,9 +395,13 @@
    "source": "Use strong password?",
    "original": "Utiliser un mot de passe compliqué ?",
    "text": "Utiliser un mot de passe fort ?",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373321,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=307298",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -400,9 +425,13 @@
    "source": "Serif",
    "original": "Empattement",
    "text": "Avec empattement",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373322,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml/?string=198471",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -426,9 +455,13 @@
    "source": "Department",
    "original": "Service",
    "text": "Département",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373327,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=325048",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -478,9 +511,13 @@
    "source": "Explore search widget",
    "original": "Découvrir les widgets de recherche",
    "text": "Découvrir le widget de recherche",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373330,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=321897",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -530,9 +567,13 @@
    "source": "Sync failed. Last synced: never",
    "original": "La synchronisation a échoué. Dernier succès : jamais",
    "text": "La synchronisation a échoué. Dernière synchronisation : jamais",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373324,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197530",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -582,9 +623,13 @@
    "source": "Close Translations sheet",
    "original": "Fermer l’onglet Traductions",
    "text": "Fermer le panneau Traductions",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373329,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=303118",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -634,9 +679,13 @@
    "source": "Send report",
    "original": "Envoyer le rapport",
    "text": "Envoyer le signalement",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373325,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336839",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

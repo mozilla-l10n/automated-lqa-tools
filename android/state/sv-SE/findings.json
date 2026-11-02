@@ -1748,5 +1748,29 @@
   "suggest": "Webbplatsen bad mig stänga av annonsblockeraren",
   "summary": "The Swedish says the site is being asked to turn off the ad blocker, when the site actually asked the user to do it.",
   "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Avstängd",
+  "dismissed_because": "",
+  "fid": "945582c091c5",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "sv-SE",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this badge shows when a match is suspended after it has started. In Swedish sports usage, a halted match is \"avbruten\". \"Avstängd\" is used for a device that is turned off or a player who is banned, so the badge gives the wrong meaning.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b678f7d5",
+  "string_id": "wrex_widget_match_suspended",
+  "suggest": "Avbruten",
+  "summary": "The status for a match suspended after kick-off is translated as \"Avstängd\", which means switched off, or banned (as a player is), not a halted match.",
+  "suppressed_by": ""
  }
 ]

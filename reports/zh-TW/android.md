@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 37 of 2,583 |
+| **Strings reviewed this run** | 2 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for zh-TW: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The word 這張 is accidentally written twice.
-    - Current: `這張這張圖片`
-    - Source: `Looking this up`
-    - Suggest: `這張圖片`
-    - The repeated 這張 is a typo and makes the status text ungrammatical.
-- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — "Secure" was translated as 加密 (encrypt), but the dialog is about setting up a device lock.
-    - Current: `加密您的敏感資料`
-    - Source: `Secure your sensitive data`
-    - Suggest: `保護您的敏感資料`
-    - The source says "Secure your sensitive data", and the dialog asks the user to set up a lock pattern, PIN or password. It says nothing about encryption, so 保護 (protect) is the faithful rendering.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The word 這張 is accidentally written twice.
-    - Current: `這張這張圖片`
-    - Source: `Looking this up`
-    - Suggest: `這張圖片`
-    - The repeated 這張 is a typo and makes the status text ungrammatical.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,583 |
-| Missing strings | 0 |
+| Missing strings | 21 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -76,7 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**21 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — 14
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rTW/strings.xml` — 7
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

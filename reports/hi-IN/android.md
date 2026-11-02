@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 2 of 2,533 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,533 |
-| Missing strings | 50 |
+| Missing strings | 71 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**50 strings** are not translated yet, concentrated in:
+**71 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 28
+- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 42
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-hi-rIN/strings.xml` — 14
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-hi-rIN/strings.xml` — 8
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hi-rIN/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

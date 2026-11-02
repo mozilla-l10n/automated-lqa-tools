@@ -1126,6 +1126,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Zkontrolujte nastavení, která chcete aktualizovat",
+  "dismissed_because": "",
+  "fid": "244f0e3c3759",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "cs",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says the extension update needs the user to approve changes to its settings. In the source, \"to update\" means \"in order to update\". The Czech instead talks about settings the user wants to update, which suggests the user is picking settings to change.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cc87a308",
+  "string_id": "browser_menu_extension_review_update_description",
+  "suggest": "Zkontrolujte nastavení pro aktualizaci",
+  "summary": "The Czech tells the user to check the settings they want to update, but the source means they should review the settings so the extension can update.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Zastaví načítání stránky",
   "dismissed_because": "",
   "fid": "93b63aac6464",

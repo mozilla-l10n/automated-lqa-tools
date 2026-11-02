@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 13 of 2,596 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for cs: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The Czech tells the user to check the settings they want to update, but the source means they should review the settings so the extension can update.
+    - Current: `Zkontrolujte nastavení, která chcete aktualizovat`
+    - Source: `Review settings to update`
+    - Suggest: `Zkontrolujte nastavení pro aktualizaci`
+    - The developer comment says the extension update needs the user to approve changes to its settings. In the source, "to update" means "in order to update". The Czech instead talks about settings the user wants to update, which suggests the user is picking settings to change.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
-| Missing strings | 0 |
+| Strings | 2,596 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**8 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — 7
+- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -85,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (103)
+## 3. Open findings (104)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 64 |
+| 2 | Wrong content (says something other than the English) | 65 |
 | 3 | Degraded language (grammar, spelling, terminology) | 39 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -253,6 +262,11 @@ _Nothing reported._
     - Source: `Customize homepage`
     - Suggest: `Přizpůsobit domovskou stránku`
     - The menu item opens the customize homepage settings; the Czech omits "homepage", making the label ambiguous compared to the source.
+- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The Czech tells the user to check the settings they want to update, but the source means they should review the settings so the extension can update.
+    - Current: `Zkontrolujte nastavení, která chcete aktualizovat`
+    - Source: `Review settings to update`
+    - Suggest: `Zkontrolujte nastavení pro aktualizaci`
+    - The developer comment says the extension update needs the user to approve changes to its settings. In the source, "to update" means "in order to update". The Czech instead talks about settings the user wants to update, which suggests the user is picking settings to change.
 - `browser_menu_stop` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "Stop" is rendered as a descriptive sentence in third person instead of the action label.
     - Current: `Zastaví načítání stránky`
     - Source: `Stop`
@@ -403,12 +417,7 @@ _Nothing reported._
     - Source: `Enter a web address`
     - Suggest: `Zadejte webovou adresu`
     - The source asks for a web address (URL), not a web page; the field is the hostname field.
-- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation adds "Adresa" (address) although the placeholder may be a search term, not only a URL.
-    - Current: `Adresa %1$s byla smazána z historie`
-    - Source: `Deleted %1$s from history`
-    - Suggest: `%1$s bylo smazáno z historie`
-    - The developer comment says %1$s is the shortened URL OR the actual deleted search term; prefixing with "Adresa" (address) makes the message wrong for search terms.
-- _…and 9 more; see `state/` for the full list._
+- _…and 10 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

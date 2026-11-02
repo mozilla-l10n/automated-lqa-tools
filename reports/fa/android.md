@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 792 of 2,548 |
+| **Strings reviewed this run** | 42 of 2,548 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,403 +18,25 @@ Also for fa: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (17)
+### 🆕 New findings (0)
 
-- `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — `never_translate_site_header_preference` quotes “این وبگاه‌ هرگز ترجمه نشود” but the string it names, `translation_option_bottom_sheet_never_translate_site`, reads “این وبگاه هرگز ترجمه نشود”
-    - Current: `برای افزودن وبگاه‌ جدید: به آن وبگاه‌ بروید و از منوی ترجمه «این وبگاه‌ هرگز ترجمه نشود» را انتخاب کنید.`
-    - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
-    - Suggest: `این وبگاه هرگز ترجمه نشود`
-    - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `mozac_browser_errorpages_httpsonly_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — The sentence mixes the object marker «را» with a passive verb, which is ungrammatical, and it drops the subject "you".
-    - Current: `را برای امنیت بیشتر به‌کار انداخته شده است`
-    - Source: `You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.`
-    - Suggest: `را برای امنیت بیشتر به‌کار انداخته‌اید`
-    - The source says "You've enabled HTTPS-Only Mode". The fa uses «را», which needs an active verb with a subject, but ends in the passive «به‌کار انداخته شده است», so the sentence is broken. The active form «به‌کار انداخته‌اید» fixes the grammar and restores the subject.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — «وبگاهٔ» is misspelled: the hamza linking mark doesn't belong after the pronounced final «ه».
-    - Current: `وبگاهٔ بالقوه`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاه بالقوه`
-    - The final «ه» in «وبگاه» is a pronounced consonant, so the linking vowel is not written with «ٔ». The sibling strings correctly write «وبگاه مهاجم» and «وبگاه گمراه‌کننده».
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The hedge "helps" is dropped, so "helps stop companies spying" becomes an unconditional promise to stop them.
-    - Current: `با یک لمس، جلوی جاسوسی شرکت‌ها از کلیک‌هایتان را بگیرید.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `یک لمس به جلوگیری از جاسوسی شرکت‌ها از کلیک‌هایتان کمک می‌کند.`
-    - The source says one tap "helps stop" companies spying. The fa says "with one tap, stop companies spying," which promises a protection the source deliberately hedged.
-- `preferences_category_select_default_search_engine_2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Missing ezafe marker (هٔ) on «پیش‌گزیده» before «مرور».
-    - Current: `پیش‌گزیده مرور عادی`
-    - Source: `Normal browsing default search engine`
-    - Suggest: `پیش‌گزیدهٔ مرور عادی`
-    - The locale consistently writes the ezafe on final ه as هٔ (صفحهٔ، زبانهٔ، همهٔ); here the ezafe linking «پیش‌گزیده» to «مرور عادی» is omitted.
-- `preferences_category_select_private_search_engine` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Missing ezafe marker (هٔ) on «پیش‌گزیده» before «مرور».
-    - Current: `پیش‌گزیده مرور خصوصی`
-    - Source: `Private browsing default search engine`
-    - Suggest: `پیش‌گزیدهٔ مرور خصوصی`
-    - The locale consistently writes the ezafe on final ه as هٔ (صفحهٔ، زبانهٔ، همهٔ); here the ezafe linking «پیش‌گزیده» to «مرور خصوصی» is omitted.
-- `addons_permissions_allow_for_all_sites_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — A stray ezafe (ٔ) is attached to «وبگاه» directly before the object marker «را», which is ungrammatical.
-    - Current: `هر وبگاهٔ را`
-    - Source: `If you trust this extension, you can give it permission on every website.`
-    - Suggest: `هر وبگاه را`
-    - The ezafe means a modifier follows, but here the noun is followed directly by «را». The correct form is «در هر وبگاه».
-- `wallpaper_artist_series_description_with_learn_more` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The collection name "Independent Voices" is rendered as «آوای مشترک», which means "shared/common voice".
-    - Current: `آوای مشترک`
-    - Source: `The Independent Voices collection. %s`
-    - Suggest: `آواهای مستقل`
-    - The source and the developer comment name the collection "Independent Voices". «مشترک» means shared or common, so it does not mean "independent" («مستقل»), and «آوا» is singular where the source is plural.
-- `wallpaper_artist_series_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The collection name "Independent Voices" is rendered as «آوای مشترک», which means "shared/common voice".
-    - Current: `آوای مشترک`
-    - Source: `The Independent Voices collection.`
-    - Suggest: `آواهای مستقل`
-    - The source and the developer comment name the collection "Independent Voices". «مشترک» means shared or common, so it does not mean "independent" («مستقل»).
-- `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Inactive section" is rendered as «بخش ازکار افتاده», which means a broken or out-of-order section, not an inactive one.
-    - Current: `بخش ازکار افتاده`
-    - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
-    - Suggest: `بخش زبانه‌های غیرفعال`
-    - The source refers to the inactive-tabs section, meaning tabs not viewed recently. «ازکار افتاده» means "broken down" or "defunct", which gives the wrong idea of the feature; «غیرفعال» is the usual term for inactive.
-- `download_rename_error_cannot_rename_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Title says "the file name does not change" instead of expressing inability to rename the file.
-    - Current: `نام پرونده تغییر نمی‌کند`
-    - Source: `Can’t rename file`
-    - Suggest: `نمی‌توان نام پرونده را تغییر داد`
-    - Source "Can’t rename file" states an inability/failure; the fa reads as a plain statement that the name doesn't change, which misstates the error.
-- `phone_feature_go_to_settings` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Button label uses the informal singular imperative «برو», which clashes with the formal address and infinitive button labels used elsewhere.
-    - Current: `برو به تنظیمات`
-    - Source: `Go to Settings`
-    - Suggest: `رفتن به تنظیمات`
-    - The locale addresses users formally (e.g. «دوباره تلاش کنید») and labels buttons with infinitives (e.g. «گشودن در زبانهٔ جدید»). «برو» is an informal second-person singular command, so this label breaks the established register.
-- `etp_cookies_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Here "cross-site" is translated as «میان‌مبدأ» (cross-origin), while the other tracking protection strings use «بین‌وبگاهی» or «میان‌وبگاهی», and "Cookies" is left singular.
-    - Current: `کلوچک ردیاب میان‌مبدأ`
-    - Source: `Cross-Site Tracking Cookies`
-    - Suggest: `کلوچک‌های ردیاب بین‌وبگاهی`
-    - The source says "Cross-Site Tracking Cookies". «مبدأ» (origin) is a different technical term from "site". The sibling strings on the same screen (etp_cookies_title_2, preference_enhanced_tracking_protection_custom_cookies_1/_5) use «وبگاهی». The plural "Cookies" also became the singular «کلوچک».
-- `preference_doh_default_protection_info_2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation drops both "default" (resolver) and "secure" (DNS provider), losing the meaning of falling back to the default resolver when the secure provider fails.
-    - Current: `استفاده از مبدل ساناد در صورتی که مشکلی برای کار با ارائه‌دهندهٔ ساناد وجود داشته باشد`
-    - Source: `Use your default DNS resolver if there is a problem with the secure DNS provider`
-    - Suggest: `استفاده از مبدل پیش‌گزیده ساناد در صورتی که مشکلی برای کار با ارائه‌دهندهٔ ساناد امن وجود داشته باشد`
-    - Source: "Use your default DNS resolver if there is a problem with the secure DNS provider". The fa reads "use a DNS resolver if there is a problem with the DNS provider", omitting the key qualifiers; sibling strings (increased_protection_info_2, off_summary) do render "default" as پیش‌گزیده.
-- `preferences_email_masks_suggest_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The toggle title drops "Suggest" and is identical to the section title "Email masks", so it no longer says what the toggle does.
-    - Current: `پنهان‌کننده رایانامه`
-    - Source: `Suggest email masks`
-    - Suggest: `پیشنهاد پنهان‌کننده‌های رایانامه`
-    - The source is "Suggest email masks", the label of a toggle that controls whether masks are suggested. The translation only says "email mask", repeats the parent settings title, and leaves out the action.
-- `automatic_translation_option_offer_to_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Missing ezafe on «وبگاه‌ها» breaks the link to «این زبان».
-    - Current: `ترجمهٔ وبگاه‌ها این زبان`
-    - Source: `%1$s will offer to translate sites in this language.`
-    - Suggest: `ترجمهٔ وبگاه‌های این زبان`
-    - The source says 'sites in this language', which needs the ezafe form «وبگاه‌های این زبان». Without it the phrase is ungrammatical. The parallel 'never translate' summary uses the correct form.
-- `debug_drawer_tab_tools_tab_count_inactive` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Inactive" (a tab-count category) is rendered as the verbal noun "disabling" instead of an adjective.
-    - Current: `ازکار انداختن`
-    - Source: `Inactive`
-    - Suggest: `ازکار افتاده`
-    - The comment says this labels the inactive-tab count category. «ازکار انداختن» means "to disable" (an action), not the state "inactive". The sibling string already uses «ازکار افتاده».
+_No new findings._
 
-### ✅ Fixed since the last run (59)
-
-- `mozac_browser_errorpages_file_access_denied_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Comma misplaced/attached and mood mismatch in the second clause ("may be preventing" rendered as a plain assertion).
-    - Current: `ممکن است حذف،‌منتقل شده باشد یا مجوز‌های آن از دسترسی جلوگیری‌ می‌کند.`
-    - Source: `{ <ul> } { <li> }It may have been removed, moved, or file permissions may be preventing access.{ </li> } { </ul> }`
-    - Suggest: `ممکن است حذف یا منتقل شده باشد، یا مجوزهای آن مانع دسترسی شوند.`
-    - The source says permissions "may be preventing" access; the target states it as fact, and the punctuation/spacing ("حذف،‌منتقل", "جلوگیری‌ می‌کند") is broken.
-- `mozac_browser_errorpages_file_access_denied_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Past-tense "was denied" rendered as present/habitual "is denied".
-    - Current: `دسترسی به این پرونده رد می‌شود`
-    - Source: `Access to the file was denied`
-    - Suggest: `دسترسی به این پرونده رد شد`
-    - The source states a completed event ("Access to the file was denied"); the Persian present tense describes an ongoing/general behaviour.
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Arabic yeh "آيا" instead of Persian "آیا", misspelled "املائی", and colloquial "دیگه‌ی" in a formal error page.
-    - Current: `آيا در نشانی غلط املائی، حروف بزرگی و کوچکی یا مشکلات دیگه‌ی نوشتاری وجود دارد؟`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `آیا در نشانی غلط املایی، حروف بزرگ و کوچک یا مشکلات نوشتاری دیگری وجود دارد؟`
-    - The line uses the Arabic letter ي in «آيا» (other lines in the same string use the correct Persian ی), and «دیگه‌ی» is colloquial register inconsistent with the rest of the formal error text.
-- `mozac_browser_errorpages_invalid_content_encoding_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "invalid" form of compression rendered as "ناشناخته" (unknown).
-    - Current: `از گونه‌ای ناشناخته یا پشتیبانی نشده از فشرده‌سازی استفاده می‌کند`
-    - Source: `{ <p> }The page you are trying to view cannot be shown because it uses an invalid or unsupported form of compression.{ </p> } { <ul> } { <li> }Please contact the website owners to inform them of this problem.{ </li> } {…`
-    - Suggest: `از گونه‌ای نامعتبر یا پشتیبانی‌نشده از فشرده‌سازی استفاده می‌کند`
-    - The source says the compression form is invalid or unsupported, not unknown.
-- `mozac_browser_errorpages_net_reset_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "The connection was reset" is rendered as "the connection was re-established", reversing the meaning of the error.
-    - Current: `اتصال از نو برقرار شد`
-    - Source: `The connection was reset`
-    - Suggest: `اتصال بازنشانی شد`
-    - The source reports a connection reset error (failure); the target says the connection was successfully re-established, the opposite of an error condition.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "device" translated as "رایانه" (computer) in a mobile component string.
-    - Current: `آیا رایانه به یک شبکهٔ فعال متصل است؟`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `آیا افزاره به یک شبکهٔ فعال متصل است؟`
-    - The source asks about the device; "رایانه" names a computer, which is wrong on an Android device and inconsistent with other strings that use دستگاه/افزاره.
-- `mozac_browser_errorpages_port_blocked_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "مشخصا" is used where the source has "specified a port", producing a broken clause.
-    - Current: `نشانی درخواست مشخصا (به عنوان مثال`
-    - Source: `{ <p> }The requested address specified a port (e.g., { <q> }mozilla.org:80{ </q> } for port 80 on mozilla.org) normally used for purposes { <em> }other{ </em> } than Web browsing. The browser has canceled the request fo…`
-    - Suggest: `نشانی درخواست‌شده درگاهی را مشخص کرده است (به عنوان مثال`
-    - The source says the requested address specified a port; the Persian adverb مشخصا ("specifically") leaves the sentence without a verb for "specified".
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "cookies required by this site" is rendered as "possible cookies" (کلوچک‌های احتمالی), and "not your device" as "not your computer".
-    - Current: `آیا کلوچک‌های احتمالی مورد نیاز این وبگاه را غیرفعال ساخته‌اید؟`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `آیا کلوچک‌های مورد نیاز این وبگاه را غیرفعال ساخته‌اید؟`
-    - The source says "cookies required by this site"; the added احتمالی ("possible") is not in the source.
-- `mozac_browser_errorpages_safe_browsing_unwanted_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Misspelled relative construction "وبگاه‌ی" instead of "وبگاهی".
-    - Current: `وبگاه‌ی که`
-    - Source: `{ <p> }The site at %1$s has been reported as serving unwanted software and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `وبگاهی که`
-    - The indefinite/relative ی attaches directly to the noun; a ZWNJ before ی here is a spelling error.
-- `mozac_browser_errorpages_security_bad_hsts_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Missing ZWNJ in "نمیتواند" and incorrect space in "نمی توانید".
-    - Current: `نمیتواند نمایش داده شود`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> } { <li> }The issue is most likely with the website, and there is nothing you can do to resolve…`
-    - Suggest: `نمی‌تواند نمایش داده شود`
-    - Persian negation prefix نمی requires a ZWNJ, not zero or a full space.
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — Duplicated "جهت شناسایی/برای شناسایی" in the last bullet makes the sentence redundant and ungrammatical.
-    - Current: `برخی قراردادها ممکن است برای شناسایی نیاز به نرم‌افزار یا افزایه‌های دیگری جهت شناسایی داشته باشند.`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `برخی قراردادها ممکن است نیاز به نرم‌افزار یا افزایه‌های دیگری جهت شناسایی داشته باشند.`
-    - The phrase for "before the browser can recognize them" is repeated twice in the same clause.
-- `mozac_browser_errorpages_unknown_protocol_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — "Unknown Protocol" is translated as "the address was not understandable" instead of referring to the protocol.
-    - Current: `نشانی قابل فهم نبود`
-    - Source: `Unknown Protocol`
-    - Suggest: `قرارداد ناشناخته`
-    - The source names an unknown protocol; the translation says the address was unintelligible, and the body text of the same page uses قرارداد for protocol.
-- `alternative_app_icon_option_cuddling` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Cuddling" is rendered as the verbal action "embracing/hugging" rather than an adjectival icon-style name.
-    - Current: `در آغوش کشیدن`
-    - Source: `Cuddling`
-    - Suggest: `بغلی`
-    - The string is an icon variant name describing a cute, cuddly design; the Persian infinitive phrase "در آغوش کشیدن" (the act of hugging someone) reads as an action label, not a style name, and is inconsistent with the other adjective-style icon names in this group.
-- `automatic_translation_error_warning_text` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Please check back later" is rendered as "please try again later".
-    - Current: `لطفاً بعداً دوباره امتحان کنید.`
-    - Source: `Couldn’t load languages. Please check back later.`
-    - Suggest: `لطفاً بعداً دوباره سر بزنید.`
-    - The source asks the user to check back later, not to retry the action.
-- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "translate sites in this language" is rendered as translating sites *into* this language, reversing the direction.
-    - Current: `هرگز ترجمهٔ سایت‌ها به این زبان را پیشنهاد نخواهد داد`
-    - Source: `%1$s will never offer to translate sites in this language.`
-    - Suggest: `هرگز ترجمهٔ سایت‌های این زبان را پیشنهاد نخواهد داد`
-    - The source means sites written in this language; «به این زبان» means translating into this language, the opposite direction.
-- `automatic_translation_option_offer_to_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "translate sites in this language" is rendered as translating sites *into* this language, reversing the direction.
-    - Current: `ترجمهٔ سایت‌ها به این زبان را پیشنهاد خواهد داد`
-    - Source: `%1$s will offer to translate sites in this language.`
-    - Suggest: `ترجمهٔ سایت‌های این زبان را پیشنهاد خواهد داد`
-    - The source refers to sites written in this language; «به این زبان» states the target language of translation instead.
-- `awesomebar_clipboard_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Fill link from clipboard" translated as "Paste link from clipboard".
-    - Current: `جای‌گذاری پیوند از کلیپ‌بورد`
-    - Source: `Fill link from clipboard`
-    - Suggest: `پر کردن پیوند از کلیپ‌بورد`
-    - The button fills the search field with the clipboard link; «جای‌گذاری» is "paste", a different action term.
-- `browser_menu_no_extensions_installed_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation adds "yet" (هنوز), which the source does not say.
-    - Current: `هنوز هیچ افزونه‌ای فعال نیست`
-    - Source: `No extensions enabled`
-    - Suggest: `هیچ افزونه‌ای فعال نیست`
-    - Source is simply "No extensions enabled"; "هنوز" (yet) is an addition not present in the English.
-- `certificate_warning_homepage_card_update_now_button` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Button label "Update now" rendered with the unidiomatic and much longer "به‌روزرسانی در همین لحظه".
-    - Current: `به‌روزرسانی در همین لحظه`
-    - Source: `Update now`
-    - Suggest: `همین حالا به‌روزرسانی کنید`
-    - "در همین لحظه" (at this very moment) is not the idiomatic Persian for "now" in a button label and makes the button text drastically longer than the source.
-- `close_tab_and_delete_group_confirmation_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Close tab" rendered as "close the last tab", adding "last" which the visible source does not say.
-    - Current: `آخرین زبانه بسته شده و گروه حذف شود؟`
-    - Source: `Close tab and delete group?`
-    - Suggest: `زبانه بسته شده و گروه حذف شود؟`
-    - Source title is "Close tab and delete group?"; the translation adds "آخرین" (the last), which appears only in the internal developer description, not in the user-facing text.
-- `credit_cards_warning_dialog_message_3` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The conditional clause is reversed: the source says protect payment methods from being accessed if someone else has your device, but the target says they stay safe "in case others access the device".
-    - Current: `تا در صورت دسترسی دیگران به دستگاه، ایمن بمانند`
-    - Source: `Set up a device lock pattern, PIN, or password to protect your saved payment methods from being accessed if someone else has your device.`
-    - Suggest: `تا اگر دستگاهتان دست شخص دیگری افتاد، کسی به آن‌ها دسترسی نداشته باشد`
-    - en-US: "to protect your saved payment methods from being accessed if someone else has your device." The Persian rendering says the methods "remain safe in the event others access the device", which confuses the condition (someone else having the device) with the outcome being prevented (access to the payment data).
-- `credit_cards_warning_dialog_set_up_now` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Set up now" rendered as "راه‌اندازی در همین لحظه", an unnatural and overly long button label.
-    - Current: `راه‌اندازی در همین لحظه`
-    - Source: `Set up now`
-    - Suggest: `راه‌اندازی هم‌اکنون`
-    - The button label "Set up now" should be a short imperative; "در همین لحظه" ("at this very moment") is verbose and non-idiomatic for a dialog button.
-- `debug_drawer_add_new_address` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "locale" rendered as "زبان" (language) instead of locale/regional setting.
-    - Current: `افزودن نشانی جدید برای زبان انتخابی`
-    - Source: `Add new address for selected locale`
-    - Suggest: `افزودن نشانی جدید برای محلی انتخابی`
-    - The developer comment and the Addresses debug tool refer to a locale (language+region combination used for address formats), not just a language.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Debug locales" translated as "زبان‌های اشکال‌زدایی" (debug languages).
-    - Current: `زبان‌های اشکال‌زدایی برای فعال‌سازی`
-    - Source: `Debug locales to enable`
-    - Suggest: `محلی‌های اشکال‌زدایی برای فعال‌سازی`
-    - The source says locales, not languages; the comment describes a list of debug locales that can be enabled/disabled.
-- `delete_language_all_languages_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "all languages" is translated as "all tabs" (زبانه‌ها) instead of "all languages" (زبان‌ها).
-    - Current: `در صورت حذف تمام زبانه‌ها`
-    - Source: `If you delete all languages, %1$s will download partial languages to your cache as you translate.`
-    - Suggest: `در صورت حذف تمام زبان‌ها`
-    - The source says "If you delete all languages"; زبانه means tab, not language. The sibling title string correctly uses زبان‌ها.
-- `download_languages_item_content_description_delete_in_progress_state` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Generic "In progress" rendered as "deleting" specific wording.
-    - Current: `در حال حذف`
-    - Source: `In progress`
-    - Suggest: `در حال انجام`
-    - The source string is simply "In progress"; the translation states "deleting in progress", adding content not in the source (though the comment mentions deletion context).
-- `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The translation adds "at random" which the source does not say.
-    - Current: `یکی از آن‌ها را به‌صورت تصادفی برای استفادهٔ مجدد انتخاب کردیم`
-    - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
-    - Suggest: `یکی از آن‌ها را برای استفادهٔ مجدد برایتان انتخاب کردیم`
-    - Source: "so we picked one for you to reuse" — there is no statement that the pick was random; the translation asserts a random selection behaviour of the product.
-- `enhanced_tracking_protection_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Enhanced" is dropped from the feature name "Enhanced Tracking Protection".
-    - Current: `محافظت در برابر ردیابی برای این وب‌سایت‌ها خاموش است`
-    - Source: `Enhanced Tracking Protection is off for these websites`
-    - Suggest: `محافظت پیشرفته در برابر ردیابی برای این وب‌سایت‌ها خاموش است`
-    - The source names the feature "Enhanced Tracking Protection"; the translation renders it as plain "Tracking Protection", inconsistent with the feature name.
-- `etp_suspected_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Suspected Fingerprinters" (the actors/trackers) is rendered as "suspected fingerprintings" (the activity).
-    - Current: `انگشت‌نگاری‌های مشکوک`
-    - Source: `Suspected Fingerprinters`
-    - Suggest: `انگشت‌نگارهای مشکوک`
-    - The category names the trackers themselves, as the description string correctly renders with «ابزارهای مشکوک به انگشت‌نگاری»; the title names an activity instead.
-- `exit_fullscreen_with_gesture_short` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The gesture-navigation instruction is rendered as pressing back rather than using the back gesture, making it identical to the button-navigation string.
-    - Current: `برای خروج، از بالا به پایین بکشید و بازگشت بزنید`
-    - Source: `Drag from top & use back gesture to exit`
-    - Suggest: `برای خروج، از بالا به پایین بکشید و از اشارهٔ بازگشت استفاده کنید`
-    - Source says "use back gesture to exit" (gesture navigation), while the fa says press back, duplicating exit_fullscreen_with_back_button_short and giving the wrong instruction.
-- `ip_protection_data_limit_reached_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Access resets next month" translated as "دسترسی ... مجدداً شارژ می‌شود" (access is recharged), and "دیتا" used instead of the consistent term "داده".
-    - Current: `سهمیهٔ دیتای VPN خود را استفاده کرده‌اید. دسترسی ماه آینده مجدداً شارژ می‌شود.`
-    - Source: `You’ve used all %1$d GB of your VPN data. Access resets next month.`
-    - Suggest: `سهمیهٔ دادهٔ VPN خود را استفاده کرده‌اید. دسترسی ماه آینده بازنشانی می‌شود.`
-    - Other strings render "data" as "داده" and "reset" as "بازنشانی"; "دیتا" and "شارژ" are inconsistent loanwords and "شارژ" implies a top-up/payment not in the source.
-- `ip_protection_menu_limit_reached` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "limit reached" rendered as "سقف ... به پایان رسید" (the limit has ended/expired) instead of the limit being reached.
-    - Current: `سقف %1$d گیگابایت به پایان رسید`
-    - Source: `%1$d GB limit reached`
-    - Suggest: `به سقف %1$d گیگابایت رسیدید`
-    - The source says the user has reached the %1$d GB limit; "سقف ... به پایان رسید" says the limit itself ended, which is not the source meaning.
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Duplicated word "تا تا" in the translated sentence.
-    - Current: `اکنون امتحان کنید تا تا تاریخ %1$s`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `اکنون امتحان کنید تا تا تاریخ %1$s را اصلاح کرده: «اکنون امتحان کنید تا تاریخ %1$s»`
-    - The Persian text repeats «تا» twice consecutively, a typing error.
-- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Looking this up" is rendered as a first-person "I am looking for this" rather than a neutral status.
-    - Current: `به دنبال این هستم`
-    - Source: `Looking this up`
-    - Suggest: `در حال جست‌وجوی این مورد`
-    - The source is an impersonal progress status shown under the image; the Persian uses first-person singular, making the app speak as "I", which is not the register used elsewhere (e.g. "در حال بررسی بایگانی").
-- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — First-person phrasing ("I couldn’t get results") instead of the impersonal source wording.
-    - Current: `نتوانستم از Google Lens نتیجه بگیرم`
-    - Source: `Couldn’t get results from Google Lens`
-    - Suggest: `دریافت نتیجه از Google Lens ممکن نشد`
-    - Source "Couldn’t get results from Google Lens" is impersonal; other error strings in the batch use impersonal forms ("دسترسی به سرویس بایگانی ممکن نشد"), so the first-person verb breaks register and consistency.
-- `logins_password_copied` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The password-copied snackbar says the URL (نشانی) was copied instead of the password.
-    - Current: `نشانی در تخته‌گیره رونوشت شد`
-    - Source: `Password copied to clipboard`
-    - Suggest: `گذرواژه در تخته‌گیره رونوشت شد`
-    - The source and comment say the password was copied. «نشانی» means address/URL, the same text as the URL-copied snackbar. It should be «گذرواژه», the term used in saved_logins_copy_password.
-- `logins_warning_dialog_set_up_now` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Set up now" is rendered with an unnatural, overly long phrase for a dialog button.
-    - Current: `راه‌اندازی در همین لحظه`
-    - Source: `Set up now`
-    - Suggest: `هم‌اکنون راه‌اندازی شود`
-    - The source is a short positive dialog button; "در همین لحظه" ("in this very moment") is awkward and drastically longer than needed for a button label.
-- `microsurvey_describe_your_experience_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Which best describes your experience" is rendered as "describes your experience better", losing the superlative selection sense.
-    - Current: `کدام گزینه تجربهٔ شما را تا کنون بهتر توصیف می‌کند؟`
-    - Source: `Help us improve Firefox. Which best describes your experience so far?`
-    - Suggest: `کدام گزینه تجربهٔ شما را تا کنون بهترین توصیف می‌کند؟`
-    - The source asks which option best describes the experience; the Persian comparative «بهتر» changes it to a comparison with something unspecified.
-- `nimbus_notification_default_browser_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "private" is rendered as "امن" (secure/safe) instead of "خصوصی" (private).
-    - Current: `‏Firefox سریع و امن است`
-    - Source: `Firefox is fast and private`
-    - Suggest: `‏Firefox سریع و خصوصی است`
-    - The source says Firefox is fast and private; the translation claims it is fast and secure, a different property claim about the product.
-- `nova_onboarding_marketing_body_3` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "the channels where we promote Firefox" is rendered as "our advertising channels", dropping the relation to promoting Firefox.
-    - Current: `کانال‌های تبلیغاتی ما`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.`
-    - Suggest: `کانال‌هایی که در آن‌ها Firefox را تبلیغ می‌کنیم`
-    - The source specifies the channels where Mozilla promotes Firefox; the translation says generically "our advertising channels".
-- `nova_onboarding_set_to_default_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "automatically block" is mistranslated so that "automatically" modifies the companies' spying rather than the blocking.
-    - Current: `مانع از جاسوسی خودکار شرکت‌ها روی کلیک‌هایتان می‌شویم`
-    - Source: `We protect your data and automatically block companies from spying on your clicks.`
-    - Suggest: `به‌طور خودکار مانع از جاسوسی شرکت‌ها روی کلیک‌هایتان می‌شویم`
-    - The source says the browser automatically blocks companies from spying; the Persian reads "we prevent companies' automatic spying on your clicks", moving "automatically" to the spying.
-- `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "font" is rendered "فونت" here but "قلم" in the related title string, an inconsistency on the same settings surface.
-    - Current: `اندازهٔ فونت با تنظیمات اندروید شما مطابقت خواهد داشت.`
-    - Source: `Font size will match your Android settings. Disable to manage font size here.`
-    - Suggest: `اندازهٔ قلم با تنظیمات اندروید شما مطابقت خواهد داشت.`
-    - preference_accessibility_auto_size_2 uses "قلم" for font while this summary uses "فونت" for the same term on the same screen.
-- `preference_accessibility_force_enable_zoom_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The imperative "Enable to allow..." is rendered as a noun phrase "فعال‌سازی امکان...", losing the instruction to enable the setting.
-    - Current: `فعال‌سازی امکان نیشگون گرفتن و بزرگ‌نمایی`
-    - Source: `Enable to allow pinch and zoom, even on websites that prevent this gesture.`
-    - Suggest: `برای مجاز کردن نیشگون گرفتن و بزرگ‌نمایی، فعال کنید`
-    - Source tells the user to enable the option in order to allow pinch-and-zoom; the target instead states "enabling the ability of pinch and zoom", dropping the conditional instruction.
-- `preference_auto_battery_theme` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Battery Saver" is rendered as "بهینه‌ساز باتری" (battery optimizer) instead of the Android feature name "ذخیره‌ساز/صرفه‌جویی باتری".
-    - Current: `تنظیم‌شده بر اساس بهینه‌ساز باتری`
-    - Source: `Set by Battery Saver`
-    - Suggest: `تنظیم‌شده بر اساس بهینه‌سازی مصرف باتری`
-    - Android's "Battery Saver" mode has an established Persian name; "بهینه‌ساز باتری" names a different concept.
-- `preference_doh_default_protection_info_4` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Imperative/behaviour bullet "Turn off when..." rendered as the state "خاموش بودن" (being off), inconsistent with the parallel bullet info_5.
-    - Current: `خاموش بودن در زمان فعال بودن VPN`
-    - Source: `Turn off when VPN, parental control, or enterprise policies are active`
-    - Suggest: `خاموش شدن در زمان فعال بودن VPN`
-    - The bullet describes the feature turning itself off; "خاموش بودن" describes a static state rather than the action, and diverges from info_5's "خاموش می‌شود".
-- `preference_experiments_summary_2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "studies" is rendered twice as "آزمایش‌ها و مطالعات" (experiments and studies), adding a term the source does not have and conflicting with the title string which uses only "مطالعات".
-    - Current: `اجازه به Mozilla برای نصب و اجرای آزمایش‌ها و مطالعات`
-    - Source: `Allows Mozilla to install and run studies`
-    - Suggest: `اجازه به Mozilla برای نصب و اجرای مطالعات`
-    - Source: "Allows Mozilla to install and run studies"; the related title preference_experiments_2 translates "Studies" as "مطالعات" only.
-- `preferences_pbm_lock_screen_summary_3` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "sharing" is rendered as "screen sharing", narrowing/changing what the feature blocks.
-    - Current: `اشتراک‌گذاری صفحه`
-    - Source: `View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.`
-    - Suggest: `اشتراک‌گذاری`
-    - The source says "prevents screen capture and sharing"; the target adds "صفحه" (screen) to sharing, asserting it blocks screen sharing specifically.
-- `private_browsing_common_myths` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "private browsing" is rendered as «مرور خصوصی» here but as «مرور ناشناس» in the neighbouring private-browsing string, an inconsistent term on the same surface.
-    - Current: `باورهای نادرست و رایج دربارهٔ مرور خصوصی`
-    - Source: `Common myths about private browsing`
-    - Suggest: `باورهای نادرست و رایج دربارهٔ مرور ناشناس`
-    - private_browsing_a11y_session_announcement translates "Private browsing session" as «نشست مرور ناشناس»; the same feature name should be consistent.
-- `restart_and_shortcuts_removal_warning_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation adds "تمام" (all), claiming removal of all sites/shortcuts where the source says "any sites and shortcuts you've saved".
-    - Current: `تغییر آیکون باعث حذف تمام سایت‌ها و میان‌برهایی می‌شود که در صفحهٔ اصلی خود ذخیره کرده‌اید.`
-    - Source: `Changing the icon will remove any sites and shortcuts you’ve saved to your Home screen.   %1$s may close. Tap your new icon to reopen.`
-    - Suggest: `تغییر آیکون باعث حذف سایت‌ها و میان‌برهایی می‌شود که در صفحهٔ اصلی خود ذخیره کرده‌اید.`
-    - The source is "any sites and shortcuts you’ve saved to your Home screen"; adding "تمام" (all) is not a material change... actually it broadens the claim about what is deleted.
-- `search_settings_google_lens_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The brand name "Google" is transliterated as «گوگل» while the related title string keeps the Latin "Google Lens", creating brand inconsistency.
-    - Current: `ارسال تصاویر و عکس‌ها به گوگل برای جست‌وجوی بصری.`
-    - Source: `Sends images and photos to Google for visual search.`
-    - Suggest: `ارسال تصاویر و عکس‌ها به Google برای جست‌وجوی بصری.`
-    - Brand names must stay untranslated/untransliterated; the sibling string search_settings_google_lens_title uses "Google Lens" in Latin script.
-- `setup_checklist_subtitle_6_steps_fifth_step` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Mixed subject agreement: sentence starts impersonal but ends with a second-person verb, unlike the parallel 5-step string.
-    - Current: `تنها ۱ مرحله با خط پایان فاصله دارید`
-    - Source: `Almost there! You’re just 1 step away from the finish line.`
-    - Suggest: `تنها ۱ مرحله تا خط پایان مانده است`
-    - The source is the same as setup_checklist_subtitle_5_steps_fourth_step; the Persian here reads ungrammatically ("۱ مرحله ... فاصله دارید") and is inconsistent with the parallel string.
-- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Confirmation question is phrased as an imperative addressed to the user rather than a question about the action.
-    - Current: `از حساب کاربریتان خارج شوید؟`
-    - Source: `Sign out of your account?`
-    - Suggest: `از حساب کاربری‌تان خارج می‌شوید؟`
-    - The source asks for confirmation of the action; the subjunctive/imperative form reads as a command rather than a confirmation prompt.
-- `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation adds "دیگری" (other/any other tab), changing "any tabs open" into "any other open tab".
-    - Current: `شما هیچ زبانهٔ باز دیگری در Firefox روی سایر دستگاه‌های خود ندارید.`
-    - Source: `You don’t have any tabs open in Firefox on your other devices.`
-    - Suggest: `شما هیچ زبانهٔ بازی در Firefox روی سایر دستگاه‌های خود ندارید.`
-    - The source says the user has no tabs open in Firefox on their other devices; "دیگری" implies "no other open tabs", suggesting some tabs are open.
-- `tab_group_three_dot_menu_ungroup` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Ungroup" is rendered as "خروج از گروه" (leave/exit the group) instead of dissolving the group.
-    - Current: `خروج از گروه`
-    - Source: `Ungroup`
-    - Suggest: `لغو گروه‌بندی`
-    - The source action removes the grouping (ungroups the tabs); "خروج از گروه" means exiting/leaving a group, a different action.
-- `terms_of_use_prompt_link_terms_of_use` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Link label ends with a dangling preposition "از", leaving an incomplete phrase.
-    - Current: `شرایط استفاده از`
-    - Source: `Terms of Use`
-    - Suggest: `شرایط استفاده`
-    - The source is the standalone link text "Terms of Use"; "شرایط استفاده از" ends with the preposition "از" ("of/from") which requires a following noun, so the link reads as truncated. The parallel string terms_of_use_prompt_title_option_a correctly uses "شرایط استفاده".
-- `ungroup_tab_group_confirmation_dialog_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Ungroup" (dissolve the tab group) is rendered as "خروج از گروه" (leave/exit the group), which describes a different action.
-    - Current: `خروج از گروه`
-    - Source: `Ungroup`
-    - Suggest: `لغو گروه‌بندی`
-    - The button dissolves the group (the dialog body says the group will be deleted), not 'exit the group'.
-- `webcompat_reporter_label_mandatory_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "help us investigate" rendered without "us", dropping who is helped.
-    - Current: `مشکل را با جزئیات شرح دهید تا به بررسی آن کمک کنید`
-    - Source: `Describe the problem in detail to help us investigate the issue`
-    - Suggest: `مشکل را با جزئیات شرح دهید تا به ما در بررسی آن کمک کنید`
-    - The source says the description helps "us" (Mozilla) investigate; the Persian omits the beneficiary, making it read as helping the investigation generically.
-- `webcompat_reporter_reason_content2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "Missing content" rendered as "content is not displayed".
-    - Current: `محتوا نمایش داده نمی‌شود`
-    - Source: `Missing content`
-    - Suggest: `محتوای ناموجود`
-    - The source is a noun phrase describing missing content, not a statement that content is not being displayed; other reason options in the same dropdown keep the source's phrasing.
-- `webcompat_reporter_reason_site_is_deceptive` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Adds "and suspicious" which is not in the source.
-    - Current: `این سایت فریبنده و مشکوک است`
-    - Source: `This site is deceptive`
-    - Suggest: `این سایت فریبنده است`
-    - The source is simply "This site is deceptive"; "و مشکوک" (and suspicious) is an added claim.
-
-### ↩︎ Withdrawn — no longer considered a defect (0)
-
-_Nothing withdrawn._
-
-### 🔁 String changed, defect not verifiable — needs a re-read (1)
+### ✅ Fixed since the last run (1)
 
 - `saved_login_duplicate` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "A login" rendered as "ورودی" (an entry/input), not the login/account credential meaning.
     - Current: `ورودی با این نام کاربری از قبل وجود دارد`
     - Source: `A login with that username already exists`
     - Suggest: `ورودی با این نام کاربری از قبل وجود دارد ← «گذرواژه‌ای با این نام کاربری از قبل وجود دارد»`
     - "ورودی" means "entry/input" in Persian and does not convey a saved login credential; other strings in this surface use "ورود"/"گذرواژه".
+
+### ↩︎ Withdrawn — no longer considered a defect (0)
+
+_Nothing withdrawn._
+
+### 🔁 String changed, defect not verifiable — needs a re-read (0)
+
+_Nothing to re-read._
 
 ### 🗑 Retired — the string no longer exists upstream (0)
 
@@ -428,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,548 |
-| Missing strings | 35 |
+| Missing strings | 56 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -445,11 +67,12 @@ _Nothing retired._
 
 ### Completeness
 
-**35 strings** are not translated yet, concentrated in:
+**56 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 16
+- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 30
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fa/strings.xml` — 12
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fa/strings.xml` — 7
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -472,22 +95,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (65)
+## 3. Open findings (63)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The hedge "helps" is dropped, so "helps stop companies spying" becomes an unconditional promise to stop them.
-    - Current: `با یک لمس، جلوی جاسوسی شرکت‌ها از کلیک‌هایتان را بگیرید.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `یک لمس به جلوگیری از جاسوسی شرکت‌ها از کلیک‌هایتان کمک می‌کند.`
-    - The source says one tap "helps stop" companies spying. The fa says "with one tap, stop companies spying," which promises a protection the source deliberately hedged.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 27 |
+| 2 | Wrong content (says something other than the English) | 25 |
 | 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -622,11 +236,6 @@ _Nothing in this category._
     - Source: `%1$s tabs closed: %2$d`
     - Suggest: `زبانه‌های بسته‌شدهٔ %1$s: %2$d`
     - Per the comment, %1$s is the app name and %2$d is the number of tabs closed; the source reads "%1$s tabs closed: %2$d", not "tabs closed in %1$s".
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — The hedge "helps" is dropped, so "helps stop companies spying" becomes an unconditional promise to stop them.
-    - Current: `با یک لمس، جلوی جاسوسی شرکت‌ها از کلیک‌هایتان را بگیرید.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `یک لمس به جلوگیری از جاسوسی شرکت‌ها از کلیک‌هایتان کمک می‌کند.`
-    - The source says one tap "helps stop" companies spying. The fa says "with one tap, stop companies spying," which promises a protection the source deliberately hedged.
 - `preference_doh_default_protection_info_2` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Translation drops both "default" (resolver) and "secure" (DNS provider), losing the meaning of falling back to the default resolver when the secure provider fails.
     - Current: `استفاده از مبدل ساناد در صورتی که مشکلی برای کار با ارائه‌دهندهٔ ساناد وجود داشته باشد`
     - Source: `Use your default DNS resolver if there is a problem with the secure DNS provider`
@@ -647,11 +256,6 @@ _Nothing in this category._
     - Source: `Inactive tabs`
     - Suggest: `زبانه‌های غیرفعال`
     - «از کار افتاده» means broken down/defunct, not inactive; the feature refers to tabs the user has not used recently.
-- `saved_login_duplicate` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — "A login" rendered as "ورودی" (an entry/input), not the login/account credential meaning.
-    - Current: `ورودی با این نام کاربری از قبل وجود دارد`
-    - Source: `A login with that username already exists`
-    - Suggest: `ورودی با این نام کاربری از قبل وجود دارد ← «گذرواژه‌ای با این نام کاربری از قبل وجود دارد»`
-    - "ورودی" means "entry/input" in Persian and does not convey a saved login credential; other strings in this surface use "ورود"/"گذرواژه".
 - `tab_group_sheet_dismiss_description` — `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — Content description reverses the relationship: "collapse drag handle" rendered as "drag handle to collapse".
     - Current: `دستگیرهٔ کشیدن برای جمع کردن`
     - Source: `View tab group, collapse drag handle`
@@ -853,7 +457,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (77)
+### Fixed to date (78)
 
 - `mozac_browser_errorpages_file_access_denied_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-11-02
 - `mozac_browser_errorpages_file_access_denied_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fa/strings.xml` — fixed 2026-11-02

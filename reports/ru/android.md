@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,23 @@ Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (3)
 
-- `mozac_feature_listentopage_expand_player` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ru/strings.xml` — "Player" is spelled "плейер" here; the standard spelling is "плеер", and the batch uses "Медиаплеер" elsewhere.
-    - Current: `развернуть плейер`
-    - Source: `expand player`
-    - Suggest: `развернуть плеер`
-    - The dictionary spelling of "player" is "плеер". This string is also inconsistent with reader_mode_panel_media_player_content_description ("Медиаплеер").
-- `automotive_authentication_setup_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "If someone else is driving your car" became "if someone else is in your car", and "from being accessed" was dropped.
-    - Current: `чтобы защитить сохранённые конфиденциальные данные, если кто-то ещё находится в вашем автомобиле`
-    - Source: `Set up a device lock pattern, PIN, or password to protect your saved sensitive data from being accessed if someone else is driving your car.`
-    - Suggest: `чтобы защитить сохранённые конфиденциальные данные от доступа, если вашим автомобилем управляет кто-то другой`
-    - The source describes another person driving the car and getting access to the data. The Russian describes someone merely being in the car and does not say what the data is protected from.
+- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `%1$s требует обновления новых настроек.`
+    - Source: `%1$s requires new settings to update.`
+    - Suggest: `Для обновления %1$s требуются новые настройки.`
+    - Source: the extension needs new (permission) settings approved before it can update. «требует обновления новых настроек» means 'requires an update of the new settings', which turns the relationship around.
+- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `Это расширение требует обновления новых настроек.`
+    - Source: `This extension requires new settings to update.`
+    - Suggest: `Для обновления этого расширения требуются новые настройки.`
+    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update requires new settings.
+- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The dialog title says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `%1$s требует обновления новых настроек`
+    - Source: `%1$s requires new settings to update`
+    - Suggest: `Для обновления %1$s требуются новые настройки`
+    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update needs new permissions approved.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +59,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
+| Strings | 2,604 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,7 +90,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 147, `formal` 485 | **formal** |
+| register | `informal` 148, `formal` 488 | **formal** |
 
 ---
 
@@ -95,13 +100,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (141)
+## 3. Open findings (144)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 78 |
+| 2 | Wrong content (says something other than the English) | 81 |
 | 3 | Degraded language (grammar, spelling, terminology) | 58 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -171,6 +176,21 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs.`
     - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках.`
     - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
+- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `%1$s требует обновления новых настроек.`
+    - Source: `%1$s requires new settings to update.`
+    - Suggest: `Для обновления %1$s требуются новые настройки.`
+    - Source: the extension needs new (permission) settings approved before it can update. «требует обновления новых настроек» means 'requires an update of the new settings', which turns the relationship around.
+- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `Это расширение требует обновления новых настроек.`
+    - Source: `This extension requires new settings to update.`
+    - Suggest: `Для обновления этого расширения требуются новые настройки.`
+    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update requires new settings.
+- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The dialog title says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
+    - Current: `%1$s требует обновления новых настроек`
+    - Source: `%1$s requires new settings to update`
+    - Suggest: `Для обновления %1$s требуются новые настройки`
+    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update needs new permissions approved.
 - `mozac_feature_customtabs_menu_button` — `mozilla-mobile/android-components/components/feature/customtabs/src/main/res/values-ru/strings.xml` — "More options" is rendered as "Другие настройки" ("Other settings"), naming settings rather than options of the menu button.
     - Current: `Другие настройки`
     - Source: `More options`
@@ -396,22 +416,7 @@ _Nothing in this category._
     - Source: `DRM-controlled content`
     - Suggest: `Содержимое, защищённое DRM`
     - The source and developer comment refer to DRM/EME-controlled content, not copyright protection generally.
-- `preferences_category_delete_or_remove_downloads` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Delete or remove downloads" is rendered as "Удаление или уничтожение загрузки", using "уничтожение" (destruction) and a singular noun.
-    - Current: `Удаление или уничтожение загрузки`
-    - Source: `Delete or remove downloads`
-    - Suggest: `Удаление или удаление загрузок с устройства`
-    - The source distinguishes deleting the download record from removing the file; "уничтожение" (destruction) is not the meaning, and "загрузки" singular contradicts the plural "downloads".
-- `preferences_downloads_default_location_title` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Default download location" is rendered as "Адрес для загрузок" (address) instead of a folder/save location.
-    - Current: `Адрес для загрузок по умолчанию`
-    - Source: `Default download location`
-    - Suggest: `Папка для загрузок по умолчанию`
-    - The preference sets the default folder on the device where downloads are saved; "адрес" suggests a URL, which is the wrong content.
-- `preferences_remote_improvements` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Remote improvements" is rendered as "Удалённые улучшения", which reads as "deleted improvements".
-    - Current: `Удалённые улучшения`
-    - Source: `Remote improvements`
-    - Suggest: `Дистанционные улучшения`
-    - "Удалённые" is ambiguous and most naturally reads as "deleted/removed" here (unlike "Удалённая отладка" where the context disambiguates), so it conveys the wrong meaning of "remote".
-- _…and 21 more; see `state/` for the full list._
+- _…and 24 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

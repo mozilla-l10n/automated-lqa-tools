@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 2,568 |
+| **Strings reviewed this run** | 36 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,18 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (2)
 
-- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — "Utklapt" is missing the accent on the capital Ú.
-    - Current: `Utklapt`
-    - Source: `Expanded`
-    - Suggest: `Útklapt`
-    - Frisian spells the prefix 'út-' with an acute accent, as in 'spiler útklappe' in the same batch. 'Utklapt' is a spelling error.
+- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex: Frisian 'ûnder' is capitalized 'Ûnder', not 'Under'.
+    - Current: `Underbrutsen`
+    - Source: `Suspended`
+    - Suggest: `Ûnderbrutsen`
+    - The Frisian prefix is 'ûnder' (with circumflex); dropping the accent is a spelling error.
+- `wrex_widget_match_postponed` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing acute accent: Frisian 'út' is capitalized 'Út', so the word is 'Útsteld'.
+    - Current: `Utsteld`
+    - Source: `Postponed`
+    - Suggest: `Útsteld`
+    - The Frisian prefix is 'út' (with acute accent); 'Utsteld' is misspelled.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,568 |
-| Missing strings | 15 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,12 +72,7 @@ _Nothing retired._
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 8
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fy-rNL/strings.xml` — 7
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -95,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (147)
+## 3. Open findings (149)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 46 |
-| 3 | Degraded language (grammar, spelling, terminology) | 100 |
+| 3 | Degraded language (grammar, spelling, terminology) | 102 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -649,7 +649,7 @@ _Nothing in this category._
     - Source: `Sync`
     - Suggest: `Synchronisaasje`
     - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
-- _…and 26 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
