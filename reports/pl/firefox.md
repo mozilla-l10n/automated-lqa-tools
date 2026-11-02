@@ -2,25 +2,44 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 113 of 16,570 |
+| **Strings reviewed this run** | 192 of 16,730 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for pl: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for pl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — Misspelling "zaznaczenu" instead of "zaznaczeniu".
+    - Current: `po zaznaczenu tekstu`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `po zaznaczeniu tekstu`
+    - The locative of "zaznaczenie" is "zaznaczeniu"; the letter "i" is missing.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
+    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
+    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
+- `permissions-capabilities-listitem-off` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off"), but it was translated as the command "Wyłącz" ("Turn off").
+    - Current: `Wyłącz`
+    - Source: `value: Off`
+    - Suggest: `Wyłączone`
+    - In the exceptions list, the listitem value names the current state of a site entry, just like "Allow for Session". The en-US says "Off", meaning the state, not the "Turn Off" button action. So it should be the adjective "Wyłączone", not the verb "Wyłącz".
+- `permissions-capabilities-listitem-off-temporarily` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off temporarily"), but it was translated as the command "Wyłącz tymczasowo" ("Turn off temporarily").
+    - Current: `Wyłącz tymczasowo`
+    - Source: `value: Off temporarily`
+    - Suggest: `Wyłączone tymczasowo`
+    - This is the same problem as the "Off" list item. The value describes the entry's state, so it needs the adjective form, not the imperative.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,16 +53,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-privacy-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Privacy options" rendered as "Opcje widżetu prywatności" (privacy widget options), adding "widżetu" not present in the source.
-    - Current: `Opcje widżetu prywatności`
-    - Suggest: `Opcje prywatności`
-    - The en-US string is "Privacy options"; the other widget menu button (Clock options) is translated literally as "Opcje zegara", so the added "widżetu" is inconsistent and not in the source.
-- `newtab-search-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — "Search options" rendered with a plural noun "Opcje wyszukiwań" (options of searches).
-    - Current: `aria-label: Opcje wyszukiwań`
-    - Suggest: `aria-label: Opcje wyszukiwania`
-    - The source is "Search options"; standard Firefox pl terminology is "wyszukiwania" in the genitive singular, as in "Ustawienia wyszukiwania".
+_Nothing retired._
 
 ---
 
@@ -52,8 +64,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,570 |
-| Missing strings | 25 |
+| Strings | 16,730 |
+| Missing strings | 12 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -70,15 +82,11 @@ _Nothing to re-read._
 
 ### Completeness
 
-**25 strings** are not translated yet, concentrated in:
+**12 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 14
-- `browser/browser/ipProtection.ftl` — 4
-- `browser/chrome/browser/browser.properties` — 2
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/global/narrate.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `browser/browser/aboutLogins.ftl` — 9
+- `browser/browser/preferences/moreFromMozilla.ftl` — 2
+- `browser/browser/genai.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,11 +96,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1435, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1440, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 405 | **char** |
-| dash | `em` 123, `en` 14 | **em** |
-| nbsp | `total` 4896, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| ellipsis | `char` 406 | **char** |
+| dash | `em` 125, `en` 14 | **em** |
+| nbsp | `total` 4948, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 77 | **informal** |
 
 ---
@@ -103,14 +111,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (81)
+## 3. Open findings (85)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
+    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
+    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 47 |
-| 3 | Degraded language (grammar, spelling, terminology) | 21 |
+| 2 | Wrong content (says something other than the English) | 50 |
+| 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -262,6 +279,11 @@ _Nothing reported._
     - Source: `accesskey: n label: Send Link to Device`
 - `genai-settings-chat-lechat-links` — `browser/browser/genai.ftl` — "Mistral AI" is a company name and should not be translated. Current: "…zasady ochrony prywatności</a> sztucznej inteligencji Mistral." → Suggest: "…zasady ochrony prywatności</a> Mistral AI." (the sibling strings correctly keep OpenAI, Microsoft, Anthropic).
     - Source: `By choosing Le Chat Mistral, you agree to the Mistral AI <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
+    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
+    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
 - `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" is rendered as "Reguła użytkownika" (the user's rule, third-person), losing the second-person address used elsewhere in the locale.
     - Current: `Reguła użytkownika`
     - Source: `Your rule`
@@ -305,6 +327,16 @@ _Nothing reported._
 - `fxa-qrcode-pair-step1` — `browser/browser/preferences/fxaPairDevice.ftl` — narrows "mobile device" to "telefon", contradicting the dialog title (fxa-qrcode-pair-title = "…na telefonie lub tablecie"). → "…na urządzeniu mobilnym."
     - Source: `1. Open { -brand-product-name } on your mobile device.`
     - Suggest: `"…na urządzeniu mobilnym."`
+- `permissions-capabilities-listitem-off` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off"), but it was translated as the command "Wyłącz" ("Turn off").
+    - Current: `Wyłącz`
+    - Source: `value: Off`
+    - Suggest: `Wyłączone`
+    - In the exceptions list, the listitem value names the current state of a site entry, just like "Allow for Session". The en-US says "Off", meaning the state, not the "Turn Off" button action. So it should be the adjective "Wyłączone", not the verb "Wyłącz".
+- `permissions-capabilities-listitem-off-temporarily` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off temporarily"), but it was translated as the command "Wyłącz tymczasowo" ("Turn off temporarily").
+    - Current: `Wyłącz tymczasowo`
+    - Source: `value: Off temporarily`
+    - Suggest: `Wyłączone tymczasowo`
+    - This is the same problem as the "Off" list item. The value describes the entry's state, so it needs the adjective form, not the imperative.
 - `preferences-ai-controls-speech-recognition-control` — `browser/browser/preferences/preferences.ftl` — "Transcribe speech locally" translated as "Zamienia głos na tekst na urządzeniu", replacing "speech" with "głos" and "locally" with "na urządzeniu".
     - Current: `description: Zamienia głos na tekst na urządzeniu.`
     - Source: `description: Transcribe speech locally. label: Speech recognition`
@@ -416,6 +448,11 @@ _Nothing reported._
     - Source: `label: Learn from browsing in Classic and { -smart-window-brand-name }`
     - Suggest: `Ucz się z przeglądania w oknach klasycznych i { -smart-window-brand-name }`
     - "Classic" here names the Classic window mode; the Polish leaves a plural adjective with no noun, which is ungrammatical and unintelligible.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — Misspelling "zaznaczenu" instead of "zaznaczeniu".
+    - Current: `po zaznaczenu tekstu`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `po zaznaczeniu tekstu`
+    - The locative of "zaznaczenie" is "zaznaczeniu"; the letter "i" is missing.
 - `temporary-override` — `security/manager/security/certificates/certManager.ftl` — the two values of one column mix an adverbial phrase and an adjective: "Na stałe" / "Tymczasowy". → "Stały" / "Tymczasowy" (both agreeing with wyjątek).
     - Source: `Temporary`
 
@@ -468,11 +505,11 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1435 occurrences).
+    - The locale's quote convention is `polish-double` (1440 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1435 occurrences).
+    - The locale's quote convention is `polish-double` (1440 occurrences).
 
 ---
 

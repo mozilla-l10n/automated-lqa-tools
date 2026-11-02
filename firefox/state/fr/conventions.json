@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "fr",
-  "prose_chunks": 17643,
-  "strings": 16813
+  "prose_chunks": 17807,
+  "strings": 16964
  },
  "apostrophe": {
   "straight": 10,
-  "typographic": 5130
+  "typographic": 5156
  },
  "dash": {
-  "em": 43,
+  "em": 45,
   "en": 9
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 408
+  "char": 410
  },
  "fullwidth": {
   "punctuation": 0
@@ -24,19 +24,19 @@
   "open-question": 0
  },
  "nbsp": {
-  "before-punctuation": 1754,
+  "before-punctuation": 1763,
   "narrow": 0,
   "space-before-punctuation": 0,
-  "total": 4016
+  "total": 4032
  },
  "quotes": {
   "curly-double": 2,
   "curly-single": 1,
-  "guillemet": 1045,
+  "guillemet": 1047,
   "straight-double": 31
  },
  "register": {
-  "formal": 2864,
+  "formal": 2906,
   "informal": 0
  }
 }

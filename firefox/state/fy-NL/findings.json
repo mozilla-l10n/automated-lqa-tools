@@ -2999,6 +2999,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Bestân net downloaden",
+  "dismissed_because": "",
+  "fid": "7baa3efd63a1",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US 'File not downloaded' is a past participle. The locale itself uses the participle 'download' elsewhere ('wurdt net faak download'), and the infinitive changes the sense to an instruction.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "243b8740",
+  "string_id": "downloads-blocked-potentially-insecure",
+  "suggest": "Bestân net download",
+  "summary": "The infinitive 'downloaden' is used where the past participle 'download' is needed, so the message reads as 'do not download the file' instead of 'file not downloaded'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "legacy",
   "current": "",
@@ -3024,6 +3048,30 @@
   "string_id": "downloads-files-not-downloaded",
   "suggest": "",
   "summary": "\"{ $num } bestanden niet gedownload.\" — the [one] variant is Frisian",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "wylst it downloadproses",
+  "dismissed_because": "",
+  "fid": "1cf1ea4ca53b",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says 'during the download process'. That needs a preposition in Frisian, but 'wylst' ('while') has to introduce a clause, so this is ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3bba1f03",
+  "string_id": "downloads-unblock-insecure",
+  "suggest": "tidens it downloadproses",
+  "summary": "'wylst' is a conjunction and can't come before a noun phrase; a preposition such as 'tidens' is needed here.",
   "suppressed_by": ""
  },
  {
@@ -3571,6 +3619,54 @@
   "string_id": "genai-menu-ask-smart-window",
   "suggest": "Freegje…",
   "summary": "Fragen… → Freegje…",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "en blêdzje om de side opnij te toanen",
+  "dismissed_because": "",
+  "fid": "48856b004038",
+  "file": "browser/browser/genai.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US names the settings section 'Tabs and browsing', but the Frisian drops 'Tabs', so the path no longer matches the section. It also refers to 'de side' (the page), when the source means the menu ('it').",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3ddaef14",
+  "string_id": "genai-more-actions-all-off-notice",
+  "suggest": "Ljepblêden en sneupe om it opnij te toanen",
+  "summary": "The settings path 'Tabs and browsing' is reduced to 'en blêdzje', and the string says to show 'the page' again instead of the menu.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Jo sjogge dit menu as jo tekst selektearje.",
+  "dismissed_because": "",
+  "fid": "fc5d87fa571e",
+  "file": "browser/browser/genai.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US 'You won't see this menu when you select text' is negative; the Frisian says 'You see this menu when you select text'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3ddaef14",
+  "string_id": "genai-more-actions-all-off-notice",
+  "suggest": "Jo sjogge dit menu net mear as jo tekst selektearje.",
+  "summary": "The negation is missing, so the notice says the user will see the menu when selecting text.",
   "suppressed_by": ""
  },
  {
@@ -4616,6 +4712,30 @@
   "string_id": "spotlight-public-wifi-vpn-body",
   "suggest": "wylst jo navigearje",
   "summary": "wylst it navigearjen → wylst jo navigearje",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "in streamlined finster",
+  "dismissed_because": "",
+  "fid": "626b2e54d4a8",
+  "file": "browser/browser/newtab/asrouter.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The rest of the sentence is translated, but the English adjective \"streamlined\" was left as is. Frisian readers won't recognise it, and the locale translates terms like this everywhere else.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "74ef5903",
+  "string_id": "taskbar-tabs-spotlight-subtitle",
+  "suggest": "in ferienfâldige finster",
+  "summary": "The English word \"streamlined\" was left untranslated inside an otherwise Frisian sentence.",
   "suppressed_by": ""
  },
  {
@@ -6577,6 +6697,30 @@
   "string_id": "policy-DefaultDownloadDirectory",
   "suggest": "",
   "summary": "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "op macOS út negearje.",
+  "dismissed_because": "",
+  "fid": "8ee473c49468",
+  "file": "browser/browser/policies/policies-descriptions.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "\"negearje\" is not a separable verb with \"út\". The stray particle looks like it was left over from a rewrite (for example \"útskeakelje\"), and it makes the sentence ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7d6fb17e",
+  "string_id": "policy-DisableMacOSUserPolicies",
+  "suggest": "op macOS negearje.",
+  "summary": "\"út negearje\" is ungrammatical, because \"negearje\" (ignore) does not take the particle \"út\".",
   "suppressed_by": ""
  },
  {
@@ -9552,14 +9696,14 @@
   "file": "browser/browser/protections.ftl",
   "first_seen": "2026-08-11",
   "impact": 4,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "fy-NL",
   "origin": {
    "report": "legacy",
    "section": "I. Typography & punctuation",
    "severity": "S5"
   },
-  "rationale": "The locale's quote convention is `curly-single` (808 occurrences).",
+  "rationale": "The locale's quote convention is `curly-single` (810 occurrences).",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -11695,7 +11839,7 @@
   "file": "devtools/client/styleeditor.ftl",
   "first_seen": "2026-09-03",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "fy-NL",
   "origin": {},
   "rationale": "The label is “Bewarje”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -12647,6 +12791,30 @@
   "string_id": "statePartiallyChecked",
   "suggest": "foar in part oanfinke",
   "summary": "Wrong participle form: \"oanfinkt\" should be the past participle \"oanfinkt\" → \"oanfinke\"/\"oanfinkt\" mismatch with adjectival usage.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "SVG<use>-elemint",
+  "dismissed_because": "",
+  "fid": "2a4948142284",
+  "file": "dom/chrome/dom/dom.properties",
+  "first_seen": "2026-11-02",
+  "impact": 4,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source has 'an SVG <use> element' with a space. Running 'SVG' and '<use>' together is a typo.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "56b921ed",
+  "string_id": "SVGUseInlineEventHandlerWarning",
+  "suggest": "SVG <use>-elemint",
+  "summary": "The space between 'SVG' and '<use>' is missing.",
   "suppressed_by": ""
  },
  {
@@ -18640,6 +18808,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "Befeiligingskoade bewarje",
+  "dismissed_because": "",
+  "fid": "9c6b806bcecc",
+  "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 4,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source is the question 'Save security code?'. The matching payment method header keeps the question mark.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "11514b44",
+  "string_id": "credit-card-save-security-code-doorhanger-header",
+  "suggest": "Befeiligingskoade bewarje?",
+  "summary": "The question mark is missing from the header.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "útwreidingûntwikkeler",
@@ -18797,6 +18989,30 @@
   "string_id": "form-post-secure-to-insecure-warning-message",
   "suggest": "gegevens",
   "summary": "gegegevens → gegevens",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "ferpleatse",
+  "dismissed_because": "",
+  "fid": "6ed0a23fa356",
+  "file": "toolkit/toolkit/global/mozBoxBase.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source 'Item moved to position…' announces that a move has happened. The infinitive makes it read as an instruction to move the item.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7bfe9a3b",
+  "string_id": "moz-box-group-reorder-announcement",
+  "suggest": "ferpleatst",
+  "summary": "The verb is in the infinitive or imperative ('ferpleatse') when it should be the past participle ('ferpleatst').",
   "suppressed_by": ""
  },
  {
@@ -20444,6 +20660,30 @@
   "string_id": "neterror-generic-error",
   "suggest": "ien of oare reden",
   "summary": "ien oft oare reden → ien of oare reden",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "kontrolearje dan of dizze",
+  "dismissed_because": "",
+  "fid": "b03910e20014",
+  "file": "toolkit/toolkit/neterror/netError.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In 'check that/whether it is using port…' Frisian needs 'oft'. The neighbouring loopback error string correctly uses 'Kontrolearje oft'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "62c591fa",
+  "string_id": "neterror-loopback-refused-wrong-port",
+  "suggest": "kontrolearje dan oft dizze",
+  "summary": "'of' ('or') is used where the conjunction 'oft' ('whether') is needed.",
   "suppressed_by": ""
  },
  {

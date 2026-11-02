@@ -2,37 +2,88 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 51 of 16,568 |
+| **Strings reviewed this run** | 223 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ja: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for ja: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (12)
 
-- `narrate-rate-fast` — `toolkit/toolkit/global/narrate.ftl` — The wrong kanji is used for "speed up": 早く (early) is written where 速く (fast) is needed.
-    - Current: `ナレーションを早くする`
-    - Source: `title: Speed up narration`
-    - Suggest: `ナレーションを速くする`
-    - The en-US "Speed up narration" is about speaking rate, which Japanese writes as 速い/速く. 早い/早く refers to time (early or soon), so 早くする is a kanji misuse here.
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy that developers need to recognize.
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy.
+- `downloads-blocked-uncommon` — `browser/browser/downloads.ftl` — "This file is not commonly downloaded" is rendered as "Opening this file is dangerous".
+    - Current: `このファイルを開くのは危険です。`
+    - Source: `This file is not commonly downloaded.`
+    - Suggest: `このファイルは一般的にダウンロードされていません。`
+    - The source only says the file is rarely downloaded. The translation instead says opening it is dangerous, which is a different and much stronger fact.
+- `downloads-blocked-potentially-unwanted` — `browser/browser/downloads.ftl` — The hedge "may" is dropped, so the text says the file will definitely harm the computer.
+    - Current: `このファイルはあなたのコンピューターに害を及ぼします。`
+    - Source: `This file may harm your computer.`
+    - Suggest: `このファイルはあなたのコンピューターに害を及ぼす可能性があります。`
+    - The en-US says the file "may harm" the computer. The Japanese states the harm as certain.
+- `downloads-content-analysis-no-agent-error` — `browser/browser/downloads.ftl` — "is not reachable" is rendered as the agent being unable to reach something.
+    - Current: `{ $agent } が到達できなかったため`
+    - Source: `File was blocked because { $agent } is not reachable.`
+    - Suggest: `{ $agent } に接続できなかったため`
+    - The source means the agent cannot be reached. 「が到達できなかった」 makes the agent the one doing the reaching, which reverses who couldn't reach whom.
+- `downloads-blocked-malware` — `browser/browser/downloads.ftl` — Wrong particle: 「このファイルは…が含まれています」 should be 「このファイルには…」.
+    - Current: `このファイルはウイルスや`
+    - Source: `This file contains a virus or malware.`
+    - Suggest: `このファイルにはウイルスや`
+    - With 含まれる, the thing that contains something takes 「には」. Using 「は」 here is ungrammatical.
+- `downloads-state-starting` — `browser/browser/downloads.ftl` — An in-progress status ("Starting…") is rendered in the past tense ("Started").
+    - Current: `開始しました...`
+    - Source: `Starting…`
+    - Suggest: `開始しています...`
+    - "Starting…" means the download is starting right now. 「開始しました」 says it has already started.
+- `downloads-unblock-type-content-analysis-warn` — `browser/browser/downloads.ftl` — The sentence has no closing 。.
+    - Current: `安全でないフラグが付けられています`
+    - Source: `Your organization uses data-loss prevention software that has flagged this content as unsafe.`
+    - Suggest: `安全でないフラグが付けられています。`
+    - The locale convention is that sentences end with 。, and the neighbouring strings all do.
+- `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — The clause "may not be safe to open" is missing from the translation.
+    - Current: `このファイルは、一般的にはダウンロードされることがないファイルです。`
+    - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
+    - Suggest: `このファイルは一般的にダウンロードされるものではなく、開くと安全でない可能性があります。`
+    - The en-US says the file is not commonly downloaded and may not be safe to open. The Japanese drops the safety warning, and it also says the file is generally never downloaded, which is stronger than "not commonly".
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path names "Tabs" when the source panel is "Tabs and browsing".
+    - Current: `[タブ] から`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `[タブとブラウジング] から`
+    - The source tells users to go to Settings > Tabs and browsing. Cutting the name to "タブ" points them to a section label that does not match the real one.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The translation drops "Help" and promises outright that the VPN hides your location.
+    - Current: `閲覧時の現在位置を隠します。`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `閲覧時の現在位置を隠すのに役立ちます。`
+    - The en-US only says the VPN helps hide your location. The Japanese says it hides it, which is a protection the product does not promise.
+- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "It stays yours" (you keep ownership of the data) is rendered as "user data stays only here", a claim about where the data is kept.
+    - Current: `ユーザーデータはここにしか残りません。`
+    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
+    - Suggest: `データはあなたのものです。`
+    - The developer comment says the phrase means the user keeps ownership of the imported data. The Japanese instead says the data never leaves this place. That gives a wrong account of where user data goes, and a guarantee Firefox does not make, since data can be synced.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — There is an extra ASCII period after the closing 。.
-    - Current: `ブロックします。.`
-    - Source: `Block access to Troubleshooting Information (about:support).`
-    - Suggest: `ブロックします。`
-    - Under the locale convention a sentence ends with 。 alone. The trailing '.' doubles the sentence-ending punctuation, and the sibling policy strings don't have it.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -52,11 +103,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 329 |
-| Strings | 16,568 |
-| Missing strings | 50 |
-| Obsolete strings | 23 |
-| Files absent from the locale | 1 |
+| Files | 330 |
+| Strings | 16,742 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -71,25 +122,6 @@ _Nothing retired._
 
 ### Completeness
 
-**50 strings** are not translated yet, concentrated in:
-
-- `browser/browser/miniWindow.ftl` — 15
-- `browser/browser/preferences/preferences.ftl` — 14
-- `browser/browser/ipProtection.ftl` — 7
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/chrome/browser/browser.properties` — 2
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/global/narrate.ftl` — 1
-- `browser/browser/browser.ftl` — 1
-- `browser/browser/browserContext.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-**Files absent from the locale:**
-
-- `browser/browser/miniWindow.ftl`
-
 **Files present but identical to en-US:**
 
 - `security/manager/chrome/pipnss/nsserrors.properties`
@@ -103,12 +135,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 444, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 446, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 397 | **ascii** |
-| dash | `em` 55, `en` 1 | **em** |
+| ellipsis | `ascii` 398 | **ascii** |
+| dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 5049 | **punctuation** |
+| fullwidth | `punctuation` 5120 | **punctuation** |
 
 ---
 
@@ -118,24 +150,34 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (139)
+## 3. Open findings (151)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation says the browser checks site involvement and does not sell/share the user's data, instead of automatically asking participating sites not to sell or share it.
     - Current: `{ -brand-short-name } はサイトへの関与を自動的に確認し、あなたの個人データを販売または共有しません。`
     - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
     - Suggest: `{ -brand-short-name } は対応サイトに対して、あなたの個人データを販売または共有しないよう自動的に要求します。`
     - en-US: "automatically asks participating sites not to sell or share your personal data". The Japanese makes the browser itself the party that does not sell data and drops the request to participating sites.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The translation drops "Help" and promises outright that the VPN hides your location.
+    - Current: `閲覧時の現在位置を隠します。`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `閲覧時の現在位置を隠すのに役立ちます。`
+    - The en-US only says the VPN helps hide your location. The Japanese says it hides it, which is a protection the product does not promise.
+- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "It stays yours" (you keep ownership of the data) is rendered as "user data stays only here", a claim about where the data is kept.
+    - Current: `ユーザーデータはここにしか残りません。`
+    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
+    - Suggest: `データはあなたのものです。`
+    - The developer comment says the phrase means the user keeps ownership of the imported data. The Japanese instead says the data never leaves this place. That gives a wrong account of where user data goes, and a guarantee Firefox does not make, since data can be synced.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 62 |
-| 3 | Degraded language (grammar, spelling, terminology) | 39 |
-| 4 | Cosmetic (typography, spacing) | 30 |
+| 2 | Wrong content (says something other than the English) | 70 |
+| 3 | Degraded language (grammar, spelling, terminology) | 42 |
+| 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -293,6 +335,36 @@ _Also listed under their own category below._
 - `trustpanel-blocker-description` — `browser/browser/browser.ftl` — trustpanel-blocker-description (browser.ftl) — text copied from trustpanel-etp-description-disabled, adding a condition absent from en-US. → …そのため、できるだけ多くのトラッカーをブロックします。
     - Source: `{ -brand-product-name } thinks companies should follow you less. So we block as many as we can.`
     - Suggest: `…そのため、できるだけ多くのトラッカーをブロックします。`
+- `downloads-blocked-potentially-unwanted` — `browser/browser/downloads.ftl` — The hedge "may" is dropped, so the text says the file will definitely harm the computer.
+    - Current: `このファイルはあなたのコンピューターに害を及ぼします。`
+    - Source: `This file may harm your computer.`
+    - Suggest: `このファイルはあなたのコンピューターに害を及ぼす可能性があります。`
+    - The en-US says the file "may harm" the computer. The Japanese states the harm as certain.
+- `downloads-blocked-uncommon` — `browser/browser/downloads.ftl` — "This file is not commonly downloaded" is rendered as "Opening this file is dangerous".
+    - Current: `このファイルを開くのは危険です。`
+    - Source: `This file is not commonly downloaded.`
+    - Suggest: `このファイルは一般的にダウンロードされていません。`
+    - The source only says the file is rarely downloaded. The translation instead says opening it is dangerous, which is a different and much stronger fact.
+- `downloads-content-analysis-no-agent-error` — `browser/browser/downloads.ftl` — "is not reachable" is rendered as the agent being unable to reach something.
+    - Current: `{ $agent } が到達できなかったため`
+    - Source: `File was blocked because { $agent } is not reachable.`
+    - Suggest: `{ $agent } に接続できなかったため`
+    - The source means the agent cannot be reached. 「が到達できなかった」 makes the agent the one doing the reaching, which reverses who couldn't reach whom.
+- `downloads-state-starting` — `browser/browser/downloads.ftl` — An in-progress status ("Starting…") is rendered in the past tense ("Started").
+    - Current: `開始しました...`
+    - Source: `Starting…`
+    - Suggest: `開始しています...`
+    - "Starting…" means the download is starting right now. 「開始しました」 says it has already started.
+- `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — The clause "may not be safe to open" is missing from the translation.
+    - Current: `このファイルは、一般的にはダウンロードされることがないファイルです。`
+    - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
+    - Suggest: `このファイルは一般的にダウンロードされるものではなく、開くと安全でない可能性があります。`
+    - The en-US says the file is not commonly downloaded and may not be safe to open. The Japanese drops the safety warning, and it also says the file is generally never downloaded, which is stronger than "not commonly".
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path names "Tabs" when the source panel is "Tabs and browsing".
+    - Current: `[タブ] から`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `[タブとブラウジング] から`
+    - The source tells users to go to Settings > Tabs and browsing. Cutting the name to "タブ" points them to a section label that does not match the real one.
 - `ip-protection-site-rule-duplicate-error` — `browser/browser/ipProtection.ftl` — "rule" is translated as "エラー" (error), so the message says the site already has an error set.
     - Current: `このサイトはすでにエラーが設定されています。`
     - Source: `This site already has a rule.`
@@ -306,6 +378,11 @@ _Also listed under their own category below._
 - `ipprotection-bandwidth-upgrade-title` — `browser/browser/ipProtection.ftl` — ipprotection-bandwidth-upgrade-title (ipProtection.ftl) — "Like built-in VPN?" is a question, read as "similar to". → 組み込み VPN が気に入りましたか？ …
     - Source: `Like built-in VPN? Get even more protection outside { -brand-product-name } with { -mozilla-vpn-brand-name }.`
     - Suggest: `組み込み VPN が気に入りましたか？ …`
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The translation drops "Help" and promises outright that the VPN hides your location.
+    - Current: `閲覧時の現在位置を隠します。`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `閲覧時の現在位置を隠すのに役立ちます。`
+    - The en-US only says the VPN helps hide your location. The Japanese says it hides it, which is a protection the product does not promise.
 - `site-rules-description-exclusion` — `browser/browser/ipProtection.ftl` — Status description rendered as an action/instruction instead of a state statement.
     - Current: `このサイトでは VPN をオフにします`
     - Source: `VPN is off for this site`
@@ -381,6 +458,11 @@ _Also listed under their own category below._
     - Source: `Bring in your data`
     - Suggest: `データを引き継ぎましょう`
     - The en-US header invites the user to import their data from another browser; the Japanese instead asserts that the product protects the user's personal data, which the source never says here.
+- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "It stays yours" (you keep ownership of the data) is rendered as "user data stays only here", a claim about where the data is kept.
+    - Current: `ユーザーデータはここにしか残りません。`
+    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
+    - Suggest: `データはあなたのものです。`
+    - The developer comment says the phrase means the user keeps ownership of the imported data. The Japanese instead says the data never leaves this place. That gives a wrong account of where user data goes, and a guarantee Firefox does not make, since data can be synced.
 - `onboarding-refresh-fro-theme-header` — `browser/browser/newtab/onboarding.ftl` — "Play with your look" (appearance/theme) translated as "layout".
     - Current: `お好みのレイアウトで楽しもう`
     - Source: `Play with your look`
@@ -459,6 +541,16 @@ _Also listed under their own category below._
     - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
     - Suggest: `SpeechRecognition には無音のみが入力されます`
     - en-US: "SpeechRecognition will only be fed silence" — the recognizer receives silence as input; the ja reverses the direction to silence being returned.
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy that developers need to recognize.
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy.
 - `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — "the current filters" is translated as "the current search".
     - Current: `現在の検索と一致するログはありません。`
     - Source: `No logs match the current filters.`
@@ -469,45 +561,7 @@ _Also listed under their own category below._
     - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
     - Suggest: `description: 同期機能により書き込まれた診断ログです。`
     - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
-- `mlmodel-formfill-engine` — `toolkit/toolkit/about/aboutAddons.ftl` — "address forms" mistranslated as "アドレスフォーム" (email/URL address), losing the meaning of postal address forms.
-    - Current: `アドレスフォームの入力の補助`
-    - Source: `{ -brand-short-name } uses this to help fill in address forms`
-    - Suggest: `住所フォームの入力の補助`
-    - en-US "address forms" refers to postal address entry forms in form autofill; アドレス in Japanese Firefox usually means URL/email address, so the meaning is wrong.
-- `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
-    - Source: `About Logging`
-    - Suggest: `HTTP ログについて`
-- `about-networking-logging` — `toolkit/toolkit/about/aboutNetworking.ftl` — about-networking-logging (aboutNetworking.ftl) — same over-specification; the row links to the general about:logging page. → ログ記録
-    - Source: `Logging`
-    - Suggest: `ログ記録`
-- `about-networking-ssl-tokens-summary-certs` — `toolkit/toolkit/about/aboutNetworking.ftl` — "distinct" (number of unique certificates) is translated as 「差異」 (difference), naming the wrong quantity.
-    - Current: `差異`
-    - Source: `Stored certs: { $references } ({ $totalBytes } B), distinct: { $distinct } ({ $distinctBytes } B)`
-    - Suggest: `固有`
-    - The developer comment states $distinct is the number of unique certificates across all tokens; 「差異」 means "difference/discrepancy", not "distinct/unique".
-- `about-pdf-feature-details-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "move through PDFs" (navigate) is rendered as "display PDF details".
-    - Current: `アウトライン、添付、プロパティを利用して PDF の詳細を表示します。`
-    - Source: `Use outlines, attachments, and properties to move through PDFs.`
-    - Suggest: `アウトライン、添付ファイル、プロパティを利用して PDF 内を移動します。`
-    - en-US says these features are used to move through (navigate) PDFs, not to display details.
-- `profiles-launch-profile` — `toolkit/toolkit/about/aboutProfiles.ftl` — profiles-launch-profile (aboutProfiles.ftl) — "Launch profile in new browser" → 別のプロセスで ("in another process"). → 新しいブラウザーで起動
-    - Source: `Launch profile in new browser`
-    - Suggest: `別のプロセスで`
-- `effective-content-sandbox-level` — `toolkit/toolkit/about/aboutSupport.ftl` — effective-content-sandbox-level (aboutSupport.ftl) — "Effective" (value in force) → 効果的な ("efficacious"). → 実効の Verified.
-    - Source: `Effective Content Process Sandbox Level`
-    - Suggest: `効果的な`
-- `virtual-monitor-disp` — `toolkit/toolkit/about/aboutSupport.ftl` — virtual-monitor-disp (aboutSupport.ftl) — "Virtual Monitor Display" → 仮想デスクトップ, an unrelated OS feature. → 仮想モニターの表示 Verified.
-    - Source: `Virtual Monitor Display`
-    - Suggest: `仮想デスクトップ`
-- `about-telemetry-keyed-scalar-section` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "Keyed" read as "key/principal" (主要な). Keyed scalars are indexed by string keys. → キー付きスカラー / キー付きヒストグラム Verified.
-    - Current: `主要な`
-    - Source: `Keyed Scalars`
-    - Suggest: `キー付きスカラー`
-- `about-telemetry-show-subsession-data` — `toolkit/toolkit/about/aboutTelemetry.ftl` — "subsession" rendered as "submitted" (送信データ). → サブセッションデータを表示 Verified.
-    - Current: `送信データ`
-    - Source: `Show subsession data`
-    - Suggest: `サブセッションデータを表示`
-- _…and 11 more; see `state/` for the full list._
+- _…and 21 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -523,6 +577,11 @@ _Also listed under their own category below._
     - Current: `通知されます`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
     - Suggest: `通知します`
+- `downloads-blocked-malware` — `browser/browser/downloads.ftl` — Wrong particle: 「このファイルは…が含まれています」 should be 「このファイルには…」.
+    - Current: `このファイルはウイルスや`
+    - Source: `This file contains a virus or malware.`
+    - Suggest: `このファイルにはウイルスや`
+    - With 含まれる, the thing that contains something takes 「には」. Using 「は」 here is ungrammatical.
 - `ip-protection-bandwidth-left-gb` — `browser/browser/ipProtection.ftl` — browser/browser/ipProtection.ftl — 残り attaches to $maxUsage, giving "of the remaining {max} GB, {left} GB". → { $maxUsage } GB 中、残り { $usageLeft } GB (the pattern already used correctly in ipprotection-message-bandwidth-warning.message).
     - Current: `$maxUsage`
     - Source: `{ $usageLeft } GB of { $maxUsage } GB left`
@@ -632,6 +691,11 @@ _Also listed under their own category below._
     - Current: `{ -smart-window-brand-name }がサーバーに`
     - Source: `{ -smart-window-brand-name } couldn’t reach the server. Try a different network, or disable your VPN.`
     - Suggest: `} がサーバーに`
+- `downloads-unblock-type-content-analysis-warn` — `browser/browser/downloads.ftl` — The sentence has no closing 。.
+    - Current: `安全でないフラグが付けられています`
+    - Source: `Your organization uses data-loss prevention software that has flagged this content as unsafe.`
+    - Suggest: `安全でないフラグが付けられています。`
+    - The locale convention is that sentences end with 。, and the neighbouring strings all do.
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — browser/browser/migrationWizard.ftl.
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
 - `mr2022-onboarding-gratitude-subtitle` — `browser/browser/newtab/onboarding.ftl` — I10 — Duplicated text. spotlight-better-internet-body (browser/browser/newtab/asrouter.ftl) — すべての人にとって appears twice in one sentence (cf. mr2022-onboarding-gratitude-subtitle, correct).

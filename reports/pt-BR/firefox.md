@@ -2,53 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 149 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for pt-BR: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (2)
 
-- `urlbar-trust-icon-trackers-blocked-longform-label` — `browser/browser/browser.ftl` — `urlbar-trust-icon-trackers-blocked-longform-label` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$count ->} [zero] Nenhum rastreador bloqueado [one] { $count } rastreador bloqueado [other] { $count } rastreadores bloqueados`
-    - Source: `{$count ->} [one] { $count } tracker blocked [other] { $count } trackers blocked`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `security-privacy-status-trackers-label` — `browser/browser/preferences/preferences.ftl` — `security-privacy-status-trackers-label` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$trackerCount ->} [zero] Nenhum rastreador bloqueado no último mês [one] { $trackerCount } rastreador bloqueado no último mês [other] { $trackerCount } rastreadores bloqueados no último mês`
-    - Source: `{$trackerCount ->} [one] { $trackerCount } tracker blocked over the last month [other] { $trackerCount } trackers blocked over the last month`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-privacy-message-milestone-week` — `browser/browser/newtab/newtab.ftl` — `newtab-privacy-message-milestone-week` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$count ->} [zero] Nenhum rastreador bloqueado esta semana. Descubra como o { -brand-short-name } protege sua privacidade [one] { $count } rastreador bloqueado esta semana. Descubra como o { -brand-short-name } protege…`
-    - Source: `{$count ->} [one] { $count } tracker blocked this week. See what { -brand-short-name } is keeping out of your way [other] { $count } trackers blocked this week. See what { -brand-short-name } is keeping out of your way`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-privacy-message-milestone-month` — `browser/browser/newtab/newtab.ftl` — `newtab-privacy-message-milestone-month` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$count ->} [zero] Nenhum rastreador bloqueado este mês. Um pequeno passo para privacidade. Um grande passo para sua tranquilidade. [one] { $count } rastreador bloqueado este mês. Um pequeno passo para privacidade. Um g…`
-    - Source: `{$count ->} [one] { $count } tracker blocked this month. One small step for privacy. One big step for peace of mind. [other] { $count } trackers blocked this month. One small step for privacy. One big step for peace of…`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-privacy-message-milestone-year` — `browser/browser/newtab/newtab.ftl` — `newtab-privacy-message-milestone-year` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$count ->} [zero] Nenhum rastreador bloqueado este ano. Um ano marcante na proteção da sua privacidade. [one] { $count } rastreador bloqueado este ano. Um ano marcante na proteção da sua privacidade. [other] { $count }…`
-    - Source: `{$count ->} [one] { $count } tracker blocked this year. That’s a powerful year of protecting your privacy. [other] { $count } trackers blocked this year. That’s a powerful year of protecting your privacy.`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `newtab-privacy-message-milestone-total` — `browser/browser/newtab/newtab.ftl` — `newtab-privacy-message-milestone-total` has plural variant ['zero'], which pt-BR does not have
-    - Current: `{$count ->} [zero] Nenhum rastreador bloqueado. Um grande avanço para sua privacidade, sempre sob seu controle. [one] { $count } rastreador bloqueado. Um grande avanço para sua privacidade, sempre sob seu controle. [oth…`
-    - Source: `{$count ->} [one] { $count } tracker blocked. That’s major progress towards privacy on your terms. [other] { $count } trackers blocked. That’s major progress towards privacy on your terms.`
-    - pt-BR has the categories ['many', 'one', 'other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The pronoun "Ele" is masculine, but the noun it refers to ("área" or "mini janela") is feminine.
-    - Current: `Ele fica sempre visível`
-    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
-    - Suggest: `Ela fica sempre visível`
-    - The en-US "It’ll stay on top" refers to the selected area or the Mini Window. Both are feminine in Portuguese ("uma área", "uma mini janela"), so the pronoun has to be "Ela".
+- `credit-card-save-payment-method-doorhanger-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Ungrammatical phrase "para agilizar finalizar compras" puts two infinitives side by side.
+    - Current: `para agilizar finalizar compras`
+    - Source: `{ -brand-short-name } encrypts and autofills your payment details for faster checkout.`
+    - Suggest: `para agilizar a finalização de compras`
+    - The verb 'agilizar' needs a noun object here, not a bare infinitive. The English 'for faster checkout' is better rendered as 'para agilizar a finalização de compras'.
+- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "pernanecem" is misspelled; it should be "permanecem".
+    - Current: `pernanecem`
+    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
+    - Suggest: `permanecem`
+    - The verb "permanecer" (stay/remain) is misspelled. The meaning matches the en-US "It stays yours", so only the spelling is wrong.
 
 ### ✅ Fixed since the last run (0)
 
@@ -62,11 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — "matches" = football matches. Current: Carregando mais ocorrências… → Suggest: Carregando mais jogos…
-    - Current: `Carregando mais ocorrências…`
-    - Suggest: `Carregando mais jogos…`
+_Nothing retired._
 
 ---
 
@@ -75,7 +54,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -101,12 +80,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 596, `curly-single` 124, `straight-double` 64 | **curly-double** |
+| quotes | `curly-double` 598, `curly-single` 124, `straight-double` 64 | **curly-double** |
 | apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
-| ellipsis | `char` 392, `ascii` 4 | **char** |
-| dash | `em` 47, `en` 1 | **em** |
-| nbsp | `total` 10, `narrow` 9, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1526 | **informal** |
+| ellipsis | `char` 394, `ascii` 4 | **char** |
+| dash | `em` 49, `en` 1 | **em** |
+| nbsp | `total` 10, `narrow` 10, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
+| register | `informal` 1539 | **informal** |
 
 ---
 
@@ -116,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (544)
+## 3. Open findings (546)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
 | 2 | Wrong content (says something other than the English) | 181 |
-| 3 | Degraded language (grammar, spelling, terminology) | 261 |
+| 3 | Degraded language (grammar, spelling, terminology) | 263 |
 | 4 | Cosmetic (typography, spacing) | 91 |
 
 ### A. Functional, markup, variables & plurals
@@ -644,11 +623,12 @@ _Nothing reported._
     - Current: `lembre que pode importar`
     - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
     - Suggest: `lembre-se de que pode importar`
-- `origin-controls-options` — `browser/browser/originControls.ftl` — en-US ends with a colon because the options follow directly: A extensão pode ler e alterar dados → …dados:
-    - Current: `A extensão pode ler e alterar dados`
-    - Source: `label: Extension Can Read and Change Data:`
-    - Suggest: `…dados:`
-- _…and 89 more; see `state/` for the full list._
+- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "pernanecem" is misspelled; it should be "permanecem".
+    - Current: `pernanecem`
+    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
+    - Suggest: `permanecem`
+    - The verb "permanecer" (stay/remain) is misspelled. The meaning matches the en-US "It stays yours", so only the spelling is wrong.
+- _…and 91 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -861,7 +841,7 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 392 times against 4 ASCII runs.
+    - The tree uses … 394 times against 4 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -898,7 +878,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 392 times against 4 ASCII runs.
+    - The tree uses … 394 times against 4 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -929,11 +909,11 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
     - Current: `"Restaurar o { -brand-short-name }"`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
@@ -942,21 +922,21 @@ _Nothing reported._
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -979,7 +959,7 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 392 times against 4 ASCII runs.
+    - The tree uses … 394 times against 4 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
@@ -991,7 +971,7 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 392 times against 4 ASCII runs.
+    - The tree uses … 394 times against 4 ASCII runs.
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)
@@ -1009,7 +989,7 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -1037,7 +1017,7 @@ _Nothing reported._
 - `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
     - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
     - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (596 occurrences).
+    - The locale's quote convention is `curly-double` (598 occurrences).
 - _…and 25 more; see `state/` for the full list._
 
 ---

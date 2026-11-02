@@ -2,29 +2,49 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 102 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for pt-PT: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (5)
 
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Controlos de editar" uses an infinitive where a noun is required; it should be "Controlos de edição".
-    - Current: `Controlos de editar`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Controlos de edição`
-    - The en-US "Edit controls" names a group of editing controls. In Portuguese, "de" followed by an infinitive does not work as a noun modifier here. The natural form is "Controlos de edição", which matches "Controlos de zoom" next to it.
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — Verb does not agree with its plural subject "dispositivos".
+    - Current: `dispositivos que sincronize`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `dispositivos que sincronizem`
+    - The relative clause's subject is "dispositivos" (plural), so the verb must be "sincronizem", as in the sibling string about-logins-confirm-delete-all-sync-dialog-message.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Participle is plural but refers to a single security code name.
+    - Current: `{ $securityCode } guardados`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name (e.g. "CVV", masculine singular), so the participle should be "guardado", not plural "guardados".
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated with a verb ("navegue"), which breaks the settings path.
+    - Current: `Separadores e navegue para o mostrar novamente`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Separadores e navegação para o mostrar novamente`
+    - In en-US, "Tabs and browsing" is the name of a Settings section in the path Settings > Tabs and browsing. "navegue" is the imperative "browse", so the sentence now tells the user to browse instead of naming the section.
+- `item-formdata-description2` — `browser/browser/sanitize.ftl` — The English serial comma before "e" was copied, which standard Portuguese punctuation doesn't use.
+    - Current: `Nomes, e-mails, e dados`
+    - Source: `Names, emails, and form entries`
+    - Suggest: `Nomes, e-mails e dados`
+    - Portuguese doesn't put a comma before the "e" that joins the last item of a list. The comma here mirrors English punctuation.
+- `newtab-discovery-empty-section-topstories-unavailable-header` — `browser/browser/newtab/newtab.ftl` — The generic noun "stories" is left in English as "Stories" instead of being translated.
+    - Current: `As Stories não estão disponíveis neste momento`
+    - Source: `Stories aren’t available right now`
+    - Suggest: `As histórias não estão disponíveis neste momento`
+    - In the en-US source "stories" is a common lowercase noun, not a brand or feature name. pt-PT translates stories on New Tab as "histórias", so leaving it in English is inconsistent.
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,12 +58,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — “Smart windows” translated as “janelas Inteligentes” in one tooltip and left as “Janelas Smart” in the v2 variant of the same button.
-    - Current: `Alternar entre as janelas Inteligentes e Clássicas.`
-    - Suggest: `Alternar entre as Janelas Smart e Clássicas.`
-    - The two tooltips label the same switcher button; one of them must be wrong, and “Inteligentes” diverges from the Smart Window brand used everywhere else in the file.
+_Nothing retired._
 
 ---
 
@@ -52,7 +69,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -78,10 +95,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 566, `curly-single` 114, `straight-double` 40 | **curly-double** |
+| quotes | `curly-double` 568, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
-| ellipsis | `char` 371, `ascii` 28 | **char** |
-| dash | `em` 64, `en` 8 | **em** |
+| ellipsis | `char` 373, `ascii` 28 | **char** |
+| dash | `em` 66, `en` 8 | **em** |
 | nbsp | `total` 42, `before-punctuation` 2, `space-before-punctuation` 6 | **total** |
 
 ---
@@ -93,15 +110,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (308)
+## 3. Open findings (313)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
-| 2 | Wrong content (says something other than the English) | 122 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 2 | Wrong content (says something other than the English) | 123 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -392,6 +409,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Try Perplexity: a new way to search`
     - Suggest: `Perplexity`
     - Perplexity is a product brand and must not be altered; the misspelling appears in perplexity-callout-theme-2-title, theme-1-subtitle-1/-2, theme-2-subtitle-1 and perplexity-callout-primary-label.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated with a verb ("navegue"), which breaks the settings path.
+    - Current: `Separadores e navegue para o mostrar novamente`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Separadores e navegação para o mostrar novamente`
+    - In en-US, "Tabs and browsing" is the name of a Settings section in the path Settings > Tabs and browsing. "navegue" is the imperative "browse", so the sentence now tells the user to browse instead of naming the section.
 - `genai-settings-chat-chatgpt-links` — `browser/browser/genai.ftl` — The company name OpenAI is misspelled as “OpenIA” in the ChatGPT legal-consent string.
     - Current: `OpenIA`
     - Source: `By choosing ChatGPT, you agree to the OpenAI <a data-l10n-name="link1">Terms of Use</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
@@ -555,6 +577,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — Verb does not agree with its plural subject "dispositivos".
+    - Current: `dispositivos que sincronize`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `dispositivos que sincronizem`
+    - The relative clause's subject is "dispositivos" (plural), so the verb must be "sincronizem", as in the sibling string about-logins-confirm-delete-all-sync-dialog-message.
 - `appmenu-addon-post-install-message3` — `browser/browser/appMenuNotifications.ftl` — “add-ons” rendered as “extensões”, narrowing the term the tree renders as “complementos”.
     - Current: `Controle as suas extensões e temas através do menu da aplicação.`
     - Source: `Manage your add-ons and themes through the application menu.`
@@ -835,6 +862,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
     - Suggest: `um bounce tracker`
     - The comment states: Do not translate "bounce tracker"; btp-warning-tracker-classified in the same file keeps it in English.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Participle is plural but refers to a single security code name.
+    - Current: `{ $securityCode } guardados`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name (e.g. "CVV", masculine singular), so the participle should be "guardado", not plural "guardados".
 
 ### D. Terminology, register & consistency
 
@@ -933,6 +965,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Exceptional content curated by the { -brand-product-name } family label: Recommended stories`
     - Suggest: `Conteúdo excecional com curadoria da família { -brand-product-name }`
     - The parallel string home-prefs-stories-header2 in the same file uses the current European Portuguese spelling “excecional”.
+- `newtab-discovery-empty-section-topstories-unavailable-header` — `browser/browser/newtab/newtab.ftl` — The generic noun "stories" is left in English as "Stories" instead of being translated.
+    - Current: `As Stories não estão disponíveis neste momento`
+    - Source: `Stories aren’t available right now`
+    - Suggest: `As histórias não estão disponíveis neste momento`
+    - In the en-US source "stories" is a common lowercase noun, not a brand or feature name. pt-PT translates stories on New Tab as "histórias", so leaving it in English is inconsistent.
 - `newtab-sports-widget-message-day-in-play-body` — `browser/browser/newtab/newtab.ftl` — Verb form typo “vejas” in a list of imperatives.
     - Current: `foque-se na tarefa,  vejas as horas à volta do globo`
     - Source: `Follow the World Cup, stay on task, track time around the globe, and more.`
@@ -1133,12 +1170,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `<strong>{ $property }</strong> has no spanning effect on this element since it is not within a multi-column container.`
     - Suggest: `não tem efeito de expansão`
     - “tem” was dropped, leaving the sentence without a verb; every sibling tooltip reads “não tem efeito”.
-- `inactive-css-not-for-internal-table-elements-except-table-cells` — `devtools/client/tooltips.ftl` — Pre-reform spelling “excepção”.
-    - Current: `excepção`
-    - Source: `<strong>{ $property }</strong> has no effect on internal table elements except table cells.`
-    - Suggest: `exceção`
-    - Under the current pt-PT orthography the word is “exceção”, as used elsewhere in the tree.
-- _…and 22 more; see `state/` for the full list._
+- _…and 23 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1212,6 +1244,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `You have no known breaches. If that changes, we will let you know.`
     - Suggest: `Não tem violações de dados conhecidas.`
     - Throughout this tree the third-person polite address is used with an implicit subject; "Você" is a Brazilian register marker and appears nowhere else in these files.
+- `item-formdata-description2` — `browser/browser/sanitize.ftl` — The English serial comma before "e" was copied, which standard Portuguese punctuation doesn't use.
+    - Current: `Nomes, e-mails, e dados`
+    - Source: `Names, emails, and form entries`
+    - Suggest: `Nomes, e-mails e dados`
+    - Portuguese doesn't put a comma before the "e" that joins the last item of a list. The comma here mirrors English punctuation.
 - `translations-manage-settings-button` — `browser/browser/translations.ftl` — Three full stops used instead of the ellipsis character used throughout the tree.
     - Current: `Definições...`
     - Source: `accesskey: t label: Settings…`

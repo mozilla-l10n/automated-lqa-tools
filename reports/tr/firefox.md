@@ -2,34 +2,49 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 92 of 16,587 |
+| **Strings reviewed this run** | 151 of 16,715 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for tr: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (5)
 
-- `narrate-rate-input` — `toolkit/toolkit/global/narrate.ftl` — The lower bound of the narration speed range is -10 instead of -100.
-    - Current: `-10 ile 100 arasında`
-    - Source: `aria-label: Choose a narration speed from -100 to 100, where 0 is the default speed. title: Speed`
-    - Suggest: `-100 ile 100 arasında`
-    - The en-US says the range is -100 to 100. The Turkish tells users the minimum is -10, which is the wrong value.
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" is rendered as a future/definite "engelleyecektir" (will block), which loses the hypothetical meaning a Report-Only policy needs.
-    - Current: `engelleyecektir`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
-    - Suggest: `engellerdi`
-    - Under a Report-Only policy the resource is not actually blocked, so the en-US uses "would block". The Turkish "engelleyecektir" says the settings will block the resource, which tells developers it really gets blocked.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label puts the variables in the wrong order, so it reads as the card being saved rather than its security code.
+    - Current: `{ $securityCode }, { $ariaLabel } kaydedildi`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $ariaLabel }, { $securityCode } kaydedildi`
+    - en-US reads '{ $ariaLabel }, { $securityCode } saved': the card description, then the note that the security code is saved. The reordered Turkish attaches 'kaydedildi' to the card description, which changes what the screen reader says was saved.
+- `fire-button-toolbar-button2` — `browser/browser/browser.ftl` — The tooltip uses first person ('verilerimin', my data) where the source says 'your', which breaks the formal siz form of address.
+    - Current: `Gezinti verilerimin`
+    - Source: `label: Delete some or all data tooltiptext: Delete some or all of your browsing data`
+    - Suggest: `Gezinti verilerinizin`
+    - en-US 'of your browsing data'; the locale's form of address is formal siz, so the possessive should be -iniz.
+- `item-cached-content-description2` — `browser/browser/sanitize.ftl` — "Sitelerinin" wrongly adds a possessive ("their sites'"); it should be "Sitelerin".
+    - Current: `Sitelerinin daha hızlı`
+    - Source: `Helps sites load faster`
+    - Suggest: `Sitelerin daha hızlı`
+    - en-US "Helps sites load faster" has no possessor; the third-person possessive suffix -i- is a grammatical error.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
+    - Current: `İnternette gezinirken konumunuzu gizleyin.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
+    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — The noun "gizlilik" and the verb "gezinmek" are joined to the same "istediğinizde", which is ungrammatical.
+    - Current: `konuma dayalı gezinmek istediğinizde`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `konuma dayalı gezinme istediğinizde`
+    - "Ekstra gizlilik veya ... gezinmek istediğinizde" joins a noun and a verb in one list. Use the noun "gezinme", as the sibling string does.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,12 +58,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — Adds “sohbet botuna” (chat bot), which the source does not say.
-    - Current: `{ $provider } sohbet botuna sor`
-    - Suggest: `{ $provider } botuna sor`
-    - Source is simply “Ask { $provider }”, where $provider is the AI chat provider name; “sohbet botuna” inserts a characterization not present in the source.
+_Nothing retired._
 
 ---
 
@@ -57,8 +69,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,587 |
-| Missing strings | 8 |
+| Strings | 16,715 |
+| Missing strings | 27 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -75,13 +87,19 @@ _Nothing to re-read._
 
 ### Completeness
 
-**8 strings** are not translated yet, concentrated in:
+**27 strings** are not translated yet, concentrated in:
 
+- `browser/browser/aboutLogins.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 5
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
+- `browser/browser/genai.ftl` — 2
 - `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/preferences/preferences.ftl` — 2
-- `browser/chrome/browser/browser.properties` — 2
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `browser/browser/preferences/moreFromMozilla.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/neterror/netError.ftl` — 1
+- `toolkit/toolkit/branding/brandings.ftl` — 1
+- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
+- `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,10 +109,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 619, `curly-single` 157, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 896, `straight` 46 | **typographic** |
-| ellipsis | `char` 396 | **char** |
-| dash | `em` 44, `en` 2 | **em** |
+| quotes | `curly-double` 621, `curly-single` 157, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 899, `straight` 46 | **typographic** |
+| ellipsis | `char` 397 | **char** |
+| dash | `em` 46, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
 | register | `informal` 2, `formal` 48 | **formal** |
 
@@ -106,14 +124,23 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (163)
+## 3. Open findings (168)
 
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
+    - Current: `İnternette gezinirken konumunuzu gizleyin.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
+    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
+
+_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 66 |
+| 2 | Wrong content (says something other than the English) | 61 |
+| 3 | Degraded language (grammar, spelling, terminology) | 69 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
 ### A. Functional, markup, variables & plurals
@@ -182,6 +209,11 @@ _Nothing reported._
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `VPN’i kullanabileceğiniz yerleri sınırlıyor`
     - en-US "limit" is a factual statement explaining why the connection is blocked; the Turkish "sınırlayabilir" (may limit) weakens it into speculation.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
+    - Current: `İnternette gezinirken konumunuzu gizleyin.`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
+    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
 - `ipprotection-summer-promo-offramp-subscriber-description` — `browser/browser/ipProtection.ftl` — Statement of fact "You now get" turned into a possibility "you can have".
     - Current: `artık sınırsız bant genişliğine ve daha fazla konuma sahip olabilirsiniz`
     - Source: `You now get unlimited bandwidth and more locations as a { -mozilla-vpn-brand-name } subscriber.`
@@ -365,11 +397,17 @@ _Nothing reported._
 - `xp-java-remove-principal-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
     - Source: `Couldn’t remove the principal`
     - Suggest: `"Asıl`
+- _…and 1 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
 - `backup-folder-name` — `browser/browser/backupSettings.ftl` — Geri Yukleme — Geri Yükleme
     - Source: `Restore { -brand-product-name }`
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — The noun "gizlilik" and the verb "gezinmek" are joined to the same "istediğinizde", which is ungrammatical.
+    - Current: `konuma dayalı gezinmek istediğinizde`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `konuma dayalı gezinme istediğinizde`
+    - "Ekstra gizlilik veya ... gezinmek istediğinizde" joins a noun and a verb in one list. Use the noun "gezinme", as the sibling string does.
 - `ipprotection-site-inclusions-callout-primary-button` — `browser/browser/ipProtection.ftl` — Button label uses the imperative plural form "Kuralları ayarlayın" with a definite object where the source is a short generic button "Set rules".
     - Current: `Kuralları ayarlayın`
     - Source: `Set rules`
@@ -384,6 +422,11 @@ _Nothing reported._
     - Source: `Learn more`
 - `protections-panel-description-shim-allowed-learn-more` — `browser/browser/protectionsPanel.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
     - Source: `Learn more`
+- `item-cached-content-description2` — `browser/browser/sanitize.ftl` — "Sitelerinin" wrongly adds a possessive ("their sites'"); it should be "Sitelerin".
+    - Current: `Sitelerinin daha hızlı`
+    - Source: `Helps sites load faster`
+    - Suggest: `Sitelerin daha hızlı`
+    - en-US "Helps sites load faster" has no possessor; the third-person possessive suffix -i- is a grammatical error.
 - `existing-user-tou-learn-more` — `browser/browser/termsofuse.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
     - Source: `Learn more`
 - `translations-panel-learn-more-link` — `browser/browser/translations.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
@@ -429,6 +472,11 @@ _Nothing reported._
     - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
     - Suggest: `Gezinti verilerinizin bir kısmını veya tamamını silin`
     - en-US says "your browsing data". The tr convention is formal siz, so the possessive should be -iniz rather than first-person -im. This applies to both the label and the tooltiptext.
+- `fire-button-toolbar-button2` — `browser/browser/browser.ftl` — The tooltip uses first person ('verilerimin', my data) where the source says 'your', which breaks the formal siz form of address.
+    - Current: `Gezinti verilerimin`
+    - Source: `label: Delete some or all data tooltiptext: Delete some or all of your browsing data`
+    - Suggest: `Gezinti verilerinizin`
+    - en-US 'of your browsing data'; the locale's form of address is formal siz, so the possessive should be -iniz.
 - `toolbar-button-stop-reload-2` — `browser/browser/browserContext.ftl` — "Reload" is rendered as "Tazele" instead of the established Turkish term "Yeniden yükle".
     - Current: `title: Tazele`
     - Source: `title: Reload`
@@ -573,7 +621,7 @@ _Nothing reported._
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — `reader-view-enter-button` uses a straight apostrophe
     - Current: `Okuyucu Görünümü'ne geç`
     - Source: `aria-label: Enter Reader View`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `reader-view-enter-button` — `browser/browser/browser.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `aria-label: Enter Reader View`
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
@@ -581,13 +629,13 @@ _Nothing reported._
 - `menu-view-enter-readerview` — `browser/browser/menubar.ftl` — `menu-view-enter-readerview` uses a straight apostrophe
     - Current: `Okuyucu Görünümü'ne geç`
     - Source: `accesskey: R label: Enter Reader View`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
 - `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableSafeMode` uses a straight apostrophe
     - Current: `Güvenli kipte yeniden başlatma özelliğini devre dışı bırak. Not: Güvenli kipe girmek için kullanılan Shift tuşu, Windows'ta ancak Grup İlkesi ile devre dışı bırakılabilir.`
     - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `policy-DisableSafeMode` — `browser/browser/policies/policies-descriptions.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `Disable the feature to restart in Safe Mode. Note: the Shift key to enter Safe Mode can only be disabled on Windows using Group Policy.`
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
@@ -595,91 +643,91 @@ _Nothing reported._
 - `connection-dns-over-https-url-item-default` — `browser/browser/preferences/connection.ftl` — `connection-dns-over-https-url-item-default` uses a straight apostrophe
     - Current: `DNS'i HTTPS üzerinden çözümlemek için varsayılan URL'yi kullan`
     - Source: `label: { $name } (Default) tooltiptext: Use the default URL for resolving DNS over HTTPS`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `permissions-block-popups-exceptions-button4` — `browser/browser/preferences/preferences.ftl` — set-password-reminder (security/…/pippki.ftl), protections-vpn-header-content-subscribed (browser/protections.ftl), permissions-block-popups-exceptions-button4.description (browser/preferences/preferences.ftl), mr2022-onboarding-pin-primary-button-label [macos variant] (browser/newtab/onboarding.ftl), profiles-delete-profile-confirm (toolkit/about/aboutProfiles.ftl), rights-webservices-term-3, ri…
     - Source: `accesskey: E description: Add websites that can open pop-ups and use third-party redirects. label: Manage exceptions searchkeywords: popups`
 - `BadOpaqueRedirectInterceptionWithURL` — `dom/chrome/dom/dom.properties` — `BadOpaqueRedirectInterceptionWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, navigasyon dışı bir FetchEvent'i işlerken FetchEvent.respondWith()'e bir opaqueredirect Response aktardı.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed an opaqueredirect Response to FetchEvent.respondWith() while handling a non-navigation FetchEvent.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `BlockAutoplayWebAudioStartError` — `dom/chrome/dom/dom.properties` — `BlockAutoplayWebAudioStartError` uses a straight apostrophe
     - Current: `Bir AudioContext'in otomatik başlaması engellendi. AudioContext, sayfadaki bir kullanıcı hareketinden sonra oluşturulmalı veya devam ettirilmelidir.`
     - Source: `An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `InterceptedErrorResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedErrorResponseWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e bir Error Response aktardı. Bu genellikle ServiceWorker'ın geçersiz bir fetch() çağrısı yaptığını gösterir.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed an Error Response to FetchEvent.respondWith(). This typically means the ServiceWorker performed an invalid fetch() call.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `InterceptedUsedResponseWithURL` — `dom/chrome/dom/dom.properties` — `InterceptedUsedResponseWithURL` uses a straight apostrophe
     - Current: `'%S' yüklenemedi. Bir ServiceWorker, FetchEvent.respondWith()'e kullanılmış bir Response aktardı. Bir Response'un gövdesi yalnızca bir kez okunabilir. Gövdeye birden fazla kez ulaşmak için Response.clone() kullanın.`
     - Source: `Failed to load ‘%S’. A ServiceWorker passed a used Response to FetchEvent.respondWith(). The body of a Response may only be read once. Use Response.clone() to access the body multiple times.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `LenientThisWarning` — `dom/chrome/dom/dom.properties` — `LenientThisWarning` uses a straight apostrophe
     - Current: `“this” nesnesi yanlış olduğundan [LenientThis] içeren özelliğin get veya set'i yok sayılıyor.`
     - Source: `Ignoring get or set of property that has [LenientThis] because the “this” object is incorrect.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `ManifestIdIsInvalid` — `dom/chrome/dom/dom.properties` — `ManifestIdIsInvalid` uses a straight apostrophe
     - Current: `id elemanı geçerli bir URL'ye işaret etmiyor.`
     - Source: `The id member did not resolve to a valid URL.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `MediaEMENoCodecsDeprecatedWarning` — `dom/chrome/dom/dom.properties` — `MediaEMENoCodecsDeprecatedWarning` uses straight double quotes
     - Current: `contentType olmadan "codecs" ifadesine sahip audioCapabilities ve videoCapabilities içeren MediaKeySystemConfiguration adayını aktarmadan navigator.requestMediaKeySystemAccess() çağrısı gerçekleştirmek (%S adresinde) ar…`
     - Source: `Calling navigator.requestMediaKeySystemAccess() (at %S) passing a candidate MediaKeySystemConfiguration containing audioCapabilities or videoCapabilities without a contentType with a “codecs” string is deprecated and wi…`
-    - The locale's quote convention is `curly-double` (619 occurrences).
+    - The locale's quote convention is `curly-double` (621 occurrences).
 - `NavigatorGetUserMediaWarning` — `dom/chrome/dom/dom.properties` — `NavigatorGetUserMediaWarning` uses a straight apostrophe
     - Current: `navigator.mozGetUserMedia'nın yerini navigator.mediaDevices.getUserMedia almıştır`
     - Source: `navigator.mozGetUserMedia has been replaced by navigator.mediaDevices.getUserMedia`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `PushMessageBadCryptoError` — `dom/chrome/dom/dom.properties` — `PushMessageBadCryptoError` uses a straight apostrophe
     - Current: `'%1$S' kapsamının ServiceWorker'ı bir anında ilet mesajını çözemedi. Şifreleme ile ilgili yardım için lütfen https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption adresine bakın.`
     - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. For help with encryption, please see https://developer.mozilla.org/docs/Web/API/Push_API/Using_the_Push_API#Encryption`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `PushMessageBadSalt` — `dom/chrome/dom/dom.properties` — `PushMessageBadSalt` uses straight double quotes
     - Current: `‘%1$S’ kapsamı için ServiceWorker bir push iletisini çözmeyi başaramadı. ‘Encryption‘ üst bilgisinde yer alan ‘salt‘ değişkeni base64url olarak kodlanmış (https://tools.ietf.org/html/rfc7515#appendix-C) ve kodlamadan ön…`
     - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘salt‘ parameter in the ‘Encryption‘ header must be base64url-encoded (https://tools.ietf.org/html/rfc7515#appendix-C), and be at least 16 bytes b…`
-    - The locale's quote convention is `curly-double` (619 occurrences).
+    - The locale's quote convention is `curly-double` (621 occurrences).
 - `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — `RewriteYouTubeEmbedPathParams` uses a straight apostrophe
     - Current: `Eski tarz YouTube Flash embed (%S) yerine iframe embed (%S) yazılıyor. iframe embed'lerindeki parametreler desteklenmediği için dönüştürüldüler. Mümkünse lütfen sayfayı güncelleyerek embed/object yerine iframe kullanın.`
     - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `SVGDeselectAllWarning` — `dom/chrome/dom/dom.properties` — `SVGDeselectAllWarning` uses a straight apostrophe
     - Current: `SVGSVGElement.deselectAll, Selection API'sindeki işlevle benzer olduğu için kullanımdan kaldırılmıştır.`
     - Source: `SVGSVGElement.deselectAll is deprecated as it duplicates functionality from the Selection API.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `SVGRefLoopWarning` — `dom/chrome/dom/dom.properties` — `SVGRefLoopWarning` uses a straight apostrophe
     - Current: `%S SVG'si (“%S” kimliğine sahip) bir başvuru döngüsüne sahip.`
     - Source: `The SVG <%S> with ID “%S” has a reference loop.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `ScriptSourceMalformed` — `dom/chrome/dom/dom.properties` — `ScriptSourceMalformed` uses a straight apostrophe
     - Current: `<script> kaynak URI'sı kusurlu: “%S”.`
     - Source: `<script> source URI is malformed: “%S”.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `TargetPrincipalDoesNotMatch` — `dom/chrome/dom/dom.properties` — `TargetPrincipalDoesNotMatch` uses a straight apostrophe
     - Current: `'DOMWindow'da 'postMessage' çalıştırılamadı. Sağlanan hedef köken ('%S') alıcının pencere kökeniyle ('%S') eşleşmiyor.`
     - Source: `Failed to execute ‘postMessage’ on ‘DOMWindow’: The target origin provided (‘%S’) does not match the recipient window’s origin (‘%S’).`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `PEDisallowedImportRule` — `dom/chrome/layout/css.properties` — `PEDisallowedImportRule` uses straight double quotes
     - Current: `@import kuralları, "constructed" stil sayfalarında henüz geçerli değildir.`
     - Source: `@import rules are not yet valid in constructed stylesheets.`
-    - The locale's quote convention is `curly-double` (619 occurrences).
+    - The locale's quote convention is `curly-double` (621 occurrences).
 - `errProcessingInstruction` — `dom/chrome/layout/htmlparser.properties` — `errProcessingInstruction` uses a straight apostrophe
     - Current: `“<?” görüldü. Olası sebep: HTML içinde XML işleme talimatı girişimi. (XML işleme talimatları HTML'de desteklenmez.)`
     - Source: `Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — `about-glean-label-for-tag-pings-with-requirements` uses a straight apostrophe
     - Current: `Ping'lerinizi daha sonra tanıyabilmeniz için akılda kalıcı bir hata ayıklama etiketi <span>(en fazla 20 karakter; yalnızca harf, rakam ve “-”)</span> belirleyin.`
     - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
 - `profiles-opendir` — `toolkit/toolkit/about/aboutProfiles.ftl` — `profiles-opendir` uses a straight apostrophe
     - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — `show-dir-label` uses a straight apostrophe
     - Current: `{$sel_1 ->} [macos] Finder'da göster [windows] Klasörü aç [other] Dizini aç`
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
-    - The tree uses ’ 896 times against 46 straight.
+    - The tree uses ’ 899 times against 46 straight.
 - `show-dir-label` — `toolkit/toolkit/about/aboutSupport.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `{$sel_1 ->} [macos] Show in Finder [windows] Open Folder [other] Open Directory`
 - `about-webrtc-save-page-dialog-title` — `toolkit/toolkit/about/aboutWebrtc.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…

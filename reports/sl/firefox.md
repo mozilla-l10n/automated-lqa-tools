@@ -2,29 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 52 of 15,867 |
+| **Strings reviewed this run** | 53 of 15,919 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for sl: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for sl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
-    - Current: `ni posodobljen`
-    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
-    - Suggest: `ni podprt`
-    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 328 |
-| Strings | 15,867 |
-| Missing strings | 728 |
+| Strings | 15,919 |
+| Missing strings | 823 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**728 strings** are not translated yet, concentrated in:
+**823 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 140
-- `browser/browser/ipProtection.ftl` — 91
+- `browser/browser/ipProtection.ftl` — 93
 - `browser/browser/aiWindowContent.ftl` — 58
 - `dom/chrome/dom/dom.properties` — 50
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/preferences/preferences.ftl` — 38
-- `browser/browser/newtab/newtab.ftl` — 36
+- `browser/browser/preferences/preferences.ftl` — 45
+- `browser/browser/newtab/newtab.ftl` — 45
 - `dom/chrome/security/security.properties` — 28
 - `browser/browser/aiFeatures.ftl` — 27
+- `browser/browser/genai.ftl` — 20
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
 - `toolkit/toolkit/about/aboutGlean.ftl` — 18
-- `devtools/client/debugger.properties` — 16
-- `browser/browser/autoTabGrouping.ftl` — 15
 
 **Files absent from the locale:**
 
@@ -97,10 +93,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 268, `straight-double` 259, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 362, `ascii` 33 | **char** |
-| dash | `em` 13, `en` 119 | **en** |
+| ellipsis | `char` 363, `ascii` 33 | **char** |
+| dash | `em` 15, `en` 119 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 531 | **formal** |
+| register | `informal` 8, `formal` 539 | **formal** |
 
 ---
 

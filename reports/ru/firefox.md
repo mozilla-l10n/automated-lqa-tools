@@ -2,49 +2,84 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 100 of 16,595 |
+| **Strings reviewed this run** | 149 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ru: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (12)
 
-- `decoder-doctor-no-hw-acceleration-message` — `browser/browser/browser.ftl` — The product name "Media Feature Pack" appears to begin with a Cyrillic "М" instead of the Latin "M".
-    - Current: `Мedia Feature Pack`
-    - Source: `To improve video quality, you may need to install Microsoft’s Media Feature Pack.`
-    - Suggest: `Media Feature Pack`
-    - Microsoft's product name is Latin-script. A Cyrillic homoglyph misspells the brand and breaks searching for it.
-- `text-action-remove-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Снять выделение" reads as "Deselect", not "Remove Highlight".
-    - Current: `Снять выделение`
-    - Source: `accesskey: h label: Remove Highlight`
-    - Suggest: `Убрать подсветку`
-    - The developer comment says this removes visibly highlighted text-fragment sections. The sibling string renders 'Highlight' as 'Подсветить', while 'Снять выделение' is the standard label for clearing a selection, which misleads the user.
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as the nonsensical tautology "местоположение в зависимости от местоположения".
-    - Current: `местоположение в зависимости от местоположения`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `веб-сёрфинг с учётом местоположения`
-    - The en-US says the VPN can be turned on for location-based browsing. The Russian reads "location depending on location", which means nothing and does not convey the source.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The two halves of a coordinated construction don't match: the sentence begins with a participle ("правила, включающие VPN") and continues with an infinitive ("и выключать").
-    - Current: `Установите правила, включающие VPN, когда вы хотите`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Установите правила, чтобы включать VPN, когда вы хотите`
-    - "правила, включающие VPN … и выключать" is ungrammatical. Both verbs need to be in the same form, e.g. "чтобы включать … и выключать".
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" in a Report-Only message is translated as the future "will block", which claims blocking will happen.
-    - Current: `Настройки страницы будут блокировать %1$S.`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
-    - Suggest: `Настройки страницы заблокировали бы %1$S.`
-    - Report-Only policies never block; they only report what would have been blocked. The en-US uses "would block", so the Russian needs the conditional («заблокировали бы»), not the future tense.
+- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — Product name Firefox Enterprise is translated instead of kept as a brand.
+    - Current: `Корпоративный Firefox`
+    - Source: `Firefox Enterprise`
+    - Suggest: `Firefox Enterprise`
+    - Brand/product names are not translated; 'Firefox Enterprise' is a product name, and rendering it as a descriptive phrase changes the brand.
+- `neterror-loopback-refused-not-running` — `toolkit/toolkit/neterror/netError.ftl` — Wrong case of the negative pronoun used as subject: 'Ничего' instead of 'Ничто'.
+    - Current: `Ничего не принимает соединения`
+    - Source: `Nothing is accepting connections on port { $port }. Check that your local server is running.`
+    - Suggest: `Ничто не принимает соединения`
+    - As the grammatical subject the nominative 'ничто' is required; 'ничего' (genitive) makes the sentence ungrammatical.
+- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — 'выйдет из-под пользователя на сайтах' is an unidiomatic, garbled rendering of 'signs you out of sites'.
+    - Current: `выйдет из-под пользователя на сайтах`
+    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
+    - Suggest: `выполнит выход с сайтов`
+    - 'Выйти из-под пользователя' is slang/ungrammatical in this construction; standard UI phrasing is 'выполнит выход с сайтов'.
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) says 'удалит его' (it) instead of the plural 'их'.
+    - Current: `[one] Это действие удалит его`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `[one] Это действие удалит их`
+    - Exact count 1 is handled by [1]; the Russian 'one' category covers 21, 31, 101 etc., where en-US uses 'them'. The singular pronoun is wrong for those counts.
+- `about-logins-confirm-delete-all-dialog-checkbox-label` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) uses singular 'пароль' instead of plural 'пароли'.
+    - Current: `[one] Да, удалить пароль`
+    - Source: `{$count ->} [1] Yes, delete password [other] Yes, delete passwords`
+    - Suggest: `[one] Да, удалить пароли`
+    - Exact count 1 is handled by [1]; the 'one' category covers 21, 31, etc. No number is shown, so the singular noun incorrectly says a single password is deleted.
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one]/[few]/[many] variants say 'на каждом устройстве, которое…', while [1] and the single-password string say 'на всех устройствах, которые…'.
+    - Current: `на каждом устройстве, которое синхронизирует ваши пароли`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `на всех устройствах, которые синхронизируют ваши пароли`
+    - The same en-US phrase 'on every device that syncs your passwords' is worded two ways in the same dialog family; it should be consistent.
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Russian says the agent couldn't verify a signature, but the source says the agent's own signature failed verification.
+    - Current: `{ $agent } не смог проверить подпись`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `{ $agent } не прошёл проверку подписи`
+    - The en-US 'failed signature verification' means the agent's signature was checked and failed. 'не смог проверить подпись' makes the agent the one doing the checking, which is a different fact.
+- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — The feature name is written with English-style capitals instead of the Windows Russian name «Родительский контроль».
+    - Current: `Родительским Контролем`
+    - Source: `Blocked by Parental Controls`
+    - Suggest: `Родительским контролем`
+    - The developer comment asks for the name as Windows displays it. Windows in Russian uses «Родительский контроль», capitalising only the first word.
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — "Производит выход из-под пользователя" is an unidiomatic, garbled rendering of "Signs you out".
+    - Current: `Производит выход из-под пользователя`
+    - Source: `Signs you out and may clear shopping carts`
+    - Suggest: `Выполняет выход из учётных записей`
+    - "Выход из-под пользователя" is not valid Russian usage. The en-US means the user is signed out of sites, which Russian normally phrases as "выход из учётных записей".
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path's section name is declined ("вкладок и просмотра") instead of matching the actual section label.
+    - Current: `Посетите настройки <span data-l10n-name="chevron"></span> вкладок и просмотра`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Перейдите в «Настройки» <span data-l10n-name="chevron"></span> «Вкладки и просмотр»`
+    - The chevron marks a navigation path (Settings > Tabs and browsing). Declining the section name into the genitive means the text no longer matches the UI label the user has to find.
+- `onboarding-refresh-fro-tab-layout-title` — `browser/browser/newtab/onboarding.ftl` — "new tab layout" is rendered as "a new layout of a tab" instead of "the layout of the New Tab page".
+    - Current: `Выберите новый макет вкладки`
+    - Source: `Choose a new tab layout`
+    - Suggest: `Выберите макет новой вкладки`
+    - The en-US refers to the layout of the New Tab page. The Russian makes "new" describe the layout ("choose a new layout for a tab"), which changes the meaning.
+- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" is translated as «значки» (icons/badges), which does not mean search shortcuts.
+    - Current: `Поисковые системы и значки`
+    - Source: `aria-label: Search engines and shortcuts`
+    - Suggest: `Поисковые системы и ярлыки`
+    - In en-US, "shortcuts" means the search shortcuts (keywords) for the engines. «значки» means icons or badges, so the list label names the wrong thing.
 
 ### ✅ Fixed since the last run (0)
 
@@ -58,10 +93,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
-    - Suggest: `Лимиты встроенного VPN…`
+_Nothing retired._
 
 ---
 
@@ -70,7 +104,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -82,7 +116,7 @@ _Nothing to re-read._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 147 |
+| Access keys not in their label | 149 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
@@ -96,23 +130,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1071, `straight-double` 27, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1072, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 401, `ascii` 5 | **char** |
-| dash | `em` 129, `en` 5 | **em** |
+| ellipsis | `char` 403, `ascii` 5 | **char** |
+| dash | `em` 131, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 957, `formal` 3205 | **formal** |
+| register | `informal` 966, `formal` 3255 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 147 strings** — 147 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2`, `browser-containers-settings-2` …and 135 more
+- **accesskey — 149 strings** — 149 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-payment-methods-require-device-sign-in-checkbox`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2` …and 137 more
 
 ---
 
-## 3. Open findings (592)
+## 3. Open findings (604)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -127,8 +161,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 265 |
-| 3 | Degraded language (grammar, spelling, terminology) | 223 |
+| 2 | Wrong content (says something other than the English) | 271 |
+| 3 | Degraded language (grammar, spelling, terminology) | 229 |
 | 4 | Cosmetic (typography, spacing) | 60 |
 
 ### A. Functional, markup, variables & plurals
@@ -229,6 +263,16 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-logins-confirm-delete-all-dialog-checkbox-label` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) uses singular 'пароль' instead of plural 'пароли'.
+    - Current: `[one] Да, удалить пароль`
+    - Source: `{$count ->} [1] Yes, delete password [other] Yes, delete passwords`
+    - Suggest: `[one] Да, удалить пароли`
+    - Exact count 1 is handled by [1]; the 'one' category covers 21, 31, etc. No number is shown, so the singular noun incorrectly says a single password is deleted.
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one] variant (used for 21, 31, … passwords) says 'удалит его' (it) instead of the plural 'их'.
+    - Current: `[one] Это действие удалит его`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `[one] Это действие удалит их`
+    - Exact count 1 is handled by [1]; the Russian 'one' category covers 21, 31, 101 etc., where en-US uses 'them'. The singular pronoun is wrong for those counts.
 - `about-private-browsing-focus-promo-cta` — `browser/browser/aboutPrivateBrowsing.ftl` — a button label as a noun. Current: Скачивание { -focus-brand-name } → Suggest: Скачать { -focus-brand-name }
     - Current: `Скачивание { -focus-brand-name }`
     - Source: `Download { -focus-brand-name }`
@@ -355,6 +399,11 @@ _Also listed under their own category below._
 - `customkeys-search-input` — `browser/browser/customkeys.ftl` — customkeys-search-input (.aria-label, .placeholder) — customkeys.ftl — en-US "Search shortcuts" (dev comment: "Search is a verb"). Current: Значки поисковых систем — "search engine icons", apparently copy-pasted from search-popover in touchbar.ftl; it has nothing to do with the string → Suggest: Поиск сочетаний клавиш
     - Source: `aria-label: Search shortcuts placeholder: Search shortcuts`
     - Suggest: `Поиск сочетаний клавиш`
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Russian says the agent couldn't verify a signature, but the source says the agent's own signature failed verification.
+    - Current: `{ $agent } не смог проверить подпись`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `{ $agent } не прошёл проверку подписи`
+    - The en-US 'failed signature verification' means the agent's signature was checked and failed. 'не смог проверить подпись' makes the agent the one doing the checking, which is a different fact.
 - `firefox-relay-opt-in-confirmation-enable-button` — `browser/browser/firefoxRelay.ftl` — en-US "Use email mask" (a button). Current: Используйте псевдонимы электронной почты → Suggest: Использовать псевдоним эл. почты; note firefox-relay-offer-legal-notice quotes this button as «Использовать псевдоним электронной почты», so the two currently disagree
     - Current: `Используйте псевдонимы электронной почты`
     - Source: `accesskey: U label: Use email mask`
@@ -446,19 +495,7 @@ _Also listed under their own category below._
     - Current: `Добавить все вкладки…`
     - Source: `label: Bookmark All Tabs…`
     - Suggest: `Добавить все вкладки в закладки…`
-- `annotations-default-pdf-handler-body` — `browser/browser/newtab/asrouter.ftl` — dev comment: "'Go-to' … refers to something that is used often". Current: популярные подписи → Suggest: часто используемые подписи
-    - Current: `популярные подписи`
-    - Source: `Draw, type, or upload your signature, then place it exactly where you want. Save your go-to signatures for next time.`
-    - Suggest: `часто используемые подписи`
-- `relay-50-masks-announcement-title` — `browser/browser/newtab/asrouter.ftl` — dev comment: "'on us' … means 'for free'". Current: 50 псевдонимов электронной почты на нас is a literal calque with no such meaning → Suggest: …— бесплатно
-    - Current: `50 псевдонимов электронной почты на нас`
-    - Source: `50 email masks, on us`
-    - Suggest: `…— бесплатно`
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — en-US "That's the point." Current: В этом ключ. (not an idiomatic Russian phrase) → Suggest: В этом и суть.
-    - Current: `В этом ключ.`
-    - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
-    - Suggest: `В этом и суть.`
-- _…and 209 more; see `state/` for the full list._
+- _…and 215 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -512,6 +549,11 @@ _Also listed under their own category below._
     - Source: `To improve video quality, you may need to install Microsoft’s Media Feature Pack.`
     - Suggest: `Media Feature Pack`
     - Microsoft's product name is Latin-script. A Cyrillic homoglyph misspells the brand and breaks searching for it.
+- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — 'выйдет из-под пользователя на сайтах' is an unidiomatic, garbled rendering of 'signs you out of sites'.
+    - Current: `выйдет из-под пользователя на сайтах`
+    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
+    - Suggest: `выполнит выход с сайтов`
+    - 'Выйти из-под пользователя' is slang/ungrammatical in this construction; standard UI phrasing is 'выполнит выход с сайтов'.
 - `trustpanel-insecure-description` — `browser/browser/browser.ftl` — the pronoun does not agree with данные. Current: Его можно просмотреть → Suggest: Их можно просмотреть
     - Current: `Его можно просмотреть`
     - Source: `The data you’re sending to this site isn’t encrypted. It could be viewed, stolen, or altered.`
@@ -683,13 +725,15 @@ _Also listed under their own category below._
     - Current: `с портфелей`
     - Source: `tooltiptext: Apply briefcase avatar`
     - Suggest: `с портфелем`
-- `info-known-breaches-resolved` — `browser/browser/protections.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
-    - Source: `{$count ->} [one] Known data breach marked as resolved [other] Known data breaches marked as resolved`
-    - Suggest: `-location-desc`
-- _…and 85 more; see `state/` for the full list._
+- _…and 88 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [one]/[few]/[many] variants say 'на каждом устройстве, которое…', while [1] and the single-password string say 'на всех устройствах, которые…'.
+    - Current: `на каждом устройстве, которое синхронизирует ваши пароли`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `на всех устройствах, которые синхронизируют ваши пароли`
+    - The same en-US phrase 'on every device that syncs your passwords' is worded two ways in the same dialog family; it should be consistent.
 - `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "instances" transliterated as "инстанс", inconsistent with "экземпляры" used in the sibling string.
     - Current: `Если один профиль или инстанс обновляются`
     - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
@@ -749,6 +793,16 @@ _Also listed under their own category below._
 - `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — 9. ярлык for keyboard shortcuts — customkeys.ftl (customkeys-shortcut-unassigned, customkeys-shortcut-input, customkeys-conflict-confirm-title, customkeys-reset-all-confirm-body) and shortcuts-remove-button, where the rest uses сочетание клавиш. Worse, customkeys-conflict-confirm-body, -unusable-title, -unusable-body use ключ (a cryptographic key) for a keyboard key.
     - Current: `ярлык`
     - Source: `placeholder: Add shortcut`
+- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — The feature name is written with English-style capitals instead of the Windows Russian name «Родительский контроль».
+    - Current: `Родительским Контролем`
+    - Source: `Blocked by Parental Controls`
+    - Suggest: `Родительским контролем`
+    - The developer comment asks for the name as Windows displays it. Windows in Russian uses «Родительский контроль», capitalising only the first word.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path's section name is declined ("вкладок и просмотра") instead of matching the actual section label.
+    - Current: `Посетите настройки <span data-l10n-name="chevron"></span> вкладок и просмотра`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Перейдите в «Настройки» <span data-l10n-name="chevron"></span> «Вкладки и просмотр»`
+    - The chevron marks a navigation path (Settings > Tabs and browsing). Declining the section name into the genitive means the text no longer matches the UI label the user has to find.
 - `ipprotecion-locations-subview-recommended-label` — `browser/browser/ipProtection.ftl` — ipprotection-location-country-button Местонахождение vs Местоположение; ipprotecion-locations-subview-recommended-label Рекомендуемые (plural) vs Рекомендуемое
     - Source: `Recommended`
     - Suggest: `Местонахождение`
@@ -865,15 +919,7 @@ _Also listed under their own category below._
 - `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — toolbox-meatball-menu-splitconsole-label / -hideconsole-label use positional wording where toolbox-options.ftl uses разделённая консоль
     - Source: `Show Split Console`
     - Suggest: `-hideconsole-label`
-- `toolbox.parentProcessBrowserToolboxTitle` — `devtools/client/toolbox.properties` — toolbox.parentProcessBrowserToolboxTitle-class and options-enable-service-workers-http- (three forms of "Service Workers" in one file)
-    - Source: `Parent process Browser Toolbox`
-    - Suggest: `options-enable-service-workers-http-`
-- `rule.colorSchemeSimulation.tooltip` — `devtools/shared/styleinspector.properties` — inspector.colorSchemeSimulationLight.tooltip / ...Dark.tooltip render "color scheme" as тема (a distinct Firefox concept) and "simulation" as имитация, unlike rule.colorSchemeSimulation.tooltip
-    - Source: `Toggle color-scheme simulation for the page`
-    - Suggest: `...Dark.tooltip`
-- `rule.jumpDeclaration.title` — `devtools/shared/styleinspector.properties` — styleinspector.contextmenu.copyDeclaration and changes.contextmenu.copyDeclaration use декларацию where rule.jumpDeclaration.title uses объявление
-    - Source: `Jump to declaration`
-- _…and 14 more; see `state/` for the full list._
+- _…and 17 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -892,7 +938,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 401 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
     - Current: `<b>{ $agentName }</b> чтобы контролировать`
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
@@ -938,7 +984,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 401 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -971,7 +1017,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 401 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1042,7 +1088,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 401 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
     - Source: `{ $progress }%`
 

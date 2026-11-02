@@ -2,39 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 118 of 16,256 |
+| **Strings reviewed this run** | 53 of 16,308 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for vi: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `view-source-context-wrap-long-lines-2` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap Long Lines" is rendered as "cut long lines", which sounds like truncating rather than wrapping.
-    - Current: `Cắt những dòng dài`
-    - Source: `accesskey: o label: Wrap Long Lines`
-    - Suggest: `Ngắt dòng dài`
-    - The en-US option wraps long lines onto the next line. "Cắt" means cut, so the label suggests lines are trimmed. "Ngắt dòng" is the usual Vietnamese term for line wrapping.
-- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "decoding" is translated as "mã hóa" (encoding) instead of "giải mã".
-    - Current: `khi mã hóa một tài nguyên`
-    - Source: `An error occurred while decoding a media resource.`
-    - Suggest: `khi giải mã một tài nguyên`
-    - The en-US says the error happened while decoding a media resource. "Mã hóa" means encoding or encrypting, which is the opposite operation.
-- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — The sentence says "the recovery had an error while encoding" instead of "a recoverable error occurred while decoding".
-    - Current: `Việc khôi phục đã xảy ra lỗi khi mã hóa`
-    - Source: `A recoverable error occurred while decoding a media resource.`
-    - Suggest: `Đã xảy ra lỗi có thể khôi phục khi giải mã`
-    - In the source, "recoverable" describes the error. The Vietnamese turns it into a recovery process that hit an error, and it also uses "mã hóa" (encoding) where the source says decoding.
+- `downloads-file-moved-or-missing` — `browser/browser/downloads.ftl` — "Missing" is rendered as "deleted" (bị xoá), which states a cause the source does not claim.
+    - Current: `bị di chuyển hoặc bị xoá`
+    - Source: `File moved or missing`
+    - Suggest: `bị di chuyển hoặc bị mất`
+    - The en-US says the file was moved or is missing (the comment says it is no longer at the original folder). "bị xoá" means deleted, which the browser cannot know, and it collides with the separate "File deleted" string.
+- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — "Parental Controls" is rendered as the odd "trình kiểm soát con" instead of the Windows feature name.
+    - Current: `trình kiểm soát con`
+    - Source: `Blocked by Parental Controls`
+    - Suggest: `Kiểm soát của phụ huynh`
+    - The developer comment asks for the Windows feature name to be used consistently. "trình kiểm soát con" reads literally as "child controller" and does not match the Vietnamese Windows name for Parental Controls.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,20 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — 'Loading more matches' (sports games) was rendered as 'loading more matching results'.
-    - Current: `Đang tải thêm kết quả phù hợp…`
-    - Suggest: `Đang tải thêm trận đấu…`
-    - The comment says the status appears while more matches (games) are being fetched. 'kết quả phù hợp' means search matches.
-- `newtab-sports-widget-message-survey-title` — `browser/browser/newtab/newtab.ftl` — Widgets are called 'tiện ích' in the survey strings, but 'widget' throughout the rest of New Tab.
-    - Current: `Giúp chúng tôi cải thiện các tiện ích`
-    - Suggest: `Giúp chúng tôi cải thiện các widget`
-    - newtab.ftl consistently uses 'widget', and the locale uses 'tiện ích' for add-ons/extensions. Users will think the survey is about extensions. The same issue appears in the survey-widget-title and survey-widget-body strings.
-- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is translated as "Cắt" ("cut"), which suggests long lines are truncated rather than wrapped.
-    - Current: `Cắt những dòng dài`
-    - Suggest: `Ngắt những dòng dài`
-    - Line wrapping moves long lines onto the next line. "Cắt" implies cutting them off.
+_Nothing retired._
 
 ---
 
@@ -70,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,256 |
-| Missing strings | 339 |
+| Strings | 16,308 |
+| Missing strings | 434 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -82,26 +66,26 @@ _Nothing to re-read._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 558 |
+| Access keys not in their label | 560 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 73 |
 
 ### Completeness
 
-**339 strings** are not translated yet, concentrated in:
+**434 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
 - `dom/chrome/dom/dom.properties` — 30
 - `devtools/client/tooltips.ftl` — 28
+- `browser/browser/preferences/preferences.ftl` — 21
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
 - `dom/chrome/layout/htmlparser.properties` — 15
-- `browser/browser/preferences/preferences.ftl` — 14
 - `toolkit/toolkit/about/aboutGlean.ftl` — 13
 - `devtools/client/perftools.ftl` — 11
-- `dom/chrome/accessibility/AccessFu.properties` — 10
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -111,24 +95,24 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 495, `curly-single` 133, `straight-double` 88 | **curly-double** |
+| quotes | `curly-double` 497, `curly-single` 133, `straight-double` 88 | **curly-double** |
 | apostrophe | `typographic` 134, `straight` 12 | **typographic** |
-| ellipsis | `char` 375, `ascii` 18 | **char** |
-| dash | `em` 67, `en` 3 | **em** |
+| ellipsis | `char` 376, `ascii` 18 | **char** |
+| dash | `em` 69, `en` 3 | **em** |
 | nbsp | `space-before-punctuation` 6 | **space-before-punctuation** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 558 strings** — 558 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 539 more
+- **accesskey — 560 strings** — 560 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 541 more
 - **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
 
 ---
 
-## 3. Open findings (496)
+## 3. Open findings (498)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -148,8 +132,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 181 |
-| 3 | Degraded language (grammar, spelling, terminology) | 60 |
+| 2 | Wrong content (says something other than the English) | 182 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 43 |
 
 ### A. Functional, markup, variables & plurals
@@ -468,6 +452,11 @@ _Also listed under their own category below._
     - Source: `A recoverable error occurred while decoding a media resource.`
     - Suggest: `Đã xảy ra lỗi có thể khôi phục khi giải mã`
     - In the source, "recoverable" describes the error. The Vietnamese turns it into a recovery process that hit an error, and it also uses "mã hóa" (encoding) where the source says decoding.
+- `downloads-file-moved-or-missing` — `browser/browser/downloads.ftl` — "Missing" is rendered as "deleted" (bị xoá), which states a cause the source does not claim.
+    - Current: `bị di chuyển hoặc bị xoá`
+    - Source: `File moved or missing`
+    - Suggest: `bị di chuyển hoặc bị mất`
+    - The en-US says the file was moved or is missing (the comment says it is no longer at the original folder). "bị xoá" means deleted, which the browser cannot know, and it collides with the separate "File deleted" string.
 - `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — "Open previous tabs?" is translated in the past tense as "Đã mở các thẻ trước đó?" ("Did you open the previous tabs?").
     - Current: `Đã mở các thẻ trước đó?`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -753,12 +742,7 @@ _Also listed under their own category below._
     - Source: `Password fields present in a form with an insecure (http://) form action. This is a security risk that allows user login credentials to be stolen.`
     - Suggest: `có hành động biểu mẫu (http://) không an toàn`
     - The en-US means the form's action attribute is insecure. "biểu mẫu hành động" means a form of type 'action', which is a different thing.
-- `WAICTFetchingManifest` — `dom/chrome/security/security.properties` — "integrity manifest" is translated as "the integrity of the manifest", which changes what is being fetched.
-    - Current: `Đang tải tính toàn vẹn của manifest từ`
-    - Source: `WAICT: Fetching integrity manifest from “%1$S”.`
-    - Suggest: `Đang tải manifest về tính toàn vẹn từ`
-    - The en-US says the browser is fetching the integrity manifest, a file. The Vietnamese says it is fetching the manifest's integrity, which is not something you can fetch.
-- _…and 47 more; see `state/` for the full list._
+- _…and 48 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -1141,6 +1125,11 @@ _Also listed under their own category below._
     - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
     - Suggest: `Trình duyệt web`
     - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `downloads-state-blocked-parental-controls` — `browser/browser/downloads.ftl` — "Parental Controls" is rendered as the odd "trình kiểm soát con" instead of the Windows feature name.
+    - Current: `trình kiểm soát con`
+    - Source: `Blocked by Parental Controls`
+    - Suggest: `Kiểm soát của phụ huynh`
+    - The developer comment asks for the Windows feature name to be used consistently. "trình kiểm soát con" reads literally as "child controller" and does not match the Vietnamese Windows name for Parental Controls.
 - `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
     - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
     - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
@@ -1361,12 +1350,7 @@ _Also listed under their own category below._
     - Source: `This principal doesn’t have a certificate`
     - Suggest: `chứng chỉ`
     - Every other string in this file translates certificate as "chứng chỉ".
-- `certErrorTrust_UnknownIssuer2` — `security/manager/chrome/pipnss/pipnss.properties` — "Certificate" is rendered as "chứng thực" ("authentication") instead of "chứng chỉ", which the surrounding error strings use.
-    - Current: `các chứng thực trung gian`
-    - Source: `The server might not be sending the appropriate intermediate certificates.`
-    - Suggest: `các chứng chỉ trung gian`
-    - The other certErrorTrust_* strings on the same error page use "chứng chỉ" for certificate. "Chứng thực" means authentication or attestation.
-- _…and 21 more; see `state/` for the full list._
+- _…and 22 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

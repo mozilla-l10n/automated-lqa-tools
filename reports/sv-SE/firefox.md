@@ -2,59 +2,39 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 102 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for sv-SE: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (3)
 
-- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — The sentence starts with "Att" where it needs "För att", so it is ungrammatical.
-    - Current: `Att spela upp ljud, kan du behöva installera PulseAudio programvara som krävs.`
-    - Source: `To play audio, you may need to install the required PulseAudio software.`
-    - Suggest: `För att spela upp ljud kan du behöva installera den PulseAudio-programvara som krävs.`
-    - The source says "To play audio, ...", which is a purpose clause. In Swedish that needs "För att". The sibling strings use "För att" correctly.
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Redigera kontroller" is an order to edit the controls, not a name for the group of editing buttons.
-    - Current: `Redigera kontroller`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Redigeringskontroller`
-    - "Edit controls" is the label for the group of Cut/Copy/Paste buttons. The Swedish uses the verb form, so it reads as an instruction to edit some controls.
-- `narrate-rate-slow` — `toolkit/toolkit/global/narrate.ftl` — "berättarröst" needs the definite form here and doesn't match the paired string, which says "berättarrösten".
-    - Current: `Sakta ner berättarröst`
-    - Source: `title: Slow down narration`
-    - Suggest: `Sakta ner berättarrösten`
-    - This phrase needs the definite form, and the matching "Speed up narration" string uses "Snabba upp berättarrösten".
-- `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
-    - Current: `vid avkodning en mediaresurs`
-    - Source: `An error occurred while decoding a media resource.`
-    - Suggest: `vid avkodning av en mediaresurs`
-    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
-- `decoder-doctor-decode-warning-message` — `browser/browser/browser.ftl` — Missing preposition "av" after "avkodning".
-    - Current: `vid avkodning en mediaresurs`
-    - Source: `A recoverable error occurred while decoding a media resource.`
-    - Suggest: `vid avkodning av en mediaresurs`
-    - "avkodning" needs "av" before its object. As written, the sentence is ungrammatical.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
-    - Current: `Dölj din plats när du surfar.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Hjälp till att dölja din plats när du surfar.`
-    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
-- `set-desktop-background-filename` — `browser/browser/setDesktopBackground.ftl` — The filename "Desktop Background" is translated as "Firefox-bakgrund" (Firefox background) instead of desktop background.
-    - Current: `Firefox-bakgrund`
-    - Source: `Desktop Background`
-    - Suggest: `Skrivbordsbakgrund`
-    - The en-US and the developer comment both describe the file used as the desktop background. "Firefox-bakgrund" names a different thing, so the saved file gets the wrong name.
+- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — Plural "Private Windows" is rendered with singular possessive "Ditt", so it says only one private window closes.
+    - Current: `Ditt privata fönster stängs`
+    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
+    - Suggest: `Dina privata fönster stängs`
+    - The en-US says all Private Windows will close. "fönster" is the same in singular and plural, so the possessive sets the number, and singular "Ditt" means one window.
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — Wrong word order in a main clause: the negation comes before the finite verb.
+    - Current: `tillägg inte kan verifieras`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `tillägg kan inte verifieras`
+    - Swedish main clauses put the verb second, so the finite verb 'kan' must come before 'inte'. The current order is only correct in a subordinate clause.
+- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — A compound with a proper name is written as two words instead of being hyphenated.
+    - Current: `macOS tangentbordsinställningar`
+    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
+    - Suggest: `macOS-tangentbordsinställningar`
+    - In Swedish, a compound whose first part is a name is joined with a hyphen (or written with the genitive 'macOS:s'). Writing it as two separate words is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -68,12 +48,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — "Loading more matches" rendered with "matchningar" (matchings/pairings) instead of football matches.
-    - Current: `Laddar fler matchningar…`
-    - Suggest: `Laddar fler matcher…`
-    - The developer comment says this is shown when more matches are being fetched. "Matchningar" means matchings/correspondences, not sports matches, which the rest of the widget calls "matcher".
+_Nothing retired._
 
 ---
 
@@ -82,7 +59,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -108,10 +85,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 305, `curly-double` 221, `curly-single` 122 | _mixed_ |
+| quotes | `straight-double` 307, `curly-double` 221, `curly-single` 122 | _mixed_ |
 | apostrophe | `typographic` 126, `straight` 42 | **typographic** |
-| ellipsis | `char` 385, `ascii` 16 | **char** |
-| dash | `em` 67, `en` 9 | **em** |
+| ellipsis | `char` 387, `ascii` 16 | **char** |
+| dash | `em` 69, `en` 9 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -122,7 +99,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (335)
+## 3. Open findings (338)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -137,8 +114,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 98 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 2 | Wrong content (says something other than the English) | 99 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -444,6 +421,11 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — Plural "Private Windows" is rendered with singular possessive "Ditt", so it says only one private window closes.
+    - Current: `Ditt privata fönster stängs`
+    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
+    - Suggest: `Dina privata fönster stängs`
+    - The en-US says all Private Windows will close. "fönster" is the same in singular and plural, so the possessive sets the number, and singular "Ditt" means one window.
 - `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Redigera kontroller" is an order to edit the controls, not a name for the group of editing buttons.
     - Current: `Redigera kontroller`
     - Source: `label: Edit controls title: Edit controls`
@@ -542,6 +524,16 @@ _Also listed under their own category below._
     - Source: `Connection secure`
     - Suggest: `Anslutningen är säker`
     - The paired string trustpanel-connection-label-insecure reads "Anslutningen är inte säker", and identity-connection-secure reads "Anslutningen är säker".
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — Wrong word order in a main clause: the negation comes before the finite verb.
+    - Current: `tillägg inte kan verifieras`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `tillägg kan inte verifieras`
+    - Swedish main clauses put the verb second, so the finite verb 'kan' must come before 'inte'. The current order is only correct in a subordinate clause.
+- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — A compound with a proper name is written as two words instead of being hyphenated.
+    - Current: `macOS tangentbordsinställningar`
+    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
+    - Suggest: `macOS-tangentbordsinställningar`
+    - In Swedish, a compound whose first part is a name is joined with a hyphen (or written with the genitive 'macOS:s'). Writing it as two separate words is a spelling error.
 - `webext-default-search-description` — `browser/browser/extensionsUI.ftl` — The sentence is garbled: "vill du ändra" turns the statement into a question mid-sentence.
     - Current: `{ $addonName } vill du ändra din förvalda sökmotor från { $currentEngine } till { $newEngine }.`
     - Source: `{ $addonName } would like to change your default search engine from { $currentEngine } to { $newEngine }. Is that OK?`
@@ -1044,7 +1036,7 @@ _Also listed under their own category below._
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — `ai-window-delete-all-memories-message` uses three dots where this locale uses …
     - Current: `Befintliga minnen raderas. Om du inte vill skapa några nya minnen, avmarkera alternativen för "Lär dig av..." i inställningarna för { -smart-window-brand-name }.`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `smart-window-grouped-tabs-summary` — `browser/browser/aiWindowContent.ftl` — Missing space between "till" and the count in the singular variant, producing e.g. "la till1 flik".
     - Current: `och la till{ $count } flik.`
     - Source: `{$count ->} [one] Created the group “{ $label }” and added { $count } tab. [other] Created the group “{ $label }” and added { $count } tabs.`
@@ -1053,15 +1045,15 @@ _Also listed under their own category below._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `edit-popup-settings2` — `browser/browser/browser.ftl` — `edit-popup-settings2` uses three dots where this locale uses …
     - Current: `Hantera popup-inställningar och omdirigeringsinställningar för tredje part...`
     - Source: `accesskey: M label: Manage pop-up and third-party redirect settings…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `Meddelanden, Mail och mer...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `restore-session-startup-suggestion-message` — `browser/browser/browser.ftl` — Missing space after the bold question, so the two sentences run together in the visible text.
     - Current: `</strong>Du kan återställa`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -1070,7 +1062,7 @@ _Also listed under their own category below._
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — Missing space before the ">" separator in the menu path.
     - Current: `Lösenord och autofyll> Googles lösenordshantering.`
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
@@ -1079,7 +1071,7 @@ _Also listed under their own category below._
 - `cfr-doorhanger-bookmark-fxa-link-text` — `browser/browser/newtab/asrouter.ftl` — `cfr-doorhanger-bookmark-fxa-link-text` uses three dots where this locale uses …
     - Current: `Synkronisera bokmärken nu...`
     - Source: `Sync bookmarks now…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — Missing space between the bold heading and the following sentence.
     - Current: `flikar?</strong>Du`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -1088,7 +1080,7 @@ _Also listed under their own category below._
 - `home-mode-choice-custom-srd` — `browser/browser/newtab/newtab.ftl` — `home-mode-choice-custom-srd` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `newtab-widget-section-minimize` — `browser/browser/newtab/newtab.ftl` — The English plural "widgets" is left untranslated in the tooltip while the rest of the surface uses "widgetar".
     - Current: `Minimera widgets`
     - Source: `aria-label: Collapse all widgets to compact size title: Minimize widgets`
@@ -1097,11 +1089,11 @@ _Also listed under their own category below._
 - `places-edit-folder2` — `browser/browser/places.ftl` — `places-edit-folder2` uses three dots where this locale uses …
     - Current: `Redigera mapp...`
     - Source: `accesskey: E label: Edit Folder…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — `browser-languages-search` uses three dots where this locale uses …
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — Stray apostrophe at end of the string
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
@@ -1110,15 +1102,15 @@ _Also listed under their own category below._
 - `browser-languages-searching` — `browser/browser/preferences/languages.ftl` — `browser-languages-searching` uses three dots where this locale uses …
     - Current: `Söker efter språk...`
     - Source: `label: Searching for languages…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `home-mode-choice-custom` — `browser/browser/preferences/preferences.ftl` — `home-mode-choice-custom` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `Du synkroniserar ingenting ... ännu. Börja synkronisera för att få all din data på alla dina enheter.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `safeb-blocked-malware-page-learn-more-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — English genitive apostrophe used on the brand term
     - Current: `{ -brand-short-name }’s skydd mot nätfiske och skadlig programvara`
     - Source: `Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_support'>support.mozilla.org</a>.`
@@ -1157,11 +1149,11 @@ _Also listed under their own category below._
 - `about-debugging-sidebar-runtime-item-waiting-for-browser` — `devtools/client/aboutdebugging.ftl` — `about-debugging-sidebar-runtime-item-waiting-for-browser` uses three dots where this locale uses …
     - Current: `Väntar på webbläsare...`
     - Source: `Waiting for browser…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `manifest-loading` — `devtools/client/application.ftl` — `manifest-loading` uses three dots where this locale uses …
     - Current: `Laddar manifest...`
     - Source: `Loading manifest…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `collapseSources` — `devtools/client/debugger.properties` — The Sources pane is called "resurs" here but "Källor" everywhere else in the debugger.
     - Current: `Fäll ihop resurs och konturpanel`
     - Source: `Collapse Sources and Outline panes`
@@ -1180,7 +1172,7 @@ _Also listed under their own category below._
 - `sourceSearch.search` — `devtools/client/debugger.properties` — `sourceSearch.search` uses three dots where this locale uses …
     - Current: `Sök...`
     - Source: `Search sources…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `inspectorBreakpointSubmenu.label` — `devtools/client/inspector.properties` — "Break on…" rendered as "Avbryt vid…" (cancel at…), while the debugger uses "Bryt vid…".
     - Current: `Avbryt vid…`
     - Source: `Break on…`
@@ -1229,7 +1221,7 @@ _Also listed under their own category below._
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — `about-reader-loading` uses three dots where this locale uses …
     - Current: `Laddar...`
     - Source: `Loading…`
-    - The tree uses … 385 times against 16 ASCII runs.
+    - The tree uses … 387 times against 16 ASCII runs.
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — Three periods instead of an ellipsis character
     - Current: `Laddar...`
     - Source: `Loading…`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `2eb8d2e6cb72` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `36e745f2f7d9` |
-| **Previous run** | 2026-10-30 @ `3b1e357fad9d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-30 @ `2eb8d2e6cb72` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,961 |
+| **Strings reviewed this run** | 74 of 17,013 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,38 +22,9 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (6)
+### ✅ Fixed since the last run (0)
 
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — The security claim is attached to the wrong subject and the sentence structure changes the meaning ("Riavviando { -brand-short-name }, continuerà..." implies the OS/browser continues).
-    - Current: `Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Il riavvio consente a { -brand-short-name } di restare sicuro e di funzionare normalmente.`
-    - En-US: "Restarting keeps { -brand-short-name } secure and working normally." The Italian gerund construction leaves the subject of "continuerà" dangling and turns the statement into a promise that something will keep working, rather than that restarting keeps the browser secure.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is rendered as "Rimuovi dai siti principali" (remove from top sites) instead of removing the site itself.
-    - Current: `Rimuovi dai siti principali`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `Rimuovi questo sito principale`
-    - The en-US action removes this top site entry; the Italian states removal from the top sites list, which changes the object of the action.
-- `newtab-stocks-search-hint` — `browser/browser/newtab/newtab.ftl` — "Search for symbols" is translated as "Cerca azioni" (search for stocks) instead of ticker symbols.
-    - Current: `Cerca azioni o aziende da aggiungere alla tua lista`
-    - Source: `Search for symbols or companies to add to your watchlist`
-    - Suggest: `Cerca simboli o aziende da aggiungere alla tua lista di controllo`
-    - En-US says "symbols or companies"; the sibling strings correctly render "symbol" as "simbolo" ("Cerca per nome o simbolo"), so "azioni" is inconsistent and drops the ticker-symbol meaning.
-- `newtab-wallpaper-firefox-sitting-hill-dark` — `browser/browser/newtab/newtab.ftl` — "sitting" rendered as "accovacciata" (crouching), inconsistent with the parallel string which uses "seduta".
-    - Current: `Una volpe accovacciata su colline viola scuro`
-    - Source: `A fox sitting on dark purple hills`
-    - Suggest: `Una volpe seduta su colline viola scuro`
-    - en-US says "A fox sitting on dark purple hills"; the companion string newtab-wallpaper-firefox-sitting-hill-light translates the same "sitting" as "seduta". "Accovacciata" means crouching.
-- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — The phrase "dai siti" appears twice in a row.
-    - Current: `Ti disconnette dai siti dai siti`
-    - Source: `Signs you out and may clear shopping carts`
-    - Suggest: `Ti disconnette dai siti`
-    - The repeated words are a typo. The en-US says only "Signs you out".
-- `neterror-search-cta-search-button` — `toolkit/toolkit/neterror/netError.ftl` — Tooltip translated as an imperative command instead of a description of what the button does.
-    - Current: `tooltiptext: Apri i risultati di ricerca in una nuova scheda`
-    - Source: `accesskey: c label: Search tooltiptext: Opens search results in a new tab`
-    - Suggest: `tooltiptext: Apre i risultati di ricerca in una nuova scheda`
-    - The en-US "Opens search results in a new tab" is descriptive (it doubles as the accessible description, per the developer comment), not an instruction to the user.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -74,9 +45,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 340 |
-| Strings | 16,961 |
-| Missing strings | 4 |
-| Obsolete strings | 69 |
+| Strings | 17,013 |
+| Missing strings | 0 |
+| Obsolete strings | 49 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -92,11 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 4
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Files with no en-US counterpart
 
@@ -120,11 +87,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 965, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1769, `straight` 6 | **typographic** |
+| apostrophe | `typographic` 1772, `straight` 6 | **typographic** |
 | ellipsis | `char` 418 | **char** |
 | dash | `em` 53, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 731, `formal` 47 | **informal** |
+| register | `informal` 738, `formal` 47 | **informal** |
 
 ---
 
@@ -134,14 +101,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -150,11 +117,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — "stronger tracking protections" rendered as "più aggressiva" (more aggressive).
-    - Current: `per una protezione antitracciamento più aggressiva`
-    - Source: `Switch to Strict in settings for stronger tracking protections.`
-    - Suggest: `per una protezione antitracciamento più efficace`
-    - The source says the protection is stronger, not more aggressive; "aggressiva" carries a different connotation than en-US "stronger".
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -172,9 +135,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (10)
+### Dismissed by hand (11)
 
 - `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Correct as is
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Stronger is not more effective
 - `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — On purpose, because the alternative is hard to read "nascondere a qualcuno".
 - `about-sync-log-empty` — `toolkit/services/aboutSyncLog.ftl` — Clearer as is
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — That's the OS string.

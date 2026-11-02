@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "fi",
-  "prose_chunks": 16899,
-  "strings": 16106
+  "prose_chunks": 16990,
+  "strings": 16191
  },
  "apostrophe": {
   "straight": 33,
   "typographic": 148
  },
  "dash": {
-  "em": 42,
+  "em": 44,
   "en": 29
  },
  "ellipsis": {
   "ascii": 1,
-  "char": 398
+  "char": 400
  },
  "fullwidth": {
   "punctuation": 0

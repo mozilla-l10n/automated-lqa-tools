@@ -2,54 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 160 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for cs: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (1)
 
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — The title "Edit controls" (a noun phrase naming the edit button group) is translated as a verb phrase meaning "will edit the controls".
-    - Current: `Upraví ovládání`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Ovládání úprav`
-    - In en-US, "Edit controls" names the toolbar group holding Cut/Copy/Paste. "Upraví ovládání" reads as an action ("Edits the controls"), which says something different from the source.
-- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "To play audio" is translated as "to play music" (hudby).
-    - Current: `Pro přehrávání hudby`
-    - Source: `To play audio, you may need to install the required PulseAudio software.`
-    - Suggest: `Pro přehrávání zvuku`
-    - en-US says audio in general; "hudba" means music only, which narrows the meaning. Elsewhere in the batch "audio" is rendered as "audia".
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
-    - Current: `Skryjte při prohlížení svou polohu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
-    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
-- `ip-protection-site-rule-intro` — `browser/browser/ipProtection.ftl` — There's a comma before "a poté", which Czech punctuation rules don't allow.
-    - Current: `Zadejte stránku, a poté vyberte`
-    - Source: `Enter a site, then select its VPN status.`
-    - Suggest: `Zadejte stránku a poté vyberte`
-    - Czech doesn't put a comma before a plain "a" that joins two steps in sequence. Here it links two imperative clauses with no contrast or result, so the comma is a punctuation error.
-- `notifications-entry-card-header` — `browser/browser/preferences/preferences.ftl` — "strány" is a misspelling of the plural "strany".
-    - Current: `které strány mohou`
-    - Source: `description: Choose which websites can send notifications, and how those alerts show up. label: Notifications`
-    - Suggest: `které stránky mohou`
-    - The plural of "strana" is "strany" without the accent; "strány" is not a Czech word. The rest of the surface uses "stránky" for websites, so the suggestion uses that word too.
-- `newtab-stocks-widget-open-menu-button2` — `browser/browser/newtab/newtab.ftl` — "nabídku finance" needs the genitive plural, "financí".
-    - Current: `nabídku finance`
-    - Source: `aria-label: Open finance menu title: Open finance menu`
-    - Suggest: `nabídku financí`
-    - "nabídka" takes a genitive complement, and "finance" (a plural-only noun) is "financí" in the genitive. The current form is ungrammatical, in both the aria-label and the title.
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Czech says the agent failed to verify a signature, not that the agent's own signature failed verification.
+    - Current: `se agentu { $agent } nepodařilo ověřit podpis`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `podpis agenta { $agent } neprošel ověřením`
+    - The string ID (invalid-agent-signature) shows that the agent's own signature is invalid. The Czech makes the agent the one doing the verifying, so it describes a different error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,12 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — Missing space before the brand placeholder, rendering “VPNFirefoxu”.
-    - Current: `Integrovaná služba VPN{ -brand-product-name(case: "gen") }`
-    - Suggest: `Integrovaná služba VPN { -brand-product-name(case: "gen") }`
-    - The no-cases branch of the same message has the space; without it the brand name is glued to “VPN”.
+_Nothing retired._
 
 ---
 
@@ -77,7 +49,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,7 +58,7 @@ _Nothing to re-read._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 72 |
+| Plural variants (dead or missing forms) | 73 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
@@ -103,22 +75,22 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 473, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 475, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 390, `ascii` 3 | **char** |
-| dash | `em` 65, `en` 30 | _mixed_ |
+| ellipsis | `char` 392, `ascii` 3 | **char** |
+| dash | `em` 67, `en` 30 | _mixed_ |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 72 strings** — 72 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar`, `account-multiple-tabs-arriving-from-multiple-devices` …and 60 more
+- **plurals — 73 strings** — 73 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar` …and 61 more
 
 ---
 
-## 3. Open findings (253)
+## 3. Open findings (254)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -133,7 +105,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 123 |
+| 2 | Wrong content (says something other than the English) | 124 |
 | 3 | Degraded language (grammar, spelling, terminology) | 65 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -453,6 +425,11 @@ _Also listed under their own category below._
     - Source: `label: Edit controls title: Edit controls`
     - Suggest: `Ovládání úprav`
     - In en-US, "Edit controls" names the toolbar group holding Cut/Copy/Paste. "Upraví ovládání" reads as an action ("Edits the controls"), which says something different from the source.
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Czech says the agent failed to verify a signature, not that the agent's own signature failed verification.
+    - Current: `se agentu { $agent } nepodařilo ověřit podpis`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `podpis agenta { $agent } neprošel ověřením`
+    - The string ID (invalid-agent-signature) shows that the agent's own signature is invalid. The Czech makes the agent the one doing the verifying, so it describes a different error.
 - `bookmark-properties-title-add-multiple-bookmarks` — `browser/browser/editBookmarkOverlay.ftl` — The title "New Bookmarks" is rendered as "Add all tabs to bookmarks", which says something different from the source.
     - Current: `Přidat všechny panely do záložek`
     - Source: `New Bookmarks`
@@ -1146,7 +1123,7 @@ _Also listed under their own category below._
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 390 times against 3 ASCII runs.
+    - The tree uses … 392 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1155,7 +1132,7 @@ _Also listed under their own category below._
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 390 times against 3 ASCII runs.
+    - The tree uses … 392 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1194,7 +1171,7 @@ _Also listed under their own category below._
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 390 times against 3 ASCII runs.
+    - The tree uses … 392 times against 3 ASCII runs.
 
 ---
 

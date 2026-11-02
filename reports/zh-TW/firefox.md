@@ -2,49 +2,59 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 102 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for zh-TW: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (7)
 
-- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — 必須的 is used where 必需的 is meant ("required").
-    - Current: `必須的視訊解碼器`
-    - Source: `To play video, you may need to install the required video codecs.`
-    - Suggest: `必需的視訊解碼器`
-    - en-US says "required video codecs". The adjective for "needed" is 必需; 必須 is an adverb meaning "must", so 必須的 is wrong here.
-- `narrate-skip-previous` — `toolkit/toolkit/global/narrate.ftl` — "Back" in the narration controls is translated as "previous page", but narration skips by paragraph, not by page.
-    - Current: `上一頁`
-    - Source: `title: Back ({ $shortcut })`
-    - Suggest: `上一段`
-    - The Read Aloud back/forward buttons move narration to the previous or next paragraph. 上一頁 tells the user they will go to the previous page, which is not what happens.
-- `narrate-skip-next` — `toolkit/toolkit/global/narrate.ftl` — "Forward" in the narration controls is translated as "next page", but narration skips by paragraph, not by page.
-    - Current: `下一頁`
-    - Source: `title: Forward ({ $shortcut })`
-    - Suggest: `下一段`
-    - The Read Aloud forward button moves narration to the next paragraph, not the next page.
-- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — Flexible Space is rendered as 靈活空間, which doesn't match the 空白 used for the Space item.
-    - Current: `靈活空間`
-    - Source: `title: Flexible Space`
-    - Suggest: `彈性空白`
-    - The toolbar Space item is translated 空白. The flexible version should use the same noun (the established zh-TW term is 彈性空白). 空間 means physical space or room, not a blank gap.
-- `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — "Section" is translated as 段落 (paragraph), but the feature selects an area of the page.
-    - Current: `將段落移動到迷你視窗`
-    - Source: `accesskey: w label: Move Section to Mini Window`
-    - Suggest: `將區域移動到迷你視窗`
-    - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label says the card is saved, instead of saying the security code is saved.
+    - Current: `已儲存 { $ariaLabel }，{ $securityCode }`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $ariaLabel }，已儲存 { $securityCode }`
+    - The source reads '{ $ariaLabel }, { $securityCode } saved', so 'saved' applies to the security code. The translation puts 已儲存 in front of the card description, so it says the card was saved.
+- `neterror-loopback-refused-wrong-port` — `toolkit/toolkit/neterror/netError.ftl` — The word 'port' is missing before the port number.
+    - Current: `是否使用 { $port }`
+    - Source: `If it is running, check that it is using port { $port }.`
+    - Suggest: `是否使用通訊埠 { $port }`
+    - The source says 'using port { $port }'. The translation drops 通訊埠 and leaves a bare number, and the sibling string does use 通訊埠.
+- `neterror-loopback-refused-address` — `toolkit/toolkit/neterror/netError.ftl` — 'This address' became the vague 位置 (location), and 'this' was dropped.
+    - Current: `接受對位置的連線`
+    - Source: `Check that the server accepts connections on this address. Some servers listen only on [::1] or only on 127.0.0.1.`
+    - Suggest: `接受對此位址的連線`
+    - The developer comment says 'this address' means the IP address of the page. 位置 means location and has no demonstrative; the right term for an IP address is 此位址.
+- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — Half-width colon followed by a space is used instead of the locale's full-width colon.
+    - Current: `未下載檔案: 有`
+    - Source: `File not downloaded: Potential security risk.`
+    - Suggest: `未下載檔案：有`
+    - zh-TW consistently uses full-width punctuation; a half-width colon plus space deviates from the established convention.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated as an action phrase ("tabs, and browse"), so the path to the setting is wrong.
+    - Current: `分頁並瀏覽`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `分頁與瀏覽`
+    - "Tabs and browsing" is the name of a Settings section, shown after a chevron. 並 turns it into a sequence of actions ("tabs and browse"), so it no longer names the section.
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical.
+    - Current: `為受管理或對注重安全性的組織進行瀏覽器治理。`
+    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
+    - Suggest: `為受法規監管及注重安全性的組織提供瀏覽器治理。`
+    - "Regulated organizations" are ones under regulatory oversight, not organizations that are "managed". Also, 或對注重安全性的組織 has a dangling 對 that breaks the sentence.
+- `genai-selection-callout-text` — `browser/browser/genai.ftl` — This string uses the informal 你, while the surrounding strings use 您.
+    - Current: `你可以透過`
+    - Source: `Search or copy when you select text. Choose which actions appear with the <span data-l10n-name="more-actions">•••</span> menu.`
+    - Suggest: `您可以透過`
+    - The neighbouring strings in this batch use the polite 您 (e.g. downloads, sanitize), so 你 here is inconsistent with the locale's form of address.
 
 ### ✅ Fixed since the last run (0)
 
@@ -58,12 +68,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — A stray 在 makes the sentence ungrammatical
-    - Current: `幫助我們在改善未來的小工具功能`
-    - Suggest: `幫助我們改善未來的小工具功能`
-    - The 在 has no role here and breaks the verb phrase.
+_Nothing retired._
 
 ---
 
@@ -72,7 +79,7 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -102,12 +109,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 892, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
+| quotes | `corner` 895, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
 | apostrophe | `typographic` 9, `straight` 9 | _mixed_ |
-| ellipsis | `char` 401 | **char** |
-| dash | `em` 52, `en` 1 | **em** |
+| ellipsis | `char` 403 | **char** |
+| dash | `em` 54, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8387 | **punctuation** |
+| fullwidth | `punctuation` 8484 | **punctuation** |
 
 ---
 
@@ -117,15 +124,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (240)
+## 3. Open findings (247)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 140 |
-| 2 | Wrong content (says something other than the English) | 79 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
-| 4 | Cosmetic (typography, spacing) | 18 |
+| 2 | Wrong content (says something other than the English) | 82 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -431,11 +438,21 @@ _Nothing reported._
     - Source: `Edit bookmark folder`
     - Suggest: `編輯書籤資料夾`
     - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated as an action phrase ("tabs, and browse"), so the path to the setting is wrong.
+    - Current: `分頁並瀏覽`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `分頁與瀏覽`
+    - "Tabs and browsing" is the name of a Settings section, shown after a chevron. 並 turns it into a sequence of actions ("tabs and browse"), so it no longer names the section.
 - `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — "Section" is translated as 段落 (paragraph), but the feature selects an area of the page.
     - Current: `將段落移動到迷你視窗`
     - Source: `accesskey: w label: Move Section to Mini Window`
     - Suggest: `將區域移動到迷你視窗`
     - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical.
+    - Current: `為受管理或對注重安全性的組織進行瀏覽器治理。`
+    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
+    - Suggest: `為受法規監管及注重安全性的組織提供瀏覽器治理。`
+    - "Regulated organizations" are ones under regulatory oversight, not organizations that are "managed". Also, 或對注重安全性的組織 has a dangling 對 that breaks the sentence.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
     - Current: `開啟應用程式鏈結前先問我`
     - Source: `Ask to open app links`
@@ -451,6 +468,21 @@ _Nothing reported._
     - Source: `title: Back ({ $shortcut })`
     - Suggest: `上一段`
     - The Read Aloud back/forward buttons move narration to the previous or next paragraph. 上一頁 tells the user they will go to the previous page, which is not what happens.
+- `neterror-loopback-refused-address` — `toolkit/toolkit/neterror/netError.ftl` — 'This address' became the vague 位置 (location), and 'this' was dropped.
+    - Current: `接受對位置的連線`
+    - Source: `Check that the server accepts connections on this address. Some servers listen only on [::1] or only on 127.0.0.1.`
+    - Suggest: `接受對此位址的連線`
+    - The developer comment says 'this address' means the IP address of the page. 位置 means location and has no demonstrative; the right term for an IP address is 此位址.
+- `neterror-loopback-refused-wrong-port` — `toolkit/toolkit/neterror/netError.ftl` — The word 'port' is missing before the port number.
+    - Current: `是否使用 { $port }`
+    - Source: `If it is running, check that it is using port { $port }.`
+    - Suggest: `是否使用通訊埠 { $port }`
+    - The source says 'using port { $port }'. The translation drops 通訊埠 and leaves a bare number, and the sibling string does use 通訊埠.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label says the card is saved, instead of saying the security code is saved.
+    - Current: `已儲存 { $ariaLabel }，{ $securityCode }`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $ariaLabel }，已儲存 { $securityCode }`
+    - The source reads '{ $ariaLabel }, { $securityCode } saved', so 'saved' applies to the security code. The translation puts 已儲存 in front of the card description, so it says the card was saved.
 
 ### C. Grammar, agreement & spelling
 
@@ -597,6 +629,11 @@ _Nothing reported._
     - Source: `{ $url } attempted to automatically download multiple files. The site could be broken or trying to store spam files on your device.`
     - Suggest: `無用檔案`
     - 擋 means 'block'. 'File' is 檔案, which is used everywhere else in the tree.
+- `genai-selection-callout-text` — `browser/browser/genai.ftl` — This string uses the informal 你, while the surrounding strings use 您.
+    - Current: `你可以透過`
+    - Source: `Search or copy when you select text. Choose which actions appear with the <span data-l10n-name="more-actions">•••</span> menu.`
+    - Suggest: `您可以透過`
+    - The neighbouring strings in this batch use the polite 您 (e.g. downloads, sanitize), so 你 here is inconsistent with the locale's form of address.
 - `multi-cta-fox-doodle-msix-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
     - Current: `並釘選至工具列與開始選單。`
     - Source: `Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar and Start menu.`
@@ -770,6 +807,11 @@ _Nothing reported._
     - Source: `label: Settings`
     - Suggest: `設定`
     - en-US now says 'Settings'. The appmenu comment says Settings is used on all platforms, and appmenuitem-settings in the same file is 設定.
+- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — Half-width colon followed by a space is used instead of the locale's full-width colon.
+    - Current: `未下載檔案: 有`
+    - Source: `File not downloaded: Potential security risk.`
+    - Suggest: `未下載檔案：有`
+    - zh-TW consistently uses full-width punctuation; a half-width colon plus space deviates from the established convention.
 - `taskbar-tabs-chat-callout-title` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
     - Current: `從工具列直接聊天`
     - Source: `Chat from your taskbar`
@@ -843,23 +885,23 @@ _Nothing reported._
 - `ImageMapCircleNegativeRadius` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleNegativeRadius` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性不能有負的半徑。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag has a negative radius.`
-    - The locale's quote convention is `corner` (892 occurrences).
+    - The locale's quote convention is `corner` (895 occurrences).
 - `ImageMapCircleWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性並不是 "center-x,center-y,radius" 的格式。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag is not in the “center-x,center-y,radius” format.`
-    - The locale's quote convention is `corner` (892 occurrences).
+    - The locale's quote convention is `corner` (895 occurrences).
 - `ImageMapPolyOddNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyOddNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性少了最後的 y 座標 (正確格式是 "x1,y1,x2,y2,…")。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).`
-    - The locale's quote convention is `corner` (892 occurrences).
+    - The locale's quote convention is `corner` (895 occurrences).
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性並不是 "x1,y1,x2,y2,…" 的格式。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The locale's quote convention is `corner` (892 occurrences).
+    - The locale's quote convention is `corner` (895 occurrences).
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — `ImageMapRectBoundsError` uses straight double quotes
     - Current: `<area shape="rect">的"coords" 屬性不是 "left,top,right,bottom" 格式。`
     - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - The locale's quote convention is `corner` (892 occurrences).
+    - The locale's quote convention is `corner` (895 occurrences).
 - `BlockMixedDisplayContent` — `dom/chrome/security/security.properties` — 'mixed content' is written 混和 here but 混合 elsewhere in the same file.
     - Current: `已封鎖載入混和的顯示內容`
     - Source: `Blocked loading mixed display content “%1$S”`

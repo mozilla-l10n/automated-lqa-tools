@@ -2,39 +2,44 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 99 of 16,564 |
+| **Strings reviewed this run** | 154 of 16,714 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for es-AR: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (4)
 
-- `decoder-doctor-learn-how-link` — `browser/browser/browser.ftl` — Missing accent on the interrogative "cómo".
-    - Current: `Aprender como`
-    - Source: `Learn how`
-    - Suggest: `Aprender cómo`
-    - In "Learn how", "how" is an indirect interrogative, so Spanish requires the accented "cómo".
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — Typo in the verb: "Establezcam" should be "Establezca".
-    - Current: `Establezcam`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `Establezca`
-    - "Establezcam" is not a word. The rest of the sentence uses the usted form ("quiera"), so the verb should be "Establezca".
-- `notifications-filter` — `browser/browser/preferences/preferences.ftl` — "sitios Web" is capitalized, inconsistent with "sitios web" used in the adjacent strings of the same panel.
-    - Current: `Buscar sitios Web`
-    - Source: `placeholder: Search websites`
-    - Suggest: `Buscar sitios web`
-    - The same settings panel renders "website(s)" as "sitio web" / "sitios web" in lowercase (header, empty-state, card label); standard Spanish spelling writes "web" in lowercase here.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The participle "guardados" is plural but agrees with a single security code name, so it should be the singular "guardado".
+    - Current: `{ $securityCode } guardados`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name, such as "CVV" or "Código de seguridad" in this locale. Both are masculine singular, so the plural "guardados" is an agreement error. The en-US means "(the) security code saved", which is singular.
+- `process-hang-nonspecific-tab-message` — `browser/browser/browser.ftl` — The reflexive "se está ralentizando" says the page is slowing down itself, not that it is slowing down the browser.
+    - Current: `Una página web se está ralentizando { -brand-short-name }.`
+    - Source: `A web page is slowing down { -brand-short-name }. To speed up your browser, stop that page.`
+    - Suggest: `Una página web está ralentizando { -brand-short-name }.`
+    - en-US "A web page is slowing down Firefox" uses a transitive verb. The reflexive "se" makes the page the thing getting slower and leaves the brand name dangling. The sibling strings correctly use "está ralentizando".
+- `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — Missing accent in "comunmente".
+    - Current: `comunmente`
+    - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
+    - Suggest: `comúnmente`
+    - The correct Spanish spelling is "comúnmente", with an accent.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Typo "noqueiera" (missing space and misspelled "quiera").
+    - Current: `noqueiera`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `no quiera`
+    - The intended phrase is "cuando no quiera" ("when you don't"). As written, the text has a garbled word.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,16 +53,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-picture-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — The .title and .aria-label of the same button say different things (singular vs plural).
-    - Current: `.title = Opción de foto del día`
-    - Suggest: `.title = Opciones de foto del día`
-    - Both attributes render “Picture of the day options” in en-US; the tooltip says “Opción” (one option) while the aria-label says “Opciones de fotos del día”.
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — “matches” (football games) translated as search “coincidencias”.
-    - Current: `Cargando más coincidencias…`
-    - Suggest: `Cargando más partidos…`
-    - Developer comment: “Status shown when more matches are being fetched.” The rest of the sports widget consistently uses “partidos”.
+_Nothing retired._
 
 ---
 
@@ -66,8 +64,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,564 |
-| Missing strings | 31 |
+| Strings | 16,714 |
+| Missing strings | 28 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -80,23 +78,21 @@ _Nothing to re-read._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 81 |
+| Typography deviations from this locale's own norm | 83 |
 
 ### Completeness
 
-**31 strings** are not translated yet, concentrated in:
+**28 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 11
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/featureCallout.ftl` — 3
-- `toolkit/toolkit/global/narrate.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `browser/browser/ipProtection.ftl` — 1
-- `browser/browser/newtab/asrouter.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `browser/browser/preferences/preferences.ftl` — 3
 - `devtools/client/debugger.properties` — 1
+- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
+- `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -106,30 +102,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 477, `straight-double` 137, `curly-single` 94 | **curly-double** |
+| quotes | `curly-double` 477, `straight-double` 139, `curly-single` 94 | **curly-double** |
 | apostrophe | `typographic` 106, `straight` 67 | _mixed_ |
-| ellipsis | `char` 398, `ascii` 1 | **char** |
-| dash | `em` 61, `en` 1 | **em** |
+| ellipsis | `char` 400, `ascii` 1 | **char** |
+| dash | `em` 63, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 331, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 339, `open-exclamation` 69 | **open-question** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 81 strings** — 81 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockExtensionScriptWithWrongExt`, `CORPBlocked`, `CompositorAnimationWarningHasCurrentColor`, `CookieAllowedForOriginByHeuristic`, `CookieAllowedForOriginByStorageAccessAPI`, `CookieLaxForcedForBeta2`, `CookieOversize`, `CookiePartitionedForeign2`, `CookieRejectedByPermissionManager`, `CookieRejectedForNonSameSiteness`, `CookieRejectedInvalidCharName`, `CookieRejectedInvalidDomain` …and 68 more
+- **typography — 83 strings** — 83 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockExtensionScriptWithWrongExt`, `CORPBlocked`, `CompositorAnimationWarningHasCurrentColor`, `CookieAllowedForOriginByHeuristic`, `CookieAllowedForOriginByStorageAccessAPI`, `CookieLaxForcedForBeta2`, `CookieOversize`, `CookiePartitionedForeign2`, `CookieRejectedByPermissionManager`, `CookieRejectedForNonSameSiteness`, `CookieRejectedInvalidCharName`, `CookieRejectedInvalidDomain` …and 70 more
 
 ---
 
-## 3. Open findings (281)
+## 3. Open findings (285)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 108 |
-| 3 | Degraded language (grammar, spelling, terminology) | 92 |
+| 2 | Wrong content (says something other than the English) | 109 |
+| 3 | Degraded language (grammar, spelling, terminology) | 95 |
 | 4 | Cosmetic (typography, spacing) | 28 |
 
 ### A. Functional, markup, variables & plurals
@@ -466,6 +462,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Switched tabs`
     - Suggest: `Se cambió de pestaña`
     - The developer comment says this is the result label for switching to a single already-open tab; the target reads as a plural noun phrase meaning tabs were modified, not that the browser switched tabs.
+- `process-hang-nonspecific-tab-message` — `browser/browser/browser.ftl` — The reflexive "se está ralentizando" says the page is slowing down itself, not that it is slowing down the browser.
+    - Current: `Una página web se está ralentizando { -brand-short-name }.`
+    - Source: `A web page is slowing down { -brand-short-name }. To speed up your browser, stop that page.`
+    - Suggest: `Una página web está ralentizando { -brand-short-name }.`
+    - en-US "A web page is slowing down Firefox" uses a transitive verb. The reflexive "se" makes the page the thing getting slower and leaves the brand name dangling. The sibling strings correctly use "está ralentizando".
 - `trustpanel-clear-cookies-description` — `browser/browser/browser.ftl` — "might log you out of websites" translated as "puede cerrar sesión en los sitios web", losing the subject/object relation (the user being logged out).
     - Current: `puede cerrar sesión en los sitios web`
     - Source: `Removing cookies and site data might log you out of websites and clear shopping carts.`
@@ -659,6 +660,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn how`
     - Suggest: `Aprender cómo`
     - In "Learn how", "how" is an indirect interrogative, so Spanish requires the accented "cómo".
+- `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — Missing accent in "comunmente".
+    - Current: `comunmente`
+    - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
+    - Suggest: `comúnmente`
+    - The correct Spanish spelling is "comúnmente", with an accent.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Typo "noqueiera" (missing space and misspelled "quiera").
+    - Current: `noqueiera`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `no quiera`
+    - The intended phrase is "cuando no quiera" ("when you don't"). As written, the text has a garbled word.
 - `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — Typo in the verb: "Establezcam" should be "Establezca".
     - Current: `Establezcam`
     - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
@@ -939,17 +950,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Keyframe rule ignored due to bad selector.`
     - Suggest: `Regla keyframe ignorada debido a un mal selector.`
     - Misspelling of “debido”.
-- `EncNoDeclarationFrame` — `dom/chrome/layout/htmlparser.properties` — Typo “decarada”.
-    - Current: `no fue decarada`
-    - Source: `The character encoding of a framed document was not declared. The document may appear different if viewed without the document framing it.`
-    - Suggest: `no fue declarada`
-    - Misspelling of “declarada”.
-- `EncXmlDecl` — `dom/chrome/layout/htmlparser.properties` — Stray “!” replaces the article: “!a sintaxis”.
-    - Current: `declarada usando !a sintaxis de XML`
-    - Source: `The character encoding of an HTML document was declared using the XML declaration syntax. This is non-conforming, and declaring the encoding using a meta tag at the start of the head part is more efficient.`
-    - Suggest: `declarada usando la sintaxis de XML`
-    - Typo producing a nonsense token.
-- _…and 24 more; see `state/` for the full list._
+- _…and 27 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

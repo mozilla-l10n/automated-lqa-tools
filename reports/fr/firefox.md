@@ -2,37 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 104 of 16,813 |
+| **Strings reviewed this run** | 154 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for fr: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — « lien nettoyé à surligner » means a link to be highlighted, not a clean link pointing to the highlighted text.
-    - Current: `Copier le lien nettoyé à surligner`
-    - Source: `accesskey: k label: Copy Clean Link to Highlight`
-    - Suggest: `Copier le lien nettoyé du surlignage`
-    - The developer comment says this creates a link with a text fragment pointing to the current selection, with trackers removed. « à surligner » reads as 'to be highlighted'. It also doesn't match the sibling string « Copier le lien du surlignage ».
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `ipprotection-site-inclusions-callout-description-1` — `browser/browser/ipProtection.ftl` — The end of the sentence means "where you don't have any" instead of "where you don't want/need it".
-    - Current: `là où vous n’en avez pas.`
-    - Source: `Turn on VPN when you want extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `là où vous n’en avez pas besoin.`
-    - The en-US "and off where you don’t" means where you don't want the VPN on. The French "là où vous n’en avez pas" cuts off the verb and reads as "where you don't have any", which makes no sense here.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 340 |
-| Strings | 16,813 |
-| Missing strings | 4 |
+| Strings | 16,964 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -71,13 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**4 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/miniWindow.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Files with no en-US counterpart
 
@@ -100,12 +86,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1045, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5130, `straight` 10 | **typographic** |
-| ellipsis | `char` 408 | **char** |
-| dash | `em` 43, `en` 9 | **em** |
-| nbsp | `total` 4016, `before-punctuation` 1754 | _mixed_ |
-| register | `formal` 2864 | **formal** |
+| quotes | `guillemet` 1047, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
+| apostrophe | `typographic` 5156, `straight` 10 | **typographic** |
+| ellipsis | `char` 410 | **char** |
+| dash | `em` 45, `en` 9 | **em** |
+| nbsp | `total` 4032, `before-punctuation` 1763 | _mixed_ |
+| register | `formal` 2906 | **formal** |
 
 ---
 
@@ -266,18 +252,18 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5130 times against 10 straight.
+    - The tree uses ’ 5156 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1045 occurrences).
+    - The locale's quote convention is `guillemet` (1047 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1045 occurrences).
+    - The locale's quote convention is `guillemet` (1047 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5130 times against 10 straight.
+    - The tree uses ’ 5156 times against 10 straight.
 
 ---
 

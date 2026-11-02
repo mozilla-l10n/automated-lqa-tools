@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 100 of 16,595 |
+| **Strings reviewed this run** | 148 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for en-GB: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for en-GB: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `downloads-unblock-tip` — `browser/browser/downloads.ftl` — The en-US word "alternate" is kept where British English uses "alternative".
+    - Current: `alternate download source`
+    - Source: `You can search for an alternate download source or try again later.`
+    - Suggest: `alternative download source`
+    - In British English "alternate" mainly means "every other" or "taking turns"; the sense of "another option" is expressed with "alternative", so the en-US usage reads as unadapted.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,10 +75,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 546, `curly-single` 94, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1019, `straight` 43 | **typographic** |
-| ellipsis | `char` 398, `ascii` 1 | **char** |
-| dash | `em` 81, `en` 4 | **em** |
+| quotes | `curly-double` 548, `curly-single` 94, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 1029, `straight` 43 | **typographic** |
+| ellipsis | `char` 400, `ascii` 1 | **char** |
+| dash | `em` 83, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -86,14 +90,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (19)
+## 3. Open findings (20)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
 | 2 | Wrong content (says something other than the English) | 7 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -176,6 +180,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### D. Terminology, register & consistency
 
+- `downloads-unblock-tip` — `browser/browser/downloads.ftl` — The en-US word "alternate" is kept where British English uses "alternative".
+    - Current: `alternate download source`
+    - Source: `You can search for an alternate download source or try again later.`
+    - Suggest: `alternative download source`
+    - In British English "alternate" mainly means "every other" or "taking turns"; the sense of "another option" is expressed with "alternative", so the en-US usage reads as unadapted.
 - `genai-chatbot-summarize-sidebar-generic-subtitle` — `browser/browser/genai.ftl` — `genai-chatbot-summarize-sidebar-generic-subtitle` quotes “Summarise Page” but the string it names, `genai-chatbot-summarize-button`, reads “Summarise page”
     - Current: `Right-click the sparkles button in the sidebar and choose “Summarise Page”. The first time, you’ll also choose an AI chatbot.`
     - Source: `Right-click the sparkles button in the sidebar and choose “Summarize Page”. The first time, you’ll also choose an AI chatbot.`

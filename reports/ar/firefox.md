@@ -2,68 +2,38 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 13,482 |
+| **Strings reviewed this run** | 56 of 13,537 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ar: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (3)
 
-- `decoder-doctor-report-issue-button` — `browser/browser/browser.ftl` — Access key `س` of `decoder-doctor-report-issue-button` is not present in its label
-    - Current: `س`
-    - Source: `accesskey: R label: Report site issue`
-    - The label is “أبلغ عن مشكلة بالموقع”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `fxa-menu-device-view-all-synced-tabs` — `browser/browser/appmenu.ftl` — The [few] plural variant uses a singular noun where Arabic needs a plural after numbers 3–10.
-    - Current: `[few] اعرض كل { $tabCount } لسان متزامن`
-    - Source: `label: {$tabCount ->} [one] View { $tabCount } Synced Tab [other] View All { $tabCount } Synced Tabs`
-    - Suggest: `[few] اعرض كل الألسنة المتزامنة الـ{ $tabCount }`
-    - In Arabic, numbers 3–10 take a plural noun in the genitive (ألسنة متزامنة), not the singular لسان.
-- `appmenu-nova-update-description` — `browser/browser/appmenu.ftl` — The passive verb is feminine, but its subject فتح is masculine.
-    - Current: `ستُعاد فتح ألسنتك.`
-    - Source: `Your tabs will reopen.`
-    - Suggest: `سيُعاد فتح ألسنتك.`
-    - The grammatical subject of the passive verb is the verbal noun فتح, which is masculine, so the verb must be سيُعاد.
-- `about-private-browsing-nova-info-subheader2` — `browser/browser/aboutPrivateBrowsing.ftl` — The shadda in المتعقبّات is on the wrong letter.
-    - Current: `المتعقبّات`
-    - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
-    - Suggest: `المتعقِّبات`
-    - The shadda belongs on the قاف (متعقِّب), not on the باء.
-- `about-private-browsing-spotlight-basics-subtitle` — `browser/browser/aboutPrivateBrowsing.ftl` — The translation drops "from others", so it no longer says who the browsing is kept private from.
-    - Current: `الحفاظ على خصوصية تصفحك للإنترنت على هذا الجهاز`
-    - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
-    - Suggest: `الحفاظ على خصوصية تصفحك عن الآخرين الذين يستخدمون هذا الجهاز`
-    - The source limits the protection to other people using this device. Without that, the sentence no longer says who the browsing is hidden from.
-- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — Stray space after the conjunction و, which is written joined to the next word in Arabic.
-    - Current: `و يجب`
-    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
-    - Suggest: `ويجب`
-    - The Arabic conjunction و is attached to the next word, so 'و يجب' with a space is an orthographic error.
-- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — The object of the imperative is missing its accusative tanween alif.
-    - Current: `أزِل موقع للسماح`
-    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
-    - Suggest: `أزِل موقعًا للسماح`
-    - After the verb أزِل, the indefinite object must be accusative and written موقعًا. Writing موقع is a grammar and spelling error.
-- `share-panel-os-share-2` — `browser/browser/sharePanel.ftl` — The Windows variant uses a verbal noun, while the other variants of the same menu item use the imperative.
-    - Current: `مشاركة مع ويندوز…`
-    - Source: `label: {$sel_1 ->} [windows] Share with Windows… [macos] Share with Mac… [other] Share with…`
-    - Suggest: `شارِك مع ويندوز…`
-    - The macOS and other variants use the imperative (شارك/شارِك). The Windows variant switches to the noun مشاركة, so the same label is worded differently depending on the platform.
-- `launch-options-spotlight-checkbox-restore-previous` — `browser/browser/newtab/asrouter.ftl` — Ungrammatical use of the imperative «افتح» after «أعد» where the verbal noun «فتح» is required.
-    - Current: `أعد افتح`
-    - Source: `Reopen previous windows and tabs`
-    - Suggest: `أعد فتح`
-    - 'Reopen' should be «أعد فتح» (imperative + verbal noun), as the sibling string restore-current does; «أعد افتح» puts two imperatives side by side, which is a grammar error.
+- `process-hang-stop-button` — `browser/browser/browser.ftl` — Access key `S` of `process-hang-stop-button` is not present in its label
+    - Current: `S`
+    - Source: `accesskey: S label: Stop`
+    - The label is “أوقِف”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — "One or more" add-ons is rendered as "one of" the add-ons, so the plural case is lost; the masculine أحد is also wrong with the feminine noun الإضافات.
+    - Current: `تعذّر التحقق من أحد الإضافات المثبتة لذا عُطّلت.`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `تعذّر التحقق من إضافة مثبّتة واحدة أو أكثر لذا عُطّلت.`
+    - The en-US says "One or more installed add-ons". The Arabic only mentions one add-on, so it is wrong whenever several add-ons are disabled. أحد should also be إحدى to agree with the feminine noun.
+- `downloads-blocked-malware` — `browser/browser/downloads.ftl` — "malware" is translated as "spyware" (برنامج تجسس).
+    - Current: `فيروس أو برنامج تجسس`
+    - Source: `This file contains a virus or malware.`
+    - Suggest: `فيروس أو برمجية خبيثة`
+    - The en-US says "virus or malware". برنامج تجسس means spyware, which is narrower than malware. The locale renders malware elsewhere as برمجية خبيثة.
 
 ### ✅ Fixed since the last run (0)
 
@@ -88,8 +58,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 325 |
-| Strings | 13,482 |
-| Missing strings | 3,113 |
+| Strings | 13,537 |
+| Missing strings | 3,205 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -100,23 +70,23 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 12 |
 | Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 7 |
+| Access keys not in their label | 8 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 13 |
 
 ### Completeness
 
-**3,113 strings** are not translated yet, concentrated in:
+**3,205 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 347
+- `browser/browser/newtab/newtab.ftl` — 356
 - `dom/chrome/dom/dom.properties` — 215
 - `browser/browser/aiWindow.ftl` — 160
 - `devtools/client/tooltips.ftl` — 98
 - `dom/chrome/layout/htmlparser.properties` — 94
 - `devtools/client/netmonitor.properties` — 92
 - `browser/browser/ipProtection.ftl` — 86
-- `dom/chrome/security/security.properties` — 83
 - `devtools/client/debugger.properties` — 83
+- `dom/chrome/security/security.properties` — 83
 - `toolkit/toolkit/about/aboutGlean.ftl` — 66
 - `toolkit/toolkit/about/aboutSupport.ftl` — 66
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 66
@@ -137,11 +107,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 96, `curly-double` 74, `curly-single` 9, `guillemet` 3 | _mixed_ |
+| quotes | `straight-double` 96, `curly-double` 74, `curly-single` 9, `guillemet` 4 | _mixed_ |
 | apostrophe | `typographic` 55 | **typographic** |
-| ellipsis | `char` 372, `ascii` 13 | **char** |
-| dash | `em` 35 | **em** |
-| nbsp | `total` 161, `space-before-punctuation` 3 | **total** |
+| ellipsis | `char` 373, `ascii` 13 | **char** |
+| dash | `em` 37 | **em** |
+| nbsp | `total` 164, `space-before-punctuation` 3 | **total** |
 
 ---
 
@@ -151,13 +121,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (354)
+## 3. Open findings (357)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 200 |
-| 2 | Wrong content (says something other than the English) | 116 |
+| 2 | Wrong content (says something other than the English) | 119 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
@@ -208,6 +178,10 @@ _Nothing reported._
     - Current: `س`
     - Source: `accesskey: R label: Report site issue`
     - The label is “أبلغ عن مشكلة بالموقع”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `process-hang-stop-button` — `browser/browser/browser.ftl` — Access key `S` of `process-hang-stop-button` is not present in its label
+    - Current: `S`
+    - Source: `accesskey: S label: Stop`
+    - The label is “أوقِف”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `trustpanel-social-tracking-blocking-tab-header` — `browser/browser/browser.ftl` — “social media tracker” is rendered as “media tracker”.
     - Current: `{ -brand-product-name } حظر { $count } متعقِّب وسائط`
     - Source: `{$count ->} [one] { -brand-product-name } blocked { $count } social media tracker [other] { -brand-product-name } blocked { $count } social media trackers`
@@ -441,11 +415,7 @@ _Nothing reported._
     - Current: `{$tabCount ->} [one] أطلِق صوت اللسان [two] أطلِق صوت اللسانين [few] أطلِق صوت { $tabCount } ألسنة [many] أطلِق صوت { $tabCount } لسانًا [other] أطلِق صوت { $tabCount } لسان`
     - Source: `label: {$tabCount ->} [one] Unmute tab [other] Unmute { $tabCount } tabs`
     - This locale uses ['few', 'many', 'one', 'other', 'two', 'zero'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — `tabbrowser-unmute-tab-audio-tooltip` (`.label`) is missing the ['zero'] plural form
-    - Current: `{$tabCount ->} [one] أطلِق صوت اللسان ({ $shortcut }) [two] أطلِق صوت اللسانين ({ $shortcut }) [few] أطلِق صوت { $tabCount } ألسنة ({ $shortcut }) [many] أطلِق صوت { $tabCount } لسانًا ({ $shortcut }) [other] أطلِق صوت…`
-    - Source: `label: {$tabCount ->} [one] Unmute tab ({ $shortcut }) [other] Unmute { $tabCount } tabs ({ $shortcut })`
-    - This locale uses ['few', 'many', 'one', 'other', 'two', 'zero'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- _…and 71 more; see `state/` for the full list._
+- _…and 72 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -454,6 +424,16 @@ _Nothing reported._
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `الحفاظ على خصوصية تصفحك عن الآخرين الذين يستخدمون هذا الجهاز`
     - The source limits the protection to other people using this device. Without that, the sentence no longer says who the browsing is hidden from.
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — "One or more" add-ons is rendered as "one of" the add-ons, so the plural case is lost; the masculine أحد is also wrong with the feminine noun الإضافات.
+    - Current: `تعذّر التحقق من أحد الإضافات المثبتة لذا عُطّلت.`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `تعذّر التحقق من إضافة مثبّتة واحدة أو أكثر لذا عُطّلت.`
+    - The en-US says "One or more installed add-ons". The Arabic only mentions one add-on, so it is wrong whenever several add-ons are disabled. أحد should also be إحدى to agree with the feminine noun.
+- `downloads-blocked-malware` — `browser/browser/downloads.ftl` — "malware" is translated as "spyware" (برنامج تجسس).
+    - Current: `فيروس أو برنامج تجسس`
+    - Source: `This file contains a virus or malware.`
+    - Suggest: `فيروس أو برمجية خبيثة`
+    - The en-US says "virus or malware". برنامج تجسس means spyware, which is narrower than malware. The locale renders malware elsewhere as برمجية خبيثة.
 - `newtab-clock-city-pk-karachi` — `browser/browser/newtab/newtab.ftl` — Karachi is misspelled in Arabic.
     - Current: `كراجي`
     - Source: `Karachi`
@@ -1007,7 +987,7 @@ _Nothing reported._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والتعليقات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — Stray space after the conjunction و, which is written joined to the next word in Arabic.
     - Current: `و يجب`
     - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
@@ -1016,15 +996,15 @@ _Nothing reported._
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `الرسائل والبريد والمزيد...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `احفظ التحديد باسم...`
     - Source: `label: Save selection as…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `content-sharing-modal-generating-page` — `browser/browser/contentSharing.ftl` — `content-sharing-modal-generating-page` uses three dots where this locale uses …
     - Current: `يولّد الصفحة...`
     - Source: `label: Generating page…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `continuous-onboarding-firefox-view-tab-pickup-subtitle` — `browser/browser/featureCallout.ftl` — “bookmarks” rendered with a term the rest of the tree never uses.
     - Current: `الإشارات المرجعية`
     - Source: `Access your open tabs from any device. Plus sync your bookmarks, passwords, and more.`
@@ -1043,15 +1023,15 @@ _Nothing reported._
 - `ipprotection-connection-status-connecting-1` — `browser/browser/ipProtection.ftl` — `ipprotection-connection-status-connecting-1` uses three dots where this locale uses …
     - Current: `يتصل VPN...`
     - Source: `(value): VPN is connecting… aria-label: VPN is connecting…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `menu-file-share-qrcode` — `browser/browser/menubar.ftl` — `menu-file-share-qrcode` uses three dots where this locale uses …
     - Current: `ولّد رمز QR...`
     - Source: `accesskey: Q label: Generate QR Code…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والانطباعات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `menu-profiles-manage-profiles` — `browser/browser/menubar.ftl` — “Profiles” rendered as ملفات الإعدادات (settings files) in the same menu that uses ملفات شخصية.
     - Current: `أدِر ملفات الإعدادات`
     - Source: `label: Manage Profiles`
@@ -1075,11 +1055,11 @@ _Nothing reported._
 - `onboarding-live-language-installing` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-installing` uses three dots where this locale uses …
     - Current: `جارٍ تثبيت حزمة اللغة لـ{ $negotiatedLanguage }...`
     - Source: `Installing the language pack for { $negotiatedLanguage }…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `onboarding-live-language-waiting-button` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-waiting-button` uses three dots where this locale uses …
     - Current: `جارٍ الحصول على اللغات المتاحة...`
     - Source: `Getting available languages…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `panic-button-delete-history` — `browser/browser/panicButton.ftl` — “History” rendered as السجل where the locale uses التأريخ.
     - Current: `تحذف <strong>السجل</strong> الحديث`
     - Source: `Delete Recent <strong>History</strong>`
@@ -1098,11 +1078,11 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `أنت لا تُزامن أي شيء... حتى الآن. ابدأ المزامنة للحصول على جميع بياناتك على جميع أجهزتك.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `لم تُزامِن أي شيء... حتى الآن. اختر ما تريد مُزامنته على هذا الجهاز.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — “Cookies” rendered as “ملفات تعريف الارتباط” in the Removing section while the rest of the same dialog uses “الكعكات”
     - Current: `إزالة ملفات تعريف الارتباط و بيانات المواقع`
     - Source: `Removing Cookies and Site Data`
@@ -1131,7 +1111,7 @@ _Nothing reported._
 - `sanitize-calculating-size` — `browser/browser/sanitize.ftl` — `sanitize-calculating-size` uses three dots where this locale uses …
     - Current: `يحسب...`
     - Source: `Calculating…`
-    - The tree uses … 372 times against 13 ASCII runs.
+    - The tree uses … 373 times against 13 ASCII runs.
 - `sanitize-dialog-title2` — `browser/browser/sanitize.ftl` — Dialog title calls cookies ملفات تعريف الارتباط while its own checkbox calls them الكعكات.
     - Current: `امحُ بيانات التصفح وملفات تعريف الارتباط`
     - Source: `style: min-width: 34em title: Clear browsing data and cookies`

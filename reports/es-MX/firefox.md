@@ -2,54 +2,114 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 50 of 15,897 |
+| **Strings reviewed this run** | 104 of 16,000 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for es-MX: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for es-MX: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (18)
 
-- `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
-    - Current: `Olvidar el historial de navegación`
-    - Source: `label: Forget tooltiptext: Forget about some browsing history`
-    - Suggest: `Olvidar parte del historial de navegación`
-    - en-US says "Forget about some browsing history". The Forget button only clears a chosen recent time range, so the Spanish claims a wider deletion than the product performs.
-- `text-action-copy-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "para resaltar" (in order to highlight) misreads "Copy Link to Highlight", which copies a link to the highlighted text.
-    - Current: `Copiar enlace para resaltar`
-    - Source: `accesskey: h label: Copy Link to Highlight`
-    - Suggest: `Copiar enlace al resaltado`
-    - The developer comment says this copies a Text Fragment link to the current selection. It does not copy a link so that something can be highlighted.
-- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — Same misreading: "para resaltar" instead of a link to the highlighted text.
-    - Current: `Copiar enlace limpio para resaltar`
-    - Source: `accesskey: k label: Copy Clean Link to Highlight`
-    - Suggest: `Copiar enlace limpio al resaltado`
-    - The developer comment says this creates a link to the current selection with trackers removed. "para resaltar" means "in order to highlight".
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Editar controles" means "edit the controls"; the source names the group of editing controls (cut/copy/paste).
-    - Current: `Editar controles`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Controles de edición`
-    - This is the toolbar item that holds the Cut/Copy/Paste buttons, parallel to "Zoom Controls". "Edit" is a modifier here, not a verb.
-- `narrate-start` — `toolkit/toolkit/global/narrate.ftl` — "Inicio" (beginning/home) is a noun; the button tooltip is the command to start narration.
-    - Current: `Inicio ({ $shortcut })`
-    - Source: `title: Start ({ $shortcut })`
-    - Suggest: `Iniciar ({ $shortcut })`
-    - It sits next to "Detener" (Stop), so it should be a verb. "Inicio" reads as "go to the beginning" or "home".
-- `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — English-style title case: Spanish capitalizes only the first word of a label.
-    - Current: `Espacio Flexible`
-    - Source: `title: Flexible Space`
-    - Suggest: `Espacio flexible`
-    - Spanish capitalization rules don't use title case, so 'Flexible' shouldn't be capitalized in this toolbar item title.
+- `theme-disabled-heading3` — `toolkit/toolkit/about/aboutAddons.ftl` — "Saved Themes" is rendered as the imperative "Guardar temas" (Save themes).
+    - Current: `Guardar temas`
+    - Source: `heading: Saved Themes`
+    - Suggest: `Temas guardados`
+    - The heading is a list of themes that have been saved. It is not an action to save themes.
+- `about-private-browsing-relay-promo-header` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "Help prevent" is dropped, so the text promises that the feature prevents spam.
+    - Current: `Previene el spam`
+    - Source: `Help prevent inbox spam with email masks`
+    - Suggest: `Ayuda a prevenir el spam`
+    - The en-US only says email masks help prevent spam. Saying they prevent it is a guarantee the product does not make.
+- `about-private-browsing-relay-promo-link-text` — `browser/browser/aboutPrivateBrowsing.ftl` — Missing accent in "electronico".
+    - Current: `correo electronico`
+    - Source: `Try email masks`
+    - Suggest: `correo electrónico`
+    - The correct spelling is "electrónico", and the neighbouring strings use it.
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal possessive "su", but the locale uses informal "tú".
+    - Current: `su empleador`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `tu empleador`
+    - The locale's register is informal, and the surrounding strings use "tu".
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal possessive "sus", but the locale uses informal "tú".
+    - Current: `sus datos personales`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `tus datos personales`
+    - The locale's register is informal, and the neighbouring string "te alerta" uses the informal form.
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal imperative "Seleccione", but the locale uses informal "tú".
+    - Current: `Seleccione`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `Selecciona`
+    - The locale's register is informal, and the sibling string uses "Utiliza".
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses straight double quotes, but the locale uses curly quotes.
+    - Current: `"Estricto"`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `“Estricto”`
+    - The locale's quote convention is curly double quotes.
+- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — Uses the formal imperative "Reinícielo", but the locale uses informal "tú".
+    - Current: `Reinícielo`
+    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
+    - Suggest: `Reinícialo`
+    - The locale's register is informal.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "Restarting" is rendered as restarting the system, but the source means restarting the browser.
+    - Current: `Reiniciar el sistema`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `Reiniciar`
+    - The page is about restarting Firefox. Telling users to restart the operating system is wrong.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "Restarting" is rendered as restarting the device, but the source means restarting the browser.
+    - Current: `Reiniciar el dispositivo`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Reiniciar`
+    - The en-US refers to restarting Firefox, not the device.
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — Uses the plural "Pueden" (ustedes) instead of the informal singular.
+    - Current: `Pueden seguir`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Puedes seguir`
+    - The locale addresses the user with informal "tú".
+- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — "Windows" is left as the English word, which reads as Microsoft Windows instead of browser windows.
+    - Current: `Cambiar entre Windows inteligente y Windows clásico`
+    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
+    - Suggest: `Cambiar entre ventanas inteligentes y ventanas clásicas`
+    - The source means Smart and Classic browser windows, not the operating system.
+- `aiwindow-starter-scroll-start` — `browser/browser/aiWindow.ftl` — "Scroll back" is rendered as "Volver atrás" (go back), which suggests navigating back rather than scrolling.
+    - Current: `Volver atrás`
+    - Source: `aria-label: Scroll back tooltiptext: Scroll back`
+    - Suggest: `Desplázate hacia atrás`
+    - The control scrolls the list, and the paired string "Scroll forward" is rendered as "Desplázate hacia adelante".
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — Translation says it is searching for tabs that have useful groups, rather than checking tabs to form groups.
+    - Current: `Buscando pestañas con grupos útiles…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Revisando las pestañas para formar grupos útiles…`
+    - The developer comment says the model forms new groups from the open tabs and is not searching for existing tab groups. The Spanish suggests it is searching for tabs that already have groups.
+- `smartwindow-group-tabs-empty` — `browser/browser/autoTabGrouping.ftl` — Uses the formal 'Vuelva' where the locale uses informal address.
+    - Current: `Vuelva a intentarlo más tarde.`
+    - Source: `No tab groups to suggest right now. Check again later.`
+    - Suggest: `Vuelve a intentarlo más tarde.`
+    - The es-MX convention is informal address (tú), which appears elsewhere in this batch too, e.g. 'detén', 'tu computadora'.
+- `process-hang-specific-tab-message` — `browser/browser/browser.ftl` — Straight double quotes used instead of the locale's curly quotes.
+    - Current: `"{ $title }"`
+    - Source: `“{ $title }” is slowing down { -brand-short-name }. To speed up your browser, stop that page.`
+    - Suggest: `“{ $title }”`
+    - The locale convention is curly double quotes, and the en-US uses curly quotes here.
+- `process-hang-addon-message` — `browser/browser/browser.ftl` — Straight double quotes used instead of the locale's curly quotes.
+    - Current: `"{ $addonName }"`
+    - Source: `“{ $addonName }” is slowing down { -brand-short-name }. To speed up your browser, stop that extension.`
+    - Suggest: `“{ $addonName }”`
+    - The locale convention is curly double quotes, and the en-US uses curly quotes here.
+- `downloads-content-analysis-timeout-error` — `browser/browser/downloads.ftl` — The sentence is ungrammatical: { $agent } sits as a loose subject before "se agotó el tiempo de espera", whose subject is actually "el tiempo".
+    - Current: `{ $agent } se agotó el tiempo de espera, por lo que este archivo fue bloqueado.`
+    - Source: `{ $agent } timed out, so this file was blocked.`
+    - Suggest: `Se agotó el tiempo de espera de { $agent }, por lo que este archivo fue bloqueado.`
+    - In Spanish "agotarse el tiempo" takes "el tiempo" as its subject. The agent therefore has to be attached with "de" ("el tiempo de espera de X"), or the sentence has to be rephrased, so that it correctly says that { $agent } timed out.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,16 +123,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `genai-shortcut-button-2` — `browser/browser/genai.ftl` — "Preguntar { $provider }" lacks the preposition "a" required before the provider name in Spanish.
-    - Current: `Preguntar { $provider }`
-    - Suggest: `Preguntar a { $provider }`
-    - In Spanish the person/entity asked takes the preposition "a"; "Preguntar Claude" is ungrammatical for en-US "Ask { $provider }".
-- `newtab-sports-widget-message-survey-widget-body` — `browser/browser/newtab/newtab.ftl` — "try the new one in your lineup" rendered as "prueba el nuevo widget destacado" (the new featured widget).
-    - Current: `prueba el nuevo widget destacado`
-    - Suggest: `prueba el nuevo widget de tu selección`
-    - en-US refers to the new widget in the user's lineup; "destacado" (featured) invents a qualifier not in the source.
+_Nothing retired._
 
 ---
 
@@ -81,8 +134,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 324 |
-| Strings | 15,897 |
-| Missing strings | 698 |
+| Strings | 16,000 |
+| Missing strings | 742 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 6 |
 | Files with no en-US counterpart | 0 |
@@ -95,24 +148,24 @@ _Nothing to re-read._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 119 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 108 |
+| Typography deviations from this locale's own norm | 111 |
 
 ### Completeness
 
-**698 strings** are not translated yet, concentrated in:
+**742 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 128
-- `browser/browser/ipProtection.ftl` — 59
-- `browser/browser/preferences/preferences.ftl` — 38
-- `browser/browser/newtab/onboarding.ftl` — 33
+- `browser/browser/newtab/newtab.ftl` — 137
+- `browser/browser/ipProtection.ftl` — 61
+- `browser/browser/preferences/preferences.ftl` — 45
+- `browser/browser/newtab/onboarding.ftl` — 35
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
 - `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/browser.ftl` — 25
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
-- `browser/browser/browser.ftl` — 23
+- `browser/browser/genai.ftl` — 22
 - `toolkit/toolkit/about/aboutPDF.ftl` — 21
 - `toolkit/toolkit/main-window/autocomplete.ftl` — 20
-- `browser/browser/aboutRestartRequired.ftl` — 18
-- `toolkit/toolkit/about/aboutAddons.ftl` — 17
-- `browser/browser/aboutPrivateBrowsing.ftl` — 16
+- `toolkit/toolkit/about/aboutAddons.ftl` — 18
 
 **Files absent from the locale:**
 
@@ -131,13 +184,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 462, `straight-double` 130, `curly-single` 79, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 464, `straight-double` 133, `curly-single` 79, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 91, `straight` 37 | _mixed_ |
-| ellipsis | `char` 366, `ascii` 19 | **char** |
-| dash | `em` 50, `en` 1 | **em** |
+| ellipsis | `char` 368, `ascii` 19 | **char** |
+| dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 317, `open-exclamation` 71 | **open-question** |
-| register | `informal` 1208, `formal` 206 | **informal** |
+| inverted marks | `open-question` 324, `open-exclamation` 72 | **open-question** |
+| register | `informal` 1235, `formal` 208 | **informal** |
 
 ---
 
@@ -145,15 +198,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 - **accesskey — 119 strings** — 119 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
     - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 106 more
-- **typography — 108 strings** — 108 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 96 more
+- **typography — 111 strings** — 111 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 99 more
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (69)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `about-private-browsing-relay-promo-header` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "Help prevent" is dropped, so the text promises that the feature prevents spam.
+    - Current: `Previene el spam`
+    - Source: `Help prevent inbox spam with email masks`
+    - Suggest: `Ayuda a prevenir el spam`
+    - The en-US only says email masks help prevent spam. Saying they prevent it is a guarantee the product does not make.
 - `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
     - Current: `Olvidar el historial de navegación`
     - Source: `label: Forget tooltiptext: Forget about some browsing history`
@@ -165,9 +223,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 19 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
-| 4 | Cosmetic (typography, spacing) | 7 |
+| 2 | Wrong content (says something other than the English) | 26 |
+| 3 | Degraded language (grammar, spelling, terminology) | 33 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -175,6 +233,36 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-private-browsing-relay-promo-header` — `browser/browser/aboutPrivateBrowsing.ftl` — The hedge "Help prevent" is dropped, so the text promises that the feature prevents spam.
+    - Current: `Previene el spam`
+    - Source: `Help prevent inbox spam with email masks`
+    - Suggest: `Ayuda a prevenir el spam`
+    - The en-US only says email masks help prevent spam. Saying they prevent it is a guarantee the product does not make.
+- `restart-required-multiple-instances-answer` — `browser/browser/aboutRestartRequired.ftl` — "Restarting" is rendered as restarting the system, but the source means restarting the browser.
+    - Current: `Reiniciar el sistema`
+    - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
+    - Suggest: `Reiniciar`
+    - The page is about restarting Firefox. Telling users to restart the operating system is wrong.
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "Restarting" is rendered as restarting the device, but the source means restarting the browser.
+    - Current: `Reiniciar el dispositivo`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Reiniciar`
+    - The en-US refers to restarting Firefox, not the device.
+- `aiwindow-starter-scroll-start` — `browser/browser/aiWindow.ftl` — "Scroll back" is rendered as "Volver atrás" (go back), which suggests navigating back rather than scrolling.
+    - Current: `Volver atrás`
+    - Source: `aria-label: Scroll back tooltiptext: Scroll back`
+    - Suggest: `Desplázate hacia atrás`
+    - The control scrolls the list, and the paired string "Scroll forward" is rendered as "Desplázate hacia adelante".
+- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — "Windows" is left as the English word, which reads as Microsoft Windows instead of browser windows.
+    - Current: `Cambiar entre Windows inteligente y Windows clásico`
+    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
+    - Suggest: `Cambiar entre ventanas inteligentes y ventanas clásicas`
+    - The source means Smart and Classic browser windows, not the operating system.
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — Translation says it is searching for tabs that have useful groups, rather than checking tabs to form groups.
+    - Current: `Buscando pestañas con grupos útiles…`
+    - Source: `Checking tabs for useful groups…`
+    - Suggest: `Revisando las pestañas para formar grupos útiles…`
+    - The developer comment says the model forms new groups from the open tabs and is not searching for existing tab groups. The Spanish suggests it is searching for tabs that already have groups.
 - `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
     - Current: `Olvidar el historial de navegación`
     - Source: `label: Forget tooltiptext: Forget about some browsing history`
@@ -245,6 +333,11 @@ _Nothing in this category._
     - Source: `(requires reopening the toolbox)`
     - Suggest: `(requiere volver a abrir la caja de herramientas)`
     - The source says the toolbox must be reopened, not restarted; also the source is lowercase inside parentheses.
+- `theme-disabled-heading3` — `toolkit/toolkit/about/aboutAddons.ftl` — "Saved Themes" is rendered as the imperative "Guardar temas" (Save themes).
+    - Current: `Guardar temas`
+    - Source: `heading: Saved Themes`
+    - Suggest: `Temas guardados`
+    - The heading is a list of themes that have been saved. It is not an action to save themes.
 - `about-webrtc-closed-peerconnection-disclosure-show-msg` — `toolkit/toolkit/about/aboutWebrtc.ftl` — "PeerConnections" translated to "conexiones de pares" in the hide-msg variant only (comment: keep PeerConnection).
     - Source: `Show Closed PeerConnections`
 - `url-classifier-content-classifier-force-third-party` — `toolkit/toolkit/about/url-classifier.ftl` — The reference to the top frame is dropped from the checkbox label.
@@ -275,11 +368,21 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
+- `about-private-browsing-relay-promo-link-text` — `browser/browser/aboutPrivateBrowsing.ftl` — Missing accent in "electronico".
+    - Current: `correo electronico`
+    - Source: `Try email masks`
+    - Suggest: `correo electrónico`
+    - The correct spelling is "electrónico", and the neighbouring strings use it.
 - `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — English-style title case: Spanish capitalizes only the first word of a label.
     - Current: `Espacio Flexible`
     - Source: `title: Flexible Space`
     - Suggest: `Espacio flexible`
     - Spanish capitalization rules don't use title case, so 'Flexible' shouldn't be capitalized in this toolbar item title.
+- `downloads-content-analysis-timeout-error` — `browser/browser/downloads.ftl` — The sentence is ungrammatical: { $agent } sits as a loose subject before "se agotó el tiempo de espera", whose subject is actually "el tiempo".
+    - Current: `{ $agent } se agotó el tiempo de espera, por lo que este archivo fue bloqueado.`
+    - Source: `{ $agent } timed out, so this file was blocked.`
+    - Suggest: `Se agotó el tiempo de espera de { $agent }, por lo que este archivo fue bloqueado.`
+    - In Spanish "agotarse el tiempo" takes "el tiempo" as its subject. The agent therefore has to be attached with "de" ("el tiempo de espera de X"), or the sentence has to be rephrased, so that it correctly says that { $agent } timed out.
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "mas" is missing its accent; should be "más adelante".
     - Current: `Puedes cambiar esta preferencia mas adelante en los ajustes.`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
@@ -300,6 +403,36 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `about-private-browsing-spotlight-basics-activity-seen` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal possessive "su", but the locale uses informal "tú".
+    - Current: `su empleador`
+    - Source: `Some activity may still be seen by sites, search engines, internet providers, or your employer.`
+    - Suggest: `tu empleador`
+    - The locale's register is informal, and the surrounding strings use "tu".
+- `about-private-browsing-spotlight-basics-no-sell-data` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal possessive "sus", but the locale uses informal "tú".
+    - Current: `sus datos personales`
+    - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
+    - Suggest: `tus datos personales`
+    - The locale's register is informal, and the neighbouring string "te alerta" uses the informal form.
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses the formal imperative "Seleccione", but the locale uses informal "tú".
+    - Current: `Seleccione`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `Selecciona`
+    - The locale's register is informal, and the sibling string uses "Utiliza".
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — Uses the plural "Pueden" (ustedes) instead of the informal singular.
+    - Current: `Pueden seguir`
+    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
+    - Suggest: `Puedes seguir`
+    - The locale addresses the user with informal "tú".
+- `restart-required-intro2` — `browser/browser/aboutRestartRequired.ftl` — Uses the formal imperative "Reinícielo", but the locale uses informal "tú".
+    - Current: `Reinícielo`
+    - Source: `{ -brand-short-name } needs to finish an update. Restart to keep things secure and smooth.`
+    - Suggest: `Reinícialo`
+    - The locale's register is informal.
+- `smartwindow-group-tabs-empty` — `browser/browser/autoTabGrouping.ftl` — Uses the formal 'Vuelva' where the locale uses informal address.
+    - Current: `Vuelva a intentarlo más tarde.`
+    - Source: `No tab groups to suggest right now. Check again later.`
+    - Suggest: `Vuelve a intentarlo más tarde.`
+    - The es-MX convention is informal address (tú), which appears elsewhere in this batch too, e.g. 'detén', 'tu computadora'.
 - `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Formal address ("Haga") used where the locale convention is informal, and "click" is left untranslated/misspelled.
     - Current: `Haga click para saber más información.`
     - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
@@ -370,6 +503,21 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
+- `about-private-browsing-spotlight-basics-strict-tracking` — `browser/browser/aboutPrivateBrowsing.ftl` — Uses straight double quotes, but the locale uses curly quotes.
+    - Current: `"Estricto"`
+    - Source: `Switch to Strict in settings for stronger tracking protections.`
+    - Suggest: `“Estricto”`
+    - The locale's quote convention is curly double quotes.
+- `process-hang-addon-message` — `browser/browser/browser.ftl` — Straight double quotes used instead of the locale's curly quotes.
+    - Current: `"{ $addonName }"`
+    - Source: `“{ $addonName }” is slowing down { -brand-short-name }. To speed up your browser, stop that extension.`
+    - Suggest: `“{ $addonName }”`
+    - The locale convention is curly double quotes, and the en-US uses curly quotes here.
+- `process-hang-specific-tab-message` — `browser/browser/browser.ftl` — Straight double quotes used instead of the locale's curly quotes.
+    - Current: `"{ $title }"`
+    - Source: `“{ $title }” is slowing down { -brand-short-name }. To speed up your browser, stop that page.`
+    - Suggest: `“{ $title }”`
+    - The locale convention is curly double quotes, and the en-US uses curly quotes here.
 - `urlbar-searchmode-dropmarker2` — `browser/browser/browser.ftl` — Unnecessary title-case capitalization of "Motor de Búsqueda"; Spanish uses sentence case.
     - Current: `Elige un Motor de Búsqueda`
     - Source: `title: Pick a search engine`
