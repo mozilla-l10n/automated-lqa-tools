@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,847 |
+| **Strings reviewed this run** | 68 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `VPN.Settings.DataLimitTitle.v160` — `da/firefox-ios.xliff` — The Danish compound noun is wrongly split with a hyphen.
+    - Current: `Data-grænse`
+    - Source: `Data Limit`
+    - Suggest: `Datagrænse`
+    - Danish writes compound nouns as one word, so the correct spelling is "datagrænse". A hyphen is only used with abbreviations or names (e.g. "VPN-placering"), which is not the case here.
+- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
+    - Current: `Luk 1 faneblad`
+    - Source: `Closed 1 Tab`
+    - Suggest: `Lukkede 1 faneblad`
+    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative, which makes it read like a button. The plural version correctly uses "Lukkede".
+- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
+    - Current: `Luk 1 faneblad`
+    - Source: `Closed 1 Tab`
+    - Suggest: `Lukkede 1 faneblad`
+    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative. The plural version correctly uses "Lukkede".
+- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `da/firefox-ios.xliff` — Double space between "GB" and "VPN-data".
+    - Current: `GB  VPN-data`
+    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
+    - Suggest: `GB VPN-data`
+    - The extra space is visible in the popup text.
+- `VPN.ReachedDataLimitPopup.Title.v160` — `da/firefox-ios.xliff` — The Danish compound is written with a hyphen when it should be one word.
+    - Current: `Data-grænse`
+    - Source: `VPN Data Limit Reached`
+    - Suggest: `Datagrænse`
+    - In Danish, compounds like this are written closed. "Datagrænse" is the standard spelling.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +68,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 95 |
-| Strings | 1,847 |
-| Missing strings | 126 |
+| Files | 97 |
+| Strings | 1,915 |
+| Missing strings | 58 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,15 +83,11 @@ _Nothing retired._
 
 ### Completeness
 
-**126 strings** are not translated yet, concentrated in:
+**58 strings** are not translated yet, concentrated in:
 
 - `da/firefox-ios.xliff` — 34
-- `da/firefox-ios.xliff` — 28
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `da/firefox-ios.xliff` — 18
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
+- `da/firefox-ios.xliff` — 11
 - `da/firefox-ios.xliff` — 6
-- `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 1
@@ -76,9 +96,7 @@ _Nothing retired._
 
 **Files absent from the locale:**
 
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/Camera.strings`
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,8 +107,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `straight-double` 17 | **straight-double** |
-| apostrophe | `straight` 2 | **straight** |
-| ellipsis | `char` 22 | **char** |
+| apostrophe | `straight` 3 | **straight** |
+| ellipsis | `char` 25 | **char** |
 | dash | `em` 1, `en` 1 | _mixed_ |
 
 ---
@@ -101,7 +119,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (38)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -126,9 +144,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 8 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -166,6 +184,16 @@ _Nothing in this category._
     - Source: `Allow %@ to open?`
     - Suggest: `Tillad %@ at åbne?`
     - %@ is the app name (Firefox), which is already running when the QR code is scanned. The en-US asks for permission for Firefox to open the URL. The Danish passive means "Allow Firefox to be opened?".
+- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
+    - Current: `Luk 1 faneblad`
+    - Source: `Closed 1 Tab`
+    - Suggest: `Lukkede 1 faneblad`
+    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative, which makes it read like a button. The plural version correctly uses "Lukkede".
+- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
+    - Current: `Luk 1 faneblad`
+    - Source: `Closed 1 Tab`
+    - Suggest: `Lukkede 1 faneblad`
+    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative. The plural version correctly uses "Lukkede".
 - `CoverSheet.v24.ETP.Description` — `da/firefox-ios.xliff` — The hedge "helps stop" has become "forhindrer" (prevents), so the text now says tracking protection fully stops ads from following the user.
     - Current: `forhindrer reklamer i at følge dig`
     - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
@@ -244,6 +272,16 @@ _Nothing in this category._
     - Source: `Daily Usage Ping`
     - Suggest: `Ping for daglig brug`
     - "brug" is a common-gender noun ("en brug"), so the adjective takes no -t ending: "daglig brug".
+- `VPN.Settings.DataLimitTitle.v160` — `da/firefox-ios.xliff` — The Danish compound noun is wrongly split with a hyphen.
+    - Current: `Data-grænse`
+    - Source: `Data Limit`
+    - Suggest: `Datagrænse`
+    - Danish writes compound nouns as one word, so the correct spelling is "datagrænse". A hyphen is only used with abbreviations or names (e.g. "VPN-placering"), which is not the case here.
+- `VPN.ReachedDataLimitPopup.Title.v160` — `da/firefox-ios.xliff` — The Danish compound is written with a hyphen when it should be one word.
+    - Current: `Data-grænse`
+    - Source: `VPN Data Limit Reached`
+    - Suggest: `Datagrænse`
+    - In Danish, compounds like this are written closed. "Datagrænse" is the standard spelling.
 - `WebCompatReporter.Category.SiteNotUsable.v154` — `da/firefox-ios.xliff` — The predicate adjective "brugbar" doesn't agree with the neuter noun "webstedet".
     - Current: `Webstedet er ikke brugbar`
     - Source: `Site is not usable`
@@ -300,6 +338,11 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
+- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `da/firefox-ios.xliff` — Double space between "GB" and "VPN-data".
+    - Current: `GB  VPN-data`
+    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
+    - Suggest: `GB VPN-data`
+    - The extra space is visible in the popup text.
 - `Search.ThirdPartyEngines.AddMessage` — `da/firefox-ios.xliff` — The final full stop is missing at the end of the sentence.
     - Current: `i linjen "Hurtig søgning"`
     - Source: `The new search engine will appear in the quick search bar.`

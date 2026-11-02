@@ -2,54 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for zh-TW: [android](android.md) · [firefox](firefox.md)
+Also for zh-TW: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (0)
 
-- `VPN.ErrorBrowsingPopup.Body.v160` — `zh-TW/firefox-ios.xliff` — "VPN isn't working right now" is rendered as "VPN is not turned on".
-    - Current: `目前未開啟 VPN。`
-    - Source: `VPN isn’t working right now. If you continue browsing, your location may be visible.`
-    - Suggest: `VPN 目前無法正常運作。`
-    - The source and comment describe the VPN failing while it is on. 未開啟 says instead that it is switched off, which gives the wrong cause of the problem.
-- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `zh-TW/firefox-ios.xliff` — Confirmation "Closed 1 Tab" reads as the imperative "Close 1 tab".
-    - Current: `關閉 1 個分頁`
-    - Source: `Closed 1 Tab`
-    - Suggest: `已關閉 1 個分頁`
-    - The comment says this confirms a tab was already closed. Without 已 it reads like a command or button label.
-- `VPN.ErrorBrowsingPopup.ClosedXTabs.v160` — `zh-TW/firefox-ios.xliff` — Confirmation "Closed %1$@ Tabs" reads as the imperative "Close %1$@ tabs".
-    - Current: `關閉 %1$@ 個分頁`
-    - Source: `Closed %1$@ Tabs`
-    - Suggest: `已關閉 %1$@ 個分頁`
-    - The comment says this confirms tabs were already closed. Without 已 it reads like a command.
-- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `zh-TW/firefox-ios.xliff` — The VoiceOver label keeps the abbreviation GB, but the comment asks for gigabytes written out.
-    - Current: `每月上限為 %2$@ GB`
-    - Source: `%1$@ of %2$@ gigabytes used`
-    - Suggest: `每月上限為 %2$@ 十億位元組`
-    - The developer comment says this label should match the visible text but with gigabytes spelled out for VoiceOver. The translation is identical to the visible string.
-- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `zh-TW/firefox-ios.xliff` — This confirmation reads as a command ("Close 1 tab") instead of saying the tab was closed.
-    - Current: `關閉 1 個分頁`
-    - Source: `Closed 1 Tab`
-    - Suggest: `已關閉 1 個分頁`
-    - The developer comment says this message appears after the tab has been closed. Without "已", the Chinese reads like an instruction or button label, and it looks the same as the nearby action buttons.
-- `VPN.ReachedDataLimitPopup.ClosedXTabs.v160` — `zh-TW/firefox-ios.xliff` — This confirmation reads as a command ("Close N tabs") instead of saying the tabs were closed.
-    - Current: `關閉 %1$@ 個分頁`
-    - Source: `Closed %1$@ Tabs`
-    - Suggest: `已關閉 %1$@ 個分頁`
-    - The developer comment says this message appears after the tabs have been closed. Without "已", the Chinese reads as an action prompt, not a report of what happened.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

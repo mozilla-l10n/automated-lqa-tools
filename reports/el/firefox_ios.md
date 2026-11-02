@@ -2,33 +2,33 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 1,946 |
+| **Strings reviewed this run** | 27 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for el: [android](android.md) · [firefox](firefox.md)
+Also for el: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataUsage.v160` — `el/firefox-ios.xliff` — The unit is KB (kilobytes) instead of GB (gigabytes).
+    - Current: `%2$@ KB σε χρήση`
+    - Source: `%1$@ of %2$@ GB used`
+    - Suggest: `%2$@ GB σε χρήση`
+    - The source and the developer comment both say the amounts are in gigabytes ("1.0 of 5.0 GB used"). With "KB", the screen tells the user their usage and monthly limit are a millionth of what they really are.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `Onboarding.Modern.Customization.Toolbar.Description.v145` — `el/firefox-ios.xliff` — Missing particle «να» after «για» makes the clause ungrammatical.
-    - Current: `για λάβετε`
-    - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
-    - Suggest: `για να λάβετε`
-    - Greek final clauses require «για να» + subjunctive; «για λάβετε» is a grammatical error.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,946 |
-| Missing strings | 27 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,15 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**27 strings** are not translated yet, concentrated in:
-
-- `el/firefox-ios.xliff` — 10
-- `el/firefox-ios.xliff` — 8
-- `el/firefox-ios.xliff` — 6
-- `el/firefox-ios.xliff` — 2
-- `el/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -92,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (51)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -127,7 +119,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 11 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -162,6 +154,11 @@ _Nothing in this category._
     - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `θα βελτιώνονται μεταξύ των ενημερώσεων`
     - The en-US and the comment say Mozilla applies remote changes in between app updates. The Greek says the improvements arrive with each new update, which reverses the time relation and contradicts the next sentence about remote changes.
+- `VPN.Settings.DataUsage.v160` — `el/firefox-ios.xliff` — The unit is KB (kilobytes) instead of GB (gigabytes).
+    - Current: `%2$@ KB σε χρήση`
+    - Source: `%1$@ of %2$@ GB used`
+    - Suggest: `%2$@ GB σε χρήση`
+    - The source and the developer comment both say the amounts are in gigabytes ("1.0 of 5.0 GB used"). With "KB", the screen tells the user their usage and monthly limit are a millionth of what they really are.
 - `Toolbar.Translation.LoadingButton.AccessibilityLabel.v145` — `el/firefox-ios.xliff` — The loading-state label "Translating page" is rendered identically to the "Translate page" button label, losing the in-progress meaning.
     - Current: `Μετάφραση σελίδας`
     - Source: `Translating page`

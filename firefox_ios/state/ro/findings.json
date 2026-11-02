@@ -552,6 +552,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "gigabiți",
+  "dismissed_because": "",
+  "fid": "d71b91ca3565",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ro",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source and comment say gigabytes (GB). \"Gigabiți\" means gigabits, a different unit, so VoiceOver reads out the wrong amount.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3721d1fc",
+  "string_id": "VPN.Settings.DataUsage.AccessibilityLabel.v160",
+  "suggest": "gigaocteți",
+  "summary": "\"gigabiți\" (gigabits) is used instead of gigabytes.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "chiar și în Wi-Fi publice",
+  "dismissed_because": "",
+  "fid": "b9503209d966",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ro",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "\"Publice\" is plural feminine, but \"Wi-Fi\" is not a plural noun it can agree with. The onboarding string already uses \"rețelele Wi-Fi publice\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cf7b096c",
+  "string_id": "VPN.Settings.Description.v160",
+  "suggest": "chiar și în rețele Wi-Fi publice",
+  "summary": "\"în Wi-Fi publice\" has a plural adjective with no noun to agree with; it needs \"rețele\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "per user",

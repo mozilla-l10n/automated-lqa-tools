@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 1,940 |
+| **Strings reviewed this run** | 33 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for fi: [android](android.md) · [firefox](firefox.md)
+Also for fi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `BrowserDataTransfer.ImportFailure.Message.v160` — `fi/firefox-ios.xliff` — The verb is in the infinitive form ('yrittää') instead of the imperative ('yritä').
+    - Current: `Yrittää myöhemmin uudelleen.`
+    - Source: `Try again later.`
+    - Suggest: `Yritä myöhemmin uudelleen.`
+    - The en-US 'Try again later.' tells the user what to do, which needs the imperative 'Yritä'. 'Yrittää' is the infinitive or third-person form, so the sentence is ungrammatical as an instruction.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,940 |
-| Missing strings | 33 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,17 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**33 strings** are not translated yet, concentrated in:
-
-- `fi/firefox-ios.xliff` — 9
-- `fi/firefox-ios.xliff` — 7
-- `fi/firefox-ios.xliff` — 6
-- `fi/firefox-ios.xliff` — 4
-- `fi/firefox-ios.xliff` — 3
-- `fi/firefox-ios.xliff` — 2
-- `fi/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -78,7 +72,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `straight-double` 10, `curly-double` 4 | _mixed_ |
-| ellipsis | `char` 30 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 2, `en` 4 | _mixed_ |
 
 ---
@@ -89,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (42)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -110,7 +104,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 19 |
-| 3 | Degraded language (grammar, spelling, terminology) | 20 |
+| 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -222,6 +216,11 @@ _Nothing in this category._
     - Source: `Expanded`
     - Suggest: `Laajennettu`
     - The passive past participle of "laajentaa" (to expand) is "laajennettu". This also matches "Kutistettu", which is used for the Collapsed value.
+- `BrowserDataTransfer.ImportFailure.Message.v160` — `fi/firefox-ios.xliff` — The verb is in the infinitive form ('yrittää') instead of the imperative ('yritä').
+    - Current: `Yrittää myöhemmin uudelleen.`
+    - Source: `Try again later.`
+    - Suggest: `Yritä myöhemmin uudelleen.`
+    - The en-US 'Try again later.' tells the user what to do, which needs the imperative 'Yritä'. 'Yrittää' is the infinitive or third-person form, so the sentence is ungrammatical as an instruction.
 - `MainMenu.ToolsSection.AccessibilityLabels.ExpandedHint.v142` — `fi/firefox-ios.xliff` — "Laajennuttu" is not a valid Finnish word form; the past passive participle of "laajentaa" is "laajennettu".
     - Current: `Laajennuttu`
     - Source: `Expanded`

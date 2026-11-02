@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 1,927 |
+| **Strings reviewed this run** | 46 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for nl: [android](android.md) · [firefox](firefox.md)
+Also for nl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataLimitResetFooter.v160` — `nl/firefox-ios.xliff` — Wrong preposition: 'opnieuw ingesteld naar' should be 'opnieuw ingesteld op'.
+    - Current: `opnieuw ingesteld naar %1$@ GB`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `opnieuw ingesteld op %1$@ GB`
+    - In Dutch a value is set 'op' a number (instellen op); 'naar' is a calque of English 'to'.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 46 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,18 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `nl/firefox-ios.xliff` — 17
-- `nl/firefox-ios.xliff` — 7
-- `nl/firefox-ios.xliff` — 2
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -80,9 +73,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 14 | **curly-single** |
 | apostrophe | `typographic` 29 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 298 | **formal** |
+| register | `formal` 309 | **formal** |
 
 ---
 
@@ -92,14 +85,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (52)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -281,6 +274,11 @@ _Nothing in this category._
     - Source: `Scroll to Hide Tab and Address Bar`
     - Suggest: `Scrollen om tabblad- en adresbalk te verbergen`
     - The source is 'Tab and Address Bar' (singular 'tab bar'); the elided compound part must be 'tabbalk', so the correct ellipsis form is 'tabblad- en adresbalk'.
+- `VPN.Settings.DataLimitResetFooter.v160` — `nl/firefox-ios.xliff` — Wrong preposition: 'opnieuw ingesteld naar' should be 'opnieuw ingesteld op'.
+    - Current: `opnieuw ingesteld naar %1$@ GB`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `opnieuw ingesteld op %1$@ GB`
+    - In Dutch a value is set 'op' a number (instellen op); 'naar' is a calque of English 'to'.
 - `SentFromFirefox.SocialShare.SettingsToggle.Subtitle.v134` — `nl/firefox-ios.xliff` — The subtitle lacks a subject/verb and reads as a fragment rather than a sentence.
     - Current: `Over %1$@ vertellen telkens als u een koppeling op %2$@ deelt.`
     - Source: `Spread the word about %1$@ every time you share a link on %2$@.`

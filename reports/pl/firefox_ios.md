@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,915 |
+| **Strings reviewed this run** | 58 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for pl: [android](android.md) · [firefox](firefox.md)
+Also for pl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,915 |
-| Missing strings | 58 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,21 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `pl/firefox-ios.xliff` — 17
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `pl/firefox-ios.xliff` — 7
-- `pl/firefox-ios.xliff` — 2
-- `pl/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -82,10 +68,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 22 | **polish-double** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| nbsp | `total` 441, `before-punctuation` 9 | **total** |
-| register | `informal` 12 | **informal** |
+| nbsp | `total` 465, `before-punctuation` 10 | **total** |
+| register | `informal` 14 | **informal** |
 
 ---
 

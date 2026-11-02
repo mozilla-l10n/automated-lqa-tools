@@ -6,7 +6,7 @@
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 371
+  "typographic": 373
  },
  "dash": {
   "em": 4,
@@ -33,7 +33,7 @@
   "guillemet": 18
  },
  "register": {
-  "formal": 326,
+  "formal": 329,
   "informal": 0
  }
 }

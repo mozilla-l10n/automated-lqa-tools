@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,915 |
+| **Strings reviewed this run** | 58 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ja: [android](android.md) · [firefox](firefox.md)
+Also for ja: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.LocationPicker.FindingLocationsText.v160` — `ja/firefox-ios.xliff` — Loading-status text is rendered as a plain action verb ("find locations") instead of a progressive status.
+    - Current: `接続先を探す…`
+    - Source: `Finding Locations…`
+    - Suggest: `接続先を検索中…`
+    - Per the developer comment this is shown while the app is loading the location list; en-US "Finding Locations…" is an in-progress status, but 探す reads as an action/button label rather than an ongoing process.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,915 |
-| Missing strings | 58 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,21 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `ja/firefox-ios.xliff` — 17
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `ja/firefox-ios.xliff` — 7
-- `ja/firefox-ios.xliff` — 2
-- `ja/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -82,8 +72,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `corner` 11, `curly-double` 3 | **corner** |
-| ellipsis | `char` 11, `ascii` 17 | _mixed_ |
-| fullwidth | `punctuation` 411 | **punctuation** |
+| ellipsis | `char` 12, `ascii` 19 | _mixed_ |
+| fullwidth | `punctuation` 430 | **punctuation** |
 
 ---
 
@@ -93,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (108)
+## 3. Open findings (109)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -118,7 +108,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 59 |
+| 2 | Wrong content (says something other than the English) | 60 |
 | 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -363,6 +353,11 @@ _Nothing in this category._
     - Source: `Provides access to summarize pages.`
     - Suggest: `ページを要約する機能へのアクセスを提供します。`
     - The source means the toggle provides access to the page-summarizing feature, not access to a page called "要約ページ".
+- `VPN.LocationPicker.FindingLocationsText.v160` — `ja/firefox-ios.xliff` — Loading-status text is rendered as a plain action verb ("find locations") instead of a progressive status.
+    - Current: `接続先を探す…`
+    - Source: `Finding Locations…`
+    - Suggest: `接続先を検索中…`
+    - Per the developer comment this is shown while the app is loading the location list; en-US "Finding Locations…" is an in-progress status, but 探す reads as an action/button label rather than an ongoing process.
 - `SendTo.NoDevicesFound.Message.v119` — `ja/firefox-ios.xliff` — Translation drops "other" and "available to sync", changing the meaning to "no devices connected to this account were found".
     - Current: `このアカウントに接続された端末が見つかりませんでした。`
     - Source: `You don’t have any other devices connected to this account available to sync.`
@@ -423,12 +418,7 @@ _Nothing in this category._
     - Source: `Use your fingerprint to access Logins now.`
     - Suggest: `指紋認証を利用してログイン情報にアクセスします。`
     - The source, per the developer comment, is a Touch ID prompt for accessing the saved logins list, not for signing in.
-- `DefaultBrowserCard.BetterInternet.Title.v108` — `ja/firefox-ios.xliff` — "Default to a Better Internet" loses the "default browser" wordplay and reads as merely "choose a better internet".
-    - Current: `より良いインターネットを選択する`
-    - Source: `Default to a Better Internet`
-    - Suggest: `より良いインターネットをデフォルトに`
-    - The source title plays on setting Firefox as the default; the translation drops the notion of "default" entirely.
-- _…and 25 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

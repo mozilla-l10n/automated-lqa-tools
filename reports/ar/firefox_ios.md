@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,175 |
+| **Strings reviewed this run** | 70 of 1,245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ar: [android](android.md) · [firefox](firefox.md)
+Also for ar: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 71 |
-| Strings | 1,175 |
-| Missing strings | 798 |
+| Files | 72 |
+| Strings | 1,245 |
+| Missing strings | 728 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 27 |
+| Files absent from the locale | 26 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,10 +59,10 @@ _Nothing retired._
 
 ### Completeness
 
-**798 strings** are not translated yet, concentrated in:
+**728 strings** are not translated yet, concentrated in:
 
-- `ar/firefox-ios.xliff` — 150
 - `ar/firefox-ios.xliff` — 148
+- `ar/firefox-ios.xliff` — 98
 - `ar/firefox-ios.xliff` — 81
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
@@ -70,9 +70,9 @@ _Nothing retired._
 - `Shared/Supporting Files/en-US.lproj/Translations.strings` — 31
 - `Shared/Supporting Files/en-US.lproj/Summarizer.strings` — 21
 - `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `ar/firefox-ios.xliff` — 16
-- `ar/firefox-ios.xliff` — 15
-- `Shared/Supporting Files/en-US.lproj/TermsOfUse.strings` — 15
+- `ar/firefox-ios.xliff` — 14
+- `ar/firefox-ios.xliff` — 14
+- `ar/firefox-ios.xliff` — 12
 
 **Files absent from the locale:**
 

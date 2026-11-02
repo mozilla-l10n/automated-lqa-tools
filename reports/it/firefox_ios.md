@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 1,973 |
+| **Strings reviewed this run** | 40 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for it: [android](android.md) · [firefox](firefox.md)
+Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -81,14 +81,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -97,16 +97,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `Settings.Studies.Message.v148` — `it/firefox-ios.xliff` — Translation adds "del browser" (of the browser), which the source does not say.
-    - Current: `contribuendo così a migliorare la qualità del browser per tutti`
-    - Source: `%@ randomly selects users to test features, which improves quality for everyone.`
-    - Suggest: `contribuendo così a migliorare la qualità per tutti`
-    - The en-US says "which improves quality for everyone" without specifying the browser; the Italian adds an unsourced object.
-- `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Order of days reversed relative to source "Today and Yesterday".
-    - Current: `Ieri e oggi`
-    - Source: `Today and Yesterday`
-    - Suggest: `Oggi e ieri`
-    - The source lists "Today and Yesterday"; the Italian inverts the order.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -124,7 +115,7 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (21)
+### Dismissed by hand (23)
 
 - `ActivityStream.ContextMenu.UnpinTopsite` — `it/firefox-ios.xliff` — “Rilascia” is the established opposite of “Appunta” in this menu
 - `ActivityStream.ContextMenu.UnpinTopsite` — `Shared/en.lproj/Localizable.strings` — “Rilascia” is the established opposite of “Appunta” in this menu
@@ -137,6 +128,7 @@ _Nothing in this category._
 - `DefaultBrowserPopup.SecondLabel.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “di default” mirrors the wording iOS itself shows in Settings
 - `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `it/firefox-ios.xliff` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 - `Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.` — `Shared/en.lproj/PrivateBrowsing.strings` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
+- `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Correct as is
 - `Onboarding.Modern.Welcome.Title.v145` — `it/firefox-ios.xliff` — DRAFT: the Italian wording is the agreed rendering for this screen
 - `Onboarding.Modern.Welcome.Title.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — DRAFT: the Italian wording is the agreed rendering for this screen
 - `Onboarding.Welcome.Description.TreatementA.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
@@ -147,6 +139,7 @@ _Nothing in this category._
 - `Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
 - `Settings.AppIconSelection.AppIconNames.Yellow.Title.v137` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — Agrees with “icona”, which is feminine
 - `Settings.Homepage.Shortcuts.ToggleOff.v100` — `Shared/en.lproj/Localizable.strings` — Refers to the section.
+- `Settings.Studies.Message.v148` — `it/firefox-ios.xliff` — pontoon-rejected (2026-10-30): rejected in Pontoon: mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>"del browser" is added on purpose to provide better context</p>
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 

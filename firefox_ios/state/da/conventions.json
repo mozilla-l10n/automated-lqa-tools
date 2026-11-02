@@ -1,11 +1,11 @@
 {
  "_meta": {
   "locale": "da",
-  "prose_chunks": 1847,
-  "strings": 1847
+  "prose_chunks": 1915,
+  "strings": 1915
  },
  "apostrophe": {
-  "straight": 2,
+  "straight": 3,
   "typographic": 0
  },
  "dash": {
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 22
+  "char": 25
  },
  "fullwidth": {
   "punctuation": 0
