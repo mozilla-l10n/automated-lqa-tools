@@ -26,7 +26,6 @@ ActivityStream.ContextMenu.UnpinTopsite — “Rilascia” is the established op
 ContextualHints.Toolbar.GoogleLens.Description.v154 — Better sounding variation, same meaning.
 Firefox won’t remember any of your history or cookies, but new bookmarks will be saved. — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 Onboarding.Modern.Welcome.Title.v145 — DRAFT: the Italian wording is the agreed rendering for this screen
-Onboarding.Welcome.Description.TreatementA.v120 — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139 — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
 Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139 — “Rétro” is correct https://www.treccani.it/vocabolario/retro_res-0f8f0e80-002f-11de-9d89-0016357eee51/
 Settings.AppIconSelection.AppIconNames.Yellow.Title.v137 — Agrees with “icona”, which is feminine
