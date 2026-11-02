@@ -2,83 +2,47 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 143 of 16,595 |
+| **Strings reviewed this run** | 126 of 16,718 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for hu: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (11)
+### 🆕 New findings (3)
 
-- `text-action-copy-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "a kiemelésbe" means copying the link into the highlight rather than a link pointing to the highlight.
-    - Current: `Hivatkozás másolása a kiemelésbe`
-    - Source: `accesskey: h label: Copy Link to Highlight`
-    - Suggest: `Hivatkozás másolása a kiemeléshez`
-    - Per the developer comment, this command creates a Text Fragment link to the selection and copies it to the clipboard. The illative "-ba/-be" wrongly says the link is copied into the highlight.
-- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "a kiemelésbe" means copying the link into the highlight rather than a link pointing to the highlight.
-    - Current: `Tiszta hivatkozás másolása a kiemelésbe`
-    - Source: `accesskey: k label: Copy Clean Link to Highlight`
-    - Suggest: `Tiszta hivatkozás másolása a kiemeléshez`
-    - The link points to the highlighted text. It is not copied into it.
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — The title renders "Edit controls" as the action "edit the controls" instead of naming the group of editing controls.
-    - Current: `Vezérlőelemek szerkesztése`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Szerkesztésvezérlők`
-    - "Edit controls" names the Cut/Copy/Paste toolbar group, and the label translates it correctly as a noun. The title instead says "editing the controls".
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The second half of the sentence uses a finite verb ("kikapcsolja") that doesn't continue "a VPN bekapcsolásához", so the sentence is ungrammatical.
-    - Current: `és kikapcsolja ott, ahol nincs rá szüksége`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `és kikapcsolásához ott, ahol nincs rá szüksége`
-    - The source says to set rules to turn the VPN on when wanted and off when not. In Hungarian the second half has to match the first, i.e. "a VPN be- és kikapcsolásához". As written, "kikapcsolja" leaves the sentence broken.
-- `customize-mode-toolbarspacer` — `browser/browser/customizeMode.ftl` — "Szóköz" means the space character, not the empty toolbar spacer item.
-    - Current: `Szóköz`
-    - Source: `title: Space`
-    - Suggest: `Hely`
-    - This is the toolbar spacer item in Customize mode. Its flexible sibling is translated "Széthúzható hely", so it should be "Hely", not the typing space character.
-- `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "Kész kipróbálni?" is a word-for-word rendering that isn't idiomatic Hungarian for "Ready to try it?".
-    - Current: `Kész kipróbálni?`
-    - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
-    - Suggest: `Készen áll a kipróbálására?`
-    - Asking whether a person is ready is phrased "készen áll" in Hungarian. "Kész" with an infinitive reads as if something is finished.
-- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The translation tells the user to select an area and move the mini window, instead of selecting an area to move into a Mini Window.
-    - Current: `Húzza vagy kattintson a terület kijelöléséhez, és mozgassa a mini ablakot.`
-    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
-    - Suggest: `Húzással vagy kattintással jelöljön ki egy területet, amelyet áthelyez egy mini ablakba.`
-    - en-US: 'Drag or click to select an area to move to a Mini Window.' The selected area is what gets moved into the Mini Window. The Hungarian reads 'select the area, and move the mini window', which describes a different action.
-- `permissions-site-app-links-desc` — `browser/browser/preferences/permissions.ftl` — The aside opens with an en dash but closes with a comma, so the paired punctuation doesn't match.
-    - Current: `alkalmazáshivatkozások – például az e-mailek (mailto:), megnyitását`
-    - Source: `These sites are blocked from asking to open app links, like email (mailto:). Remove a site to allow it to ask again.`
-    - Suggest: `alkalmazáshivatkozások – például az e-mailek (mailto:) – megnyitását`
-    - An aside that opens with a dash should close with a dash too. Mixing a dash and a comma breaks up the sentence structure.
-- `SVGUseInlineEventHandlerWarning` — `dom/chrome/dom/dom.properties` — "not interoperable" is rendered as "don't work with each other", which is a different meaning.
-    - Current: `nem működnek egymással`
-    - Source: `Inline event handlers on elements cloned by an SVG <use> element are not interoperable. See https://github.com/w3c/svgwg/issues/1211`
-    - Suggest: `nem interoperábilisak (a böngészők eltérően kezelik őket)`
-    - In web standards, "interoperable" means behaving the same way across implementations (browsers). "nem működnek egymással" says the handlers don't work together with each other, which misstates the warning.
-- `notifications-state-allow` — `browser/browser/preferences/preferences.ftl` — The read-only state value uses the action noun "Engedélyezés" instead of a state form.
-    - Current: `Engedélyezés`
-    - Source: `Allow`
-    - Suggest: `Engedélyezve`
-    - The developer comment says this is a read-only state in the "Allow notifications" column, next to "Mindig" and "Soha". "Engedélyezés" (allowing) reads as a button or action label, not a state.
-- `newtab-solitaire-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The noun+noun compound "Pasziánsz menü" should be written as one word.
-    - Current: `Pasziánsz menü megnyitása`
-    - Source: `aria-label: Open solitaire menu title: Open solitaire menu`
-    - Suggest: `Pasziánszmenü megnyitása`
-    - Hungarian spelling rules write a compound of two nouns as one word (pasziánszmenü).
+- `downloads-unblock-insecure` — `browser/browser/downloads.ftl` — The accusative object "dokumentumot" is combined with the passive "lett kézbesítve", which is ungrammatical.
+    - Current: `az aktuális dokumentumot biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
+    - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
+    - Suggest: `az aktuális dokumentum biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
+    - The "lett + -va/-ve" passive needs a subject in the nominative ("dokumentum"). The other option is the active form "a dokumentumot … kézbesítették". Mixing the two is a grammar error.
+- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — "beállítás" is the noun "setting", not the participle "set/assigned" the source needs.
+    - Current: `(beállítás a macOS billentyűzetbeállításaiban) [other] (beállítás a rendszer billentyűzetbeállításaiban)`
+    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
+    - Suggest: `(beállítva a macOS billentyűzetbeállításaiban) [other] (beállítva a rendszer billentyűzetbeállításaiban)`
+    - The comment says "set" means "assigned". The label states that the shortcut was assigned in the system settings. The noun form reads as "(setting in the keyboard settings)" instead of "(set in …)".
+- `clear-time-duration-value-all-time` — `browser/browser/sanitize.ftl` — "Bármikor" means "at any time", not "All time" (the entire history range).
+    - Current: `Bármikor`
+    - Source: `label: All time`
+    - Suggest: `Teljes időtartam`
+    - In the clear-data time range selector, "All time" means the whole history. "Bármikor" (anytime/whenever) does not say that.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — “Add shortcut” is translated as “Add launcher icon”.
+    - Current: `Indítóikon hozzáadása`
+    - Source: `placeholder: Add shortcut`
+    - Suggest: `Gyorsbillentyű hozzáadása`
+    - In this file “shortcut” means a keyboard shortcut (“gyorsbillentyű”), not a desktop/launcher icon.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -88,20 +52,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-clock-widget-menu-button2` — `browser/browser/newtab/newtab.ftl` — "Clock options" translated as "Órabeállítások" (clock settings) instead of options for the clock widget menu.
-    - Current: `Órabeállítások`
-    - Suggest: `Óra beállításai`
-    - The source is a menu button label "Clock options"; the compound "Órabeállítások" reads as hourly/clock-rate settings and does not convey the widget's options menu.
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — "Loading more matches" translated as loading more search results.
-    - Current: `További találatok betöltése…`
-    - Suggest: `További mérkőzések betöltése…`
-    - "matches" here means sports matches ("mérkőzés"), which is the term used throughout the sports widget; "találat" means a search hit.
-- `policy-DisablePasswordReveal` — `browser/browser/policies/policies-descriptions.ftl` — Misspelling: "mentet" instead of "mentett".
-    - Current: `a mentet bejelentkezésekben`
-    - Suggest: `a mentett bejelentkezésekben`
-    - Past participle of "ment" is "mentett" with a double t; "mentet" is a different (causative) form.
+_Nothing retired._
 
 ---
 
@@ -110,8 +63,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
-| Missing strings | 0 |
+| Strings | 16,718 |
+| Missing strings | 24 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -128,7 +81,18 @@ _Nothing to re-read._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**24 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aboutLogins.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 5
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+- `browser/browser/ipProtection.ftl` — 2
+- `browser/browser/preferences/moreFromMozilla.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/branding/brandings.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -136,10 +100,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 807, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 809, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 398, `ascii` 4 | **char** |
-| dash | `em` 2, `en` 132 | **en** |
+| ellipsis | `char` 399, `ascii` 4 | **char** |
+| dash | `em` 2, `en` 134 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -150,7 +114,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (268)
+## 3. Open findings (270)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -171,7 +135,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
 | 2 | Wrong content (says something other than the English) | 127 |
-| 3 | Degraded language (grammar, spelling, terminology) | 85 |
+| 3 | Degraded language (grammar, spelling, terminology) | 87 |
 | 4 | Cosmetic (typography, spacing) | 26 |
 
 ### A. Functional, markup, variables & plurals
@@ -220,11 +184,6 @@ _Also listed under their own category below._
     - Source: `Search Actions`
     - Suggest: `Műveletek keresése`
     - The group comment states “In these actions ‘Search’ is a verb, followed by where the search is performed”; the neighbouring entries use “Könyvjelzők keresése”, “Előzmények keresése”, “Lapok keresése”.
-- `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — “Add shortcut” is translated as “Add launcher icon”.
-    - Current: `Indítóikon hozzáadása`
-    - Source: `placeholder: Add shortcut`
-    - Suggest: `Gyorsbillentyű hozzáadása`
-    - In this file “shortcut” means a keyboard shortcut (“gyorsbillentyű”), not a desktop/launcher icon.
 - `taskbar-tabs-email-callout-subtitle-v3` — `browser/browser/featureCallout.ftl` — The email taskbar-tab callout says “chat sites” instead of “email sites”.
     - Current: `Indítsa el csevegőoldalait alkalmazásként`
     - Source: `Launch your email sites like an app in a streamlined window protected by { -brand-short-name }.`
@@ -475,7 +434,12 @@ _Also listed under their own category below._
     - Source: `%S will save this password for this website.`
     - Suggest: `A %S elmenti ezt a jelszót ehhez a webhelyhez.`
     - en-US: "%S will save this password for this website." The string refers to the single generated password being offered, not to all stored passwords.
-- _…and 29 more; see `state/` for the full list._
+- `about-glean-label-for-controls-submit` — `toolkit/toolkit/about/aboutGlean.ftl` — "submit the selected ping" became "submit with the selected tag".
+    - Current: `és a kiválasztott címkével való beküldéshez`
+    - Source: `Press the preceding button to tag all { -glean-brand-name } pings with your tag and submit the selected ping. (All pings submitted from then until you restart the application will be tagged with <code>{ $debug-tag }</co…`
+    - Suggest: `és a kiválasztott ping beküldéséhez`
+    - en-US: "tag all { -glean-brand-name } pings with your tag and submit the selected ping". The Hungarian repeats the tag clause and drops the fact that the *selected ping* is what gets submitted.
+- _…and 28 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -569,6 +533,11 @@ _Also listed under their own category below._
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
     - Suggest: `Válassza ki, hogy mit szinkronizáljon ezen az eszközön.`
     - The source is an imperative instruction to choose what to sync; the conditional "szinkronizálna" changes the meaning.
+- `clear-time-duration-value-all-time` — `browser/browser/sanitize.ftl` — "Bármikor" means "at any time", not "All time" (the entire history range).
+    - Current: `Bármikor`
+    - Source: `label: All time`
+    - Suggest: `Teljes időtartam`
+    - In the clear-data time range selector, "All time" means the whole history. "Bármikor" (anytime/whenever) does not say that.
 - `fxa-menu-signed-out-title` — `browser/browser/sync.ftl` — "Sign in to sync" is rendered as "Sign in to Sync" treating sync as the product name, and the brand is inflected oddly.
     - Current: `Jelentkezzen be a Syncbe`
     - Source: `Sign in to sync`
@@ -697,6 +666,11 @@ _Also listed under their own category below._
     - Source: `label: Customize Touch Bar…`
     - Suggest: `Érintősáv testreszabása…`
     - The intended word is “Érintősáv” (Touch Bar); “Érintősár” is a typo with no meaning.
+- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — "beállítás" is the noun "setting", not the participle "set/assigned" the source needs.
+    - Current: `(beállítás a macOS billentyűzetbeállításaiban) [other] (beállítás a rendszer billentyűzetbeállításaiban)`
+    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
+    - Suggest: `(beállítva a macOS billentyűzetbeállításaiban) [other] (beállítva a rendszer billentyűzetbeállításaiban)`
+    - The comment says "set" means "assigned". The label states that the shortcut was assigned in the system settings. The noun form reads as "(setting in the keyboard settings)" instead of "(set in …)".
 - `default-browser-guidance-notification-auto-trigger-body` — `browser/browser/defaultBrowserNotification.ftl` — Missing hyphen before the suffix attached to the brand name placeable.
     - Current: `{ -brand-short-name }ot`
     - Source: `Choose { -brand-short-name } as your default browser in Settings.`
@@ -707,6 +681,11 @@ _Also listed under their own category below._
     - Source: `Open your links with { -brand-short-name }`
     - Suggest: `Hivatkozásai megnyitása a { -brand-short-name }-szal`
     - In Hungarian the suffix attached to a proper/brand name placeable is joined with a hyphen (…-szal); also "Saját hivatkozások" reads as a list label rather than "your links".
+- `downloads-unblock-insecure` — `browser/browser/downloads.ftl` — The accusative object "dokumentumot" is combined with the passive "lett kézbesítve", which is ungrammatical.
+    - Current: `az aktuális dokumentumot biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
+    - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
+    - Suggest: `az aktuális dokumentum biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
+    - The "lett + -va/-ve" passive needs a subject in the nominative ("dokumentum"). The other option is the active form "a dokumentumot … kézbesítették". Mixing the two is a grammar error.
 - `genai-prompts-explain` — `browser/browser/genai.ftl` — Wrong verbal prefix in the prompt body: “Magyarázza le”.
     - Current: `Magyarázza le a kulcsfogalmakat a kijelölésben`
     - Source: `label: Explain this value: Please explain the key concepts in this selection, using simple words. Also, use examples.`
@@ -1247,7 +1226,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 398 times against 4 ASCII runs.
+    - The tree uses … 399 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1256,31 +1235,31 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (807 occurrences).
+    - The locale's quote convention is `polish-double` (809 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (807 occurrences).
+    - The locale's quote convention is `polish-double` (809 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (807 occurrences).
+    - The locale's quote convention is `polish-double` (809 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (807 occurrences).
+    - The locale's quote convention is `polish-double` (809 occurrences).
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 398 times against 4 ASCII runs.
+    - The tree uses … 399 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 398 times against 4 ASCII runs.
+    - The tree uses … 399 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 398 times against 4 ASCII runs.
+    - The tree uses … 399 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`
@@ -1317,8 +1296,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (6)
+### Fixed to date (7)
 
+- `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — fixed 2026-11-02
 - `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `pdfjs-editor-undo-bar-message-multiple` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-09-14
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01

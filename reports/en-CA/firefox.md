@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 100 of 16,614 |
+| **Strings reviewed this run** | 54 of 16,648 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for en-CA: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for en-CA: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -45,9 +45,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,614 |
-| Missing strings | 0 |
-| Obsolete strings | 19 |
+| Strings | 16,648 |
+| Missing strings | 94 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,7 +63,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**94 strings** are not translated yet, concentrated in:
+
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
+- `browser/browser/genai.ftl` — 11
+- `browser/browser/sanitize.ftl` — 10
+- `browser/browser/aboutLogins.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 7
+- `browser/browser/newtab/asrouter.ftl` — 5
+- `toolkit/toolkit/neterror/netError.ftl` — 3
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/confirmationHints.ftl` — 2
+- `browser/browser/customkeys.ftl` — 2
+- `browser/browser/ipProtection.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,10 +86,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 696, `curly-single` 64, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1006, `straight` 4 | **typographic** |
-| ellipsis | `char` 398 | **char** |
-| dash | `em` 82, `en` 3 | **em** |
+| quotes | `curly-double` 698, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1005, `straight` 4 | **typographic** |
+| ellipsis | `char` 399 | **char** |
+| dash | `em` 84, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---

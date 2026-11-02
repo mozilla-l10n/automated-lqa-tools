@@ -396,7 +396,7 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -1758,6 +1758,30 @@
   "string_id": "fxviewtabrow-move-tab-start",
   "suggest": "",
   "summary": "fxviewtabrow-move-tab-start, fxviewtabrow-move-tab-end — fxviewTabList.ftl — \"Verplaatsen naar Start\" / \"naar Einde\" → \"naar begin\" / \"naar einde\" (cf. move-to-start / move-to-end in tabContextMenu.ftl, and fxviewtabrow-move-tab-window)",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "en blader om de pagina opnieuw te tonen.",
+  "dismissed_because": "",
+  "fid": "df61a3df0aca",
+  "file": "browser/browser/genai.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cd21bd3c",
+  "string_id": "genai-more-actions-all-off-notice",
+  "suggest": "Tabbladen en navigeren om het opnieuw te tonen.",
+  "summary": "The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.",
   "suppressed_by": ""
  },
  {
@@ -5104,6 +5128,30 @@
   "string_id": "permissions-searchbox",
   "suggest": "\"Websites zoeken\"",
   "summary": "the box filters the website list. Current: \"Website doorzoeken\" → Suggest: \"Websites zoeken\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "wanneer { -brand-short-name } wordt gesloten",
+  "dismissed_because": "",
+  "fid": "67037c709e77",
+  "file": "browser/browser/preferences/permissions.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The setting is about delivering notifications while the browser is closed, as the developer comment confirms. The passive 'wordt gesloten' describes the moment the browser is closed instead.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "64b6a0b7",
+  "string_id": "permissions-site-notification-closed-delivery-label",
+  "suggest": "wanneer { -brand-short-name } gesloten is",
+  "summary": "'wordt gesloten' means 'is being closed' (the act of closing), not 'is closed' (the state).",
   "suppressed_by": ""
  },
  {

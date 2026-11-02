@@ -2,29 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 96 of 16,106 |
+| **Strings reviewed this run** | 87 of 16,191 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for fi: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for fi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `screenshots-component-mini-window-cancel-button` — `browser/browser/miniWindow.ftl` — The macOS variant of the title renders "Cancel" as "Kumoa" (Undo), while the other variant and the label use "Peruuta".
-    - Current: `Kumoa (esc)`
-    - Source: `(value): Cancel aria-label: Cancel title: {$sel_1 ->} [macos] Cancel (esc) [other] Cancel (Esc)`
-    - Suggest: `Peruuta (esc)`
-    - The en-US says "Cancel" in both variants, and the comment says the button dismisses the selection overlay. "Kumoa" means "Undo", which is a different action, and it contradicts "Peruuta" in the label and the other variant.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,106 |
-| Missing strings | 489 |
+| Strings | 16,191 |
+| Missing strings | 551 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**489 strings** are not translated yet, concentrated in:
+**551 strings** are not translated yet, concentrated in:
 
 - `dom/chrome/dom/dom.properties` — 72
 - `toolkit/toolkit/about/aboutGlean.ftl` — 62
-- `browser/browser/ipProtection.ftl` — 48
+- `browser/browser/ipProtection.ftl` — 50
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
 - `dom/chrome/security/csp.properties` — 34
 - `dom/chrome/security/security.properties` — 30
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
+- `browser/browser/newtab/newtab.ftl` — 21
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 20
+- `browser/browser/genai.ftl` — 18
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 17
-- `browser/browser/newtab/newtab.ftl` — 16
-- `toolkit/toolkit/about/aboutSupport.ftl` — 15
-- `netwerk/necko.properties` — 13
 
 **Files present but identical to en-US:**
 
@@ -115,8 +111,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 309, `straight-double` 116, `curly-single` 70 | _mixed_ |
 | apostrophe | `typographic` 148, `straight` 33 | **typographic** |
-| ellipsis | `char` 398, `ascii` 1 | **char** |
-| dash | `em` 42, `en` 29 | _mixed_ |
+| ellipsis | `char` 400, `ascii` 1 | **char** |
+| dash | `em` 44, `en` 29 | _mixed_ |
 | nbsp | `total` 11, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -884,7 +880,7 @@ _Nothing reported._
 - `headerFooterCustom` — `toolkit/chrome/global/printdialog.properties` — `headerFooterCustom` uses three dots where this locale uses …
     - Current: `Oma...`
     - Source: `Custom…`
-    - The tree uses … 398 times against 1 ASCII runs.
+    - The tree uses … 400 times against 1 ASCII runs.
 - `addon-category-dictionary` — `toolkit/toolkit/about/aboutAddons.ftl` — “Dictionaries” rendered as “Oikoluvut” while the rest of the page uses “sanastot”.
     - Current: `Oikoluvut`
     - Source: `Dictionaries`

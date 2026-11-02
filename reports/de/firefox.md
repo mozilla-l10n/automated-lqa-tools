@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 101 of 16,817 |
+| **Strings reviewed this run** | 148 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -20,16 +20,16 @@ Also for de: [android](android.md) · [firefox_ios](firefox_ios.md)
 
 ### 🆕 New findings (2)
 
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as an unconditional "Verbergen Sie Ihren Standort", which drops the hedge.
-    - Current: `Verbergen Sie Ihren Standort beim Surfen.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.`
-    - The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "und aus" does not fit grammatically after "um VPN zu aktivieren".
-    - Current: `und aus, wenn Sie dies nicht tun`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `und zu deaktivieren, wenn Sie dies nicht tun`
-    - The infinitive clause "um VPN zu aktivieren" cannot continue with the bare particle "aus", so the sentence is broken. It needs a parallel infinitive.
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is rendered as "kontrollierte" (controlled) instead of "regulierte".
+    - Current: `kontrollierte`
+    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
+    - Suggest: `regulierte`
+    - "Regulated organizations" means organizations that must follow regulations. "Kontrollierte Organisationen" means organizations that are controlled or supervised, which is a different meaning. The standard German equivalent is "regulierte".
+- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
+    - Current: `Suchmaschinen und Tastenkombinationen`
+    - Source: `aria-label: Search engines and shortcuts`
+    - Suggest: `Suchmaschinen und Suchverknüpfungen`
+    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 340 |
-| Strings | 16,817 |
+| Strings | 16,964 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -99,12 +99,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 742, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 744, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 115 | **straight** |
-| ellipsis | `char` 413 | **char** |
-| dash | `em` 17, `en` 69 | **en** |
+| ellipsis | `char` 415 | **char** |
+| dash | `em` 19, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 3976 | **formal** |
+| register | `informal` 12, `formal` 4023 | **formal** |
 
 ---
 
@@ -114,7 +114,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (43)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -129,7 +129,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 21 |
+| 2 | Wrong content (says something other than the English) | 23 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -187,6 +187,11 @@ _Also listed under their own category below._
     - Source: `Bring in your data`
     - Suggest: `Importieren Sie Ihre Daten`
     - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is rendered as "kontrollierte" (controlled) instead of "regulierte".
+    - Current: `kontrollierte`
+    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
+    - Suggest: `regulierte`
+    - "Regulated organizations" means organizations that must follow regulations. "Kontrollierte Organisationen" means organizations that are controlled or supervised, which is a different meaning. The standard German equivalent is "regulierte".
 - `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
     - Current: `Websites erlauben, App-Links zu öffnen.`
     - Source: `accesskey: A label: Allow sites to ask to open app links.`
@@ -197,6 +202,11 @@ _Also listed under their own category below._
     - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
     - Suggest: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf diesem Gerät zu erhalten`
     - The en-US says to get the data on this device (sync); the German says it will be transferred to this device, a one-directional claim not in the source.
+- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
+    - Current: `Suchmaschinen und Tastenkombinationen`
+    - Source: `aria-label: Search engines and shortcuts`
+    - Suggest: `Suchmaschinen und Suchverknüpfungen`
+    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
 - `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
     - Current: `Auf diesem Gerät synchronisierte Daten`
     - Source: `Data syncing on this device`

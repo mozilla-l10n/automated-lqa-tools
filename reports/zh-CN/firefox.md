@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 50 of 16,153 |
+| **Strings reviewed this run** | 79 of 16,230 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for zh-CN: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — "failed signature verification" is rendered as "failed to perform signature verification" rather than "did not pass signature verification".
+    - Current: `未能进行签名验证`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `未通过签名验证`
+    - The en-US means the agent's signature was checked and found invalid. "未能进行签名验证" says instead that the verification could not be carried out. That is a different error condition.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 327 |
-| Strings | 16,153 |
-| Missing strings | 442 |
+| Strings | 16,230 |
+| Missing strings | 512 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -63,19 +67,19 @@ _Nothing retired._
 
 ### Completeness
 
-**442 strings** are not translated yet, concentrated in:
+**512 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 57
-- `browser/browser/newtab/newtab.ftl` — 33
-- `browser/browser/preferences/preferences.ftl` — 26
-- `browser/browser/newtab/onboarding.ftl` — 21
+- `browser/browser/ipProtection.ftl` — 59
+- `browser/browser/newtab/newtab.ftl` — 42
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
+- `browser/browser/preferences/preferences.ftl` — 33
+- `browser/browser/newtab/onboarding.ftl` — 23
 - `toolkit/services/aboutSyncLog.ftl` — 20
 - `toolkit/toolkit/about/aboutPDF.ftl` — 19
 - `devtools/client/toolbox-options.ftl` — 18
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 16
 - `dom/chrome/dom/dom.properties` — 16
+- `toolkit/toolkit/about/aboutNetworking.ftl` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/browser.ftl` — 15
 - `browser/browser/miniWindow.ftl` — 15
 
 **Files absent from the locale:**
@@ -92,12 +96,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 881, `straight-double` 45, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 882, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 376, `ascii` 12 | **char** |
-| dash | `em` 49, `en` 2 | **em** |
-| fullwidth | `punctuation` 8352 | **punctuation** |
-| register | `informal` 14, `formal` 1507 | **formal** |
+| ellipsis | `char` 379, `ascii` 12 | **char** |
+| dash | `em` 51, `en` 2 | **em** |
+| fullwidth | `punctuation` 8410 | **punctuation** |
+| register | `informal` 14, `formal` 1525 | **formal** |
 
 ---
 
@@ -108,13 +112,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (76)
+## 3. Open findings (77)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 20 |
+| 2 | Wrong content (says something other than the English) | 21 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -205,6 +209,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `An app or service may see your encrypted traffic from this site.`
     - Suggest: `某个应用或服务可能可以看到您来自此网站的加密流量。`
     - en-US says "An app or service may see"; "其他" implies other apps besides Firefox, a claim the source does not make.
+- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — "failed signature verification" is rendered as "failed to perform signature verification" rather than "did not pass signature verification".
+    - Current: `未能进行签名验证`
+    - Source: `File was blocked because { $agent } failed signature verification.`
+    - Suggest: `未通过签名验证`
+    - The en-US means the agent's signature was checked and found invalid. "未能进行签名验证" says instead that the verification could not be carried out. That is a different error condition.
 - `ipprotection-connection-status-blocked-error-description-1` — `browser/browser/ipProtection.ftl` — Adds hedging "可能" (may) not present in the source statement.
     - Current: `VPN 可能并非在所有位置都可用`
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`

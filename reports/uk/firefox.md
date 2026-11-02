@@ -2,17 +2,17 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 15,315 |
+| **Strings reviewed this run** | 49 of 15,363 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for uk: [android](android.md)
+Also for uk: [Firefox for Android](android.md) · [Focus for Android](focus_android.md)
 
 ---
 
@@ -20,11 +20,11 @@ Also for uk: [android](android.md)
 
 ### 🆕 New findings (1)
 
-- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — The compound word "відео-кодеки" is spelled with a hyphen, but Ukrainian spelling writes it as one word: "відеокодеки".
-    - Current: `відео-кодеки`
-    - Source: `To play video, you may need to install the required video codecs.`
-    - Suggest: `відеокодеки`
-    - Under Ukrainian spelling rules, compounds that start with "відео-" are written as one word ("відеокодек", "відеофайл"), so the hyphen is a spelling error.
+- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — There is an extra comma before «як» where «як» means "as" or "in the role of".
+    - Current: `замаскований, як корисний`
+    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
+    - Suggest: `замаскований як корисний`
+    - In Ukrainian, no comma goes before «як» when it means "as" or "in the role of" rather than introducing a comparison. Here the file is disguised as a helpful download, so the comma is wrong.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 327 |
-| Strings | 15,315 |
-| Missing strings | 1,280 |
+| Strings | 15,363 |
+| Missing strings | 1,379 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -67,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,280 strings** are not translated yet, concentrated in:
+**1,379 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 364
-- `browser/browser/ipProtection.ftl` — 69
-- `browser/browser/newtab/onboarding.ftl` — 56
-- `browser/browser/preferences/preferences.ftl` — 54
+- `browser/browser/newtab/newtab.ftl` — 374
+- `browser/browser/ipProtection.ftl` — 71
+- `browser/browser/preferences/preferences.ftl` — 61
+- `browser/browser/newtab/onboarding.ftl` — 58
+- `browser/browser/newtab/asrouter.ftl` — 39
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 36
-- `browser/browser/newtab/asrouter.ftl` — 34
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `toolkit/toolkit/neterror/netError.ftl` — 26
 - `browser/browser/appmenu.ftl` — 26
 - `browser/browser/firefoxView.ftl` — 26
-- `toolkit/toolkit/about/aboutAddons.ftl` — 24
-- `toolkit/toolkit/neterror/netError.ftl` — 23
 
 **Files absent from the locale:**
 
@@ -96,10 +96,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 507, `straight-double` 128, `curly-single` 112 | **curly-double** |
-| apostrophe | `typographic` 127, `straight` 717 | **straight** |
-| ellipsis | `char` 383, `ascii` 4 | **char** |
-| dash | `em` 12, `en` 99 | **en** |
+| quotes | `curly-double` 509, `straight-double` 128, `curly-single` 112 | **curly-double** |
+| apostrophe | `typographic` 127, `straight` 721 | **straight** |
+| ellipsis | `char` 384, `ascii` 4 | **char** |
+| dash | `em` 14, `en` 99 | **en** |
 | nbsp | `total` 4, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -111,7 +111,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (201)
+## 3. Open findings (202)
 
 
 | Impact | Meaning | Count |
@@ -119,7 +119,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 112 |
 | 2 | Wrong content (says something other than the English) | 82 |
 | 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -894,6 +894,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: C label: Show Controls`
     - Suggest: `Показати елементи керування`
     - main-context-menu-media-hide-controls uses "Сховати елементи керування" for the same term in the same mutually exclusive menu pair; "керувальники" is not the term used elsewhere in the tree.
+- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — There is an extra comma before «як» where «як» means "as" or "in the role of".
+    - Current: `замаскований, як корисний`
+    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
+    - Suggest: `замаскований як корисний`
+    - In Ukrainian, no comma goes before «як» when it means "as" or "in the role of" rather than introducing a comparison. Here the file is disguised as a helpful download, so the comma is wrong.
 - `link-preview-first-time-setup-message` — `browser/browser/genai.ftl` — "key points" is rendered as "ключові пункти" here but "ключові тези" everywhere else in the file.
     - Current: `Наступного разу ви побачите ключові пункти швидше.`
     - Source: `This may take a moment. You’ll see key points more quickly next time.`

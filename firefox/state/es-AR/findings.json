@@ -512,7 +512,7 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -558,7 +558,7 @@
   "file": "browser/browser/appMenuNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "es-AR",
   "origin": {},
   "rationale": "The label is “Mantener los cambios”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -978,6 +978,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Una página web se está ralentizando { -brand-short-name }.",
+  "dismissed_because": "",
+  "fid": "0840f707c1cc",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "en-US \"A web page is slowing down Firefox\" uses a transitive verb. The reflexive \"se\" makes the page the thing getting slower and leaves the brand name dangling. The sibling strings correctly use \"está ralentizando\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d296d484",
+  "string_id": "process-hang-nonspecific-tab-message",
+  "suggest": "Una página web está ralentizando { -brand-short-name }.",
+  "summary": "The reflexive \"se está ralentizando\" says the page is slowing down itself, not that it is slowing down the browser.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "Mostrarme como",
@@ -1335,6 +1359,30 @@
   "string_id": "customkeys-description",
   "suggest": "Controlar cómo se mueve",
   "summary": "Duplicated word fragment at the start of the string.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "comunmente",
+  "dismissed_because": "",
+  "fid": "296925b38a51",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The correct Spanish spelling is \"comúnmente\", with an accent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "053da593",
+  "string_id": "downloads-unblock-type-uncommon",
+  "suggest": "comúnmente",
+  "summary": "Missing accent in \"comunmente\".",
   "suppressed_by": ""
  },
  {
@@ -1791,6 +1839,30 @@
   "string_id": "ipprotection-come-back-title",
   "suggest": "Vuelva para probar la VPN integrada",
   "summary": "Typo «VPNinctegrada».",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "noqueiera",
+  "dismissed_because": "",
+  "fid": "2122d5dd2f9a",
+  "file": "browser/browser/ipProtection.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The intended phrase is \"cuando no quiera\" (\"when you don't\"). As written, the text has a garbled word.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2978bf9e",
+  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
+  "suggest": "no quiera",
+  "summary": "Typo \"noqueiera\" (missing space and misspelled \"quiera\").",
   "suppressed_by": ""
  },
  {
@@ -2834,7 +2906,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-09-14",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -6492,7 +6564,7 @@
   "file": "devtools/shared/webconsole.properties",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "es-AR",
   "origin": {},
   "rationale": "In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -10941,6 +11013,30 @@
   "string_id": "credit-card-label-with-security-code",
   "suggest": "aria-label: { $ariaLabel }, CVV guardado",
   "summary": "The aria-label uses plural \"guardados\" while the parallel value and all other CVV strings use singular \"guardado\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "{ $securityCode } guardados",
+  "dismissed_because": "",
+  "fid": "6cfa7f3e89c4",
+  "file": "toolkit/toolkit/payments/payments.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "es-AR",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "$securityCode is one code name, such as \"CVV\" or \"Código de seguridad\" in this locale. Both are masculine singular, so the plural \"guardados\" is an agreement error. The en-US means \"(the) security code saved\", which is singular.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "08d35862",
+  "string_id": "credit-card-label-with-security-code-2",
+  "suggest": "{ $securityCode } guardado",
+  "summary": "The participle \"guardados\" is plural but agrees with a single security code name, so it should be the singular \"guardado\".",
   "suppressed_by": ""
  },
  {

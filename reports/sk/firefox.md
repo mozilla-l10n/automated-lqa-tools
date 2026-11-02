@@ -2,52 +2,48 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 208 of 16,595 |
+| **Strings reviewed this run** | 158 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for sk: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (4)
 
-- `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "audio" is translated as "hudby" (music), which narrows the meaning to music only.
-    - Current: `Na prehrávanie hudby`
-    - Source: `To play audio, you may need to install the required PulseAudio software.`
-    - Suggest: `Na prehrávanie zvuku`
-    - The en-US says "To play audio", meaning any sound. PulseAudio is needed for all audio, not just music, and the sibling DRM strings translate audio as "zvuk".
-- `pending-reports` — `toolkit/toolkit/about/aboutSupport.ftl` — The [few] and [other] variants have a double space between "hlásenia" and "o zlyhaní".
-    - Current: `Všetky hlásenia  o zlyhaní`
-    - Source: `{$reports ->} [one] All Crash Reports (including { $reports } pending crash in the given time range) [other] All Crash Reports (including { $reports } pending crashes in the given time range)`
-    - Suggest: `Všetky hlásenia o zlyhaní`
-    - Users will see the extra space in the text. The [one] variant and the other crash-report strings use a single space.
-- `more-from-moz-solo-title-2` — `browser/browser/preferences/moreFromMozilla.ftl` — A plain hyphen with spaces on both sides is used as a dash instead of an en dash.
-    - Current: `{ -solo-ai-brand-name } - tvorca`
-    - Source: `{ -solo-ai-brand-name } AI Website Creator`
-    - Suggest: `{ -solo-ai-brand-name } – tvorca`
-    - In Slovak, a dash with spaces around it should be an en dash (the locale's most common dash), not a hyphen-minus.
+- `credit-card-capture-save-as-new-payment-method-button` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The feminine adjective "novú" does not agree with the masculine noun "spôsob platby" that this button refers to.
+    - Current: `Uložiť ako novú`
+    - Source: `accessKey: S label: Save as new`
+    - Suggest: `Uložiť ako nový`
+    - The developer comment says this saves the details as a new payment method. The surrounding strings translate "payment method" as "spôsob platby", which is masculine, so the adjective should be "nový". The feminine form looks left over from an older "karta" wording.
+- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — A hyphen with spaces is used as a dash instead of a real dash.
+    - Current: `stiahnutý - predstavuje`
+    - Source: `File not downloaded: Potential security risk.`
+    - Suggest: `stiahnutý – predstavuje`
+    - The locale uses real dashes (en/em) for sentence punctuation; a spaced hyphen is a typographic error.
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — A comma is missing before "a preto".
+    - Current: `overiť a preto boli`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `overiť, a preto boli`
+    - Slovak punctuation rules require a comma before "a" when it introduces a consequence clause with "preto".
+- `onboarding-refresh-fro-tab-layout-title` — `browser/browser/newtab/onboarding.ftl` — "New tab layout" (layout of the New Tab page) is rendered as "a new layout of tabs".
+    - Current: `Vyberte si nové rozloženie kariet`
+    - Source: `Choose a new tab layout`
+    - Suggest: `Vyberte si rozloženie novej karty`
+    - In en-US "new tab" modifies "layout": this is the layout of the New Tab page. "nové rozloženie kariet" means a new arrangement of tabs, which is a different thing.
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — “Sponsored stories” translated as “Sponsored sites”, inconsistent with the Stories section it belongs to.
-    - Current: `Sponzorované stránky`
-    - Source: `label: Sponsored stories`
-    - Suggest: `Sponzorované príbehy`
-    - The adjacent strings render “stories” as “príbehy” (home-prefs-stories-header = Príbehy, home-prefs-recommended-by-header-generic = Odporúčané príbehy), and “Sponzorované stránky” duplicates the separate shortcuts option (home-prefs-shortcuts-by-option-sponsored = Sponzorované skratky) by naming sites instead of stories.
-- `pdfjs-editor-add-signature-type-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — “Type” translated as the noun “kind/type” instead of the verb.
-    - Current: `Typ`
-    - Source: `(value): Type title: Type`
-    - Suggest: `Napísať`
-    - The developer comment says “Type is a verb (you can type your name as signature)”; the tab label “Typ” reads as a category, not an action, next to the sibling tabs “Kresliť” and “Obrázok”.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -68,7 +64,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,595 |
+| Strings | 16,742 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,7 +73,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 88 |
+| Plural variants (dead or missing forms) | 89 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -94,32 +90,32 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 521, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
+| quotes | `curly-double` 523, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
-| ellipsis | `char` 400 | **char** |
-| dash | `em` 27, `en` 67 | _mixed_ |
+| ellipsis | `char` 402 | **char** |
+| dash | `em` 29, `en` 67 | _mixed_ |
 | nbsp | `total` 116, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 88 strings** — 88 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 76 more
+- **plurals — 89 strings** — 89 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label` …and 77 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 
 ---
 
-## 3. Open findings (221)
+## 3. Open findings (225)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 67 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 68 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -447,6 +443,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Guayaquil`
     - Suggest: `Guayaquil`
     - The comment asks for the locale's usual spelling of the city; the usual Slovak name is simply "Guayaquil", and the added "Santiago de" duplicates the Chilean capital listed nearby.
+- `onboarding-refresh-fro-tab-layout-title` — `browser/browser/newtab/onboarding.ftl` — "New tab layout" (layout of the New Tab page) is rendered as "a new layout of tabs".
+    - Current: `Vyberte si nové rozloženie kariet`
+    - Source: `Choose a new tab layout`
+    - Suggest: `Vyberte si rozloženie novej karty`
+    - In en-US "new tab" modifies "layout": this is the layout of the New Tab page. "nové rozloženie kariet" means a new arrangement of tabs, which is a different thing.
 
 ### C. Grammar, agreement & spelling
 
@@ -485,6 +486,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$numberOfOtherBackupsFound ->} [one] <b>Note:</b> { $numberOfOtherBackupsFound } other backup file found [other] <b>Note:</b> { $numberOfOtherBackupsFound } other backup files found`
     - Suggest: `bol nájdený { $numberOfOtherBackupsFound } ďalší súbor zálohy`
     - en-US [one] is “{ $n } other backup file found”; the sk [one] mixes “boli nájdený” (plural aux + singular participle) with the plural noun “súbory”.
+- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — A comma is missing before "a preto".
+    - Current: `overiť a preto boli`
+    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
+    - Suggest: `overiť, a preto boli`
+    - Slovak punctuation rules require a comma before "a" when it introduces a consequence clause with "preto".
 - `urlbar-microphone-blocked` — `browser/browser/browser.ftl` — Typo “v vášmu” instead of “k vášmu”.
     - Current: `prístup v vášmu mikrofónu`
     - Source: `tooltiptext: You have blocked your microphone for this website.`
@@ -665,6 +671,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Keep your to-do list top-of-mind when you open a new tab. From packing lists to shopping lists, make your plans in { -brand-product-name }. Set a timer to keep you focused, nudge you to stay on track, or remind you to r…`
     - Suggest: `aby ste si pripomenuli, že si treba dobiť batérie`
     - “aby ste … pripomenul” mixes the 2nd person plural with a masculine singular participle; the rest of the string uses the plural polite form.
+- `credit-card-capture-save-as-new-payment-method-button` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The feminine adjective "novú" does not agree with the masculine noun "spôsob platby" that this button refers to.
+    - Current: `Uložiť ako novú`
+    - Source: `accessKey: S label: Save as new`
+    - Suggest: `Uložiť ako nový`
+    - The developer comment says this saves the details as a new payment method. The surrounding strings translate "payment method" as "spôsob platby", which is masculine, so the adjective should be "nový". The feminine form looks left over from an older "karta" wording.
 - `fp-certerror-self-signed-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — Feminine participle refers to the masculine noun “certifikát”.
     - Current: `Nebola vydaná uznávanou certifikačnou autoritou`
     - Source: `Because there’s an issue with the site’s certificate. Sites use certificates issued by a certificate authority to prove they’re really who they say they are. This site’s certificate is self-signed. It wasn’t issued by a…`
@@ -941,6 +952,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### E. Typography, punctuation & spacing
 
+- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — A hyphen with spaces is used as a dash instead of a real dash.
+    - Current: `stiahnutý - predstavuje`
+    - Source: `File not downloaded: Potential security risk.`
+    - Suggest: `stiahnutý – predstavuje`
+    - The locale uses real dashes (en/em) for sentence punctuation; a spaced hyphen is a typographic error.
 - `newtab-widget-timer-celebration-heading-break` — `browser/browser/newtab/newtab.ftl` — Uses informal second person singular where the whole tree uses the formal form.
     - Current: `Tvoja prestávka sa skončila`
     - Source: `Your break is over`

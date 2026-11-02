@@ -2,39 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 49 of 13,841 |
+| **Strings reviewed this run** | 53 of 13,893 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for id: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Clean" was dropped, so the label is the same as the plain "Copy Link to Highlight" item.
-    - Current: `Salin Tautan ke Sorotan`
-    - Source: `accesskey: k label: Copy Clean Link to Highlight`
-    - Suggest: `Salin Tautan Bersih ke Sorotan`
-    - The source says "Copy Clean Link to Highlight", a variant that strips trackers. Without "Bersih", the menu shows two items with the same name that do different things.
-- `toolbar-edit-controls` — `browser/browser/browser.ftl` — "Edit Kontrol" uses English word order and reads as the instruction "edit the controls".
-    - Current: `Edit Kontrol`
-    - Source: `label: Edit controls title: Edit controls`
-    - Suggest: `Kontrol Edit`
-    - This labels the group of edit buttons (cut/copy/paste). An Indonesian noun phrase puts the head noun first, so it should be "Kontrol Edit". The current order reads as a verb phrase.
-- `toolbar-button-history` — `browser/browser/browser.ftl` — There is no space before the parenthesised shortcut.
-    - Current: `Anda({ $shortcut })`
-    - Source: `label: History tooltiptext: Show your history ({ $shortcut })`
-    - Suggest: `Anda ({ $shortcut })`
-    - The source has a space before the parenthesis, and every other tooltip in the batch keeps it.
+- `downloads-blocked-potentially-unwanted` — `browser/browser/downloads.ftl` — Misspelling of "mungkin" as "meungkin".
+    - Current: `meungkin`
+    - Source: `This file may harm your computer.`
+    - Suggest: `mungkin`
+    - "meungkin" is not an Indonesian word; the correct spelling of "may/might" is "mungkin".
+- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — "helpful" is translated as "penting" (important) instead of "helpful/useful".
+    - Current: `unduhan yang penting`
+    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
+    - Suggest: `unduhan yang bermanfaat`
+    - The en-US says the file is disguised as a helpful download, but "penting" means important. The intended meaning is that it pretends to be useful.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,12 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `view-source-context-wrap-long-lines` — `toolkit/toolkit/global/viewSource.ftl` — "Wrap" is rendered as "Potong" (cut), which suggests long lines are truncated rather than wrapped.
-    - Current: `Potong Baris Panjang`
-    - Suggest: `Lipat Baris Panjang`
-    - Wrapping moves the overflow onto the next line. "Potong" means cut or truncate, which is a different behaviour.
+_Nothing retired._
 
 ---
 
@@ -62,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 323 |
-| Strings | 13,841 |
-| Missing strings | 2,754 |
+| Strings | 13,893 |
+| Missing strings | 2,849 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -80,20 +72,20 @@ _Nothing to re-read._
 
 ### Completeness
 
-**2,754 strings** are not translated yet, concentrated in:
+**2,849 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 488
-- `browser/browser/preferences/preferences.ftl` — 455
-- `browser/browser/ipProtection.ftl` — 162
-- `browser/browser/newtab/onboarding.ftl` — 131
+- `browser/browser/newtab/newtab.ftl` — 498
+- `browser/browser/preferences/preferences.ftl` — 462
+- `browser/browser/ipProtection.ftl` — 164
+- `browser/browser/newtab/onboarding.ftl` — 133
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
-- `browser/browser/newtab/asrouter.ftl` — 82
-- `toolkit/toolkit/about/aboutAddons.ftl` — 60
+- `browser/browser/newtab/asrouter.ftl` — 87
+- `toolkit/toolkit/about/aboutAddons.ftl` — 61
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
 - `toolkit/toolkit/about/aboutGlean.ftl` — 43
-- `browser/browser/browser.ftl` — 43
-- `browser/browser/tabbrowser.ftl` — 42
+- `toolkit/toolkit/neterror/netError.ftl` — 42
+- `browser/browser/customkeys.ftl` — 42
 
 **Files absent from the locale:**
 
@@ -113,10 +105,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 411, `straight-double` 111, `curly-single` 79 | **curly-double** |
+| quotes | `curly-double` 413, `straight-double` 111, `curly-single` 79 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 41 | _mixed_ |
-| ellipsis | `char` 353, `ascii` 9 | **char** |
-| dash | `em` 50, `en` 1 | **em** |
+| ellipsis | `char` 355, `ascii` 9 | **char** |
+| dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -128,14 +120,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (283)
+## 3. Open findings (285)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
-| 2 | Wrong content (says something other than the English) | 151 |
-| 3 | Degraded language (grammar, spelling, terminology) | 48 |
+| 2 | Wrong content (says something other than the English) | 152 |
+| 3 | Degraded language (grammar, spelling, terminology) | 49 |
 | 4 | Cosmetic (typography, spacing) | 17 |
 
 ### A. Functional, markup, variables & plurals
@@ -475,6 +467,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-full-name }`
     - Suggest: `{ -brand-full-name }`
     - en-US contains a single { -brand-full-name }; the duplication makes the OS authentication dialog caption read "Mozilla FirefoxMozilla Firefox".
+- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — "helpful" is translated as "penting" (important) instead of "helpful/useful".
+    - Current: `unduhan yang penting`
+    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
+    - Suggest: `unduhan yang bermanfaat`
+    - The en-US says the file is disguised as a helpful download, but "penting" means important. The intended meaning is that it pretends to be useful.
 - `taskbar-tabs-email-callout-title` — `browser/browser/featureCallout.ftl` — "Keep" rendered as "Simpan" (save/store) instead of keeping the email accessible in the taskbar.
     - Current: `Simpan surel Anda di bilah tugas`
     - Source: `Keep your email in your taskbar`
@@ -613,6 +610,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$sel_1 ->} [macos] TSV Document [other] TSV File`
     - Suggest: `[macos] Dokumen TSV`
     - en-US macOS variant is "TSV Document"; the CSV filter in the same file uses "Dokumen CSV" for macOS, so this variant is inconsistent and wrong.
+- `downloads-blocked-potentially-unwanted` — `browser/browser/downloads.ftl` — Misspelling of "mungkin" as "meungkin".
+    - Current: `meungkin`
+    - Source: `This file may harm your computer.`
+    - Suggest: `mungkin`
+    - "meungkin" is not an Indonesian word; the correct spelling of "may/might" is "mungkin".
 - `firefoxview-opentabs-bookmarked-tab` — `browser/browser/firefoxView.ftl` — "Bookmarked" rendered as "Ditandai" instead of "Dimarkahi"
     - Current: `(Ditandai) { $url }`
     - Source: `title: (Bookmarked) { $url }`

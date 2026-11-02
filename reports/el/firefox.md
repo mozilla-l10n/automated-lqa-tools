@@ -2,29 +2,63 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 141 of 16,580 |
+| **Strings reviewed this run** | 163 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for el: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (8)
 
-- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — The hedge "may be vulnerable" is rendered as a definite statement that libavcodec has security vulnerabilities.
-    - Current: `παρουσιάζει ευπάθειες ασφάλειας`
-    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
-    - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
-    - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
+- `autofill-payment-methods-require-device-sign-in-checkbox` — `browser/browser/preferences/preferences.ftl` — Access key `o` of `autofill-payment-methods-require-device-sign-in-checkbox` is not present in its label
+    - Current: `o`
+    - Source: `accesskey: o label: Require device sign-in to autofill`
+    - The label is “Απαιτείται σύνδεση συσκευής για αυτόματη συμπλήρωση”. An access key not in the label cannot be underlined and is unreachable by keyboard.
+- `credit-card-update-saved-payment-method-doorhanger-header` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Adjective is masculine/neuter but «μεθόδου» is feminine, so they don't agree.
+    - Current: `αποθηκευμένου μεθόδου`
+    - Source: `Update saved payment method?`
+    - Suggest: `αποθηκευμένης μεθόδου`
+    - «μέθοδος» is a feminine noun, so its genitive adjective must be «αποθηκευμένης».
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Plural verb «αποθηκεύτηκαν» doesn't agree with the single security code name.
+    - Current: `{ $securityCode } αποθηκεύτηκαν`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } αποθηκεύτηκε`
+    - $securityCode is one code name (e.g. "CVV"), so the verb must be singular.
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — "It" (the saved password) is translated as «το αρχείο» ("the file").
+    - Current: `Θα διαγραφεί το αρχείο`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `Θα διαγραφεί ο κωδικός πρόσβασης`
+    - The developer comment says this dialog deletes one saved password; nothing about it is a file.
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — "Would block" is translated as a future ("will block") instead of a conditional.
+    - Current: `θα αποκλείσουν`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `θα απέκλειαν`
+    - A report-only policy blocks nothing; the source uses the conditional "would block", which in Greek is «θα απέκλειαν», not the future «θα αποκλείσουν».
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [other] variant uses the plural article "τα" before the brand name, which should take the singular neuter "το".
+    - Current: `Διαγράφει από τα { -brand-short-name }`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `Διαγράφει από το { -brand-short-name }`
+    - { -brand-short-name } (Firefox) is singular neuter in Greek, and the other variants of this message correctly use "από το". The plural count refers to the passwords, not the browser, so "τα" is an agreement error.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Misspelling: "διωτικότητα" is missing the initial iota.
+    - Current: `διωτικότητα`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `ιδιωτικότητα`
+    - The word for privacy is "ιδιωτικότητα", as used in the sibling string ipprotection-site-inclusions-callout-description-lapsed-users.
+- `vpn-error-alert-title-1` — `browser/browser/ipProtection.ftl` — Verb is singular but the subject is plural (VPN and rules).
+    - Current: `δεν λειτουργεί`
+    - Source: `VPN and rules aren’t working right now.`
+    - Suggest: `δεν λειτουργούν`
+    - The subject "Το VPN και οι κανόνες" is plural, so the verb must be plural, matching the en-US "aren’t working".
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +83,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,580 |
-| Missing strings | 15 |
+| Strings | 16,742 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -61,23 +95,13 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 0 |
+| Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 2 |
 
 ### Completeness
 
-**15 strings** are not translated yet, concentrated in:
-
-- `browser/browser/ipProtection.ftl` — 4
-- `browser/browser/miniWindow.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/global/narrate.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,10 +109,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1013, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
+| quotes | `guillemet` 1015, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
-| ellipsis | `char` 397, `ascii` 2 | **char** |
-| dash | `em` 63, `en` 2 | **em** |
+| ellipsis | `char` 399, `ascii` 2 | **char** |
+| dash | `em` 65, `en` 2 | **em** |
 | nbsp | `total` 15, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
 ---
@@ -99,14 +123,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (212)
+## 3. Open findings (220)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 143 |
-| 2 | Wrong content (says something other than the English) | 66 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 2 | Wrong content (says something other than the English) | 69 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -196,6 +220,10 @@ _Nothing reported._
     - Source: `Department`
     - Suggest: `Διαμέρισμα`
     - The developer comment narrows this to the primary administrative division of Nicaragua/Colombia; «Τμήμα» means a department/section of an organisation, not a territorial division.
+- `autofill-payment-methods-require-device-sign-in-checkbox` — `browser/browser/preferences/preferences.ftl` — Access key `o` of `autofill-payment-methods-require-device-sign-in-checkbox` is not present in its label
+    - Current: `o`
+    - Source: `accesskey: o label: Require device sign-in to autofill`
+    - The label is “Απαιτείται σύνδεση συσκευής για αυτόματη συμπλήρωση”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 - `browsing-use-full-keyboard-navigation` — `browser/browser/preferences/preferences.ftl` — “form controls” narrowed to “form buttons”.
     - Current: `μετακίνηση της εστίασης μεταξύ κουμπιών φόρμας και συνδέσμων`
     - Source: `accesskey: t label: Use the tab key to move focus between form controls and links`
@@ -406,23 +434,33 @@ _Nothing reported._
     - Source: `Selector expected.`
     - Suggest: `Αναμενόταν επιλογέας.`
     - Everywhere else in this file “selector” is «επιλογέας»; «διαλογέας» is a different word (sorting machine) and is not a CSS term.
-- `EncSpeculationFailMeta` — `dom/chrome/layout/htmlparser.properties` — “encoding” rendered as “encryption”.
-    - Current: `τη μεταετικέτα που δήλωσε την κρυπτογράφηση`
-    - Source: `The start of the document was reparsed, because there were non-ASCII characters before the meta tag that declared the encoding. The meta should be the first child of head without non-ASCII comments before.`
-    - Suggest: `τη μεταετικέτα που δήλωσε την κωδικοποίηση`
-    - The whole string is about character encoding declarations («κωδικοποίηση» throughout the file); «κρυπτογράφηση» means encryption and is a different concept.
-- _…and 38 more; see `state/` for the full list._
+- _…and 39 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — "It" (the saved password) is translated as «το αρχείο» ("the file").
+    - Current: `Θα διαγραφεί το αρχείο`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `Θα διαγραφεί ο κωδικός πρόσβασης`
+    - The developer comment says this dialog deletes one saved password; nothing about it is a file.
 - `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — The hedge "may be vulnerable" is rendered as a definite statement that libavcodec has security vulnerabilities.
     - Current: `παρουσιάζει ευπάθειες ασφάλειας`
     - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
     - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
     - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — "Would block" is translated as a future ("will block") instead of a conditional.
+    - Current: `θα αποκλείσουν`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `θα απέκλειαν`
+    - A report-only policy blocks nothing; the source uses the conditional "would block", which in Greek is «θα απέκλειαν», not the future «θα αποκλείσουν».
 
 ### C. Grammar, agreement & spelling
 
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The [other] variant uses the plural article "τα" before the brand name, which should take the singular neuter "το".
+    - Current: `Διαγράφει από τα { -brand-short-name }`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `Διαγράφει από το { -brand-short-name }`
+    - { -brand-short-name } (Firefox) is singular neuter in Greek, and the other variants of this message correctly use "από το". The plural count refers to the passwords, not the browser, so "τα" is an agreement error.
 - `appmenu-remote-tabs-turn-on-sync` — `browser/browser/appmenu.ftl` — “sync” left in English while the rest of the file translates it.
     - Current: `Ενεργοποίηση Sync…`
     - Source: `label: Turn on sync…`
@@ -438,6 +476,16 @@ _Nothing reported._
     - Source: `Launch your email sites like an app in a streamlined window protected by { -brand-short-name }.`
     - Suggest: `Εκκινήστε τους ιστοτόπους email σας σαν εφαρμογή`
     - The tree consistently keeps the Latin form “email” (see taskbar-tabs-email-callout-title/subtitle in this same file); «εμαιλ» is an ad-hoc transliteration that appears nowhere else.
+- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Misspelling: "διωτικότητα" is missing the initial iota.
+    - Current: `διωτικότητα`
+    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
+    - Suggest: `ιδιωτικότητα`
+    - The word for privacy is "ιδιωτικότητα", as used in the sibling string ipprotection-site-inclusions-callout-description-lapsed-users.
+- `vpn-error-alert-title-1` — `browser/browser/ipProtection.ftl` — Verb is singular but the subject is plural (VPN and rules).
+    - Current: `δεν λειτουργεί`
+    - Source: `VPN and rules aren’t working right now.`
+    - Suggest: `δεν λειτουργούν`
+    - The subject "Το VPN και οι κανόνες" is plural, so the verb must be plural, matching the en-US "aren’t working".
 - `migration-source-name-ie` — `browser/browser/migrationWizard.ftl` — Brand name "Internet Explorer" starts with a Greek capital iota (Ι) instead of Latin I.
     - Current: `Ιnternet Explorer`
     - Source: `Internet Explorer`
@@ -573,6 +621,11 @@ _Nothing reported._
     - Source: `{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. <a data-l10n-name="connect">Sha…`
     - Suggest: `τον χρόνο ανάγνωσης`
     - Letters are transposed; the typo appears in both the macos and the default platform variant of this message.
+- `credit-card-update-saved-payment-method-doorhanger-header` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Adjective is masculine/neuter but «μεθόδου» is feminine, so they don't agree.
+    - Current: `αποθηκευμένου μεθόδου`
+    - Source: `Update saved payment method?`
+    - Suggest: `αποθηκευμένης μεθόδου`
+    - «μέθοδος» is a feminine noun, so its genitive adjective must be «αποθηκευμένης».
 - `profile-creation-intro` — `toolkit/toolkit/global/createProfileWizard.ftl` — Wrong verb form after “να”.
     - Current: `Μπορείτε να επιλέξτε το προεπιλεγμένο όνομα`
     - Source: `If you create several profiles you can tell them apart by the profile names. You may use the name provided here or use one of your own.`
@@ -638,6 +691,11 @@ _Nothing reported._
     - Source: `Client’s SSL session ID not found in server’s session cache.`
     - Suggest: `Το ID συνεδρίας SSL`
     - The first character is U+0054 (Latin T), making the word a mixed-script string that breaks search, spell-check and screen-reader pronunciation.
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Plural verb «αποθηκεύτηκαν» doesn't agree with the single security code name.
+    - Current: `{ $securityCode } αποθηκεύτηκαν`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } αποθηκεύτηκε`
+    - $securityCode is one code name (e.g. "CVV"), so the verb must be singular.
 - `pdfjs-editor-comments-sidebar-title` — `toolkit/toolkit/pdfviewer/viewer.ftl` — The singular plural-variant uses the plural noun.
     - Current: `[one] Σχόλια`
     - Source: `{$count ->} [one] Comment [other] Comments`
@@ -912,7 +970,7 @@ _Nothing reported._
 - `about-logins-menu-menuitem-export-logins2` — `browser/browser/aboutLogins.ftl` — `about-logins-menu-menuitem-export-logins2` uses three dots where this locale uses …
     - Current: `Εξαγωγή κωδικών πρόσβασης...`
     - Source: `Export Passwords…`
-    - The tree uses … 397 times against 2 ASCII runs.
+    - The tree uses … 399 times against 2 ASCII runs.
 - `bar-tooltip-social` — `browser/browser/protections.ftl` — The plural variant of the aria-label is missing the opening parenthesis before the percentage.
     - Current: `ιχνηλάτες κοινωνικών δικτύων { $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } social media tracker ({ $percentage }%) [other] { $count } social media trackers ({ $percentage }%) title: Social Media Trackers`
@@ -991,7 +1049,7 @@ _Nothing reported._
 - `unknowncontenttype-other` — `toolkit/toolkit/global/unknownContentType.ftl` — `unknowncontenttype-other` uses three dots where this locale uses …
     - Current: `Άλλο...`
     - Source: `label: Other…`
-    - The tree uses … 397 times against 2 ASCII runs.
+    - The tree uses … 399 times against 2 ASCII runs.
 
 ---
 

@@ -1,23 +1,23 @@
 {
  "_meta": {
   "locale": "ja",
-  "prose_chunks": 17363,
-  "strings": 16568
+  "prose_chunks": 17559,
+  "strings": 16742
  },
  "apostrophe": {
   "straight": 11,
   "typographic": 259
  },
  "dash": {
-  "em": 55,
+  "em": 57,
   "en": 1
  },
  "ellipsis": {
-  "ascii": 397,
+  "ascii": 398,
   "char": 0
  },
  "fullwidth": {
-  "punctuation": 5049
+  "punctuation": 5120
  },
  "inverted_marks": {
   "open-exclamation": 0,
@@ -31,7 +31,7 @@
  },
  "quotes": {
   "corner": 5,
-  "curly-double": 444,
+  "curly-double": 446,
   "curly-single": 182,
   "straight-double": 120
  }

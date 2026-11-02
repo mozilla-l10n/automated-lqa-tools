@@ -2,25 +2,29 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `9ea69c4843c5` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 67 of 15,286 |
+| **Strings reviewed this run** | 51 of 15,336 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for es-ES: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `downloads-state-completed` — `browser/browser/downloads.ftl` — The status 'Completada' is feminine, but the other download states shown in the same place are masculine.
+    - Current: `Completada`
+    - Source: `Completed`
+    - Suggest: `Completado`
+    - The download states shown together are 'Fallido', 'Pausado', 'Cancelado' and 'Bloqueado por el Control parental', all masculine. 'Completada' is the only feminine one, so the gender of the status labels is inconsistent.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,12 +38,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ipprotection-feature-introduction-link-text-privacy-2` — `browser/browser/ipProtection.ftl` — The link text scope was changed: the source links the whole phrase "{ -brand-product-name }'s built-in VPN" while the target links only the brand name.
-    - Current: `La VPN integrada de <a data-l10n-name="learn-more-vpn">{ -brand-product-name }</a>`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">La VPN integrada de { -brand-product-name }</a>`
-    - In en-US the anchor wraps "{ -brand-product-name }’s built-in VPN"; moving the tag so it wraps only the brand name changes the clickable text.
+_Nothing retired._
 
 ---
 
@@ -48,8 +49,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 320 |
-| Strings | 15,286 |
-| Missing strings | 1,309 |
+| Strings | 15,336 |
+| Missing strings | 1,406 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 10 |
 | Files with no en-US counterpart | 0 |
@@ -66,20 +67,20 @@ _Nothing to re-read._
 
 ### Completeness
 
-**1,309 strings** are not translated yet, concentrated in:
+**1,406 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 217
+- `browser/browser/newtab/newtab.ftl` — 226
 - `browser/browser/aiWindow.ftl` — 135
 - `browser/browser/appmenu.ftl` — 65
-- `browser/browser/newtab/onboarding.ftl` — 56
+- `browser/browser/newtab/onboarding.ftl` — 58
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/ipProtection.ftl` — 48
-- `browser/browser/browser.ftl` — 47
-- `browser/browser/preferences/preferences.ftl` — 35
+- `browser/browser/ipProtection.ftl` — 50
+- `browser/browser/browser.ftl` — 49
+- `browser/browser/preferences/preferences.ftl` — 42
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 33
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `devtools/client/toolbox-options.ftl` — 28
-- `toolkit/toolkit/about/url-classifier.ftl` — 26
-- `toolkit/services/aboutSyncLog.ftl` — 26
+- `browser/browser/newtab/asrouter.ftl` — 27
 
 **Files absent from the locale:**
 
@@ -102,13 +103,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 445, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 447, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 57, `straight` 71 | _mixed_ |
-| ellipsis | `char` 375 | **char** |
-| dash | `em` 55, `en` 1 | **em** |
+| ellipsis | `char` 376 | **char** |
+| dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 298, `open-exclamation` 66 | **open-question** |
-| register | `informal` 4, `formal` 1182 | **formal** |
+| inverted marks | `open-question` 300, `open-exclamation` 66 | **open-question** |
+| register | `informal` 4, `formal` 1190 | **formal** |
 
 ---
 
@@ -119,14 +120,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (39)
+## 3. Open findings (40)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -224,6 +225,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
+- `downloads-state-completed` — `browser/browser/downloads.ftl` — The status 'Completada' is feminine, but the other download states shown in the same place are masculine.
+    - Current: `Completada`
+    - Source: `Completed`
+    - Suggest: `Completado`
+    - The download states shown together are 'Fallido', 'Pausado', 'Cancelado' and 'Bloqueado por el Control parental', all masculine. 'Completada' is the only feminine one, so the gender of the status labels is inconsistent.
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — Incorrect verb mood/agreement: "se inicia cuando usted inicie sesión" mixes indicative and subjunctive.
     - Current: `Ahora { -brand-short-name } se inicia cuando usted inicie sesión en Windows.`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`

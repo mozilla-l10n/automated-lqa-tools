@@ -2,39 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `6c76c457ee95` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `110b6b510435` |
-| **Previous run** | 2026-10-19 @ `cb086148c41a` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
+| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 95 of 16,570 |
+| **Strings reviewed this run** | 139 of 16,708 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for nl: [android](android.md) · [firefox_ios](firefox_ios.md)
+Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (2)
 
-- `urlbar-menuitem-paste-and-go` — `browser/browser/browser.ftl` — Label capitalises 'Gaan' and uses '&', breaking sentence case and the 'en' used in the sibling 'Plakken en zoeken'.
-    - Current: `Plakken & Gaan`
-    - Source: `accesskey: G label: Paste and Go`
-    - Suggest: `Plakken en gaan`
-    - The nl conventions use sentence case for labels, and the parallel menu item 'Paste and Search' is rendered 'Plakken en zoeken'.
-- `narrate-toggle-label` — `toolkit/toolkit/global/narrate.ftl` — 'Read aloud' is rendered 'Hardop lezen' on the button but 'Hardop voorlezen' in the menu header it opens.
-    - Current: `Hardop lezen`
-    - Source: `Read aloud ({ $shortcut })`
-    - Suggest: `Hardop voorlezen`
-    - The same en-US term on the same feature surface is translated two ways. 'Voorlezen' (reading to someone) is the term used in the header and in the rate tooltips.
-- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The pronoun 'Hij' has the wrong gender: it refers to the neuter noun 'minivenster' (or 'gebied'), so it should be 'Het'.
-    - Current: `Hij blijft tijdens het surfen bovenaan staan.`
-    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
-    - Suggest: `Het blijft tijdens het surfen bovenaan staan.`
-    - 'It' in the en-US means the Mini Window. 'Minivenster' is a neuter de/het noun ('het venster'), and so is 'gebied', so the pronoun must be 'het', not the common-gender 'hij'.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
+    - Current: `en blader om de pagina opnieuw te tonen.`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
+    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
+- `permissions-site-notification-closed-delivery-label` — `browser/browser/preferences/permissions.ftl` — 'wordt gesloten' means 'is being closed' (the act of closing), not 'is closed' (the state).
+    - Current: `wanneer { -brand-short-name } wordt gesloten`
+    - Source: `label: Allow website notifications when { -brand-short-name } is closed`
+    - Suggest: `wanneer { -brand-short-name } gesloten is`
+    - The setting is about delivering notifications while the browser is closed, as the developer comment confirms. The passive 'wordt gesloten' describes the moment the browser is closed instead.
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,12 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `toolbar-switcher-customizable-label` — `browser/browser/aiWindow.ftl` — toolbar-switcher-customizable-label (.tooltiptext) — aiWindow.ftl; smartwindow-switcher-callout — newtab/onboarding.ftl — mid-sentence "Slimme" capitalised in one half of a coordination only.
-    - Suggest: `.tooltiptext`
-- `newtab-stocks-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — newtab/newtab.ftl — "Opties voor Aandelenwidget" → lowercase
-    - Suggest: `lowercase`
+_Nothing retired._
 
 ---
 
@@ -62,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,570 |
-| Missing strings | 25 |
+| Strings | 16,708 |
+| Missing strings | 34 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -80,15 +72,18 @@ _Nothing to re-read._
 
 ### Completeness
 
-**25 strings** are not translated yet, concentrated in:
+**34 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 14
-- `browser/browser/ipProtection.ftl` — 4
-- `browser/chrome/browser/browser.properties` — 2
+- `browser/browser/aboutLogins.ftl` — 9
+- `browser/browser/preferences/preferences.ftl` — 8
+- `browser/browser/newtab/newtab.ftl` — 5
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/global/narrate.ftl` — 1
-- `browser/browser/policies/policies-descriptions.ftl` — 1
-- `dom/chrome/dom/dom.properties` — 1
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+- `browser/browser/ipProtection.ftl` — 2
+- `browser/browser/preferences/moreFromMozilla.ftl` — 2
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/branding/brandings.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -98,12 +93,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 821, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1038 | **typographic** |
-| ellipsis | `char` 398 | **char** |
-| dash | `en` 111 | **en** |
+| quotes | `curly-single` 823, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1044 | **typographic** |
+| ellipsis | `char` 399 | **char** |
+| dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2726 | **formal** |
+| register | `formal` 2769 | **formal** |
 
 ---
 
@@ -113,13 +108,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (345)
+## 3. Open findings (347)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 116 |
+| 2 | Wrong content (says something other than the English) | 118 |
 | 3 | Degraded language (grammar, spelling, terminology) | 192 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
@@ -169,6 +164,11 @@ _Nothing reported._
     - Current: `{ -brand-short-name }`
     - Source: `Protect the { -brand-short-name } you’ve made yours.`
     - Suggest: `"…die u zich eigen hebt gemaakt."`
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
+    - Current: `en blader om de pagina opnieuw te tonen.`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
+    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
 - `genai-prompts-summarize` — `browser/browser/genai.ftl` — "concise" became "descriptive", nearly reversing the instruction. Current: "…in exacte en beschrijvende woorden." → Suggest: "…in precieze en beknopte woorden."
     - Source: `label: Summarize value: Please summarize the selection using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
     - Suggest: `"…in precieze en beknopte woorden."`
@@ -224,6 +224,11 @@ _Nothing reported._
 - `permissions-searchbox` — `browser/browser/preferences/permissions.ftl` — the box filters the website list. Current: "Website doorzoeken" → Suggest: "Websites zoeken"
     - Source: `placeholder: Search Website`
     - Suggest: `"Websites zoeken"`
+- `permissions-site-notification-closed-delivery-label` — `browser/browser/preferences/permissions.ftl` — 'wordt gesloten' means 'is being closed' (the act of closing), not 'is closed' (the state).
+    - Current: `wanneer { -brand-short-name } wordt gesloten`
+    - Source: `label: Allow website notifications when { -brand-short-name } is closed`
+    - Suggest: `wanneer { -brand-short-name } gesloten is`
+    - The setting is about delivering notifications while the browser is closed, as the developer comment confirms. The passive 'wordt gesloten' describes the moment the browser is closed instead.
 - `appearance-group2` — `browser/browser/preferences/preferences.ftl` — appearance-group2 (.label), preferences-web-appearance-header, web-appearance-group (.aria-label) — preferences/preferences.ftl — definite singular implies one specific site. Current: "Uiterlijk van de website" → Suggest: "Uiterlijk van websites"
     - Source: `description: Some websites change their colors to match your preferences. Choose your color scheme. label: Website appearance`
     - Suggest: `"Uiterlijk van websites"`
@@ -316,11 +321,7 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
-    - Source: `Unable to change password.`
-- _…and 58 more; see `state/` for the full list._
+- _…and 60 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

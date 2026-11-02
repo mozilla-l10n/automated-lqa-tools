@@ -248,7 +248,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "sk",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -270,7 +270,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "sk",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -377,6 +377,30 @@
   "string_id": "trustpanel-etp-description-disabled",
   "suggest": "zablokujeme čo najviac sledovacích prvkov",
   "summary": "“trackers” rendered as “sledovacích zariadení” (tracking devices).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "overiť a preto boli",
+  "dismissed_because": "",
+  "fid": "9a437c5da396",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Slovak punctuation rules require a comma before \"a\" when it introduces a consequence clause with \"preto\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8791cf48",
+  "string_id": "unsigned-addons-disabled-message",
+  "suggest": "overiť, a preto boli",
+  "summary": "A comma is missing before \"a preto\".",
   "suppressed_by": ""
  },
  {
@@ -497,6 +521,30 @@
   "string_id": "customkeys-conflict-unusable-title",
   "suggest": "Kláves nie je možné použiť",
   "summary": "“Key” translated as “kľúč” instead of “kláves” for a keyboard key.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "stiahnutý - predstavuje",
+  "dismissed_because": "",
+  "fid": "ad89bec6e74c",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 4,
+  "last_seen": "2026-11-02",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The locale uses real dashes (en/em) for sentence punctuation; a spaced hyphen is a typographic error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "eb6629dc",
+  "string_id": "downloads-blocked-potentially-insecure",
+  "suggest": "stiahnutý – predstavuje",
+  "summary": "A hyphen with spaces is used as a dash instead of a real dash.",
   "suppressed_by": ""
  },
  {
@@ -1121,6 +1169,30 @@
   "string_id": "onboarding-many-tabs-subtitle",
   "suggest": "Alebo to ponechajte klasické s kartami navrchu.",
   "summary": "\"tabs on the top\" is translated as \"bookmarks on the top\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Vyberte si nové rozloženie kariet",
+  "dismissed_because": "",
+  "fid": "1fa50c20f1dc",
+  "file": "browser/browser/newtab/onboarding.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In en-US \"new tab\" modifies \"layout\": this is the layout of the New Tab page. \"nové rozloženie kariet\" means a new arrangement of tabs, which is a different thing.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "60113969",
+  "string_id": "onboarding-refresh-fro-tab-layout-title",
+  "suggest": "Vyberte si rozloženie novej karty",
+  "summary": "\"New tab layout\" (layout of the New Tab page) is rendered as \"a new layout of tabs\".",
   "suppressed_by": ""
  },
  {
@@ -2740,7 +2812,7 @@
   "file": "devtools/client/toolbox.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "sk",
   "origin": {},
   "rationale": "In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -3962,7 +4034,7 @@
   "file": "toolkit/toolkit/about/aboutAddons.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "sk",
   "origin": {},
   "rationale": "In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -4837,6 +4909,30 @@
   "string_id": "experimental-features-newtab-widget-lists-and-timer-description",
   "suggest": "aby ste si pripomenuli, že si treba dobiť batérie",
   "summary": "Person/number disagreement in the final clause.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Uložiť ako novú",
+  "dismissed_because": "",
+  "fid": "bf90dd562552",
+  "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says this saves the details as a new payment method. The surrounding strings translate \"payment method\" as \"spôsob platby\", which is masculine, so the adjective should be \"nový\". The feminine form looks left over from an older \"karta\" wording.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d893471b",
+  "string_id": "credit-card-capture-save-as-new-payment-method-button",
+  "suggest": "Uložiť ako nový",
+  "summary": "The feminine adjective \"novú\" does not agree with the masculine noun \"spôsob platby\" that this button refers to.",
   "suppressed_by": ""
  },
  {

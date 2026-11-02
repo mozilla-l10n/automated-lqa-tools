@@ -76,6 +76,78 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "[one] Да, удалить пароль",
+  "dismissed_because": "",
+  "fid": "1647413c57b4",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Exact count 1 is handled by [1]; the 'one' category covers 21, 31, etc. No number is shown, so the singular noun incorrectly says a single password is deleted.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "93680725",
+  "string_id": "about-logins-confirm-delete-all-dialog-checkbox-label",
+  "suggest": "[one] Да, удалить пароли",
+  "summary": "The [one] variant (used for 21, 31, … passwords) uses singular 'пароль' instead of plural 'пароли'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "[one] Это действие удалит его",
+  "dismissed_because": "",
+  "fid": "020229e406c2",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Exact count 1 is handled by [1]; the Russian 'one' category covers 21, 31, 101 etc., where en-US uses 'them'. The singular pronoun is wrong for those counts.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "54880b59",
+  "string_id": "about-logins-confirm-delete-all-sync-dialog-message",
+  "suggest": "[one] Это действие удалит их",
+  "summary": "The [one] variant (used for 21, 31, … passwords) says 'удалит его' (it) instead of the plural 'их'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "на каждом устройстве, которое синхронизирует ваши пароли",
+  "dismissed_because": "",
+  "fid": "004346de29c9",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The same en-US phrase 'on every device that syncs your passwords' is worded two ways in the same dialog family; it should be consistent.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "54880b59",
+  "string_id": "about-logins-confirm-delete-all-sync-dialog-message",
+  "suggest": "на всех устройствах, которые синхронизируют ваши пароли",
+  "summary": "The [one]/[few]/[many] variants say 'на каждом устройстве, которое…', while [1] and the single-password string say 'на всех устройствах, которые…'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "всех отображаемых здесь предупреждениях о взломе",
@@ -1436,7 +1508,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1458,7 +1530,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1610,14 +1682,14 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 403 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -1775,6 +1847,30 @@
   "string_id": "quickactions-cmd-clearrecenthistory2",
   "suggest": "кэш",
   "summary": "3. кеш (46) vs кэш — the locale's choice is кеш; the one straggler is sitedata-heading (.description). (quickactions-cmd-clearrecenthistory2 listing both is intentional.)",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "выйдет из-под пользователя на сайтах",
+  "dismissed_because": "",
+  "fid": "0f2d5db31324",
+  "file": "browser/browser/browser.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "'Выйти из-под пользователя' is slang/ungrammatical in this construction; standard UI phrasing is 'выполнит выход с сайтов'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "35d43544",
+  "string_id": "reset-pbm-panel-description3",
+  "suggest": "выполнит выход с сайтов",
+  "summary": "'выйдет из-под пользователя на сайтах' is an unidiomatic, garbled rendering of 'signs you out of sites'.",
   "suppressed_by": ""
  },
  {
@@ -2766,6 +2862,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "{ $agent } не смог проверить подпись",
+  "dismissed_because": "",
+  "fid": "66c90724a76f",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US 'failed signature verification' means the agent's signature was checked and failed. 'не смог проверить подпись' makes the agent the one doing the checking, which is a different fact.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "59f2fafd",
+  "string_id": "downloads-content-analysis-invalid-agent-signature-error",
+  "suggest": "{ $agent } не прошёл проверку подписи",
+  "summary": "The Russian says the agent couldn't verify a signature, but the source says the agent's own signature failed verification.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Родительским Контролем",
+  "dismissed_because": "",
+  "fid": "668687ca9183",
+  "file": "browser/browser/downloads.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment asks for the name as Windows displays it. Windows in Russian uses «Родительский контроль», capitalising only the first word.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d0d384a6",
+  "string_id": "downloads-state-blocked-parental-controls",
+  "suggest": "Родительским контролем",
+  "summary": "The feature name is written with English-style capitals instead of the Windows Russian name «Родительский контроль».",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "Удалить все",
@@ -3205,6 +3349,30 @@
   "string_id": "genai-menu-no-provider-2",
   "suggest": "",
   "summary": "Access keys. The locale remaps access keys to Cyrillic thoroughly — 998 of 1052 are Cyrillic, and 88% of those appear in their own label. The actionable subset is the 34 access keys still carrying the en-US Latin letter, which a user typing in a Cyrillic layout cannot reach: tab-context-unpin-tab2, tab-context-open-in-new-container-tab2, tab-context-close-duplicate-tabs2, tab-context-move-tabs2,…",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Посетите настройки <span data-l10n-name=\"chevron\"></span> вкладок и просмотра",
+  "dismissed_because": "",
+  "fid": "5c2e8c55686c",
+  "file": "browser/browser/genai.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The chevron marks a navigation path (Settings > Tabs and browsing). Declining the section name into the genitive means the text no longer matches the UI label the user has to find.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "8908da1a",
+  "string_id": "genai-more-actions-all-off-notice",
+  "suggest": "Перейдите в «Настройки» <span data-l10n-name=\"chevron\"></span> «Вкладки и просмотр»",
+  "summary": "The settings path's section name is declined (\"вкладок и просмотра\") instead of matching the actual section label.",
   "suppressed_by": ""
  },
  {
@@ -6292,6 +6460,30 @@
  },
  {
   "category": "B",
+  "check": "llm",
+  "current": "Выберите новый макет вкладки",
+  "dismissed_because": "",
+  "fid": "2f94afc97a3b",
+  "file": "browser/browser/newtab/onboarding.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US refers to the layout of the New Tab page. The Russian makes \"new\" describe the layout (\"choose a new layout for a tab\"), which changes the meaning.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b991f91e",
+  "string_id": "onboarding-refresh-fro-tab-layout-title",
+  "suggest": "Выберите макет новой вкладки",
+  "summary": "\"new tab layout\" is rendered as \"a new layout of a tab\" instead of \"the layout of the New Tab page\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
   "check": "legacy",
   "current": "единственный глобальный браузер",
   "dismissed_because": "",
@@ -6737,14 +6929,14 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 403 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -8461,6 +8653,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Поисковые системы и значки",
+  "dismissed_because": "",
+  "fid": "e3972f351ea6",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In en-US, \"shortcuts\" means the search shortcuts (keywords) for the engines. «значки» means icons or badges, so the list label names the wrong thing.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d4c66385",
+  "string_id": "search-engine-list",
+  "suggest": "Поисковые системы и ярлыки",
+  "summary": "\"shortcuts\" is translated as «значки» (icons/badges), which does not mean search shortcuts.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "legacy",
   "current": "",
@@ -8833,14 +9049,14 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 403 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -9576,6 +9792,30 @@
   "string_id": "item-cookies-site-data-description",
   "suggest": "",
   "summary": "trustpanel-clear-cookies-description and item-cookies-site-data-description use the slang разлогин where clearDataForSite.ftl uses выход из аккаунта",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Производит выход из-под пользователя",
+  "dismissed_because": "",
+  "fid": "c9e0f5d12d50",
+  "file": "browser/browser/sanitize.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "\"Выход из-под пользователя\" is not valid Russian usage. The en-US means the user is signed out of sites, which Russian normally phrases as \"выход из учётных записей\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "61d977fa",
+  "string_id": "item-cookies-site-data-description2",
+  "suggest": "Выполняет выход из учётных записей",
+  "summary": "\"Производит выход из-под пользователя\" is an unidiomatic, garbled rendering of \"Signs you out\".",
   "suppressed_by": ""
  },
  {
@@ -11997,7 +12237,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -18797,6 +19037,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Корпоративный Firefox",
+  "dismissed_because": "",
+  "fid": "518dd7e3b32b",
+  "file": "toolkit/toolkit/branding/brandings.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Brand/product names are not translated; 'Firefox Enterprise' is a product name, and rendering it as a descriptive phrase changes the brand.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "6c55de29",
+  "string_id": "-firefox-enterprise-brand-name",
+  "suggest": "Firefox Enterprise",
+  "summary": "Product name Firefox Enterprise is translated instead of kept as a brand.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "вам не разрешено вставлять это содержимое",
   "dismissed_because": "",
   "fid": "66a3b76c18a2",
@@ -20763,6 +21027,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Ничего не принимает соединения",
+  "dismissed_because": "",
+  "fid": "d94dec3e72af",
+  "file": "toolkit/toolkit/neterror/netError.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "As the grammatical subject the nominative 'ничто' is required; 'ничего' (genitive) makes the sentence ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c5d1077c",
+  "string_id": "neterror-loopback-refused-not-running",
+  "suggest": "Ничто не принимает соединения",
+  "summary": "Wrong case of the negative pronoun used as subject: 'Ничего' instead of 'Ничто'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",
@@ -21109,14 +21397,14 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-10-26",
+  "last_seen": "2026-11-02",
   "locale": "ru",
   "origin": {
    "report": "legacy",
    "section": "I. Typography",
    "severity": "S5"
   },
-  "rationale": "The tree uses … 401 times against 5 ASCII runs.",
+  "rationale": "The tree uses … 403 times against 5 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
