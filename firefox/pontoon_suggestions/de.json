@@ -1,0 +1,552 @@
+{
+ "project": "firefox",
+ "locale": "de",
+ "suggestions": [
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "browser/browser/aboutDialog.ftl",
+   "string_id": "helpus-referrals2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutDialog.ftl",
+    "key": [
+     "helpus-referrals2"
+    ]
+   },
+   "fids": [
+    "685d4d17f1b2"
+   ],
+   "findings": [
+    "Superfluous comma before \"oder\" in the enumeration."
+   ],
+   "source": "Want to help? <label data-l10n-name=\"helpus-donateLink\">Make a donation</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">share { -brand-product-name }</label>, or <label data-l10n-name=\"helpus-getInvolvedLink\">get involved!</label>",
+   "original": "Möchten Sie helfen? <label data-l10n-name=\"helpus-donateLink\">Spenden Sie</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">Teilen Sie { -brand-product-name }</label>, oder <label data-l10n-name=\"helpus-getInvolvedLink\">machen Sie mit!</label>",
+   "text": "Möchten Sie helfen? <label data-l10n-name=\"helpus-donateLink\">Spenden Sie</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">Teilen Sie { -brand-product-name }</label> oder <label data-l10n-name=\"helpus-getInvolvedLink\">machen Sie mit!</label>",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "browser/browser/aboutRestartRequired.ftl",
+   "string_id": "restart-required-see-more-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutRestartRequired.ftl",
+    "key": [
+     "restart-required-see-more-button"
+    ]
+   },
+   "fids": [
+    "9e43807df261"
+   ],
+   "findings": [
+    "\"See more\" (expand the details section) is rendered as \"Mehr erfahren\" (learn more), inconsistent with its counterpart \"Weniger anzeigen\"."
+   ],
+   "source": "See more",
+   "original": "Mehr erfahren",
+   "text": "Mehr anzeigen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "appmenu-fxa-sign-in-promo-link",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "appmenu-fxa-sign-in-promo-link"
+    ]
+   },
+   "fids": [
+    "dbddcee97cdf"
+   ],
+   "findings": [
+    "\"Sign in\" is translated \"Einloggen\" instead of the established Firefox German term \"Anmelden\"."
+   ],
+   "source": "Sign in",
+   "original": "Einloggen",
+   "text": "Anmelden",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "browser/browser/backupSettings.ftl",
+   "string_id": "backup-file-moz-browser-restore-step-2-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backupSettings.ftl",
+    "key": [
+     "backup-file-moz-browser-restore-step-2-1"
+    ]
+   },
+   "fids": [
+    "2ec286e810f1"
+   ],
+   "findings": [
+    "`backup-file-moz-browser-restore-step-2-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”"
+   ],
+   "source": "Click “Restore your data” and select this file",
+   "original": "Klicken Sie auf \"Ihre Daten wiederherstellen\" und wählen Sie diese Datei",
+   "text": "Klicken Sie auf \"Daten wiederherstellen\" und wählen Sie diese Datei",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "browser/browser/backupSettings.ftl",
+   "string_id": "backup-file-other-browser-restore-step-3-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backupSettings.ftl",
+    "key": [
+     "backup-file-other-browser-restore-step-3-1"
+    ]
+   },
+   "fids": [
+    "fac77063ac8c"
+   ],
+   "findings": [
+    "`backup-file-other-browser-restore-step-3-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”"
+   ],
+   "source": "Click “Restore your data” and select this file",
+   "original": "Klicken Sie auf \"Ihre Daten wiederherstellen\" und wählen Sie diese Datei",
+   "text": "Klicken Sie auf \"Daten wiederherstellen\" und wählen Sie diese Datei",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "content-analysis-indicator-tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "content-analysis-indicator-tooltip"
+    ]
+   },
+   "fids": [
+    "94dba2832753"
+   ],
+   "findings": [
+    "Wrong preposition in \"Verhinderung vor Datenverlust\"."
+   ],
+   "source": "tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.",
+   "original": "Verhinderung vor Datenverlust (DLP) von { $agentName }. Klicken Sie hier, um weitere Informationen zu erhalten.",
+   "text": "Verhinderung von Datenverlust (DLP) von { $agentName }. Klicken Sie hier, um weitere Informationen zu erhalten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ip-protection-description-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ip-protection-description-1"
+    ]
+   },
+   "fids": [
+    "eddfa6b4a160"
+   ],
+   "findings": [
+    "Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause."
+   ],
+   "source": "description: Get extra privacy by hiding your location while browsing.\nlabel: Built-in VPN",
+   "original": "Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.",
+   "text": "Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ip-protection-site-rules-button-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ip-protection-site-rules-button-1"
+    ]
+   },
+   "fids": [
+    "a32abb9f901b"
+   ],
+   "findings": [
+    "Incorrect comma before \"oder\" joining two coordinated relative clauses."
+   ],
+   "source": "description: Set rules for sites that need extra privacy or VPN turned off.\nlabel: Manage VPN rules",
+   "original": "Legen Sie Regeln für Websites fest, die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen.",
+   "text": "Legen Sie Regeln für Websites fest, die mehr Datenschutz oder die ein deaktiviertes VPN benötigen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-site-inclusions-callout-description-lapsed-users",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-site-inclusions-callout-description-lapsed-users"
+    ]
+   },
+   "fids": [
+    "c44b94ac0959"
+   ],
+   "findings": [
+    "\"und aus\" does not fit grammatically after \"um VPN zu aktivieren\"."
+   ],
+   "source": "Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.",
+   "original": "Legen Sie Regeln fest, um VPN zu aktivieren, wenn Sie mehr Privatsphäre oder standortbasiertes Surfen wünschen, und aus, wenn Sie dies nicht tun.",
+   "text": "Legen Sie Regeln fest, um VPN zu aktivieren, wenn Sie mehr Privatsphäre oder standortbasiertes Surfen wünschen, und zu deaktivieren, wenn Sie dies nicht tun.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-firefox-sky-light",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-firefox-sky-light"
+    ]
+   },
+   "fids": [
+    "e1dd5b8aa6d1"
+   ],
+   "findings": [
+    "\"Light hills\" (helle Hügel) mistranslated as \"Leichte Hügel\" (lightweight hills)."
+   ],
+   "source": "Light hills under a soft sky",
+   "original": "Leichte Hügel unter einem sanften Himmel",
+   "text": "Helle Hügel unter einem sanften Himmel",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-refresh-fro-import-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-refresh-fro-import-header"
+    ]
+   },
+   "fids": [
+    "bdff8c0a23fc"
+   ],
+   "findings": [
+    "\"Bring in your data\" (import data) rendered as \"Geben Sie Ihre Daten ein\" (enter your data)."
+   ],
+   "source": "Bring in your data",
+   "original": "Geben Sie Ihre Daten ein",
+   "text": "Importieren Sie Ihre Daten",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-refresh-terms-of-use-with-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-refresh-terms-of-use-with-links"
+    ]
+   },
+   "fids": [
+    "1e001a88c363"
+   ],
+   "findings": [
+    "Stray space and misplaced verb inside the link text: \"Datenschutzhinweis zu </a>\" puts \"zu\" inside the anchor with a trailing space."
+   ],
+   "source": "By continuing, you agree to the <a data-l10n-name=\"terms_of_use\">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name=\"privacy_notice\">Privacy Notice</a>. To help improve the browser, { -brand-product-name } sends diagnostic and interaction data to { -vendor-short-name }.",
+   "original": "Indem Sie fortfahren, stimmen Sie den <a data-l10n-name=\"terms_of_use\">{ -brand-product-name }-Nutzungsbedingungen</a> und unserem <a data-l10n-name=\"privacy_notice\">Datenschutzhinweis zu </a>. { -brand-product-name } sendet Diagnose- und Interaktionsdaten an { -vendor-short-name }, um den Browser zu verbessern.",
+   "text": "Indem Sie fortfahren, stimmen Sie den <a data-l10n-name=\"terms_of_use\">{ -brand-product-name }-Nutzungsbedingungen</a> und unserem <a data-l10n-name=\"privacy_notice\">Datenschutzhinweis</a> zu. { -brand-product-name } sendet Diagnose- und Interaktionsdaten an { -vendor-short-name }, um den Browser zu verbessern.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/permissions.ftl",
+   "string_id": "speech-recognition-model-download-progress-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/permissions.ftl",
+    "key": [
+     "speech-recognition-model-download-progress-message"
+    ]
+   },
+   "fids": [
+    "9e2ff9fbff7e"
+   ],
+   "findings": [
+    "Progress message rendered as an imperative/infinitive instead of a status statement."
+   ],
+   "source": "Downloading speech recognition model",
+   "original": "Spracherkennungsmodell herunterladen",
+   "text": "Spracherkennungsmodell wird heruntergeladen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-PasswordManagerEnabled2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-PasswordManagerEnabled2"
+    ]
+   },
+   "fids": [
+    "5ad22f4c9c70"
+   ],
+   "findings": [
+    "A full stop is missing between the two sentences."
+   ],
+   "source": "Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.",
+   "original": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren Wenn dies deaktiviert ist, wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert.",
+   "text": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren. Wenn dies deaktiviert ist, wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "browser/browser/preferences/moreFromMozilla.ftl",
+   "string_id": "more-from-moz-firefox-enterprise-card",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/moreFromMozilla.ftl",
+    "key": [
+     "more-from-moz-firefox-enterprise-card"
+    ]
+   },
+   "fids": [
+    "fba364dc3312"
+   ],
+   "findings": [
+    "\"regulated\" is rendered as \"kontrollierte\" (controlled) instead of \"regulierte\"."
+   ],
+   "source": "description: Browser governance for regulated and security-sensitive organizations.\nlabel: { -firefox-enterprise-brand-name }",
+   "original": "Browser-Governance für kontrollierte und sicherheitsbewusste Organisationen.",
+   "text": "Browser-Governance für regulierte und sicherheitsbewusste Organisationen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "addressbar-skip-result-menu-on-tab",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "addressbar-skip-result-menu-on-tab"
+    ]
+   },
+   "fids": [
+    "bd89ebef761b"
+   ],
+   "findings": [
+    "Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label."
+   ],
+   "source": "label: Skip the results menu when using the tab key to move focus",
+   "original": "Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden",
+   "text": "Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "browser/browser/translations.ftl",
+   "string_id": "translations-panel-revisit-to-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/translations.ftl",
+    "key": [
+     "translations-panel-revisit-to-label"
+    ]
+   },
+   "fids": [
+    "00d0e5de17d7"
+   ],
+   "findings": [
+    "Wrong preposition for \"Translate to\"."
+   ],
+   "source": "Translate to",
+   "original": "Übersetzen auf",
+   "text": "Übersetzen in",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "devtools/client/components.properties",
+   "string_id": "splitter.label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/components.properties",
+    "key": [
+     "splitter.label"
+    ]
+   },
+   "fids": [
+    "1928d0375d22"
+   ],
+   "findings": [
+    "Plural \"panels\" rendered as singular \"des Bereichs\"."
+   ],
+   "source": "Resize panels",
+   "original": "Größe des Bereichs ändern",
+   "text": "Größe der Bereiche ändern",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "devtools/shared/webconsole.properties",
+   "string_id": "preventedConsoleClear",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/webconsole.properties",
+    "key": [
+     "preventedConsoleClear"
+    ]
+   },
+   "fids": [
+    "4b88616c0f15"
+   ],
+   "findings": [
+    "`preventedConsoleClear` quotes “Logs nicht leeren” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Log nicht leeren”"
+   ],
+   "source": "console.clear() was prevented due to “Persist Logs”",
+   "original": "console.clear() wurde aufgrund von \"Logs nicht leeren\" verhindert",
+   "text": "console.clear() wurde aufgrund von \"Log nicht leeren\" verhindert",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "SpeechRecognitionBlockedByAIControlsWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "SpeechRecognitionBlockedByAIControlsWarning"
+    ]
+   },
+   "fids": [
+    "f836c3b7eb9c"
+   ],
+   "findings": [
+    "\"SpeechRecognition\" was translated although the developer comment forbids it."
+   ],
+   "source": "On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.",
+   "original": "Die geräteinterne Spracherkennung ist in den KI-Einstellungen des Benutzers deaktiviert, daher meldet die Spracherkennung sich selbst als nicht verfügbar und weigert sich, zu starten.",
+   "text": "Die geräteinterne Spracherkennung ist in den KI-Einstellungen des Benutzers deaktiviert, daher meldet SpeechRecognition sich selbst als nicht verfügbar und weigert sich, zu starten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "toolkit/toolkit/about/pdfFeaturesNotification.ftl",
+   "string_id": "pdf-features-notification-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/pdfFeaturesNotification.ftl",
+    "key": [
+     "pdf-features-notification-message"
+    ]
+   },
+   "fids": [
+    "76b7b6a008a8"
+   ],
+   "findings": [
+    "\"Split\" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as \"PDFs teilen\", which in German primarily means \"share\"."
+   ],
+   "source": "Split, merge, and more. <a data-l10n-name=\"features-link\">See PDF features</a>",
+   "original": "PDFs teilen, zusammenführen und mehr. <a data-l10n-name=\"features-link\">PDF-Funktionen entdecken</a>",
+   "text": "PDFs aufteilen, zusammenführen und mehr. <a data-l10n-name=\"features-link\">PDF-Funktionen entdecken</a>",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  }
+ ]
+}
