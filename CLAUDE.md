@@ -224,8 +224,8 @@ reviewer's comment is the reason. Without one, the model infers a reason
 and the line says it is inferred. The tool removes only its own tagged
 lines.
 
-`qa-digest.yml` (`lib/digest.py`) merges the QA pull requests. On Monday
-afternoon it squash-merges each `l10n-qa/<project>` pull request and emails
+`qa-digest.yml` (`lib/digest.py`) merges the QA pull requests. On Monday at
+08:00 UTC it squash-merges each `l10n-qa/<project>` pull request and emails
 `digest.RECIPIENTS` what changed, over SMTP, the way `mozl10n-linter` sends
 its failure emails. It leaves a pull request open, and puts it at the top of
 the email with the reason, when any check on its head has not passed, its

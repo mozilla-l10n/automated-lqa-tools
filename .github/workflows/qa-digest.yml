@@ -14,9 +14,10 @@ on:
         default: false
         type: boolean
   schedule:
-    # Monday, after the three QA runs (07:05, 07:25, 07:45 UTC). One that is
-    # still going is reported, not waited for; dispatch this again later.
-    - cron: '0 13 * * 1'
+    # Monday 08:00 UTC, about three hours after the four QA runs (04:05,
+    # 04:25, 04:45, 05:05 UTC). One that is still going is reported, not
+    # waited for; dispatch this again later.
+    - cron: '0 8 * * 1'
 
 concurrency:
   group: qa-digest

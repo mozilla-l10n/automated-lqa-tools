@@ -36,8 +36,8 @@ and wrong content — is the queue worth working through first.
 
 ## Running it
 
-It runs itself every Monday morning, 07:05 UTC — 09:05 in Rome in summer,
-08:05 in winter, because GitHub cron has no timezone. A scheduled run passes
+It runs itself every Monday morning, 04:05 UTC — 06:05 in Rome in summer,
+05:05 in winter, because GitHub cron has no timezone. A scheduled run passes
 no inputs, so it is `all` locales in `auto` mode.
 
 To run it out of turn: **Actions → Firefox l10n QA → Run workflow**. Pick

@@ -31,7 +31,7 @@ on:
         default: false
         type: boolean
   schedule:
-    - cron: '25 7 * * 1'   # Monday, 07:25 UTC
+    - cron: '25 4 * * 1'   # Monday, 04:25 UTC
 
 concurrency:
   # Runs push to a shared branch, so never let two overlap.
