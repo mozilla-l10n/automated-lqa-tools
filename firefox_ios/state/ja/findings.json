@@ -4154,30 +4154,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "ユーザーの行動を追跡する広告を阻止します",
-  "dismissed_because": "",
-  "fid": "0d9da6648d92",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "ja",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says it \"helps stop\" advertisers from tracking browsing; the Japanese asserts that it blocks tracking ads outright, overstating what the product does.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3339a813",
-  "string_id": "Settings.TrackingProtection.ProtectionCellFooter",
-  "suggest": "広告会社によるユーザーの閲覧の追跡を防ぐのに役立ちます",
-  "summary": "\"helps stop advertisers from tracking your browsing\" is rendered as an absolute claim of blocking tracking ads.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "アドレスバー内の盾アイコンをタップして",
   "dismissed_because": "",
   "fid": "d71c2c42b680",

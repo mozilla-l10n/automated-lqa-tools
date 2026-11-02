@@ -2018,30 +2018,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "نقرة واحدة كفيلة بمنع الشركات من التجسس",
-  "dismissed_because": "",
-  "fid": "cfe0b2902abc",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ar",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source only says one tap helps stop companies from spying. The Arabic says one tap is enough to prevent it, which promises a protection the product does not claim.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "524d96c3",
-  "string_id": "onboarding_redesign_set_default_browser_body",
-  "suggest": "نقرة واحدة تساعد في منع الشركات من التجسس",
-  "summary": "\"helps stop\" became \"is sufficient to prevent\", turning a hedged claim into a guarantee.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "التبويبات المفتوحة",
   "dismissed_because": "",
   "fid": "146290d591cc",

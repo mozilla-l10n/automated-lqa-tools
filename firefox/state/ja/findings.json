@@ -1994,30 +1994,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "閲覧時の現在位置を隠します。",
-  "dismissed_because": "",
-  "fid": "dafe48ac0760",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-11-02",
-  "impact": 2,
-  "last_seen": "2026-11-02",
-  "locale": "ja",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US only says the VPN helps hide your location. The Japanese says it hides it, which is a protection the product does not promise.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "0b0266cd",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "閲覧時の現在位置を隠すのに役立ちます。",
-  "summary": "The translation drops \"Help\" and promises outright that the VPN hides your location.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "legacy",
   "current": "{ -brand-product-name }’の組み込み VPN",

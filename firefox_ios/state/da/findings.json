@@ -386,54 +386,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "forhindrer virksomheder i at følge dig",
-  "dismissed_because": "",
-  "fid": "26cda793c0c7",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "da",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "f435be83",
-  "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
-  "suggest": "hjælper med at forhindre virksomheder i at følge dig",
-  "summary": "\"helps stop\" is rendered as \"forhindrer\" (prevents), turning a hedged claim into a guarantee.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "forhindrer virksomheder i at følge dig",
-  "dismissed_because": "",
-  "fid": "428a9166672a",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "da",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "f435be83",
-  "string_id": "Onboarding.Welcome.Description.v120",
-  "suggest": "hjælper med at forhindre virksomheder i at følge dig",
-  "summary": "\"helps stop\" is rendered as \"forhindrer\" (prevents), turning a hedged claim into a guarantee.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Nogle websteder understøtter mail-masker.",
   "dismissed_because": "",
   "fid": "76139e7aa5d4",
@@ -717,30 +669,6 @@
   "string_id": "WebCompatReporter.SubOption.ItemsNotVisible.v154",
   "suggest": "Elementer er ikke fuldt synlige",
   "summary": "This main clause uses subordinate-clause word order, so the sentence is ungrammatical.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "forhindrer reklamer i at følge dig",
-  "dismissed_because": "",
-  "fid": "4e8badb7b631",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "da",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says Enhanced Tracking Protection \"helps stop ads from following you\". Dropping \"helps\" turns a partial claim into a guarantee the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "29a1e967",
-  "string_id": "CoverSheet.v24.ETP.Description",
-  "suggest": "hjælper med at forhindre reklamer i at følge dig",
-  "summary": "The hedge \"helps stop\" has become \"forhindrer\" (prevents), so the text now says tracking protection fully stops ads from following the user.",
   "suppressed_by": ""
  },
  {

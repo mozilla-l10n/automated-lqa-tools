@@ -52,30 +52,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "Le finestre anonime impediscono agli altri utenti di questo dispositivo di vedere la tua attività di navigazione.",
-  "dismissed_because": "On purpose, because the alternative is hard to read \"nascondere a qualcuno\".",
-  "fid": "df31c336ce3b",
-  "file": "browser/browser/aboutPrivateBrowsing.ftl",
-  "first_seen": "2026-09-28",
-  "impact": 2,
-  "last_seen": "2026-09-28",
-  "locale": "it",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source says Private Windows \"help keep\" browsing private; the Italian asserts they outright prevent other users from seeing the activity, a stronger promise than the product makes.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "dismissed",
-  "string_hash": "18074aaa",
-  "string_id": "about-private-browsing-spotlight-basics-subtitle",
-  "suggest": "Le finestre anonime aiutano a nascondere la tua attività di navigazione agli altri utenti di questo dispositivo.",
-  "summary": "\"help keep your browsing private\" rendered as an absolute \"impediscono\" (prevent), dropping the hedge.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Riavviando { -brand-short-name }, continuerà a funzionare normalmente e in sicurezza.",
   "dismissed_because": "",
   "fid": "ea63376e8af4",
@@ -419,30 +395,6 @@
   "string_id": "ip-protection-site-rules-edit-button",
   "suggest": "la regola relativa a { $website }",
   "summary": "Ungrammatical preposition: \"relativa per\" should be \"relativa a\" (or just \"per\").",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Nascondi la tua posizione mentre navighi.",
-  "dismissed_because": "On purpose for better flow",
-  "fid": "f9eeebfaa96c",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-10-26",
-  "impact": 2,
-  "last_seen": "2026-10-26",
-  "locale": "it",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "en-US 'Help hide your location' is a hedged claim. 'Nascondi la tua posizione' promises full concealment, which is a protection the product does not guarantee.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "dismissed",
-  "string_hash": "5a4c011d",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "Aiuta a nascondere la tua posizione mentre navighi.",
-  "summary": "The hedge 'Help' is dropped, so the Italian claims the VPN hides the user's location outright.",
   "suppressed_by": ""
  },
  {

@@ -1464,30 +1464,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "광고가 사용자를 추적하지 못하게합니다",
-  "dismissed_because": "",
-  "fid": "7d142884a9ee",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ko",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source hedges with \"helps stop\". The Korean says the feature prevents ads from tracking you, which is a guarantee the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "0635a533",
-  "string_id": "CoverSheet.v24.ETP.Description",
-  "suggest": "광고가 사용자를 따라다니는 것을 막는 데 도움을 줍니다",
-  "summary": "\"helps stop ads from following you\" is rendered as an unconditional claim that protection prevents ads from tracking the user.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "표시 됩니다",

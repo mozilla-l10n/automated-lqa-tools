@@ -600,30 +600,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Забороніть компаніям стежити за вашими діями онлайн.",
-  "dismissed_because": "",
-  "fid": "4dfe42b4dbae",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "uk",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says one tap helps stop companies spying on clicks. The Ukrainian tells users they can forbid tracking outright, which promises more protection than the product claims.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "892d01c3",
-  "string_id": "onboarding_redesign_set_default_browser_body",
-  "suggest": "Один дотик допомагає завадити компаніям стежити за вашими діями онлайн.",
-  "summary": "The hedge \"helps stop\" became the absolute \"Forbid companies from tracking\", and \"one tap\" was dropped.",
-  "suppressed_by": ""
- },
- {
   "category": "E",
   "check": "llm",
   "current": "сповільнити %s поки",

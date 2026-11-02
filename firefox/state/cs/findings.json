@@ -1090,30 +1090,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Skryjte při prohlížení svou polohu.",
-  "dismissed_because": "",
-  "fid": "5f2a4750bc88",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-10-26",
-  "impact": 2,
-  "last_seen": "2026-10-26",
-  "locale": "cs",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source deliberately says the VPN only helps hide the location. \"Skryjte svou polohu\" states it as a guarantee the product does not give.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5a8f61be",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "Pomozte si při prohlížení skrýt svou polohu.",
-  "summary": "The hedge \"Help hide your location\" is dropped, so the text promises outright to hide the user's location.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Využijte vestavěnou služby VPN",

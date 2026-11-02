@@ -1088,30 +1088,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Dölj din plats när du surfar.",
-  "dismissed_because": "",
-  "fid": "49deabfa161b",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-10-26",
-  "impact": 2,
-  "last_seen": "2026-10-26",
-  "locale": "sv-SE",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "d3e587c2",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "Hjälp till att dölja din plats när du surfar.",
-  "summary": "\"Help hide your location\" is rendered as a plain \"Hide your location\", which turns a hedged claim into a guarantee.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "Välj vart du använder VPN",

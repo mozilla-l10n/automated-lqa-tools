@@ -264,54 +264,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "blocca automaticamente le società",
-  "dismissed_because": "“invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)",
-  "fid": "cee8d1365f8a",
-  "file": "Shared/Supporting Files/en.lproj/Onboarding.strings",
-  "first_seen": "2026-08-21",
-  "impact": 2,
-  "last_seen": "2026-08-21",
-  "locale": "it",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"helps stop companies\" is a hedged statement; \"blocca automaticamente\" asserts an absolute automatic blocking that is not in the source, and \"automatically\" appears nowhere.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "dismissed",
-  "string_hash": "1148a4f8",
-  "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
-  "suggest": "aiuta a impedire alle società",
-  "summary": "The translation says the browser \"automatically blocks\" companies, while the source says it \"helps stop\" them.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "blocca automaticamente le società",
-  "dismissed_because": "",
-  "fid": "a339d036fc62",
-  "file": "Shared/Supporting Files/en.lproj/Onboarding.strings",
-  "first_seen": "2026-08-21",
-  "impact": 2,
-  "last_seen": "2026-08-21",
-  "locale": "it",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"helps stop companies\" is hedged; \"blocca automaticamente\" adds an assertion of automatic blocking not present in the source.",
-  "reads_as_deliberate": false,
-  "resolved_on": "2026-08-21",
-  "status": "fixed",
-  "string_hash": "1148a4f8",
-  "string_id": "Onboarding.Welcome.Description.v120",
-  "suggest": "aiuta a impedire alle società",
-  "summary": "The translation says the browser \"automatically blocks\" companies, while the source says it \"helps stop\" them.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Benvenuti nell’Internet indipendente",

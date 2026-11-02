@@ -2662,30 +2662,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "با یک لمس، جلوی جاسوسی شرکت‌ها از کلیک‌هایتان را بگیرید.",
-  "dismissed_because": "",
-  "fid": "f15b57986ed9",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-11-02",
-  "impact": 2,
-  "last_seen": "2026-11-02",
-  "locale": "fa",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says one tap \"helps stop\" companies spying. The fa says \"with one tap, stop companies spying,\" which promises a protection the source deliberately hedged.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "90683c77",
-  "string_id": "onboarding_redesign_set_default_browser_body",
-  "suggest": "یک لمس به جلوگیری از جاسوسی شرکت‌ها از کلیک‌هایتان کمک می‌کند.",
-  "summary": "The hedge \"helps\" is dropped, so \"helps stop companies spying\" becomes an unconditional promise to stop them.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "برو به تنظیمات",

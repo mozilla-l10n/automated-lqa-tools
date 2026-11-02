@@ -288,54 +288,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "σταματά τις εταιρείες από το να σας ακολουθούν",
-  "dismissed_because": "",
-  "fid": "eb323b67200a",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "8704be3c",
-  "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
-  "suggest": "βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν",
-  "summary": "\"helps stop\" is rendered as \"stops\", which turns a modest claim into an absolute promise.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "σταματά τις εταιρείες από το να σας ακολουθούν",
-  "dismissed_because": "",
-  "fid": "ec286a7c5db1",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "8704be3c",
-  "string_id": "Onboarding.Welcome.Description.v120",
-  "suggest": "βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν",
-  "summary": "\"helps stop\" is rendered as \"stops\", which turns a modest claim into an absolute promise.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "σε %@",
@@ -621,30 +573,6 @@
   "string_id": "About",
   "suggest": "Πληροφορίες",
   "summary": "The settings section title is missing its accent: «Πληροφοριες» should be «Πληροφορίες».",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "εμποδίζει την καταγραφή σας από διαφημίσεις",
-  "dismissed_because": "",
-  "fid": "92037022ecb8",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says the protection \"helps stop\" ads from following the user. The Greek drops \"helps\" and states flatly that it prevents tracking, which is a stronger guarantee about the product's behaviour than the source makes.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a967f07d",
-  "string_id": "CoverSheet.v24.ETP.Description",
-  "suggest": "βοηθά στην αποτροπή της καταγραφής σας από διαφημίσεις",
-  "summary": "The hedge \"helps stop\" is dropped, so the Greek claims outright that ETP stops ads from tracking the user.",
   "suppressed_by": ""
  },
  {
@@ -1053,30 +981,6 @@
   "string_id": "Settings.Tabs.CustomizeTabsSection.Title",
   "suggest": "Προσαρμογή περιοχής καρτελών",
   "summary": "All accents are missing from the title.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "εμποδίζει την καταγραφή της περιήγησής σας από διαφημιστές",
-  "dismissed_because": "",
-  "fid": "51bf93c5fb09",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says the feature 'helps stop' advertisers from tracking you. The Greek says it simply stops them, which promises full protection the product does not claim.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a6c8519e",
-  "string_id": "Settings.TrackingProtection.ProtectionCellFooter",
-  "suggest": "βοηθά στην αποτροπή της καταγραφής της περιήγησής σας από διαφημιστές",
-  "summary": "The Greek drops the hedge 'helps' and says the feature stops advertisers from tracking you outright.",
   "suppressed_by": ""
  },
  {

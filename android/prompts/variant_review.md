@@ -48,9 +48,10 @@ Mozilla, or themselves. In practice that is one of these, and nothing else:
   kept or deleted, and where it goes. "all of your private data" rendered
   as "all of your data" claims a wider deletion than the product performs;
   a rendering that drops "and uploads the audio" hides a transfer;
-- **a protection or guarantee the product does not give** -- "helps stop
-  advertisers from tracking you" rendered as "stops advertisers from
-  tracking you" is a promise the product did not make;
+- **a protection or guarantee the product does not give** -- "blocks
+  known trackers" rendered as "blocks all trackers", or "protects you from
+  phishing sites" rendered as "protects you from all online threats", is a
+  promise the product did not make;
 - **an accusation, admission or disparagement** of the product, Mozilla,
   websites or the user that the source does not contain -- "people over
   profits" rendered as "people for profit", "thought-provoking" rendered as
@@ -67,6 +68,13 @@ finding at all:
   "the non-profit, trusted for 20 years";
 - a quantifier or hedge that does not move the fact -- "for over 20 years"
   where the source says "for 20 years";
+- "help" or "helps" dropped from "helps X" or "help do X" -- "helps stop
+  advertisers from tracking you" rendered as "stops advertisers from
+  tracking you", "Help hide your location" rendered as "Hide your
+  location", "helps protect your data" rendered as "protects your data".
+  Many languages say it that way, and the feature still does what is
+  named. Never report this, with or without the flag, and do not report it
+  as part of another finding either;
 - tense or aspect -- "will block" for "blocks", "has a new look" for "is
   getting a new look", a noun phrase turned into a sentence;
 - a positive or descriptive adjective, or warmer phrasing, that adds praise

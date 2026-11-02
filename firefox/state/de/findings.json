@@ -947,30 +947,6 @@
  },
  {
   "category": "B",
-  "check": "llm",
-  "current": "Verbergen Sie Ihren Standort beim Surfen.",
-  "dismissed_because": "",
-  "fid": "22a21facfc43",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-10-26",
-  "impact": 2,
-  "last_seen": "2026-10-26",
-  "locale": "de",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says the VPN helps hide your location. The German promises that it hides it, which is a guarantee the product does not give.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "42711fc3",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "Helfen Sie dabei, Ihren Standort beim Surfen zu verbergen.",
-  "summary": "\"Help hide your location\" is rendered as an unconditional \"Verbergen Sie Ihren Standort\", which drops the hedge.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
   "check": "legacy",
   "current": "",
   "dismissed_because": "",

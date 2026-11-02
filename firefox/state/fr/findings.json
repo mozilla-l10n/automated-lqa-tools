@@ -98,30 +98,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Limitez le spam dans votre boîte de réception",
-  "dismissed_because": "",
-  "fid": "aba91c9c746f",
-  "file": "browser/browser/appmenu.ftl",
-  "first_seen": "2026-10-12",
-  "impact": 2,
-  "last_seen": "2026-10-12",
-  "locale": "fr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US is a description of what the feature does, hedged with \"Helps\"; the French turns it into an imperative promise to the user.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "43b37db6",
-  "string_id": "appmenuitem-relay-description2",
-  "suggest": "Aide à limiter le spam dans votre boîte de réception",
-  "summary": "\"Helps prevent spam\" (descriptive, hedged) rendered as an imperative \"Limitez le spam\", dropping the \"helps\" hedge and changing the statement into a user instruction.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "Partager { -brand-product-name }",

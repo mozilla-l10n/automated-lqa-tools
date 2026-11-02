@@ -1638,30 +1638,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "A",
-  "check": "llm",
-  "current": "會自動封鎖讓大企業在網路上偷偷跟蹤您的程式",
-  "dismissed_because": "",
-  "fid": "d259365c5c0f",
-  "file": "browser/browser/newtab/onboarding.ftl",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US says the browser 'helps stop companies from secretly following you'. The Chinese drops the hedge and claims the browser automatically blocks this tracking. It also narrows 'companies' to 大企業 (big companies).",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "9c141c6f",
-  "string_id": "onboarding-easy-setup-security-and-privacy-subtitle",
-  "suggest": "可幫助防止企業在網路上偷偷跟蹤您",
-  "summary": "'Helps stop companies' becomes 'automatically blocks the programs that let big companies follow you', which is an unhedged promise",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "將 { -brand-short-name } 新增到您的工具列",

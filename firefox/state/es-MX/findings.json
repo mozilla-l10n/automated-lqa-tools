@@ -132,30 +132,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Previene el spam",
-  "dismissed_because": "",
-  "fid": "29f10ac6fa4b",
-  "file": "browser/browser/aboutPrivateBrowsing.ftl",
-  "first_seen": "2026-11-02",
-  "impact": 2,
-  "last_seen": "2026-11-02",
-  "locale": "es-MX",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says email masks help prevent spam. Saying they prevent it is a guarantee the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "e22494a2",
-  "string_id": "about-private-browsing-relay-promo-header",
-  "suggest": "Ayuda a prevenir el spam",
-  "summary": "The hedge \"Help prevent\" is dropped, so the text promises that the feature prevents spam.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "correo electronico",

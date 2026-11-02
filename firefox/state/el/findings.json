@@ -718,30 +718,6 @@
  {
   "category": "A",
   "check": "llm",
-  "current": "Θα σας προστατεύει κατά την περιήγηση",
-  "dismissed_because": "",
-  "fid": "00758831b415",
-  "file": "browser/browser/newtab/asrouter.ftl",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US hedge \"will help keep you protected\" is deliberate; «Θα σας προστατεύει» asserts protection outright, a guarantee the product does not give.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "49aae75a",
-  "string_id": "spotlight-public-wifi-vpn-body",
-  "suggest": "Θα σας βοηθήσει να παραμείνετε προστατευμένοι κατά την περιήγηση",
-  "summary": "\"It will help keep you protected\" becomes an unqualified promise that the VPN will protect the user.",
-  "suppressed_by": ""
- },
- {
-  "category": "A",
-  "check": "llm",
   "current": "μεγάλες επιπτώσεις",
   "dismissed_because": "",
   "fid": "26eec415267b",
@@ -785,30 +761,6 @@
   "string_id": "windows-10-eos-sync-callout-privacy-screen-2-subtitle",
   "suggest": "τα δεδομένα και τις ρυθμίσεις απορρήτου σας",
   "summary": "\"your data and privacy settings\" is collapsed into \"data and privacy settings\", dropping the data itself.",
-  "suppressed_by": ""
- },
- {
-  "category": "A",
-  "check": "llm",
-  "current": "εμποδίζει την καταγραφή σας από εταιρείες",
-  "dismissed_because": "",
-  "fid": "cc426250c29c",
-  "file": "browser/browser/newtab/newtab.ftl",
-  "first_seen": "2026-10-16",
-  "impact": 1,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"helps stop companies from following you online\" is hedged, and neighbouring strings in the same widget keep the hedge («συμβάλλει», «βοηθά»); here it is removed.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a06f5ebb",
-  "string_id": "newtab-privacy-message-info-2",
-  "suggest": "βοηθά στο να μην σας καταγράφουν εταιρείες",
-  "summary": "The hedge \"helps stop\" is dropped, stating that tracker blocking prevents companies from following the user.",
   "suppressed_by": ""
  },
  {
@@ -2893,30 +2845,6 @@
   "string_id": "RequestStorageAccessSandboxed",
   "suggest": "Το document.requestStorageAccess() δεν μπορεί να κληθεί",
   "summary": "A prohibition is rendered as a possibility.",
-  "suppressed_by": ""
- },
- {
-  "category": "A",
-  "check": "llm",
-  "current": "Αυτή η προστασία εμποδίζει τους ιστοτόπους από το να δημιουργήσουν ένα αποτύπωμα",
-  "dismissed_because": "",
-  "fid": "057cca5b0240",
-  "file": "dom/chrome/dom/dom.properties",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The source hedges (“helps prevent websites building a fingerprint”); the Greek states the protection does prevent it, a stronger guarantee about the product’s behaviour than Firefox makes.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "79218f97",
-  "string_id": "ScreenFingerprintingProtectionWarning",
-  "suggest": "Αυτή η προστασία συμβάλλει στο να εμποδίζονται οι ιστότοποι από τη δημιουργία ενός αποτυπώματος",
-  "summary": "“helps prevent” rendered as an unqualified “prevents”.",
   "suppressed_by": ""
  },
  {

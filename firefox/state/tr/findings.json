@@ -324,30 +324,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Gelen kutunuzu spam’den koruyun",
-  "dismissed_because": "",
-  "fid": "ad825e1bae58",
-  "file": "browser/browser/appmenu.ftl",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"Helps prevent spam in your inbox\" is a description of the feature, not an instruction to the user.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "81efbb91",
-  "string_id": "appmenuitem-relay-description2",
-  "suggest": "Gelen kutunuzdaki spam’i önlemeye yardımcı olur",
-  "summary": "Descriptive statement turned into an imperative and the \"helps prevent\" nuance lost.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "ui_references",
   "current": "“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin",
@@ -1123,30 +1099,6 @@
   "string_id": "ipprotection-connection-status-blocked-error-description-1",
   "suggest": "VPN’i kullanabileceğiniz yerleri sınırlıyor",
   "summary": "Definite statement \"limit where you can use VPN\" weakened to \"may limit\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "İnternette gezinirken konumunuzu gizleyin.",
-  "dismissed_because": "",
-  "fid": "88dbcdbaea05",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-11-02",
-  "impact": 2,
-  "last_seen": "2026-11-02",
-  "locale": "tr",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US \"Help hide your location\" is deliberately hedged. The Turkish \"hide your location\" promises a protection the source does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "53df2d62",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "İnternette gezinirken konumunuzu gizlemeye yardımcı olun.",
-  "summary": "The hedge \"Help\" is dropped, so the Turkish promises that the location will be hidden.",
   "suppressed_by": ""
  },
  {

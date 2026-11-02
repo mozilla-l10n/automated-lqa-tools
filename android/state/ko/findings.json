@@ -1032,30 +1032,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "탭 간 데이터 유출을 방지합니다",
-  "dismissed_because": "",
-  "fid": "b4ed534ce4d5",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "ko",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source hedges ('helps protect'). The Korean asserts that leakage is prevented, a guarantee the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "e7cc3127",
-  "string_id": "firefox_labs_website_isolation_description",
-  "suggest": "탭 간 데이터를 보호하는 데 도움이 됩니다",
-  "summary": "'Helps protect your data' becomes a flat claim that the feature prevents data leakage between tabs.",
-  "suppressed_by": ""
- },
- {
   "category": "C",
   "check": "llm",
   "current": "추적기 잡기에 도와주세요",

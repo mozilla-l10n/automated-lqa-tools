@@ -1549,30 +1549,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "Ukryj swoje położenie podczas przeglądania Internetu.",
-  "dismissed_because": "",
-  "fid": "9e2342f4188b",
-  "file": "browser/browser/ipProtection.ftl",
-  "first_seen": "2026-11-02",
-  "impact": 2,
-  "last_seen": "2026-11-02",
-  "locale": "pl",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "782f90b1",
-  "string_id": "ipprotection-feature-introduction-description-private-browsing-3",
-  "suggest": "Pomóż ukryć swoje położenie podczas przeglądania Internetu.",
-  "summary": "The hedge \"Help hide your location\" was dropped, so the text promises outright that the VPN hides your location.",
-  "suppressed_by": ""
- },
- {
   "category": "E",
   "check": "legacy",
   "current": "\"…miejsce, z którego przeglądasz było bardziej prywatne.\"",

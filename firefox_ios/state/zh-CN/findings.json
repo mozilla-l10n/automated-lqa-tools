@@ -314,54 +314,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "会自动阻止大公司在网上偷偷跟踪您",
-  "dismissed_because": "",
-  "fid": "d2b01e00f9e4",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US only says the browser \"helps stop companies\" from tracking; the translation claims automatic blocking and restricts the subject to large companies.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a2570f97",
-  "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
-  "suggest": "有助于阻止公司在网上偷偷跟踪您",
-  "summary": "\"helps stop companies\" rendered as \"automatically blocks big corporations\", overstating the product's behaviour.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "会自动阻止大公司在网上偷偷跟踪您",
-  "dismissed_because": "",
-  "fid": "aa9ec59725c1",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The en-US says the browser \"helps stop companies\"; the Chinese asserts it \"automatically blocks\" them, and narrows \"companies\" to \"big companies\".",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "a2570f97",
-  "string_id": "Onboarding.Welcome.Description.v120",
-  "suggest": "有助于阻止公司在网上偷偷跟踪您",
-  "summary": "\"helps stop companies\" rendered as \"automatically blocks big corporations\", adding a claim the source never makes.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "已生成密码：%@",
   "dismissed_because": "",
   "fid": "1e2b01b163a4",
@@ -2133,30 +2085,6 @@
   "string_id": "Settings.Tabs.CustomizeTabsSection.InactiveTabsDescription.v101",
   "suggest": "超过两周未查看的标签页将被移至“不活跃”版块。",
   "summary": "The description reverses the timing condition and mistranslates \"inactive section\" as a sleep state.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "减少定向广告，并阻止广告商跟踪您的浏览。",
-  "dismissed_because": "",
-  "fid": "1104b735ffea",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-09-14",
-  "impact": 2,
-  "last_seen": "2026-09-14",
-  "locale": "zh-CN",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "en-US says \"helps stop advertisers from tracking\"; the Chinese asserts the product stops tracking outright, a claim the source does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "acff92a9",
-  "string_id": "Settings.TrackingProtection.ProtectionCellFooter",
-  "suggest": "减少定向广告，并帮助阻止广告商跟踪您的浏览。",
-  "summary": "\"helps stop\" is rendered as an absolute \"阻止\", overstating the protection.",
   "suppressed_by": ""
  },
  {

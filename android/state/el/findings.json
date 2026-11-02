@@ -458,30 +458,6 @@
  {
   "category": "B",
   "check": "llm",
-  "current": "που προστατεύει τα δεδομένα σας",
-  "dismissed_because": "",
-  "fid": "7e0594615eff",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says the barrier \"helps protect\" data across tabs. The Greek says it protects it, which turns a qualified statement into a guarantee the product never made.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1071f68f",
-  "string_id": "firefox_labs_website_isolation_description",
-  "suggest": "που συμβάλλει στην προστασία των δεδομένων σας",
-  "summary": "The hedge \"helps protect\" is rendered as a flat claim that the feature protects your data.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
   "current": "Προτάσεις Firefox",
   "dismissed_because": "",
   "fid": "a5de2c7ce92a",
@@ -549,30 +525,6 @@
   "string_id": "nova_onboarding_marketing_body_6",
   "suggest": "Βοηθήστε μας",
   "summary": "\"Βοηθήσετε μας\" is an incorrect verb form; the imperative is \"Βοηθήστε μας\".",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "Ένα πάτημα εμποδίζει τις εταιρείες",
-  "dismissed_because": "",
-  "fid": "2726e8550e48",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "el",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The source says one tap 'helps stop' companies spying. The Greek ('εμποδίζει', 'stops') turns that into an unconditional guarantee of protection the product does not make.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "c6467ec5",
-  "string_id": "onboarding_redesign_set_default_browser_body",
-  "suggest": "Ένα πάτημα βοηθά να εμποδίσετε τις εταιρείες",
-  "summary": "The hedge \"helps\" is dropped, so the Greek says one tap stops companies spying instead of helping to stop them.",
   "suppressed_by": ""
  },
  {

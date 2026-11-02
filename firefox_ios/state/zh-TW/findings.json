@@ -192,54 +192,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "B",
-  "check": "llm",
-  "current": "會自動封鎖讓大企業在網路上偷偷跟蹤您的程式",
-  "dismissed_because": "",
-  "fid": "2c00e63fcf47",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US makes a hedged claim (\"helps stop\"). The translation says the browser \"will automatically block\" tracking programs, which is a guarantee the product never made and a more specific description of how it works.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b15c8a76",
-  "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
-  "suggest": "能協助阻止大企業在網路上偷偷跟蹤您",
-  "summary": "\"helps stop companies from secretly following you\" is rendered as a promise that the browser automatically blocks the tracking programs.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "會自動封鎖讓大企業在網路上偷偷跟蹤您的程式",
-  "dismissed_because": "",
-  "fid": "eb3e9af0808d",
-  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US makes a hedged claim (\"helps stop\"). The translation says the browser \"will automatically block\" tracking programs, which is a guarantee the product never made and a more specific description of how it works.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b15c8a76",
-  "string_id": "Onboarding.Welcome.Description.v120",
-  "suggest": "能協助阻止大企業在網路上偷偷跟蹤您",
-  "summary": "\"helps stop companies from secretly following you\" is rendered as a promise that the browser automatically blocks the tracking programs.",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "開啟選項",
@@ -741,30 +693,6 @@
   "string_id": "Settings.Home.Option.Wallpaper.Accessibility.DefaultWallpaper.v99",
   "suggest": "預設的無圖案背景圖。",
   "summary": "\"Clear\" (plain/no-image wallpaper) is rendered as 明亮 (\"bright\"), describing a different wallpaper.",
-  "suppressed_by": ""
- },
- {
-  "category": "B",
-  "check": "llm",
-  "current": "不讓廣告商追蹤您的瀏覽行為",
-  "dismissed_because": "",
-  "fid": "47131bbe50bb",
-  "file": "Shared/en-US.lproj/Localizable.strings",
-  "first_seen": "2026-10-16",
-  "impact": 2,
-  "last_seen": "2026-10-16",
-  "locale": "zh-TW",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The en-US only says the feature helps stop tracking. 「不讓」(does not let) says tracking is fully prevented, which is a guarantee the source never makes.",
-  "reads_as_deliberate": true,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "330e8f6b",
-  "string_id": "Settings.TrackingProtection.ProtectionCellFooter",
-  "suggest": "協助阻止廣告商追蹤您的瀏覽行為",
-  "summary": "The hedged \"helps stop advertisers from tracking\" is turned into a flat claim that advertisers are prevented from tracking.",
   "suppressed_by": ""
  },
  {
