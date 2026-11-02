@@ -458,6 +458,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "%2$@ KB σε χρήση",
+  "dismissed_because": "",
+  "fid": "ed7809ea7397",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "el",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source and the developer comment both say the amounts are in gigabytes (\"1.0 of 5.0 GB used\"). With \"KB\", the screen tells the user their usage and monthly limit are a millionth of what they really are.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a6698e8e",
+  "string_id": "VPN.Settings.DataUsage.v160",
+  "suggest": "%2$@ GB σε χρήση",
+  "summary": "The unit is KB (kilobytes) instead of GB (gigabytes).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Μετάφραση σελίδας",
   "dismissed_because": "",
   "fid": "e5e02d308325",

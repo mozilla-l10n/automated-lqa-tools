@@ -1058,6 +1058,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "%2$@/%1$@ gigabayt kullanıldı",
+  "dismissed_because": "",
+  "fid": "5b62bbd0f220",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "tr",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says %1$@ is the amount used and %2$@ is the monthly limit. The visible version (VPN.Settings.DataUsage.v160) correctly writes %1$@/%2$@. This label puts the limit first, so it reads the wrong numbers aloud and doesn't match the screen.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c3c91a97",
+  "string_id": "VPN.Settings.DataUsage.AccessibilityLabel.v160",
+  "suggest": "%1$@/%2$@ gigabayt kullanıldı",
+  "summary": "The amount used and the monthly limit are swapped, so VoiceOver reads something like \"5.0/1.0 gigabytes used\" instead of \"1.0 of 5.0\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "%2$@ ile paylaşıldı",
   "dismissed_because": "",
   "fid": "6027f9c6a3ac",

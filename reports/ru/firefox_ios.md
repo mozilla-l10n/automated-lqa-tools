@@ -2,39 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ru: [android](android.md) · [firefox](firefox.md)
+Also for ru: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `VPN.Settings.LocationRecommended.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it stands for one recommended location shown as the value of the Location row.
-    - Current: `Рекомендуемые`
-    - Source: `Recommended`
-    - Suggest: `Рекомендуемое`
-    - The comment says this is the recommended location (a single choice). The plural adjective does not agree with "местоположение" and reads like a list category.
-- `VPN.LocationPicker.RecommendedMainText.v160` — `ru/firefox-ios.xliff` — "Рекомендуемые" is plural, but it is a single option in the location list (the recommended location).
-    - Current: `Рекомендуемые`
-    - Source: `Recommended`
-    - Suggest: `Рекомендуемое`
-    - This is one option that lets the app pick the fastest server location. It should agree with "местоположение" (neuter singular), as the subtitle "находит самое быстрое местоположение" does.
-- `VPN.Settings.LocationTitle.v160` — `ru/firefox-ios.xliff` — "Location" is translated as "Расположение", while the same screen and the other VPN strings use "местоположение".
-    - Current: `Расположение`
-    - Source: `Location`
-    - Suggest: `Местоположение`
-    - This string is the title of the location picker. On that same screen the strings say "Поиск местоположений…" and "находит самое быстрое местоположение", and onboarding also uses "местоположение VPN". The term should be the same throughout.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

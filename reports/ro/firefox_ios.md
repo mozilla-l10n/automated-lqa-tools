@@ -2,25 +2,34 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Strings reviewed this run** | 46 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ro: [android](android.md)
+Also for ro: [Firefox for Android](android.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `ro/firefox-ios.xliff` — "gigabiți" (gigabits) is used instead of gigabytes.
+    - Current: `gigabiți`
+    - Source: `%1$@ of %2$@ gigabytes used`
+    - Suggest: `gigaocteți`
+    - The source and comment say gigabytes (GB). "Gigabiți" means gigabits, a different unit, so VoiceOver reads out the wrong amount.
+- `VPN.Settings.Description.v160` — `ro/firefox-ios.xliff` — "în Wi-Fi publice" has a plural adjective with no noun to agree with; it needs "rețele".
+    - Current: `chiar și în Wi-Fi publice`
+    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi.`
+    - Suggest: `chiar și în rețele Wi-Fi publice`
+    - "Publice" is plural feminine, but "Wi-Fi" is not a plural noun it can agree with. The onboarding string already uses "rețelele Wi-Fi publice".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +53,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 46 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,18 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**46 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `ro/firefox-ios.xliff` — 17
-- `ro/firefox-ios.xliff` — 7
-- `ro/firefox-ios.xliff` — 2
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -79,7 +77,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `polish-double` 14 | **polish-double** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 2, `en` 2 | _mixed_ |
 
 ---
@@ -90,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (40)
+## 3. Open findings (42)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 21 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 2 | Wrong content (says something other than the English) | 22 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -180,6 +178,11 @@ _Nothing reported._
     - Source: `Learn more about Firefox Suggest`
     - Suggest: `despre Firefox Suggest`
     - The matching accessibility string Settings.Search.Accessibility.LearnAboutSuggestions.v124 keeps 'Firefox Suggest'. The product name should not be translated.
+- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `ro/firefox-ios.xliff` — "gigabiți" (gigabits) is used instead of gigabytes.
+    - Current: `gigabiți`
+    - Source: `%1$@ of %2$@ gigabytes used`
+    - Suggest: `gigaocteți`
+    - The source and comment say gigabytes (GB). "Gigabiți" means gigabits, a different unit, so VoiceOver reads out the wrong amount.
 - `DefaultBrowserOnboarding.Description2` — `ro/firefox-ios.xliff` — Step names a non-existent iOS settings item ("Set as default browser") instead of the Default Browser App setting.
     - Current: `Atinge Setează ca browser implicit`
     - Source: `2. Tap Default Browser App`
@@ -248,6 +251,11 @@ _Nothing reported._
     - Source: `Reduces ads and ad-related trackers. If a site looks broken, try turning this off.`
     - Suggest: `încearcă să dezactivezi`
     - The informal second-person imperative of „a încerca” is „încearcă”. „Încercă” is not a valid form.
+- `VPN.Settings.Description.v160` — `ro/firefox-ios.xliff` — "în Wi-Fi publice" has a plural adjective with no noun to agree with; it needs "rețele".
+    - Current: `chiar și în Wi-Fi publice`
+    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi.`
+    - Suggest: `chiar și în rețele Wi-Fi publice`
+    - "Publice" is plural feminine, but "Wi-Fi" is not a plural noun it can agree with. The onboarding string already uses "rețelele Wi-Fi publice".
 - `Downloads.CancelDialog.Message` — `ro/firefox-ios.xliff` — The verb „a renunța” is missing the preposition „la” it needs before its object.
     - Current: `să renunți această descărcare`
     - Source: `Are you sure you want to cancel this download?`

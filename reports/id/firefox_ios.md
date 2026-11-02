@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,932 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-30 @ `7f349c067169` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 41 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for id: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for id: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataLimitResetFooter.v160` — `id/firefox-ios.xliff` — 'Setel ulang' reads as an imperative telling the user to reset; the source says the data limit resets by itself.
+    - Current: `Setel ulang ke`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `Diatur ulang ke`
+    - The source 'Resets to %1$@ GB on the first of every month' says the free data resets automatically, as the developer comment explains. 'Setel ulang ke…' reads like a command or button label. The passive 'Diatur ulang' says it correctly and matches 'diatur ulang' in VPN.ReachedDataLimitPopup.AltPopupBody.v160.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,932 |
-| Missing strings | 41 |
+| Files | 98 |
+| Strings | 1,973 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,17 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**41 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `id/firefox-ios.xliff` — 17
-- `id/firefox-ios.xliff` — 4
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -80,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 4, `curly-single` 1 | **curly-double** |
 | apostrophe | `typographic` 1 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 2, `en` 2 | _mixed_ |
 
 ---
@@ -91,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (92)
+## 3. Open findings (93)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -112,7 +105,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 34 |
-| 3 | Degraded language (grammar, spelling, terminology) | 46 |
+| 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
@@ -215,6 +208,11 @@ _Also listed under their own category below._
     - Source: `Support %@ with occasional sponsored suggestions`
     - Suggest: `saran bersponsor sesekali`
     - en-US "occasional sponsored suggestions" means suggestions that appear now and then; "sesaat" means "for a moment/brief", which changes the meaning.
+- `VPN.Settings.DataLimitResetFooter.v160` — `id/firefox-ios.xliff` — 'Setel ulang' reads as an imperative telling the user to reset; the source says the data limit resets by itself.
+    - Current: `Setel ulang ke`
+    - Source: `Resets to %1$@ GB on the first of every month`
+    - Suggest: `Diatur ulang ke`
+    - The source 'Resets to %1$@ GB on the first of every month' says the free data resets automatically, as the developer comment explains. 'Setel ulang ke…' reads like a command or button label. The passive 'Diatur ulang' says it correctly and matches 'diatur ulang' in VPN.ReachedDataLimitPopup.AltPopupBody.v160.
 - `This action will clear all of your private data, including history from your synced devices.` — `id/firefox-ios.xliff` — "your synced devices" rendered without the possessive "Anda", dropping whose devices are meant.
     - Current: `termasuk riwayat dari perangkat yang tersinkronisasi`
     - Source: `This action will clear all of your private data, including history from your synced devices.`

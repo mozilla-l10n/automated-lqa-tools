@@ -746,6 +746,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "opnieuw ingesteld naar %1$@ GB",
+  "dismissed_because": "",
+  "fid": "eec995ef459e",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In Dutch a value is set 'op' a number (instellen op); 'naar' is a calque of English 'to'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d99f20d0",
+  "string_id": "VPN.Settings.DataLimitResetFooter.v160",
+  "suggest": "opnieuw ingesteld op %1$@ GB",
+  "summary": "Wrong preposition: 'opnieuw ingesteld naar' should be 'opnieuw ingesteld op'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "Over %1$@ vertellen telkens als u een koppeling op %2$@ deelt.",
   "dismissed_because": "",
   "fid": "f512b09404f2",

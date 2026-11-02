@@ -25,9 +25,14 @@
    "source": "%@ randomly selects users to test features, which improves quality for everyone.",
    "original": "%@ seleziona utenti in modo casuale per provare nuove funzionalità, contribuendo così a migliorare la qualità del browser per tutti.",
    "text": "%@ seleziona utenti in modo casuale per provare nuove funzionalità, contribuendo così a migliorare la qualità per tutti.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-10-30",
-   "comment": ""
+   "comment": "mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>\"del browser\" is added on purpose to provide better context</p>",
+   "dismissal": "Settings.Studies.Message.v148 @ Shared/Supporting Files/en-US.lproj/Settings.strings — pontoon-rejected (2026-10-30): rejected in Pontoon: mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>\"del browser\" is added on purpose to provide better context</p>",
+   "pontoon_pk": 12362082,
+   "pontoon_url": "https://pontoon.mozilla.org/it/firefox-for-ios/firefox-ios.xliff/?string=327498",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

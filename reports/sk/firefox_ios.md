@@ -2,29 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 55 of 1,973 |
+| **Strings reviewed this run** | 7 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for sk: [android](android.md) · [firefox](firefox.md)
+Also for sk: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimitResetFooter.v160` — `sk/firefox-ios.xliff` — Wrong case after "v prvý deň": it needs the genitive "každého mesiaca", not the nominative "každý mesiac".
-    - Current: `v prvý deň každý mesiac`
-    - Source: `Resets to %1$@ GB on the first of every month`
-    - Suggest: `v prvý deň každého mesiaca`
-    - In Slovak, "the first day of every month" puts "every month" in the genitive. The current text is ungrammatical.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

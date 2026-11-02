@@ -1056,6 +1056,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Setel ulang ke",
+  "dismissed_because": "",
+  "fid": "2af5d0d665ae",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "id",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source 'Resets to %1$@ GB on the first of every month' says the free data resets automatically, as the developer comment explains. 'Setel ulang ke…' reads like a command or button label. The passive 'Diatur ulang' says it correctly and matches 'diatur ulang' in VPN.ReachedDataLimitPopup.AltPopupBody.v160.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "277e9408",
+  "string_id": "VPN.Settings.DataLimitResetFooter.v160",
+  "suggest": "Diatur ulang ke",
+  "summary": "'Setel ulang' reads as an imperative telling the user to reset; the source says the data limit resets by itself.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "%1$@Dikirim dari %2$@",

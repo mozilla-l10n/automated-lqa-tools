@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 1,887 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-30 @ `7f349c067169` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 9 of 1,896 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
@@ -45,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,887 |
-| Missing strings | 86 |
+| Files | 98 |
+| Strings | 1,896 |
+| Missing strings | 77 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -60,20 +59,16 @@ _Nothing retired._
 
 ### Completeness
 
-**86 strings** are not translated yet, concentrated in:
+**77 strings** are not translated yet, concentrated in:
 
-- `sl/firefox-ios.xliff` — 36
+- `sl/firefox-ios.xliff` — 35
 - `sl/firefox-ios.xliff` — 18
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `sl/firefox-ios.xliff` — 9
-- `sl/firefox-ios.xliff` — 7
-- `sl/firefox-ios.xliff` — 2
+- `sl/firefox-ios.xliff` — 6
+- `sl/firefox-ios.xliff` — 5
 - `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
+- `sl/firefox-ios.xliff` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,7 +81,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `straight-double` 13, `curly-double` 2 | **straight-double** |
 | ellipsis | `char` 23 | **char** |
 | dash | `en` 10 | **en** |
-| register | `informal` 2, `formal` 64 | **formal** |
+| register | `informal` 2, `formal` 65 | **formal** |
 
 ---
 

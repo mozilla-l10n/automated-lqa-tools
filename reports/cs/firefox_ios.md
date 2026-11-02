@@ -2,29 +2,25 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 56 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for cs: [android](android.md) · [firefox](firefox.md)
+Also for cs: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `QuickActions.CombineWindows.Title.v155` — `cs/firefox-ios.xliff` — "Windows" was left in English with a capital W, so it reads as the Microsoft Windows brand instead of Firefox browser windows.
-    - Current: `Sloučit Windows`
-    - Source: `Combine Windows`
-    - Suggest: `Sloučit okna`
-    - The developer comment says this action merges the tabs from all other open Firefox windows into the current window. "Windows" here is an ordinary noun and should be the Czech "okna". As written, the label reads as "Merge Windows" in the sense of the operating system.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

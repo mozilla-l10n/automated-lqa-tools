@@ -2,29 +2,28 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-26 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `7f349c067169` |
-| **Previous run** | 2026-10-19 @ `ec61063c1c68` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
+| **Previous run** | 2026-10-26 @ `7f349c067169` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 50 of 1,973 |
+| **Strings reviewed this run** | 13 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for fr: [android](android.md) · [firefox](firefox.md)
+Also for fr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — The English word “Access” is left untranslated and reads as a product name.
-    - Current: `Access est réinitialisé le mois prochain`
-    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
-    - Suggest: `L’accès est réinitialisé le mois prochain`
-    - “Access resets next month” means the user’s access to the VPN resets. Leaving the English word in, with no article, is a mistranslation that reads like a brand name in French.
+_No new findings._
+
+### ✅ Fixed since the last run (3)
+
 - `VPN.LocationPicker.FindingLocationsText.v160` — `fr/firefox-ios.xliff` — VPN server locations are called “lieux” here but “emplacement(s)” everywhere else in the same group.
     - Current: `Recherche de lieux…`
     - Source: `Finding Locations…`
@@ -35,19 +34,11 @@ Also for fr: [android](android.md) · [firefox](firefox.md)
     - Source: `%1$@ of %2$@ gigabytes used`
     - Suggest: `%1$@ sur %2$@ gigaoctets utilisés`
     - The developer comment says this is the same as the visible text but with “gigabytes” written out instead of the abbreviation, for VoiceOver.
-
-### ✅ Fixed since the last run (2)
-
-- `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — The English word order is copied, so the title reads "Safari Importation terminée", which isn't grammatical French.
-    - Current: `%@ Importation terminée`
-    - Source: `%@ Import Complete`
-    - Suggest: `Importation depuis %@ terminée`
-    - %@ is the name of the other browser. In French a noun can't sit in front of "Importation" like this. The title needs a preposition so it reads "import from Safari complete".
-- `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — "%@ importé" puts the date before the participle, so the folder name says the date was imported rather than that the bookmarks were imported on that date.
-    - Current: `%@ importé`
-    - Source: `Imported %@`
-    - Suggest: `Importé le %@`
-    - The comment says %@ is the import date. "12/03/2026 importé" means "imported 12/03/2026" in the sense of the date being the thing imported. French needs "Importé le <date>".
+- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — The English word “Access” is left untranslated and reads as a product name.
+    - Current: `Access est réinitialisé le mois prochain`
+    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
+    - Suggest: `L’accès est réinitialisé le mois prochain`
+    - “Access resets next month” means the user’s access to the VPN resets. Leaving the English word in, with no article, is a mistranslation that reads like a brand name in French.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -91,11 +82,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 371 | **typographic** |
+| apostrophe | `typographic` 373 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
 | nbsp | `total` 164, `before-punctuation` 98 | _mixed_ |
-| register | `formal` 326 | **formal** |
+| register | `formal` 329 | **formal** |
 
 ---
 
@@ -105,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (49)
+## 3. Open findings (46)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -231,11 +222,6 @@ _Nothing in this category._
     - Source: `Note: Summarization can make errors.`
     - Suggest: `la synthèse automatique peut faire des erreurs`
     - The source disclaims the summarization process, not the specific output; the French wording asserts something slightly different about the product's output.
-- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — The English word “Access” is left untranslated and reads as a product name.
-    - Current: `Access est réinitialisé le mois prochain`
-    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
-    - Suggest: `L’accès est réinitialisé le mois prochain`
-    - “Access resets next month” means the user’s access to the VPN resets. Leaving the English word in, with no article, is a mistranslation that reads like a brand name in French.
 - `Open Last Bookmark` — `fr/firefox-ios.xliff` — The action verb "Open" is dropped, leaving only a noun phrase instead of an action label.
     - Current: `Dernier marque-page`
     - Source: `Open Last Bookmark`
@@ -357,16 +343,6 @@ _Nothing in this category._
     - Source: `Show suggestions from Firefox Suggest in private sessions`
     - Suggest: `Afficher les suggestions de Firefox suggère dans les sessions privées`
     - Settings.Search.Suggest.AddressBarSetting.Title.v124, Settings.Search.Suggest.LearnAboutSuggestions.v124 and Settings.Search.Accessibility.LearnAboutSuggestions.v124 all use "Firefox suggère" for the same product name on the same screen; one of the two renderings is inconsistent.
-- `VPN.LocationPicker.FindingLocationsText.v160` — `fr/firefox-ios.xliff` — VPN server locations are called “lieux” here but “emplacement(s)” everywhere else in the same group.
-    - Current: `Recherche de lieux…`
-    - Source: `Finding Locations…`
-    - Suggest: `Recherche d’emplacements…`
-    - The same term, VPN server location, is rendered “Emplacement” (LocationTitle) and “emplacement” (RecommendedSubText, Onboarding) on the screen this text belongs to. The two words should match.
-- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `fr/firefox-ios.xliff` — The VoiceOver label uses the abbreviation “Go”, but the comment asks for the unit written out.
-    - Current: `%1$@ sur %2$@ Go utilisés`
-    - Source: `%1$@ of %2$@ gigabytes used`
-    - Suggest: `%1$@ sur %2$@ gigaoctets utilisés`
-    - The developer comment says this is the same as the visible text but with “gigabytes” written out instead of the abbreviation, for VoiceOver.
 - `Summarizer.Error.Unknown.Message.v142` — `fr/firefox-ios.xliff` — "summarizing" is translated as « synthèse » here while every other string in the same feature uses « résumé ».
     - Current: `Erreur lors de la synthèse de la page.`
     - Source: `Error summarizing page. Try again later.`
@@ -397,8 +373,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (4)
+### Fixed to date (7)
 
+- `VPN.LocationPicker.FindingLocationsText.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — fixed 2026-10-26
 - `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — fixed 2026-10-26
 - `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — fixed 2026-10-17

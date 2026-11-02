@@ -1466,6 +1466,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "接続先を探す…",
+  "dismissed_because": "",
+  "fid": "e5f3b5574e59",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Per the developer comment this is shown while the app is loading the location list; en-US \"Finding Locations…\" is an in-progress status, but 探す reads as an action/button label rather than an ongoing process.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ce8685b6",
+  "string_id": "VPN.LocationPicker.FindingLocationsText.v160",
+  "suggest": "接続先を検索中…",
+  "summary": "Loading-status text is rendered as a plain action verb (\"find locations\") instead of a progressive status.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "このアカウントに接続された端末が見つかりませんでした。",
   "dismissed_because": "",
   "fid": "bfd4db2d06c0",

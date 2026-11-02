@@ -37,3 +37,4 @@ Onboarding.Welcome.Title.v114 — “Benvenuti” is inclusive and shorter than 
 Open articles in Reader View by tapping the book icon when it appears in the title bar. — False positive (“book” is there)
 Settings.Homepage.Shortcuts.ToggleOff.v100  — Refers to the section.
 HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday — Correct as is
+Settings.Studies.Message.v148 @ Shared/Supporting Files/en-US.lproj/Settings.strings — pontoon-rejected (2026-10-30): rejected in Pontoon: mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>"del browser" is added on purpose to provide better context</p>

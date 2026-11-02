@@ -144,6 +144,14 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "389710c4 a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "f8fcf016 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "a420ca76 41cd3e20 600d26c1",
+  "BrowserDataTransfer.ImportedBookmarksFolder.Title.v160": "ea54c926 ebb4f638 a0508270",
+  "BrowserDataTransfer.Settings.ExportButton.v160": "8bb9982b 7d444a32 84e6b1a9",
+  "BrowserDataTransfer.Settings.ImportButton.v160": "76fc537e 96bd6fd2 0e637a01",
+  "BrowserDataTransfer.Settings.SectionTitle.v160": "1452dc9a a5b72aca 84ba8d13"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "04e9d4fb a6d5aa3e 22850307"
  },
@@ -604,7 +612,8 @@
   "NativeErrorPage.Wayback.Error.Search.v155": "7176b018 50fdc79d f60b10a8",
   "NativeErrorPage.Wayback.Error.SearchWayback.v155": "b49b6219 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "100292fe 09fe4418 225e49a3",
-  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "62c3f0c7 5c853c83 41cb4c56"
+  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "62c3f0c7 5c853c83 41cb4c56",
+  "VPN.ErrorPage.Title.v160": "d1a575b9 155c43d9 34e6d123"
  },
  "Shared/Supporting Files/en-US.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "b5dedf11 e38877e5 1d128de3"
@@ -778,7 +787,8 @@
   "Onboarding.Welcome.Link.Action.v114": "181e50bc e22c5bd6 68ce2114",
   "Onboarding.Welcome.Skip.v114": "b175ffbb dfb31eca 2527904c",
   "Onboarding.Welcome.Title.TreatementA.v120": "1640d8ea 8edee85e 42b6b9a4",
-  "Onboarding.Welcome.Title.v114": "9640e700 309cad48 42b6b9a4"
+  "Onboarding.Welcome.Title.v114": "9640e700 309cad48 42b6b9a4",
+  "VPN.Onboarding.Title.v160": "479e53e3 0996c1bd 414c90a4"
  },
  "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings": {
   "PasswordAutofill.LoginListCellNoUsername.v129": "8368aea1 00ac2900 5441cc20",
@@ -814,6 +824,7 @@
  },
  "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
   "QuickAnswers.AccessibilityLabels.Close.v158": "f8fcf016 0e7c6115 41e2a5cf",
+  "QuickAnswers.ContentView.AboutYourPrivacy.v158": "49631331 7533760f 5a1b1589",
   "QuickAnswers.Errors.Cancel.v158": "a0d733a1 871d661d 584c7ac2",
   "QuickAnswers.Errors.OK.v158": "eab6c12f 322b41af 2a812743",
   "QuickAnswers.Errors.OpenSettings.v158": "b3739639 bec9f5cb 96ff3dfe",
