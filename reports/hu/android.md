@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
 | **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hu: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for hu: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `download_item_source_data` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The protocol name "data" (from the data: URL scheme) is translated as the common noun "adatok".
+    - Current: `(adatok)`
+    - Source: `(data)`
+    - Suggest: `(data)`
+    - The developer comment says "data" refers to the data: URL scheme. That is a technical identifier shown in place of a website name, so like other protocol names it should stay untranslated.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (130)
+## 3. Open findings (131)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 66 |
+| 2 | Wrong content (says something other than the English) | 67 |
 | 3 | Degraded language (grammar, spelling, terminology) | 57 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -287,6 +290,11 @@ _Nothing in this category._
     - Source: `Set up a device lock pattern, PIN, or password to protect your saved payment methods from being accessed if someone else has your device.`
     - Suggest: `hogy megvédje a mentett fizetési módjait az illetéktelen hozzáféréstől, ha valaki más kezébe kerül az eszköze`
     - The source means protecting the data from being accessed by someone who has the device; the Hungarian reads as protecting the payment methods in case someone accesses the device, dropping what they are protected from.
+- `download_item_source_data` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The protocol name "data" (from the data: URL scheme) is translated as the common noun "adatok".
+    - Current: `(adatok)`
+    - Source: `(data)`
+    - Suggest: `(data)`
+    - The developer comment says "data" refers to the data: URL scheme. That is a technical identifier shown in place of a website name, so like other protocol names it should stay untranslated.
 - `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — The Hungarian adds "is" ("also"), which is not in the source.
     - Current: `hogy megakadályozza a feltételezett ujjlenyomat-készítőket is.`
     - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
@@ -397,12 +405,7 @@ _Nothing in this category._
     - Source: `Suggestions from sponsors`
     - Suggest: `Javaslatok szponzoroktól`
     - The source names the source of the suggestions (sponsors), parallel to "Suggestions from %1$s" which is correctly rendered as "Javaslatok a következőtől: %1$s".
-- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Source says Firefox will improve features, performance and stability; the target says it will install modifications affecting them.
-    - Current: `A Firefox funkciókat, teljesítményt és stabilitást érintő módosításokat fog telepíteni a frissítések között.`
-    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
-    - Suggest: `A Firefox javítja a funkciókat, a teljesítményt és a stabilitást a frissítések között.`
-    - "improve features, performance, and stability" is not "install modifications affecting …"; the meaning is altered.
-- _…and 7 more; see `state/` for the full list._
+- _…and 8 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

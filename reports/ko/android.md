@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ko: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for ko: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The loading-indicator description is translated as the action "Add signature" instead of the in-progress state "Adding signature".
+    - Current: `서명 추가`
+    - Source: `Adding signature`
+    - Suggest: `서명 추가 중`
+    - The developer comment says this is read by screen readers for a loading indicator while a signature is being added. "서명 추가" sounds like a button label, not an ongoing operation.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -86,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (81)
 
 > **Reads as a deliberate edit (7).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -132,7 +135,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 39 |
-| 3 | Degraded language (grammar, spelling, terminology) | 33 |
+| 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -306,6 +309,11 @@ _Nothing in this category._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Firefox를 발견한 방법과 Firefox를 사용한다는 사실을`
     - The source shares only the fact of use. The Korean claims usage behaviour is shared with Mozilla's marketing partners, and the developer comment stresses that data practices stay the same.
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The loading-indicator description is translated as the action "Add signature" instead of the in-progress state "Adding signature".
+    - Current: `서명 추가`
+    - Source: `Adding signature`
+    - Suggest: `서명 추가 중`
+    - The developer comment says this is read by screen readers for a loading indicator while a signature is being added. "서명 추가" sounds like a button label, not an ongoing operation.
 - `preference_enhanced_tracking_protection_custom_cookies_4` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "will cause websites to break" is softened to "may break" (깨질 수 있음), copying the wording of the third-party cookies option.
     - Current: `웹 사이트가 깨질 수 있음`
     - Source: `All cookies (will cause websites to break)`

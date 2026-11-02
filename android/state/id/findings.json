@@ -2168,7 +2168,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "id",
   "origin": {},
   "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -2731,6 +2731,30 @@
   "string_id": "preference_enhanced_tracking_protection_custom_tracking_content",
   "suggest": "Konten pelacak",
   "summary": "\"Tracking content\" is translated as \"Pelacakan konten\" (tracking of content) instead of content that tracks.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Puncak",
+  "dismissed_because": "",
+  "fid": "eb3504833e59",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "id",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this option puts the search bar at the top of the homepage. In Indonesian, \"Puncak\" means a summit or climax, not a position on screen. It also doesn't pair with the sibling option \"Tengah\" (middle). The usual positional word in the UI is \"Atas\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "eaa70f43",
+  "string_id": "preference_homepage_search_location_top",
+  "suggest": "Atas",
+  "summary": "\"Top\" as a screen position is rendered as \"Puncak\" (summit/peak) instead of the positional \"Atas\".",
   "suppressed_by": ""
  },
  {

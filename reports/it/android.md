@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
 | **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,18 @@ Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
+    - Current: `Raggruppato`
+    - Source: `Collapsed`
+    - Suggest: `Compresso`
+    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
+- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
+    - Current: `%1$s, raggruppato`
+    - Source: `%1$s, collapsed`
+    - Suggest: `%1$s, compresso`
+    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,10 +83,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 22 | **curly-double** |
-| apostrophe | `typographic` 170 | **typographic** |
+| apostrophe | `typographic` 171 | **typographic** |
 | ellipsis | `char` 23 | **char** |
 | dash | `em` 2 | **em** |
-| register | `informal` 89, `formal` 4 | **informal** |
+| register | `informal` 91, `formal` 4 | **informal** |
 
 ---
 
@@ -88,13 +96,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 2 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -104,7 +112,16 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
+    - Current: `Raggruppato`
+    - Source: `Collapsed`
+    - Suggest: `Compresso`
+    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
+- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
+    - Current: `%1$s, raggruppato`
+    - Source: `%1$s, collapsed`
+    - Suggest: `%1$s, compresso`
+    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
 
 ### C. Grammar, agreement & spelling
 

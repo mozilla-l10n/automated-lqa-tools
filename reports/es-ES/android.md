@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,483 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for es-ES: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -47,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 43 |
 | Strings | 2,483 |
-| Missing strings | 70 |
+| Missing strings | 100 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -64,12 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**70 strings** are not translated yet, concentrated in:
+**100 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 43
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 57
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rES/strings.xml` — 8
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — 3
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rES/strings.xml` — 1
 
 **Files absent from the locale:**
 

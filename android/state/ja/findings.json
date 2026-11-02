@@ -1688,7 +1688,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "ja",
   "origin": {},
   "rationale": "ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
@@ -2227,6 +2227,30 @@
   "string_id": "pbm_authentication_leave_private_tabs",
   "suggest": "プライベートタブを終了",
   "summary": "\"Leave private tabs\" is rendered as \"プライベートモードを終了\" (exit private mode) instead of referring to private tabs.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "署名を追加します",
+  "dismissed_because": "",
+  "fid": "e4574a5d0f03",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "According to the developer comment, this is read for a loading indicator while a signature is being added. 「追加します」 sounds like an announcement or instruction, while 「追加中」 states that the work is in progress, which matches \"Adding signature\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "423a11fa",
+  "string_id": "pdf_tools_signature_adding_content_description",
+  "suggest": "署名を追加中",
+  "summary": "The loading-indicator description uses the plain verb form 「追加します」 (\"will add\"), but the string describes an action already in progress.",
   "suppressed_by": ""
  },
  {

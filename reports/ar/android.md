@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,390 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 1 of 2,391 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ar: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -46,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 42 |
-| Strings | 2,390 |
-| Missing strings | 163 |
+| Strings | 2,391 |
+| Missing strings | 192 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -64,14 +63,14 @@ _Nothing retired._
 
 ### Completeness
 
-**163 strings** are not translated yet, concentrated in:
+**192 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 114
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 23
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 127
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 2
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
 

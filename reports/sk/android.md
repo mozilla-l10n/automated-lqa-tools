@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 51 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for sk: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -23,9 +22,13 @@ Also for sk: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `preferences_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Privacy report" is translated as "ochrane osobných údajov" in the category header but as "ochrane súkromia" in the toggle directly under it.
+    - Current: `Správa o ochrane osobných údajov`
+    - Source: `Privacy report`
+    - Suggest: `Správa o ochrane súkromia`
+    - The header and the toggle (preferences_privacy_report_title) name the same feature on the same screen. "Ochrana osobných údajov" means personal data protection, not privacy, so the two labels don't match.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -88,14 +91,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (49)
+## 3. Open findings (48)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 26 |
-| 3 | Degraded language (grammar, spelling, terminology) | 20 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -322,11 +325,6 @@ _Nothing reported._
     - Source: `Switched to the recommended location.`
     - Suggest: `Prepnuté na odporúčanú lokalitu.`
     - The same phrase "Switched to the recommended location" is translated "Prepnuté na odporúčanú lokalitu" in ip_protection_location_selection_reset_snackbar; the VPN surface consistently uses "lokalita".
-- `preferences_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Privacy report" is translated as "ochrane osobných údajov" in the category header but as "ochrane súkromia" in the toggle directly under it.
-    - Current: `Správa o ochrane osobných údajov`
-    - Source: `Privacy report`
-    - Suggest: `Správa o ochrane súkromia`
-    - The header and the toggle (preferences_privacy_report_title) name the same feature on the same screen. "Ochrana osobných údajov" means personal data protection, not privacy, so the two labels don't match.
 - `trackers_blocked_panel_num_trackers_blocked_this_week_2` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — The 'many' and 'other' forms say 'sledovacích zariadení' (tracking devices), not 'sledovacích prvkov' (trackers).
     - Current: `bolo zablokovaných %1$d sledovacích zariadení`
     - Source: `{$quantity ->} [one] %1$d tracker blocked this week [other] %1$d trackers blocked this week`
@@ -376,6 +374,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `preferences_privacy_report` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — fixed 2026-11-02
 - `search_settings_menu_item` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — fixed 2026-10-26

@@ -608,7 +608,7 @@
   "file": "mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "de",
   "origin": {},
   "rationale": "The locale's quote convention is `german-double` (22 occurrences).",
@@ -1364,6 +1364,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "Diese Grafik konnte nicht geladen werden",
+  "dismissed_because": "",
+  "fid": "017d3e4c63ad",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 4,
+  "last_seen": "2026-11-02",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source \"Couldn’t load this image.\" ends with a full stop, and this snackbar message is a complete sentence.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "14c86a12",
+  "string_id": "lens_camera_image_load_failed_v2",
+  "suggest": "Diese Grafik konnte nicht geladen werden.",
+  "summary": "The full stop at the end of the source sentence is missing.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Wählen Sie eine Grafik aus",
@@ -1601,6 +1625,30 @@
   "string_id": "pbm_authentication_leave_private_tabs",
   "suggest": "Private Tabs verlassen",
   "summary": "\"Leave private tabs\" (exit private browsing) is rendered as \"Private Tabs belassen\" (leave them as they are).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Signatur hinzufügen",
+  "dismissed_because": "",
+  "fid": "bfb18f81fc4b",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says this describes a loading indicator while a signature is being added. The infinitive \"Signatur hinzufügen\" reads like a button for the screen-reader user, when it should say the action is in progress.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bc48fafb",
+  "string_id": "pdf_tools_signature_adding_content_description",
+  "suggest": "Signatur wird hinzugefügt",
+  "summary": "The loading-indicator description is translated as an action label (\"Add signature\") instead of a status in progress.",
   "suppressed_by": ""
  },
  {
