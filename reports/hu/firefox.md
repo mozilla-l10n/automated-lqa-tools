@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 126 of 16,718 |
+| **Strings reviewed this run** | 24 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,13 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `downloads-unblock-insecure` — `browser/browser/downloads.ftl` — The accusative object "dokumentumot" is combined with the passive "lett kézbesítve", which is ungrammatical.
-    - Current: `az aktuális dokumentumot biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
-    - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
-    - Suggest: `az aktuális dokumentum biztonságos HTTPS-kapcsolaton keresztül lett kézbesítve`
-    - The "lett + -va/-ve" passive needs a subject in the nominative ("dokumentum"). The other option is the active form "a dokumentumot … kézbesítették". Mixing the two is a grammar error.
-- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — "beállítás" is the noun "setting", not the participle "set/assigned" the source needs.
-    - Current: `(beállítás a macOS billentyűzetbeállításaiban) [other] (beállítás a rendszer billentyűzetbeállításaiban)`
-    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
-    - Suggest: `(beállítva a macOS billentyűzetbeállításaiban) [other] (beállítva a rendszer billentyűzetbeállításaiban)`
-    - The comment says "set" means "assigned". The label states that the shortcut was assigned in the system settings. The noun form reads as "(setting in the keyboard settings)" instead of "(set in …)".
-- `clear-time-duration-value-all-time` — `browser/browser/sanitize.ftl` — "Bármikor" means "at any time", not "All time" (the entire history range).
-    - Current: `Bármikor`
-    - Source: `label: All time`
-    - Suggest: `Teljes időtartam`
-    - In the clear-data time range selector, "All time" means the whole history. "Bármikor" (anytime/whenever) does not say that.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — “Add shortcut” is translated as “Add launcher icon”.
-    - Current: `Indítóikon hozzáadása`
-    - Source: `placeholder: Add shortcut`
-    - Suggest: `Gyorsbillentyű hozzáadása`
-    - In this file “shortcut” means a keyboard shortcut (“gyorsbillentyű”), not a desktop/launcher icon.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -63,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,718 |
-| Missing strings | 24 |
+| Strings | 16,742 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -81,18 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**24 strings** are not translated yet, concentrated in:
-
-- `browser/browser/aboutLogins.ftl` — 9
-- `browser/browser/newtab/newtab.ftl` — 5
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/preferences/moreFromMozilla.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/branding/brandings.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -102,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 809, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 399, `ascii` 4 | **char** |
+| ellipsis | `char` 400, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 134 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -1226,7 +1197,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 399 times against 4 ASCII runs.
+    - The tree uses … 400 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1251,15 +1222,15 @@ _Also listed under their own category below._
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 399 times against 4 ASCII runs.
+    - The tree uses … 400 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 399 times against 4 ASCII runs.
+    - The tree uses … 400 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 399 times against 4 ASCII runs.
+    - The tree uses … 400 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`

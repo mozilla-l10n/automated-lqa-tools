@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — The Czech says the agent failed to verify a signature, not that the agent's own signature failed verification.
-    - Current: `se agentu { $agent } nepodařilo ověřit podpis`
-    - Source: `File was blocked because { $agent } failed signature verification.`
-    - Suggest: `podpis agenta { $agent } neprošel ověřením`
-    - The string ID (invalid-agent-signature) shows that the agent's own signature is invalid. The Czech makes the agent the one doing the verifying, so it describes a different error.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -90,22 +86,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (254)
+## 3. Open findings (253)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
-    - Current: `Skryjte při prohlížení svou polohu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
-    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 124 |
+| 2 | Wrong content (says something other than the English) | 123 |
 | 3 | Degraded language (grammar, spelling, terminology) | 65 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -440,11 +427,6 @@ _Also listed under their own category below._
     - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
     - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
     - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" is dropped, so the text promises outright to hide the user's location.
-    - Current: `Skryjte při prohlížení svou polohu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomozte si při prohlížení skrýt svou polohu.`
-    - The source deliberately says the VPN only helps hide the location. "Skryjte svou polohu" states it as a guarantee the product does not give.
 - `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — "pick them up again" (resume/reuse the searches) is rendered as "znovu obnovit" (restore again), and the number disagrees with the pronoun.
     - Current: `Nedávné vyhledávání se zobrazí zde, takže je můžete kdykoli znovu obnovit.`
     - Source: `Recent searches will show here so you can pick them up again anytime.`

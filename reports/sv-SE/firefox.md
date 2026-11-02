@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `reset-pbm-panel-description3` — `browser/browser/browser.ftl` — Plural "Private Windows" is rendered with singular possessive "Ditt", so it says only one private window closes.
-    - Current: `Ditt privata fönster stängs`
-    - Source: `This clears your history and cookies, and signs you out of sites. Your Private Windows will close, and a fresh one will open.`
-    - Suggest: `Dina privata fönster stängs`
-    - The en-US says all Private Windows will close. "fönster" is the same in singular and plural, so the possessive sets the number, and singular "Ditt" means one window.
-- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — Wrong word order in a main clause: the negation comes before the finite verb.
-    - Current: `tillägg inte kan verifieras`
-    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
-    - Suggest: `tillägg kan inte verifieras`
-    - Swedish main clauses put the verb second, so the finite verb 'kan' must come before 'inte'. The current order is only correct in a subordinate clause.
-- `customkeys-key-system-assigned` — `browser/browser/customkeys.ftl` — A compound with a proper name is written as two words instead of being hyphenated.
-    - Current: `macOS tangentbordsinställningar`
-    - Source: `{$sel_1 ->} [macos] (set in macOS keyboard settings) [other] (set in your system’s keyboard settings)`
-    - Suggest: `macOS-tangentbordsinställningar`
-    - In Swedish, a compound whose first part is a name is joined with a hyphen (or written with the genitive 'macOS:s'). Writing it as two separate words is a spelling error.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -99,22 +85,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (338)
+## 3. Open findings (337)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
-    - Current: `Dölj din plats när du surfar.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Hjälp till att dölja din plats när du surfar.`
-    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 99 |
+| 2 | Wrong content (says something other than the English) | 98 |
 | 3 | Degraded language (grammar, spelling, terminology) | 8 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -436,11 +413,6 @@ _Also listed under their own category below._
     - Source: `By choosing Anthropic Claude, you agree to the Anthropic <a data-l10n-name="link1">Consumer Terms of Service</a>, <a data-l10n-name="link2">Usage Policy</a>, and <a data-l10n-name="link3">Privacy Policy</a>.`
     - Suggest: `Genom att välja Anthropic Claude godkänner du`
     - The same brand is spelled correctly in genai-onboarding-claude-tooltip ("Anthropic Claude"); brand names must not be altered.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — "Help hide your location" is rendered as a plain "Hide your location", which turns a hedged claim into a guarantee.
-    - Current: `Dölj din plats när du surfar.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Hjälp till att dölja din plats när du surfar.`
-    - The en-US says the VPN *helps* hide the user's location. The Swedish drops the hedge and promises that the location is hidden, a protection the product does not claim to give.
 - `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — Administrative "Department" rendered as an organizational division
     - Current: `Avdelning`
     - Source: `Department`

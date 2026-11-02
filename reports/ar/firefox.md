@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 56 of 13,537 |
+| **Strings reviewed this run** | 0 of 13,537 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,9 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `process-hang-stop-button` — `browser/browser/browser.ftl` — Access key `S` of `process-hang-stop-button` is not present in its label
-    - Current: `S`
-    - Source: `accesskey: S label: Stop`
-    - The label is “أوقِف”. An access key not in the label cannot be underlined and is unreachable by keyboard.
-- `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — "One or more" add-ons is rendered as "one of" the add-ons, so the plural case is lost; the masculine أحد is also wrong with the feminine noun الإضافات.
-    - Current: `تعذّر التحقق من أحد الإضافات المثبتة لذا عُطّلت.`
-    - Source: `One or more installed add-ons cannot be verified and have been disabled.`
-    - Suggest: `تعذّر التحقق من إضافة مثبّتة واحدة أو أكثر لذا عُطّلت.`
-    - The en-US says "One or more installed add-ons". The Arabic only mentions one add-on, so it is wrong whenever several add-ons are disabled. أحد should also be إحدى to agree with the feminine noun.
-- `downloads-blocked-malware` — `browser/browser/downloads.ftl` — "malware" is translated as "spyware" (برنامج تجسس).
-    - Current: `فيروس أو برنامج تجسس`
-    - Source: `This file contains a virus or malware.`
-    - Suggest: `فيروس أو برمجية خبيثة`
-    - The en-US says "virus or malware". برنامج تجسس means spyware, which is narrower than malware. The locale renders malware elsewhere as برمجية خبيثة.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

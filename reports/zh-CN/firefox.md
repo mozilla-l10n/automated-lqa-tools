@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 79 of 16,230 |
+| **Strings reviewed this run** | 0 of 16,230 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — "failed signature verification" is rendered as "failed to perform signature verification" rather than "did not pass signature verification".
-    - Current: `未能进行签名验证`
-    - Source: `File was blocked because { $agent } failed signature verification.`
-    - Suggest: `未通过签名验证`
-    - The en-US means the agent's signature was checked and found invalid. "未能进行签名验证" says instead that the verification could not be carried out. That is a different error condition.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 13,893 |
+| **Strings reviewed this run** | 0 of 13,893 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `downloads-blocked-potentially-unwanted` — `browser/browser/downloads.ftl` — Misspelling of "mungkin" as "meungkin".
-    - Current: `meungkin`
-    - Source: `This file may harm your computer.`
-    - Suggest: `mungkin`
-    - "meungkin" is not an Indonesian word; the correct spelling of "may/might" is "mungkin".
-- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — "helpful" is translated as "penting" (important) instead of "helpful/useful".
-    - Current: `unduhan yang penting`
-    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
-    - Suggest: `unduhan yang bermanfaat`
-    - The en-US says the file is disguised as a helpful download, but "penting" means important. The intended meaning is that it pretends to be useful.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

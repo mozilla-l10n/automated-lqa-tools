@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `credit-card-save-payment-method-doorhanger-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Ungrammatical phrase "para agilizar finalizar compras" puts two infinitives side by side.
-    - Current: `para agilizar finalizar compras`
-    - Source: `{ -brand-short-name } encrypts and autofills your payment details for faster checkout.`
-    - Suggest: `para agilizar a finalização de compras`
-    - The verb 'agilizar' needs a noun object here, not a bare infinitive. The English 'for faster checkout' is better rendered as 'para agilizar a finalização de compras'.
-- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "pernanecem" is misspelled; it should be "permanecem".
-    - Current: `pernanecem`
-    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
-    - Suggest: `permanecem`
-    - The verb "permanecer" (stay/remain) is misspelled. The meaning matches the en-US "It stays yours", so only the spelling is wrong.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

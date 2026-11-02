@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 16,708 |
+| **Strings reviewed this run** | 24 of 16,732 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,13 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
-    - Current: `en blader om de pagina opnieuw te tonen.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
-    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
-- `permissions-site-notification-closed-delivery-label` — `browser/browser/preferences/permissions.ftl` — 'wordt gesloten' means 'is being closed' (the act of closing), not 'is closed' (the state).
-    - Current: `wanneer { -brand-short-name } wordt gesloten`
-    - Source: `label: Allow website notifications when { -brand-short-name } is closed`
-    - Suggest: `wanneer { -brand-short-name } gesloten is`
-    - The setting is about delivering notifications while the browser is closed, as the developer comment confirms. The passive 'wordt gesloten' describes the moment the browser is closed instead.
+- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The product brand name "Firefox Enterprise" has been translated into Dutch.
+    - Current: `Firefox voor Ondernemingen`
+    - Source: `Firefox Enterprise`
+    - Suggest: `Firefox Enterprise`
+    - -firefox-enterprise-brand-name is a brand term, and Mozilla product names stay in English. "Firefox voor Ondernemingen" turns it into a description rather than the product's name. It then shows up that way wherever the term is used, such as the More from Mozilla card.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,708 |
-| Missing strings | 34 |
+| Strings | 16,732 |
+| Missing strings | 10 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -72,18 +67,10 @@ _Nothing retired._
 
 ### Completeness
 
-**34 strings** are not translated yet, concentrated in:
+**10 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aboutLogins.ftl` — 9
 - `browser/browser/preferences/preferences.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 5
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/preferences/moreFromMozilla.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/branding/brandings.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -95,10 +82,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 823, `straight-double` 25, `curly-double` 9 | **curly-single** |
 | apostrophe | `typographic` 1044 | **typographic** |
-| ellipsis | `char` 399 | **char** |
+| ellipsis | `char` 400 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2769 | **formal** |
+| register | `formal` 2779 | **formal** |
 
 ---
 
@@ -108,13 +95,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (347)
+## 3. Open findings (348)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 118 |
+| 2 | Wrong content (says something other than the English) | 119 |
 | 3 | Degraded language (grammar, spelling, terminology) | 192 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
@@ -321,7 +308,7 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- _…and 60 more; see `state/` for the full list._
+- _…and 61 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

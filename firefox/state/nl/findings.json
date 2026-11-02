@@ -11534,6 +11534,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Firefox voor Ondernemingen",
+  "dismissed_because": "",
+  "fid": "83b5fd8675ef",
+  "file": "toolkit/toolkit/branding/brandings.ftl",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "-firefox-enterprise-brand-name is a brand term, and Mozilla product names stay in English. \"Firefox voor Ondernemingen\" turns it into a description rather than the product's name. It then shows up that way wherever the term is used, such as the More from Mozilla card.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a0a921d6",
+  "string_id": "-firefox-enterprise-brand-name",
+  "suggest": "Firefox Enterprise",
+  "summary": "The product brand name \"Firefox Enterprise\" has been translated into Dutch.",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "legacy",
   "current": "",

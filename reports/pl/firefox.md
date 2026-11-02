@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 192 of 16,730 |
+| **Strings reviewed this run** | 15 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for pl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — Misspelling "zaznaczenu" instead of "zaznaczeniu".
-    - Current: `po zaznaczenu tekstu`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `po zaznaczeniu tekstu`
-    - The locative of "zaznaczenie" is "zaznaczeniu"; the letter "i" is missing.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
-    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
-    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
-- `permissions-capabilities-listitem-off` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off"), but it was translated as the command "Wyłącz" ("Turn off").
-    - Current: `Wyłącz`
-    - Source: `value: Off`
-    - Suggest: `Wyłączone`
-    - In the exceptions list, the listitem value names the current state of a site entry, just like "Allow for Session". The en-US says "Off", meaning the state, not the "Turn Off" button action. So it should be the adjective "Wyłączone", not the verb "Wyłącz".
-- `permissions-capabilities-listitem-off-temporarily` — `browser/browser/preferences/permissions.ftl` — This list-item value shows a status ("Off temporarily"), but it was translated as the command "Wyłącz tymczasowo" ("Turn off temporarily").
-    - Current: `Wyłącz tymczasowo`
-    - Source: `value: Off temporarily`
-    - Suggest: `Wyłączone tymczasowo`
-    - This is the same problem as the "Off" list item. The value describes the entry's state, so it needs the adjective form, not the imperative.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -64,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,730 |
-| Missing strings | 12 |
+| Strings | 16,742 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -82,13 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**12 strings** are not translated yet, concentrated in:
-
-- `browser/browser/aboutLogins.ftl` — 9
-- `browser/browser/preferences/moreFromMozilla.ftl` — 2
-- `browser/browser/genai.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -98,10 +73,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 1440, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 406 | **char** |
+| ellipsis | `char` 407 | **char** |
 | dash | `em` 125, `en` 14 | **em** |
-| nbsp | `total` 4948, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
-| register | `informal` 77 | **informal** |
+| nbsp | `total` 4956, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| register | `informal` 80 | **informal** |
 
 ---
 
@@ -111,33 +86,24 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (85)
+## 3. Open findings (84)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
-    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
-    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 50 |
+| 2 | Wrong content (says something other than the English) | 49 |
 | 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
 - `smart-window-closed-tabs-summary` — `browser/browser/aiWindowContent.ftl` — `smart-window-closed-tabs-summary` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [one] Gotowe! Zamknięto kartę. [other] Gotowe! Zamknięto karty.`
+    - Current: `{$count ->} [1] Gotowe! Zamknięto kartę. [other] Gotowe! Zamknięto karty.`
     - Source: `{$count ->} [one] Done! Tab closed. [other] Done! Tabs closed.`
     - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
 - `smart-window-restore-success-summary` — `browser/browser/aiWindowContent.ftl` — `smart-window-restore-success-summary` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [one] Zamknięto kartę, a następnie ją przywrócono. [other] Zamknięto karty, a następnie je przywrócono.`
+    - Current: `{$count ->} [1] Zamknięto kartę, a następnie ją przywrócono. [other] Zamknięto karty, a następnie je przywrócono.`
     - Source: `{$count ->} [one] Tab closed, then restored. [other] Tabs closed, then restored.`
     - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
 - `popup-warning-exceeded-message` — `browser/browser/browser.ftl` — A8. The [one] variant drops "more than": "…uniemożliwił tej witrynie otwarcie wyskakującego okna." → Suggest: "…otwarcie więcej niż { $popupCount } wyskakującego okna." (the [few]/[many] variants keep it).
@@ -178,7 +144,7 @@ _Also listed under their own category below._
     - Source: `{$downloadsCount ->} [1] If you quit now, 1 download will be canceled. Are you sure you want to quit? [other] If you quit now, { $downloadsCount } downloads will be canceled. Are you sure you want to quit?`
     - Suggest: `[other]`
 - `pdfjs-editor-comments-sidebar-title` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-editor-comments-sidebar-title` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [one] Komentarz [other] Komentarze`
+    - Current: `{$count ->} [1] Komentarz [other] Komentarze`
     - Source: `{$count ->} [one] Comment [other] Comments`
     - Suggest: `{$count ->} [one] Comment [other] Comments`
     - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
@@ -279,11 +245,6 @@ _Also listed under their own category below._
     - Source: `accesskey: n label: Send Link to Device`
 - `genai-settings-chat-lechat-links` — `browser/browser/genai.ftl` — "Mistral AI" is a company name and should not be translated. Current: "…zasady ochrony prywatności</a> sztucznej inteligencji Mistral." → Suggest: "…zasady ochrony prywatności</a> Mistral AI." (the sibling strings correctly keep OpenAI, Microsoft, Anthropic).
     - Source: `By choosing Le Chat Mistral, you agree to the Mistral AI <a data-l10n-name="link1">Terms of Service</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help hide your location" was dropped, so the text promises outright that the VPN hides your location.
-    - Current: `Ukryj swoje położenie podczas przeglądania Internetu.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `Pomóż ukryć swoje położenie podczas przeglądania Internetu.`
-    - The en-US only says the feature helps hide your location. The Polish states flatly that it hides it, which is a protection guarantee the source does not make.
 - `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" is rendered as "Reguła użytkownika" (the user's rule, third-person), losing the second-person address used elsewhere in the locale.
     - Current: `Reguła użytkownika`
     - Source: `Your rule`

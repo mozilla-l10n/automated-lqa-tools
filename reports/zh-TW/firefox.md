@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,9 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label says the card is saved, instead of saying the security code is saved.
-    - Current: `已儲存 { $ariaLabel }，{ $securityCode }`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $ariaLabel }，已儲存 { $securityCode }`
-    - The source reads '{ $ariaLabel }, { $securityCode } saved', so 'saved' applies to the security code. The translation puts 已儲存 in front of the card description, so it says the card was saved.
-- `neterror-loopback-refused-wrong-port` — `toolkit/toolkit/neterror/netError.ftl` — The word 'port' is missing before the port number.
-    - Current: `是否使用 { $port }`
-    - Source: `If it is running, check that it is using port { $port }.`
-    - Suggest: `是否使用通訊埠 { $port }`
-    - The source says 'using port { $port }'. The translation drops 通訊埠 and leaves a bare number, and the sibling string does use 通訊埠.
-- `neterror-loopback-refused-address` — `toolkit/toolkit/neterror/netError.ftl` — 'This address' became the vague 位置 (location), and 'this' was dropped.
-    - Current: `接受對位置的連線`
-    - Source: `Check that the server accepts connections on this address. Some servers listen only on [::1] or only on 127.0.0.1.`
-    - Suggest: `接受對此位址的連線`
-    - The developer comment says 'this address' means the IP address of the page. 位置 means location and has no demonstrative; the right term for an IP address is 此位址.
-- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — Half-width colon followed by a space is used instead of the locale's full-width colon.
-    - Current: `未下載檔案: 有`
-    - Source: `File not downloaded: Potential security risk.`
-    - Suggest: `未下載檔案：有`
-    - zh-TW consistently uses full-width punctuation; a half-width colon plus space deviates from the established convention.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated as an action phrase ("tabs, and browse"), so the path to the setting is wrong.
-    - Current: `分頁並瀏覽`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `分頁與瀏覽`
-    - "Tabs and browsing" is the name of a Settings section, shown after a chevron. 並 turns it into a sequence of actions ("tabs and browse"), so it no longer names the section.
-- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical.
-    - Current: `為受管理或對注重安全性的組織進行瀏覽器治理。`
-    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
-    - Suggest: `為受法規監管及注重安全性的組織提供瀏覽器治理。`
-    - "Regulated organizations" are ones under regulatory oversight, not organizations that are "managed". Also, 或對注重安全性的組織 has a dangling 對 that breaks the sentence.
-- `genai-selection-callout-text` — `browser/browser/genai.ftl` — This string uses the informal 你, while the surrounding strings use 您.
-    - Current: `你可以透過`
-    - Source: `Search or copy when you select text. Choose which actions appear with the <span data-l10n-name="more-actions">•••</span> menu.`
-    - Suggest: `您可以透過`
-    - The neighbouring strings in this batch use the polite 您 (e.g. downloads, sanitize), so 你 here is inconsistent with the locale's form of address.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -124,13 +90,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (247)
+## 3. Open findings (246)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 140 |
-| 2 | Wrong content (says something other than the English) | 82 |
+| 2 | Wrong content (says something other than the English) | 81 |
 | 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -267,11 +233,6 @@ _Nothing reported._
     - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
     - Suggest: `由 Mozilla 基金會支持的`
     - The en-US says Firefox is backed by the Foundation, not developed by it. The same change appears in onboarding-gratitude-security-and-privacy-subtitle.
-- `onboarding-easy-setup-security-and-privacy-subtitle` — `browser/browser/newtab/onboarding.ftl` — 'Helps stop companies' becomes 'automatically blocks the programs that let big companies follow you', which is an unhedged promise
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `可幫助防止企業在網路上偷偷跟蹤您`
-    - The en-US says the browser 'helps stop companies from secretly following you'. The Chinese drops the hedge and claims the browser automatically blocks this tracking. It also narrows 'companies' to 大企業 (big companies).
 - `security-visits-number` — `browser/browser/pageInfo.ftl` — `security-visits-number` has plural variant ['one'], which zh-TW does not have
     - Current: `{$visits ->} [0] 沒有 [one] 有，1 次 [other] 有，{ $visits } 次`
     - Source: `{$visits ->} [0] No [one] Yes, once [other] Yes, { $visits } times`
@@ -424,7 +385,12 @@ _Nothing reported._
     - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
     - Suggest: `（包含線上身分盜用防護）`
     - The en-US names protection from identity theft. The Chinese describes a different feature and adds 'new'.
-- _…and 90 more; see `state/` for the full list._
+- `WARN_RESTART_REQUIRED_UNINSTALL` — `browser/installer/custom.properties` — 'A previous uninstall' is dropped, so it sounds like the current operation needs a reboot
+    - Current: `必須重新啟動電腦才能完成 $BrandShortName 的解除安裝程序。`
+    - Source: `Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?`
+    - Suggest: `必須重新啟動電腦才能完成先前的 $BrandShortName 解除安裝程序。`
+    - The en-US says 'to complete a previous uninstall'. This dialog appears when an earlier operation is still pending.
+- _…and 89 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

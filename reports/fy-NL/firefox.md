@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 16,708 |
+| **Strings reviewed this run** | 35 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,58 +18,28 @@ Also for fy-NL: [Firefox for Android](android.md) · [Focus for Android](focus_a
 
 ## Changes in this run
 
-### 🆕 New findings (10)
+### 🆕 New findings (4)
 
-- `credit-card-save-security-code-doorhanger-header` — `toolkit/toolkit/formautofill/formAutofill.ftl` — The question mark is missing from the header.
-    - Current: `Befeiligingskoade bewarje`
-    - Source: `Save security code?`
-    - Suggest: `Befeiligingskoade bewarje?`
-    - The source is the question 'Save security code?'. The matching payment method header keeps the question mark.
-- `moz-box-group-reorder-announcement` — `toolkit/toolkit/global/mozBoxBase.ftl` — The verb is in the infinitive or imperative ('ferpleatse') when it should be the past participle ('ferpleatst').
-    - Current: `ferpleatse`
-    - Source: `Item moved to position { $position } of { $total }`
-    - Suggest: `ferpleatst`
-    - The source 'Item moved to position…' announces that a move has happened. The infinitive makes it read as an instruction to move the item.
-- `neterror-loopback-refused-wrong-port` — `toolkit/toolkit/neterror/netError.ftl` — 'of' ('or') is used where the conjunction 'oft' ('whether') is needed.
-    - Current: `kontrolearje dan of dizze`
-    - Source: `If it is running, check that it is using port { $port }.`
-    - Suggest: `kontrolearje dan oft dizze`
-    - In 'check that/whether it is using port…' Frisian needs 'oft'. The neighbouring loopback error string correctly uses 'Kontrolearje oft'.
-- `SVGUseInlineEventHandlerWarning` — `dom/chrome/dom/dom.properties` — The space between 'SVG' and '<use>' is missing.
-    - Current: `SVG<use>-elemint`
-    - Source: `Inline event handlers on elements cloned by an SVG <use> element are not interoperable. See https://github.com/w3c/svgwg/issues/1211`
-    - Suggest: `SVG <use>-elemint`
-    - The source has 'an SVG <use> element' with a space. Running 'SVG' and '<use>' together is a typo.
-- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — The infinitive 'downloaden' is used where the past participle 'download' is needed, so the message reads as 'do not download the file' instead of 'file not downloaded'.
-    - Current: `Bestân net downloaden`
-    - Source: `File not downloaded: Potential security risk.`
-    - Suggest: `Bestân net download`
-    - The en-US 'File not downloaded' is a past participle. The locale itself uses the participle 'download' elsewhere ('wurdt net faak download'), and the infinitive changes the sense to an instruction.
-- `downloads-unblock-insecure` — `browser/browser/downloads.ftl` — 'wylst' is a conjunction and can't come before a noun phrase; a preposition such as 'tidens' is needed here.
-    - Current: `wylst it downloadproses`
-    - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
-    - Suggest: `tidens it downloadproses`
-    - The en-US says 'during the download process'. That needs a preposition in Frisian, but 'wylst' ('while') has to introduce a clause, so this is ungrammatical.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The negation is missing, so the notice says the user will see the menu when selecting text.
-    - Current: `Jo sjogge dit menu as jo tekst selektearje.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Jo sjogge dit menu net mear as jo tekst selektearje.`
-    - en-US 'You won't see this menu when you select text' is negative; the Frisian says 'You see this menu when you select text'.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is reduced to 'en blêdzje', and the string says to show 'the page' again instead of the menu.
-    - Current: `en blêdzje om de side opnij te toanen`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Ljepblêden en sneupe om it opnij te toanen`
-    - en-US names the settings section 'Tabs and browsing', but the Frisian drops 'Tabs', so the path no longer matches the section. It also refers to 'de side' (the page), when the source means the menu ('it').
-- `taskbar-tabs-spotlight-subtitle` — `browser/browser/newtab/asrouter.ftl` — The English word "streamlined" was left untranslated inside an otherwise Frisian sentence.
-    - Current: `in streamlined finster`
-    - Source: `One click launches your most used sites in a streamlined window with all of { -brand-short-name }’s protections.`
-    - Suggest: `in ferienfâldige finster`
-    - The rest of the sentence is translated, but the English adjective "streamlined" was left as is. Frisian readers won't recognise it, and the locale translates terms like this everywhere else.
-- `policy-DisableMacOSUserPolicies` — `browser/browser/policies/policies-descriptions.ftl` — "út negearje" is ungrammatical, because "negearje" (ignore) does not take the particle "út".
-    - Current: `op macOS út negearje.`
-    - Source: `Ignore policies from the user’s preferences and from user-scope configuration profiles on macOS.`
-    - Suggest: `op macOS negearje.`
-    - "negearje" is not a separable verb with "út". The stray particle looks like it was left over from a rewrite (for example "útskeakelje"), and it makes the sentence ungrammatical.
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
+    - Current: `Ferbinings-tasteanlist:`
+    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist." It is the name of a policy header.
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
+    - Current: `Ferbinings-tasteanlist:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist."
+- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The product name "Firefox Enterprise" has been translated into Frisian.
+    - Current: `Firefox foar Undernimmingen`
+    - Source: `Firefox Enterprise`
+    - Suggest: `Firefox Enterprise`
+    - This is a brand term for a product name, and by convention product names are not translated. The term is reused in other strings as the product's name.
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The particle is missing from the separable verb, so "smyt it fan" does not mean "deletes it from".
+    - Current: `Dit smyt it fan`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `Dit smyt it út`
+    - Without "út" or "fuort", "smite" does not mean "delete". The parallel string about-logins-confirm-delete-dialog-message correctly uses "smyt it út". The same fix applies to the plural form ("smyt se út").
 
 ### ✅ Fixed since the last run (0)
 
@@ -94,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,708 |
-| Missing strings | 34 |
+| Strings | 16,742 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -112,20 +82,7 @@ _Nothing retired._
 
 ### Completeness
 
-**34 strings** are not translated yet, concentrated in:
-
-- `browser/browser/aboutLogins.ftl` — 9
-- `browser/browser/preferences/preferences.ftl` — 8
-- `browser/browser/newtab/newtab.ftl` — 5
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/preferences/moreFromMozilla.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/branding/brandings.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -134,8 +91,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 810, `straight-double` 26, `curly-double` 16 | **curly-single** |
-| apostrophe | `typographic` 1510 | **typographic** |
-| ellipsis | `char` 400 | **char** |
+| apostrophe | `typographic` 1512 | **typographic** |
+| ellipsis | `char` 401 | **char** |
 | dash | `em` 12, `en` 84 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -147,14 +104,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (486)
+## 3. Open findings (490)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 249 |
+| 2 | Wrong content (says something other than the English) | 126 |
+| 3 | Degraded language (grammar, spelling, terminology) | 250 |
 | 4 | Cosmetic (typography, spacing) | 102 |
 
 ### A. Functional, markup, variables & plurals
@@ -320,16 +277,16 @@ _Nothing reported._
     - Current: `Fragen…`
     - Source: `accesskey: z label: Ask…`
     - Suggest: `Freegje…`
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The negation is missing, so the notice says the user will see the menu when selecting text.
-    - Current: `Jo sjogge dit menu as jo tekst selektearje.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Jo sjogge dit menu net mear as jo tekst selektearje.`
-    - en-US 'You won't see this menu when you select text' is negative; the Frisian says 'You see this menu when you select text'.
 - `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is reduced to 'en blêdzje', and the string says to show 'the page' again instead of the menu.
     - Current: `en blêdzje om de side opnij te toanen`
     - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
     - Suggest: `Ljepblêden en sneupe om it opnij te toanen`
     - en-US names the settings section 'Tabs and browsing', but the Frisian drops 'Tabs', so the path no longer matches the section. It also refers to 'de side' (the page), when the source means the menu ('it').
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The negation is missing, so the notice says the user will see the menu when selecting text.
+    - Current: `Jo sjogge dit menu as jo tekst selektearje.`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Jo sjogge dit menu net mear as jo tekst selektearje.`
+    - en-US 'You won't see this menu when you select text' is negative; the Frisian says 'You see this menu when you select text'.
 - `genai-page-warning` — `browser/browser/genai.ftl` — is dit foar in part de gearfetting → is dit in dielgearfetting
     - Current: `is dit foar in part de gearfetting`
     - Source: `message: Since the page is long, this is a partial summary.`
@@ -447,7 +404,7 @@ _Nothing reported._
     - Current: `Net falide formaat`
     - Source: `Invalid Format`
     - Suggest: `Unjildich formaat`
-- _…and 66 more; see `state/` for the full list._
+- _…and 69 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -459,6 +416,11 @@ _Nothing reported._
     - Current: `fernijngen`
     - Source: `You can not perform further updates on this system. <label data-l10n-name="unsupported-link">Learn more</label>`
     - Suggest: `fernijingen`
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The particle is missing from the separable verb, so "smyt it fan" does not mean "deletes it from".
+    - Current: `Dit smyt it fan`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `Dit smyt it út`
+    - Without "út" or "fuort", "smite" does not mean "delete". The parallel string about-logins-confirm-delete-dialog-message correctly uses "smyt it út". The same fix applies to the plural form ("smyt se út").
 - `login-list-intro-description` — `browser/browser/aboutLogins.ftl` — Wannear jo → Wannear’t jo
     - Current: `Wannear jo`
     - Source: `When you save a password in { -brand-product-name }, it will show up here.`
@@ -691,11 +653,7 @@ _Nothing reported._
     - Current: `wylst gouden oere`
     - Source: `Silhouette of coconut palm trees during golden hour`
     - Suggest: `tidens it gouden oere`
-- `create-backup-screen-1-title` — `browser/browser/newtab/onboarding.ftl` — meitjse → meitsje (letters transposed)
-    - Current: `meitjse`
-    - Source: `Upgrading to Windows 11? Let’s back up your { -brand-product-name } data.`
-    - Suggest: `meitsje`
-- _…and 167 more; see `state/` for the full list._
+- _…and 168 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

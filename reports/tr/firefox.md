@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 151 of 16,715 |
+| **Strings reviewed this run** | 1 of 16,715 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label puts the variables in the wrong order, so it reads as the card being saved rather than its security code.
-    - Current: `{ $securityCode }, { $ariaLabel } kaydedildi`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $ariaLabel }, { $securityCode } kaydedildi`
-    - en-US reads '{ $ariaLabel }, { $securityCode } saved': the card description, then the note that the security code is saved. The reordered Turkish attaches 'kaydedildi' to the card description, which changes what the screen reader says was saved.
-- `fire-button-toolbar-button2` — `browser/browser/browser.ftl` — The tooltip uses first person ('verilerimin', my data) where the source says 'your', which breaks the formal siz form of address.
-    - Current: `Gezinti verilerimin`
-    - Source: `label: Delete some or all data tooltiptext: Delete some or all of your browsing data`
-    - Suggest: `Gezinti verilerinizin`
-    - en-US 'of your browsing data'; the locale's form of address is formal siz, so the possessive should be -iniz.
-- `item-cached-content-description2` — `browser/browser/sanitize.ftl` — "Sitelerinin" wrongly adds a possessive ("their sites'"); it should be "Sitelerin".
-    - Current: `Sitelerinin daha hızlı`
-    - Source: `Helps sites load faster`
-    - Suggest: `Sitelerin daha hızlı`
-    - en-US "Helps sites load faster" has no possessor; the third-person possessive suffix -i- is a grammatical error.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
-    - Current: `İnternette gezinirken konumunuzu gizleyin.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
-    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — The noun "gizlilik" and the verb "gezinmek" are joined to the same "istediğinizde", which is ungrammatical.
-    - Current: `konuma dayalı gezinmek istediğinizde`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `konuma dayalı gezinme istediğinizde`
-    - "Ekstra gizlilik veya ... gezinmek istediğinizde" joins a noun and a verb in one list. Use the noun "gezinme", as the sibling string does.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -124,22 +100,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (168)
+## 3. Open findings (166)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
-    - Current: `İnternette gezinirken konumunuzu gizleyin.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
-    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 61 |
+| 2 | Wrong content (says something other than the English) | 59 |
 | 3 | Degraded language (grammar, spelling, terminology) | 69 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -175,11 +142,6 @@ _Also listed under their own category below._
     - Source: `Dusk`
     - Suggest: `Alacakaranlık`
     - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
-- `appmenuitem-relay-description2` — `browser/browser/appmenu.ftl` — Descriptive statement turned into an imperative and the "helps prevent" nuance lost.
-    - Current: `Gelen kutunuzu spam’den koruyun`
-    - Source: `Helps prevent spam in your inbox`
-    - Suggest: `Gelen kutunuzdaki spam’i önlemeye yardımcı olur`
-    - en-US "Helps prevent spam in your inbox" is a description of the feature, not an instruction to the user.
 - `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is translated as "Remove from favorites", losing the object and changing the meaning.
     - Current: `(value): Sık kullanılanlardan kaldır`
     - Source: `(value): Remove this top site accesskey: T`
@@ -209,11 +171,6 @@ _Also listed under their own category below._
     - Source: `Local laws and restrictions limit where you can use VPN. <a data-l10n-name="learn-more-link">Learn more</a>`
     - Suggest: `VPN’i kullanabileceğiniz yerleri sınırlıyor`
     - en-US "limit" is a factual statement explaining why the connection is blocked; the Turkish "sınırlayabilir" (may limit) weakens it into speculation.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — The hedge "Help" is dropped, so the Turkish promises that the location will be hidden.
-    - Current: `İnternette gezinirken konumunuzu gizleyin.`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `İnternette gezinirken konumunuzu gizlemeye yardımcı olun.`
-    - en-US "Help hide your location" is deliberately hedged. The Turkish "hide your location" promises a protection the source does not make.
 - `ipprotection-summer-promo-offramp-subscriber-description` — `browser/browser/ipProtection.ftl` — Statement of fact "You now get" turned into a possibility "you can have".
     - Current: `artık sınırsız bant genişliğine ve daha fazla konuma sahip olabilirsiniz`
     - Source: `You now get unlimited bandwidth and more locations as a { -mozilla-vpn-brand-name } subscriber.`
@@ -397,7 +354,11 @@ _Also listed under their own category below._
 - `xp-java-remove-principal-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
     - Source: `Couldn’t remove the principal`
     - Suggest: `"Asıl`
-- _…and 1 more; see `state/` for the full list._
+- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label puts the variables in the wrong order, so it reads as the card being saved rather than its security code.
+    - Current: `{ $securityCode }, { $ariaLabel } kaydedildi`
+    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $ariaLabel }, { $securityCode } kaydedildi`
+    - en-US reads '{ $ariaLabel }, { $securityCode } saved': the card description, then the note that the security code is saved. The reordered Turkish attaches 'kaydedildi' to the card description, which changes what the screen reader says was saved.
 
 ### C. Grammar, agreement & spelling
 

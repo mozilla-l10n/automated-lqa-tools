@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 148 of 16,742 |
+| **Strings reviewed this run** | 0 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — Verb does not agree with its plural subject "dispositivos".
-    - Current: `dispositivos que sincronize`
-    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
-    - Suggest: `dispositivos que sincronizem`
-    - The relative clause's subject is "dispositivos" (plural), so the verb must be "sincronizem", as in the sibling string about-logins-confirm-delete-all-sync-dialog-message.
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Participle is plural but refers to a single security code name.
-    - Current: `{ $securityCode } guardados`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $securityCode } guardado`
-    - $securityCode is one code name (e.g. "CVV", masculine singular), so the participle should be "guardado", not plural "guardados".
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated with a verb ("navegue"), which breaks the settings path.
-    - Current: `Separadores e navegue para o mostrar novamente`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Separadores e navegação para o mostrar novamente`
-    - In en-US, "Tabs and browsing" is the name of a Settings section in the path Settings > Tabs and browsing. "navegue" is the imperative "browse", so the sentence now tells the user to browse instead of naming the section.
-- `item-formdata-description2` — `browser/browser/sanitize.ftl` — The English serial comma before "e" was copied, which standard Portuguese punctuation doesn't use.
-    - Current: `Nomes, e-mails, e dados`
-    - Source: `Names, emails, and form entries`
-    - Suggest: `Nomes, e-mails e dados`
-    - Portuguese doesn't put a comma before the "e" that joins the last item of a list. The comma here mirrors English punctuation.
-- `newtab-discovery-empty-section-topstories-unavailable-header` — `browser/browser/newtab/newtab.ftl` — The generic noun "stories" is left in English as "Stories" instead of being translated.
-    - Current: `As Stories não estão disponíveis neste momento`
-    - Source: `Stories aren’t available right now`
-    - Suggest: `As histórias não estão disponíveis neste momento`
-    - In the en-US source "stories" is a common lowercase noun, not a brand or feature name. pt-PT translates stories on New Tab as "histórias", so leaving it in English is inconsistent.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

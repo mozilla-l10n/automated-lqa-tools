@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `961bdfbd203a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 49 of 15,363 |
+| **Strings reviewed this run** | 0 of 15,363 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for uk: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `downloads-unblock-type-potentially-unwanted` — `browser/browser/downloads.ftl` — There is an extra comma before «як» where «як» means "as" or "in the role of".
-    - Current: `замаскований, як корисний`
-    - Source: `This file is disguised as a helpful download, but it can make unexpected changes to your programs and settings.`
-    - Suggest: `замаскований як корисний`
-    - In Ukrainian, no comma goes before «як» when it means "as" or "in the role of" rather than introducing a comparison. Here the file is disguised as a helpful download, so the comma is wrong.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `82e218d93b64` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-10-26 @ `6c76c457ee95` |
+| **Previous run** | 2026-11-02 @ `82e218d93b64` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 154 of 16,714 |
+| **Strings reviewed this run** | 0 of 16,714 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The participle "guardados" is plural but agrees with a single security code name, so it should be the singular "guardado".
-    - Current: `{ $securityCode } guardados`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $securityCode } guardado`
-    - $securityCode is one code name, such as "CVV" or "Código de seguridad" in this locale. Both are masculine singular, so the plural "guardados" is an agreement error. The en-US means "(the) security code saved", which is singular.
-- `process-hang-nonspecific-tab-message` — `browser/browser/browser.ftl` — The reflexive "se está ralentizando" says the page is slowing down itself, not that it is slowing down the browser.
-    - Current: `Una página web se está ralentizando { -brand-short-name }.`
-    - Source: `A web page is slowing down { -brand-short-name }. To speed up your browser, stop that page.`
-    - Suggest: `Una página web está ralentizando { -brand-short-name }.`
-    - en-US "A web page is slowing down Firefox" uses a transitive verb. The reflexive "se" makes the page the thing getting slower and leaves the brand name dangling. The sibling strings correctly use "está ralentizando".
-- `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — Missing accent in "comunmente".
-    - Current: `comunmente`
-    - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
-    - Suggest: `comúnmente`
-    - The correct Spanish spelling is "comúnmente", with an accent.
-- `ipprotection-feature-introduction-description-private-browsing-3` — `browser/browser/ipProtection.ftl` — Typo "noqueiera" (missing space and misspelled "quiera").
-    - Current: `noqueiera`
-    - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
-    - Suggest: `no quiera`
-    - The intended phrase is "cuando no quiera" ("when you don't"). As written, the text has a garbled word.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
