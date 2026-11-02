@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -80,32 +80,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (34)
+## 3. Open findings (31)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Onboarding.Welcome.Description.TreatementA.v120` — `nb-NO/firefox-ios.xliff` — 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
-    - Current: `forhindrer selskaper i å spore`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `bidrar til å hindre selskaper i å spore`
-    - The en-US says the browser only 'helps stop' companies from tracking. 'forhindrer' claims it prevents tracking outright.
-- `Onboarding.Welcome.Description.v120` — `nb-NO/firefox-ios.xliff` — 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
-    - Current: `forhindrer selskaper i å spore`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `bidrar til å hindre selskaper i å spore`
-    - The en-US says the browser only 'helps stop' companies from tracking. 'forhindrer' claims it prevents tracking outright.
-- `CoverSheet.v24.ETP.Description` — `nb-NO/firefox-ios.xliff` — The translation drops "helps", so a hedged claim about tracking protection becomes an absolute promise that it prevents ad tracking.
-    - Current: `forhindrer reklame i å spore aktivitetene dine på nettet`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `bidrar til å hindre reklame i å følge deg rundt på nettet`
-    - The en-US says protection "helps stop ads from following you around". The nb-NO "forhindrer" means "prevents", which promises full protection the product never claimed.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 8 |
+| 2 | Wrong content (says something other than the English) | 5 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -135,21 +116,6 @@ _Nothing in this category._
     - Source: `Department`
     - Suggest: `Departement`
     - The developer comment says this is the administrative division used in France and Colombia. In Norwegian that is "departement". "Avdeling" means a department of a company or organisation.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `nb-NO/firefox-ios.xliff` — 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
-    - Current: `forhindrer selskaper i å spore`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `bidrar til å hindre selskaper i å spore`
-    - The en-US says the browser only 'helps stop' companies from tracking. 'forhindrer' claims it prevents tracking outright.
-- `Onboarding.Welcome.Description.v120` — `nb-NO/firefox-ios.xliff` — 'helps stop' is rendered as 'forhindrer' (prevents), which makes an absolute promise the source does not make.
-    - Current: `forhindrer selskaper i å spore`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `bidrar til å hindre selskaper i å spore`
-    - The en-US says the browser only 'helps stop' companies from tracking. 'forhindrer' claims it prevents tracking outright.
-- `CoverSheet.v24.ETP.Description` — `nb-NO/firefox-ios.xliff` — The translation drops "helps", so a hedged claim about tracking protection becomes an absolute promise that it prevents ad tracking.
-    - Current: `forhindrer reklame i å spore aktivitetene dine på nettet`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `bidrar til å hindre reklame i å følge deg rundt på nettet`
-    - The en-US says protection "helps stop ads from following you around". The nb-NO "forhindrer" means "prevents", which promises full protection the product never claimed.
 - `Display Settings` — `nb-NO/firefox-ios.xliff` — "Skjerminnstillinger" means screen/monitor settings, but the comment says "display" here means presentation, not monitor.
     - Current: `Skjerminnstillinger`
     - Source: `Display Settings`

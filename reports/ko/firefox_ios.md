@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,973 |
 
@@ -79,27 +79,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (97)
+## 3. Open findings (96)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `ko/firefox-ios.xliff` — "and that you use it" is translated as "and how you use it", which claims usage behaviour is shared with marketing partners.
     - Current: `%1$@를 발견한 방법과 사용 방법을 공유하세요`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `%1$@를 발견한 방법과 %1$@를 사용한다는 사실을 공유하세요`
     - The source shares only the fact that the user uses the app. '사용 방법' (how you use it) says detailed usage data goes to marketing partners, a wider data share than the product describes.
-- `CoverSheet.v24.ETP.Description` — `ko/firefox-ios.xliff` — "helps stop ads from following you" is rendered as an unconditional claim that protection prevents ads from tracking the user.
-    - Current: `광고가 사용자를 추적하지 못하게합니다`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `광고가 사용자를 따라다니는 것을 막는 데 도움을 줍니다`
-    - The source hedges with "helps stop". The Korean says the feature prevents ads from tracking you, which is a guarantee the product does not make.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 45 |
+| 2 | Wrong content (says something other than the English) | 44 |
 | 3 | Degraded language (grammar, spelling, terminology) | 52 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -304,11 +299,6 @@ _Nothing in this category._
     - Source: `Download Link`
     - Suggest: `링크 다운로드`
     - This is a menu action for downloading a link URL. The sibling items use the object+verb pattern (e.g. 링크 복사, 이미지 저장), while "다운로드 링크" reads as "a download link".
-- `CoverSheet.v24.ETP.Description` — `ko/firefox-ios.xliff` — "helps stop ads from following you" is rendered as an unconditional claim that protection prevents ads from tracking the user.
-    - Current: `광고가 사용자를 추적하지 못하게합니다`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `광고가 사용자를 따라다니는 것을 막는 데 도움을 줍니다`
-    - The source hedges with "helps stop". The Korean says the feature prevents ads from tracking you, which is a guarantee the product does not make.
 - `FxAPush_DeviceDisconnected_ThisDevice_body` — `ko/firefox-ios.xliff` — "This device" is rendered as just "기기는" (the device), dropping "이" (this), so the notification no longer says it is the current device that was disconnected.
     - Current: `기기는 Firefox Sync와 연결이 끊어졌습니다.`
     - Source: `This device has been successfully disconnected from Firefox Sync.`

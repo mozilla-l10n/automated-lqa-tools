@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-30 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,909 |
 
@@ -95,32 +95,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (65)
+## 3. Open findings (62)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Onboarding.Welcome.Description.TreatementA.v120` — `zh-CN/firefox-ios.xliff` — "helps stop companies" rendered as "automatically blocks big corporations", overstating the product's behaviour.
-    - Current: `会自动阻止大公司在网上偷偷跟踪您`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `有助于阻止公司在网上偷偷跟踪您`
-    - The en-US only says the browser "helps stop companies" from tracking; the translation claims automatic blocking and restricts the subject to large companies.
-- `Onboarding.Welcome.Description.v120` — `zh-CN/firefox-ios.xliff` — "helps stop companies" rendered as "automatically blocks big corporations", adding a claim the source never makes.
-    - Current: `会自动阻止大公司在网上偷偷跟踪您`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `有助于阻止公司在网上偷偷跟踪您`
-    - The en-US says the browser "helps stop companies"; the Chinese asserts it "automatically blocks" them, and narrows "companies" to "big companies".
-- `Settings.TrackingProtection.ProtectionCellFooter` — `zh-CN/firefox-ios.xliff` — "helps stop" is rendered as an absolute "阻止", overstating the protection.
-    - Current: `减少定向广告，并阻止广告商跟踪您的浏览。`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `减少定向广告，并帮助阻止广告商跟踪您的浏览。`
-    - en-US says "helps stop advertisers from tracking"; the Chinese asserts the product stops tracking outright, a claim the source does not make.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 38 |
+| 2 | Wrong content (says something other than the English) | 35 |
 | 3 | Degraded language (grammar, spelling, terminology) | 22 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -180,16 +161,6 @@ _Nothing in this category._
     - Source: `We protect your data and automatically block companies from spying on your clicks.`
     - Suggest: `自动阻止各公司窥探您的点击行为`
     - The en-US says "companies", not "big companies"; the translation narrows/changes the claim about who is blocked.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `zh-CN/firefox-ios.xliff` — "helps stop companies" rendered as "automatically blocks big corporations", overstating the product's behaviour.
-    - Current: `会自动阻止大公司在网上偷偷跟踪您`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `有助于阻止公司在网上偷偷跟踪您`
-    - The en-US only says the browser "helps stop companies" from tracking; the translation claims automatic blocking and restricts the subject to large companies.
-- `Onboarding.Welcome.Description.v120` — `zh-CN/firefox-ios.xliff` — "helps stop companies" rendered as "automatically blocks big corporations", adding a claim the source never makes.
-    - Current: `会自动阻止大公司在网上偷偷跟踪您`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `有助于阻止公司在网上偷偷跟踪您`
-    - The en-US says the browser "helps stop companies"; the Chinese asserts it "automatically blocks" them, and narrows "companies" to "big companies".
 - `PasswordGenerator.PasswordReadoutPrefaceA11y.v132` — `zh-CN/firefox-ios.xliff` — "Generated password: %@" is rendered as a sentence "Password has been generated" instead of a noun label.
     - Current: `已生成密码：%@`
     - Source: `Generated password: %@`
@@ -340,11 +311,6 @@ _Nothing in this category._
     - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
     - Suggest: `超过两周未查看的标签页将被移至“不活跃”版块。`
     - en-US says tabs you haven't viewed FOR two weeks (i.e. for longer than two weeks) get moved to the inactive section; "两周内未查看" means "not viewed within two weeks" which is ambiguous/reversed, and "进入休眠状态" claims the tabs are suspended rather than moved to a separate section of the tab tray.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `zh-CN/firefox-ios.xliff` — "helps stop" is rendered as an absolute "阻止", overstating the protection.
-    - Current: `减少定向广告，并阻止广告商跟踪您的浏览。`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `减少定向广告，并帮助阻止广告商跟踪您的浏览。`
-    - en-US says "helps stop advertisers from tracking"; the Chinese asserts the product stops tracking outright, a claim the source does not make.
 - `Settings.TrackingProtection.ProtectionLevelStrict.Description` — `zh-CN/firefox-ios.xliff` — "ads" is dropped from the list of blocked items.
     - Current: `拦截更多跟踪器和弹窗。`
     - Source: `Blocks more trackers, ads, and popups. Pages load faster, but some functionality may not work.`

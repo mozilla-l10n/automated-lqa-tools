@@ -19,3 +19,6 @@ Summarizer.Error.RateLimited.Message.v142 @ Shared/Supporting Files/en-US.lproj/
 Summarizer.Footnote.Label.v144 @ Shared/Supporting Files/en-US.lproj/Summarizer.strings — auto-suggest (2026-11-02): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
 Keyboard.Shortcuts.FindAgain @ Shared/en-US.lproj/Localizable.strings — auto-suggest (2026-11-02): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
 Settings.Home.Option.Wallpaper.CollectionTitle @ Shared/en-US.lproj/Localizable.strings — auto-suggest (2026-11-02): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
+PasswordGenerator.Description.v132 @ Shared/Supporting Files/en-US.lproj/PasswordGenerator.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+Search.SuggestSectionTitle.v102 @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+There was a problem accessing tabs from your other devices. Try again in a few moments. @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear

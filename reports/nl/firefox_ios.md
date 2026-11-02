@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimitResetFooter.v160` — `nl/firefox-ios.xliff` — Wrong preposition: 'opnieuw ingesteld naar' should be 'opnieuw ingesteld op'.
-    - Current: `opnieuw ingesteld naar %1$@ GB`
-    - Source: `Resets to %1$@ GB on the first of every month`
-    - Suggest: `opnieuw ingesteld op %1$@ GB`
-    - In Dutch a value is set 'op' a number (instellen op); 'naar' is a calque of English 'to'.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

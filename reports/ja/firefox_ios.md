@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 58 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ja: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.LocationPicker.FindingLocationsText.v160` — `ja/firefox-ios.xliff` — Loading-status text is rendered as a plain action verb ("find locations") instead of a progressive status.
-    - Current: `接続先を探す…`
-    - Source: `Finding Locations…`
-    - Suggest: `接続先を検索中…`
-    - Per the developer comment this is shown while the app is loading the location list; en-US "Finding Locations…" is an in-progress status, but 探す reads as an action/button label rather than an ongoing process.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -83,9 +79,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (109)
+## 3. Open findings (108)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `FirefoxHomepage.FeltPrivacyUI.Title.v122` — `ja/firefox-ios.xliff` — "Leave no traces on this device" is rendered as "We won't let this device be tracked", which asserts something different from the source.
     - Current: `この端末を追跡させません`
@@ -97,18 +93,13 @@ _Nothing reported._
     - Source: `To help improve the browser, %1$@ sends diagnostic and interaction data to %2$@. %3$@`
     - Suggest: `診断データとインタラクションデータ`
     - en-US "diagnostic and interaction data" refers to usage/interaction telemetry; 「対話データ」 implies conversation data, asserting the product collects something different from what the source says.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `ja/firefox-ios.xliff` — "helps stop advertisers from tracking your browsing" is rendered as an absolute claim of blocking tracking ads.
-    - Current: `ユーザーの行動を追跡する広告を阻止します`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `広告会社によるユーザーの閲覧の追跡を防ぐのに役立ちます`
-    - The source says it "helps stop" advertisers from tracking browsing; the Japanese asserts that it blocks tracking ads outright, overstating what the product does.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 60 |
+| 2 | Wrong content (says something other than the English) | 59 |
 | 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -418,7 +409,7 @@ _Nothing in this category._
     - Source: `Use your fingerprint to access Logins now.`
     - Suggest: `指紋認証を利用してログイン情報にアクセスします。`
     - The source, per the developer comment, is a Touch ID prompt for accessing the saved logins list, not for signing in.
-- _…and 26 more; see `state/` for the full list._
+- _…and 25 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

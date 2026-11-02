@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ro: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `ro/firefox-ios.xliff` — "gigabiți" (gigabits) is used instead of gigabytes.
-    - Current: `gigabiți`
-    - Source: `%1$@ of %2$@ gigabytes used`
-    - Suggest: `gigaocteți`
-    - The source and comment say gigabytes (GB). "Gigabiți" means gigabits, a different unit, so VoiceOver reads out the wrong amount.
-- `VPN.Settings.Description.v160` — `ro/firefox-ios.xliff` — "în Wi-Fi publice" has a plural adjective with no noun to agree with; it needs "rețele".
-    - Current: `chiar și în Wi-Fi publice`
-    - Source: `Browse with extra protection by hiding your location, even on public Wi-Fi.`
-    - Suggest: `chiar și în rețele Wi-Fi publice`
-    - "Publice" is plural feminine, but "Wi-Fi" is not a plural noun it can agree with. The onboarding string already uses "rețelele Wi-Fi publice".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

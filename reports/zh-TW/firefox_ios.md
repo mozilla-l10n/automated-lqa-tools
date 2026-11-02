@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,973 |
 
@@ -80,37 +80,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (36)
+## 3. Open findings (33)
 
-> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `zh-TW/firefox-ios.xliff` — "and that you use it" is rendered as "and how you use it", so the text describes more data being shared than the source says.
     - Current: `以及是如何使用的`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `以及您正在使用它的事實`
     - The en-US says only that users share how they discovered the app and the fact that they use it. The translation says users share how they use it, which implies usage data goes to marketing partners. That is a wider data-sharing claim than the product makes.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `zh-TW/firefox-ios.xliff` — "helps stop companies from secretly following you" is rendered as a promise that the browser automatically blocks the tracking programs.
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `能協助阻止大企業在網路上偷偷跟蹤您`
-    - The en-US makes a hedged claim ("helps stop"). The translation says the browser "will automatically block" tracking programs, which is a guarantee the product never made and a more specific description of how it works.
-- `Onboarding.Welcome.Description.v120` — `zh-TW/firefox-ios.xliff` — "helps stop companies from secretly following you" is rendered as a promise that the browser automatically blocks the tracking programs.
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `能協助阻止大企業在網路上偷偷跟蹤您`
-    - The en-US makes a hedged claim ("helps stop"). The translation says the browser "will automatically block" tracking programs, which is a guarantee the product never made and a more specific description of how it works.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `zh-TW/firefox-ios.xliff` — The hedged "helps stop advertisers from tracking" is turned into a flat claim that advertisers are prevented from tracking.
-    - Current: `不讓廣告商追蹤您的瀏覽行為`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `協助阻止廣告商追蹤您的瀏覽行為`
-    - The en-US only says the feature helps stop tracking. 「不讓」(does not let) says tracking is fully prevented, which is a guarantee the source never makes.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
+| 2 | Wrong content (says something other than the English) | 15 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -145,16 +130,6 @@ _Nothing in this category._
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `以及您正在使用它的事實`
     - The en-US says only that users share how they discovered the app and the fact that they use it. The translation says users share how they use it, which implies usage data goes to marketing partners. That is a wider data-sharing claim than the product makes.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `zh-TW/firefox-ios.xliff` — "helps stop companies from secretly following you" is rendered as a promise that the browser automatically blocks the tracking programs.
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `能協助阻止大企業在網路上偷偷跟蹤您`
-    - The en-US makes a hedged claim ("helps stop"). The translation says the browser "will automatically block" tracking programs, which is a guarantee the product never made and a more specific description of how it works.
-- `Onboarding.Welcome.Description.v120` — `zh-TW/firefox-ios.xliff` — "helps stop companies from secretly following you" is rendered as a promise that the browser automatically blocks the tracking programs.
-    - Current: `會自動封鎖讓大企業在網路上偷偷跟蹤您的程式`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `能協助阻止大企業在網路上偷偷跟蹤您`
-    - The en-US makes a hedged claim ("helps stop"). The translation says the browser "will automatically block" tracking programs, which is a guarantee the product never made and a more specific description of how it works.
 - `Settings.Search.Suggest.SearchBrowsingHistory.Title.v124` — `zh-TW/firefox-ios.xliff` — "Search Browsing History" is rendered as "Show Browsing History", inconsistent with the sibling toggles that use 搜尋.
     - Current: `顯示瀏覽紀錄`
     - Source: `Search Browsing History`
@@ -205,11 +180,6 @@ _Nothing in this category._
     - Source: `Default clear wallpaper.`
     - Suggest: `預設的無圖案背景圖。`
     - The en-US "Default clear wallpaper." refers to the plain default wallpaper with no pattern. 明亮 means bright, so screen-reader users hear a wrong description. The translation also adds "Firefox", which the source lacks, and drops the final period that the sibling strings use.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `zh-TW/firefox-ios.xliff` — The hedged "helps stop advertisers from tracking" is turned into a flat claim that advertisers are prevented from tracking.
-    - Current: `不讓廣告商追蹤您的瀏覽行為`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `協助阻止廣告商追蹤您的瀏覽行為`
-    - The en-US only says the feature helps stop tracking. 「不讓」(does not let) says tracking is fully prevented, which is a guarantee the source never makes.
 - `TodayWidget.NewTabButtonLabelV1` — `zh-TW/firefox-ios.xliff` — "New Search" button label is rendered as "new search results" instead of the action "new search".
     - Current: `新搜尋結果`
     - Source: `New Search`

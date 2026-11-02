@@ -56,9 +56,13 @@
    "source": "Sunrise",
    "original": "Levé de soleil",
    "text": "Lever de soleil",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373343,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=316324",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -83,9 +87,13 @@
    "source": "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.",
    "original": "Pour enregistrer et remplir automatiquement les cartes bancaires et mots de passe, activez Face ID, Touch ID ou un code pour l’appareil.",
    "text": "Pour enregistrer et remplir automatiquement les cartes bancaires, activez Face ID, Touch ID ou un code pour l’appareil.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373344,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=301277",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -110,9 +118,13 @@
    "source": "Your tabs are syncing! Pick up where you left off on your other device.",
    "original": "Vos onglets sont synchronisés ! Reprenez là vous en étiez sur votre autre appareil.",
    "text": "Vos onglets sont synchronisés ! Reprenez là où vous en étiez sur votre autre appareil.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373345,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=247342",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -137,9 +149,13 @@
    "source": "Unselected",
    "original": "Désélectionné",
    "text": "Non sélectionné",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373346,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=306731",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -164,9 +180,13 @@
    "source": "Set your theme and toolbar to match your unique browsing style.",
    "original": "Configurez le thème et la barre d’outils à votre propre façon de naviguer.",
    "text": "Configurez le thème et la barre d’outils pour les adapter à votre propre façon de naviguer.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373347,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=292955",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -191,9 +211,13 @@
    "source": "Limited Edition Wallpaper",
    "original": "Fond d’écran en édition limité",
    "text": "Fond d’écran en édition limitée",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373348,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=279556",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -218,9 +242,14 @@
    "source": "Protect your account by using a strong, randomly generated password.",
    "original": "Protégez votre compte en utilisant un mot de passe compliqué, généré aléatoirement.",
    "text": "Protégez votre compte en utilisant un mot de passe robuste, généré aléatoirement.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "PasswordGenerator.Description.v132 @ Shared/Supporting Files/en-US.lproj/PasswordGenerator.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373349,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=310420",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -245,9 +274,13 @@
    "source": "Private By Design",
    "original": "Conçu pour protéger votre vie privé",
    "text": "Conçu pour protéger votre vie privée",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373350,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=340713",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -272,9 +305,13 @@
    "source": "Private by Design",
    "original": "Conçu pour protéger votre vie privé",
    "text": "Conçu pour protéger votre vie privée",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373351,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=340716",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -326,9 +363,13 @@
    "source": "Page is still loading. Wait for it to finish, then hit summarize.",
    "original": "La page est en cours de chargement. Veuillez attendre qu’elle soit complètement chargée, puis cliquez sur « Résumer ».",
    "text": "La page est en cours de chargement. Veuillez attendre qu’elle soit complètement chargée, puis appuyez sur « Résumer ».",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373353,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=322330",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -380,9 +421,13 @@
    "source": "To use the AutoFill feature for Firefox, you must have a device passcode enabled.",
    "original": "Pour utiliser la fonctionnalité de remplissage automatique, vous devez avoir un code d’appareil actif.",
    "text": "Pour utiliser la fonctionnalité de remplissage automatique de Firefox, vous devez avoir un code d’appareil actif.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373337,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=234595",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -407,9 +452,13 @@
    "source": "Quick-Search Engines",
    "original": "Moteurs de recherches rapides",
    "text": "Moteurs de recherche rapides",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373338,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=159347",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -434,9 +483,14 @@
    "source": "Firefox Suggest",
    "original": "Firefox suggère",
    "text": "Firefox Suggest",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "Search.SuggestSectionTitle.v102 @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373339,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=245012",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -461,9 +515,13 @@
    "source": "This action will clear the selected items. It cannot be undone.",
    "original": "Cette action effacera l’ensemble des éléments sélectionnés et est irréversible.",
    "text": "Cette action effacera les éléments sélectionnés et est irréversible.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373340,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=224620",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -488,9 +546,14 @@
    "source": "There was a problem accessing tabs from your other devices. Try again in a few moments.",
    "original": "Un problème s’est produit en accédant aux onglets de vos autres appareils. Veuillez réessayer plus tard.",
    "text": "Un problème s’est produit en accédant aux onglets de vos autres appareils. Veuillez réessayer dans quelques instants.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "There was a problem accessing tabs from your other devices. Try again in a few moments. @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373341,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=68484",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -515,9 +578,13 @@
    "source": "Clear Search",
    "original": "Effacer les recherches",
    "text": "Effacer la recherche",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373342,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=143754",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
