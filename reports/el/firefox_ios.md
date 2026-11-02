@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 27 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for el: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataUsage.v160` — `el/firefox-ios.xliff` — The unit is KB (kilobytes) instead of GB (gigabytes).
-    - Current: `%2$@ KB σε χρήση`
-    - Source: `%1$@ of %2$@ GB used`
-    - Suggest: `%2$@ GB σε χρήση`
-    - The source and the developer comment both say the amounts are in gigabytes ("1.0 of 5.0 GB used"). With "KB", the screen tells the user their usage and monthly limit are a millionth of what they really are.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -84,42 +80,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (47)
 
-> **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
-- `Onboarding.Welcome.Description.TreatementA.v120` — `el/firefox-ios.xliff` — "helps stop" is rendered as "stops", which turns a modest claim into an absolute promise.
-    - Current: `σταματά τις εταιρείες από το να σας ακολουθούν`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν`
-    - The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.
-- `Onboarding.Welcome.Description.v120` — `el/firefox-ios.xliff` — "helps stop" is rendered as "stops", which turns a modest claim into an absolute promise.
-    - Current: `σταματά τις εταιρείες από το να σας ακολουθούν`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν`
-    - The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.
 - `This action will clear all of your private data, including history from your synced devices.` — `el/firefox-ios.xliff` — Because of how the sentence is built, the Greek says all private data (and history) is deleted from synced devices, not local private data plus history from synced devices.
     - Current: `Αυτή η ενέργεια θα διαγράψει όλα τα ιδιωτικά σας δεδομένα, καθώς και το ιστορικό, από τις συγχρονισμένες συσκευές σας.`
     - Source: `This action will clear all of your private data, including history from your synced devices.`
     - Suggest: `Αυτή η ενέργεια θα διαγράψει όλα τα ιδιωτικά σας δεδομένα, συμπεριλαμβανομένου του ιστορικού από τις συγχρονισμένες συσκευές σας.`
     - In the en-US, 'from your synced devices' modifies only 'history'. The Greek attaches it to the whole clause, so it claims private data is cleared on other devices, which is a wider deletion than the product performs.
-- `CoverSheet.v24.ETP.Description` — `el/firefox-ios.xliff` — The hedge "helps stop" is dropped, so the Greek claims outright that ETP stops ads from tracking the user.
-    - Current: `εμποδίζει την καταγραφή σας από διαφημίσεις`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `βοηθά στην αποτροπή της καταγραφής σας από διαφημίσεις`
-    - The en-US only says the protection "helps stop" ads from following the user. The Greek drops "helps" and states flatly that it prevents tracking, which is a stronger guarantee about the product's behaviour than the source makes.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `el/firefox-ios.xliff` — The Greek drops the hedge 'helps' and says the feature stops advertisers from tracking you outright.
-    - Current: `εμποδίζει την καταγραφή της περιήγησής σας από διαφημιστές`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `βοηθά στην αποτροπή της καταγραφής της περιήγησής σας από διαφημιστές`
-    - The source says the feature 'helps stop' advertisers from tracking you. The Greek says it simply stops them, which promises full protection the product does not claim.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 11 |
+| 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -139,16 +115,6 @@ _Nothing in this category._
     - Source: `Automatic protection of your personal info Load sites fast and search smarter Brought to you by the non-profit %@, trusted for over 20 years`
     - Suggest: `που χαίρει εμπιστοσύνης για πάνω από 20 χρόνια`
     - The source means the non-profit has been trusted by people for 20+ years. The Greek uses first person plural «we trust». Coming from Mozilla's own product, that is not the obvious subject and changes the statement.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `el/firefox-ios.xliff` — "helps stop" is rendered as "stops", which turns a modest claim into an absolute promise.
-    - Current: `σταματά τις εταιρείες από το να σας ακολουθούν`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν`
-    - The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.
-- `Onboarding.Welcome.Description.v120` — `el/firefox-ios.xliff` — "helps stop" is rendered as "stops", which turns a modest claim into an absolute promise.
-    - Current: `σταματά τις εταιρείες από το να σας ακολουθούν`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `βοηθά να σταματήσουν οι εταιρείες να σας ακολουθούν`
-    - The en-US says the browser helps stop companies from tracking you. The Greek says it stops them outright, so the product promises full protection that the source does not claim.
 - `Settings.Rollouts.Message.v148` — `el/firefox-ios.xliff` — "between updates" is rendered as "with each new update", so the Greek wrongly ties the improvements to app updates.
     - Current: `θα βελτιώνονται με κάθε νέα ενημέρωση`
     - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
@@ -169,11 +135,6 @@ _Nothing in this category._
     - Source: `This action will clear all of your private data, including history from your synced devices.`
     - Suggest: `Αυτή η ενέργεια θα διαγράψει όλα τα ιδιωτικά σας δεδομένα, συμπεριλαμβανομένου του ιστορικού από τις συγχρονισμένες συσκευές σας.`
     - In the en-US, 'from your synced devices' modifies only 'history'. The Greek attaches it to the whole clause, so it claims private data is cleared on other devices, which is a wider deletion than the product performs.
-- `CoverSheet.v24.ETP.Description` — `el/firefox-ios.xliff` — The hedge "helps stop" is dropped, so the Greek claims outright that ETP stops ads from tracking the user.
-    - Current: `εμποδίζει την καταγραφή σας από διαφημίσεις`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `βοηθά στην αποτροπή της καταγραφής σας από διαφημίσεις`
-    - The en-US only says the protection "helps stop" ads from following the user. The Greek drops "helps" and states flatly that it prevents tracking, which is a stronger guarantee about the product's behaviour than the source makes.
 - `Menu.RemovePin.Confirm2.v99` — `el/firefox-ios.xliff` — Confirmation toast is rendered as an action label ("Remove shortcut") instead of a past-tense confirmation.
     - Current: `Αφαίρεση συντόμευσης`
     - Source: `Removed from Shortcuts`
@@ -184,11 +145,6 @@ _Nothing in this category._
     - Source: `Open Tabs`
     - Suggest: `Ανοιχτές καρτέλες`
     - The developer comment says this toggles the tabs syncing setting, so "Open Tabs" names the kind of data being synced: tabs that are open. «Άνοιγμα καρτελών» means the act of opening tabs.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `el/firefox-ios.xliff` — The Greek drops the hedge 'helps' and says the feature stops advertisers from tracking you outright.
-    - Current: `εμποδίζει την καταγραφή της περιήγησής σας από διαφημιστές`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `βοηθά στην αποτροπή της καταγραφής της περιήγησής σας από διαφημιστές`
-    - The source says the feature 'helps stop' advertisers from tracking you. The Greek says it simply stops them, which promises full protection the product does not claim.
 
 ### C. Grammar, agreement & spelling
 

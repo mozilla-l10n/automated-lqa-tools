@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-30 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for id: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimitResetFooter.v160` — `id/firefox-ios.xliff` — 'Setel ulang' reads as an imperative telling the user to reset; the source says the data limit resets by itself.
-    - Current: `Setel ulang ke`
-    - Source: `Resets to %1$@ GB on the first of every month`
-    - Suggest: `Diatur ulang ke`
-    - The source 'Resets to %1$@ GB on the first of every month' says the free data resets automatically, as the developer comment explains. 'Setel ulang ke…' reads like a command or button label. The passive 'Diatur ulang' says it correctly and matches 'diatur ulang' in VPN.ReachedDataLimitPopup.AltPopupBody.v160.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

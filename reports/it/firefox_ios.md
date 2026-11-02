@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 40 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -115,7 +115,7 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (23)
+### Dismissed by hand (22)
 
 - `ActivityStream.ContextMenu.UnpinTopsite` — `it/firefox-ios.xliff` — “Rilascia” is the established opposite of “Appunta” in this menu
 - `ActivityStream.ContextMenu.UnpinTopsite` — `Shared/en.lproj/Localizable.strings` — “Rilascia” is the established opposite of “Appunta” in this menu
@@ -131,7 +131,6 @@ _Nothing in this category._
 - `HistoryPanel.ClearHistoryMenuOptionTodayAndYesterday` — `it/firefox-ios.xliff` — Correct as is
 - `Onboarding.Modern.Welcome.Title.v145` — `it/firefox-ios.xliff` — DRAFT: the Italian wording is the agreed rendering for this screen
 - `Onboarding.Modern.Welcome.Title.v145` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — DRAFT: the Italian wording is the agreed rendering for this screen
-- `Onboarding.Welcome.Description.TreatementA.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “invadenti” might be more accurate, but it results in a weird phrase (need to be placed at the end)
 - `Onboarding.Welcome.Title.v114` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — “Benvenuti” is inclusive and shorter than “Ti diamo il benvenuto”
 - `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `it/firefox-ios.xliff` — False positive (“book” is there)
 - `Open articles in Reader View by tapping the book icon when it appears in the title bar.` — `Shared/en.lproj/Localizable.strings` — False positive (“book” is there)
@@ -158,7 +157,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (21)
+### Fixed to date (20)
 
 - `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — fixed 2026-10-19
 - `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — fixed 2026-10-17
@@ -167,7 +166,6 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `Settings.Siri.SectionDescription` — `it/firefox-ios.xliff` — fixed 2026-10-17
 - `Biometry.Screen.UniversalAuthenticationReason.v115` — `Shared/Supporting Files/en.lproj/BiometricAuthentication.strings` — fixed 2026-08-21
 - `Menu.EnhancedTrackingProtection.ClearData.AlertText.v128` — `Shared/Supporting Files/en.lproj/EnhancedTrackingProtection.strings` — fixed 2026-08-21
-- `Onboarding.Welcome.Description.v120` — `Shared/Supporting Files/en.lproj/Onboarding.strings` — fixed 2026-08-21
 - `ScanQRCode.ConfirmOpenURL.Message.v129` — `Shared/Supporting Files/en.lproj/ScanQRCode.strings` — fixed 2026-08-21
 - `Settings.AIControls.BlockedInformation.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-21
 - `Settings.Translation.AutoTranslate.Footer.v151` — `Shared/Supporting Files/en.lproj/Settings.strings` — fixed 2026-08-21

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-30 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for tr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `tr/firefox-ios.xliff` — The amount used and the monthly limit are swapped, so VoiceOver reads something like "5.0/1.0 gigabytes used" instead of "1.0 of 5.0".
-    - Current: `%2$@/%1$@ gigabayt kullanıldı`
-    - Source: `%1$@ of %2$@ gigabytes used`
-    - Suggest: `%1$@/%2$@ gigabayt kullanıldı`
-    - The developer comment says %1$@ is the amount used and %2$@ is the monthly limit. The visible version (VPN.Settings.DataUsage.v160) correctly writes %1$@/%2$@. This label puts the limit first, so it reads the wrong numbers aloud and doesn't match the screen.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

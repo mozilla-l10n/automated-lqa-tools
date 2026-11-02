@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,973 |
 
@@ -79,9 +79,9 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (92)
+## 3. Open findings (91)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `This action will clear all of your private data, including history from your synced devices.` — `cs/firefox-ios.xliff` — "all of your private data" is rendered as "všechna vaše data", dropping "private"/soukromá.
     - Current: `Tato akce smaže všechna vaše data, včetně historie prohlížení ze všech synchronizovaných zařízení.`
@@ -93,18 +93,13 @@ _Nothing reported._
     - Source: `Mozilla strives to only collect what we need to provide and improve Firefox for everyone.`
     - Suggest: `Mozilla se snaží sbírat jen data, která potřebuje k poskytování a vylepšování Firefoxu pro všechny.`
     - The en-US says Mozilla "strives to only collect what we need to provide and improve Firefox for everyone"; the Czech states as fact that it collects only info needed for improvement, changing what the product asserts about its data practices.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `cs/firefox-ios.xliff` — "helps stop advertisers from tracking" rendered as the absolute "zabrání inzerentům sledovat" (will prevent advertisers from tracking).
-    - Current: `zabrání inzerentům sledovat vás na internetu`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `pomáhá zabránit inzerentům ve sledování vašeho prohlížení`
-    - The source only claims it "helps stop" tracking; the Czech makes an unqualified promise about the product's behaviour.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 54 |
+| 2 | Wrong content (says something other than the English) | 53 |
 | 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -374,11 +369,6 @@ _Nothing in this category._
     - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
     - Suggest: `které jste si dva týdny nezobrazili`
     - Source says tabs you haven't viewed for two weeks; "neotevřeli" means not opened, which is a different condition (a tab can be open but not viewed).
-- `Settings.TrackingProtection.ProtectionCellFooter` — `cs/firefox-ios.xliff` — "helps stop advertisers from tracking" rendered as the absolute "zabrání inzerentům sledovat" (will prevent advertisers from tracking).
-    - Current: `zabrání inzerentům sledovat vás na internetu`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `pomáhá zabránit inzerentům ve sledování vašeho prohlížení`
-    - The source only claims it "helps stop" tracking; the Czech makes an unqualified promise about the product's behaviour.
 - `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `cs/firefox-ios.xliff` — "some ad tracking" translated as "některé sledující reklamy" (some tracking ads).
     - Current: `Povoluje některé sledující reklamy pro správné fungování stránek.`
     - Source: `Allows some ad tracking so websites function properly.`
@@ -414,7 +404,12 @@ _Nothing in this category._
     - Source: `Created %@`
     - Suggest: `Vytvořeno %@`
     - The developer comment says the label describes when the login was created, not saved.
-- _…and 6 more; see `state/` for the full list._
+- `Logins will be removed from all connected devices.` — `cs/firefox-ios.xliff` — "connected devices" translated as "synchronizovaných zařízení" (synced devices).
+    - Current: `Přihlašovací údaje budou odstraněny ze všech synchronizovaných zařízení.`
+    - Source: `Logins will be removed from all connected devices.`
+    - Suggest: `Přihlašovací údaje budou odstraněny ze všech připojených zařízení.`
+    - The source says "all connected devices", not "synced devices"; the sibling string that does say "synced devices" uses the same Czech wording, losing the distinction.
+- _…and 5 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

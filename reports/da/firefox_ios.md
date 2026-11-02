@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 68 of 1,915 |
+| **Strings reviewed this run** | 0 of 1,915 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimitTitle.v160` — `da/firefox-ios.xliff` — The Danish compound noun is wrongly split with a hyphen.
-    - Current: `Data-grænse`
-    - Source: `Data Limit`
-    - Suggest: `Datagrænse`
-    - Danish writes compound nouns as one word, so the correct spelling is "datagrænse". A hyphen is only used with abbreviations or names (e.g. "VPN-placering"), which is not the case here.
-- `VPN.ErrorBrowsingPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
-    - Current: `Luk 1 faneblad`
-    - Source: `Closed 1 Tab`
-    - Suggest: `Lukkede 1 faneblad`
-    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative, which makes it read like a button. The plural version correctly uses "Lukkede".
-- `VPN.ReachedDataLimitPopup.ClosedOneTab.v160` — `da/firefox-ios.xliff` — The confirmation "Closed 1 Tab" is rendered as an imperative command ("Close 1 tab").
-    - Current: `Luk 1 faneblad`
-    - Source: `Closed 1 Tab`
-    - Suggest: `Lukkede 1 faneblad`
-    - The developer comment says this confirms a tab was already closed. "Luk" is an imperative. The plural version correctly uses "Lukkede".
-- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `da/firefox-ios.xliff` — Double space between "GB" and "VPN-data".
-    - Current: `GB  VPN-data`
-    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
-    - Suggest: `GB VPN-data`
-    - The extra space is visible in the popup text.
-- `VPN.ReachedDataLimitPopup.Title.v160` — `da/firefox-ios.xliff` — The Danish compound is written with a hyphen when it should be one word.
-    - Current: `Data-grænse`
-    - Source: `VPN Data Limit Reached`
-    - Suggest: `Datagrænse`
-    - In Danish, compounds like this are written closed. "Datagrænse" is the standard spelling.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -119,32 +95,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (38)
+## 3. Open findings (35)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `Onboarding.Welcome.Description.TreatementA.v120` — `da/firefox-ios.xliff` — "helps stop" is rendered as "forhindrer" (prevents), turning a hedged claim into a guarantee.
-    - Current: `forhindrer virksomheder i at følge dig`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `hjælper med at forhindre virksomheder i at følge dig`
-    - The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.
-- `Onboarding.Welcome.Description.v120` — `da/firefox-ios.xliff` — "helps stop" is rendered as "forhindrer" (prevents), turning a hedged claim into a guarantee.
-    - Current: `forhindrer virksomheder i at følge dig`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `hjælper med at forhindre virksomheder i at følge dig`
-    - The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.
-- `CoverSheet.v24.ETP.Description` — `da/firefox-ios.xliff` — The hedge "helps stop" has become "forhindrer" (prevents), so the text now says tracking protection fully stops ads from following the user.
-    - Current: `forhindrer reklamer i at følge dig`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `hjælper med at forhindre reklamer i at følge dig`
-    - The en-US says Enhanced Tracking Protection "helps stop ads from following you". Dropping "helps" turns a partial claim into a guarantee the product does not make.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -164,16 +121,6 @@ _Nothing in this category._
     - Source: `Village or Township`
     - Suggest: `Landsby eller kommune`
     - "Village" and "Township" are English, not Danish, so Danish users see an English field label. "Landsby" is the Danish word for village.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `da/firefox-ios.xliff` — "helps stop" is rendered as "forhindrer" (prevents), turning a hedged claim into a guarantee.
-    - Current: `forhindrer virksomheder i at følge dig`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `hjælper med at forhindre virksomheder i at følge dig`
-    - The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.
-- `Onboarding.Welcome.Description.v120` — `da/firefox-ios.xliff` — "helps stop" is rendered as "forhindrer" (prevents), turning a hedged claim into a guarantee.
-    - Current: `forhindrer virksomheder i at følge dig`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `hjælper med at forhindre virksomheder i at følge dig`
-    - The source says the browser helps stop companies from tracking; the Danish asserts it prevents them outright, a promise the product does not make.
 - `RelayMask.RelayEmailMaskSettingsDetailInfo.v147` — `da/firefox-ios.xliff` — The negation is missing, so the Danish now says that some sites support email masks.
     - Current: `Nogle websteder understøtter mail-masker.`
     - Source: `Hide your real email to protect your inbox from spam. Some sites don’t support email masks.`
@@ -194,11 +141,6 @@ _Nothing in this category._
     - Source: `Closed 1 Tab`
     - Suggest: `Lukkede 1 faneblad`
     - The developer comment says this confirms a tab was already closed. "Luk" is an imperative. The plural version correctly uses "Lukkede".
-- `CoverSheet.v24.ETP.Description` — `da/firefox-ios.xliff` — The hedge "helps stop" has become "forhindrer" (prevents), so the text now says tracking protection fully stops ads from following the user.
-    - Current: `forhindrer reklamer i at følge dig`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `hjælper med at forhindre reklamer i at følge dig`
-    - The en-US says Enhanced Tracking Protection "helps stop ads from following you". Dropping "helps" turns a partial claim into a guarantee the product does not make.
 - `TodayWidget.SearchInPrivateTabLabelV2` — `da/firefox-ios.xliff` — Singular 'Private Tab' rendered as plural 'private faneblade'.
     - Current: `Søg i private faneblade`
     - Source: `Search in Private Tab`

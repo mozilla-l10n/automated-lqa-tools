@@ -79,7 +79,7 @@
   "Settings.AppIconSelection.AppIconNames.Regular.Title.v136": "95957824 fac46a91 63313727",
   "Settings.AppIconSelection.AppIconNames.Retro2004.Title.v139": "df45f639 706f376e 322a17a3",
   "Settings.AppIconSelection.AppIconNames.Retro2017.Title.v139": "880bed45 85f49d83 9d2c3b29",
-  "Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137": "f6d5f2a0 fd9dfdf9 7e52010c",
+  "Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137": "16188b56 fd9dfdf9 7e52010c",
   "Settings.AppIconSelection.AppIconNames.Sunset.Title.v137": "2d9f0668 ca1a8ccd 4c84eba8",
   "Settings.AppIconSelection.AppIconNames.SystemAuto.Title.v139": "06339b4b 3e29ecfc faa8ec43",
   "Settings.AppIconSelection.AppIconNames.Twilight.Title.v137": "f33b177e 3719e622 34cbece8",
@@ -179,7 +179,7 @@
  },
  "Shared/Supporting Files/en-US.lproj/Credentials.strings": {
   "Logins.DevicePasscodeRequired.Message.v122": "af712d7e 25cdcca3 b445d439",
-  "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2": "f7b3c23c d2700c3b e744fcc4"
+  "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2": "144b4e6a d2700c3b e744fcc4"
  },
  "Shared/Supporting Files/en-US.lproj/CustomizeFirefoxHome.strings": {
   "Settings.CustomizeFirefoxHome.PrivacyReport.v153": "d6b432f6 f5ae9142 34b1cb66",
@@ -383,7 +383,7 @@
  },
  "Shared/Supporting Files/en-US.lproj/JumpBackIn.strings": {
   "ContextualHints.FirefoxHomepage.JumpBackIn.PersonalizedHome": "ea3d0fe5 7bf57d6a 70c9fa57",
-  "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "304eb4fb 798a6f52 3882af56"
+  "ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106": "e6397fba 798a6f52 3882af56"
  },
  "Shared/Supporting Files/en-US.lproj/KeyboardAccessory.strings": {
   "KeyboardAccessory.NextButton.Accessibility.Label.v124": "1bf32010 af8e9e0a af0980aa",
@@ -578,7 +578,7 @@
   "Microsurvey.Survey.Options.VerySatisfied.v132": "f9992c52 89199da3 6fecdd03",
   "Microsurvey.Survey.OptionsOrder.AccessibilityLabel.v129": "2857343a 4771f310 07d0f992",
   "Microsurvey.Survey.PrivacyPolicyLink.v127": "3f645d82 e086ba7f e253a326",
-  "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129": "809a35bb 7fce1506 cc43a7bb",
+  "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129": "7815b33e 7fce1506 cc43a7bb",
   "Microsurvey.Survey.Sheet.AccessibilityLabel.v130": "81ca3edc 947593e3 40c6f7cd"
  },
  "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings": {
@@ -632,7 +632,7 @@
   "DefaultBrowserPopup.ThirdLabel.v114": "38dbece5 b6d2ce9f 8185c945",
   "DefaultBrowserPopup.Title.v114": "5e3bc663 ce53dc25 d4fc1f47",
   "Onboarding.Customization.Intro.Continue.Action.v123": "321ec488 971b559b c4cd6852",
-  "Onboarding.Customization.Intro.Description.v123": "a632fd42 650e7ab3 9d88fe26",
+  "Onboarding.Customization.Intro.Description.v123": "d76b07d2 650e7ab3 9d88fe26",
   "Onboarding.Customization.Intro.Skip.Action.v123": "93dd91fb b4b5c8d9 8f66c8c2",
   "Onboarding.Customization.Intro.Title.v123": "2db2bb08 82697551 fd26b4db",
   "Onboarding.Customization.Theme.Continue.Action.v123": "8cb44a2b c1811056 e56f154c",
@@ -780,7 +780,7 @@
   "Onboarding.TermsOfService.Title.v135": "2aaf2709 f36ea34c b1bd04c1",
   "Onboarding.TermsOfUse.TermsOfUseLink.v136": "f11b8df5 29292c7a d45b41a8",
   "Onboarding.Wallpaper.Accessibility.Classic.v114": "37cd0dc8 486dd455 a664ae4c",
-  "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114": "e3558d93 ff67bfd9 a664ae4c",
+  "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114": "6bed6573 ff67bfd9 a664ae4c",
   "Onboarding.Wallpaper.Action.v114": "ad6072a9 4003dfed 21b11e8d",
   "Onboarding.Wallpaper.Description.v114": "ba0086d3 27895de0 89688d19",
   "Onboarding.Wallpaper.SelectorTitle.v114": "4f0cd78e 88c672d8 2de5c67a",
@@ -869,10 +869,10 @@
   "QuickAnswers.OptInRedesign.NothingGetsSavedDescription.v158": "a409503a 829a0acc 4bb48a32",
   "QuickAnswers.OptInRedesign.NothingGetsSavedTitle.v158": "70997560 f8fc9071 4d46cbff",
   "QuickAnswers.OptInRedesign.PrivateByDesignDescription.v158": "97908029 c7d8d3ca 0458d0cd",
-  "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158": "4aa96e3c 3fbb6535 7dc31d26",
+  "QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158": "325a3392 3fbb6535 7dc31d26",
   "QuickAnswers.OptInRedesign.Title.v158": "7123c190 9a638568 ae92ee8d",
   "QuickAnswers.PrivacyBanner.Description.v158": "82dda043 bd747270 9094f0ec",
-  "QuickAnswers.PrivacyBanner.Title.v158": "4aa96e3c 13046125 a00ff433",
+  "QuickAnswers.PrivacyBanner.Title.v158": "325a3392 13046125 a00ff433",
   "QuickAnswers.QuickActions.Title.v158": "570097bf bdbb9902 410a2ea3",
   "QuickAnswers.ReturnPill.ReturnToQuickAnswerAccessibilityLabel.v158": "c2693b4c d85b1de1 d44cb618",
   "QuickAnswers.ReturnPill.Subtitle.v158": "f071729a b3761414 e584ded4",
@@ -1135,7 +1135,7 @@
   "Summarizer.AppleBrand.Label.v142": "f3ed9f80 c0d389e9 3eeb9490",
   "Summarizer.CloseButton.Accessibility.Label.v145": "d90e1b28 7fa950d1 3c77584f",
   "Summarizer.CloseButton.Label.v142": "5a00f1df 0e7c6115 402e424e",
-  "Summarizer.Error.MissingPageContent.Message.v142": "85edda7a 8c43c22f eb8e3eab",
+  "Summarizer.Error.MissingPageContent.Message.v142": "a8bcd30c 8c43c22f eb8e3eab",
   "Summarizer.Error.RateLimited.Message.v142": "0e68199e 0b05a63c f91a7bca",
   "Summarizer.Error.Unknown.Message.v142": "42b8295a c0d54bc6 064bc7c2",
   "Summarizer.Error.UnsafeWebsite.Message.v142": "5e89d28e fef01930 5a265e04",
@@ -1650,7 +1650,7 @@
   "Logins.DevicePasscodeRequired.LearnMoreButtonTitle": "3cf96968 8ed49578 350daf0e",
   "Logins.Onboarding.ContinueButtonTitle": "bba248c7 5009bc49 a02424d8",
   "Logins.Onboarding.LearnMoreButtonTitle": "3cf96968 8ed49578 350daf0e",
-  "Logins.PasscodeRequirement.Warning": "9f9647dd 2a0a2e37 3060f83e",
+  "Logins.PasscodeRequirement.Warning": "60b0a963 2a0a2e37 3060f83e",
   "Logins.WelcomeView.Tagline": "fe8c9c26 6ea03630 e8d7e518",
   "Logins.WelcomeView.Title2": "150ef9f7 ed26754c 11aecd92",
   "Logins.WelcomeView.TurnOnAutoFill": "93912dab 0e2553ec dd8d1629",
@@ -1737,7 +1737,7 @@
   "Privacy Policy": "3f645d82 140d7703 fece2995",
   "ProtectionStatus.NotSecure": "897c22d7 b3115394 68c2fad1",
   "ProtectionStatus.Secure": "8a7548da ad1f0b97 4b66a865",
-  "Quick-Search Engines": "f4b54a41 6b236c79 bc2497a7",
+  "Quick-Search Engines": "821aae8d 6b236c79 bc2497a7",
   "Ratings.Settings.RateOnAppStore": "935afe44 2140dd7e caf627ee",
   "Reader View": "66259a2e 9dea0549 47776f9e",
   "ReaderMode.Available.VoiceOverAnnouncement": "28b003a3 02116bf5 183504fd",
@@ -1957,7 +1957,7 @@
   "Settings.TroubleShootSync.Title": "6cb583a6 1508167e 2b48c8d0",
   "Settings.WebsiteData.ButtonShowMore": "fdda8b79 60aa7944 18f3e57b",
   "Settings.WebsiteData.ConfirmPrompt": "b437f49e b95a4bdf c7f27de1",
-  "Settings.WebsiteData.SelectedConfirmPrompt": "5ae501af f8a30473 2e8ec2b5",
+  "Settings.WebsiteData.SelectedConfirmPrompt": "880a80e0 f8a30473 2e8ec2b5",
   "Settings.WebsiteData.Title": "03ce2658 d4810c49 1e364e86",
   "ShareExtension.AddToReadingListAction.Title": "dda80454 18988325 129db853",
   "ShareExtension.AddToReadingListActionDone.Title": "57c6dfee 0c717f37 e0de6a55",
@@ -2046,7 +2046,7 @@
  "Shared/en-US.lproj/LoginManager.strings": {
   "Are you sure?": "e9651047 24dee20f c2cb57ac",
   "Cancel": "2754ef7a 871d661d 13a233fd",
-  "Clear Search": "ce2c8e7a c3ba2ce6 9ad18d1d",
+  "Clear Search": "426d95f6 c3ba2ce6 9ad18d1d",
   "Copy": "1f165bda ce9a36d0 6443eca9",
   "Created %@": "9990bb62 255a2223 21872679",
   "Delete": "33020cd9 d438d1ec fe7cd67a",

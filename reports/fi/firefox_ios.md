@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `BrowserDataTransfer.ImportFailure.Message.v160` — `fi/firefox-ios.xliff` — The verb is in the infinitive form ('yrittää') instead of the imperative ('yritä').
-    - Current: `Yrittää myöhemmin uudelleen.`
-    - Source: `Try again later.`
-    - Suggest: `Yritä myöhemmin uudelleen.`
-    - The en-US 'Try again later.' tells the user what to do, which needs the imperative 'Yritä'. 'Yrittää' is the infinitive or third-person form, so the sentence is ungrammatical as an instruction.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -83,27 +79,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (42)
+## 3. Open findings (41)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `fi/firefox-ios.xliff` — "that you use it" is rendered as "how you use it", widening the data shared with marketing partners.
     - Current: `ja kuinka käytät sitä`
     - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
     - Suggest: `ja että käytät sitä`
     - The en-US says only the fact that the user uses the app is shared; "kuinka käytät sitä" means "how you use it", so the product appears to share usage details with marketing partners, a broader data-sharing claim than the source makes.
-- `CoverSheet.v24.ETP.Description` — `fi/firefox-ios.xliff` — The hedge "helps stop" is rendered as an unqualified "stops", so the Finnish promises full prevention of ad tracking.
-    - Current: `estää mainoksia seuraamasta sinua`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `auttaa estämään mainoksia seuraamasta sinua`
-    - The en-US says Enhanced Tracking Protection "helps stop ads from following you around". The Finnish "estää" means "prevents", which makes the product promise complete protection that the source does not claim.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 19 |
+| 2 | Wrong content (says something other than the English) | 18 |
 | 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -168,11 +159,6 @@ _Nothing in this category._
     - Source: `Design is broken`
     - Suggest: `Sivun ulkoasu on rikki`
     - The en-US source and the developer comment both say this category is for a broken layout or design. The Finnish says only that something is wrong with the page. That doesn't tell it apart from the 'Site is not usable' and 'Other' categories in the same picker.
-- `CoverSheet.v24.ETP.Description` — `fi/firefox-ios.xliff` — The hedge "helps stop" is rendered as an unqualified "stops", so the Finnish promises full prevention of ad tracking.
-    - Current: `estää mainoksia seuraamasta sinua`
-    - Source: `Built-in Enhanced Tracking Protection helps stop ads from following you around. Turn on Strict to block even more trackers, ads, and popups.`
-    - Suggest: `auttaa estämään mainoksia seuraamasta sinua`
-    - The en-US says Enhanced Tracking Protection "helps stop ads from following you around". The Finnish "estää" means "prevents", which makes the product promise complete protection that the source does not claim.
 - `FirefoxHomepage.JumpBackIn.TabPickup.v104` — `fi/firefox-ios.xliff` — "Tab pickup" is rendered as "Välilehden valinta" (tab selection), which loses the meaning of continuing a synced tab from another device.
     - Current: `Välilehden valinta`
     - Source: `Tab pickup`

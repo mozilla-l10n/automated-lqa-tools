@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,973 |
+| **Strings reviewed this run** | 0 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -81,27 +81,22 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (37)
+## 3. Open findings (36)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
 - `NSMicrophoneUsageDescription` — `sk/firefox-ios.xliff` — The translation leaves out that Firefox uploads the recorded audio; it only mentions recording.
     - Current: `na nahrávanie zvuku`
     - Source: `Firefox uses your microphone to record and upload audio.`
     - Suggest: `na nahrávanie a nahrávanie zvuku na server`
     - The en-US says Firefox uses the microphone 'to record and upload audio'. The sk drops 'upload'. In a privacy permission description, this tells the user the audio is only recorded and not sent anywhere.
-- `Settings.TrackingProtection.ProtectionCellFooter` — `sk/firefox-ios.xliff` — The hedged "helps stop advertisers from tracking" has been translated as a flat promise that the feature prevents tracking.
-    - Current: `zabraňuje inzerentom sledovať vás na internete`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `pomáha zabrániť inzerentom sledovať vás na internete`
-    - The en-US only claims the feature helps stop tracking. "zabraňuje" (prevents) makes the product promise it stops advertisers from tracking, a guarantee the source does not make.
 
 _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
+| 2 | Wrong content (says something other than the English) | 14 |
 | 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -176,11 +171,6 @@ _Nothing in this category._
     - Source: `Cross-Site Trackers`
     - Suggest: `Sledovacie prvky medzi stránkami`
     - The source names one specific category (cross-site trackers). The generic "Sledovacie prvky" can't be told apart from the other tracker categories on the same screen, such as "Sledovacie prvky sociálnych sietí".
-- `Settings.TrackingProtection.ProtectionCellFooter` — `sk/firefox-ios.xliff` — The hedged "helps stop advertisers from tracking" has been translated as a flat promise that the feature prevents tracking.
-    - Current: `zabraňuje inzerentom sledovať vás na internete`
-    - Source: `Reduces targeted ads and helps stop advertisers from tracking your browsing.`
-    - Suggest: `pomáha zabrániť inzerentom sledovať vás na internete`
-    - The en-US only claims the feature helps stop tracking. "zabraňuje" (prevents) makes the product promise it stops advertisers from tracking, a guarantee the source does not make.
 - `Menu.NewPrivateTabAction.Title` — `sk/firefox-ios.xliff` — The translation says 'Open in private tab' instead of 'Open New Private Tab'.
     - Current: `Otvoriť na súkromnej karte`
     - Source: `Open New Private Tab`

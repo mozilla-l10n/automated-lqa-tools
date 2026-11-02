@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `2804315b81ef` |
-| **Previous run** | 2026-10-26 @ `7f349c067169` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
+| **Previous run** | 2026-11-02 @ `2804315b81ef` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 13 of 1,973 |
 
@@ -22,23 +22,73 @@ Also for fr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (13)
 
-- `VPN.LocationPicker.FindingLocationsText.v160` — `fr/firefox-ios.xliff` — VPN server locations are called “lieux” here but “emplacement(s)” everywhere else in the same group.
-    - Current: `Recherche de lieux…`
-    - Source: `Finding Locations…`
-    - Suggest: `Recherche d’emplacements…`
-    - The same term, VPN server location, is rendered “Emplacement” (LocationTitle) and “emplacement” (RecommendedSubText, Onboarding) on the screen this text belongs to. The two words should match.
-- `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `fr/firefox-ios.xliff` — The VoiceOver label uses the abbreviation “Go”, but the comment asks for the unit written out.
-    - Current: `%1$@ sur %2$@ Go utilisés`
-    - Source: `%1$@ of %2$@ gigabytes used`
-    - Suggest: `%1$@ sur %2$@ gigaoctets utilisés`
-    - The developer comment says this is the same as the visible text but with “gigabytes” written out instead of the abbreviation, for VoiceOver.
-- `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — The English word “Access” is left untranslated and reads as a product name.
-    - Current: `Access est réinitialisé le mois prochain`
-    - Source: `All %1$@ GB of VPN data used. Access resets next month.`
-    - Suggest: `L’accès est réinitialisé le mois prochain`
-    - “Access resets next month” means the user’s access to the VPN resets. Leaving the English word in, with no article, is a mistranslation that reads like a brand name in French.
+- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `fr/firefox-ios.xliff` — "Sunrise" is misspelled as "Levé de soleil" instead of "Lever de soleil".
+    - Current: `Levé de soleil`
+    - Source: `Sunrise`
+    - Suggest: `Lever de soleil`
+    - French for sunrise is "lever de soleil" (noun "lever"), not "levé"; also contrasts with the correctly formed "Coucher de soleil" for Sunset.
+- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fr/firefox-ios.xliff` — The French adds "et mots de passe" (and passwords), which the source does not mention; the source only refers to credit cards.
+    - Current: `Pour enregistrer et remplir automatiquement les cartes bancaires et mots de passe, activez Face ID, Touch ID ou un code pour l’appareil.`
+    - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`
+    - Suggest: `Pour enregistrer et remplir automatiquement les cartes bancaires, activez Face ID, Touch ID ou un code pour l’appareil.`
+    - Source: "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode." — no mention of passwords, and this message is shown in the Payment Methods context.
+- `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — Missing "où" in the phrase "là où vous en étiez".
+    - Current: `Reprenez là vous en étiez`
+    - Source: `Your tabs are syncing! Pick up where you left off on your other device.`
+    - Suggest: `Reprenez là où vous en étiez`
+    - The French idiom requires "là où vous en étiez"; as written the sentence is ungrammatical.
+- `Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129` — `fr/firefox-ios.xliff` — "Unselected" (state: not selected) is rendered as "Désélectionné", which means "deselected" (an action/result of removing a selection).
+    - Current: `Désélectionné`
+    - Source: `Unselected`
+    - Suggest: `Non sélectionné`
+    - The accessibility label states that the survey option was not selected; French should express the state "non sélectionné", not the action of deselecting.
+- `Onboarding.Customization.Intro.Description.v123` — `fr/firefox-ios.xliff` — Ungrammatical phrase: "à votre propre façon de naviguer" lacks the verb of adaptation present in the source ("to match").
+    - Current: `Configurez le thème et la barre d’outils à votre propre façon de naviguer.`
+    - Source: `Set your theme and toolbar to match your unique browsing style.`
+    - Suggest: `Configurez le thème et la barre d’outils pour les adapter à votre propre façon de naviguer.`
+    - The source says to set the theme and toolbar so they match your unique browsing style; "Configurez … à votre façon de naviguer" is not idiomatic French and the verb-preposition pairing is incorrect.
+- `Summarizer.Error.MissingPageContent.Message.v142` — `fr/firefox-ios.xliff` — "hit summarize" is rendered as « cliquez » (click) on a touch device, and the source says nothing about clicking.
+    - Current: `puis cliquez sur « Résumer »`
+    - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
+    - Suggest: `puis appuyez sur « Résumer »`
+    - Firefox iOS is a touch phone app; other strings in this batch use « Appuyez ». The source says "hit summarize".
+- `Logins.PasscodeRequirement.Warning` — `fr/firefox-ios.xliff` — The brand name "Firefox" from the source is dropped in the French translation.
+    - Current: `Pour utiliser la fonctionnalité de remplissage automatique, vous devez avoir un code d’appareil actif.`
+    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
+    - Suggest: `Pour utiliser la fonctionnalité de remplissage automatique de Firefox, vous devez avoir un code d’appareil actif.`
+    - The en-US reads "the AutoFill feature for Firefox"; the French omits "Firefox", losing the product reference.
+- `Quick-Search Engines` — `fr/firefox-ios.xliff` — Agreement error: "Moteurs de recherches rapides" should be "Moteurs de recherche rapides".
+    - Current: `Moteurs de recherches rapides`
+    - Source: `Quick-Search Engines`
+    - Suggest: `Moteurs de recherche rapides`
+    - In "moteur de recherche", "recherche" stays singular; the adjective "rapides" agrees with "moteurs", not with "recherches".
+- `Settings.WebsiteData.SelectedConfirmPrompt` — `fr/firefox-ios.xliff` — Added "l’ensemble des" (all of) which the source does not say for selected items.
+    - Current: `Cette action effacera l’ensemble des éléments sélectionnés et est irréversible.`
+    - Source: `This action will clear the selected items. It cannot be undone.`
+    - Suggest: `Cette action effacera les éléments sélectionnés et est irréversible.`
+    - en-US: "This action will clear the selected items" — no "all" quantifier, unlike the other prompt which does say "all of your website data".
+- `Clear Search` — `fr/firefox-ios.xliff` — "Clear Search" is rendered as plural "Effacer les recherches" (clear the searches) instead of clearing the current search field.
+    - Current: `Effacer les recherches`
+    - Source: `Clear Search`
+    - Suggest: `Effacer la recherche`
+    - The source refers to clearing the current search query in the search field, not deleting search history/searches.
+- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `fr/firefox-ios.xliff` — Agreement error: "limité" should agree with the feminine noun "édition".
+    - Current: `Fond d’écran en édition limité`
+    - Source: `Limited Edition Wallpaper`
+    - Suggest: `Fond d’écran en édition limitée`
+    - "édition" is feminine, so the adjective must be "limitée" (Limited Edition Wallpaper).
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private By Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
+- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
+    - Current: `Conçu pour protéger votre vie privé`
+    - Source: `Private by Design`
+    - Suggest: `Conçu pour protéger votre vie privée`
+    - "vie" is feminine, so the adjective must be "privée".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -82,11 +132,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 373 | **typographic** |
+| apostrophe | `typographic` 372 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
 | nbsp | `total` 164, `before-punctuation` 98 | _mixed_ |
-| register | `formal` 329 | **formal** |
+| register | `formal` 330 | **formal** |
 
 ---
 
@@ -96,14 +146,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (46)
+## 3. Open findings (26)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 2 | Wrong content (says something other than the English) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -122,11 +172,6 @@ _Nothing in this category._
     - Source: `Gradients`
     - Suggest: `Dégradés`
     - The source is the plural section name "Gradients", matching sibling headings "Basiques", "Colorées", "Autres"; the French introduces a singular "background" noun not in the source.
-- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fr/firefox-ios.xliff` — The French adds "et mots de passe" (and passwords), which the source does not mention; the source only refers to credit cards.
-    - Current: `Pour enregistrer et remplir automatiquement les cartes bancaires et mots de passe, activez Face ID, Touch ID ou un code pour l’appareil.`
-    - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`
-    - Suggest: `Pour enregistrer et remplir automatiquement les cartes bancaires, activez Face ID, Touch ID ou un code pour l’appareil.`
-    - Source: "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode." — no mention of passwords, and this message is shown in the Payment Methods context.
 - `Addresses.EditAddress.AutofillAddressTownland.v129` — `fr/firefox-ios.xliff` — "Townland" is rendered as "Commune", which names a different administrative unit.
     - Current: `Commune`
     - Source: `Townland`
@@ -142,11 +187,6 @@ _Nothing in this category._
     - Source: `Older`
     - Suggest: `Plus ancien`
     - The source is a generic "Older" section label for entries older than thirty days; "Avant le mois dernier" asserts a specific calendar-month boundary the source does not state.
-- `Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129` — `fr/firefox-ios.xliff` — "Unselected" (state: not selected) is rendered as "Désélectionné", which means "deselected" (an action/result of removing a selection).
-    - Current: `Désélectionné`
-    - Source: `Unselected`
-    - Suggest: `Non sélectionné`
-    - The accessibility label states that the survey option was not selected; French should express the state "non sélectionné", not the action of deselecting.
 - `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — "could also be set up incorrectly" (possibility) is rendered with the indicative "peuvent également être mal configurés", asserting it more strongly than the source.
     - Current: `Vos paramètres de connexion peuvent également être mal configurés.`
     - Source: `Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.`
@@ -207,21 +247,6 @@ _Nothing in this category._
     - Source: `Translates pages to your top preferred language automatically.`
     - Suggest: `Traduit automatiquement les pages dans votre première langue préférée.`
     - The source refers to the top entry of the Preferred Languages list, not simply any language the user chooses; the section is named « Langues préférées » in the same screen.
-- `Summarizer.Error.MissingPageContent.Message.v142` — `fr/firefox-ios.xliff` — "hit summarize" is rendered as « cliquez » (click) on a touch device, and the source says nothing about clicking.
-    - Current: `puis cliquez sur « Résumer »`
-    - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
-    - Suggest: `puis appuyez sur « Résumer »`
-    - Firefox iOS is a touch phone app; other strings in this batch use « Appuyez ». The source says "hit summarize".
-- `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — The generic "Can’t handle this one at the moment" is narrowed to an explicit statement that summarizing this page is impossible.
-    - Current: `Impossible de résumer cette page pour l’instant.`
-    - Source: `Can’t handle this one at the moment. Try again later!`
-    - Suggest: `Impossible de traiter cette demande pour l’instant.`
-    - The source is a rate-limit message about not handling the request right now, not a claim that the page cannot be summarized.
-- `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — "Summarization can make errors" is rendered as the summary containing errors rather than the feature making mistakes.
-    - Current: `le résumé peut contenir des erreurs`
-    - Source: `Note: Summarization can make errors.`
-    - Suggest: `la synthèse automatique peut faire des erreurs`
-    - The source disclaims the summarization process, not the specific output; the French wording asserts something slightly different about the product's output.
 - `Open Last Bookmark` — `fr/firefox-ios.xliff` — The action verb "Open" is dropped, leaving only a noun phrase instead of an action label.
     - Current: `Dernier marque-page`
     - Source: `Open Last Bookmark`
@@ -232,46 +257,11 @@ _Nothing in this category._
     - Source: `Forward`
     - Suggest: `Avancer`
     - Paired with Hotkeys.Back.DiscoveryTitle ("Retour"), the source "Forward" refers to navigating forward in session history; French Firefox uses « Avancer » for this toolbar/shortcut action.
-- `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — "Find Again" is rendered as "Rechercher le suivant" which names a different action.
-    - Current: `Rechercher le suivant`
-    - Source: `Find Again`
-    - Suggest: `Rechercher à nouveau`
-    - The source is "Find Again" (repeat the last search), not "find next".
-- `Logins.PasscodeRequirement.Warning` — `fr/firefox-ios.xliff` — The brand name "Firefox" from the source is dropped in the French translation.
-    - Current: `Pour utiliser la fonctionnalité de remplissage automatique, vous devez avoir un code d’appareil actif.`
-    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
-    - Suggest: `Pour utiliser la fonctionnalité de remplissage automatique de Firefox, vous devez avoir un code d’appareil actif.`
-    - The en-US reads "the AutoFill feature for Firefox"; the French omits "Firefox", losing the product reference.
-- `Search.SuggestSectionTitle.v102` — `fr/firefox-ios.xliff` — "Firefox Suggest" is a product/feature name and was translated as a sentence "Firefox suggère".
-    - Current: `Firefox suggère`
-    - Source: `Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - The source is the feature brand name "Firefox Suggest", used as a section header; it must not be rendered as the verb phrase "Firefox suggère".
-- `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — Wallpaper section title is rendered as "Écran à l’ouverture" (Opening screen) instead of a wallpaper collection title.
-    - Current: `ÉCRAN À L’OUVERTURE`
-    - Source: `OPENING SCREEN`
-    - Suggest: `FOND D’ÉCRAN`
-    - The developer comment says this is the title of the section that allows users to change the wallpaper settings; the source "OPENING SCREEN" aside, the French duplicates the Start-at-Home "Écran à l’ouverture" string and misidentifies the wallpaper section.
 - `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `fr/firefox-ios.xliff` — "some ad tracking" is rendered as "certains traqueurs publicitaires" (some ad trackers) and "websites" becomes the vague "des sites".
     - Current: `Autorise certains traqueurs publicitaires afin que des sites fonctionnent correctement.`
     - Source: `Allows some ad tracking so websites function properly.`
     - Suggest: `Autorise une partie du pistage publicitaire afin que les sites web fonctionnent correctement.`
     - The source allows a certain amount of ad tracking, not a subset of trackers; "les sites web" is the correct rendering of "websites".
-- `Settings.WebsiteData.SelectedConfirmPrompt` — `fr/firefox-ios.xliff` — Added "l’ensemble des" (all of) which the source does not say for selected items.
-    - Current: `Cette action effacera l’ensemble des éléments sélectionnés et est irréversible.`
-    - Source: `This action will clear the selected items. It cannot be undone.`
-    - Suggest: `Cette action effacera les éléments sélectionnés et est irréversible.`
-    - en-US: "This action will clear the selected items" — no "all" quantifier, unlike the other prompt which does say "all of your website data".
-- `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `fr/firefox-ios.xliff` — "in a few moments" translated as "plus tard" (later), changing the timing meaning.
-    - Current: `Veuillez réessayer plus tard.`
-    - Source: `There was a problem accessing tabs from your other devices. Try again in a few moments.`
-    - Suggest: `Veuillez réessayer dans quelques instants.`
-    - The source says to retry in a few moments, not later.
-- `Clear Search` — `fr/firefox-ios.xliff` — "Clear Search" is rendered as plural "Effacer les recherches" (clear the searches) instead of clearing the current search field.
-    - Current: `Effacer les recherches`
-    - Source: `Clear Search`
-    - Suggest: `Effacer la recherche`
-    - The source refers to clearing the current search query in the search field, not deleting search history/searches.
 - `Search Input Field` — `fr/firefox-ios.xliff` — Accessibility label renders "Search Input Field" as an action "Rechercher des identifiants" instead of naming the field.
     - Current: `Rechercher des identifiants`
     - Source: `Search Input Field`
@@ -280,36 +270,6 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `fr/firefox-ios.xliff` — "Sunrise" is misspelled as "Levé de soleil" instead of "Lever de soleil".
-    - Current: `Levé de soleil`
-    - Source: `Sunrise`
-    - Suggest: `Lever de soleil`
-    - French for sunrise is "lever de soleil" (noun "lever"), not "levé"; also contrasts with the correctly formed "Coucher de soleil" for Sunset.
-- `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — Missing "où" in the phrase "là où vous en étiez".
-    - Current: `Reprenez là vous en étiez`
-    - Source: `Your tabs are syncing! Pick up where you left off on your other device.`
-    - Suggest: `Reprenez là où vous en étiez`
-    - The French idiom requires "là où vous en étiez"; as written the sentence is ungrammatical.
-- `Onboarding.Customization.Intro.Description.v123` — `fr/firefox-ios.xliff` — Ungrammatical phrase: "à votre propre façon de naviguer" lacks the verb of adaptation present in the source ("to match").
-    - Current: `Configurez le thème et la barre d’outils à votre propre façon de naviguer.`
-    - Source: `Set your theme and toolbar to match your unique browsing style.`
-    - Suggest: `Configurez le thème et la barre d’outils pour les adapter à votre propre façon de naviguer.`
-    - The source says to set the theme and toolbar so they match your unique browsing style; "Configurez … à votre façon de naviguer" is not idiomatic French and the verb-preposition pairing is incorrect.
-- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `fr/firefox-ios.xliff` — Agreement error: "limité" should agree with the feminine noun "édition".
-    - Current: `Fond d’écran en édition limité`
-    - Source: `Limited Edition Wallpaper`
-    - Suggest: `Fond d’écran en édition limitée`
-    - "édition" is feminine, so the adjective must be "limitée" (Limited Edition Wallpaper).
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private By Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
-- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private by Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
 - `Settings.ScrollToHideTabAndAddressBar.Title.v138` — `fr/firefox-ios.xliff` — "la barre d’adresse et d’onglets" incorrectly merges two separate bars (tab bar and address bar) into one.
     - Current: `Faire défiler pour masquer la barre d’adresse et d’onglets`
     - Source: `Scroll to Hide Tab and Address Bar`
@@ -320,11 +280,6 @@ _Nothing in this category._
     - Source: `Get suggestions from %@ related to your search`
     - Suggest: `Obtenir des suggestions de %@ en rapport avec votre recherche`
     - Source is "Get suggestions from %@"; the French drops the "from" preposition, leaving an ungrammatical noun juxtaposition.
-- `Quick-Search Engines` — `fr/firefox-ios.xliff` — Agreement error: "Moteurs de recherches rapides" should be "Moteurs de recherche rapides".
-    - Current: `Moteurs de recherches rapides`
-    - Source: `Quick-Search Engines`
-    - Suggest: `Moteurs de recherche rapides`
-    - In "moteur de recherche", "recherche" stays singular; the adjective "rapides" agrees with "moteurs", not with "recherches".
 
 ### D. Terminology, register & consistency
 
@@ -333,11 +288,6 @@ _Nothing in this category._
     - Source: `Survey`
     - Suggest: `Sondage`
     - The feature is a microsurvey (questionnaire); French Firefox uses "sondage" for survey, while "enquête" suggests an investigation.
-- `PasswordGenerator.Description.v132` — `fr/firefox-ios.xliff` — "strong password" rendered as "mot de passe compliqué" instead of the established "mot de passe robuste/fort".
-    - Current: `un mot de passe compliqué, généré aléatoirement`
-    - Source: `Protect your account by using a strong, randomly generated password.`
-    - Suggest: `un mot de passe robuste, généré aléatoirement`
-    - "compliqué" means complicated, not strong; Firefox fr uses "robuste"/"fort" for strong passwords.
 - `Settings.Search.Suggest.PrivateSession.Description.v125` — `fr/firefox-ios.xliff` — "Firefox Suggest" is rendered as "Firefox Suggest" here but as "Firefox suggère" in the neighbouring strings on the same settings screen.
     - Current: `Afficher les suggestions de Firefox Suggest dans les sessions privées`
     - Source: `Show suggestions from Firefox Suggest in private sessions`
@@ -357,9 +307,15 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (7)
 
-_Nothing dismissed._
+- `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
+- `PasswordGenerator.Description.v132` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+- `Search.SuggestSectionTitle.v102` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
+- `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): In this Summarizer error, 'this one' means the page being summarized, so 'Impossible de résumer cette page pour l’instant' says the same thing.
+- `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
+- `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
@@ -373,11 +329,24 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (7)
+### Fixed to date (20)
 
+- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Onboarding.Customization.Intro.Description.v123` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `VPN.LocationPicker.FindingLocationsText.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `VPN.Settings.DataUsage.AccessibilityLabel.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Summarizer.Error.MissingPageContent.Message.v142` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `VPN.ReachedDataLimitPopup.AltPopupBody.v160` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Logins.PasscodeRequirement.Warning` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Quick-Search Engines` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Settings.WebsiteData.SelectedConfirmPrompt` — `fr/firefox-ios.xliff` — fixed 2026-11-02
+- `Clear Search` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `BrowserDataTransfer.ImportSuccess.Title.v160` — `fr/firefox-ios.xliff` — fixed 2026-10-26
 - `BrowserDataTransfer.ImportedBookmarksFolder.Title.v160` — `fr/firefox-ios.xliff` — fixed 2026-10-26
 - `TopSites.RemovePage.Button` — `fr/firefox-ios.xliff` — fixed 2026-10-17
