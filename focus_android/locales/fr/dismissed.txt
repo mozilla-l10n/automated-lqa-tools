@@ -15,3 +15,5 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+preference_phone_feature_notification @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-02): French UI idiomatically names this permission category in the plural ("Notifications"), as in Firefox's French site-permission settings.
+preference_switch_autocomplete_topsites @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-02): In Focus this setting autocompletes from a bundled list of globally popular sites, not the user's history, so "sites les plus populaires" is accurate.
