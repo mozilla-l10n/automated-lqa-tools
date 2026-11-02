@@ -1,0 +1,86 @@
+name: All projects l10n QA
+
+# Manual only: dispatches each project's own QA workflow with the same
+# inputs. Never schedule it; the per-project workflows already have their
+# staggered Monday crons.
+#
+# It dispatches rather than calling them as reusable workflows on purpose.
+# Each project keeps its own run, its own concurrency group and its own pull
+# request on l10n-qa/<project>, and digest.py keeps finding a project's runs
+# under <project>-qa.yml, which is how it knows not to merge while one is
+# still pushing. A workflow_call run would be listed under this file instead.
+#
+# The dispatched runs start together rather than staggered, so they share
+# the API key and runner pool at the same time.
+on:
+  workflow_dispatch:
+    inputs:
+      projects:
+        description: 'Comma-separated projects (firefox, android, focus_android, firefox_ios), or "all"'
+        required: false
+        default: 'all'
+      locales:
+        description: 'Comma-separated locale codes, or "all"'
+        required: false
+        default: 'all'
+      mode:
+        description: 'auto = baseline for a new locale, incremental otherwise'
+        required: false
+        default: 'auto'
+        type: choice
+        options: [auto, incremental, baseline]
+      dry_run:
+        description: 'Run everything but write nothing'
+        required: false
+        default: false
+        type: boolean
+      no_llm:
+        description: 'Deterministic checks only; no API calls'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write   # to dispatch the per-project workflows
+    steps:
+      - name: Dispatch the project workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          REF: ${{ github.ref_name }}
+          PROJECTS: ${{ inputs.projects }}
+          LOCALES: ${{ inputs.locales }}
+          MODE: ${{ inputs.mode }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          NO_LLM: ${{ inputs.no_llm }}
+        run: |
+          set -euo pipefail
+          known="firefox android focus_android firefox_ios"
+          requested="$(echo "$PROJECTS" | tr -d ' ')"
+          if [ -z "$requested" ] || [ "$requested" = "all" ]; then
+            selected="$known"
+          else
+            selected="$(echo "$requested" | tr ',' ' ')"
+          fi
+          # Fail loudly on an unknown name before dispatching anything.
+          for p in $selected; do
+            case " $known " in
+              *" $p "*) ;;
+              *) echo "::error::Unknown project: $p (known: $known)"; exit 1 ;;
+            esac
+          done
+          for p in $selected; do
+            echo "Dispatching $p-qa.yml on $REF"
+            gh workflow run "$p-qa.yml" --ref "$REF" \
+              -f locales="$LOCALES" \
+              -f mode="$MODE" \
+              -f dry_run="$DRY_RUN" \
+              -f no_llm="$NO_LLM"
+            echo "- \`$p-qa.yml\`" >> "$GITHUB_STEP_SUMMARY"
+          done
