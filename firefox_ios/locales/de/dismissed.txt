@@ -15,3 +15,6 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+SendTo.NotSignedIn.Title.v119 @ Shared/Supporting Files/en-US.lproj/Share.strings — auto-suggest (2026-11-02): "mit Ihrem Konto angemeldet" is idiomatic German (cf. "Angemeldet mit Ihrem Google-Konto"); mit is not ungrammatical.
+CloseTabsToast.Title.v113 @ Shared/Supporting Files/en-US.lproj/TabsTray.strings — auto-suggest (2026-11-02): "Geschlossene Tabs: %d" is correct, natural German that conveys the number of tabs closed; no meaning is lost.
+Settings.TrackingProtection.ProtectionLevelStandard.Description @ Shared/en-US.lproj/Localizable.strings — auto-suggest (2026-11-02): "jemandem erlauben, etwas zu tun" takes a dative object, and "bestimmter Werbung" is the correct feminine dative, so the sentence is grammatical.
