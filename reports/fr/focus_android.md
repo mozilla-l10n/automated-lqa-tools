@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `4b7f824f5bb3` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `4b7f824f5bb3` |
-| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
+| **Previous run** | 2026-11-02 @ `4b7f824f5bb3` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 250 |
 
@@ -75,8 +75,8 @@ The count includes Firefox for Android's strings for this locale, which the same
 | apostrophe | `typographic` 696 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 211, `before-punctuation` 142, `space-before-punctuation` 64 | _mixed_ |
-| register | `formal` 445 | **formal** |
+| nbsp | `total` 213, `before-punctuation` 143, `space-before-punctuation` 63 | _mixed_ |
+| register | `formal` 446 | **formal** |
 
 ---
 
@@ -86,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (4)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -112,11 +112,6 @@ _Nothing in this category._
     - Source: `Make privacy a habit`
     - Suggest: `Faites de la vie privée une habitude`
     - The source urges making privacy a habit, not regaining control of it.
-- `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — Singular "Notification" (a site-permission category label) is rendered in the plural.
-    - Current: `Notifications`
-    - Source: `Notification`
-    - Suggest: `Notification`
-    - The source is the singular permission name "Notification", matching the other site-permission entries; the French pluralises it.
 
 ### C. Grammar, agreement & spelling
 
@@ -124,11 +119,7 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "top sites" rendered as "sites les plus populaires" instead of the established "sites les plus visités" used elsewhere for top sites.
-    - Current: `Pour les sites les plus populaires`
-    - Source: `For top sites`
-    - Suggest: `Pour les sites les plus visités`
-    - "Top sites" in Mozilla French is consistently "sites les plus visités"; "populaires" changes the meaning (popularity vs. the user's own most-visited sites).
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -138,9 +129,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (2)
 
-_Nothing dismissed._
+- `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): French UI idiomatically names this permission category in the plural ("Notifications"), as in Firefox's French site-permission settings.
+- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): In Focus this setting autocompletes from a bundled list of globally popular sites, not the user's history, so "sites les plus populaires" is accurate.
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
