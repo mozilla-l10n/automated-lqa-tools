@@ -240,6 +240,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "加密您的敏感資料",
+  "dismissed_because": "",
+  "fid": "0794c25178af",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"Secure your sensitive data\", and the dialog asks the user to set up a lock pattern, PIN or password. It says nothing about encryption, so 保護 (protect) is the faithful rendering.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "3075a726",
+  "string_id": "automotive_authentication_setup_dialog_title",
+  "suggest": "保護您的敏感資料",
+  "summary": "\"Secure\" was translated as 加密 (encrypt), but the dialog is about setting up a device lock.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "才能捷徑到主畫面",
@@ -344,7 +368,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "zh-TW",
   "origin": {},
   "rationale": "zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",
@@ -438,19 +462,19 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 3,
-  "last_seen": "2026-10-16",
+  "last_seen": "2026-11-02",
   "locale": "zh-TW",
   "origin": {
    "confidence": "high"
   },
-  "rationale": "The repeated 這張 is a typo. The status should read 正在搜尋這張圖片 ('Looking this up').",
+  "rationale": "The repeated 這張 is a typo and makes the status text ungrammatical.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-11-02",
+  "status": "fixed",
   "string_hash": "cd0b0e7b",
   "string_id": "lens_camera_loading_status",
   "suggest": "這張圖片",
-  "summary": "The phrase 這張 is accidentally written twice.",
+  "summary": "The word 這張 is accidentally written twice.",
   "suppressed_by": ""
  },
  {
@@ -510,7 +534,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "zh-TW",
   "origin": {},
   "rationale": "zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.",

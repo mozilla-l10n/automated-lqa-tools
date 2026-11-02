@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "fr",
-  "prose_chunks": 2803,
-  "strings": 2803
+  "prose_chunks": 2833,
+  "strings": 2833
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 693
+  "typographic": 696
  },
  "dash": {
   "em": 2,
@@ -33,7 +33,7 @@
   "guillemet": 23
  },
  "register": {
-  "formal": 442,
+  "formal": 445,
   "informal": 0
  }
 }

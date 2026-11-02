@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
 | **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,552 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 37 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The loading-indicator description uses the plain verb form 「追加します」 ("will add"), but the string describes an action already in progress.
+    - Current: `署名を追加します`
+    - Source: `Adding signature`
+    - Suggest: `署名を追加中`
+    - According to the developer comment, this is read for a loading indicator while a signature is being added. 「追加します」 sounds like an announcement or instruction, while 「追加中」 states that the work is in progress, which matches "Adding signature".
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,552 |
-| Missing strings | 1 |
+| Strings | 2,583 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,11 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -80,7 +79,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 728 | **punctuation** |
+| fullwidth | `punctuation` 731 | **punctuation** |
 
 ---
 
@@ -90,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (139)
+## 3. Open findings (140)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 107 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -428,6 +427,11 @@ _Nothing reported._
     - Source: `We download partial languages to your cache to keep translations private.`
     - Suggest: `翻訳のプライバシーを保つため`
     - The noun 「プライバシー」 requires the object particle 「を」 before 「保つ」; as written the sentence is ungrammatical.
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The loading-indicator description uses the plain verb form 「追加します」 ("will add"), but the string describes an action already in progress.
+    - Current: `署名を追加します`
+    - Source: `Adding signature`
+    - Suggest: `署名を追加中`
+    - According to the developer comment, this is read for a loading indicator while a signature is being added. 「追加します」 sounds like an announcement or instruction, while 「追加中」 states that the work is in progress, which matches "Adding signature".
 - `tabs_header_normal_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Normal Tabs Open" is rendered as "通常の開いているタブ", an ungrammatical modifier order inconsistent with the private tabs string.
     - Current: `通常の開いているタブ`
     - Source: `Normal Tabs Open: %1$s. Tap to switch tabs.`

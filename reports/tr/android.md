@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 35 of 2,582 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for tr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for tr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `browser_menu_read_or_listen` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Reader view" is translated as "Okuyucu görüntüleme" here but as "Okuyucu görünümü" in the reader view panel strings.
+    - Current: `Okuyucu görüntüleme`
+    - Source: `Reader view, read or listen to page`
+    - Suggest: `Okuyucu görünümü`
+    - "Reader View" is the name of a feature, and the reader view panel string (reader_mode_panel_content_description_2) calls it "Okuyucu görünümü", the usual Firefox Turkish term. "Görüntüleme" means "viewing" (the action), not "view" (the mode), so the screen reader gives users two different names for the same feature.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
-| Missing strings | 0 |
+| Strings | 2,582 |
+| Missing strings | 1 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,7 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**1 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -87,14 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (122)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 67 |
-| 3 | Degraded language (grammar, spelling, terminology) | 48 |
+| 3 | Degraded language (grammar, spelling, terminology) | 49 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -505,6 +512,11 @@ _Nothing in this category._
     - Source: `Sign in to sync`
     - Suggest: `Eşitlemek için giriş yapın`
     - The tr locale uses the formal (-ın) imperative form, as in the surrounding strings ("Yeniden deneyin.", "Tüm yer imlerinizi bir arada tutun"); this button uses the informal "yap".
+- `browser_menu_read_or_listen` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "Reader view" is translated as "Okuyucu görüntüleme" here but as "Okuyucu görünümü" in the reader view panel strings.
+    - Current: `Okuyucu görüntüleme`
+    - Source: `Reader view, read or listen to page`
+    - Suggest: `Okuyucu görünümü`
+    - "Reader View" is the name of a feature, and the reader view panel string (reader_mode_panel_content_description_2) calls it "Okuyucu görünümü", the usual Firefox Turkish term. "Görüntüleme" means "viewing" (the action), not "view" (the mode), so the screen reader gives users two different names for the same feature.
 - `deleting_browsing_data_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — "browsing data" is rendered as "Göz atma verileri" here while the same term is translated "gezinti verileri" in the related delete-browsing-data dialog string.
     - Current: `Göz atma verileri siliniyor…`
     - Source: `Deleting browsing data…`

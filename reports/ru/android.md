@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
 | **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,18 @@ Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_listentopage_expand_player` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ru/strings.xml` — "Player" is spelled "плейер" here; the standard spelling is "плеер", and the batch uses "Медиаплеер" elsewhere.
+    - Current: `развернуть плейер`
+    - Source: `expand player`
+    - Suggest: `развернуть плеер`
+    - The dictionary spelling of "player" is "плеер". This string is also inconsistent with reader_mode_panel_media_player_content_description ("Медиаплеер").
+- `automotive_authentication_setup_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "If someone else is driving your car" became "if someone else is in your car", and "from being accessed" was dropped.
+    - Current: `чтобы защитить сохранённые конфиденциальные данные, если кто-то ещё находится в вашем автомобиле`
+    - Source: `Set up a device lock pattern, PIN, or password to protect your saved sensitive data from being accessed if someone else is driving your car.`
+    - Suggest: `чтобы защитить сохранённые конфиденциальные данные от доступа, если вашим автомобилем управляет кто-то другой`
+    - The source describes another person driving the car and getting access to the data. The Russian describes someone merely being in the car and does not say what the data is protected from.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,7 +85,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 146, `formal` 484 | **formal** |
+| register | `informal` 147, `formal` 485 | **formal** |
 
 ---
 
@@ -87,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (139)
+## 3. Open findings (141)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 77 |
-| 3 | Degraded language (grammar, spelling, terminology) | 57 |
+| 2 | Wrong content (says something other than the English) | 78 |
+| 3 | Degraded language (grammar, spelling, terminology) | 58 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -238,6 +246,11 @@ _Nothing in this category._
     - Source: `%1$s will translate this language automatically when the page loads.`
     - Suggest: `%1$s будет автоматически переводить страницы на этом языке при их загрузке.`
     - The source means Firefox will translate content written in this language; the Russian says it will translate into this language, the opposite direction, and is inconsistent with the sibling strings that use «сайтов на этом языке».
+- `automotive_authentication_setup_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "If someone else is driving your car" became "if someone else is in your car", and "from being accessed" was dropped.
+    - Current: `чтобы защитить сохранённые конфиденциальные данные, если кто-то ещё находится в вашем автомобиле`
+    - Source: `Set up a device lock pattern, PIN, or password to protect your saved sensitive data from being accessed if someone else is driving your car.`
+    - Suggest: `чтобы защитить сохранённые конфиденциальные данные от доступа, если вашим автомобилем управляет кто-то другой`
+    - The source describes another person driving the car and getting access to the data. The Russian describes someone merely being in the car and does not say what the data is protected from.
 - `bookmark_empty_list_guest_cta` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Sign in to sync" is translated as "Войти в синхронизацию", which is not the intended meaning.
     - Current: `Войти в синхронизацию`
     - Source: `Sign in to sync`
@@ -398,12 +411,7 @@ _Nothing in this category._
     - Source: `Remote improvements`
     - Suggest: `Дистанционные улучшения`
     - "Удалённые" is ambiguous and most naturally reads as "deleted/removed" here (unlike "Удалённая отладка" where the context disambiguates), so it conveys the wrong meaning of "remote".
-- `preferences_show_search_suggestions_in_private` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "private sessions" translated as "приватных окнах" (private windows).
-    - Current: `Показывать в приватных окнах`
-    - Source: `Show in private sessions`
-    - Suggest: `Показывать в приватных сессиях`
-    - The source says "sessions", not "windows"; Android Firefox has no windows.
-- _…and 20 more; see `state/` for the full list._
+- _…and 21 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -442,6 +450,11 @@ _Nothing in this category._
     - Source: `Not yet available`
     - Suggest: `Ещё недоступно`
     - In Russian the predicative adverb is spelled together as «недоступно» when there is no contrast/negation particle; «не доступно» here is a spelling error.
+- `mozac_feature_listentopage_expand_player` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ru/strings.xml` — "Player" is spelled "плейер" here; the standard spelling is "плеер", and the batch uses "Медиаплеер" elsewhere.
+    - Current: `развернуть плейер`
+    - Source: `expand player`
+    - Suggest: `развернуть плеер`
+    - The dictionary spelling of "player" is "плеер". This string is also inconsistent with reader_mode_panel_media_player_content_description ("Медиаплеер").
 - `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ru/strings.xml` — Extraneous comma before "как" in "перед тем, как загружать" combined with dangling verb without object.
     - Current: `перед тем, как загружать на «%1$s»`
     - Source: `Make sure you trust this site before you upload from “%1$s”.`

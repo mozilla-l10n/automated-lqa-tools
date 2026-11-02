@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 37 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for zh-TW: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,13 +18,26 @@ Also for zh-TW: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The word 這張 is accidentally written twice.
+    - Current: `這張這張圖片`
+    - Source: `Looking this up`
+    - Suggest: `這張圖片`
+    - The repeated 這張 is a typo and makes the status text ungrammatical.
+- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — "Secure" was translated as 加密 (encrypt), but the dialog is about setting up a device lock.
+    - Current: `加密您的敏感資料`
+    - Source: `Secure your sensitive data`
+    - Suggest: `保護您的敏感資料`
+    - The source says "Secure your sensitive data", and the dialog asks the user to set up a lock pattern, PIN or password. It says nothing about encryption, so 保護 (protect) is the faithful rendering.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The word 這張 is accidentally written twice.
+    - Current: `這張這張圖片`
+    - Source: `Looking this up`
+    - Suggest: `這張圖片`
+    - The repeated 這張 is a typo and makes the status text ungrammatical.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +58,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -76,7 +88,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `corner` 24 | **corner** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1071 | **punctuation** |
+| fullwidth | `punctuation` 1077 | **punctuation** |
 
 ---
 
@@ -146,8 +158,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 31 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 2 | Wrong content (says something other than the English) | 32 |
+| 3 | Degraded language (grammar, spelling, terminology) | 16 |
 | 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
@@ -173,6 +185,11 @@ _Also listed under their own category below._
     - Source: `VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.`
     - Suggest: `您的所在位置可能會被看見`
     - The source only warns that your location may be visible (exposed) while the VPN is down. The translation claims someone may actively track your location, which is not what the source says.
+- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — "Secure" was translated as 加密 (encrypt), but the dialog is about setting up a device lock.
+    - Current: `加密您的敏感資料`
+    - Source: `Secure your sensitive data`
+    - Suggest: `保護您的敏感資料`
+    - The source says "Secure your sensitive data", and the dialog asks the user to set up a lock pattern, PIN or password. It says nothing about encryption, so 保護 (protect) is the faithful rendering.
 - `browser_menu_remove_from_shortcuts` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The menu button is translated as a past-tense status message ("Removed from shortcuts") instead of an action.
     - Current: `已從捷徑刪除`
     - Source: `Remove from shortcuts`
@@ -336,11 +353,6 @@ _Also listed under their own category below._
     - Source: `Xiaomi devices may need extra permissions to add shortcuts to the home screen. Please check your settings.`
     - Suggest: `才能新增捷徑到主畫面`
     - The source says 'to add shortcuts to the home screen'. The translation drops the verb 'add' (新增), so the sentence is ungrammatical.
-- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The phrase 這張 is accidentally written twice.
-    - Current: `這張這張圖片`
-    - Source: `Looking this up`
-    - Suggest: `這張圖片`
-    - The repeated 這張 is a typo. The status should read 正在搜尋這張圖片 ('Looking this up').
 - `nimbus_survey_message_text` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The character 變 is missing, so 「讓 Firefox 得更好」 is ungrammatical.
     - Current: `讓 Firefox 得更好`
     - Source: `Please help make Firefox better by taking a short survey.`
@@ -498,6 +510,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `lens_camera_loading_status` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — fixed 2026-11-02

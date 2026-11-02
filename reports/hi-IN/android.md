@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,533 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 2 of 2,533 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for hi-IN: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -47,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,533 |
-| Missing strings | 20 |
+| Missing strings | 50 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,11 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-**20 strings** are not translated yet, concentrated in:
+**50 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 14
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-hi-rIN/strings.xml` — 5
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-hi-rIN/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-hi-rIN/strings.xml` — 28
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-hi-rIN/strings.xml` — 14
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-hi-rIN/strings.xml` — 8
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

@@ -578,6 +578,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "Utklapt",
+  "dismissed_because": "",
+  "fid": "c6baf96db5a4",
+  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "fy-NL",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Frisian spells the prefix 'út-' with an acute accent, as in 'spiler útklappe' in the same batch. 'Utklapt' is a spelling error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "91a64667",
+  "string_id": "mozac_feature_listentopage_dropdown_expanded",
+  "suggest": "Útklapt",
+  "summary": "\"Utklapt\" is missing the accent on the capital Ú.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "Ofspylsnelheid 75 prosint stadiger",
   "dismissed_because": "",
   "fid": "731bc020a3ea",

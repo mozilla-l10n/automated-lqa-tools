@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
 | **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,18 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The loading-indicator description is translated as an action label ("Add signature") instead of a status in progress.
+    - Current: `Signatur hinzufügen`
+    - Source: `Adding signature`
+    - Suggest: `Signatur wird hinzugefügt`
+    - The developer comment says this describes a loading indicator while a signature is being added. The infinitive "Signatur hinzufügen" reads like a button for the screen-reader user, when it should say the action is in progress.
+- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The full stop at the end of the source sentence is missing.
+    - Current: `Diese Grafik konnte nicht geladen werden`
+    - Source: `Couldn’t load this image.`
+    - Suggest: `Diese Grafik konnte nicht geladen werden.`
+    - The source "Couldn’t load this image." ends with a full stop, and this snackbar message is a complete sentence.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,7 +85,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 658 | **formal** |
+| register | `formal` 666 | **formal** |
 
 ---
 
@@ -87,15 +95,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (98)
+## 3. Open findings (100)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 56 |
+| 2 | Wrong content (says something other than the English) | 57 |
 | 3 | Degraded language (grammar, spelling, terminology) | 33 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -283,6 +291,11 @@ _Nothing in this category._
     - Source: `Leave private tabs`
     - Suggest: `Private Tabs verlassen`
     - Per the developer comment this is the secondary action to exit private browsing mode; "belassen" means "to leave something unchanged", reversing the intended action.
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The loading-indicator description is translated as an action label ("Add signature") instead of a status in progress.
+    - Current: `Signatur hinzufügen`
+    - Source: `Adding signature`
+    - Suggest: `Signatur wird hinzugefügt`
+    - The developer comment says this describes a loading indicator while a signature is being added. The infinitive "Signatur hinzufügen" reads like a button for the screen-reader user, when it should say the action is in progress.
 - `preference_accessibility_force_enable_zoom_summary` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "pinch and zoom" is mistranslated as "das Kneifen und Zoomen" (pinching someone).
     - Current: `das Kneifen und Zoomen`
     - Source: `Enable to allow pinch and zoom, even on websites that prevent this gesture.`
@@ -597,6 +610,11 @@ _Nothing in this category._
     - Source: `Autofill tools`
     - Suggest: `Automatisches Ausfüllen – Werkzeuge`
     - The locale convention is the en dash for parenthetical/separating dashes; a hyphen with spaces is incorrect German typography.
+- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The full stop at the end of the source sentence is missing.
+    - Current: `Diese Grafik konnte nicht geladen werden`
+    - Source: `Couldn’t load this image.`
+    - Suggest: `Diese Grafik konnte nicht geladen werden.`
+    - The source "Couldn’t load this image." ends with a full stop, and this snackbar message is a complete sentence.
 - `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Straight/English quotes used instead of German quotation marks.
     - Current: `Lesezeichen in “%s” gespeichert`
     - Source: `Bookmarks saved in “%s”`

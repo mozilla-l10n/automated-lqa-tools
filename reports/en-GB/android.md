@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,553 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 36 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for en-GB: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -46,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,553 |
+| Strings | 2,583 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,7 +74,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 172 | **typographic** |
+| apostrophe | `typographic` 173 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 

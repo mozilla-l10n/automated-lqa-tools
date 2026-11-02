@@ -1,15 +1,15 @@
 # Firefox for Android and the shared Android Components — l10n QA
 
-- **Generated:** 2026-10-30
+- **Generated:** 2026-11-02
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,338 raised, 346 fixed (10%), 2,777 open
+- **Findings:** 3,369 raised, 408 fixed (12%), 2,746 open
 - **Closed by a person:** 28 dismissed, 59 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (38)
+### Reads as a deliberate edit (39)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -37,6 +37,10 @@ The translation makes the product assert something the en-US never said. Nothing
     - The hedge "helps" is dropped, so the Greek says one tap stops companies spying instead of helping to stop them.
     - Current: `Ένα πάτημα εμποδίζει τις εταιρείες`
     - Suggest: `Ένα πάτημα βοηθά να εμποδίσετε τις εταιρείες`
+- **`fa`** `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
+    - The hedge "helps" is dropped, so "helps stop companies spying" becomes an unconditional promise to stop them.
+    - Current: `با یک لمس، جلوی جاسوسی شرکت‌ها از کلیک‌هایتان را بگیرید.`
+    - Suggest: `یک لمس به جلوگیری از جاسوسی شرکت‌ها از کلیک‌هایتان کمک می‌کند.`
 - **`fi`** `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
     - "and that you use it" is translated as "and how you use it", which widens what data is shared.
     - Current: `kuinka käytät sitä`
@@ -129,60 +133,54 @@ The translation makes the product assert something the en-US never said. Nothing
     - "and that you use it" is rendered as "how you use it", which describes a much wider data share.
     - Current: `以及是如何使用的`
     - Suggest: `以及您正在使用 Firefox 的事實`
-- **`zh-TW`** `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values/strings.xml`
-    - "and that you use it" is rendered as "how you use it", which describes a much wider data share.
-    - Current: `以及是如何使用的`
-    - Suggest: `以及您正在使用 Firefox 的事實`
-- _…and 8 more, in the per-locale reports linked below._
+- _…and 9 more, in the per-locale reports linked below._
 
 ### Broken output — impact 1 (0)
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (1456)
+### Wrong content — impact 2 (1444)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,390 | 163 | **124** | 52 | 0 | 0 | 0 |
-| [cs](cs/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **103** | 64 | 7 | 2 | 0 |
-| [de](de/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **98** | 56 | 1 | 0 | 0 |
-| [el](el/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **32** | 15 | 0 | 0 | 0 |
-| [en-CA](en-CA/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **0** | 0 | 0 | 0 | 0 |
-| [en-GB](en-GB/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **1** | 1 | 0 | 2 | 55 |
-| [es-AR](es-AR/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **102** | 41 | 7 | 0 | 0 |
-| [es-ES](es-ES/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,483 | 70 | **110** | 48 | 1 | 0 | 0 |
-| [es-MX](es-MX/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,512 | 41 | **130** | 75 | 12 | 0 | 0 |
-| [fa](fa/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,545 | 8 | **107** | 45 | 18 | 0 | 0 |
-| [fi](fi/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **43** | 16 | 0 | 0 | 0 |
-| [fr](fr/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **68** | 51 | 8 | 0 | 0 |
-| [fy-NL](fy-NL/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **146** | 46 | 13 | 0 | 0 |
-| [hi-IN](hi-IN/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,533 | 20 | **0** | 0 | 213 | 8 | 0 |
-| [hu](hu/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **130** | 66 | 0 | 0 | 0 |
-| [id](id/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **150** | 84 | 4 | 0 | 0 |
-| [it](it/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **0** | 0 | 41 | 11 | 4 |
-| [ja](ja/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **139** | 107 | 1 | 0 | 0 |
-| [ko](ko/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **80** | 39 | 0 | 0 | 0 |
-| [nl](nl/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **60** | 32 | 0 | 0 | 0 |
-| [pl](pl/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,551 | 2 | **78** | 54 | 5 | 1 | 0 |
-| [pt-BR](pt-BR/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **94** | 61 | 7 | 4 | 0 |
-| [pt-PT](pt-PT/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **73** | 23 | 0 | 0 | 0 |
-| [ro](ro/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,552 | 1 | **88** | 29 | 0 | 0 | 0 |
-| [ru](ru/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **139** | 77 | 1 | 0 | 0 |
-| [sk](sk/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **49** | 26 | 1 | 0 | 0 |
-| [sl](sl/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,534 | 19 | **99** | 57 | 1 | 0 | 0 |
-| [sv-SE](sv-SE/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **73** | 29 | 0 | 0 | 0 |
-| [th](th/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,436 | 117 | **46** | 26 | 0 | 0 | 0 |
-| [tr](tr/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **121** | 67 | 5 | 0 | 0 |
-| [uk](uk/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,551 | 2 | **50** | 23 | 0 | 0 | 0 |
-| [vi](vi/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,551 | 2 | **52** | 28 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,547 | 6 | **129** | 87 | 0 | 0 | 0 |
-| [zh-TW](zh-TW/android.md) | 2026-10-30 | checks-only | `f1e4f544` | 2,553 | 0 | **63** | 31 | 0 | 0 | 0 |
+| [ar](ar/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,391 | 192 | **124** | 52 | 0 | 0 | 0 |
+| [cs](cs/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **103** | 64 | 7 | 2 | 0 |
+| [de](de/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **100** | 57 | 1 | 0 | 0 |
+| [el](el/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **32** | 15 | 0 | 0 | 0 |
+| [en-CA](en-CA/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,552 | 31 | **0** | 0 | 0 | 0 | 0 |
+| [en-GB](en-GB/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **1** | 1 | 0 | 2 | 55 |
+| [es-AR](es-AR/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **102** | 41 | 7 | 0 | 0 |
+| [es-ES](es-ES/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,483 | 100 | **110** | 48 | 1 | 0 | 0 |
+| [es-MX](es-MX/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,512 | 71 | **130** | 75 | 12 | 0 | 0 |
+| [fa](fa/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,548 | 35 | **65** | 27 | 77 | 0 | 0 |
+| [fi](fi/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **44** | 16 | 0 | 0 | 0 |
+| [fr](fr/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **68** | 51 | 8 | 0 | 0 |
+| [fy-NL](fy-NL/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,568 | 15 | **147** | 46 | 13 | 0 | 0 |
+| [hi-IN](hi-IN/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,533 | 50 | **0** | 0 | 213 | 8 | 0 |
+| [hu](hu/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **131** | 67 | 0 | 0 | 0 |
+| [id](id/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **151** | 85 | 4 | 0 | 0 |
+| [it](it/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **2** | 2 | 41 | 11 | 4 |
+| [ja](ja/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **140** | 107 | 1 | 0 | 0 |
+| [ko](ko/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **81** | 39 | 0 | 0 | 0 |
+| [nl](nl/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,568 | 15 | **60** | 32 | 0 | 0 | 0 |
+| [pl](pl/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **78** | 54 | 5 | 1 | 0 |
+| [pt-BR](pt-BR/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **94** | 61 | 7 | 4 | 0 |
+| [pt-PT](pt-PT/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **73** | 23 | 0 | 0 | 0 |
+| [ro](ro/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,553 | 30 | **88** | 29 | 0 | 0 | 0 |
+| [ru](ru/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **141** | 78 | 1 | 0 | 0 |
+| [sk](sk/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **48** | 26 | 2 | 0 | 0 |
+| [sl](sl/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,549 | 34 | **99** | 57 | 1 | 0 | 0 |
+| [sv-SE](sv-SE/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **73** | 29 | 0 | 0 | 0 |
+| [th](th/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,436 | 147 | **46** | 26 | 0 | 0 | 0 |
+| [tr](tr/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,582 | 1 | **122** | 67 | 5 | 0 | 0 |
+| [uk](uk/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,551 | 32 | **50** | 23 | 0 | 0 | 0 |
+| [vi](vi/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,551 | 32 | **51** | 27 | 1 | 0 | 0 |
+| [zh-CN](zh-CN/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,547 | 36 | **129** | 87 | 0 | 0 | 0 |
+| [zh-TW](zh-TW/android.md) | 2026-11-02 | incremental | `a2d8921e` | 2,583 | 0 | **63** | 32 | 1 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
-
-**Not reviewed yet:** `ar`, `cs`, `de`, `el`, `en-CA`, `en-GB`, `es-AR`, `es-ES`, `es-MX`, `fa`, `fi`, `fr`, `fy-NL`, `hi-IN`, `hu`, `id`, `it`, `ja`, `ko`, `nl`, `pl`, `pt-BR`, `pt-PT`, `ro`, `ru`, `sk`, `sl`, `sv-SE`, `th`, `tr`, `uk`, `vi`, `zh-CN`, `zh-TW`. They have only been through the deterministic checks; the reviewer has not read them. The next run does the baseline.
 
 ## Adding a locale
 

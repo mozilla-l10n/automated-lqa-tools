@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,551 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 6 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -23,9 +22,13 @@ Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The translation says no results were found, but the source reports that results could not be retrieved because of an error.
+    - Current: `Không tìm thấy kết quả`
+    - Source: `Couldn’t get results from Google Lens`
+    - Suggest: `Không thể nhận kết quả`
+    - The developer comment says this message appears after a network problem or a Google Lens error. "Không tìm thấy kết quả" means the search ran and found nothing. The user would wrongly think the image has no matches, when in fact the request failed and a retry may work.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -47,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,551 |
-| Missing strings | 2 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,9 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**32 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 2
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 16
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — 9
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,7 +95,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (52)
+## 3. Open findings (51)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -110,7 +115,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 28 |
+| 2 | Wrong content (says something other than the English) | 27 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -220,11 +225,6 @@ _Nothing in this category._
     - Source: `Firefox Suggest`
     - Suggest: `Firefox Suggest`
     - Firefox Suggest is a Mozilla product name for this feature and should stay untranslated. The rendering "Firefox's suggestions" turns the brand into a description.
-- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The Vietnamese says no results were found instead of saying the results couldn't be retrieved.
-    - Current: `Không tìm thấy kết quả từ Google Ống kính`
-    - Source: `Couldn’t get results from Google Lens`
-    - Suggest: `Không thể nhận kết quả từ Google Ống kính`
-    - The source "Couldn’t get results" and the developer comment describe a failure caused by a network problem or a Google Lens error, with a retry action. "Không tìm thấy kết quả" means "no results found", which tells the user the search worked but matched nothing.
 - `nova_onboarding_marketing_body_6` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "the platform you came from" is rendered as "the platform you are currently using".
     - Current: `nền tảng bạn đang sử dụng rằng`
     - Source: `Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
@@ -408,6 +408,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `lens_camera_upload_failed` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — fixed 2026-11-02

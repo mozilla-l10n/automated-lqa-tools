@@ -1464,6 +1464,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "서명 추가",
+  "dismissed_because": "",
+  "fid": "73ebe8687797",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 3,
+  "last_seen": "2026-11-02",
+  "locale": "ko",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says this is read by screen readers for a loading indicator while a signature is being added. \"서명 추가\" sounds like a button label, not an ongoing operation.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ed6438e0",
+  "string_id": "pdf_tools_signature_adding_content_description",
+  "suggest": "서명 추가 중",
+  "summary": "The loading-indicator description is translated as the action \"Add signature\" instead of the in-progress state \"Adding signature\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "E",
   "check": "llm",
   "current": "DNS Over HTTPS",

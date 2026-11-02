@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,552 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 7 of 2,553 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for ro: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -46,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,552 |
-| Missing strings | 1 |
+| Strings | 2,553 |
+| Missing strings | 30 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,9 +63,11 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
+**30 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 14
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ro/strings.xml` — 9
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ro/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

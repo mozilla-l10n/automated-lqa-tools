@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,552 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 22 of 2,568 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — "Utklapt" is missing the accent on the capital Ú.
+    - Current: `Utklapt`
+    - Source: `Expanded`
+    - Suggest: `Útklapt`
+    - Frisian spells the prefix 'út-' with an acute accent, as in 'spiler útklappe' in the same batch. 'Utklapt' is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,552 |
-| Missing strings | 1 |
+| Strings | 2,568 |
+| Missing strings | 15 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,9 +67,10 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
+**15 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 8
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fy-rNL/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (146)
+## 3. Open findings (147)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 46 |
-| 3 | Degraded language (grammar, spelling, terminology) | 99 |
+| 3 | Degraded language (grammar, spelling, terminology) | 100 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -425,6 +429,11 @@ _Nothing in this category._
     - Source: `No app found to open %1$s files`
     - Suggest: `Gjin app fûn om %1$s-bestannen te iepenjen`
     - The source says no app was found to open the files; 'mei' adds an instrumental sense that is not in the source and is ungrammatical here.
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — "Utklapt" is missing the accent on the capital Ú.
+    - Current: `Utklapt`
+    - Source: `Expanded`
+    - Suggest: `Útklapt`
+    - Frisian spells the prefix 'út-' with an acute accent, as in 'spiler útklappe' in the same batch. 'Utklapt' is a spelling error.
 - `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
     - Current: `Ofspylsnelheid 75 prosint stadiger`
     - Source: `Playback rate 75 percent slower`
@@ -640,12 +649,7 @@ _Nothing in this category._
     - Source: `Sync`
     - Suggest: `Synchronisaasje`
     - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
-- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "downloadskiednis" as "downloadskeiednis".
-    - Current: `downloadskeiednis`
-    - Source: `File is removed from your download history, but is still saved on your device`
-    - Suggest: `downloadskiednis`
-    - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
-- _…and 25 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

@@ -2,16 +2,15 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-10-30 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f1e4f5447b8d` |
-| **Previous run** | 2026-10-26 @ `f1e4f5447b8d` |
-| **Mode** | checks-only |
-| **Strings reviewed this run** | 0 of 2,552 |
+| **Generated** | 2026-11-02 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `a2d8921e4c16` |
+| **Previous run** | 2026-10-30 @ `f1e4f5447b8d` |
+| **Mode** | incremental |
+| **Strings reviewed this run** | 37 of 2,583 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
-> **The reviewer did not run for this report.** Only the deterministic checks were applied; no string was read. The absence of a finding here means nothing has looked, not that there is nothing to find.
 
 Also for fi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
@@ -19,9 +18,13 @@ Also for fi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fi/strings.xml` — "Laajennuttu" is not a valid Finnish form; the passive past participle for "expanded" is "Laajennettu".
+    - Current: `Laajennuttu`
+    - Source: `Expanded`
+    - Suggest: `Laajennettu`
+    - The source "Expanded" is the screen-reader state of an open menu. The correct participle is "laajennettu". "Laajennuttu" is a misspelling, and it also doesn't match "Kutistettu", which the paired collapsed-state strings use.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,552 |
-| Missing strings | 1 |
+| Strings | 2,583 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -64,11 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fi/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (43)
+## 3. Open findings (44)
 
 > **Reads as a deliberate edit (5).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -126,7 +125,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 22 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -238,6 +237,11 @@ _Nothing in this category._
     - Source: `Cancel private downloads?`
     - Suggest: `Peruutetaanko`
     - The passive interrogative of "peruuttaa" is "peruutetaanko". The passive of "perua" would be "perutaanko". "Perutetaanko" mixes the two and isn't a real word.
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fi/strings.xml` — "Laajennuttu" is not a valid Finnish form; the passive past participle for "expanded" is "Laajennettu".
+    - Current: `Laajennuttu`
+    - Source: `Expanded`
+    - Suggest: `Laajennettu`
+    - The source "Expanded" is the screen-reader state of an open menu. The correct participle is "laajennettu". "Laajennuttu" is a misspelling, and it also doesn't match "Kutistettu", which the paired collapsed-state strings use.
 - `mozac_protections_dashboard_trackers_blocked_this_week_title` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-fi/strings.xml` — Title uses the numeral-dependent partitive singular "seurainta" with no number and starts lowercase, reading as a truncated fragment.
     - Current: `seurainta estetty tällä viikolla`
     - Source: `Trackers blocked this week`

@@ -152,7 +152,7 @@
   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-10-30",
+  "last_seen": "2026-11-02",
   "locale": "hu",
   "origin": {},
   "rationale": "In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1603,6 +1603,30 @@
   "string_id": "download_item_paused_description_unknown_total_size",
   "suggest": "%1$s • szüneteltetve",
   "summary": "\"paused\" is rendered as the noun \"szünet\" instead of \"szüneteltetve\", inconsistent with the parallel string.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "(adatok)",
+  "dismissed_because": "",
+  "fid": "d32ae63387c7",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-02",
+  "impact": 2,
+  "last_seen": "2026-11-02",
+  "locale": "hu",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says \"data\" refers to the data: URL scheme. That is a technical identifier shown in place of a website name, so like other protocol names it should stay untranslated.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9b4bfade",
+  "string_id": "download_item_source_data",
+  "suggest": "(data)",
+  "summary": "The protocol name \"data\" (from the data: URL scheme) is translated as the common noun \"adatok\".",
   "suppressed_by": ""
  },
  {
