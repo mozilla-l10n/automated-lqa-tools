@@ -1,0 +1,1221 @@
+{
+ "project": "firefox_ios",
+ "locale": "de",
+ "suggestions": [
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Alerts.strings",
+   "string_id": "Alerts.AddToCalendar.Body.v134",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Alerts.strings",
+     "Alerts.AddToCalendar.Body.v134"
+    ]
+   },
+   "fids": [
+    "18edf3ce426e"
+   ],
+   "findings": [
+    "Wrong preposition/case combination: \"einen Termin in Ihrem Kalender hinzufügen\" is ungrammatical; should be \"zu Ihrem Kalender hinzufügen\"."
+   ],
+   "source": "%@ is asking to download a file and add an event to your calendar.",
+   "original": "%@ bittet darum, eine Datei herunterzuladen und einen Termin in Ihrem Kalender hinzuzufügen.",
+   "text": "%@ bittet darum, eine Datei herunterzuladen und einen Termin zu Ihrem Kalender hinzuzufügen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.EmptyState.Root.Body.v135",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.EmptyState.Root.Body.v135"
+    ]
+   },
+   "fids": [
+    "64126072f80f"
+   ],
+   "findings": [
+    "Lowercase \"sie\" used instead of the formal \"Sie\", and the subordinate clause needs a comma."
+   ],
+   "source": "Save sites as you browse. We’ll also grab bookmarks from other synced devices.",
+   "original": "Speichern Sie Websites während sie surfen. Wir holen uns auch Lesezeichen von anderen synchronisierten Geräten.",
+   "text": "Speichern Sie Websites, während Sie surfen. Wir holen uns auch Lesezeichen von anderen synchronisierten Geräten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.EmptyState.Root.BodySignedOut.v135",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.EmptyState.Root.BodySignedOut.v135"
+    ]
+   },
+   "fids": [
+    "a3fac1b4c900"
+   ],
+   "findings": [
+    "Missing comma before the subordinate clause \"während Sie surfen\"."
+   ],
+   "source": "Save sites as you browse. Sign in to grab bookmarks from other synced devices.",
+   "original": "Speichern Sie Websites während Sie surfen. Melden Sie sich an, um Lesezeichen von anderen synchronisierten Geräten zu holen.",
+   "text": "Speichern Sie Websites, während Sie surfen. Melden Sie sich an, um Lesezeichen von anderen synchronisierten Geräten zu holen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136"
+    ]
+   },
+   "fids": [
+    "21c0a3dfab16"
+   ],
+   "findings": [
+    "Header capitalization inconsistent with the parallel MOBILE BOOKMARKS header, which is rendered in all caps."
+   ],
+   "source": "DESKTOP BOOKMARKS",
+   "original": "Desktop-Lesezeichen",
+   "text": "DESKTOP-LESEZEICHEN",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+   "string_id": "Logins.DevicePasscodeRequired.Message.v122",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+     "Logins.DevicePasscodeRequired.Message.v122"
+    ]
+   },
+   "fids": [
+    "d24df379a050"
+   ],
+   "findings": [
+    "\"device passcode\" is rendered as \"Gerätepasssatz\" (device passphrase) instead of the established term \"Gerätecode\"."
+   ],
+   "source": "To save and automatically fill passwords, enable Face ID, Touch ID, or a device passcode.",
+   "original": "Um Passwörter zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätepasssatz.",
+   "text": "Um Passwörter zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätecode.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+   "string_id": "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Credentials.strings",
+     "Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2"
+    ]
+   },
+   "fids": [
+    "3917f3d06623"
+   ],
+   "findings": [
+    "\"device passcode\" is rendered as \"Gerätepasssatz\" (device passphrase) instead of the established term \"Gerätecode\"."
+   ],
+   "source": "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.",
+   "original": "Um Kreditkarten zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätepasssatz.",
+   "text": "Um Kreditkarten zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätecode.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.BadCertDomain.ProceedButton.v149",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.BadCertDomain.ProceedButton.v149"
+    ]
+   },
+   "fids": [
+    "cb177a191d21"
+   ],
+   "findings": [
+    "Misspelling of \"riskant\"."
+   ],
+   "source": "Proceed to %@ (Risky)",
+   "original": "Weiter zu %@ (risikant)",
+   "text": "Weiter zu %@ (riskant)",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.BadCertDomain.TitleLabel.v149",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.BadCertDomain.TitleLabel.v149"
+    ]
+   },
+   "fids": [
+    "433c72b43315"
+   ],
+   "findings": [
+    "The identical source sentence \"Something doesn’t look right.\" is translated differently here than in NativeErrorPage.GenericError.TitleLabel.v131 (\"Irgendetwas stimmt hier nicht.\")."
+   ],
+   "source": "Be careful. Something doesn’t look right.",
+   "original": "Seien Sie vorsichtig. Irgendetwas sieht nicht gut aus.",
+   "text": "Seien Sie vorsichtig. Irgendetwas stimmt hier nicht.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.NoInternetConnection.Description.v131",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.NoInternetConnection.Description.v131"
+    ]
+   },
+   "fids": [
+    "8e303c05fd8f"
+   ],
+   "findings": [
+    "Missing case agreement in \"Ihr Modem oder Router\" after \"Überprüfen Sie\" (accusative required)."
+   ],
+   "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
+   "original": "Versuchen Sie, auf einem anderen Gerät eine Verbindung herzustellen. Überprüfen Sie Ihr Modem oder Router. Trennen Sie die WLAN-Verbindung und stellen Sie die Verbindung wieder her.",
+   "text": "Versuchen Sie, auf einem anderen Gerät eine Verbindung herzustellen. Überprüfen Sie Ihr Modem oder Ihren Router. Trennen Sie die WLAN-Verbindung und stellen Sie die Verbindung wieder her.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.Wayback.Error.Title.v154",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.Wayback.Error.Title.v154"
+    ]
+   },
+   "fids": [
+    "f1ca766c8108"
+   ],
+   "findings": [
+    "Adds an \"Fehler:\" prefix not present in the source \"Unable to connect\"."
+   ],
+   "source": "Unable to connect",
+   "original": "Fehler: Verbindung fehlgeschlagen",
+   "text": "Verbindung fehlgeschlagen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.BrandRefresh.Notification.Title.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.BrandRefresh.Notification.Title.v148"
+    ]
+   },
+   "fids": [
+    "47199485ce86"
+   ],
+   "findings": [
+    "The German reverses the subject: source says notifications help the user stay safer with Firefox, German says they help the user make Firefox safer."
+   ],
+   "source": "Notifications help you stay safer with %@",
+   "original": "Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen",
+   "text": "Benachrichtigungen helfen Ihnen, mit %@ noch sicherer zu surfen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.Sync.Description.v145",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.Sync.Description.v145"
+    ]
+   },
+   "fids": [
+    "48930113aeb9"
+   ],
+   "findings": [
+    "\"sync on any device\" is mistranslated as \"werden mit jedem Gerät synchronisiert\" (synced with every device) instead of being available/synced on any device."
+   ],
+   "source": "Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.",
+   "original": "Ihre Lesezeichen, Passwörter und mehr werden mit jedem Gerät synchronisiert. Alles ist durch Verschlüsselung geschützt, sodass nur Sie darauf zugreifen können.",
+   "text": "Ihre Lesezeichen, Passwörter und mehr werden auf allen Geräten synchronisiert. Alles ist durch Verschlüsselung geschützt, sodass nur Sie darauf zugreifen können.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.TermsOfService.Subtitle.v140",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.TermsOfService.Subtitle.v140"
+    ]
+   },
+   "fids": [
+    "ebdaeb3ef527"
+   ],
+   "findings": [
+    "Third line uses the informal address (\"Synchronisiere auf allen deinen Geräten\") instead of the established formal form."
+   ],
+   "source": "Load sites lightning fast\nAutomatic tracking protection\nSync on all your devices",
+   "original": "Laden Sie Websites blitzschnell\nAutomatischer Tracking-Schutz\nSynchronisiere auf allen deinen Geräten",
+   "text": "Laden Sie Websites blitzschnell\nAutomatischer Tracking-Schutz\nSynchronisieren Sie auf allen Ihren Geräten",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.Welcome.Title.v145",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.Welcome.Title.v145"
+    ]
+   },
+   "fids": [
+    "ea0eca999b56"
+   ],
+   "findings": [
+    "\"trackers\" is rendered as \"Verfolgern\" instead of the established term \"Tracker\"."
+   ],
+   "source": "Say goodbye to creepy trackers",
+   "original": "Verabschieden Sie sich von gruseligen Verfolgern",
+   "text": "Verabschieden Sie sich von gruseligen Trackern",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.MultiDay.SyncCard.BodyText.v159",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.MultiDay.SyncCard.BodyText.v159"
+    ]
+   },
+   "fids": [
+    "1949ef0aa4ea"
+   ],
+   "findings": [
+    "\"Instantly\" is dropped from the translation."
+   ],
+   "source": "Instantly get passwords, history, and more on any device.",
+   "original": "Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.",
+   "text": "Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Welcome.Close.AccessibilityLabel.v121",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Welcome.Close.AccessibilityLabel.v121"
+    ]
+   },
+   "fids": [
+    "154df7e70c78"
+   ],
+   "findings": [
+    "Missing hyphen in the compound with the app-name placeholder."
+   ],
+   "source": "Close and exit %@ onboarding",
+   "original": "%@ Onboarding beenden und schließen",
+   "text": "%@-Onboarding beenden und schließen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Welcome.Description.TreatementA.v120",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Welcome.Description.TreatementA.v120"
+    ]
+   },
+   "fids": [
+    "984e4b3b51de"
+   ],
+   "findings": [
+    "\"non-profit backed\" mistranslated as the browser itself being non-profit."
+   ],
+   "source": "Our non-profit backed browser helps stop companies from secretly following you around the web.",
+   "original": "Unser gemeinnütziger Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
+   "text": "Unser von einer gemeinnützigen Organisation unterstützter Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Welcome.Description.v120",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Welcome.Description.v120"
+    ]
+   },
+   "fids": [
+    "205e0b924ff7"
+   ],
+   "findings": [
+    "\"non-profit backed\" mistranslated as the browser itself being non-profit."
+   ],
+   "source": "Our non-profit backed browser helps stop companies from secretly following you around the web.",
+   "original": "Unser gemeinnütziger Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
+   "text": "Unser von einer gemeinnützigen Organisation unterstützter Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings",
+   "string_id": "PasswordAutofill.LoginListCellNoUsername.v129",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings",
+     "PasswordAutofill.LoginListCellNoUsername.v129"
+    ]
+   },
+   "fids": [
+    "f6970299d39c"
+   ],
+   "findings": [
+    "Capitalized inside parentheses where the source uses lowercase sentence style."
+   ],
+   "source": "(no username)",
+   "original": "(Kein Benutzername)",
+   "text": "(kein Benutzername)",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+   "string_id": "QuickAnswers.ContentView.Answering.v158",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+     "QuickAnswers.ContentView.Answering.v158"
+    ]
+   },
+   "fids": [
+    "fe33fb511509"
+   ],
+   "findings": [
+    "\"Answering…\" (progress while an answer is fetched) is rendered as the noun/verb \"Antworten…\", which reads as \"Answers\" or an imperative, not as a loading state."
+   ],
+   "source": "Answering…",
+   "original": "Antworten…",
+   "text": "Antwort wird erstellt…",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+   "string_id": "QuickAnswers.ContentView.ResultHeader.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+     "QuickAnswers.ContentView.ResultHeader.v160"
+    ]
+   },
+   "fids": [
+    "2b5981d02b64"
+   ],
+   "findings": [
+    "Singular header \"QUICK ANSWER\" is rendered in the plural."
+   ],
+   "source": "QUICK ANSWER",
+   "original": "SCHNELLE ANTWORTEN",
+   "text": "SCHNELLE ANTWORT",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.AIControls.BlockedInformation.v151",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.AIControls.BlockedInformation.v151"
+    ]
+   },
+   "fids": [
+    "9b9f507825d3"
+   ],
+   "findings": [
+    "\"Unblock specific features below\" is translated as \"Block specific features below\", reversing the meaning."
+   ],
+   "source": "New and current AI enhancements are blocked by default. Unblock specific features below.",
+   "original": "Neue und aktuelle KI-Verbesserungen werden standardmäßig blockiert. Blockieren Sie im Folgenden bestimmte Funktionen.",
+   "text": "Neue und aktuelle KI-Verbesserungen werden standardmäßig blockiert. Heben Sie im Folgenden die Blockierung bestimmter Funktionen auf.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Browsing.AdBlocker.Description.v155",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Browsing.AdBlocker.Description.v155"
+    ]
+   },
+   "fids": [
+    "c88643f49862"
+   ],
+   "findings": [
+    "\"If a site looks broken\" is rendered as \"beschädigt\" (physically damaged) instead of broken/faulty display."
+   ],
+   "source": "Reduces ads and ad-related trackers. If a site looks broken, try turning this off.",
+   "original": "Reduziert Werbung und werbebezogene Tracker. Wenn eine Website beschädigt aussieht, versuchen Sie, dies zu deaktivieren.",
+   "text": "Reduziert Werbung und werbebezogene Tracker. Wenn eine Website fehlerhaft aussieht, versuchen Sie, dies zu deaktivieren.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124"
+    ]
+   },
+   "fids": [
+    "89bbdcc85494"
+   ],
+   "findings": [
+    "\"gelegentlich gesponserten\" should be \"gelegentliche gesponserte\"; the adverb changes the meaning to \"occasionally sponsored\"."
+   ],
+   "source": "Support %@ with occasional sponsored suggestions",
+   "original": "Unterstützen Sie %@ mit gelegentlich gesponserten Vorschlägen",
+   "text": "Unterstützen Sie %@ mit gelegentlichen gesponserten Vorschlägen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Summarize.FooterTitle.v142",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Summarize.FooterTitle.v142"
+    ]
+   },
+   "fids": [
+    "8a41014edf5f"
+   ],
+   "findings": [
+    "\"summarize pages\" (verb phrase) mistranslated as \"Zusammenfassungsseiten\" (summary pages)."
+   ],
+   "source": "Provides access to summarize pages.",
+   "original": "Bietet Zugriff auf Zusammenfassungsseiten.",
+   "text": "Bietet Zugriff auf das Zusammenfassen von Seiten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+   "string_id": "Summarizer.Error.MissingPageContent.Message.v142",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+     "Summarizer.Error.MissingPageContent.Message.v142"
+    ]
+   },
+   "fids": [
+    "0c542419e339"
+   ],
+   "findings": [
+    "\"hit summarize\" on a touch device is rendered as \"klicken Sie\" (click) instead of tap."
+   ],
+   "source": "Page is still loading. Wait for it to finish, then hit summarize.",
+   "original": "Die Seite wird noch geladen. Warten Sie, bis der Vorgang abgeschlossen ist, und klicken Sie dann auf Zusammenfassen.",
+   "text": "Die Seite wird noch geladen. Warten Sie, bis der Vorgang abgeschlossen ist, und tippen Sie dann auf Zusammenfassen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/TabToolbar.strings",
+   "string_id": "TabToolbar.Accessibility.DataClearance.v122",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/TabToolbar.strings",
+     "TabToolbar.Accessibility.DataClearance.v122"
+    ]
+   },
+   "fids": [
+    "3f558ebe5bc5"
+   ],
+   "findings": [
+    "\"Data Clearance\" (deleting private session data) is translated as \"Datenfreigabe\", which means data sharing/release."
+   ],
+   "source": "Data Clearance",
+   "original": "Datenfreigabe",
+   "text": "Datenlöschung",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Upgrade.strings",
+   "string_id": "Upgrade.Welcome.Description.v114",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Upgrade.strings",
+     "Upgrade.Welcome.Description.v114"
+    ]
+   },
+   "fids": [
+    "b802f22d3c8b"
+   ],
+   "findings": [
+    "\"Same commitment to people over profits\" is translated word-for-word into ungrammatical/meaningless German."
+   ],
+   "source": "New colors. New convenience. Same commitment to people over profits.",
+   "original": "Neue Farben. Neuer Komfort. Gleiches Engagement für Menschen über Gewinne.",
+   "text": "Neue Farben. Neuer Komfort. Gleiches Engagement: Menschen vor Profit.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings",
+   "string_id": "WebCompatReporter.Preview.Data.PixelDensity.v155",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings",
+     "WebCompatReporter.Preview.Data.PixelDensity.v155"
+    ]
+   },
+   "fids": [
+    "0be9b0b71728"
+   ],
+   "findings": [
+    "\"pixel density\" is rendered as \"Pixelgröße\" (pixel size), naming a different property."
+   ],
+   "source": "Your screen’s pixel density",
+   "original": "Pixelgröße Ihres Bildschirms",
+   "text": "Pixeldichte Ihres Bildschirms",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings",
+   "string_id": "WebCompatReporter.SubOption.CaptionsMissing.v154",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings",
+     "WebCompatReporter.SubOption.CaptionsMissing.v154"
+    ]
+   },
+   "fids": [
+    "85cb704c032a"
+   ],
+   "findings": [
+    "In a video/audio context, \"Captions\" is translated as \"Bildunterschriften\" (image captions) instead of subtitles/closed captions."
+   ],
+   "source": "Captions are missing",
+   "original": "Bildunterschriften fehlen",
+   "text": "Untertitel fehlen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/ZoomPageBar.strings",
+   "string_id": "Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/ZoomPageBar.strings",
+     "Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113"
+    ]
+   },
+   "fids": [
+    "b270eb9bf2e6"
+   ],
+   "findings": [
+    "\"Zoom Level\" translated as \"Zoomfaktor\" here but as \"Zoomstufe\" in the sibling string on the same screen."
+   ],
+   "source": "Decrease Zoom Level",
+   "original": "Zoomfaktor verringern",
+   "text": "Zoomstufe verringern",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/ZoomPageBar.strings",
+   "string_id": "Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/ZoomPageBar.strings",
+     "Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113"
+    ]
+   },
+   "fids": [
+    "c8998a7f33da"
+   ],
+   "findings": [
+    "\"Zoom Level\" translated as \"Zoomfaktor\" here but as \"Zoomstufe\" in the sibling string on the same screen."
+   ],
+   "source": "Increase Zoom Level",
+   "original": "Zoomfaktor erhöhen",
+   "text": "Zoomstufe erhöhen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/ClearHistoryConfirm.strings",
+   "string_id": "This action will clear all of your private data, including history from your synced devices.",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/ClearHistoryConfirm.strings",
+     "This action will clear all of your private data, including history from your synced devices."
+    ]
+   },
+   "fids": [
+    "f04c5808e66d"
+   ],
+   "findings": [
+    "\"all of your private data\" is rendered without \"alle\", weakening the meaning."
+   ],
+   "source": "This action will clear all of your private data, including history from your synced devices.",
+   "original": "Diese Aktion löscht Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.",
+   "text": "Diese Aktion löscht alle Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Bookmarks.NewBookmark.Label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Bookmarks.NewBookmark.Label"
+    ]
+   },
+   "fids": [
+    "838b3a1bc39b"
+   ],
+   "findings": [
+    "\"New Bookmark\" is rendered as \"Lesezeichen hinzufügen\" (Add bookmark) instead of \"Neues Lesezeichen\", inconsistent with the parallel New Folder/New Separator strings."
+   ],
+   "source": "New Bookmark",
+   "original": "Lesezeichen hinzufügen",
+   "text": "Neues Lesezeichen",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Logins.PasscodeRequirement.Warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Logins.PasscodeRequirement.Warning"
+    ]
+   },
+   "fids": [
+    "836a741427dc"
+   ],
+   "findings": [
+    "\"device passcode\" is rendered as \"Gerätepasssatz\" instead of the established \"Gerätecode\"/\"Gerätepasscode\"."
+   ],
+   "source": "To use the AutoFill feature for Firefox, you must have a device passcode enabled.",
+   "original": "Um die Funktion „Automatisches Ausfüllen“ für Firefox verwenden zu können, muss ein Gerätepasssatz aktiviert sein.",
+   "text": "Um die Funktion „Automatisches Ausfüllen“ für Firefox verwenden zu können, muss ein Gerätecode aktiviert sein.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Menu.TrackingProtectionDescription.ContentTrackers",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Menu.TrackingProtectionDescription.ContentTrackers"
+    ]
+   },
+   "fids": [
+    "2f41e64f5270"
+   ],
+   "findings": [
+    "Wrong plural/case form \"andere Inhalten\"."
+   ],
+   "source": "Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.",
+   "original": "Websites können externe Anzeigen, Videos und andere Inhalten laden, die verborgene Tracker enthalten. Wenn Sie dies blockieren, werden Websites möglicherweise schneller geladen, aber einige Schaltflächen, Formulare und Anmeldefelder funktionieren möglicherweise nicht.",
+   "text": "Websites können externe Anzeigen, Videos und andere Inhalte laden, die verborgene Tracker enthalten. Wenn Sie dies blockieren, werden Websites möglicherweise schneller geladen, aber einige Schaltflächen, Formulare und Anmeldefelder funktionieren möglicherweise nicht.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Menu.TrackingProtectionDescription.Fingerprinters",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Menu.TrackingProtectionDescription.Fingerprinters"
+    ]
+   },
+   "fids": [
+    "8e50cb2eb853"
+   ],
+   "findings": [
+    "\"Fingerprinters\" translated as \"Fingerabdrücke\" (fingerprints), naming the data instead of the trackers."
+   ],
+   "source": "The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.",
+   "original": "Die Einstellungen in Ihrem Browser und auf Ihrem Computer sind eindeutig. Fingerabdrücke erfassen eine Vielzahl dieser einzigartigen Einstellungen, um ein Profil von Ihnen zu erstellen, mit dem Sie beim Surfen verfolgt werden können.",
+   "text": "Die Einstellungen in Ihrem Browser und auf Ihrem Computer sind eindeutig. Identifizierer (Fingerprinter) erfassen eine Vielzahl dieser einzigartigen Einstellungen, um ein Profil von Ihnen zu erstellen, mit dem Sie beim Surfen verfolgt werden können.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "SentTab_TabArrivingNotification_NoDevice_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "SentTab_TabArrivingNotification_NoDevice_body"
+    ]
+   },
+   "fids": [
+    "0321cfdf84c1"
+   ],
+   "findings": [
+    "Grammatical agreement errors: \"Neuen Tab von andere Gerät\" should be nominative \"Neuer Tab\" and dative \"von einem anderen Gerät\"."
+   ],
+   "source": "New tab arrived from another device.",
+   "original": "Neuen Tab von andere Gerät erhalten.",
+   "text": "Neuen Tab von einem anderen Gerät erhalten.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.Home.Option.Pocket",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.Home.Option.Pocket"
+    ]
+   },
+   "fids": [
+    "b4f33ebc8e63"
+   ],
+   "findings": [
+    "\"Recommended by Pocket\" is rendered with the singular noun \"Empfehlung von Pocket\" instead of the plural/participle form."
+   ],
+   "source": "Recommended by Pocket",
+   "original": "Empfehlung von Pocket",
+   "text": "Empfohlen von Pocket",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.Home.Option.Wallpaper.CollectionTitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.Home.Option.Wallpaper.CollectionTitle"
+    ]
+   },
+   "fids": [
+    "0bf49fde8dc0"
+   ],
+   "findings": [
+    "\"OPENING SCREEN\" is translated as \"ÖFFNUNGSBILDSCHIRM\", inconsistent with \"Startbildschirm\" used for the same source term elsewhere."
+   ],
+   "source": "OPENING SCREEN",
+   "original": "ÖFFNUNGSBILDSCHIRM",
+   "text": "STARTBILDSCHIRM",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.Passwords.OnboardingMessage.v103",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.Passwords.OnboardingMessage.v103"
+    ]
+   },
+   "fids": [
+    "7fd09828ae84"
+   ],
+   "findings": [
+    "\"device passcode\" is rendered as \"Gerätepasssatz\" (device passphrase) instead of \"Gerätecode\"/\"Gerätepasscode\"."
+   ],
+   "source": "Your passwords are now protected by Face ID, Touch ID or a device passcode.",
+   "original": "Ihre Passwörter sind jetzt durch Face ID, Touch ID oder einen Gerätepasssatz geschützt.",
+   "text": "Ihre Passwörter sind jetzt durch Face ID, Touch ID oder einen Gerätecode geschützt.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "SyncState.Offline.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "SyncState.Offline.Title"
+    ]
+   },
+   "fids": [
+    "a3dfef7d65f1"
+   ],
+   "findings": [
+    "Trailing period added to a title that has none in the source."
+   ],
+   "source": "Sync is offline",
+   "original": "Sync ist offline.",
+   "text": "Sync ist offline",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Tabs.DeleteAllUndo.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Tabs.DeleteAllUndo.Button"
+    ]
+   },
+   "fids": [
+    "fe5c1d49d03b"
+   ],
+   "findings": [
+    "\"Undo\" rendered as \"Wiederherstellen\" (restore), inconsistent with \"Rückgängig\" used for the same source term in Toasts.Undo."
+   ],
+   "source": "Undo",
+   "original": "Wiederherstellen",
+   "text": "Rückgängig",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "Shared/en-US.lproj/LoginManager.strings",
+   "string_id": "Modified %@",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/LoginManager.strings",
+     "Modified %@"
+    ]
+   },
+   "fids": [
+    "aaa71b0cd7e7"
+   ],
+   "findings": [
+    "\"Modified\" for a last-modified timestamp is rendered as \"Verändert\" with an added colon instead of the standard \"Geändert\"."
+   ],
+   "source": "Modified %@",
+   "original": "Verändert: %@",
+   "text": "Geändert: %@",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-02",
+   "group": "D",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "fi3W24-scEmjs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "fi3W24-scEmjs"
+    ]
+   },
+   "fids": [
+    "fb9c66f0fc1e"
+   ],
+   "findings": [
+    "The menu item ‘New Private Search’ is rendered as „Neue Private Suche“ here but as „Neue private Suche“ in the corresponding menu item string scEmjs."
+   ],
+   "source": "There are ${count} options matching ‘New Private Search’.",
+   "original": "Es gibt ${count} Optionen, die zu „Neue Private Suche“ passen.",
+   "text": "Es gibt ${count} Optionen, die zu „Neue private Suche“ passen.",
+   "status": "pending",
+   "status_date": "2026-11-02",
+   "comment": ""
+  }
+ ]
+}
