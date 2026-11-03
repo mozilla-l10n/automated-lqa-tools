@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 2,604 |
+| **Strings reviewed this run** | 1 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "Rever definições a atualizar" means "review settings that are to be updated" rather than "review settings in order to update".
-    - Current: `Rever definições a atualizar`
-    - Source: `Review settings to update`
-    - Suggest: `Rever definições para atualizar`
-    - The source and comment mean the user must review the extension's settings so the update can go ahead. "a atualizar" changes this to settings that are pending update. Other strings in the batch already use "para atualizar" for "to update".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -1390,5 +1390,29 @@
   "suggest": "Edit website URL",
   "summary": "\"website\" was split into \"web site\", which is not the form used elsewhere in en-GB.",
   "suppressed_by": "en-GB-web-site-two-words"
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "live game",
+  "dismissed_because": "",
+  "fid": "223059a65a50",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-03",
+  "impact": 3,
+  "last_seen": "2026-11-03",
+  "locale": "en-GB",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The sports widget is about football: the comment's example competition is the FA Cup, and the widget's other strings and comments say \"match\". British English calls a football fixture a \"match\", so \"live game\" reads as American and doesn't match the rest of the widget.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1c1eb416",
+  "string_id": "wrex_widget_live_game_content_description",
+  "suggest": "live match",
+  "summary": "The football widget uses the US term \"game\" where British English says \"match\".",
+  "suppressed_by": ""
  }
 ]

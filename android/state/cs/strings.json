@@ -341,6 +341,9 @@
   "mozac_feature_addons_unsupported_caption_plural_2": "138f9045 1e53dbcb",
   "mozac_feature_addons_unsupported_learn_more": "0d71e1e4 d9b20450",
   "mozac_feature_addons_unsupported_section": "7d934243 bab6b724",
+  "mozac_feature_addons_update_requires_new_settings": "d61eff2a 3af751c1 0bab11f3",
+  "mozac_feature_addons_update_requires_new_settings_this_extension": "d8f187ec e9a539bc cbc9ef05",
+  "mozac_feature_addons_update_review_changes_button": "46f70c39 9823dc46 9629a960",
   "mozac_feature_addons_updater_dialog_last_attempt": "9a6d1f14 fe8308ec",
   "mozac_feature_addons_updater_dialog_status": "96b4f493 476b9c52",
   "mozac_feature_addons_updater_dialog_title": "ab9ca23d 617e998f",
@@ -351,6 +354,10 @@
   "mozac_feature_addons_updater_notification_short_intro": "10b1658b d177207f",
   "mozac_feature_addons_updater_notification_title_2": "312e31ff f2bc306e",
   "mozac_feature_addons_updater_notification_update_button": "92007234 e65453ae",
+  "mozac_feature_addons_updater_permissions_dialog_cancel_button": "c19dfee7 871d661d 597e3d4c",
+  "mozac_feature_addons_updater_permissions_dialog_description": "0c7f4b26 209691e9 c6bc7265",
+  "mozac_feature_addons_updater_permissions_dialog_title": "ea8029ff 63f2fc8a 74691c5a",
+  "mozac_feature_addons_updater_permissions_dialog_update_button": "92007234 e65453ae 3c69fd32",
   "mozac_feature_addons_updater_status_error": "6eee0d4b 4deec2e9",
   "mozac_feature_addons_updater_status_no_update_available": "62c576dc 9146f99e",
   "mozac_feature_addons_updater_status_successfully_updated": "6468f095 3a665d0f",
@@ -2681,6 +2688,7 @@
   "wrex_widget_page_position_content_description": "26c46272 8f2f0541 be36c1ac",
   "wrex_widget_remove_widget": "5ecbb657 2e5547bc f64142eb",
   "wrex_widget_results": "3819c367 ba9addbc c93629a2",
+  "wrex_widget_standings": "396c3c3b b20f6e3d 207d5df1",
   "wrex_widget_wallpapers": "80eb5009 2f55ec96 3ebcb6b6"
  }
 }

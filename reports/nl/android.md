@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 27 of 2,595 |
+| **Strings reviewed this run** | 9 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `mozac_menu_customize_reset_to_default` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — Button label drops the action 'reset' and reads only as 'Default values'.
-    - Current: `Standaardwaarden`
-    - Source: `Reset to default`
-    - Suggest: `Standaardwaarden herstellen`
-    - Source 'Reset to default' is a button that resets the menu configuration; 'Standaardwaarden' is just a noun ('default values') and does not convey the reset action.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,595 |
-| Missing strings | 9 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,13 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**9 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-nl/strings.xml` — 5
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — 2
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -87,7 +77,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 440 | **formal** |
+| register | `formal` 441 | **formal** |
 
 ---
 

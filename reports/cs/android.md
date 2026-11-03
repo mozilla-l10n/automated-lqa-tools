@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 2,596 |
+| **Strings reviewed this run** | 8 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for cs: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `browser_menu_extension_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The Czech tells the user to check the settings they want to update, but the source means they should review the settings so the extension can update.
-    - Current: `Zkontrolujte nastavení, která chcete aktualizovat`
-    - Source: `Review settings to update`
-    - Suggest: `Zkontrolujte nastavení pro aktualizaci`
-    - The developer comment says the extension update needs the user to approve changes to its settings. In the source, "to update" means "in order to update". The Czech instead talks about settings the user wants to update, which suggests the user is picking settings to change.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,596 |
-| Missing strings | 8 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**8 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — 7
-- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

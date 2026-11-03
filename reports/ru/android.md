@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,604 |
+| **Strings reviewed this run** | 0 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
-    - Current: `%1$s требует обновления новых настроек.`
-    - Source: `%1$s requires new settings to update.`
-    - Suggest: `Для обновления %1$s требуются новые настройки.`
-    - Source: the extension needs new (permission) settings approved before it can update. «требует обновления новых настроек» means 'requires an update of the new settings', which turns the relationship around.
-- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
-    - Current: `Это расширение требует обновления новых настроек.`
-    - Source: `This extension requires new settings to update.`
-    - Suggest: `Для обновления этого расширения требуются новые настройки.`
-    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update requires new settings.
-- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The dialog title says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
-    - Current: `%1$s требует обновления новых настроек`
-    - Source: `%1$s requires new settings to update`
-    - Suggest: `Для обновления %1$s требуются новые настройки`
-    - «требует обновления новых настроек» means 'requires an update of the new settings'. The source means the update needs new permissions approved.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
