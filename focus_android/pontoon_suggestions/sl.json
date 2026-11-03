@@ -1,0 +1,162 @@
+{
+ "project": "focus_android",
+ "locale": "sl",
+ "suggestions": [
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "notification_browsing_session_channel_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "notification_browsing_session_channel_description"
+    ]
+   },
+   "fids": [
+    "f0d96edb8148"
+   ],
+   "findings": [
+    "\"ni potrebno\" should be \"ni treba\" in standard Slovenian."
+   ],
+   "source": "Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.",
+   "original": "Obvestila vam omogočajo izbrisati %1$sovo sejo z enim dotikom. Aplikacije vam ni potrebno niti odpreti niti videti, kaj je v brskalniku odprto.",
+   "text": "Obvestila vam omogočajo izbrisati %1$sovo sejo z enim dotikom. Aplikacije vam ni treba niti odpreti niti videti, kaj je v brskalniku odprto.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_autocomplete_title_remove",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_autocomplete_title_remove"
+    ]
+   },
+   "fids": [
+    "b7a7a5e2da42"
+   ],
+   "findings": [
+    "Plural \"custom URLs\" translated as singular."
+   ],
+   "source": "Remove custom URLs",
+   "original": "Odstrani URL po meri",
+   "text": "Odstrani URL-je po meri",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_privacy_should_block_cookies_cross_site_option",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_privacy_should_block_cookies_cross_site_option"
+    ]
+   },
+   "fids": [
+    "3a550c42cee8"
+   ],
+   "findings": [
+    "\"Block cross-site cookies\" is rendered as \"Zavračaj spletne piškotke\" (block web cookies), losing the \"cross-site\" qualifier."
+   ],
+   "source": "Block cross-site cookies",
+   "original": "Zavračaj spletne piškotke",
+   "text": "Zavračaj piškotke med spletnimi mesti",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_privacy_should_block_cookies_yes_option2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_privacy_should_block_cookies_yes_option2"
+    ]
+   },
+   "fids": [
+    "cdca217d0eaa"
+   ],
+   "findings": [
+    "\"Yes please\" is translated as \"Da!\", dropping the polite \"please\" and adding an exclamation mark."
+   ],
+   "source": "Yes please",
+   "original": "Da!",
+   "text": "Da, prosim",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_safe_browsing_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_safe_browsing_title"
+    ]
+   },
+   "fids": [
+    "4b7cc96863c9"
+   ],
+   "findings": [
+    "Adjective agreement error: \"Zavrni morebitne nevarne\" should be \"morebiti nevarne\", and the verb form is inconsistent with the other block-preference titles."
+   ],
+   "source": "Block potentially dangerous and deceptive sites",
+   "original": "Zavrni morebitne nevarne in zavajajoče strani",
+   "text": "Zavrni morebitno nevarne in zavajajoče strani",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "tab_crash_report_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_crash_report_description"
+    ]
+   },
+   "fids": [
+    "fa2c8730cb23"
+   ],
+   "findings": [
+    "The translation says \"we never save your tabs\" (plural) and then refers to \"it\", garbling the source's \"we never save and cannot restore this tab\"."
+   ],
+   "source": "As a private browser, we never save and cannot restore this tab.",
+   "original": "Kot zaseben brskalnik nikoli ne shranimo vaših zavihkov in ga ne moremo obnoviti.",
+   "text": "Kot zaseben brskalnik nikoli ne shranimo tega zavihka in ga ne moremo obnoviti.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  }
+ ]
+}
