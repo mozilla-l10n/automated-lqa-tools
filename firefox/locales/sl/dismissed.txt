@@ -15,3 +15,6 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+newtab-recent-searches-row-remove @ browser/browser/newtab/newtab.ftl — auto-suggest (2026-11-03): The sl tree uses straight double quotes (259) and curly double quotes (268) about equally, so straight quotes are an accepted convention.
+tabbrowser-unmute-tab-audio-background-tooltip @ browser/browser/tabbrowser.ftl — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov), so the forms are correct.
+tabbrowser-unmute-tab-audio-tooltip @ browser/browser/tabbrowser.ftl — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov); the mute string uses accusative, hence differs.
