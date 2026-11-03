@@ -11880,7 +11880,7 @@
   "CORSOriginHeaderNotAdded": "896ac0aa 55d3d1f7",
   "CORSPreflightDidNotSucceed3": "6c4c7c0c fee7851d",
   "CORSRequestNotHttp": "a5ef66a7 113b99b6",
-  "ConnectionAllowlistBlocked": "514b2d93 39482bf4 341edc4b",
+  "ConnectionAllowlistBlocked": "a62e7525 39482bf4 341edc4b",
   "ConnectionAllowlistReportOnlyBlocked": "16bff374 68fe0048 341edc4b",
   "DeprecatedTLSVersion2": "d93ff430 a3f22816",
   "FeaturePolicyInvalidAllowValue": "04341573 69ce930f",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
+| **Previous run** | 2026-11-02 @ `ca562c968023` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,715 |
+| **Strings reviewed this run** | 1 of 16,716 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,715 |
-| Missing strings | 27 |
+| Strings | 16,716 |
+| Missing strings | 26 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**27 strings** are not translated yet, concentrated in:
+**26 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aboutLogins.ftl` — 9
 - `browser/browser/newtab/newtab.ftl` — 5
@@ -74,7 +74,6 @@ _Nothing retired._
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/neterror/netError.ftl` — 1
 - `toolkit/toolkit/branding/brandings.ftl` — 1
-- `toolkit/toolkit/global/mozBoxBase.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._

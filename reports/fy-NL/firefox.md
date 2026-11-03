@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `82e218d93b64` |
+| **Previous run** | 2026-11-02 @ `ca562c968023` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 35 of 16,742 |
+| **Strings reviewed this run** | 1 of 16,742 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,32 +18,26 @@ Also for fy-NL: [Firefox for Android](android.md) · [Focus for Android](focus_a
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (1)
 
-- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
-    - Current: `Ferbinings-tasteanlist:`
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
+    - Current: `Ferbinings-tastimmingslist:`
     - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
     - Suggest: `Connection-Allowlist:`
-    - The developer comment says explicitly: "Do not translate Connection-Allowlist." It is the name of a policy header.
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
-    - Current: `Ferbinings-tasteanlist:`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
+    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
+
+### ✅ Fixed since the last run (2)
+
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
+    - Current: `Ferbinings-tastimmingslist:`
+    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
     - Suggest: `Connection-Allowlist:`
-    - The developer comment says explicitly: "Do not translate Connection-Allowlist."
-- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The product name "Firefox Enterprise" has been translated into Frisian.
-    - Current: `Firefox foar Undernimmingen`
-    - Source: `Firefox Enterprise`
-    - Suggest: `Firefox Enterprise`
-    - This is a brand term for a product name, and by convention product names are not translated. The term is reused in other strings as the product's name.
-- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — The particle is missing from the separable verb, so "smyt it fan" does not mean "deletes it from".
-    - Current: `Dit smyt it fan`
-    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
-    - Suggest: `Dit smyt it út`
-    - Without "út" or "fuort", "smite" does not mean "delete". The parallel string about-logins-confirm-delete-dialog-message correctly uses "smyt it út". The same fix applies to the plural form ("smyt se út").
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
+    - Current: `Ferbinings-tastimmingslist:`
+    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -104,13 +98,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (490)
+## 3. Open findings (489)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 126 |
+| 2 | Wrong content (says something other than the English) | 125 |
 | 3 | Degraded language (grammar, spelling, terminology) | 250 |
 | 4 | Cosmetic (typography, spacing) | 102 |
 
@@ -404,7 +398,7 @@ _Nothing reported._
     - Current: `Net falide formaat`
     - Source: `Invalid Format`
     - Suggest: `Unjildich formaat`
-- _…and 69 more; see `state/` for the full list._
+- _…and 68 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -914,8 +908,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (275)
+### Fixed to date (276)
 
+- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — fixed 2026-11-03
 - `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-09-03
 - `language-name-br` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-09-03
@@ -955,4 +950,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `about-logins-intro-import2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
 - `restore-page-restore-header` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
 - `restore-page-tab-title` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
-- `restore-page-try-again-button` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11

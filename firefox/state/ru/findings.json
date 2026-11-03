@@ -1508,7 +1508,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1530,7 +1530,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {},
   "rationale": "In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1682,7 +1682,7 @@
   "file": "browser/browser/backupSettings.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -6929,7 +6929,7 @@
   "file": "browser/browser/policies/policies-descriptions.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -9049,7 +9049,7 @@
   "file": "browser/browser/preferences/preferences.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -12237,7 +12237,7 @@
   "file": "devtools/client/debugger.properties",
   "first_seen": "2026-08-07",
   "impact": 3,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {
    "report": "legacy",
@@ -21397,7 +21397,7 @@
   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
   "first_seen": "2026-08-07",
   "impact": 4,
-  "last_seen": "2026-11-02",
+  "last_seen": "2026-11-03",
   "locale": "ru",
   "origin": {
    "report": "legacy",

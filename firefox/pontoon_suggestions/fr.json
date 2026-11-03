@@ -24,9 +24,13 @@
    "source": "label: Crossword",
    "original": "Mots fléchés",
    "text": "Mots croisés",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373300,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/browser/browser/newtab/newtab.ftl/?string=340851",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -50,9 +54,13 @@
    "source": "tooltiptext: Try private translations in { -brand-shorter-name } - Beta",
    "original": "Essayez le système de traduction respectueux de la vie privée dans { -brand-shorter-name } - Bêta",
    "text": "Essayez le système de traduction respectueux de la vie privée dans { -brand-shorter-name } - Beta",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373301,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/browser/browser/translations.ftl/?string=282307",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -188,9 +196,14 @@
    "source": "Y-axis X offset",
    "original": "Décalage horizontal de l’axe des abscisses",
    "text": "Décalage horizontal de l’axe des ordonnées",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "about-glean-metrics-table-settings-timelines-vertical-line-x-offset @ toolkit/toolkit/about/aboutGlean.ftl — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373305,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/about/aboutGlean.ftl/?string=325026",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -214,9 +227,13 @@
    "source": "Reorder, remove, merge, and export pages.",
    "original": "Réorganisez, supprimez, fusionnez et exporter des pages.",
    "text": "Réorganisez, supprimez, fusionnez et exportez des pages.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373307,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/about/aboutPDF.ftl/?string=340305",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -240,9 +257,13 @@
    "source": "Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.",
    "original": "Lisez, annotez et signez des fichiers PDF où que vous soyez. C’est simple, gratuit et privé.",
    "text": "Lisez, annotez et signez des fichiers PDF directement dans votre navigateur. C’est simple, gratuit et privé.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373306,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/about/aboutPDF.ftl/?string=340302",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -266,9 +287,13 @@
    "source": "The line number entered is invalid.",
    "original": "Le nombre spécifié est invalide",
    "text": "Le numéro de ligne spécifié est invalide.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373308,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/global/viewSource.ftl/?string=341762",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
