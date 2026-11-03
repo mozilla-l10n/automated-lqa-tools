@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **Previous run** | 2026-11-02 @ `2804315b81ef` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,245 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 72 |
 | Strings | 1,245 |
-| Missing strings | 728 |
+| Missing strings | 735 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 26 |
 | Files with no en-US counterpart | 0 |
@@ -59,9 +59,9 @@ _Nothing retired._
 
 ### Completeness
 
-**728 strings** are not translated yet, concentrated in:
+**735 strings** are not translated yet, concentrated in:
 
-- `ar/firefox-ios.xliff` — 148
+- `ar/firefox-ios.xliff` — 150
 - `ar/firefox-ios.xliff` — 98
 - `ar/firefox-ios.xliff` — 81
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52

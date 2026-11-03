@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **Previous run** | 2026-11-02 @ `2804315b81ef` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 1,973 |
+| **Strings reviewed this run** | 7 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,73 +22,9 @@ Also for fr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (13)
+### ✅ Fixed since the last run (0)
 
-- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `fr/firefox-ios.xliff` — "Sunrise" is misspelled as "Levé de soleil" instead of "Lever de soleil".
-    - Current: `Levé de soleil`
-    - Source: `Sunrise`
-    - Suggest: `Lever de soleil`
-    - French for sunrise is "lever de soleil" (noun "lever"), not "levé"; also contrasts with the correctly formed "Coucher de soleil" for Sunset.
-- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fr/firefox-ios.xliff` — The French adds "et mots de passe" (and passwords), which the source does not mention; the source only refers to credit cards.
-    - Current: `Pour enregistrer et remplir automatiquement les cartes bancaires et mots de passe, activez Face ID, Touch ID ou un code pour l’appareil.`
-    - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`
-    - Suggest: `Pour enregistrer et remplir automatiquement les cartes bancaires, activez Face ID, Touch ID ou un code pour l’appareil.`
-    - Source: "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode." — no mention of passwords, and this message is shown in the Payment Methods context.
-- `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — Missing "où" in the phrase "là où vous en étiez".
-    - Current: `Reprenez là vous en étiez`
-    - Source: `Your tabs are syncing! Pick up where you left off on your other device.`
-    - Suggest: `Reprenez là où vous en étiez`
-    - The French idiom requires "là où vous en étiez"; as written the sentence is ungrammatical.
-- `Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129` — `fr/firefox-ios.xliff` — "Unselected" (state: not selected) is rendered as "Désélectionné", which means "deselected" (an action/result of removing a selection).
-    - Current: `Désélectionné`
-    - Source: `Unselected`
-    - Suggest: `Non sélectionné`
-    - The accessibility label states that the survey option was not selected; French should express the state "non sélectionné", not the action of deselecting.
-- `Onboarding.Customization.Intro.Description.v123` — `fr/firefox-ios.xliff` — Ungrammatical phrase: "à votre propre façon de naviguer" lacks the verb of adaptation present in the source ("to match").
-    - Current: `Configurez le thème et la barre d’outils à votre propre façon de naviguer.`
-    - Source: `Set your theme and toolbar to match your unique browsing style.`
-    - Suggest: `Configurez le thème et la barre d’outils pour les adapter à votre propre façon de naviguer.`
-    - The source says to set the theme and toolbar so they match your unique browsing style; "Configurez … à votre façon de naviguer" is not idiomatic French and the verb-preposition pairing is incorrect.
-- `Summarizer.Error.MissingPageContent.Message.v142` — `fr/firefox-ios.xliff` — "hit summarize" is rendered as « cliquez » (click) on a touch device, and the source says nothing about clicking.
-    - Current: `puis cliquez sur « Résumer »`
-    - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
-    - Suggest: `puis appuyez sur « Résumer »`
-    - Firefox iOS is a touch phone app; other strings in this batch use « Appuyez ». The source says "hit summarize".
-- `Logins.PasscodeRequirement.Warning` — `fr/firefox-ios.xliff` — The brand name "Firefox" from the source is dropped in the French translation.
-    - Current: `Pour utiliser la fonctionnalité de remplissage automatique, vous devez avoir un code d’appareil actif.`
-    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
-    - Suggest: `Pour utiliser la fonctionnalité de remplissage automatique de Firefox, vous devez avoir un code d’appareil actif.`
-    - The en-US reads "the AutoFill feature for Firefox"; the French omits "Firefox", losing the product reference.
-- `Quick-Search Engines` — `fr/firefox-ios.xliff` — Agreement error: "Moteurs de recherches rapides" should be "Moteurs de recherche rapides".
-    - Current: `Moteurs de recherches rapides`
-    - Source: `Quick-Search Engines`
-    - Suggest: `Moteurs de recherche rapides`
-    - In "moteur de recherche", "recherche" stays singular; the adjective "rapides" agrees with "moteurs", not with "recherches".
-- `Settings.WebsiteData.SelectedConfirmPrompt` — `fr/firefox-ios.xliff` — Added "l’ensemble des" (all of) which the source does not say for selected items.
-    - Current: `Cette action effacera l’ensemble des éléments sélectionnés et est irréversible.`
-    - Source: `This action will clear the selected items. It cannot be undone.`
-    - Suggest: `Cette action effacera les éléments sélectionnés et est irréversible.`
-    - en-US: "This action will clear the selected items" — no "all" quantifier, unlike the other prompt which does say "all of your website data".
-- `Clear Search` — `fr/firefox-ios.xliff` — "Clear Search" is rendered as plural "Effacer les recherches" (clear the searches) instead of clearing the current search field.
-    - Current: `Effacer les recherches`
-    - Source: `Clear Search`
-    - Suggest: `Effacer la recherche`
-    - The source refers to clearing the current search query in the search field, not deleting search history/searches.
-- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `fr/firefox-ios.xliff` — Agreement error: "limité" should agree with the feminine noun "édition".
-    - Current: `Fond d’écran en édition limité`
-    - Source: `Limited Edition Wallpaper`
-    - Suggest: `Fond d’écran en édition limitée`
-    - "édition" is feminine, so the adjective must be "limitée" (Limited Edition Wallpaper).
-- `QuickAnswers.OptInRedesign.PrivateByDesignTitle.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private By Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
-- `QuickAnswers.PrivacyBanner.Title.v158` — `fr/firefox-ios.xliff` — Missing feminine agreement in "vie privé".
-    - Current: `Conçu pour protéger votre vie privé`
-    - Source: `Private by Design`
-    - Suggest: `Conçu pour protéger votre vie privée`
-    - "vie" is feminine, so the adjective must be "privée".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -109,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,973 |
+| Strings | 1,980 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -132,11 +68,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 372 | **typographic** |
+| apostrophe | `typographic` 374 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
-| nbsp | `total` 164, `before-punctuation` 98 | _mixed_ |
-| register | `formal` 330 | **formal** |
+| nbsp | `total` 166, `before-punctuation` 99 | _mixed_ |
+| register | `formal` 332 | **formal** |
 
 ---
 

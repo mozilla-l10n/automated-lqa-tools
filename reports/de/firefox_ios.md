@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **Previous run** | 2026-11-02 @ `2804315b81ef` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,973 |
+| **Strings reviewed this run** | 47 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,208 @@ Also for de: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (40)
 
-_Nothing was fixed._
+- `Alerts.AddToCalendar.Body.v134` — `de/firefox-ios.xliff` — Wrong preposition/case combination: "einen Termin in Ihrem Kalender hinzufügen" is ungrammatical; should be "zu Ihrem Kalender hinzufügen".
+    - Current: `einen Termin in Ihrem Kalender hinzufügen`
+    - Source: `%@ is asking to download a file and add an event to your calendar.`
+    - Suggest: `einen Termin zu Ihrem Kalender hinzufügen`
+    - "hinzufügen" requires "zu" + dative (or "in" + accusative); "in Ihrem Kalender hinzufügen" is wrong, and the parallel string BodyDefault uses "zu Ihrem Kalender hinzufügen".
+- `Bookmarks.EmptyState.Root.Body.v135` — `de/firefox-ios.xliff` — Lowercase "sie" used instead of the formal "Sie", and the subordinate clause needs a comma.
+    - Current: `Speichern Sie Websites während sie surfen.`
+    - Source: `Save sites as you browse. We’ll also grab bookmarks from other synced devices.`
+    - Suggest: `Speichern Sie Websites, während Sie surfen.`
+    - The formal address requires capitalized "Sie"; lowercase "sie" means "they/she". German also requires a comma before the subordinate clause "während …" (cf. the parallel string BodySignedOut).
+- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `de/firefox-ios.xliff` — Missing comma before the subordinate clause "während Sie surfen".
+    - Current: `Speichern Sie Websites während Sie surfen.`
+    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
+    - Suggest: `Speichern Sie Websites, während Sie surfen.`
+    - German punctuation requires a comma introducing a subordinate clause with "während".
+- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `de/firefox-ios.xliff` — Header capitalization inconsistent with the parallel MOBILE BOOKMARKS header, which is rendered in all caps.
+    - Current: `Desktop-Lesezeichen`
+    - Source: `DESKTOP BOOKMARKS`
+    - Suggest: `DESKTOP-LESEZEICHEN`
+    - Source is all-caps "DESKTOP BOOKMARKS" and the sibling header "MOBILE BOOKMARKS" was translated as "MOBILE LESEZEICHEN"; the two headers appear side by side on the same screen and must match.
+- `Logins.DevicePasscodeRequired.Message.v122` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of the established term "Gerätecode".
+    - Current: `Gerätepasssatz`
+    - Source: `To save and automatically fill passwords, enable Face ID, Touch ID, or a device passcode.`
+    - Suggest: `Gerätecode`
+    - iOS uses "Code" (Gerätecode) for the device passcode; "Passsatz" means passphrase and is not an iOS term.
+- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of the established term "Gerätecode".
+    - Current: `Gerätepasssatz`
+    - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`
+    - Suggest: `Gerätecode`
+    - iOS uses "Code" (Gerätecode) for the device passcode; "Passsatz" means passphrase and is not an iOS term.
+- `NativeErrorPage.BadCertDomain.ProceedButton.v149` — `de/firefox-ios.xliff` — Misspelling of "riskant".
+    - Current: `(risikant)`
+    - Source: `Proceed to %@ (Risky)`
+    - Suggest: `(riskant)`
+    - German adjective is "riskant"; "risikant" is not a word.
+- `NativeErrorPage.NoInternetConnection.Description.v131` — `de/firefox-ios.xliff` — Missing case agreement in "Ihr Modem oder Router" after "Überprüfen Sie" (accusative required).
+    - Current: `Überprüfen Sie Ihr Modem oder Router.`
+    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
+    - Suggest: `Überprüfen Sie Ihr Modem oder Ihren Router.`
+    - "Router" needs the accusative article "Ihren"; as written the phrase is ungrammatical.
+- `NativeErrorPage.Wayback.Error.Title.v154` — `de/firefox-ios.xliff` — Adds an "Fehler:" prefix not present in the source "Unable to connect".
+    - Current: `Fehler: Verbindung fehlgeschlagen`
+    - Source: `Unable to connect`
+    - Suggest: `Verbindung fehlgeschlagen`
+    - The en-US title is simply "Unable to connect"; the German introduces an extra "Error:" label.
+- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `de/firefox-ios.xliff` — The German reverses the subject: source says notifications help the user stay safer with Firefox, German says they help the user make Firefox safer.
+    - Current: `Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen`
+    - Source: `Notifications help you stay safer with %@`
+    - Suggest: `Benachrichtigungen helfen Ihnen, mit %@ sicherer zu surfen`
+    - en-US: "Notifications help you stay safer with %@" — the user stays safer; the German claims the user makes the app safer.
+- `Onboarding.Modern.Sync.Description.v145` — `de/firefox-ios.xliff` — "sync on any device" is mistranslated as "werden mit jedem Gerät synchronisiert" (synced with every device) instead of being available/synced on any device.
+    - Current: `Ihre Lesezeichen, Passwörter und mehr werden mit jedem Gerät synchronisiert.`
+    - Source: `Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.`
+    - Suggest: `Ihre Lesezeichen, Passwörter und mehr werden auf allen Geräten synchronisiert.`
+    - The source says data syncs on any device; "mit jedem Gerät" states syncing with every device, a different claim.
+- `Onboarding.Modern.TermsOfService.Subtitle.v140` — `de/firefox-ios.xliff` — Third line uses the informal address ("Synchronisiere auf allen deinen Geräten") instead of the established formal form.
+    - Current: `Synchronisiere auf allen deinen Geräten`
+    - Source: `Load sites lightning fast Automatic tracking protection Sync on all your devices`
+    - Suggest: `Synchronisieren Sie auf allen Ihren Geräten`
+    - The locale convention is formal address (Sie); the other lines of the same screen use formal forms.
+- `Onboarding.Modern.Welcome.Title.v145` — `de/firefox-ios.xliff` — "trackers" is rendered as "Verfolgern" instead of the established term "Tracker".
+    - Current: `gruseligen Verfolgern`
+    - Source: `Say goodbye to creepy trackers`
+    - Suggest: `gruseligen Trackern`
+    - Firefox de uses "Tracker"/"Tracking-Schutz" (see Subtitle.v140 "Tracking-Schutz"); "Verfolger" is inconsistent terminology.
+- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — "Instantly" is dropped from the translation.
+    - Current: `Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.`
+    - Source: `Instantly get passwords, history, and more on any device.`
+    - Suggest: `Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.`
+    - The source promises immediate availability ("Instantly get"); the German omits this qualifier entirely.
+- `Onboarding.Welcome.Close.AccessibilityLabel.v121` — `de/firefox-ios.xliff` — Missing hyphen in the compound with the app-name placeholder.
+    - Current: `%@ Onboarding beenden und schließen`
+    - Source: `Close and exit %@ onboarding`
+    - Suggest: `%@-Onboarding beenden und schließen`
+    - German compounds with a proper-name placeholder require a hyphen (cf. "%@-Hintergrundbild" in the same file).
+- `Onboarding.Welcome.Description.TreatementA.v120` — `de/firefox-ios.xliff` — "non-profit backed" mistranslated as the browser itself being non-profit.
+    - Current: `Unser gemeinnütziger Browser`
+    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
+    - Suggest: `Unser von einer gemeinnützigen Organisation unterstützter Browser`
+    - The source says the browser is backed by a non-profit, not that the browser is a non-profit.
+- `Onboarding.Welcome.Description.v120` — `de/firefox-ios.xliff` — "non-profit backed" mistranslated as the browser itself being non-profit.
+    - Current: `Unser gemeinnütziger Browser`
+    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
+    - Suggest: `Unser von einer gemeinnützigen Organisation unterstützter Browser`
+    - The source says the browser is backed by a non-profit, not that the browser is a non-profit.
+- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — "Answering…" (progress while an answer is fetched) is rendered as the noun/verb "Antworten…", which reads as "Answers" or an imperative, not as a loading state.
+    - Current: `Antworten…`
+    - Source: `Answering…`
+    - Suggest: `Antwort wird erstellt…`
+    - The source is a loading label indicating the system is in the process of answering; German "Antworten…" is ambiguous and does not convey an ongoing action.
+- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — Singular header "QUICK ANSWER" is rendered in the plural.
+    - Current: `SCHNELLE ANTWORTEN`
+    - Source: `QUICK ANSWER`
+    - Suggest: `SCHNELLE ANTWORT`
+    - The comment says the header labels the text below as a single short answer to the user's question; the plural "Antworten" does not match the singular source.
+- `Settings.AIControls.BlockedInformation.v151` — `de/firefox-ios.xliff` — "Unblock specific features below" is translated as "Block specific features below", reversing the meaning.
+    - Current: `Blockieren Sie im Folgenden bestimmte Funktionen.`
+    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
+    - Suggest: `Heben Sie im Folgenden die Blockierung bestimmter Funktionen auf.`
+    - The source says to unblock ('Unblock specific features below'), while the German instructs the user to block them — the opposite instruction.
+- `Settings.Browsing.AdBlocker.Description.v155` — `de/firefox-ios.xliff` — "If a site looks broken" is rendered as "beschädigt" (physically damaged) instead of broken/faulty display.
+    - Current: `Wenn eine Website beschädigt aussieht`
+    - Source: `Reduces ads and ad-related trackers. If a site looks broken, try turning this off.`
+    - Suggest: `Wenn eine Website nicht richtig dargestellt wird`
+    - 'broken' here means the site does not display/function correctly; 'beschädigt' means damaged and does not convey this.
+- `Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124` — `de/firefox-ios.xliff` — "gelegentlich gesponserten" should be "gelegentliche gesponserte"; the adverb changes the meaning to "occasionally sponsored".
+    - Current: `mit gelegentlich gesponserten Vorschlägen`
+    - Source: `Support %@ with occasional sponsored suggestions`
+    - Suggest: `mit gelegentlichen gesponserten Vorschlägen`
+    - The source means occasional suggestions that are sponsored, not suggestions that are occasionally sponsored.
+- `Settings.Summarize.FooterTitle.v142` — `de/firefox-ios.xliff` — "summarize pages" (verb phrase) mistranslated as "Zusammenfassungsseiten" (summary pages).
+    - Current: `Bietet Zugriff auf Zusammenfassungsseiten.`
+    - Source: `Provides access to summarize pages.`
+    - Suggest: `Ermöglicht das Zusammenfassen von Seiten.`
+    - The source says the setting provides access to summarizing pages, not access to pages of summaries.
+- `Summarizer.Error.MissingPageContent.Message.v142` — `de/firefox-ios.xliff` — "hit summarize" on a touch device is rendered as "klicken Sie" (click) instead of tap.
+    - Current: `klicken Sie dann auf Zusammenfassen`
+    - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
+    - Suggest: `tippen Sie dann auf Zusammenfassen`
+    - This is an iOS touch UI; the rest of the batch uses "tippen/antippen". "Klicken" is desktop terminology and inconsistent with the source's "hit".
+- `TabToolbar.Accessibility.DataClearance.v122` — `de/firefox-ios.xliff` — "Data Clearance" (deleting private session data) is translated as "Datenfreigabe", which means data sharing/release.
+    - Current: `Datenfreigabe`
+    - Source: `Data Clearance`
+    - Suggest: `Datenlöschung`
+    - The developer comment says the button ends and deletes private session data; "Datenfreigabe" means sharing/releasing data, the opposite impression.
+- `Upgrade.Welcome.Description.v114` — `de/firefox-ios.xliff` — "Same commitment to people over profits" is translated word-for-word into ungrammatical/meaningless German.
+    - Current: `Gleiches Engagement für Menschen über Gewinne.`
+    - Source: `New colors. New convenience. Same commitment to people over profits.`
+    - Suggest: `Das gleiche Engagement: Menschen vor Profit.`
+    - The English means putting people ahead of profits; "für Menschen über Gewinne" is not idiomatic German and does not convey that meaning.
+- `WebCompatReporter.Preview.Data.PixelDensity.v155` — `de/firefox-ios.xliff` — "pixel density" is rendered as "Pixelgröße" (pixel size), naming a different property.
+    - Current: `Pixelgröße Ihres Bildschirms`
+    - Source: `Your screen’s pixel density`
+    - Suggest: `Pixeldichte Ihres Bildschirms`
+    - The source and comment refer to the screen's pixel density (physical pixels per layout point), not pixel size.
+- `WebCompatReporter.SubOption.CaptionsMissing.v154` — `de/firefox-ios.xliff` — In a video/audio context, "Captions" is translated as "Bildunterschriften" (image captions) instead of subtitles/closed captions.
+    - Current: `Bildunterschriften fehlen`
+    - Source: `Captions are missing`
+    - Suggest: `Untertitel fehlen`
+    - The developer comment places this under the 'Video or audio does not play' category, where "Captions" means subtitles, not image captions.
+- `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Level" translated as "Zoomfaktor" here but as "Zoomstufe" in the sibling string on the same screen.
+    - Current: `Zoomfaktor verringern`
+    - Source: `Decrease Zoom Level`
+    - Suggest: `Zoomstufe verringern`
+    - Menu.ZoomPage.CurrentZoomLevel uses "Zoomstufe" for the same source term "Zoom Level"; inconsistent terminology within one feature.
+- `Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Level" translated as "Zoomfaktor" here but as "Zoomstufe" in the sibling string on the same screen.
+    - Current: `Zoomfaktor erhöhen`
+    - Source: `Increase Zoom Level`
+    - Suggest: `Zoomstufe erhöhen`
+    - Menu.ZoomPage.CurrentZoomLevel uses "Zoomstufe" for the same source term "Zoom Level"; inconsistent terminology within one feature.
+- `This action will clear all of your private data, including history from your synced devices.` — `de/firefox-ios.xliff` — "all of your private data" is rendered without "alle", weakening the meaning.
+    - Current: `Diese Aktion löscht Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.`
+    - Source: `This action will clear all of your private data, including history from your synced devices.`
+    - Suggest: `Diese Aktion löscht alle Ihre persönlichen Daten, einschließlich der Chronik von Ihren synchronisierten Geräten.`
+    - The source says "all of your private data"; the German drops "all", unlike the parallel string in ClearPrivateDataConfirm which keeps "alle".
+- `Logins.PasscodeRequirement.Warning` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" instead of the established "Gerätecode"/"Gerätepasscode".
+    - Current: `Gerätepasssatz`
+    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
+    - Suggest: `Gerätecode`
+    - A passcode on iOS is the numeric device code ("Gerätecode"); "Passsatz" means passphrase and is not the iOS term, and it is also an awkward misspelling-like form.
+- `Menu.TrackingProtectionDescription.ContentTrackers` — `de/firefox-ios.xliff` — Wrong plural/case form "andere Inhalten".
+    - Current: `und andere Inhalten laden`
+    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
+    - Suggest: `und andere Inhalte laden`
+    - Accusative plural of "Inhalt" is "Inhalte"; "Inhalten" is the dative form and ungrammatical here.
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `de/firefox-ios.xliff` — "Fingerprinters" translated as "Fingerabdrücke" (fingerprints), naming the data instead of the trackers.
+    - Current: `Fingerabdrücke erfassen`
+    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
+    - Suggest: `Identifizierer (Fingerprinter) erfassen`
+    - The source says fingerprinters (the scripts) collect settings; "Fingerabdrücke" means fingerprints, and it is also inconsistent with Menu.TrackingProtectionFingerprintersBlocked.Title, which uses "Identifizierer (Fingerprinter)".
+- `SentTab_TabArrivingNotification_NoDevice_body` — `de/firefox-ios.xliff` — Grammatical agreement errors: "Neuen Tab von andere Gerät" should be nominative "Neuer Tab" and dative "von einem anderen Gerät".
+    - Current: `Neuen Tab von andere Gerät erhalten.`
+    - Source: `New tab arrived from another device.`
+    - Suggest: `Neuer Tab von einem anderen Gerät erhalten.`
+    - The en-US "New tab arrived from another device." requires correct case/declension in German; the current text has wrong case on both noun phrases.
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `de/firefox-ios.xliff` — "OPENING SCREEN" is translated as "ÖFFNUNGSBILDSCHIRM", inconsistent with "Startbildschirm" used for the same source term elsewhere.
+    - Current: `ÖFFNUNGSBILDSCHIRM`
+    - Source: `OPENING SCREEN`
+    - Suggest: `STARTBILDSCHIRM`
+    - Settings.Home.Option.StartAtHome.Title translates the identical source "Opening screen" as "Startbildschirm"; "Öffnungsbildschirm" is not established German terminology.
+- `Settings.Passwords.OnboardingMessage.v103` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of "Gerätecode"/"Gerätepasscode".
+    - Current: `Gerätepasssatz`
+    - Source: `Your passwords are now protected by Face ID, Touch ID or a device passcode.`
+    - Suggest: `Gerätecode`
+    - en-US "device passcode" is the iOS device PIN/passcode; "Passsatz" means passphrase and is not the established iOS term (Apple uses "Code"/"Gerätecode").
+- `SyncState.Offline.Title` — `de/firefox-ios.xliff` — Trailing period added to a title that has none in the source.
+    - Current: `Sync ist offline.`
+    - Source: `Sync is offline`
+    - Suggest: `Sync ist offline`
+    - The en-US title "Sync is offline" has no final punctuation; titles should not add one.
+- `Tabs.DeleteAllUndo.Button` — `de/firefox-ios.xliff` — "Undo" rendered as "Wiederherstellen" (restore), inconsistent with "Rückgängig" used for the same source term in Toasts.Undo.
+    - Current: `Wiederherstellen`
+    - Source: `Undo`
+    - Suggest: `Rückgängig`
+    - Same source term "Undo" is translated as "Rückgängig" elsewhere in the same file; "Wiederherstellen" means "restore/redo".
+- `Modified %@` — `de/firefox-ios.xliff` — "Modified" for a last-modified timestamp is rendered as "Verändert" with an added colon instead of the standard "Geändert".
+    - Current: `Verändert: %@`
+    - Source: `Modified %@`
+    - Suggest: `Geändert: %@`
+    - The comment says the label describes when the login was last modified; Firefox uses "Geändert" for last-modified, "Verändert" is not the established term.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +244,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,973 |
+| Strings | 1,980 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +269,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `german-double` 16 | **german-double** |
 | ellipsis | `char` 31 | **char** |
 | dash | `en` 8 | **en** |
-| register | `informal` 1, `formal` 473 | **formal** |
+| register | `formal` 478 | **formal** |
 
 ---
 
@@ -80,24 +279,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (87)
+## 3. Open findings (39)
 
-> **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
-
-- `TabToolbar.Accessibility.DataClearance.v122` — `de/firefox-ios.xliff` — "Data Clearance" (deleting private session data) is translated as "Datenfreigabe", which means data sharing/release.
-    - Current: `Datenfreigabe`
-    - Source: `Data Clearance`
-    - Suggest: `Datenlöschung`
-    - The developer comment says the button ends and deletes private session data; "Datenfreigabe" means sharing/releasing data, the opposite impression.
-
-_Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 49 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -114,16 +304,6 @@ _Also listed under their own category below._
     - Source: `Firefox uses your microphone to record and upload audio.`
     - Suggest: `Firefox verwendet Ihr Mikrofon, um Audioaufnahmen aufzuzeichnen und hochzuladen.`
     - The source refers to audio generally, not specifically speech; "Sprachaufnahmen aufnehmen" is also tautological.
-- `Logins.DevicePasscodeRequired.Message.v122` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of the established term "Gerätecode".
-    - Current: `Gerätepasssatz`
-    - Source: `To save and automatically fill passwords, enable Face ID, Touch ID, or a device passcode.`
-    - Suggest: `Gerätecode`
-    - iOS uses "Code" (Gerätecode) for the device passcode; "Passsatz" means passphrase and is not an iOS term.
-- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of the established term "Gerätecode".
-    - Current: `Gerätepasssatz`
-    - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`
-    - Suggest: `Gerätecode`
-    - iOS uses "Code" (Gerätecode) for the device passcode; "Passsatz" means passphrase and is not an iOS term.
 - `Addresses.EditAddress.AutofillAddressPostTown.v129` — `de/firefox-ios.xliff` — "Post town" left untranslated as "Post Town" while all other address field labels are translated.
     - Current: `Post Town`
     - Source: `Post town`
@@ -179,31 +359,11 @@ _Also listed under their own category below._
     - Source: `%1$@ couldn’t reach the requested URL.`
     - Suggest: `konnte die angeforderte URL nicht erreichen`
     - The source says the app could not reach (connect to) the URL; "zugreifen" means access, shifting the meaning from a connection failure to an access/permission problem.
-- `NativeErrorPage.Wayback.Error.Title.v154` — `de/firefox-ios.xliff` — Adds an "Fehler:" prefix not present in the source "Unable to connect".
-    - Current: `Fehler: Verbindung fehlgeschlagen`
-    - Source: `Unable to connect`
-    - Suggest: `Verbindung fehlgeschlagen`
-    - The en-US title is simply "Unable to connect"; the German introduces an extra "Error:" label.
-- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `de/firefox-ios.xliff` — The German reverses the subject: source says notifications help the user stay safer with Firefox, German says they help the user make Firefox safer.
-    - Current: `Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen`
-    - Source: `Notifications help you stay safer with %@`
-    - Suggest: `Benachrichtigungen helfen Ihnen, mit %@ sicherer zu surfen`
-    - en-US: "Notifications help you stay safer with %@" — the user stays safer; the German claims the user makes the app safer.
 - `Onboarding.Modern.Customization.Toolbar.Description.v145` — `de/firefox-ios.xliff` — The source's "all in one place" emphasis is dropped/weakened and rendered simply as "an einem Ort" without "alles".
     - Current: `und Suchmaschinen an einem Ort zu erhalten`
     - Source: `Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.`
     - Suggest: `und Suchmaschinen zu erhalten – alles an einem Ort`
     - en-US reads "– all in one place"; the German omits "all" and the separating dash, changing the emphasis of the sentence.
-- `Onboarding.Modern.Sync.Description.v145` — `de/firefox-ios.xliff` — "sync on any device" is mistranslated as "werden mit jedem Gerät synchronisiert" (synced with every device) instead of being available/synced on any device.
-    - Current: `Ihre Lesezeichen, Passwörter und mehr werden mit jedem Gerät synchronisiert.`
-    - Source: `Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.`
-    - Suggest: `Ihre Lesezeichen, Passwörter und mehr werden auf allen Geräten synchronisiert.`
-    - The source says data syncs on any device; "mit jedem Gerät" states syncing with every device, a different claim.
-- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — "Instantly" is dropped from the translation.
-    - Current: `Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.`
-    - Source: `Instantly get passwords, history, and more on any device.`
-    - Suggest: `Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.`
-    - The source promises immediate availability ("Instantly get"); the German omits this qualifier entirely.
 - `Onboarding.Notification.Title.v120` — `de/firefox-ios.xliff` — "Notifications help you stay safer with %@" is translated as helping to make Firefox safer instead of helping the user stay safer.
     - Current: `Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen`
     - Source: `Notifications help you stay safer with %@`
@@ -214,46 +374,16 @@ _Also listed under their own category below._
     - Source: `Stay encrypted when you hop between devices`
     - Suggest: `Bleiben Sie verschlüsselt, wenn Sie zwischen Geräten wechseln`
     - "Stay encrypted when you hop between devices" describes the app's behaviour; the German asks the user to encrypt their data themselves.
-- `Onboarding.Welcome.Description.TreatementA.v120` — `de/firefox-ios.xliff` — "non-profit backed" mistranslated as the browser itself being non-profit.
-    - Current: `Unser gemeinnütziger Browser`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `Unser von einer gemeinnützigen Organisation unterstützter Browser`
-    - The source says the browser is backed by a non-profit, not that the browser is a non-profit.
-- `Onboarding.Welcome.Description.v120` — `de/firefox-ios.xliff` — "non-profit backed" mistranslated as the browser itself being non-profit.
-    - Current: `Unser gemeinnütziger Browser`
-    - Source: `Our non-profit backed browser helps stop companies from secretly following you around the web.`
-    - Suggest: `Unser von einer gemeinnützigen Organisation unterstützter Browser`
-    - The source says the browser is backed by a non-profit, not that the browser is a non-profit.
 - `PrivacyDashboard.TotalTrackersBlockedSince.v155` — `de/firefox-ios.xliff` — The celebratory emoji present in the source is dropped from the translation.
     - Current: `%1$@ seit %2$@`
     - Source: `%1$@ since %2$@ 🎉`
     - Suggest: `%1$@ seit %2$@ 🎉`
     - The en-US footer text ends with the 🎉 emoji, which is part of the user-visible string and is missing in German.
-- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — "Answering…" (progress while an answer is fetched) is rendered as the noun/verb "Antworten…", which reads as "Answers" or an imperative, not as a loading state.
-    - Current: `Antworten…`
-    - Source: `Answering…`
-    - Suggest: `Antwort wird erstellt…`
-    - The source is a loading label indicating the system is in the process of answering; German "Antworten…" is ambiguous and does not convey an ongoing action.
 - `QuickAnswers.Settings.Footer.v158` — `de/firefox-ios.xliff` — Plural "get short answers" is rendered as singular "erhalten Sie eine kurze Antwort".
     - Current: `Stellen Sie Ihre Frage einfach laut und erhalten Sie eine kurze Antwort.`
     - Source: `Ask out loud and get short answers. We don’t store your voice, questions, or answers.`
     - Suggest: `Stellen Sie Ihre Fragen einfach laut und erhalten Sie kurze Antworten.`
     - The en-US settings footer says "Ask out loud and get short answers" (plural, describing repeated use), while the German limits it to one question and one answer.
-- `Settings.AIControls.BlockedInformation.v151` — `de/firefox-ios.xliff` — "Unblock specific features below" is translated as "Block specific features below", reversing the meaning.
-    - Current: `Blockieren Sie im Folgenden bestimmte Funktionen.`
-    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Heben Sie im Folgenden die Blockierung bestimmter Funktionen auf.`
-    - The source says to unblock ('Unblock specific features below'), while the German instructs the user to block them — the opposite instruction.
-- `Settings.Browsing.AdBlocker.Description.v155` — `de/firefox-ios.xliff` — "If a site looks broken" is rendered as "beschädigt" (physically damaged) instead of broken/faulty display.
-    - Current: `Wenn eine Website beschädigt aussieht`
-    - Source: `Reduces ads and ad-related trackers. If a site looks broken, try turning this off.`
-    - Suggest: `Wenn eine Website nicht richtig dargestellt wird`
-    - 'broken' here means the site does not display/function correctly; 'beschädigt' means damaged and does not convey this.
-- `Settings.Summarize.FooterTitle.v142` — `de/firefox-ios.xliff` — "summarize pages" (verb phrase) mistranslated as "Zusammenfassungsseiten" (summary pages).
-    - Current: `Bietet Zugriff auf Zusammenfassungsseiten.`
-    - Source: `Provides access to summarize pages.`
-    - Suggest: `Ermöglicht das Zusammenfassen von Seiten.`
-    - The source says the setting provides access to summarizing pages, not access to pages of summaries.
 - `Settings.Translation.AutoTranslate.Footer.v151` — `de/firefox-ios.xliff` — "top preferred language" rendered without the ranking notion.
     - Current: `in Ihre bevorzugte Sprache`
     - Source: `Translates pages to your top preferred language automatically.`
@@ -264,46 +394,11 @@ _Also listed under their own category below._
     - Source: `Note: Summarization can make errors.`
     - Suggest: `Die Zusammenfassung kann Fehler enthalten.`
     - The source states the summarization itself can make errors (i.e. the output may be wrong); the German says errors may occur during the process, which suggests operational failures rather than inaccurate content.
-- `TabToolbar.Accessibility.DataClearance.v122` — `de/firefox-ios.xliff` — "Data Clearance" (deleting private session data) is translated as "Datenfreigabe", which means data sharing/release.
-    - Current: `Datenfreigabe`
-    - Source: `Data Clearance`
-    - Suggest: `Datenlöschung`
-    - The developer comment says the button ends and deletes private session data; "Datenfreigabe" means sharing/releasing data, the opposite impression.
-- `CloseTabsToast.Title.v113` — `de/firefox-ios.xliff` — "Tabs Closed: %d" rendered as "Geschlossene Tabs: %d" reads as a label for a list rather than a confirmation message.
-    - Current: `Geschlossene Tabs: %d`
-    - Source: `Tabs Closed: %d`
-    - Suggest: `Tabs geschlossen: %d`
-    - The popup informs the user how many tabs were just closed, consistent with the sibling string "Tab geschlossen".
-- `Upgrade.Welcome.Description.v114` — `de/firefox-ios.xliff` — "Same commitment to people over profits" is translated word-for-word into ungrammatical/meaningless German.
-    - Current: `Gleiches Engagement für Menschen über Gewinne.`
-    - Source: `New colors. New convenience. Same commitment to people over profits.`
-    - Suggest: `Das gleiche Engagement: Menschen vor Profit.`
-    - The English means putting people ahead of profits; "für Menschen über Gewinne" is not idiomatic German and does not convey that meaning.
-- `WebCompatReporter.Preview.Data.PixelDensity.v155` — `de/firefox-ios.xliff` — "pixel density" is rendered as "Pixelgröße" (pixel size), naming a different property.
-    - Current: `Pixelgröße Ihres Bildschirms`
-    - Source: `Your screen’s pixel density`
-    - Suggest: `Pixeldichte Ihres Bildschirms`
-    - The source and comment refer to the screen's pixel density (physical pixels per layout point), not pixel size.
-- `WebCompatReporter.SubOption.CaptionsMissing.v154` — `de/firefox-ios.xliff` — In a video/audio context, "Captions" is translated as "Bildunterschriften" (image captions) instead of subtitles/closed captions.
-    - Current: `Bildunterschriften fehlen`
-    - Source: `Captions are missing`
-    - Suggest: `Untertitel fehlen`
-    - The developer comment places this under the 'Video or audio does not play' category, where "Captions" means subtitles, not image captions.
 - `Menu.ZoomPage.Close.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Panel" rendered as "Zoom-Ansicht" (zoom view) instead of the zoom panel/bar.
     - Current: `Zoom-Ansicht schließen`
     - Source: `Close Zoom Panel`
     - Suggest: `Zoom-Leiste schließen`
     - The source refers to closing the zoom panel (the Zoom Page Bar), not a zoom "view".
-- `This action will clear all of your private data, including history from your synced devices.` — `de/firefox-ios.xliff` — "all of your private data" is rendered without "alle", weakening the meaning.
-    - Current: `Diese Aktion löscht Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.`
-    - Source: `This action will clear all of your private data, including history from your synced devices.`
-    - Suggest: `Diese Aktion löscht alle Ihre persönlichen Daten, einschließlich der Chronik von Ihren synchronisierten Geräten.`
-    - The source says "all of your private data"; the German drops "all", unlike the parallel string in ClearPrivateDataConfirm which keeps "alle".
-- `Bookmarks.NewBookmark.Label` — `de/firefox-ios.xliff` — "New Bookmark" is rendered as "Lesezeichen hinzufügen" (Add bookmark) instead of "Neues Lesezeichen", inconsistent with the parallel New Folder/New Separator strings.
-    - Current: `Lesezeichen hinzufügen`
-    - Source: `New Bookmark`
-    - Suggest: `Neues Lesezeichen`
-    - Source is "New Bookmark", a noun label, translated consistently as "Neuer Ordner"/"Neue Trennlinie" for the sibling strings; "Lesezeichen hinzufügen" means "Add bookmark".
 - `Changes color theme.` — `de/firefox-ios.xliff` — "color theme" translated as "Farbeinstellung" (color setting) rather than color theme/scheme.
     - Current: `Ändert Farbeinstellung.`
     - Source: `Changes color theme.`
@@ -319,99 +414,29 @@ _Also listed under their own category below._
     - Source: `Firefox Sync has connected to %@`
     - Suggest: `Firefox Sync hat sich mit %@ verbunden`
     - The source reports the event that Sync connected to the newly connected device; the German states an ongoing state instead.
-- `Menu.TrackingProtectionDescription.Fingerprinters` — `de/firefox-ios.xliff` — "Fingerprinters" translated as "Fingerabdrücke" (fingerprints), naming the data instead of the trackers.
-    - Current: `Fingerabdrücke erfassen`
-    - Source: `The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.`
-    - Suggest: `Identifizierer (Fingerprinter) erfassen`
-    - The source says fingerprinters (the scripts) collect settings; "Fingerabdrücke" means fingerprints, and it is also inconsistent with Menu.TrackingProtectionFingerprintersBlocked.Title, which uses "Identifizierer (Fingerprinter)".
 - `ReopenAlert.Title` — `de/firefox-ios.xliff` — "Reopen" is translated as "wiederherstellen" (restore), inconsistent with "Erneut öffnen" used for the alert's button.
     - Current: `Zuletzt geschlossenen Tab wiederherstellen`
     - Source: `Reopen Last Closed Tab`
     - Suggest: `Zuletzt geschlossenen Tab erneut öffnen`
     - The en-US title is "Reopen Last Closed Tab"; the corresponding action button ReopenAlert.Actions.Reopen is rendered "Erneut öffnen", so the title should use the same term.
-- `Settings.Home.Option.Pocket` — `de/firefox-ios.xliff` — "Recommended by Pocket" is rendered with the singular noun "Empfehlung von Pocket" instead of the plural/participle form.
-    - Current: `Empfehlung von Pocket`
-    - Source: `Recommended by Pocket`
-    - Suggest: `Von Pocket empfohlen`
-    - The source labels a section of multiple recommendations; the singular noun changes the meaning to a single recommendation.
 - `Settings.Home.Option.Wallpaper.Classic.Title.v106` — `de/firefox-ios.xliff` — "Classic %@" is rendered as "%@ klassisch", turning the group title into a predicative phrase instead of "Klassisches <App>".
     - Current: `%@ klassisch`
     - Source: `Classic %@`
     - Suggest: `Klassisch: %@`
     - The source is a noun phrase naming the wallpaper group ("Classic Firefox"); "%@ klassisch" reads as an adjective trailing the app name and is not a valid German title.
-- `Settings.Passwords.OnboardingMessage.v103` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" (device passphrase) instead of "Gerätecode"/"Gerätepasscode".
-    - Current: `Gerätepasssatz`
-    - Source: `Your passwords are now protected by Face ID, Touch ID or a device passcode.`
-    - Suggest: `Gerätecode`
-    - en-US "device passcode" is the iOS device PIN/passcode; "Passsatz" means passphrase and is not the established iOS term (Apple uses "Code"/"Gerätecode").
 
 ### C. Grammar, agreement & spelling
 
-- `Alerts.AddToCalendar.Body.v134` — `de/firefox-ios.xliff` — Wrong preposition/case combination: "einen Termin in Ihrem Kalender hinzufügen" is ungrammatical; should be "zu Ihrem Kalender hinzufügen".
-    - Current: `einen Termin in Ihrem Kalender hinzufügen`
-    - Source: `%@ is asking to download a file and add an event to your calendar.`
-    - Suggest: `einen Termin zu Ihrem Kalender hinzufügen`
-    - "hinzufügen" requires "zu" + dative (or "in" + accusative); "in Ihrem Kalender hinzufügen" is wrong, and the parallel string BodyDefault uses "zu Ihrem Kalender hinzufügen".
-- `Bookmarks.EmptyState.Root.Body.v135` — `de/firefox-ios.xliff` — Lowercase "sie" used instead of the formal "Sie", and the subordinate clause needs a comma.
-    - Current: `Speichern Sie Websites während sie surfen.`
-    - Source: `Save sites as you browse. We’ll also grab bookmarks from other synced devices.`
-    - Suggest: `Speichern Sie Websites, während Sie surfen.`
-    - The formal address requires capitalized "Sie"; lowercase "sie" means "they/she". German also requires a comma before the subordinate clause "während …" (cf. the parallel string BodySignedOut).
 - `Menu.EnhancedTrackingProtection.On.Header.v128` — `de/firefox-ios.xliff` — Wrong pronoun order/case in "sagen wir Ihnen es".
     - Current: `sagen wir Ihnen es`
     - Source: `You’re protected. If we spot something, we’ll let you know.`
     - Suggest: `sagen wir Ihnen Bescheid`
     - German requires the pronoun order "sagen wir es Ihnen"; "sagen wir Ihnen es" is ungrammatical.
-- `NativeErrorPage.BadCertDomain.ProceedButton.v149` — `de/firefox-ios.xliff` — Misspelling of "riskant".
-    - Current: `(risikant)`
-    - Source: `Proceed to %@ (Risky)`
-    - Suggest: `(riskant)`
-    - German adjective is "riskant"; "risikant" is not a word.
-- `NativeErrorPage.NoInternetConnection.Description.v131` — `de/firefox-ios.xliff` — Missing case agreement in "Ihr Modem oder Router" after "Überprüfen Sie" (accusative required).
-    - Current: `Überprüfen Sie Ihr Modem oder Router.`
-    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
-    - Suggest: `Überprüfen Sie Ihr Modem oder Ihren Router.`
-    - "Router" needs the accusative article "Ihren"; as written the phrase is ungrammatical.
-- `Onboarding.Welcome.Close.AccessibilityLabel.v121` — `de/firefox-ios.xliff` — Missing hyphen in the compound with the app-name placeholder.
-    - Current: `%@ Onboarding beenden und schließen`
-    - Source: `Close and exit %@ onboarding`
-    - Suggest: `%@-Onboarding beenden und schließen`
-    - German compounds with a proper-name placeholder require a hyphen (cf. "%@-Hintergrundbild" in the same file).
-- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — Singular header "QUICK ANSWER" is rendered in the plural.
-    - Current: `SCHNELLE ANTWORTEN`
-    - Source: `QUICK ANSWER`
-    - Suggest: `SCHNELLE ANTWORT`
-    - The comment says the header labels the text below as a single short answer to the user's question; the plural "Antworten" does not match the singular source.
-- `Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124` — `de/firefox-ios.xliff` — "gelegentlich gesponserten" should be "gelegentliche gesponserte"; the adverb changes the meaning to "occasionally sponsored".
-    - Current: `mit gelegentlich gesponserten Vorschlägen`
-    - Source: `Support %@ with occasional sponsored suggestions`
-    - Suggest: `mit gelegentlichen gesponserten Vorschlägen`
-    - The source means occasional suggestions that are sponsored, not suggestions that are occasionally sponsored.
-- `SendTo.NotSignedIn.Title.v119` — `de/firefox-ios.xliff` — Wrong preposition: "mit Ihrem Konto angemeldet" should be "bei Ihrem Konto/in Ihrem Konto angemeldet".
-    - Current: `Sie sind nicht mit Ihrem Konto angemeldet.`
-    - Source: `You are not signed in to your account.`
-    - Suggest: `Sie sind nicht bei Ihrem Konto angemeldet.`
-    - German uses "bei einem Konto angemeldet sein"; "mit" is ungrammatical here.
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `de/firefox-ios.xliff` — Wrong plural/case form "andere Inhalten".
-    - Current: `und andere Inhalten laden`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `und andere Inhalte laden`
-    - Accusative plural of "Inhalt" is "Inhalte"; "Inhalten" is the dative form and ungrammatical here.
 - `SendTo.NotSignedIn.Title` — `de/firefox-ios.xliff` — Wrong preposition: "mit Ihrem Firefox-Konto angemeldet" should be "bei Ihrem Firefox-Konto angemeldet".
     - Current: `Sie sind nicht mit Ihrem Firefox-Konto angemeldet.`
     - Source: `You are not signed in to your Firefox Account.`
     - Suggest: `Sie sind nicht bei Ihrem Firefox-Konto angemeldet.`
     - "You are not signed in to your Firefox Account" — standard German Mozilla wording is "bei ... angemeldet"; "mit ... angemeldet" is not idiomatic.
-- `SentTab_TabArrivingNotification_NoDevice_body` — `de/firefox-ios.xliff` — Grammatical agreement errors: "Neuen Tab von andere Gerät" should be nominative "Neuer Tab" and dative "von einem anderen Gerät".
-    - Current: `Neuen Tab von andere Gerät erhalten.`
-    - Source: `New tab arrived from another device.`
-    - Suggest: `Neuer Tab von einem anderen Gerät erhalten.`
-    - The en-US "New tab arrived from another device." requires correct case/declension in German; the current text has wrong case on both noun phrases.
-- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `de/firefox-ios.xliff` — Wrong case: "Erlaubt bestimmter Werbung" should be accusative "bestimmte Werbung" (or the dative object of erlauben is the person, not the ad).
-    - Current: `Erlaubt bestimmter Werbung („Trackern“), Ihre Aktivitäten zu verfolgen`
-    - Source: `Allows some ad tracking so websites function properly.`
-    - Suggest: `Erlaubt bestimmter Werbung („Trackern“) das Verfolgen Ihrer Aktivitäten`
-    - The German construction mixes cases; "Erlaubt bestimmter Werbung ..., Ihre Aktivitäten zu verfolgen" is ungrammatical as written.
 - `TodayWidget.FirefoxShortcutGalleryDescription` — `de/firefox-ios.xliff` — Wrong case/preposition: "hinzufügen" takes a dative object, not "auf Ihrem Startbildschirm" with this verb pattern.
     - Current: `Fügen Sie Firefox-Verknüpfungen auf Ihrem Startbildschirm hinzu.`
     - Source: `Add Firefox shortcuts to your Home screen.`
@@ -425,31 +450,6 @@ _Also listed under their own category below._
     - Source: `Basics`
     - Suggest: `Grundlagen`
     - On the same screen Settings.AppIconSelection.AppIconNames.Regular.Title.v136 ("Default") is also "Standard", so the section heading and an icon name become indistinguishable; the source distinguishes "Basics" from "Default".
-- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `de/firefox-ios.xliff` — Header capitalization inconsistent with the parallel MOBILE BOOKMARKS header, which is rendered in all caps.
-    - Current: `Desktop-Lesezeichen`
-    - Source: `DESKTOP BOOKMARKS`
-    - Suggest: `DESKTOP-LESEZEICHEN`
-    - Source is all-caps "DESKTOP BOOKMARKS" and the sibling header "MOBILE BOOKMARKS" was translated as "MOBILE LESEZEICHEN"; the two headers appear side by side on the same screen and must match.
-- `NativeErrorPage.BadCertDomain.TitleLabel.v149` — `de/firefox-ios.xliff` — The identical source sentence "Something doesn’t look right." is translated differently here than in NativeErrorPage.GenericError.TitleLabel.v131 ("Irgendetwas stimmt hier nicht.").
-    - Current: `Irgendetwas sieht nicht gut aus.`
-    - Source: `Be careful. Something doesn’t look right.`
-    - Suggest: `Irgendetwas stimmt hier nicht.`
-    - Same source string in the same file should use the same wording; "sieht nicht gut aus" also shifts the meaning toward an aesthetic judgement.
-- `Onboarding.Modern.TermsOfService.Subtitle.v140` — `de/firefox-ios.xliff` — Third line uses the informal address ("Synchronisiere auf allen deinen Geräten") instead of the established formal form.
-    - Current: `Synchronisiere auf allen deinen Geräten`
-    - Source: `Load sites lightning fast Automatic tracking protection Sync on all your devices`
-    - Suggest: `Synchronisieren Sie auf allen Ihren Geräten`
-    - The locale convention is formal address (Sie); the other lines of the same screen use formal forms.
-- `Onboarding.Modern.Welcome.Title.v145` — `de/firefox-ios.xliff` — "trackers" is rendered as "Verfolgern" instead of the established term "Tracker".
-    - Current: `gruseligen Verfolgern`
-    - Source: `Say goodbye to creepy trackers`
-    - Suggest: `gruseligen Trackern`
-    - Firefox de uses "Tracker"/"Tracking-Schutz" (see Subtitle.v140 "Tracking-Schutz"); "Verfolger" is inconsistent terminology.
-- `Summarizer.Error.MissingPageContent.Message.v142` — `de/firefox-ios.xliff` — "hit summarize" on a touch device is rendered as "klicken Sie" (click) instead of tap.
-    - Current: `klicken Sie dann auf Zusammenfassen`
-    - Source: `Page is still loading. Wait for it to finish, then hit summarize.`
-    - Suggest: `tippen Sie dann auf Zusammenfassen`
-    - This is an iOS touch UI; the rest of the batch uses "tippen/antippen". "Klicken" is desktop terminology and inconsistent with the source's "hit".
 - `TermsOfUse.TermsOfUseHasOpened.v142` — `de/firefox-ios.xliff` — UI "sheet" is literally translated as "Blatt" (sheet of paper).
     - Current: `Blatt mit Nutzungsbedingungen geöffnet`
     - Source: `Terms of Use sheet opened`
@@ -460,16 +460,6 @@ _Also listed under their own category below._
     - Source: `Describe the issue in detail (optional)`
     - Suggest: `(optional)`
     - "freiwillig" means voluntary; the established Mozilla German term for "optional" in form fields is "optional".
-- `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Level" translated as "Zoomfaktor" here but as "Zoomstufe" in the sibling string on the same screen.
-    - Current: `Zoomfaktor verringern`
-    - Source: `Decrease Zoom Level`
-    - Suggest: `Zoomstufe verringern`
-    - Menu.ZoomPage.CurrentZoomLevel uses "Zoomstufe" for the same source term "Zoom Level"; inconsistent terminology within one feature.
-- `Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — "Zoom Level" translated as "Zoomfaktor" here but as "Zoomstufe" in the sibling string on the same screen.
-    - Current: `Zoomfaktor erhöhen`
-    - Source: `Increase Zoom Level`
-    - Suggest: `Zoomstufe erhöhen`
-    - Menu.ZoomPage.CurrentZoomLevel uses "Zoomstufe" for the same source term "Zoom Level"; inconsistent terminology within one feature.
 - `ActivityStream.ContextMenu.UnpinTopsite` — `de/firefox-ios.xliff` — "Unpin" is rendered as "Ablösen" instead of the established "Lösen"/"Nicht mehr anheften" counterpart to "Anheften".
     - Current: `Ablösen`
     - Source: `Unpin`
@@ -485,39 +475,9 @@ _Also listed under their own category below._
     - Source: `Delete`
     - Suggest: `Löschen`
     - The source distinguishes "Delete" (files) from "Remove"; "Entfernen" is the standard German for "Remove" (see FirefoxHome.RecentHistory.Remove), so deleting downloaded files should be "Löschen".
-- `Logins.PasscodeRequirement.Warning` — `de/firefox-ios.xliff` — "device passcode" is rendered as "Gerätepasssatz" instead of the established "Gerätecode"/"Gerätepasscode".
-    - Current: `Gerätepasssatz`
-    - Source: `To use the AutoFill feature for Firefox, you must have a device passcode enabled.`
-    - Suggest: `Gerätecode`
-    - A passcode on iOS is the numeric device code ("Gerätecode"); "Passsatz" means passphrase and is not the iOS term, and it is also an awkward misspelling-like form.
-- `Settings.Home.Option.Wallpaper.CollectionTitle` — `de/firefox-ios.xliff` — "OPENING SCREEN" is translated as "ÖFFNUNGSBILDSCHIRM", inconsistent with "Startbildschirm" used for the same source term elsewhere.
-    - Current: `ÖFFNUNGSBILDSCHIRM`
-    - Source: `OPENING SCREEN`
-    - Suggest: `STARTBILDSCHIRM`
-    - Settings.Home.Option.StartAtHome.Title translates the identical source "Opening screen" as "Startbildschirm"; "Öffnungsbildschirm" is not established German terminology.
-- `Tabs.DeleteAllUndo.Button` — `de/firefox-ios.xliff` — "Undo" rendered as "Wiederherstellen" (restore), inconsistent with "Rückgängig" used for the same source term in Toasts.Undo.
-    - Current: `Wiederherstellen`
-    - Source: `Undo`
-    - Suggest: `Rückgängig`
-    - Same source term "Undo" is translated as "Rückgängig" elsewhere in the same file; "Wiederherstellen" means "restore/redo".
-- `Modified %@` — `de/firefox-ios.xliff` — "Modified" for a last-modified timestamp is rendered as "Verändert" with an added colon instead of the standard "Geändert".
-    - Current: `Verändert: %@`
-    - Source: `Modified %@`
-    - Suggest: `Geändert: %@`
-    - The comment says the label describes when the login was last modified; Firefox uses "Geändert" for last-modified, "Verändert" is not the established term.
-- `fi3W24-scEmjs` — `de/firefox-ios.xliff` — The menu item ‘New Private Search’ is rendered as „Neue Private Suche“ here but as „Neue private Suche“ in the corresponding menu item string scEmjs.
-    - Current: `„Neue Private Suche“`
-    - Source: `There are ${count} options matching ‘New Private Search’.`
-    - Suggest: `„Neue private Suche“`
-    - The same quoted UI item must match the menu item label (scEmjs: „Neue private Suche“); also German capitalizes the adjective only if it is part of a proper name.
 
 ### E. Typography, punctuation & spacing
 
-- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `de/firefox-ios.xliff` — Missing comma before the subordinate clause "während Sie surfen".
-    - Current: `Speichern Sie Websites während Sie surfen.`
-    - Source: `Save sites as you browse. Sign in to grab bookmarks from other synced devices.`
-    - Suggest: `Speichern Sie Websites, während Sie surfen.`
-    - German punctuation requires a comma introducing a subordinate clause with "während".
 - `Engagement.Notification.Treatment.B.Body.v114` — `de/firefox-ios.xliff` — Sentence-final period from the source is missing, and the comma required before the infinitive clause is absent.
     - Current: `Surfen Sie mit %@ ohne Cookies oder eine Chronik zu speichern`
     - Source: `Browse with no saved cookies or history in %@.`
@@ -528,21 +488,11 @@ _Also listed under their own category below._
     - Source: `By continuing, you agree to the %@`
     - Suggest: `Indem Sie fortfahren, stimmen Sie den %@ zu`
     - Source "By continuing, you agree to the %@" ends without a period; the link text (e.g. "Nutzungsbedingungen von %@.") already includes the final period, so this yields a double period.
-- `PasswordAutofill.LoginListCellNoUsername.v129` — `de/firefox-ios.xliff` — Capitalized inside parentheses where the source uses lowercase sentence style.
-    - Current: `(Kein Benutzername)`
-    - Source: `(no username)`
-    - Suggest: `(kein Benutzername)`
-    - Source is "(no username)" in lowercase; German adjective/determiner should not be capitalized here.
 - `Settings.Studies.Toggle.Link` — `de/firefox-ios.xliff` — Trailing period from the source "Learn More." is missing.
     - Current: `Weitere Informationen`
     - Source: `Learn More.`
     - Suggest: `Weitere Informationen.`
     - The en-US string ends with a period, and the parallel string Settings.SendUsage.Link keeps it.
-- `SyncState.Offline.Title` — `de/firefox-ios.xliff` — Trailing period added to a title that has none in the source.
-    - Current: `Sync ist offline.`
-    - Source: `Sync is offline`
-    - Suggest: `Sync ist offline`
-    - The en-US title "Sync is offline" has no final punctuation; titles should not add one.
 - `Menu.OpenSettingsAction.Title` — `de/firefox-ios.xliff` — The translation contains a stray soft hyphen inside the word "Einstellungen".
     - Current: `Einstel­lungen`
     - Source: `Settings`
@@ -553,9 +503,16 @@ _Also listed under their own category below._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (8)
 
-_Nothing dismissed._
+- `Bookmarks.NewBookmark.Label` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>We use „Lesezeichen hinzufügen“ everywhere else, as far as I can tell.</p>
+- `CloseTabsToast.Title.v113` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "Geschlossene Tabs: %d" is correct, natural German that conveys the number of tabs closed; no meaning is lost.
+- `NativeErrorPage.BadCertDomain.TitleLabel.v149` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; likely reason (inferred): The original was probably already acceptable: "sieht nicht gut aus" is a correct and closer rendering of "doesn't look right", and the wording difference from a separate generic-error string is a style variation, not an error.
+- `PasswordAutofill.LoginListCellNoUsername.v129` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer this with a capital letter.</p>
+- `SendTo.NotSignedIn.Title.v119` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "mit Ihrem Konto angemeldet" is idiomatic German (cf. "Angemeldet mit Ihrem Google-Konto"); mit is not ungrammatical.
+- `Settings.Home.Option.Pocket` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer the noun here.</p>
+- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "jemandem erlauben, etwas zu tun" takes a dative object, and "bestimmter Werbung" is the correct feminine dative, so the sentence is grammatical.
+- `fi3W24-scEmjs` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>„Private Suche“ is a name, so capital letters are ok.</p>
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
 
@@ -569,7 +526,45 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (2)
+### Fixed to date (42)
 
-- `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — fixed 2026-09-07
-- `Settings.AppIconSelection.AppIconNames.Sunset.Title.v137` — `Shared/Supporting Files/en.lproj/AppIconSelection.strings` — fixed 2026-09-07
+- `Alerts.AddToCalendar.Body.v134` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Bookmarks.EmptyState.Root.Body.v135` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Bookmarks.EmptyState.Root.BodySignedOut.v135` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Bookmarks.Menu.EditBookmarkDesktopBookmarksLabel.v136` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Logins.DevicePasscodeRequired.Message.v122` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `NativeErrorPage.BadCertDomain.ProceedButton.v149` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `NativeErrorPage.NoInternetConnection.Description.v131` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `NativeErrorPage.Wayback.Error.Title.v154` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Modern.BrandRefresh.Notification.Title.v148` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Modern.Sync.Description.v145` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Modern.TermsOfService.Subtitle.v140` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Modern.Welcome.Title.v145` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.MultiDay.SyncCard.BodyText.v159` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Welcome.Close.AccessibilityLabel.v121` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Welcome.Description.TreatementA.v120` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Onboarding.Welcome.Description.v120` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `QuickAnswers.ContentView.Answering.v158` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `QuickAnswers.ContentView.ResultHeader.v160` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.AIControls.BlockedInformation.v151` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.Browsing.AdBlocker.Description.v155` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.Search.Suggest.ShowSponsoredSuggestions.Description.v124` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.Summarize.FooterTitle.v142` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Summarizer.Error.MissingPageContent.Message.v142` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `TabToolbar.Accessibility.DataClearance.v122` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Upgrade.Welcome.Description.v114` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `WebCompatReporter.Preview.Data.PixelDensity.v155` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `WebCompatReporter.SubOption.CaptionsMissing.v154` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Menu.ZoomPage.DecreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Menu.ZoomPage.IncreaseZoom.AccessibilityLabel.v113` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `This action will clear all of your private data, including history from your synced devices.` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Logins.PasscodeRequirement.Warning` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Menu.TrackingProtectionDescription.ContentTrackers` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Menu.TrackingProtectionDescription.Fingerprinters` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `SentTab_TabArrivingNotification_NoDevice_body` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Settings.Passwords.OnboardingMessage.v103` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `SyncState.Offline.Title` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Tabs.DeleteAllUndo.Button` — `de/firefox-ios.xliff` — fixed 2026-11-03
+- `Modified %@` — `de/firefox-ios.xliff` — fixed 2026-11-03
