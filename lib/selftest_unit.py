@@ -530,13 +530,17 @@ def run(suite) -> None:
 
     import dismiss as dismiss_mod
     import pontoon_review as pr
+    import suggest
     rec = {"file": "a.xml", "string_id": "s", "fids": ["f1"], "status": "pending",
            "original": "vecchio", "text": "nuovo",
            "pontoon": {"server": "https://p", "project": "fx", "resource": "a.xml",
                        "key": ["s"]}}
 
-    def res(status, string="nuovo", comments=(), entity="s"):
-        return {"translation_pk": 1, "string": string, "status": status,
+    # The feed's shape since mozilla/pontoon#4639: `preview` is Pontoon's
+    # simple preview, `value`/`properties` the message in moz-l10n's model.
+    def res(status, preview="nuovo", comments=(), entity="s"):
+        return {"translation_pk": 1, "preview": preview, "value": [preview],
+                "properties": None, "format": "android", "status": status,
                 "date": "2026-10-10T00:00:00Z", "approved_date": None,
                 "rejected_date": "2026-10-20T00:00:00Z" if status == "rejected" else None,
                 "entity": entity, "resource": "a.xml", "project": "fx",
@@ -546,16 +550,18 @@ def run(suite) -> None:
           "no answer from Pontoon leaves the record pending")
     check(pr.decide(rec, res("unreviewed"), "vecchio", {"f1"}) is None,
           "and so does an unreviewed suggestion")
-    check(pr.match(rec, [res("rejected", string="altro")]) is None,
+    check(pr.match(rec, [res("rejected", preview="altro")]) is None,
           "a different suggestion on the same string is not this one")
     # Real cs answers from 2026-10-13: approved in Pontoon, read as pending.
     held = dict(rec, text="Smazáno „%1$s“ <b>teď</b>")
-    check(pr.match(held, [res("approved", string=(
-        "Smazáno „{$arg1 :string @source=|%1$s|}“ {|<b>| :html}teď{|</b>| :html}"))]),
-          "Pontoon's MF2 placeholders and markup match the text that was sent")
-    check(pr.match(held, [res("approved", string=(
-        "Smazáno „{$arg1 :string @source=|%2$s|}“ {|<b>| :html}teď{|</b>| :html}"))]) is None,
-          "but a different placeholder inside them does not")
+    mf2 = "Smazáno „{$arg1 :string @source=|%1$s|}“ {|<b>| :html}teď{|</b>| :html}"
+    check(pr.match(held, [res("approved", preview="Smazáno „%1$s“ <b>teď</b>")]),
+          "the feed's preview matches the text that was sent")
+    check(pr.match(held, [res("approved", preview="Smazáno „%2$s“ <b>teď</b>")]) is None,
+          "but a different placeholder in it does not")
+    check(suggest.preview_of_api(mf2) == held["text"]
+          and suggest.preview_of_api(mf2.replace("%1$s", "%2$s")) != held["text"],
+          "the action log's raw MF2 reads back into the same form")
     # An upload whose text Pontoon already had: pt-BR, 2026-10-12. Pontoon
     # revived the older translation rather than storing one by the bot, and
     # the reviewer rejected that.

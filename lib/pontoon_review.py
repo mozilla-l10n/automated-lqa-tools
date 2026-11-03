@@ -127,17 +127,18 @@ def match(record: dict, results: list[dict]) -> dict | None:
     """The Pontoon translation that is this suggestion, or None.
 
     The text has to be equal as well as the entity: a later suggestion with
-    different text on the same string is a different suggestion. Equal once
-    Pontoon's MF2 is read back into the form the record holds: compared
-    raw, every string with a placeholder or a tag in it stayed pending
-    forever, whatever its reviewer had done.
+    different text on the same string is a different suggestion. Compared
+    with the feed's ``preview``, which is Pontoon's simple preview -- the
+    form `suggest.pontoon_preview` gives the record -- and not with
+    ``value``: that is the whole message in moz-l10n's JSON model, which
+    nothing here holds.
     """
     p = record["pontoon"]
     entity = entity_of(p["key"])
     found = [r for r in results
              if r["project"] == p["project"] and r["resource"] == p["resource"]
              and r["entity"] == entity
-             and record["text"] in (r["string"], suggest.preview_of_api(r["string"]))]
+             and r["preview"] == record["text"]]
     if not found:
         return None
     return max(found, key=lambda r: max(filter(None, (
@@ -222,7 +223,9 @@ def revived(record: dict, locale: str, results: list[dict], sent_actions: list[d
         return None
     last = reviews[-1]
     status = REVIEWS[last["type"]]
-    return {"translation_pk": pk, "string": last["translation"]["string"],
+    string = last["translation"]["string"]
+    return {"translation_pk": pk,
+            "preview": suggest.preview_of_api(string) or string,
             "status": status, "date": revivals[-1]["date"],
             "approved_date": last["date"] if status == "approved" else None,
             "rejected_date": last["date"] if status == "rejected" else None,

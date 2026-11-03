@@ -116,7 +116,7 @@ def _load_worklist(wdir: str) -> dict:
 # --- Pontoon's view of a string ------------------------------------------------
 #
 # A port of pontoon/base/simple_preview.py, which is what the API returns as
-# a translation's `string`. Applying the same function to the clone's message
+# a translation's `preview` in the user translations feed. Applying the same function to the clone's message
 # is what makes "has Pontoon moved on?" an exact comparison: Pontoon keeps
 # Android escapes such as `‌` as written, which no flattening of ours
 # would reproduce.
@@ -168,9 +168,11 @@ def pontoon_preview(fmt, entry) -> str:
 
 
 def preview_of_api(string: str) -> str | None:
-    """A translation as Pontoon's API returns it, in `pontoon_preview` form.
+    """A translation's raw `string`, in `pontoon_preview` form.
 
-    The API answers in MessageFormat 2 for every non-Fluent format:
+    The user translations feed has `preview` for this; the action log and
+    the entities endpoint still return the raw `string`, which is
+    MessageFormat 2 for every non-Fluent format:
     `Smazáno „{$arg1 :string @source=|%1$s|}“`, `{|<b>| :html}`. What was
     sent, and what the records hold, is the preview form -- `Smazáno „%1$s“`
     -- so the two only compare equal for a string with no placeholder or
