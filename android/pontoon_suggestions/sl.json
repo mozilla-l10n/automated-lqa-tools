@@ -1,0 +1,1098 @@
+{
+ "project": "android",
+ "locale": "sl",
+ "suggestions": [
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_harmful_addon_uri_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_harmful_addon_uri_message"
+    ]
+   },
+   "fids": [
+    "66075b56509d"
+   ],
+   "findings": [
+    "\"credit card numbers\" mistranslated as \"podatki o bančnem računu\" (bank account details)."
+   ],
+   "source": "{ <p> }This web page at %1$s has been blocked because one of your add-ons tried to open it. This site could be used to steal your info — like passwords or credit card numbers.{ </p> }",
+   "original": "<p>Ta spletna stran na %1$s je bila blokirana, ker jo je poskušal odpreti eden izmed vaših dodatkov. Na tem spletnem mestu bi lahko ukradli vaše podatke, kot so gesla ali podatki o bančnem računu.</p>",
+   "text": "<p>Ta spletna stran na %1$s je bila blokirana, ker jo je poskušal odpreti eden izmed vaših dodatkov. Na tem spletnem mestu bi lahko ukradli vaše podatke, kot so gesla ali številke kreditnih kartic.</p>",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_httpsonly_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_httpsonly_message"
+    ]
+   },
+   "fids": [
+    "655e0ac9e80a"
+   ],
+   "findings": [
+    "Translation adds \"varna\" (secure) not present in the source when describing the HTTPS version."
+   ],
+   "source": "You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.",
+   "original": "Omogočili ste način \"samo HTTPS\" za izboljšano varnost in varna različica HTTPS strani <em>%1$s</em> ni na voljo.",
+   "text": "Omogočili ste način \"samo HTTPS\" za izboljšano varnost in različica HTTPS strani <em>%1$s</em> ni na voljo.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_net_reset_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_net_reset_message"
+    ]
+   },
+   "fids": [
+    "e7f72cd0d81e"
+   ],
+   "findings": [
+    "\"The network link was interrupted\" rendered as \"Povezava s stranjo je bila nepričakovano prekinjena\", changing network link to page connection and adding \"nepričakovano\"."
+   ],
+   "source": "{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> }\n{ <ul> }\n{ <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
+   "original": "<p>Povezava s stranjo je bila nepričakovano prekinjena med pogajanjem za povezavo. Poskusite znova.</p>\n<ul>\n<li>Spletno mesto je morda začasno nedosegljivo ali preobremenjeno. Poskusite znova nekoliko pozneje.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
+   "text": "<p>Omrežna povezava je bila prekinjena med pogajanjem za povezavo. Poskusite znova.</p>\n<ul>\n<li>Spletno mesto je morda začasno nedosegljivo ali preobremenjeno. Poskusite znova nekoliko pozneje.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_unknown_host_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_unknown_host_message"
+    ]
+   },
+   "fids": [
+    "4cf35ee2c196"
+   ],
+   "findings": [
+    "First sentence mistranslated: source says the browser could not find the host server for the provided address, translation says only \"The page could not be found\"."
+   ],
+   "source": "{ <p> }The browser could not find the host server for the provided address.{ </p> }\n{ <ul> }\n{ <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </strong> }.example.com.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
+   "original": "<p>Strani ni bilo mogoče najti.</p>\n<ul>\n<li>Morda ste se zmotili pri črkovanju naslova, npr. <strong>ww</strong>.example.com namesto <strong>www</strong>.example.com.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
+   "text": "<p>Brskalnik ni mogel najti gostiteljskega strežnika za navedeni naslov.</p>\n<ul>\n<li>Morda ste se zmotili pri črkovanju naslova, npr. <strong>ww</strong>.example.com namesto <strong>www</strong>.example.com.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_data_collection_optional_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_data_collection_optional_description"
+    ]
+   },
+   "fids": [
+    "88ad07dcfefc"
+   ],
+   "findings": [
+    "\"wants to collect\" is rendered as a plain present tense \"zbira\" (collects), dropping the intent/request meaning."
+   ],
+   "source": "The developer says the extension wants to collect: %1$s",
+   "original": "Razvijalec pravi, da razširitev zbira: %1$s",
+   "text": "Razvijalec pravi, da želi razširitev zbirati: %1$s",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_web_navigation_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_web_navigation_description"
+    ]
+   },
+   "fids": [
+    "b4f6420297ac"
+   ],
+   "findings": [
+    "Translation drops \"during navigation\" from the webNavigation permission description."
+   ],
+   "source": "Access browser activity during navigation",
+   "original": "dostop do dejavnosti brskalnika",
+   "text": "dostop do dejavnosti brskalnika med krmarjenjem",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_redirect_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_redirect_dialog_title"
+    ]
+   },
+   "fids": [
+    "06fe46607160"
+   ],
+   "findings": [
+    "\"this site\" is rendered as \"to stran\" (page) while the parallel string uses \"spletno mesto\" for site."
+   ],
+   "source": "Allow redirect to this site?",
+   "original": "Dovolite preusmeritev na to stran?",
+   "text": "Dovolite preusmeritev na to spletno mesto?",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_suggest_strong_password_description_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_suggest_strong_password_description_3"
+    ]
+   },
+   "fids": [
+    "e4c54a4c004c"
+   ],
+   "findings": [
+    "Agreement error: \"svoje račun\" should be \"svoj račun\"."
+   ],
+   "source": "Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.",
+   "original": "Zaščitite svoje račun z uporabo močnih, naključno ustvarjenih gesel. Shranjena bodo v vaš račun za nadaljnjo uporabo.",
+   "text": "Zaščitite svoj račun z uporabo močnih, naključno ustvarjenih gesel. Shranjena bodo v vaš račun za nadaljnjo uporabo.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompts_update_credit_card_prompt_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompts_update_credit_card_prompt_title"
+    ]
+   },
+   "fids": [
+    "b29e0a898b3a"
+   ],
+   "findings": [
+    "Dialog title question uses imperative/1st-person form inconsistent with the parallel address dialog and the formal register."
+   ],
+   "source": "Update card expiration date?",
+   "original": "Posodobi datum poteka veljavnosti kartice?",
+   "text": "Posodobim datum poteka veljavnosti kartice?",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml",
+   "string_id": "mozac_summarize_settings_shake_sensitivity_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_summarize_settings_shake_sensitivity_description"
+    ]
+   },
+   "fids": [
+    "1c552c7c89fe"
+   ],
+   "findings": [
+    "Superfluous comma before the prepositional phrase \"za povzetek\"."
+   ],
+   "source": "Adjust how hard you need to shake to trigger summarization.",
+   "original": "Prilagodite, kako močno morate stresati, za povzetek.",
+   "text": "Prilagodite, kako močno morate stresati za povzetek.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/longfox/src/main/res/values/strings.xml",
+   "string_id": "sound_off",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/longfox/src/main/res/values/strings.xml",
+    "key": [
+     "sound_off"
+    ]
+   },
+   "fids": [
+    "a8cd47836ca7"
+   ],
+   "findings": [
+    "The muted-sound emoji 🔇 was replaced with the speaker emoji 🔈, making \"sound off\" and \"sound on\" visually identical."
+   ],
+   "source": "🔇 sound off",
+   "original": "🔈 zvok izključen",
+   "text": "🔇 zvok izključen",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automatic_translation_header_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automatic_translation_header_preference"
+    ]
+   },
+   "fids": [
+    "e1180a890d9c"
+   ],
+   "findings": [
+    "Quotation marks are reversed/incorrect; the locale convention is straight double quotes."
+   ],
+   "source": "Select a language to manage ”always translate“ and ”never translate“ preferences.",
+   "original": "Izberite jezik za upravljanje nastavitev ”vedno prevedi“ in ”nikoli ne prevajaj“.",
+   "text": "Izberite jezik za upravljanje nastavitev \"vedno prevedi\" in \"nikoli ne prevajaj\".",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "certificate_warning_push_notification_pnr1_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "certificate_warning_push_notification_pnr1_message"
+    ]
+   },
+   "fids": [
+    "704ea51a0d4b"
+   ],
+   "findings": [
+    "Verb gender agreement error: \"Dodatki in nekatere možnosti\" (masculine + feminine subjects) requires masculine plural \"nehali\", not feminine \"nehale\"."
+   ],
+   "source": "Add-ons and some features will stop working on March 14.",
+   "original": "Dodatki in nekatere možnosti bodo 14. marca nehale delovati.",
+   "text": "Dodatki in nekatere možnosti bodo 14. marca nehali delovati.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "content_description_take_photo",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "content_description_take_photo"
+    ]
+   },
+   "fids": [
+    "ce0e49786ab6"
+   ],
+   "findings": [
+    "Missing preposition in \"pošlji Google Lens\"; the source says \"send to Google Lens\"."
+   ],
+   "source": "Take photo and send to Google Lens",
+   "original": "Fotografiraj in pošlji Google Lens",
+   "text": "Fotografiraj in pošlji v Google Lens",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "credit_cards_biometric_prompt_unlock_message_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "credit_cards_biometric_prompt_unlock_message_2"
+    ]
+   },
+   "fids": [
+    "749b8e33dc71"
+   ],
+   "findings": [
+    "\"Unlock to use saved payment methods\" is translated as \"unlock to view saved payment methods\"."
+   ],
+   "source": "Unlock to use saved payment methods",
+   "original": "Odklenite za ogled shranjenih plačilnih sredstev",
+   "text": "Odklenite za uporabo shranjenih plačilnih sredstev",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "debug_drawer_tab_tools_tab_count_active",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "debug_drawer_tab_tools_tab_count_active"
+    ]
+   },
+   "fids": [
+    "ea3ae6212a7d"
+   ],
+   "findings": [
+    "\"Active\" tab-count category uses singular masculine \"Dejaven\" while the sibling categories use plural forms."
+   ],
+   "source": "Active",
+   "original": "Dejaven",
+   "text": "Dejavni",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_cookies_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_cookies_title"
+    ]
+   },
+   "fids": [
+    "ca058d9a212b"
+   ],
+   "findings": [
+    "\"Cross-Site Tracking Cookies\" rendered as \"Spletni sledilni piškotki\", dropping the cross-site meaning."
+   ],
+   "source": "Cross-Site Tracking Cookies",
+   "original": "Spletni sledilni piškotki",
+   "text": "Medspletni sledilni piškotki",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_known_fingerprinters_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_known_fingerprinters_title"
+    ]
+   },
+   "fids": [
+    "115c5cc50fc2"
+   ],
+   "findings": [
+    "Category header is in accusative case instead of nominative."
+   ],
+   "source": "Known Fingerprinters",
+   "original": "Znane sledilce prstnih odtisov",
+   "text": "Znani sledilci prstnih odtisov",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_suspected_fingerprinters_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_suspected_fingerprinters_title"
+    ]
+   },
+   "fids": [
+    "8f1ce8dab682"
+   ],
+   "findings": [
+    "Category title uses the accusative case \"Morebitne sledilce\" instead of the nominative required for a standalone preference title."
+   ],
+   "source": "Suspected Fingerprinters",
+   "original": "Morebitne sledilce prstnih odtisov",
+   "text": "Morebitni sledilci prstnih odtisov",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "microsurvey_search_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "microsurvey_search_title"
+    ]
+   },
+   "fids": [
+    "eaf568991753"
+   ],
+   "findings": [
+    "\"search experience\" translated as \"možnost iskanja\" (search option)."
+   ],
+   "source": "How satisfied are you with the search experience in Firefox?",
+   "original": "Kako zadovoljni ste z možnostjo iskanja v Firefoxu?",
+   "text": "Kako zadovoljni ste z izkušnjo iskanja v Firefoxu?",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_add_search_widget_subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_add_search_widget_subtitle"
+    ]
+   },
+   "fids": [
+    "a2da046ab003"
+   ],
+   "findings": [
+    "\"home screen\" of the phone is translated as \"domača stran\" (web homepage) instead of \"domači zaslon\"."
+   ],
+   "source": "Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.",
+   "original": "Začnite vsako iskanje z domače strani svojega telefona in vedite, da vam Firefox s svojimi zaščitami krije hrbet.",
+   "text": "Začnite vsako iskanje z domačega zaslona svojega telefona in vedite, da vam Firefox s svojimi zaščitami krije hrbet.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body"
+    ]
+   },
+   "fids": [
+    "8b5e5ad89e16"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"tehnološkim partnerjem za trženje\", adding \"tehnološkim\" (technology) which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
+   "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali. %1$s",
+   "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali. %1$s",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_2"
+    ]
+   },
+   "fids": [
+    "36d568a5128f"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"tehnološkim partnerjem za trženje\", adding \"tehnološkim\" (technology) which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_3"
+    ]
+   },
+   "fids": [
+    "94b71275244c"
+   ],
+   "findings": [
+    "Verb agreement error: \"da ... obvestimo\" should be third person \"obvesti\", since the subject of the subordinate clause is Mozilla."
+   ],
+   "source": "You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.",
+   "original": "Pomagate nam lahko doseči več ljudi, tako da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvestimo, da ste vi njegov uporabnik.",
+   "text": "Pomagate nam lahko doseči več ljudi, tako da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvesti, da ste vi njegov uporabnik.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_line_three",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_line_three"
+    ]
+   },
+   "fids": [
+    "ea3e259aa0c8"
+   ],
+   "findings": [
+    "Informal/incorrect \"Prosim\" plus an inconsistent imperative construction instead of the formal polite request."
+   ],
+   "source": "Please consider allowing to help Firefox win.",
+   "original": "Prosim, razmislite o tem, da dovolite in pomagajte Firefoxu, da zmaga.",
+   "text": "Prosim, razmislite o tem, da dovolite in pomagate Firefoxu, da zmaga.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_tou_body_line_3_link_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_tou_body_line_3_link_text"
+    ]
+   },
+   "fids": [
+    "98ddceae76af"
+   ],
+   "findings": [
+    "Link text \"Manage settings\" is rendered only as \"Nastavitve\", dropping the verb."
+   ],
+   "source": "Manage settings",
+   "original": "Nastavitve",
+   "text": "Upravljanje nastavitev",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_body_1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_body_1"
+    ]
+   },
+   "fids": [
+    "8721e2ff43f2"
+   ],
+   "findings": [
+    "\"marketing partners\" is translated as \"tehnološkim partnerjem za trženje\", adding \"technology\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_redesign_opt_out_checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_redesign_opt_out_checkbox"
+    ]
+   },
+   "fids": [
+    "a58a9f78c92d"
+   ],
+   "findings": [
+    "\"marketing partners\" is translated as \"tehnološkim partnerjem za trženje\", adding \"technology\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_auto_battery_theme",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_auto_battery_theme"
+    ]
+   },
+   "fids": [
+    "1b64f9a5531e"
+   ],
+   "findings": [
+    "\"Set by Battery Saver\" is rendered as an imperative \"Nastavi ohranjevalnik baterije\" (\"Set the battery saver\"), reversing the meaning."
+   ],
+   "source": "Set by Battery Saver",
+   "original": "Nastavi ohranjevalnik baterije",
+   "text": "Nastavljeno z ohranjevalnikom baterije",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_doh_exceptions_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_doh_exceptions_summary"
+    ]
+   },
+   "fids": [
+    "6126ba269284"
+   ],
+   "findings": [
+    "\"secure DNS\" is rendered \"varnega DNS\" here but \"zavarovanega DNS\" in the sibling DoH strings."
+   ],
+   "source": "%1$s won’t use secure DNS on these sites and their subdomains.",
+   "original": "Na teh spletnih mestih in njihovih poddomenah %1$s ne bo uporabljal varnega DNS.",
+   "text": "Na teh spletnih mestih in njihovih poddomenah %1$s ne bo uporabljal zavarovanega DNS.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_doh_increased_protection_info_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_doh_increased_protection_info_2"
+    ]
+   },
+   "fids": [
+    "443f96b62a04"
+   ],
+   "findings": [
+    "Translation is truncated: the word \"DNS\" is missing at the end of the phrase \"z zavarovanim\"."
+   ],
+   "source": "Only use your default DNS resolver if there is a problem with secure DNS",
+   "original": "privzeti razreševalnik DNS uporabi samo, če pride do težav z zavarovanim",
+   "text": "privzeti razreševalnik DNS uporabi samo, če pride do težav z zavarovanim DNS",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_option_autoplay_allowed_wifi_subtext",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_option_autoplay_allowed_wifi_subtext"
+    ]
+   },
+   "fids": [
+    "2002da5d884b"
+   ],
+   "findings": [
+    "\"Video\" is incorrectly capitalized mid-sentence in Slovenian."
+   ],
+   "source": "Audio and video will play on Wi-Fi",
+   "original": "Zvok in Video se bosta predvajala na Wi-Fi",
+   "text": "Zvok in video se bosta predvajala na Wi-Fi",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_marketing_data_description_4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_marketing_data_description_4"
+    ]
+   },
+   "fids": [
+    "9d2f1e42354b"
+   ],
+   "findings": [
+    "The translation drops \"marketing\" from \"Mozilla's marketing technology partners\"."
+   ],
+   "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
+   "original": "Objavite, kako ste odkrili Firefox in da ga uporabljate, z Mozillinimi tehnološkimi partnerji.",
+   "text": "Objavite, kako ste odkrili Firefox in da ga uporabljate, z Mozillinimi trženjskimi tehnološkimi partnerji.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_search_browsing_history",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_search_browsing_history"
+    ]
+   },
+   "fids": [
+    "b93306e6f2b0"
+   ],
+   "findings": [
+    "\"Search browsing history\" is rendered as \"search history\" instead of \"browsing history\"."
+   ],
+   "source": "Search browsing history",
+   "original": "Išči po zgodovini iskanja",
+   "text": "Išči po zgodovini brskanja",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "protection_panel_banner_not_protected_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "protection_panel_banner_not_protected_description"
+    ]
+   },
+   "fids": [
+    "79c00bf2cc99"
+   ],
+   "findings": [
+    "Verb agrees with feminine gender although %s is the app name (Firefox), which is masculine in Slovenian."
+   ],
+   "source": "%s is off-duty. We suggest turning protections back on.",
+   "original": "%s je izključena. Priporočamo, da zaščito znova vključite.",
+   "text": "%s je izključen. Priporočamo, da zaščito znova vključite.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_5_steps_third_step",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_5_steps_third_step"
+    ]
+   },
+   "fids": [
+    "1133a8f2c43b"
+   ],
+   "findings": [
+    "\"Ste preko polovice\" (you are past halfway) differs from the source \"You’re halfway there\"."
+   ],
+   "source": "You’re halfway there! Three steps finished and 2 to go.",
+   "original": "Ste preko polovice! Trije koraki dokončani in še dva do konca.",
+   "text": "Ste na pol poti! Trije koraki dokončani in še dva do konca.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_task_explore_extensions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_task_explore_extensions"
+    ]
+   },
+   "fids": [
+    "331b362c4ad2"
+   ],
+   "findings": [
+    "Imperative form is inconsistent with the other setup checklist task titles, which use the formal plural."
+   ],
+   "source": "Explore extensions",
+   "original": "Razišči razširitve",
+   "text": "Raziščite razširitve",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "snackbar_message_bookmarks_saved_in_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "snackbar_message_bookmarks_saved_in_2"
+    ]
+   },
+   "fids": [
+    "e78ed15c0515"
+   ],
+   "findings": [
+    "English-style opening quotation mark used instead of the locale's straight double quotes."
+   ],
+   "source": "Bookmarks saved in “%s”",
+   "original": "Zaznamki shranjeni v “%s”",
+   "text": "Zaznamki shranjeni v \"%s\"",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "synced_tabs_no_tabs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "synced_tabs_no_tabs"
+    ]
+   },
+   "fids": [
+    "d8dba380266a"
+   ],
+   "findings": [
+    "Translation adds \"drugih\" (\"other tabs\"), changing the meaning of the source."
+   ],
+   "source": "You don’t have any tabs open in Firefox on your other devices.",
+   "original": "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.",
+   "text": "V Firefoxu na drugih napravah nimate odprtih zavihkov.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_tray_inactive_onboarding_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_tray_inactive_onboarding_message"
+    ]
+   },
+   "fids": [
+    "5172ff58aff8"
+   ],
+   "findings": [
+    "\"haven’t viewed\" is rendered as \"niste odprli\" (haven't opened) instead of \"si niste ogledali\"."
+   ],
+   "source": "Tabs you haven’t viewed for two weeks get moved here.",
+   "original": "Zavihki, ki jih dva tedna niste odprli, se premaknejo sem.",
+   "text": "Zavihki, ki si jih dva tedna niste ogledali, se premaknejo sem.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translations_bottom_sheet_info_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translations_bottom_sheet_info_message"
+    ]
+   },
+   "fids": [
+    "b95ebf47c626"
+   ],
+   "findings": [
+    "\"your device\" is translated as \"računalnika\" (computer) in a mobile app."
+   ],
+   "source": "For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s",
+   "original": "Zasebnost je zagotovljena, saj prevodi nikoli ne zapustijo vašega računalnika. Novi jeziki in izboljšave so na poti! %1$s",
+   "text": "Zasebnost je zagotovljena, saj prevodi nikoli ne zapustijo vaše naprave. Novi jeziki in izboljšave so na poti! %1$s",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_clear_reason_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_clear_reason_content_description"
+    ]
+   },
+   "fids": [
+    "52f5e5e70653"
+   ],
+   "findings": [
+    "\"Clear selected reason\" is rendered as \"Cancel the selected reason\" instead of clearing/removing it."
+   ],
+   "source": "Clear selected reason",
+   "original": "Prekliči izbrani razlog",
+   "text": "Počisti izbrani razlog",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  }
+ ]
+}
