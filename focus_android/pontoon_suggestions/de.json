@@ -24,9 +24,13 @@
    "source": "{ <p> }%1$s puts you in control.{ </p> }\n{ <p> }Use it as a private browser:\n{ <ul> }\n{ <li> }Search and browse right in the app{ </li> }\n{ <li> }Block trackers (or update settings to allow trackers){ </li> }\n{ <li> }Erase to delete cookies as well as search and browsing history{ </li> }\n{ </ul> } { </p> }\n{ <p> }%1$s is produced by Mozilla. Our mission is to foster a healthy, open Internet.{ <br/> }\n<a href=\"%2$s\">Learn more{ </a> }{ </p> }",
    "original": "<p>%1$s gibt Ihnen die Kontrolle.</p>\n<p>Verwenden Sie ihn als privaten Browser:\n<ul>\n<li>Suchen und blättern Sie in der App</li>\n<li>Blockieren Sie Tracker (oder aktualisieren Sie die Einstellungen, um Tracker zu erlauben)</li>\n<li>Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen</li>\n</ul> </p>\n<p>%1$s wird von Mozilla entwickelt. Unsere Mission ist es, ein gesundes, offenes Internet zu fördern.<br/>\n<a href=\"%2$s\">Erfahren Sie mehr</a></p>",
    "text": "<p>%1$s gibt Ihnen die Kontrolle.</p>\n<p>Verwenden Sie ihn als privaten Browser:\n<ul>\n<li>Suchen und surfen Sie direkt in der App</li>\n<li>Blockieren Sie Tracker (oder aktualisieren Sie die Einstellungen, um Tracker zu erlauben)</li>\n<li>Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen</li>\n</ul> </p>\n<p>%1$s wird von Mozilla entwickelt. Unsere Mission ist es, ein gesundes, offenes Internet zu fördern.<br/>\n<a href=\"%2$s\">Erfahren Sie mehr</a></p>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12374005,
+   "pontoon_url": "https://pontoon.mozilla.org/de/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224023",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -50,9 +54,13 @@
    "source": "Open in…",
    "original": "Öffnen in…",
    "text": "Öffnen in …",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12374004,
+   "pontoon_url": "https://pontoon.mozilla.org/de/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223919",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -76,9 +84,13 @@
    "source": "{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> }\n{ <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the certificate is self-signed, or the server is not sending the correct intermediate certificates.{ </label> }",
    "original": "<label>Jemand könnte versuchen, sich als die Website auszugeben und fortfahren könnte riskant sein.</label> <br><br>\n<label>%1$s vertraut <b>%2$s</b> nicht, weil der Aussteller des Zertifikats unbekannt ist, das Zertifikat vom Austeller selbst signiert wurde oder der Server nicht die korrekten Zwischen-Zertifikate sendet.</label>",
    "text": "<label>Jemand könnte versuchen, sich als die Website auszugeben und fortfahren könnte riskant sein.</label> <br><br>\n<label>%1$s vertraut <b>%2$s</b> nicht, weil der Aussteller des Zertifikats unbekannt ist, das Zertifikat vom Aussteller selbst signiert wurde oder der Server nicht die korrekten Zwischen-Zertifikate sendet.</label>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12374008,
+   "pontoon_url": "https://pontoon.mozilla.org/de/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=274830",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -102,9 +114,13 @@
    "source": "Pages may load faster, but may also behave unexpectedly",
    "original": "Seiten laden schneller, verhalten sich aber möglicherweise unerwartet",
    "text": "Seiten laden eventuell schneller, verhalten sich aber möglicherweise unerwartet",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12374006,
+   "pontoon_url": "https://pontoon.mozilla.org/de/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223985",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -128,9 +144,13 @@
    "source": "Qualified as specified in Regulation (EU) 2024/1183.",
    "original": "Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.",
    "text": "Qualifiziert im Sinne der Verordnung (EU) 2024/1183.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12374007,
+   "pontoon_url": "https://pontoon.mozilla.org/de/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=331690",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

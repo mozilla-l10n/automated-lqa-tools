@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `4b7f824f5bb3` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 5 of 250 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,56 @@ Also for de: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
+    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
+    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
+    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
+    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
+- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
+    - Current: `und fortfahren könnte riskant sein`
+    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
+    - Suggest: `und Fortfahren könnte riskant sein`
+    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (7)
 
-_Nothing was fixed._
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
+    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
+    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
+    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
+    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
+- `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Missing space before the ellipsis, inconsistent with the German convention used in menu_share ("Teilen …").
+    - Current: `Öffnen in…`
+    - Source: `Open in…`
+    - Suggest: `Öffnen in …`
+    - German typography (and the sibling string menu_share) places a space before the ellipsis character.
+- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
+    - Current: `und fortfahren könnte riskant sein`
+    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
+    - Suggest: `und Fortfahren könnte riskant sein`
+    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The modal "may" of "Pages may load faster" is dropped, turning a possibility into a statement of fact.
+    - Current: `Seiten laden schneller, verhalten sich aber möglicherweise unerwartet`
+    - Source: `Pages may load faster, but may also behave unexpectedly`
+    - Suggest: `Seiten laden möglicherweise schneller, verhalten sich aber eventuell unerwartet`
+    - Source says "Pages may load faster"; the German asserts they do load faster.
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Regulation" (EU) 2024/1183 is a Verordnung, not a Richtlinie (directive).
+    - Current: `Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Qualifiziert im Sinne der Verordnung (EU) 2024/1183.`
+    - EU legal terminology: "Regulation" = "Verordnung"; "Richtlinie" would be "Directive", naming the wrong legal instrument.
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
+    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
+    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
+    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
+    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
+- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
+    - Current: `und fortfahren könnte riskant sein`
+    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
+    - Suggest: `und Fortfahren könnte riskant sein`
+    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -71,10 +114,10 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
+| quotes | `german-double` 23, `curly-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
-| dash | `en` 6 | **en** |
-| register | `formal` 668 | **formal** |
+| dash | `en` 7 | **en** |
+| register | `formal` 667 | **formal** |
 
 ---
 
@@ -84,15 +127,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (7)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 2 | Wrong content (says something other than the English) | 2 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -100,39 +143,20 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Search and browse right in the app" is translated as "Suchen und blättern Sie in der App", where "blättern" means paging/leafing rather than web browsing.
-    - Current: `Suchen und blättern Sie in der App`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Suchen und surfen Sie direkt in der App`
-    - "browse" here means browsing the web; "blättern" is the wrong sense and "right in the app" (direkt) is dropped.
 - `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
     - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
     - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
     - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
     - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The modal "may" of "Pages may load faster" is dropped, turning a possibility into a statement of fact.
-    - Current: `Seiten laden schneller, verhalten sich aber möglicherweise unerwartet`
-    - Source: `Pages may load faster, but may also behave unexpectedly`
-    - Suggest: `Seiten laden möglicherweise schneller, verhalten sich aber eventuell unerwartet`
-    - Source says "Pages may load faster"; the German asserts they do load faster.
 - `preference_privacy_block_content_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Enabling" is not rendered; the German says "This can cause…" without the condition of activating the setting.
     - Current: `Dies kann dazu führen, dass manche Seiten sich ungewöhnlich verhalten`
     - Source: `Enabling may cause some pages to behave unexpectedly`
     - Suggest: `Das Aktivieren kann dazu führen, dass sich manche Seiten unerwartet verhalten`
     - The source conditions the warning on enabling the option; the translation drops that.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Regulation" (EU) 2024/1183 is a Verordnung, not a Richtlinie (directive).
-    - Current: `Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Qualifiziert im Sinne der Verordnung (EU) 2024/1183.`
-    - EU legal terminology: "Regulation" = "Verordnung"; "Richtlinie" would be "Directive", naming the wrong legal instrument.
 
 ### C. Grammar, agreement & spelling
 
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Misspelling of "Aussteller" as "Austeller".
-    - Current: `das Zertifikat vom Austeller selbst signiert wurde`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `das Zertifikat vom Aussteller selbst signiert wurde`
-    - "Austeller" is a typo; the correct German spelling is "Aussteller", as used earlier in the same string ("der Aussteller des Zertifikats").
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -140,11 +164,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Missing space before the ellipsis, inconsistent with the German convention used in menu_share ("Teilen …").
-    - Current: `Öffnen in…`
-    - Source: `Open in…`
-    - Suggest: `Öffnen in …`
-    - German typography (and the sibling string menu_share) places a space before the ellipsis character.
+_Nothing in this category._
 
 ---
 
@@ -166,6 +186,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (5)
 
-_Nothing fixed yet._
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
