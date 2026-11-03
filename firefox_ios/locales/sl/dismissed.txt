@@ -15,3 +15,12 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+Alerts.RestoreTabs.Message.v109 @ Shared/Supporting Files/en-US.lproj/Alerts.strings — auto-suggest (2026-11-03): "Oprostite." is the standard formal Slovenian apology equivalent to "Sorry (about that)".
+MainMenu.Submenus.Tools.ReaderView.Off.Title.v131 @ Shared/Supporting Files/en-US.lproj/MainMenu.strings — auto-suggest (2026-11-03): The quoted text "Prijavi nedelujočo stran …" does not appear in this translation, which has no ellipsis.
+Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148 @ Shared/Supporting Files/en-US.lproj/Onboarding.strings — auto-suggest (2026-11-03): Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
+CreditCard.Settings.Yes.v122 @ Shared/Supporting Files/en-US.lproj/Settings.strings — auto-suggest (2026-11-03): The quoted text "Posodobim kartico?" is not in this string; the translation "Posodobi" correctly renders "Update".
+DefaultBrowserCard.PeaceOfMind.Description.v108 @ Shared/en-US.lproj/Default Browser.strings — auto-suggest (2026-11-03): Slovenian Mozilla products consistently render tracker blocking with 'zavračati/zavrniti' (cf. 'Zavračanje' in string 10), so 'zavrne' is the established term.
+PzSrmZ-2GqvPe @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+PzSrmZ-eHmH1H @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+PzSrmZ-scEmjs @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+PzSrmZ-xRJbBP @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.

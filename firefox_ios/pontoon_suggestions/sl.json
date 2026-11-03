@@ -1,0 +1,681 @@
+{
+ "project": "firefox_ios",
+ "locale": "sl",
+ "suggestions": [
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136"
+    ]
+   },
+   "fids": [
+    "bcf0632c1c71"
+   ],
+   "findings": [
+    "Uses curly double quotes instead of the locale's straight double quotes."
+   ],
+   "source": "Saved in “Bookmarks”",
+   "original": "Shranjeno v mapo “Zaznamki”",
+   "text": "Shranjeno v mapo \"Zaznamki\"",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+   "string_id": "Bookmarks.Menu.SavedBookmarkToastLabel.v136",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Bookmarks.strings",
+     "Bookmarks.Menu.SavedBookmarkToastLabel.v136"
+    ]
+   },
+   "fids": [
+    "2be30da62c31"
+   ],
+   "findings": [
+    "Uses curly double quotes instead of the locale's straight double quotes."
+   ],
+   "source": "Saved in “%@”",
+   "original": "Shranjeno v mapo “%@”",
+   "text": "Shranjeno v mapo \"%@\"",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/ErrorState.strings",
+   "string_id": "CreditCard.ErrorState.CardExpirationDateSublabel.v112",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/ErrorState.strings",
+     "CreditCard.ErrorState.CardExpirationDateSublabel.v112"
+    ]
+   },
+   "fids": [
+    "f55642d956bf"
+   ],
+   "findings": [
+    "\"expiration date\" translated as \"leto poteka\" (expiration year)."
+   ],
+   "source": "Enter a valid expiration date",
+   "original": "Vnesite veljavno leto poteka",
+   "text": "Vnesite veljaven datum poteka",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.BrandRefresh.Marketing.Description.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.BrandRefresh.Marketing.Description.v148"
+    ]
+   },
+   "fids": [
+    "acd6a6c9b14f"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"tehnološkim partnerjem ... za trženje\", introducing \"technology\" that the source never mentions."
+   ],
+   "source": "Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.",
+   "original": "Sporočite tehnološkim partnerjem organizacije %2$@ za trženje, kako ste odkrili %1$@ in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "text": "Sporočite partnerjem organizacije %2$@ za trženje, kako ste odkrili %1$@ in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.TermsOfService.ManageLink.v145",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.TermsOfService.ManageLink.v145"
+    ]
+   },
+   "fids": [
+    "f03446a97b89"
+   ],
+   "findings": [
+    "\"Manage settings\" is translated only as \"Nastavitve\" (\"Settings\"), dropping the verb."
+   ],
+   "source": "Manage settings",
+   "original": "Nastavitve",
+   "text": "Upravljanje nastavitev",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v140",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v140"
+    ]
+   },
+   "fids": [
+    "a829c4227137"
+   ],
+   "findings": [
+    "\"for everyone\" is translated as \"za uporabnike po vsem svetu\" (\"for users all over the world\")."
+   ],
+   "source": "Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@",
+   "original": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za uporabnike po vsem svetu. %2$@",
+   "text": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za vse. %2$@",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135"
+    ]
+   },
+   "fids": [
+    "f0fffaf2d7a2"
+   ],
+   "findings": [
+    "\"for everyone\" is rendered as \"for users around the world\", adding a claim the source does not make."
+   ],
+   "source": "Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@",
+   "original": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za uporabnike po vsem svetu. %2$@",
+   "text": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za vse. %2$@",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Wallpaper.Accessibility.LimitedEdition.v114"
+    ]
+   },
+   "fids": [
+    "1a9f85ecd3eb"
+   ],
+   "findings": [
+    "\"Limited Edition Wallpaper\" translated without the word \"wallpaper\"."
+   ],
+   "source": "Limited Edition Wallpaper",
+   "original": "Omejena izdaja",
+   "text": "Ozadje omejene izdaje",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/ScanQRCode.strings",
+   "string_id": "ScanQRCode.ConfirmOpenURL.Message.v129",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/ScanQRCode.strings",
+     "ScanQRCode.ConfirmOpenURL.Message.v129"
+    ]
+   },
+   "fids": [
+    "5d96facc45cf"
+   ],
+   "findings": [
+    "The translation reads \"Allow opening of %@?\" making the app the object being opened, instead of allowing the app to open (the scanned URL)."
+   ],
+   "source": "Allow %@ to open?",
+   "original": "Dovoli odpiranje %@?",
+   "text": "Ali dovolite, da %@ odpre povezavo?",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124"
+    ]
+   },
+   "fids": [
+    "24ed0d94e4d5"
+   ],
+   "findings": [
+    "\"Search Browsing History\" is rendered as \"search history\" instead of \"browsing history\"."
+   ],
+   "source": "Search Browsing History",
+   "original": "Iskanje po zgodovini iskanja",
+   "text": "Iskanje po zgodovini brskanja",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Studies.Title.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Studies.Title.v148"
+    ]
+   },
+   "fids": [
+    "30b3e6d5d317"
+   ],
+   "findings": [
+    "\"Feature Studies\" rendered as \"raziskave značilnosti\" instead of the established term for features (\"funkcije\")."
+   ],
+   "source": "Allow Feature Studies",
+   "original": "Dovoli raziskave značilnosti",
+   "text": "Dovoli raziskave funkcij",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+   "string_id": "Summarizer.Error.RateLimited.Message.v142",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Summarizer.strings",
+     "Summarizer.Error.RateLimited.Message.v142"
+    ]
+   },
+   "fids": [
+    "aac9ae8c9e7a"
+   ],
+   "findings": [
+    "The impersonal source is rendered in the first person, making the app speak as \"I\"."
+   ],
+   "source": "Can’t handle this one at the moment. Try again later!",
+   "original": "Tega trenutno ne morem narediti. Poskusite znova pozneje!",
+   "text": "Tega trenutno ni mogoče narediti. Poskusite znova pozneje!",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Upgrade.strings",
+   "string_id": "Upgrade.SyncSign.Description.v114",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Upgrade.strings",
+     "Upgrade.SyncSign.Description.v114"
+    ]
+   },
+   "fids": [
+    "ba2da6af031e"
+   ],
+   "findings": [
+    "Hyphen used as a sentence dash instead of the house en dash."
+   ],
+   "source": "Pick up where you left off with tabs from other devices now on your homepage.",
+   "original": "Nadaljujte tam, kjer ste končali - z zavihki iz drugih naprav, ki so zdaj na vaši domači strani.",
+   "text": "Nadaljujte tam, kjer ste končali – z zavihki iz drugih naprav, ki so zdaj na vaši domači strani.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/WebContextMenu.strings",
+   "string_id": "ContextMenu.GoogleLensButtonTitle.v153",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/WebContextMenu.strings",
+     "ContextMenu.GoogleLensButtonTitle.v153"
+    ]
+   },
+   "fids": [
+    "46d648365092"
+   ],
+   "findings": [
+    "\"Search Image\" (singular, the specific image) rendered as plural \"slike\", changing the meaning to searching for images generally."
+   ],
+   "source": "Search Image with Google Lens",
+   "original": "Išči slike z Google Lens",
+   "text": "Išči sliko z Google Lens",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FirefoxHome.Stories.Minutes.v140",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FirefoxHome.Stories.Minutes.v140"
+    ]
+   },
+   "fids": [
+    "9ab48b2ea4a2"
+   ],
+   "findings": [
+    "\"minut\" is not abbreviated although the comment requires an abbreviation due to space constraints."
+   ],
+   "source": "min: %d",
+   "original": "minut: %d",
+   "text": "min: %d",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FxA.FirefoxAccount",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FxA.FirefoxAccount"
+    ]
+   },
+   "fids": [
+    "b8533c741a6a"
+   ],
+   "findings": [
+    "\"Firefox Račun\" uses English word order; Slovenian requires \"Račun Firefox\"."
+   ],
+   "source": "Firefox Account",
+   "original": "Firefox Račun",
+   "text": "Račun Firefox",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FxHomepage.Wallpaper.ButtonLabel.v99",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FxHomepage.Wallpaper.ButtonLabel.v99"
+    ]
+   },
+   "fids": [
+    "546007fbc939"
+   ],
+   "findings": [
+    "Misspelling of \"Logotip\" as \"Logtip\"."
+   ],
+   "source": "Firefox logo, change the wallpaper.",
+   "original": "Logtip Firefoxa, spremeni ozadje.",
+   "text": "Logotip Firefoxa, spremeni ozadje.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Menu.TrackingProtectionCrossSiteTrackers.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Menu.TrackingProtectionCrossSiteTrackers.Title"
+    ]
+   },
+   "fids": [
+    "92cc09d0988b"
+   ],
+   "findings": [
+    "\"Cross-Site Trackers\" is rendered as \"Spletni sledilci\" (web trackers), losing the cross-site meaning."
+   ],
+   "source": "Cross-Site Trackers",
+   "original": "Spletni sledilci",
+   "text": "Sledilci med spletnimi mesti",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Menu.TrackingProtectionDescription.ContentTrackers",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Menu.TrackingProtectionDescription.ContentTrackers"
+    ]
+   },
+   "fids": [
+    "41aea6f81c8b"
+   ],
+   "findings": [
+    "Translation drops \"outside\" ads and omits \"login fields\" from the list of things that might not work."
+   ],
+   "source": "Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.",
+   "original": "Spletne strani lahko naložijo oglase, videoposnetke in drugo vsebino, ki vsebujejo skrite sledilce. Zavračanje te vsebine lahko pospeši nalaganje spletnih strani, vendar nekateri gumbi in obrazci morda ne bodo delovali.",
+   "text": "Spletne strani lahko naložijo oglase, videoposnetke in drugo vsebino, ki vsebujejo skrite sledilce. Zavračanje te vsebine lahko pospeši nalaganje spletnih strani, vendar nekateri gumbi, obrazci in prijavna polja morda ne bodo delovali.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Menu.TrackingProtectionDescription.CryptominersNew",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Menu.TrackingProtectionDescription.CryptominersNew"
+    ]
+   },
+   "fids": [
+    "55aa0e82a903"
+   ],
+   "findings": [
+    "\"secretly use your system's computing power\" loses \"secretly\", and \"increase your energy bill\" is rendered with the colloquial \"zasolijo račun\"."
+   ],
+   "source": "Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.",
+   "original": "Kriptorudarji izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja. Rudarski skripti vam praznijo baterijo, upočasnjujejo računalnik in zasolijo račun za elektriko.",
+   "text": "Kriptorudarji na skrivaj izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja. Rudarski skripti vam praznijo baterijo, upočasnjujejo računalnik in zasolijo račun za elektriko.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Search.ThirdPartyEngines.AddMessage",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Search.ThirdPartyEngines.AddMessage"
+    ]
+   },
+   "fids": [
+    "f9b552ec29e2"
+   ],
+   "findings": [
+    "Typo: \"isklanik\" should be \"iskalnik\"."
+   ],
+   "source": "The new search engine will appear in the quick search bar.",
+   "original": "Novi isklanik se bo pojavil v vrstici za hitro iskanje.",
+   "text": "Novi iskalnik se bo pojavil v vrstici za hitro iskanje.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "SendTo.NotSignedIn.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "SendTo.NotSignedIn.Title"
+    ]
+   },
+   "fids": [
+    "eaf14f6a7467"
+   ],
+   "findings": [
+    "Incorrect case and unnecessary possessive pronoun; also \"Firefox Račun\" should not be capitalized mid-phrase as two nouns."
+   ],
+   "source": "You are not signed in to your Firefox Account.",
+   "original": "Niste prijavljeni v vaš Firefox Račun.",
+   "text": "Niste prijavljeni v svoj Firefox Račun.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.ClearAllWebsiteData.Clear.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.ClearAllWebsiteData.Clear.Button"
+    ]
+   },
+   "fids": [
+    "1e81beedd4c6"
+   ],
+   "findings": [
+    "\"all website data\" rendered with a singular noun phrase, so it reads \"all data of the website\"."
+   ],
+   "source": "Clear All Website Data",
+   "original": "Izbriši vse podatke spletne strani",
+   "text": "Izbriši vse podatke spletnih strani",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "You don’t have any tabs open in Firefox on your other devices.",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "You don’t have any tabs open in Firefox on your other devices."
+    ]
+   },
+   "fids": [
+    "434dcd14053f"
+   ],
+   "findings": [
+    "Added word \"drugih\" changes the meaning to \"no other tabs open\"."
+   ],
+   "source": "You don’t have any tabs open in Firefox on your other devices.",
+   "original": "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.",
+   "text": "V Firefoxu na drugih napravah nimate odprtih zavihkov.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "Shared/en-US.lproj/PrivateBrowsing.strings",
+   "string_id": "ContextMenu.OpenInNewPrivateTabButtonTitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/PrivateBrowsing.strings",
+     "ContextMenu.OpenInNewPrivateTabButtonTitle"
+    ]
+   },
+   "fids": [
+    "7e526fff0835"
+   ],
+   "findings": [
+    "\"New\" is dropped, so the option reads \"Open in private tab\" instead of \"Open in New Private Tab\"."
+   ],
+   "source": "Open in New Private Tab",
+   "original": "Odpri v zasebnem zavihku",
+   "text": "Odpri v novem zasebnem zavihku",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  }
+ ]
+}
