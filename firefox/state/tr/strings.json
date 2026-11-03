@@ -15307,6 +15307,7 @@
   "moz-badge-new2": "bec75de5 f4c9e098"
  },
  "toolkit/toolkit/global/mozBoxBase.ftl": {
+  "moz-box-group-reorder-announcement": "9c40a54a 2218ad35",
   "moz-box-item-reorder-handle": "2e7c7d89 276b2765",
   "moz-box-item-reorder-handle-named": "5294293b 6d10c149",
   "moz-box-link-anchor": "e4e5db61 23a19e4b",

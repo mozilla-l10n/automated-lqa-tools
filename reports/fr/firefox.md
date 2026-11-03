@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `82e218d93b64` |
+| **Previous run** | 2026-11-02 @ `ca562c968023` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 16,964 |
+| **Strings reviewed this run** | 0 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,41 +22,9 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (7)
+### ✅ Fixed since the last run (0)
 
-- `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — "Crossword" translated as "Mots fléchés" (arrow-word puzzle), a different puzzle type.
-    - Current: `label: Mots fléchés`
-    - Source: `label: Crossword`
-    - Suggest: `label: Mots croisés`
-    - A crossword is "mots croisés" in French; "mots fléchés" is a distinct puzzle format.
-- `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — "Skipping" is dropped, so the message no longer says the unsupported value is ignored.
-    - Current: `Permissions Policy : valeur allow non prise en charge « %S ».`
-    - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
-    - Suggest: `Permissions Policy : valeur allow non prise en charge « %S » ignorée.`
-    - en-US "Skipping unsupported allow value" indicates the value is skipped; the French omits that information, unlike the parallel string PermissionsPolicyUnsupportedFeatureName which keeps "ignoré".
-- `PermissionsPolicyInvalidEmptyAllowValue` — `dom/chrome/security/security.properties` — The verb "Skipping" (ignored) is dropped, so the message no longer states the list is being skipped.
-    - Current: `Permissions Policy : liste allow vide pour la fonctionnalité « %S ».`
-    - Source: `Permissions Policy: Skipping empty allow list for feature: “%S”.`
-    - Suggest: `Permissions Policy : liste allow vide ignorée pour la fonctionnalité « %S ».`
-    - en-US "Skipping empty allow list for feature" states the item is skipped; the French only reports that the list is empty.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — Verb "exporter" is in the infinitive instead of the imperative, breaking the list of imperatives.
-    - Current: `Réorganisez, supprimez, fusionnez et exporter des pages.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Réorganisez, supprimez, fusionnez et exportez des pages.`
-    - The other verbs are imperative (« Réorganisez, supprimez, fusionnez »); « exporter » should be « exportez » to match the en-US imperative "export".
-- `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — "right where you browse" (in the browser itself) is rendered as "où que vous soyez" (wherever you are).
-    - Current: `Lisez, annotez et signez des fichiers PDF où que vous soyez.`
-    - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
-    - Suggest: `Lisez, annotez et signez des fichiers PDF directement dans votre navigateur.`
-    - The en-US says the PDF tools work right inside the browsing experience, not that they work from anywhere/any location.
-- `view-source-invalid-input-text` — `toolkit/toolkit/global/viewSource.ftl` — "Line number" is rendered as "nombre" (an amount) with no mention of a line, and the final period is missing.
-    - Current: `Le nombre spécifié est invalide`
-    - Source: `The line number entered is invalid.`
-    - Suggest: `Le numéro de ligne saisi est invalide.`
-    - The source says "The line number entered is invalid." "Nombre" means a quantity, not an identifying number ("numéro"). The word "ligne" is dropped, which doesn't match the sibling string "Saisissez le numéro de ligne". The source also ends with a full stop.
-- `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — browser/browser/translations.ftl:12,16 — FR: "Bêta" → Beta (comment: must stay untranslated to match the un-localized BETA icon).
-    - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
-    - Suggest: `Beta`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -133,13 +101,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (25)
+## 3. Open findings (24)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 9 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -189,9 +157,6 @@ _Nothing in this category._
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
     - Suggest: `[one] { $count } journal [other] { $count } journaux`
     - The en-US counts logs (files), and the surrounding strings render "logs" as "journaux"; "entrées" means log entries, a different unit.
-- `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — toolkit/toolkit/about/aboutGlean.ftl:133,135 — both say "axe des abscisses" but EN references the Y-axis → axe des ordonnées; line 135 is also internally contradictory ("décalage vertical … abscisses").
-    - Source: `Y-axis X offset`
-    - Suggest: `axe des ordonnées`
 - `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb phrase: enable logging for modules) rendered as a noun phrase "Modules de journalisation".
     - Current: `Modules de journalisation pour diagnostiquer`
     - Source: `Log modules to diagnose IP Protection (VPN) issues`
@@ -263,8 +228,9 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (1)
+### Dismissed by hand (2)
 
+- `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — the message is valid Fluent; the reviewer read the flattened rendering `{$saved ->} [one] …` as if it were the file and reported a stray brace that is not there
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._

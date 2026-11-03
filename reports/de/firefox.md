@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `82e218d93b64` |
+| **Previous run** | 2026-11-02 @ `ca562c968023` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,964 |
+| **Strings reviewed this run** | 14 of 16,964 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,91 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — There is a comma before "oder", which German doesn't use when "oder" joins two noun phrases.
+    - Current: `mehr Datenschutz, oder ein deaktiviertes VPN`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
+    - Suggest: `mehr Datenschutz oder ein deaktiviertes VPN`
+    - German doesn't put a comma before "oder" when it joins two objects of the same verb. The en-US source has no comma here either.
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The German says using passwords is blocked, but the source means the Passwords page (about:logins) is blocked.
+    - Current: `wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `wird die Seite Passwörter (about:logins) ebenfalls blockiert`
+    - In en-US, "Passwords (about:logins)" is the name of the Passwords page, and the policy blocks that page. "Die Verwendung von Passwörtern" means using passwords in general, which describes a broader effect than the policy has.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (14)
 
-_Nothing was fixed._
+- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — "See more" (expand the details section) is rendered as "Mehr erfahren" (learn more), inconsistent with its counterpart "Weniger anzeigen".
+    - Current: `Mehr erfahren`
+    - Source: `See more`
+    - Suggest: `Mehr anzeigen`
+    - The developer comment says the button expands the "More details" section; the collapse counterpart is translated "Weniger anzeigen", so the expand label should be "Mehr anzeigen", not a "learn more" link phrase.
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — "Sign in" is translated "Einloggen" instead of the established Firefox German term "Anmelden".
+    - Current: `Einloggen`
+    - Source: `Sign in`
+    - Suggest: `Anmelden`
+    - Firefox de consistently uses "Anmelden" for "Sign in"; the sibling string in the same promo even says "Promo für Anmeldung schließen", making this inconsistent.
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Wrong preposition in "Verhinderung vor Datenverlust".
+    - Current: `Verhinderung vor Datenverlust (DLP)`
+    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
+    - Suggest: `Verhinderung von Datenverlust (DLP)`
+    - German "Verhinderung" takes the genitive/"von", not "vor"; "Verhinderung vor" is ungrammatical.
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause.
+    - Current: `Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.`
+    - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
+    - Suggest: `Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.`
+    - In en-US the VPN hides the user's location; the German makes the user do the hiding, contradicting the impersonal subject of the main clause.
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — Incorrect comma before "oder" joining two coordinated relative clauses.
+    - Current: `die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
+    - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
+    - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "und aus" does not fit grammatically after "um VPN zu aktivieren".
+    - Current: `und aus, wenn Sie dies nicht tun`
+    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
+    - Suggest: `und zu deaktivieren, wenn Sie dies nicht tun`
+    - The infinitive clause "um VPN zu aktivieren" cannot continue with the bare particle "aus", so the sentence is broken. It needs a parallel infinitive.
+- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — "Bring in your data" (import data) rendered as "Geben Sie Ihre Daten ein" (enter your data).
+    - Current: `Geben Sie Ihre Daten ein`
+    - Source: `Bring in your data`
+    - Suggest: `Importieren Sie Ihre Daten`
+    - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space and misplaced verb inside the link text: "Datenschutzhinweis zu </a>" puts "zu" inside the anchor with a trailing space.
+    - Current: `<a data-l10n-name="privacy_notice">Datenschutzhinweis zu </a>`
+    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
+    - Suggest: `<a data-l10n-name="privacy_notice">Datenschutzhinweis</a> zu`
+    - The en-US link text is only "Privacy Notice"; including "zu " plus a trailing space in the linked text makes the hyperlink text wrong and leaves a space before the period.
+- `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
+    - Current: `Spracherkennungsmodell herunterladen`
+    - Source: `Downloading speech recognition model`
+    - Suggest: `Spracherkennungsmodell wird heruntergeladen`
+    - The en-US "Downloading speech recognition model" describes an ongoing action; the German reads as a command/label "Download speech recognition model".
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — A full stop is missing between the two sentences.
+    - Current: `aktivieren oder deaktivieren Wenn`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `aktivieren oder deaktivieren. Wenn`
+    - The en-US has two sentences. In the German the first runs into the second with no punctuation.
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is rendered as "kontrollierte" (controlled) instead of "regulierte".
+    - Current: `kontrollierte`
+    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
+    - Suggest: `regulierte`
+    - "Regulated organizations" means organizations that must follow regulations. "Kontrollierte Organisationen" means organizations that are controlled or supervised, which is a different meaning. The standard German equivalent is "regulierte".
+- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label.
+    - Current: `Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - Source: `label: Skip the results menu when using the tab key to move focus`
+    - Suggest: `Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
+    - The en-US "Skip the results menu when…" is a settings checkbox label, not a command to the user; the parallel menu item urlbar-view-context-menu-skip-menu-with-tab is correctly rendered as "Dieses Menü überspringen, wenn …".
+- `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
+    - Current: `Größe des Bereichs ändern`
+    - Source: `Resize panels`
+    - Suggest: `Größe der Bereiche ändern`
+    - The source says "Resize panels" (both panels of a split view, per the comment); the German refers to only one panel.
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "SpeechRecognition" was translated although the developer comment forbids it.
+    - Current: `daher meldet die Spracherkennung sich selbst als nicht verfügbar`
+    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
+    - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
+    - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -95,7 +173,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 415 | **char** |
 | dash | `em` 19, `en` 69 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4023 | **formal** |
+| register | `informal` 12, `formal` 4021 | **formal** |
 
 ---
 
@@ -105,15 +183,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (42)
+## 3. Open findings (24)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -129,11 +207,6 @@ _Nothing reported._
     - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
     - Suggest: `Verfolgen Sie unseren Fortschritt im Bugzilla-Fehler 2072739.`
     - The English asks users to follow the team's progress; the German states the current status can be found there, a different statement.
-- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — "See more" (expand the details section) is rendered as "Mehr erfahren" (learn more), inconsistent with its counterpart "Weniger anzeigen".
-    - Current: `Mehr erfahren`
-    - Source: `See more`
-    - Suggest: `Mehr anzeigen`
-    - The developer comment says the button expands the "More details" section; the collapse counterpart is translated "Weniger anzeigen", so the expand label should be "Mehr anzeigen", not a "learn more" link phrase.
 - `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
     - Current: `wenn ein anderes Firefox-Profil`
     - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
@@ -159,16 +232,11 @@ _Nothing reported._
     - Source: `Light hills under a soft sky`
     - Suggest: `Helle Hügel unter einem sanften Himmel`
     - In this wallpaper set "light" means bright/hell (contrast with "dark purple hills"), not "leicht" (not heavy). Other strings in the same set correctly use "helle Hügel".
-- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — "Bring in your data" (import data) rendered as "Geben Sie Ihre Daten ein" (enter your data).
-    - Current: `Geben Sie Ihre Daten ein`
-    - Source: `Bring in your data`
-    - Suggest: `Importieren Sie Ihre Daten`
-    - The string heads the import step of onboarding; en-US means importing existing data, not typing data in.
-- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is rendered as "kontrollierte" (controlled) instead of "regulierte".
-    - Current: `kontrollierte`
-    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
-    - Suggest: `regulierte`
-    - "Regulated organizations" means organizations that must follow regulations. "Kontrollierte Organisationen" means organizations that are controlled or supervised, which is a different meaning. The standard German equivalent is "regulierte".
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The German says using passwords is blocked, but the source means the Passwords page (about:logins) is blocked.
+    - Current: `wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert`
+    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
+    - Suggest: `wird die Seite Passwörter (about:logins) ebenfalls blockiert`
+    - In en-US, "Passwords (about:logins)" is the name of the Passwords page, and the policy blocks that page. "Die Verwendung von Passwörtern" means using passwords in general, which describes a broader effect than the policy has.
 - `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
     - Current: `Websites erlauben, App-Links zu öffnen.`
     - Source: `accesskey: A label: Allow sites to ask to open app links.`
@@ -189,21 +257,11 @@ _Nothing reported._
     - Source: `Data syncing on this device`
     - Suggest: `Datensynchronisation auf diesem Gerät`
     - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
-- `splitter.label` — `devtools/client/components.properties` — Plural "panels" rendered as singular "des Bereichs".
-    - Current: `Größe des Bereichs ändern`
-    - Source: `Resize panels`
-    - Suggest: `Größe der Bereiche ändern`
-    - The source says "Resize panels" (both panels of a split view, per the comment); the German refers to only one panel.
 - `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
     - Current: `teilweise ausgewählt`
     - Source: `partially checked`
     - Suggest: `teilweise aktiviert`
     - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
-- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — "SpeechRecognition" was translated although the developer comment forbids it.
-    - Current: `daher meldet die Spracherkennung sich selbst als nicht verfügbar`
-    - Source: `On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.`
-    - Suggest: `daher meldet SpeechRecognition sich selbst als nicht verfügbar`
-    - The developer comment states: Do not translate "SpeechRecognition" — it is the Web API interface name, but it was localized as "die Spracherkennung".
 - `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
     - Current: `Die nicht verschlüsselte Anfrage`
     - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`
@@ -224,39 +282,9 @@ _Nothing reported._
     - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
     - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
     - en-US "Split, merge, and more" refers to splitting a PDF into parts; "teilen" reads as sharing, giving users a different feature claim.
-- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Personal" is rendered as "Freizeit" (leisure), which names a different category.
-    - Current: `Freizeit`
-    - Source: `label: Personal`
-    - Suggest: `Persönlich`
-    - The en-US container label "Personal" contrasts with "Work"; "Freizeit" means leisure/free time, not personal.
 
 ### C. Grammar, agreement & spelling
 
-- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — Wrong preposition in "Verhinderung vor Datenverlust".
-    - Current: `Verhinderung vor Datenverlust (DLP)`
-    - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
-    - Suggest: `Verhinderung von Datenverlust (DLP)`
-    - German "Verhinderung" takes the genitive/"von", not "vor"; "Verhinderung vor" is ungrammatical.
-- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — Clause structure makes the user the subject of hiding, breaking agreement with the impersonal main clause.
-    - Current: `Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.`
-    - Source: `description: Get extra privacy by hiding your location while browsing. label: Built-in VPN`
-    - Suggest: `Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.`
-    - In en-US the VPN hides the user's location; the German makes the user do the hiding, contradicting the impersonal subject of the main clause.
-- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — Incorrect comma before "oder" joining two coordinated relative clauses.
-    - Current: `die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
-    - Suggest: `die mehr Datenschutz oder ein deaktiviertes VPN benötigen`
-    - German comma rules do not allow a comma before "oder" when it links parallel clause parts like these. The comma here is a punctuation error.
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "und aus" does not fit grammatically after "um VPN zu aktivieren".
-    - Current: `und aus, wenn Sie dies nicht tun`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `und zu deaktivieren, wenn Sie dies nicht tun`
-    - The infinitive clause "um VPN zu aktivieren" cannot continue with the bare particle "aus", so the sentence is broken. It needs a parallel infinitive.
-- `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — Progress message rendered as an imperative/infinitive instead of a status statement.
-    - Current: `Spracherkennungsmodell herunterladen`
-    - Source: `Downloading speech recognition model`
-    - Suggest: `Spracherkennungsmodell wird heruntergeladen`
-    - The en-US "Downloading speech recognition model" describes an ongoing action; the German reads as a command/label "Download speech recognition model".
 - `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — Wrong preposition for "Translate to".
     - Current: `Übersetzen auf`
     - Source: `Translate to`
@@ -270,36 +298,6 @@ _Nothing reported._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `empfehlen Sie { -brand-product-name }`
     - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
-- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — "Sign in" is translated "Einloggen" instead of the established Firefox German term "Anmelden".
-    - Current: `Einloggen`
-    - Source: `Sign in`
-    - Suggest: `Anmelden`
-    - Firefox de consistently uses "Anmelden" for "Sign in"; the sibling string in the same promo even says "Promo für Anmeldung schließen", making this inconsistent.
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”
-    - Current: `Klicken Sie auf "Ihre Daten wiederherstellen" und wählen Sie diese Datei`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Daten wiederherstellen`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Ihre Daten wiederherstellen” but the string it names, `restore-from-backup-header`, reads “Daten wiederherstellen”
-    - Current: `Klicken Sie auf "Ihre Daten wiederherstellen" und wählen Sie diese Datei`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Daten wiederherstellen`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — `default-browser-guidance-notification-body-instruction-win10` quotes “Webbrowser” but the string it names, `desktop-entry-generic-name`, reads “Internet-Browser”
-    - Current: `Schritt 1: Gehen Sie zu Einstellungen > Standard-Apps Schritt 2: Scrollen Sie nach unten zu "Webbrowser" Schritt 3: { -brand-short-name } markieren und auswählen`
-    - Source: `Step 1: Go to Settings > Default apps Step 2: Scroll down to “Web browser” Step 3: Select and choose { -brand-short-name }`
-    - Suggest: `Internet-Browser`
-    - In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — `migration-chrome-windows-password-import-step3` quotes “Datei herunterladen” but the string it names, `downloadFile.label`, reads “Datei speichern unter…”
-    - Current: `Wählen Sie "Datei herunterladen" und speichern Sie sie auf Ihrem Gerät.`
-    - Source: `Choose “Download file” and save it to your device.`
-    - Suggest: `Datei speichern unter…`
-    - In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — Checkbox label rendered as an imperative instruction instead of a noun/infinitive setting label.
-    - Current: `Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
-    - Source: `label: Skip the results menu when using the tab key to move focus`
-    - Suggest: `Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden`
-    - The en-US "Skip the results menu when…" is a settings checkbox label, not a command to the user; the parallel menu item urlbar-view-context-menu-skip-menu-with-tab is correctly rendered as "Dieses Menü überspringen, wenn …".
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Lokalen Modus” but the string it names, `options-local-mode-label`, reads “Lokaler Modus”
     - Current: `Dieses Dokument kann auch über den "Lokalen Modus" der DevTools von "{ $url }" geladen werden, der im Einstellungsbereich aktiviert werden kann.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
@@ -310,8 +308,6 @@ _Nothing reported._
     - Source: `console.clear() was prevented due to “Persist Logs”`
     - Suggest: `Log nicht leeren`
     - In the source this string quotes “Persist Logs”, which is exactly the value of `webconsole.console.settings.menu.item.enablePersistentLogs.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `xslt-bad-value` — `dom/dom/xslt.ftl` — "Chronik" is the established term.
-    - Source: `Attribute value illegal in XSLT 1.0.`
 - `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Descriptive label rendered as an imperative addressed to the user instead of a noun-phrase description of the preset.
     - Current: `Protokollieren Sie Module zur Diagnose`
     - Source: `Log modules to diagnose IP Protection (VPN) issues`
@@ -325,24 +321,24 @@ _Nothing reported._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `Teilen Sie { -brand-product-name }</label> oder`
     - German does not use a comma before "oder" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.
-- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space and misplaced verb inside the link text: "Datenschutzhinweis zu </a>" puts "zu" inside the anchor with a trailing space.
-    - Current: `<a data-l10n-name="privacy_notice">Datenschutzhinweis zu </a>`
-    - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
-    - Suggest: `<a data-l10n-name="privacy_notice">Datenschutzhinweis</a> zu`
-    - The en-US link text is only "Privacy Notice"; including "zu " plus a trailing space in the linked text makes the hyperlink text wrong and leaves a space before the period.
-- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — A full stop is missing between the two sentences.
-    - Current: `aktivieren oder deaktivieren Wenn`
-    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
-    - Suggest: `aktivieren oder deaktivieren. Wenn`
-    - The en-US has two sentences. In the German the first runs into the second with no punctuation.
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — There is a comma before "oder", which German doesn't use when "oder" joins two noun phrases.
+    - Current: `mehr Datenschutz, oder ein deaktiviertes VPN`
+    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
+    - Suggest: `mehr Datenschutz oder ein deaktiviertes VPN`
+    - German doesn't put a comma before "oder" when it joins two objects of the same verb. The en-US source has no comma here either.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (6)
 
-_Nothing dismissed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word "your" in the original string.</p>
+- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — auto-suggest (2026-11-02): The quoted label refers to the Windows 10 Settings > Default apps entry, which German Windows displays as "Webbrowser", not to Firefox's desktop-entry-generic-name.
+- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — auto-suggest (2026-11-02): The step describes Chrome's own password-export button, not Firefox's downloadFile.label, so matching Firefox's 'Datei speichern unter…' would be wrong.
+- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — auto-suggest (2026-11-02): "Freizeit" is the long-established German Firefox name for the Personal container (paired with "Arbeit" for Work). It is a deliberate localization choice that keeps the private-vs-work contrast, not a mistranslation.
+- `xslt-bad-value` — `dom/dom/xslt.ftl` — auto-suggest (2026-11-02): The string is an XSLT attribute-value error and contains no history term, so "Chronik" is irrelevant.
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
 
@@ -375,8 +371,22 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (42)
+### Fixed to date (56)
 
+- `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-11-03
+- `appmenu-fxa-sign-in-promo-link` — `browser/browser/appmenu.ftl` — fixed 2026-11-03
+- `content-analysis-indicator-tooltip` — `browser/browser/browser.ftl` — fixed 2026-11-03
+- `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-11-03
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — fixed 2026-11-03
+- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — fixed 2026-11-03
+- `onboarding-refresh-fro-import-header` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-11-03
+- `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-11-03
+- `speech-recognition-model-download-progress-message` — `browser/browser/permissions.ftl` — fixed 2026-11-03
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-03
+- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — fixed 2026-11-03
+- `addressbar-skip-result-menu-on-tab` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-03
+- `splitter.label` — `devtools/client/components.properties` — fixed 2026-11-03
+- `SpeechRecognitionBlockedByAIControlsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-03
 - `ip-protection-description-1` — `browser/browser/ipProtection.ftl` — fixed 2026-09-07
 - `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — fixed 2026-09-07
 - `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-03
@@ -403,17 +413,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-27
 - `report-broken-site-panel-reason-deceptive-moz-box-button` — `browser/browser/reportBrokenSite.ftl` — fixed 2026-07-27
 - `sync-setup-verify-title` — `browser/browser/sync.ftl` — fixed 2026-07-27
-- `existing-user-privacy-notice-update-message` — `browser/browser/termsofuse.ftl` — fixed 2026-07-27
-- `manifest-icon-img-title-no-sizes` — `devtools/client/application.ftl` — fixed 2026-07-27
-- `webconsole-commands-usage-block` — `devtools/shared/webconsole-commands.ftl` — fixed 2026-07-27
-- `unable-to-toggle-fips` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-07-27
-- `about-networking-ssl-tokens-built-in-root` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-07-27
-- `content-uses-tiling` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-27
-- `certificate-viewer-extended-key-usages` — `toolkit/toolkit/about/certviewer.ftl` — fixed 2026-07-27
-- `url-classifier-content-classifier-verdict-miss` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-07-27
-- `contentanalysis-slow-agent-dialog-body-dropped-text` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — fixed 2026-07-27
-- `csp-error-missing-directive` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-07-27
-- `privacy-spoof-english` — `toolkit/toolkit/global/resistFingerPrinting.ftl` — fixed 2026-07-27
-- `sec-error-cert-no-response` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
-- `sec-error-ocsp-unknown-response-type` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27
-- `sec-error-token-not-logged-in` — `toolkit/toolkit/neterror/nsserrors.ftl` — fixed 2026-07-27

@@ -102,9 +102,14 @@
    "source": "Click “Restore your data” and select this file",
    "original": "Klicken Sie auf \"Ihre Daten wiederherstellen\" und wählen Sie diese Datei",
    "text": "Klicken Sie auf \"Daten wiederherstellen\" und wählen Sie diese Datei",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "dismissal": "backup-file-moz-browser-restore-step-2-1 @ browser/browser/backupSettings.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373896,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/backupSettings.ftl/?string=334464",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -128,9 +133,14 @@
    "source": "Click “Restore your data” and select this file",
    "original": "Klicken Sie auf \"Ihre Daten wiederherstellen\" und wählen Sie diese Datei",
    "text": "Klicken Sie auf \"Daten wiederherstellen\" und wählen Sie diese Datei",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word \"your\" in the original string.</p>",
+   "dismissal": "backup-file-other-browser-restore-step-3-1 @ browser/browser/backupSettings.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word \"your\" in the original string.</p>",
+   "pontoon_pk": 12373897,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/backupSettings.ftl/?string=334465",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -154,9 +164,13 @@
    "source": "tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.",
    "original": "Verhinderung vor Datenverlust (DLP) von { $agentName }. Klicken Sie hier, um weitere Informationen zu erhalten.",
    "text": "Verhinderung von Datenverlust (DLP) von { $agentName }. Klicken Sie hier, um weitere Informationen zu erhalten.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373898,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/browser.ftl/?string=303157",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -180,9 +194,13 @@
    "source": "description: Get extra privacy by hiding your location while browsing.\nlabel: Built-in VPN",
    "original": "Sorgt für mehr Privatsphäre, indem Sie Ihren Standort beim Surfen verbergen.",
    "text": "Sorgt für mehr Privatsphäre, indem Ihr Standort beim Surfen verborgen wird.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373900,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/ipProtection.ftl/?string=333097",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -206,9 +224,13 @@
    "source": "description: Set rules for sites that need extra privacy or VPN turned off.\nlabel: Manage VPN rules",
    "original": "Legen Sie Regeln für Websites fest, die mehr Datenschutz, oder die ein deaktiviertes VPN benötigen.",
    "text": "Legen Sie Regeln für Websites fest, die mehr Datenschutz oder die ein deaktiviertes VPN benötigen.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373901,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/ipProtection.ftl/?string=341475",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -232,9 +254,13 @@
    "source": "Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.",
    "original": "Legen Sie Regeln fest, um VPN zu aktivieren, wenn Sie mehr Privatsphäre oder standortbasiertes Surfen wünschen, und aus, wenn Sie dies nicht tun.",
    "text": "Legen Sie Regeln fest, um VPN zu aktivieren, wenn Sie mehr Privatsphäre oder standortbasiertes Surfen wünschen, und zu deaktivieren, wenn Sie dies nicht tun.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373899,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/ipProtection.ftl/?string=342534",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -284,9 +310,13 @@
    "source": "Bring in your data",
    "original": "Geben Sie Ihre Daten ein",
    "text": "Importieren Sie Ihre Daten",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373904,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/newtab/onboarding.ftl/?string=339676",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -310,9 +340,13 @@
    "source": "By continuing, you agree to the <a data-l10n-name=\"terms_of_use\">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name=\"privacy_notice\">Privacy Notice</a>. To help improve the browser, { -brand-product-name } sends diagnostic and interaction data to { -vendor-short-name }.",
    "original": "Indem Sie fortfahren, stimmen Sie den <a data-l10n-name=\"terms_of_use\">{ -brand-product-name }-Nutzungsbedingungen</a> und unserem <a data-l10n-name=\"privacy_notice\">Datenschutzhinweis zu </a>. { -brand-product-name } sendet Diagnose- und Interaktionsdaten an { -vendor-short-name }, um den Browser zu verbessern.",
    "text": "Indem Sie fortfahren, stimmen Sie den <a data-l10n-name=\"terms_of_use\">{ -brand-product-name }-Nutzungsbedingungen</a> und unserem <a data-l10n-name=\"privacy_notice\">Datenschutzhinweis</a> zu. { -brand-product-name } sendet Diagnose- und Interaktionsdaten an { -vendor-short-name }, um den Browser zu verbessern.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373903,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/newtab/onboarding.ftl/?string=339673",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -336,9 +370,13 @@
    "source": "Downloading speech recognition model",
    "original": "Spracherkennungsmodell herunterladen",
    "text": "Spracherkennungsmodell wird heruntergeladen",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373905,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/permissions.ftl/?string=339563",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -362,9 +400,13 @@
    "source": "Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.",
    "original": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren Wenn dies deaktiviert ist, wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert.",
    "text": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren. Wenn dies deaktiviert ist, wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373906,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/policies/policies-descriptions.ftl/?string=341513",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -388,9 +430,13 @@
    "source": "description: Browser governance for regulated and security-sensitive organizations.\nlabel: { -firefox-enterprise-brand-name }",
    "original": "Browser-Governance für kontrollierte und sicherheitsbewusste Organisationen.",
    "text": "Browser-Governance für regulierte und sicherheitsbewusste Organisationen.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373907,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/preferences/moreFromMozilla.ftl/?string=343632",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -414,9 +460,13 @@
    "source": "label: Skip the results menu when using the tab key to move focus",
    "original": "Überspringen Sie das Ergebnismenü, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden",
    "text": "Ergebnismenü überspringen, wenn Sie die Tab-Taste zum Verschieben des Fokus verwenden",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373908,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/preferences/preferences.ftl/?string=341171",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -466,9 +516,13 @@
    "source": "Resize panels",
    "original": "Größe des Bereichs ändern",
    "text": "Größe der Bereiche ändern",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373910,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/devtools/client/components.properties/?string=340603",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -518,9 +572,13 @@
    "source": "On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.",
    "original": "Die geräteinterne Spracherkennung ist in den KI-Einstellungen des Benutzers deaktiviert, daher meldet die Spracherkennung sich selbst als nicht verfügbar und weigert sich, zu starten.",
    "text": "Die geräteinterne Spracherkennung ist in den KI-Einstellungen des Benutzers deaktiviert, daher meldet SpeechRecognition sich selbst als nicht verfügbar und weigert sich, zu starten.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373912,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/dom/chrome/dom/dom.properties/?string=339573",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",

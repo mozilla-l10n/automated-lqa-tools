@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `ca562c968023` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `961bdfbd203a` |
+| **Previous run** | 2026-11-02 @ `ca562c968023` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 16,732 |
+| **Strings reviewed this run** | 8 of 16,740 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `-firefox-enterprise-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The product brand name "Firefox Enterprise" has been translated into Dutch.
-    - Current: `Firefox voor Ondernemingen`
-    - Source: `Firefox Enterprise`
-    - Suggest: `Firefox Enterprise`
-    - -firefox-enterprise-brand-name is a brand term, and Mozilla product names stay in English. "Firefox voor Ondernemingen" turns it into a description rather than the product's name. It then shows up that way wherever the term is used, such as the More from Mozilla card.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,732 |
-| Missing strings | 10 |
+| Strings | 16,740 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,9 +63,8 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
+**2 strings** are not translated yet, concentrated in:
 
-- `browser/browser/preferences/preferences.ftl` — 8
 - `dom/chrome/security/security.properties` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -85,7 +80,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 400 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2779 | **formal** |
+| register | `formal` 2780 | **formal** |
 
 ---
 
