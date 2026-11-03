@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,583 |
+| **Strings reviewed this run** | 22 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `mozac_feature_addons_update_review_changes_button` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — The button label says "Approve changes" when the source says "Review changes"; the button only opens a dialog listing the changes.
+    - Current: `Zatwierdź zmiany`
+    - Source: `Review changes`
+    - Suggest: `Przejrzyj zmiany`
+    - The developer comment says clicking this button opens an update confirmation dialog that lists the required changes. The approval itself happens later, through the dialog's "Zaktualizuj" button. "Zatwierdź" (approve) tells the user that clicking this button accepts the changes, when it only shows them for review.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
-| Missing strings | 21 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**21 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-pl/strings.xml` — 14
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — 7
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -78,10 +77,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 84 | **polish-double** |
+| quotes | `polish-double` 87 | **polish-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3, `en` 3 | _mixed_ |
-| nbsp | `total` 727, `before-punctuation` 21 | **total** |
+| nbsp | `total` 732, `before-punctuation` 22 | **total** |
 | register | `informal` 10 | **informal** |
 
 ---
@@ -92,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (78)
+## 3. Open findings (79)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 54 |
+| 2 | Wrong content (says something other than the English) | 55 |
 | 3 | Degraded language (grammar, spelling, terminology) | 24 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -163,6 +162,11 @@ _Nothing in this category._
     - Source: `Access browsing history`
     - Suggest: `Dostęp do najczęściej odwiedzanych stron`
     - Source is "Access browsing history"… actually the source says browsing history; mirrors source.
+- `mozac_feature_addons_update_review_changes_button` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pl/strings.xml` — The button label says "Approve changes" when the source says "Review changes"; the button only opens a dialog listing the changes.
+    - Current: `Zatwierdź zmiany`
+    - Source: `Review changes`
+    - Suggest: `Przejrzyj zmiany`
+    - The developer comment says clicking this button opens an update confirmation dialog that lists the required changes. The approval itself happens later, through the dialog's "Zaktualizuj" button. "Zatwierdź" (approve) tells the user that clicking this button accepts the changes, when it only shows them for review.
 - `mozac_feature_downloads_cancel_active_downloads_warning_content_title` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-pl/strings.xml` — The word "private" is dropped from the dialog title about cancelling private downloads.
     - Current: `Czy anulować pobieranie plików?`
     - Source: `Cancel private downloads?`

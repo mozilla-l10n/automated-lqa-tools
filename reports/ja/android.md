@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,604 |
+| **Strings reviewed this run** | 0 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
-    - Current: `%1$s を新しい設定に更新する必要があります。`
-    - Source: `%1$s requires new settings to update.`
-    - Suggest: `%1$s を更新するには新しい設定が必要です。`
-    - The source means the update can't go ahead until new permission settings are approved. The Japanese reads as 'need to update %1$s to new settings', which gets the relationship backwards.
-- `mozac_feature_addons_update_requires_new_settings_this_extension` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The translation says the extension must be updated to new settings, not that its update needs new settings first.
-    - Current: `この拡張機能を新しい設定に更新する必要があります。`
-    - Source: `This extension requires new settings to update.`
-    - Suggest: `この拡張機能を更新するには新しい設定が必要です。`
-    - The source says the update needs new settings to be approved. The Japanese says the extension needs to be updated to new settings.
-- `mozac_feature_addons_updater_permissions_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — The dialog title says the extension must be updated to new settings, not that its update needs new settings first.
-    - Current: `%1$s を新しい設定に更新する必要があります`
-    - Source: `%1$s requires new settings to update`
-    - Suggest: `%1$s を更新するには新しい設定が必要です`
-    - Same misreading as the banner: the source says updating needs new permissions to be approved, not that the extension is updated to new settings.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

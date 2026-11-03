@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
-| Missing strings | 21 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**21 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — 14
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — 7
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

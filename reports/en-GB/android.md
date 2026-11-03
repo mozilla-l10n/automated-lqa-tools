@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for en-GB: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `wrex_widget_live_game_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-en-rGB/strings.xml` — The football widget uses the US term "game" where British English says "match".
+    - Current: `live game`
+    - Source: `%s, live game`
+    - Suggest: `live match`
+    - The sports widget is about football: the comment's example competition is the FA Cup, and the widget's other strings and comments say "match". British English calls a football fixture a "match", so "live game" reads as American and doesn't match the rest of the widget.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
-| Missing strings | 21 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**21 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-en-rGB/strings.xml` — 14
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-en-rGB/strings.xml` — 7
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -91,14 +90,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 1 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -119,7 +118,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `wrex_widget_live_game_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-en-rGB/strings.xml` — The football widget uses the US term "game" where British English says "match".
+    - Current: `live game`
+    - Source: `%s, live game`
+    - Suggest: `live match`
+    - The sports widget is about football: the comment's example competition is the FA Cup, and the widget's other strings and comments say "match". British English calls a football fixture a "match", so "live game" reads as American and doesn't match the rest of the widget.
 
 ### E. Typography, punctuation & spacing
 

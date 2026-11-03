@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 36 of 2,604 |
+| **Strings reviewed this run** | 2 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex: Frisian 'ûnder' is capitalized 'Ûnder', not 'Under'.
-    - Current: `Underbrutsen`
-    - Source: `Suspended`
-    - Suggest: `Ûnderbrutsen`
-    - The Frisian prefix is 'ûnder' (with circumflex); dropping the accent is a spelling error.
-- `wrex_widget_match_postponed` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing acute accent: Frisian 'út' is capitalized 'Út', so the word is 'Útsteld'.
-    - Current: `Utsteld`
-    - Source: `Postponed`
-    - Suggest: `Útsteld`
-    - The Frisian prefix is 'út' (with acute accent); 'Utsteld' is misspelled.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

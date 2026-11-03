@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 2,604 |
+| **Strings reviewed this run** | 2 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The status for a match suspended after kick-off is translated as "Avstängd", which means switched off, or banned (as a player is), not a halted match.
     - Current: `Avstängd`
     - Source: `Suspended`
     - Suggest: `Avbruten`
     - The developer comment says this badge shows when a match is suspended after it has started. In Swedish sports usage, a halted match is "avbruten". "Avstängd" is used for a device that is turned off or a player who is banned, so the badge gives the wrong meaning.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -89,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (73)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
+| 2 | Wrong content (says something other than the English) | 29 |
 | 3 | Degraded language (grammar, spelling, terminology) | 44 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -250,11 +250,6 @@ _Nothing in this category._
     - Source: `Site asked to turn off ad blocker`
     - Suggest: `Webbplatsen bad mig stänga av annonsblockeraren`
     - Source: 'Site asked to turn off ad blocker' means the site made the request. 'ombeds' is passive ('is asked'), so it reverses who is asking whom.
-- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The status for a match suspended after kick-off is translated as "Avstängd", which means switched off, or banned (as a player is), not a halted match.
-    - Current: `Avstängd`
-    - Source: `Suspended`
-    - Suggest: `Avbruten`
-    - The developer comment says this badge shows when a match is suspended after it has started. In Swedish sports usage, a halted match is "avbruten". "Avstängd" is used for a device that is turned off or a player who is banned, so the badge gives the wrong meaning.
 
 ### C. Grammar, agreement & spelling
 
@@ -506,6 +501,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — fixed 2026-11-03

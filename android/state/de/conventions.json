@@ -10,7 +10,7 @@
  },
  "dash": {
   "em": 0,
-  "en": 6
+  "en": 7
  },
  "ellipsis": {
   "ascii": 0,
@@ -31,11 +31,10 @@
  },
  "quotes": {
   "curly-double": 1,
-  "german-double": 22,
-  "straight-double": 1
+  "german-double": 23
  },
  "register": {
-  "formal": 668,
+  "formal": 667,
   "informal": 0
  }
 }

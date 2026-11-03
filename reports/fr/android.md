@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 2,604 |
+| **Strings reviewed this run** | 0 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,81 +18,13 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The action "Review" is dropped, leaving only "Update for %1$s".
-    - Current: `Mise à jour pour %1$s`
-    - Source: `Review update for %1$s`
-    - Suggest: `Examiner la mise à jour pour %1$s`
-    - The source tells the user to review an update that needs them to approve permission changes. The French only says an update exists and leaves out the action the user has to take.
-- `mozac_feature_addons_updater_permissions_dialog_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The "or" between the two choices is missing, so the sentence is two orders joined by a comma.
-    - Current: `actuels, mettez à jour`
-    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
-    - Suggest: `actuels, ou mettez à jour`
-    - The source offers a choice: "Cancel ... or update ...". Without "ou", the French reads as two instructions in a row.
+_No new findings._
 
-### ✅ Fixed since the last run (12)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — "Press “Try Again”" is rendered as "Cliquez sur le bouton" (click), which is wrong on a touch-based mobile component.
-    - Current: `Cliquez sur le bouton « Réessayer »`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Appuyez sur le bouton « Réessayer »`
-    - The source says "Press"; on Android this is a tap, not a mouse click, and the added "Cliquez" changes the interaction described.
-- `mozac_browser_menu_highlighted` — `mozilla-mobile/android-components/components/browser/menu/src/main/res/values-fr/strings.xml` — "Highlighted" (menu item has a highlight) is rendered as "Sélectionné" (selected), which conveys a different state.
-    - Current: `Sélectionné`
-    - Source: `Highlighted`
-    - Suggest: `Mis en évidence`
-    - The developer comment says the string indicates that the overflow menu has a highlight; "Sélectionné" means "selected", a different UI state announced to screen reader users.
-- `mozac_browser_menu2_highlighted` — `mozilla-mobile/android-components/components/browser/menu2/src/main/res/values-fr/strings.xml` — "Highlighted" (menu item has a highlight) is rendered as "Sélectionné" (selected), which conveys a different state.
-    - Current: `Sélectionné`
-    - Source: `Highlighted`
-    - Suggest: `Mis en évidence`
-    - The developer comment says the string indicates that the overflow menu has a highlight; "Sélectionné" means "selected", a different UI state.
-- `mozac_feature_addons_permissions_extra_domains_description_plural_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Access your data on other domains" drops the possessive "your data".
-    - Current: `Accéder aux données d’autres domaines`
-    - Source: `Access your data on other domains`
-    - Suggest: `Accéder à vos données pour d’autres domaines`
-    - The source refers to the user's data on other domains; the target says "the data of other domains", inconsistent with the parallel sites string which correctly uses "vos données".
-- `mozac_feature_readerview_serif_font` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fr/strings.xml` — "Serif" font option is translated as "Empattement" (the serif itself) instead of "Avec empattement".
-    - Current: `Empattement`
-    - Source: `Serif`
-    - Suggest: `Avec empattement`
-    - The option names a font style; the companion string uses "Police avec empattement" and the opposite option is "Sans empattement". "Empattement" alone names the serif feature, not the font type.
-- `addresses_department` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Department" as an administrative division (Nicaragua, Colombia) is translated as "Service" (a company department).
-    - Current: `Service`
-    - Source: `Department`
-    - Suggest: `Département`
-    - The developer comment states this is an address field for countries like Nicaragua and Colombia where departments are a key administrative division; "Service" means an organizational unit, not a territorial division.
-- `alternative_app_icon_option_gradient_sunrise` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Spelling error: "Levé de soleil" should be "Lever de soleil".
-    - Current: `Levé de soleil`
-    - Source: `Sunrise`
-    - Suggest: `Lever de soleil`
-    - The French for "Sunrise" is "lever de soleil" (noun "lever"), not the past participle "levé".
-- `setup_checklist_task_search_widget_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Singular "search widget" is rendered as plural "les widgets de recherche".
-    - Current: `Découvrir les widgets de recherche`
-    - Source: `Explore search widget`
-    - Suggest: `Découvrir le widget de recherche`
-    - The source refers to a single search widget task; the plural changes the meaning.
-- `sync_failed_never_synced_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Last synced: never" is rendered as "Dernier succès : jamais" (last success), duplicating the wording of sync_failed_summary.
-    - Current: `La synchronisation a échoué. Dernier succès : jamais`
-    - Source: `Sync failed. Last synced: never`
-    - Suggest: `La synchronisation a échoué. Dernière synchronisation : jamais`
-    - The source says "Last synced: never", not "Last success"; the sibling string sync_failed_summary uses "Last success" and is already translated as "Dernier succès".
-- `translation_option_bottom_sheet_close_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translations sheet" (bottom sheet / panneau) is rendered as "onglet" (tab).
-    - Current: `Fermer l’onglet Traductions`
-    - Source: `Close Translations sheet`
-    - Suggest: `Fermer le panneau Traductions`
-    - The source refers to the translations bottom sheet, not a browser tab; elsewhere in the same batch "translation sheet" is correctly translated as "panneau de traduction".
-- `webcompat_reporter_send_report` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "report" is translated as "rapport" here while the rest of the feature uses "signalement".
-    - Current: `Envoyer le rapport`
-    - Source: `Send report`
-    - Suggest: `Envoyer le signalement`
-    - Neighbouring strings (webcompat_reporter_description_3, preview_bottom_sheet_header, success_snackbar_text_2) all use "signalement" for "report"; this is an inconsistency on the same screen.
-- `mozac_feature_prompts_suggest_strong_password_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — "Strong password" is rendered as "mot de passe compliqué" (complicated password) instead of the standard term.
-    - Current: `mot de passe compliqué`
-    - Source: `Use strong password?`
-    - Suggest: `mot de passe fort`
-    - "Strong" describes password strength, not complexity. The established French term is "mot de passe fort".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

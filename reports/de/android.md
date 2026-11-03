@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,604 |
+| **Strings reviewed this run** | 41 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,231 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "the device's network connection" is rendered as the computer's network connection.
+    - Current: `Prüfen Sie die Netzwerkverbindung des Computers.`
+    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
+    - Suggest: `Prüfen Sie die Netzwerkverbindung des Geräts.`
+    - The source says "device" because this is a mobile error page. "Computers" looks carried over from the desktop text, and the same message and the other error pages use "Gerät".
+- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The translation drops "save" and only describes filling in usernames and passwords.
+    - Current: `Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.`
+    - Source: `Fill and save usernames and passwords in websites while using %1$s.`
+    - Suggest: `Benutzernamen und Passwörter auf Websites bei Nutzung von %1$s ausfüllen und speichern.`
+    - The source says "Fill and save usernames and passwords", so the preference covers both filling and saving. The German only mentions filling.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (42)
 
-_Nothing was fixed._
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "the device's network connection" is rendered as the computer's network connection.
+    - Current: `Prüfen Sie die Netzwerkverbindung des Computers.`
+    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
+    - Suggest: `Prüfen Sie die Netzwerkverbindung des Geräts.`
+    - The source says "device" because this is a mobile error page. "Computers" looks carried over from the desktop text, and the same message and the other error pages use "Gerät".
+- `mozac_browser_errorpages_no_internet_message_2` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — Missing case agreement in "Ihr Modem oder Router" after "Überprüfen Sie".
+    - Current: `Überprüfen Sie Ihr Modem oder Router.`
+    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
+    - Suggest: `Überprüfen Sie Ihr Modem oder Ihren Router.`
+    - Accusative object requires "Ihren Router"; the shared determiner "Ihr" does not work for the masculine noun.
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "device" is translated as "Computer" in a mobile-browser error page.
+    - Current: `Ist der Computer mit einem aktiven Netzwerk verbunden?`
+    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
+    - Suggest: `Ist das Gerät mit einem aktiven Netzwerk verbunden?`
+    - The source says "Is the device connected to an active network?"; "Computer" names the wrong thing on Android devices.
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "not your device" is translated as "Ihres Computers".
+    - Current: `nicht um einen Fehler Ihres Computers`
+    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
+    - Suggest: `nicht um einen Fehler Ihres Geräts`
+    - The source refers to the user's device; "Computer" is wrong on a mobile browser.
+- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "device" is translated as "Computer".
+    - Current: `Ist der Computer mit einem aktiven Netzwerk verbunden?`
+    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
+    - Suggest: `Ist das Gerät mit einem aktiven Netzwerk verbunden?`
+    - Source: "Is the device connected to an active network?" — "Computer" is the wrong term for a mobile device.
+- `mozac_feature_addons_optional_permissions_with_data_collection_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Dialog title adds a trailing period not present in the source.
+    - Current: `%1$s bittet um zusätzliche Einstellungen.`
+    - Source: `%1$s requests additional settings`
+    - Suggest: `%1$s bittet um zusätzliche Einstellungen`
+    - Source "%1$s requests additional settings" is a dialog title without final punctuation.
+- `mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Dialog title adds a trailing period not present in the source.
+    - Current: `%1$s bittet um zusätzliche Datenerfassung.`
+    - Source: `%1$s requests additional data collection`
+    - Suggest: `%1$s bittet um zusätzliche Datenerfassung`
+    - Source "%1$s requests additional data collection" is a dialog title without final punctuation.
+- `mozac_feature_addons_permissions_data_collection_browsingActivity_short_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "browsing activity" is rendered as "Surfaktivität" in the short description but as "Surf-Aktivität" in the corresponding long description.
+    - Current: `Surfaktivität`
+    - Source: `browsing activity`
+    - Suggest: `Surf-Aktivität`
+    - The same source term must use the same German term across the short/long description pair for the same permission (mozac_feature_addons_permissions_data_collection_browsingActivity_long_description uses "Surf-Aktivität").
+- `mozac_feature_addons_permissions_declarative_net_request_feedback_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Permission description rendered as an imperative sentence addressed to the user instead of an infinitive permission label.
+    - Current: `Lesen Sie Ihre Surf-Chronik`
+    - Source: `Read your browsing history`
+    - Suggest: `Ihre Surf-Chronik lesen`
+    - The source "Read your browsing history" is a permission description in a list; all sibling permission strings use the infinitive form ("Datenschutzeinstellungen lesen und ändern", "Auf Browsertabs zugreifen"). The current text reads as a command to the user ("You read your browsing history"), which reverses who performs the action.
+- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — The translation drops "your data" from "access your data in open tabs".
+    - Current: `Entwicklerwerkzeuge erweitern, sodass Zugriff auf offene Tabs besteht`
+    - Source: `Extend developer tools to access your data in open tabs`
+    - Suggest: `Entwicklerwerkzeuge erweitern, sodass diese auf Ihre Daten in offenen Tabs zugreifen können`
+    - The source grants access to the user's data in open tabs, not to the tabs themselves; omitting "Ihre Daten" understates the permission.
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — The translation drops "your data" from "access your data in open tabs".
+    - Current: `Entwicklerwerkzeuge erweitern, sodass Zugriff auf offene Tabs besteht.`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `Entwicklerwerkzeuge erweitern, sodass diese auf Ihre Daten in offenen Tabs zugreifen können.`
+    - The source grants access to the user's data in open tabs, not to the tabs themselves; omitting "Ihre Daten" understates the permission.
+- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Permission description uses an imperative sentence addressed to the user instead of the infinitive style used by all sibling permission strings.
+    - Current: `Laden Sie KI-Modelle herunter und führen Sie diese auf Ihrem Gerät aus`
+    - Source: `Download and run AI models on your device`
+    - Suggest: `KI-Modelle herunterladen und auf Ihrem Gerät ausführen`
+    - The source is a permission description listing what the extension may do ("Download and run AI models on your device"), and every other description in this file, including the _for_update variant of the same string, uses the infinitive form. Here it reads as an instruction to the user.
+- `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — `mozac_feature_findindpage_dismiss` uses straight double quotes
+    - Current: `"Seite durchsuchen" deaktivieren`
+    - Source: `Dismiss find in page`
+    - Suggest: `„Seite durchsuchen“ schließen`
+    - The locale's quote convention is `german-double` (22 occurrences).
+- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — "konnte nicht beendet werden" reads as "playback could not be stopped" rather than "could not finish playing".
+    - Current: `Die Audiowiedergabe konnte nicht beendet werden.`
+    - Source: `Couldn’t finish playing audio. Try again.`
+    - Suggest: `Die Audiowiedergabe konnte nicht abgeschlossen werden.`
+    - Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German "beenden" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; "abschließen" conveys completing it.
+- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray straight double quote before the German opening quotation mark.
+    - Current: `von "„%1$s“ hochladen`
+    - Source: `Make sure you trust this site before you upload from “%1$s”.`
+    - Suggest: `von „%1$s“ hochladen`
+    - The source has only one pair of curly quotes around %1$s; the German adds an extra stray straight quote character.
+- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray space before the closing link markup after "Nutzungsbedingungen".
+    - Current: `Nutzungsbedingungen { </a> }`
+    - Source: `Logging in to %1$s with a %2$s account is subject to their <a href="%3$s">Privacy Policy{ </a> } and <a href="%4$s">Terms of Service{ </a> }`
+    - Suggest: `Nutzungsbedingungen{ </a> }`
+    - The source has no space between the link text and the closing tag placeholder ("Terms of Service{ </a> }"); the added space breaks the link text/markup alignment.
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Unblock specific features below" is translated as "Blockieren" (block) instead of "Freigeben/Entsperren" (unblock), reversing the meaning.
+    - Current: `Blockieren Sie im Folgenden bestimmte Funktionen.`
+    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
+    - Suggest: `Entsperren Sie im Folgenden bestimmte Funktionen.`
+    - The source instructs the user to unblock specific features; the German says to block them, the opposite.
+- `alternative_app_icon_option_momo_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The artist's handle is misspelled, dropping "he" from @heyheymomodraws.
+    - Current: `@heyheymomoraws`
+    - Source: `Created by @heyheymomodraws`
+    - Suggest: `@heyheymomodraws`
+    - The source and developer comment give the handle as @heyheymomodraws; a social media handle is a name that must be reproduced exactly.
+- `certificate_warning_homepage_card_hcw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "stop working properly" is translated as "funktioniert nicht mehr" (stops working entirely), dropping "properly".
+    - Current: `Ihre Firefox-Version funktioniert ab 14. März nicht mehr, da ein Stammzertifikat abläuft.`
+    - Source: `Your version of Firefox will stop working properly on March 14 because a root certificate is expiring.`
+    - Suggest: `Ihre Firefox-Version funktioniert ab 14. März nicht mehr richtig, da ein Stammzertifikat abläuft.`
+    - The source states the version will stop working *properly*; omitting "richtig" overstates the consequence.
+- `certificate_warning_push_notification_pnw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — A final period was added to a notification title that has none in the source.
+    - Current: `Sie verwenden eine veraltete Firefox-Version.`
+    - Source: `You’re on an older version of Firefox`
+    - Suggest: `Sie verwenden eine veraltete Firefox-Version`
+    - The English title "You’re on an older version of Firefox" has no terminal punctuation; other titles in this batch also omit it.
+- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The hedged "might ... be risky" is rendered as a definite statement "ist ... riskant".
+    - Current: `und ist für Ihr Gerät riskant`
+    - Source: `This might open the file in a different app and be risky for your device.`
+    - Suggest: `und für Ihr Gerät riskant sein`
+    - The source says "This might open the file in a different app and be risky for your device" — both clauses are under "might"; the German asserts the risk as a fact.
+- `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Regulation" (EU) 2024/1183 is a Verordnung, not a Richtlinie (directive).
+    - Current: `Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Qualifiziert im Sinne der Verordnung (EU) 2024/1183.`
+    - EU legal terminology: "Regulation" = "Verordnung"; "Richtlinie" means "Directive", naming the wrong type of legal act.
+- `debug_drawer_autofill_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Hyphen used as a separating dash instead of the house en dash.
+    - Current: `Automatisches Ausfüllen - Werkzeuge`
+    - Source: `Autofill tools`
+    - Suggest: `Automatisches Ausfüllen – Werkzeuge`
+    - The locale convention is the en dash for parenthetical/separating dashes; a hyphen with spaces is incorrect German typography.
+- `debug_drawer_logins_add_login_button` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Button label translated as an imperative sentence instead of an infinitive label.
+    - Current: `Fügen Sie gefälschte Zugangsdaten für diese Domain hinzu`
+    - Source: `Add a fake login for this domain`
+    - Suggest: `Gefälschte Zugangsdaten für diese Domain hinzufügen`
+    - Per the developer comment this is a button label; German UI convention (and the sibling debug drawer buttons) use the infinitive form.
+- `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "the site" is rendered as "Webseite" although the same string and surrounding strings use "Website" for site.
+    - Current: `vorübergehend für die Webseite deaktiviert`
+    - Source: `However, it’s also possible that an attacker is involved. If you continue to the website, you should not enter any sensitive info. If you continue, HTTPS-Only mode will be turned off temporarily for the site.`
+    - Suggest: `vorübergehend für die Website deaktiviert`
+    - The source uses "website"/"site" consistently; earlier in the same string it is translated as "Website". "Webseite" means a single page and is inconsistent.
+- `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Shortcuts" (home screen shortcuts) is rendered as "Tastenkombinationen" (keyboard shortcuts), inconsistent with "Verknüpfungen" used elsewhere.
+    - Current: `Alle Tastenkombinationen anzeigen`
+    - Source: `Show all shortcuts`
+    - Suggest: `Alle Verknüpfungen anzeigen`
+    - The same feature is called "Verknüpfungen" in homepage_shortcuts_title, browser_menu_add_to_shortcuts etc.; "Tastenkombinationen" means keyboard shortcuts and is wrong for the shortcuts home screen section.
+- `nova_onboarding_marketing_body_3` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Wrong case/structure: "die Kanäle … mitzuteilen" should be dative "den Kanälen".
+    - Current: `die Kanäle, in denen wir Firefox bewerben, mitzuteilen`
+    - Source: `You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.`
+    - Suggest: `den Kanälen, in denen wir Firefox bewerben, mitzuteilen`
+    - "mitteilen" takes a dative object for the recipient; the accusative "die Kanäle" is ungrammatical.
+- `nova_onboarding_marketing_body_line_two` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Broken coordination: "ist stolz darauf, unabhängig und verteidigt …" is ungrammatical.
+    - Current: `Firefox ist stolz darauf, unabhängig und verteidigt das offene Web gegen Technologie-Monopole.`
+    - Source: `Firefox is proudly independent and dedicated to defending the open web against tech monopolies.`
+    - Suggest: `Firefox ist stolz darauf, unabhängig zu sein und das offene Web gegen Technologie-Monopole zu verteidigen.`
+    - The source "Firefox is proudly independent and dedicated to defending the open web" requires two parallel complements; the German mixes an adjective and a finite verb after "stolz darauf," producing an incomplete clause.
+- `nova_onboarding_notifications_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The German reverses the subject: the source says notifications help the user stay safer with Firefox, not that the user makes Firefox safer.
+    - Current: `Benachrichtigungen helfen Ihnen, Firefox noch sicherer zu machen`
+    - Source: `Notifications help you stay safer with Firefox`
+    - Suggest: `Benachrichtigungen helfen Ihnen, mit Firefox sicherer zu surfen`
+    - Source: "Notifications help you stay safer with Firefox" — the user stays safer using Firefox; the target claims the user makes Firefox safer.
+- `pbm_authentication_leave_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Leave private tabs" (exit private browsing) is rendered as "Private Tabs belassen" (leave them as they are).
+    - Current: `Private Tabs belassen`
+    - Source: `Leave private tabs`
+    - Suggest: `Private Tabs verlassen`
+    - Per the developer comment this is the secondary action to exit private browsing mode; "belassen" means "to leave something unchanged", reversing the intended action.
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The loading-indicator description is translated as an action label ("Add signature") instead of a status in progress.
+    - Current: `Signatur hinzufügen`
+    - Source: `Adding signature`
+    - Suggest: `Signatur wird hinzugefügt`
+    - The developer comment says this describes a loading indicator while a signature is being added. The infinitive "Signatur hinzufügen" reads like a button for the screen-reader user, when it should say the action is in progress.
+- `preference_doh_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "DNS over HTTPS" is a fixed technical term and must keep lowercase "over", not "Over".
+    - Current: `DNS Over HTTPS`
+    - Source: `DNS over HTTPS`
+    - Suggest: `DNS over HTTPS`
+    - The source and the developer comment both write "DNS over HTTPS"; capitalizing "Over" misspells the established protocol name.
+- `preferences_android_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation wrongly says "on websites" instead of "in other apps on your device".
+    - Current: `Benutzernamen und Passwörter auf Webseite bei Nutzung von anderen Apps auf Ihrem Gerät automatisch ausfüllen.`
+    - Source: `Fill usernames and passwords in other apps on your device.`
+    - Suggest: `Benutzernamen und Passwörter in anderen Apps auf Ihrem Gerät ausfüllen.`
+    - Source is "Fill usernames and passwords in other apps on your device." The German inserts "auf Webseite bei Nutzung von", which changes the meaning to filling on websites and is also ungrammatical.
+- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "auf Webseite" lacks the plural/article required for "in websites".
+    - Current: `auf Webseite bei Nutzung von %1$s`
+    - Source: `Fill and save usernames and passwords in websites while using %1$s.`
+    - Suggest: `auf Websites bei Nutzung von %1$s`
+    - Source says "in websites" (plural); the German singular without article is grammatically wrong.
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The adverb placement changes the meaning: the source says languages are always downloaded even in data saving mode, not that they should be downloaded in data saving mode.
+    - Current: `Sprachen immer im Datensparmodus herunterladen`
+    - Source: `Always download languages in data saving mode`
+    - Suggest: `Sprachen im Datensparmodus immer herunterladen`
+    - Source: "Always download languages in data saving mode" — the toggle permits downloading while in data saver mode. "Sprachen immer im Datensparmodus herunterladen" reads as "always download languages in (i.e. using) data saving mode".
+- `translations_bottom_sheet_info_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Grammatical error: "Zu Sicherstellung" should be "Zur Sicherstellung".
+    - Current: `Zu Sicherstellung Ihrer Privatsphäre`
+    - Source: `For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s`
+    - Suggest: `Zur Sicherstellung Ihrer Privatsphäre`
+    - "Sicherstellung" is feminine dative, requiring "zur", not "zu".
+- `uninstall_survey_button_label` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The verb "deinstallieren" is incorrectly capitalized.
+    - Current: `Feedback übermitteln und Deinstallieren`
+    - Source: `Submit feedback and uninstall`
+    - Suggest: `Feedback übermitteln und deinstallieren`
+    - "deinstallieren" here is an infinitive verb parallel to "übermitteln", not a noun, so it must be lowercase.
+- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "check out" (Kaufabschluss/Bezahlvorgang) was mistranslated as "den Warenkorb leeren" (empty the shopping cart).
+    - Current: `Ich kann nicht bezahlen, den Warenkorb leeren oder einkaufen`
+    - Source: `Can’t pay, check out or shop`
+    - Suggest: `Ich kann nicht bezahlen, den Kauf abschließen oder einkaufen`
+    - The source "Can’t pay, check out or shop" refers to completing the checkout process, not emptying the cart.
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "the device's network connection" is rendered as the computer's network connection.
+    - Current: `Prüfen Sie die Netzwerkverbindung des Computers.`
+    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
+    - Suggest: `Prüfen Sie die Netzwerkverbindung des Geräts.`
+    - The source says "device" because this is a mobile error page. "Computers" looks carried over from the desktop text, and the same message and the other error pages use "Gerät".
+- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "recent" is omitted from "Clear recent browsing history".
+    - Current: `Browser-Chronik, Cookies und verwandte Daten löschen.`
+    - Source: `Clear recent browsing history, cookies, and related data.`
+    - Suggest: `Neuere Browser-Chronik, Cookies und verwandte Daten löschen.`
+    - The source limits the scope to "recent browsing history"; the German suggests the entire history can be cleared.
+- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The full stop at the end of the source sentence is missing.
+    - Current: `Diese Grafik konnte nicht geladen werden`
+    - Source: `Couldn’t load this image.`
+    - Suggest: `Diese Grafik konnte nicht geladen werden.`
+    - The source "Couldn’t load this image." ends with a full stop, and this snackbar message is a complete sentence.
+- `preference_enhanced_tracking_protection_custom_cookies_5` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Isolate cross-site cookies" is rendered only as "Seitenübergreifende Cookies", dropping the verb "isolate".
+    - Current: `Seitenübergreifende Cookies`
+    - Source: `Isolate cross-site cookies`
+    - Suggest: `Seitenübergreifende Cookies isolieren`
+    - The source is an action option ("Isolate cross-site cookies"); the German omits the key verb, changing the meaning to a mere category label.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -59,7 +277,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 1 |
+| Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
@@ -73,10 +291,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 22, `curly-double` 1, `straight-double` 1 | **german-double** |
+| quotes | `german-double` 23, `curly-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
-| dash | `en` 6 | **en** |
-| register | `formal` 668 | **formal** |
+| dash | `en` 7 | **en** |
+| register | `formal` 667 | **formal** |
 
 ---
 
@@ -86,15 +304,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (100)
+## 3. Open findings (52)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 57 |
-| 3 | Degraded language (grammar, spelling, terminology) | 33 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 2 | Wrong content (says something other than the English) | 34 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -102,21 +320,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "Is your device or network protected..." is translated as "Computer" instead of "Gerät".
-    - Current: `Wird Ihr Computer oder Ihr Netzwerk von einer Firewall oder einem Proxy geschützt?`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Wird Ihr Gerät oder Ihr Netzwerk von einer Firewall oder einem Proxy geschützt?`
-    - The source refers to "your device", not a computer.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "device" is translated as "Computer" in a mobile-browser error page.
-    - Current: `Ist der Computer mit einem aktiven Netzwerk verbunden?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Ist das Gerät mit einem aktiven Netzwerk verbunden?`
-    - The source says "Is the device connected to an active network?"; "Computer" names the wrong thing on Android devices.
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "not your device" is translated as "Ihres Computers".
-    - Current: `nicht um einen Fehler Ihres Computers`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `nicht um einen Fehler Ihres Geräts`
-    - The source refers to the user's device; "Computer" is wrong on a mobile browser.
 - `mozac_browser_errorpages_redirect_loop_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — The redirect-loop page title is rendered as a redundant "Fehler: Umleitungsfehler" instead of translating the source sentence.
     - Current: `Fehler: Umleitungsfehler`
     - Source: `The page isn’t redirecting properly`
@@ -127,11 +330,6 @@ _Nothing in this category._
     - Source: `{ <p> }The browser could not find the host server for the provided address.{ </p> } { <ul> } { <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </stro…`
     - Suggest: `Wenn Sie überhaupt keine Seiten laden können, überprüfen Sie bitte die Daten- oder WLAN-Verbindung Ihres Geräts.`
     - The source condition is being unable to load any page at all, and it refers to the device's data or Wi-Fi connection; the German narrows it to "any other website" and drops "your device’s".
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — "device" is translated as "Computer".
-    - Current: `Ist der Computer mit einem aktiven Netzwerk verbunden?`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `Ist das Gerät mit einem aktiven Netzwerk verbunden?`
-    - Source: "Is the device connected to an active network?" — "Computer" is the wrong term for a mobile device.
 - `mozac_browser_errorpages_unknown_socket_type_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — Title adds "Fehler:" and drops "from server".
     - Current: `Fehler: Unerwartete Antwort`
     - Source: `Unexpected response from server`
@@ -147,36 +345,11 @@ _Nothing in this category._
     - Source: `Links available`
     - Suggest: `Links verfügbar`
     - Per the developer comment this is an announcement that interactive links are present, not a label naming "available links".
-- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "recent" is omitted from "Clear recent browsing history".
-    - Current: `Browser-Chronik, Cookies und verwandte Daten löschen.`
-    - Source: `Clear recent browsing history, cookies, and related data.`
-    - Suggest: `Neuere Browser-Chronik, Cookies und verwandte Daten löschen.`
-    - The source limits the scope to "recent browsing history"; the German suggests the entire history can be cleared.
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — The translation drops "your data" from "access your data in open tabs".
-    - Current: `Entwicklerwerkzeuge erweitern, sodass Zugriff auf offene Tabs besteht`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `Entwicklerwerkzeuge erweitern, sodass diese auf Ihre Daten in offenen Tabs zugreifen können`
-    - The source grants access to the user's data in open tabs, not to the tabs themselves; omitting "Ihre Daten" understates the permission.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — The translation drops "your data" from "access your data in open tabs".
-    - Current: `Entwicklerwerkzeuge erweitern, sodass Zugriff auf offene Tabs besteht.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Entwicklerwerkzeuge erweitern, sodass diese auf Ihre Daten in offenen Tabs zugreifen können.`
-    - The source grants access to the user's data in open tabs, not to the tabs themselves; omitting "Ihre Daten" understates the permission.
 - `mozac_feature_addons_permissions_find_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "Read the text of all open tabs" is rendered as "access the texts", losing the "read" meaning.
     - Current: `Auf Texte aller offenen Tabs zugreifen.`
     - Source: `Read the text of all open tabs.`
     - Suggest: `Den Text aller offenen Tabs lesen.`
     - The source says "Read the text of all open tabs"; "zugreifen" (access) is used elsewhere for "access" permissions and blurs the distinction.
-- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — "konnte nicht beendet werden" reads as "playback could not be stopped" rather than "could not finish playing".
-    - Current: `Die Audiowiedergabe konnte nicht beendet werden.`
-    - Source: `Couldn’t finish playing audio. Try again.`
-    - Suggest: `Die Audiowiedergabe konnte nicht abgeschlossen werden.`
-    - Per the developer comment the error appears when playback fails partway through, i.e. the audio could not be played to the end. German "beenden" primarily means to stop/terminate, so the sentence suggests the user could not stop playback; "abschließen" conveys completing it.
-- `mozac_protections_dashboard_empty_subtitle` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-de/strings.xml` — "You'll see them here" is rendered with "Sie" as the subject, reversing the sentence's meaning.
-    - Current: `Sie werden sie hier sehen.`
-    - Source: `You’ll see them here.`
-    - Suggest: `Sie sehen sie hier.`
-    - The source addresses the user ("You'll see them here"), i.e. the blocked trackers will appear here. The German is ambiguous/awkward; more importantly the future construction misreads. A clearer rendering is "Sie sehen sie hier." or "Hier werden sie angezeigt."
 - `mozac_tab_counter_content_description` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-de/strings.xml` — The compound is mis-parsed: the source describes the tab counter button in the toolbar, not a button of a "tab counter toolbar".
     - Current: `Die Schaltfläche der Tab-Zähler-Symbolleiste.`
     - Source: `The tab counter toolbar button.`
@@ -197,16 +370,6 @@ _Nothing in this category._
     - Source: `Post town`
     - Suggest: `Poststadt`
     - "Post town" is a normal address-field label, not a brand or do-not-translate term; every other field label in this batch is localized (Präfektur, Postleitzahl, Land). The English wording is also re-capitalized in a way that is neither English nor German usage.
-- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Unblock specific features below" is translated as "Blockieren" (block) instead of "Freigeben/Entsperren" (unblock), reversing the meaning.
-    - Current: `Blockieren Sie im Folgenden bestimmte Funktionen.`
-    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Entsperren Sie im Folgenden bestimmte Funktionen.`
-    - The source instructs the user to unblock specific features; the German says to block them, the opposite.
-- `alternative_app_icon_option_momo_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The artist's handle is misspelled, dropping "he" from @heyheymomodraws.
-    - Current: `@heyheymomoraws`
-    - Source: `Created by @heyheymomodraws`
-    - Suggest: `@heyheymomodraws`
-    - The source and developer comment give the handle as @heyheymomodraws; a social media handle is a name that must be reproduced exactly.
 - `bookmark_sort_menu_custom` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Sort by custom order" is rendered only as "Benutzerdefiniert", dropping the sorting verb present in all sibling sort options.
     - Current: `Benutzerdefiniert`
     - Source: `Sort by custom order`
@@ -222,21 +385,6 @@ _Nothing in this category._
     - Source: `A root certificate will expire, causing your version of Firefox to stop working properly.`
     - Suggest: `Ein Stammzertifikat läuft ab, weshalb Ihre Firefox-Version nicht mehr richtig funktionieren wird.`
     - The source says the expiry will cause Firefox to stop working properly; the German coordinates two independent statements in present tense, losing the causal/future meaning that the parallel string hca1_message preserves with "weshalb".
-- `certificate_warning_homepage_card_hcw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "stop working properly" is translated as "funktioniert nicht mehr" (stops working entirely), dropping "properly".
-    - Current: `Ihre Firefox-Version funktioniert ab 14. März nicht mehr, da ein Stammzertifikat abläuft.`
-    - Source: `Your version of Firefox will stop working properly on March 14 because a root certificate is expiring.`
-    - Suggest: `Ihre Firefox-Version funktioniert ab 14. März nicht mehr richtig, da ein Stammzertifikat abläuft.`
-    - The source states the version will stop working *properly*; omitting "richtig" overstates the consequence.
-- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The hedged "might ... be risky" is rendered as a definite statement "ist ... riskant".
-    - Current: `und ist für Ihr Gerät riskant`
-    - Source: `This might open the file in a different app and be risky for your device.`
-    - Suggest: `und für Ihr Gerät riskant sein`
-    - The source says "This might open the file in a different app and be risky for your device" — both clauses are under "might"; the German asserts the risk as a fact.
-- `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Regulation" (EU) 2024/1183 is a Verordnung, not a Richtlinie (directive).
-    - Current: `Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Qualifiziert im Sinne der Verordnung (EU) 2024/1183.`
-    - EU legal terminology: "Regulation" = "Verordnung"; "Richtlinie" means "Directive", naming the wrong type of legal act.
 - `default_locale_text` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Follow device language" rendered as "Gerätesprache beachten" (observe/note the device language) rather than following it.
     - Current: `Gerätesprache beachten`
     - Source: `Follow device language`
@@ -257,36 +405,16 @@ _Nothing in this category._
     - Source: `Choose an image or use your camera to get results with Google Lens.`
     - Suggest: `Wählen Sie ein Bild aus`
     - In the Google Lens context the user picks a photo/image from the device; "Grafik" means graphic/illustration and is the wrong term for "image" here.
-- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "on WhatsApp shares" is mistranslated as "beim Teilen per WhatsApp" plus "hinzufügen" instead of "include"; acceptable, but "Download-Link für %1$s" reverses the sense of "%1$s download link".
-    - Current: `Download-Link für %1$s beim Teilen per WhatsApp hinzufügen`
-    - Source: `Include %1$s download link on WhatsApp shares`
-    - Suggest: `%1$s-Download-Link beim Teilen über WhatsApp einfügen`
-    - Source: "Include %1$s download link on WhatsApp shares".
 - `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The German sentence reverses the meaning: it asks whether the user "may" help someone succeed instead of asking them to grant permission to help Firefox win.
     - Current: `Bitte überlegen Sie, ob Sie mit dieser Erlaubnis zum Erfolg verhelfen dürfen.`
     - Source: `Please consider allowing to help Firefox win.`
     - Suggest: `Bitte erwägen Sie, die Erlaubnis zu erteilen, um Firefox zum Erfolg zu verhelfen.`
     - Source: "Please consider allowing to help Firefox win." The developer comment explains that "allowing" refers to the "Allow and Continue" button; the German says "whether you are allowed to help to success" and drops Firefox entirely.
-- `nova_onboarding_notifications_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The German reverses the subject: the source says notifications help the user stay safer with Firefox, not that the user makes Firefox safer.
-    - Current: `Benachrichtigungen helfen Ihnen, Firefox noch sicherer zu machen`
-    - Source: `Notifications help you stay safer with Firefox`
-    - Suggest: `Benachrichtigungen helfen Ihnen, mit Firefox sicherer zu surfen`
-    - Source: "Notifications help you stay safer with Firefox" — the user stays safer using Firefox; the target claims the user makes Firefox safer.
 - `open_tabs_menu` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Content description for a button that opens the tabs menu is translated as a noun label instead of an action.
     - Current: `Offene-Tabs-Menü`
     - Source: `Open tabs menu`
     - Suggest: `Menü für offene Tabs öffnen`
     - The developer comment says the control "Opens the open tabs menu when pressed"; the German renders only the menu name, dropping the action that the screen reader must convey.
-- `pbm_authentication_leave_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Leave private tabs" (exit private browsing) is rendered as "Private Tabs belassen" (leave them as they are).
-    - Current: `Private Tabs belassen`
-    - Source: `Leave private tabs`
-    - Suggest: `Private Tabs verlassen`
-    - Per the developer comment this is the secondary action to exit private browsing mode; "belassen" means "to leave something unchanged", reversing the intended action.
-- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The loading-indicator description is translated as an action label ("Add signature") instead of a status in progress.
-    - Current: `Signatur hinzufügen`
-    - Source: `Adding signature`
-    - Suggest: `Signatur wird hinzugefügt`
-    - The developer comment says this describes a loading indicator while a signature is being added. The infinitive "Signatur hinzufügen" reads like a button for the screen-reader user, when it should say the action is in progress.
 - `preference_accessibility_force_enable_zoom_summary` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "pinch and zoom" is mistranslated as "das Kneifen und Zoomen" (pinching someone).
     - Current: `das Kneifen und Zoomen`
     - Source: `Enable to allow pinch and zoom, even on websites that prevent this gesture.`
@@ -302,11 +430,6 @@ _Nothing in this category._
     - Source: `Cross-site and social media trackers`
     - Suggest: `Seitenübergreifende Elemente zur Aktivitätenverfolgung und solche von sozialen Netzwerken`
     - The source names a tracker category; the German fragment lacks the head noun and does not convey "trackers".
-- `preference_enhanced_tracking_protection_custom_cookies_5` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Isolate cross-site cookies" is rendered only as "Seitenübergreifende Cookies", dropping the verb "isolate".
-    - Current: `Seitenübergreifende Cookies`
-    - Source: `Isolate cross-site cookies`
-    - Suggest: `Seitenübergreifende Cookies isolieren`
-    - The source is an action option ("Isolate cross-site cookies"); the German omits the key verb, changing the meaning to a mere category label.
 - `preference_enhanced_tracking_protection_custom_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation says "which kind of scripts and other content" instead of "which trackers and scripts".
     - Current: `Wählen Sie, welche Art von Skripten zur Aktivitätenverfolgung und sonstige Inhalte blockiert werden.`
     - Source: `Choose which trackers and scripts to block.`
@@ -322,26 +445,16 @@ _Nothing in this category._
     - Source: `Standard (default)`
     - Suggest: `Standard (Standardeinstellung)`
     - Source is "Standard (default)"; the translation drops the information that this is the default setting.
-- `preferences_android_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Translation wrongly says "on websites" instead of "in other apps on your device".
-    - Current: `Benutzernamen und Passwörter auf Webseite bei Nutzung von anderen Apps auf Ihrem Gerät automatisch ausfüllen.`
-    - Source: `Fill usernames and passwords in other apps on your device.`
-    - Suggest: `Benutzernamen und Passwörter in anderen Apps auf Ihrem Gerät ausfüllen.`
-    - Source is "Fill usernames and passwords in other apps on your device." The German inserts "auf Webseite bei Nutzung von", which changes the meaning to filling on websites and is also ungrammatical.
-- `preferences_downloads_delete_from_device_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Present-tense description of what the option does is rendered as past tense in German.
-    - Current: `Die Datei wurde von Ihrem Gerät gelöscht und aus der Download-Chronik entfernt`
-    - Source: `File is deleted from your device and removed from download history`
-    - Suggest: `Die Datei wird von Ihrem Gerät gelöscht und aus der Download-Chronik entfernt`
-    - The source "File is deleted from your device and removed from download history" describes the behaviour of the setting (present/future), not a completed action; "wurde ... gelöscht" states it already happened.
-- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Present-tense description of the option is rendered as past tense in German.
-    - Current: `Die Datei wurde aus Ihrer Download-Chronik entfernt, ist aber noch auf Ihrem Gerät gespeichert`
-    - Source: `File is removed from your download history, but is still saved on your device`
-    - Suggest: `Die Datei wird aus Ihrer Download-Chronik entfernt, ist aber noch auf Ihrem Gerät gespeichert`
-    - The source "File is removed from your download history, but is still saved on your device" describes what the setting does, not a completed past action.
 - `preferences_marketing_data_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Campaign measurement data" is rendered as "Messdaten für die Kampagne", introducing a definite specific campaign instead of the general term.
     - Current: `Messdaten für die Kampagne`
     - Source: `Campaign measurement data`
     - Suggest: `Daten zur Kampagnenmessung`
     - The source is the generic data category matching the section title "Campaign measurement" (translated "Kampagnenmessung"); "für die Kampagne" implies one specific campaign and breaks consistency with the section title.
+- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The translation drops "save" and only describes filling in usernames and passwords.
+    - Current: `Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.`
+    - Source: `Fill and save usernames and passwords in websites while using %1$s.`
+    - Suggest: `Benutzernamen und Passwörter auf Websites bei Nutzung von %1$s ausfüllen und speichern.`
+    - The source says "Fill and save usernames and passwords", so the preference covers both filling and saving. The German only mentions filling.
 - `protection_panel_etp_toggle_enabled_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "looks broken" is mistranslated as "beschädigt aussieht" and the imperative drops the "try" hedge.
     - Current: `Wenn etwas auf dieser Website beschädigt aussieht, deaktivieren Sie ihn.`
     - Source: `If something looks broken on this site, try turning it off.`
@@ -372,11 +485,6 @@ _Nothing in this category._
     - Source: `Close Translations sheet`
     - Suggest: `Dialog „Übersetzungen“ schließen`
     - The developer comment says this closes the translations bottom sheet; "Seite" means page, which conflicts with the page/site terminology used elsewhere in this feature.
-- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The adverb placement changes the meaning: the source says languages are always downloaded even in data saving mode, not that they should be downloaded in data saving mode.
-    - Current: `Sprachen immer im Datensparmodus herunterladen`
-    - Source: `Always download languages in data saving mode`
-    - Suggest: `Sprachen im Datensparmodus immer herunterladen`
-    - Source: "Always download languages in data saving mode" — the toggle permits downloading while in data saver mode. "Sprachen immer im Datensparmodus herunterladen" reads as "always download languages in (i.e. using) data saving mode".
 - `translation_toolbar_expand_action` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Open translation sheet" is rendered as opening a page named „Übersetzungen“ instead of the translation sheet/dialog.
     - Current: `Seite „Übersetzungen“ öffnen`
     - Source: `Open translation sheet`
@@ -392,79 +500,24 @@ _Nothing in this category._
     - Source: `Videos, downloads, or media didn’t work`
     - Suggest: `Videos, Downloads oder Medien funktionierten nicht`
     - Source "Videos, downloads, or media didn’t work" is past tense; the German present tense changes the meaning.
-- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "check out" (Kaufabschluss/Bezahlvorgang) was mistranslated as "den Warenkorb leeren" (empty the shopping cart).
-    - Current: `Ich kann nicht bezahlen, den Warenkorb leeren oder einkaufen`
-    - Source: `Can’t pay, check out or shop`
-    - Suggest: `Ich kann nicht bezahlen, den Kauf abschließen oder einkaufen`
-    - The source "Can’t pay, check out or shop" refers to completing the checkout process, not emptying the cart.
 
 ### C. Grammar, agreement & spelling
 
-- `mozac_browser_errorpages_no_internet_message_2` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — Missing case agreement in "Ihr Modem oder Router" after "Überprüfen Sie".
-    - Current: `Überprüfen Sie Ihr Modem oder Router.`
-    - Source: `Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.`
-    - Suggest: `Überprüfen Sie Ihr Modem oder Ihren Router.`
-    - Accusative object requires "Ihren Router"; the shared determiner "Ihr" does not work for the masculine noun.
 - `mozac_browser_errorpages_security_bad_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — Faulty parallel construction: "ein Problem … sein oder jemand, der vorgibt, der Server zu sein".
     - Current: `Dies könnte ein Problem mit der Konfiguration des Servers sein oder jemand, der vorgibt, der Server zu sein.`
     - Source: `{ <ul> } { <li> }This could be a problem with the server’s configuration, or it could be someone trying to impersonate the server.{ </li> } { <li> }If you have connected to this server successfully in the past, the erro…`
     - Suggest: `Dies könnte ein Problem mit der Konfiguration des Servers sein, oder es versucht jemand, sich als der Server auszugeben.`
     - The source has two parallel clauses ("it could be someone trying to impersonate the server"); the German coordination is ungrammatical.
-- `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Wrong gender agreement: "Ein" should be "Eine" with feminine "Erweiterung(en)".
-    - Current: `Ein oder mehrere Erweiterungen`
-    - Source: `One or more extensions stopped working, making your system unstable.`
-    - Suggest: `Eine oder mehrere Erweiterungen`
-    - "Erweiterung" is feminine, so the singular article must be "Eine".
 - `notification_erase_text_android_14` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Wrong verb government: "tippen ... auf diese Benachrichtigung" combined with "wischen" is ungrammatical.
     - Current: `Tippen oder wischen Sie auf diese Benachrichtigung`
     - Source: `Tap or swipe this notification to close private tabs.`
     - Suggest: `Tippen Sie auf diese Benachrichtigung oder wischen Sie sie weg`
     - "wischen auf" is not correct German for swiping a notification away; the coordinated construction forces the wrong preposition for one of the verbs.
-- `nova_onboarding_marketing_body_3` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Wrong case/structure: "die Kanäle … mitzuteilen" should be dative "den Kanälen".
-    - Current: `die Kanäle, in denen wir Firefox bewerben, mitzuteilen`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.`
-    - Suggest: `den Kanälen, in denen wir Firefox bewerben, mitzuteilen`
-    - "mitteilen" takes a dative object for the recipient; the accusative "die Kanäle" is ungrammatical.
-- `nova_onboarding_marketing_body_line_two` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Broken coordination: "ist stolz darauf, unabhängig und verteidigt …" is ungrammatical.
-    - Current: `Firefox ist stolz darauf, unabhängig und verteidigt das offene Web gegen Technologie-Monopole.`
-    - Source: `Firefox is proudly independent and dedicated to defending the open web against tech monopolies.`
-    - Suggest: `Firefox ist stolz darauf, unabhängig zu sein und das offene Web gegen Technologie-Monopole zu verteidigen.`
-    - The source "Firefox is proudly independent and dedicated to defending the open web" requires two parallel complements; the German mixes an adjective and a finite verb after "stolz darauf," producing an incomplete clause.
-- `preference_doh_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "DNS over HTTPS" is a fixed technical term and must keep lowercase "over", not "Over".
-    - Current: `DNS Over HTTPS`
-    - Source: `DNS over HTTPS`
-    - Suggest: `DNS over HTTPS`
-    - The source and the developer comment both write "DNS over HTTPS"; capitalizing "Over" misspells the established protocol name.
-- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "auf Webseite" lacks the plural/article required for "in websites".
-    - Current: `auf Webseite bei Nutzung von %1$s`
-    - Source: `Fill and save usernames and passwords in websites while using %1$s.`
-    - Suggest: `auf Websites bei Nutzung von %1$s`
-    - Source says "in websites" (plural); the German singular without article is grammatically wrong.
-- `terms_of_use_prompt_body_line_two_alternative_link` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Inline link text "here" is capitalized as "Hier" although it appears mid-sentence in "Weitere Informationen %1$s."
-    - Current: `Hier`
-    - Source: `here`
-    - Suggest: `hier`
-    - The link is embedded in the sentence terms_of_use_prompt_body_line_two_alternative, so German requires lowercase "hier"; the source is lowercase too.
-- `terms_of_use_prompt_postpone` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Remind me later" is translated as "Später erinnern", which lacks the object and reads as a fragment.
-    - Current: `Später erinnern`
-    - Source: `Remind me later`
-    - Suggest: `Später erinnern lassen`
-    - German requires a reflexive/object construction; the standard Mozilla wording is "Später erinnern lassen" or "Mich später erinnern".
 - `trackers_blocked_panel_num_trackers_blocked_this_week_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The singular variant uses a plural verb form ("wurden") with a singular subject.
     - Current: `[one] %1$d Tracker wurden in dieser Woche blockiert`
     - Source: `{$quantity ->} [one] %1$d tracker blocked this week [other] %1$d trackers blocked this week`
     - Suggest: `[one] %1$d Tracker wurde in dieser Woche blockiert`
     - In the [one] case the subject is a single tracker, so the verb must be "wurde", not "wurden".
-- `translations_bottom_sheet_info_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Grammatical error: "Zu Sicherstellung" should be "Zur Sicherstellung".
-    - Current: `Zu Sicherstellung Ihrer Privatsphäre`
-    - Source: `For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s`
-    - Suggest: `Zur Sicherstellung Ihrer Privatsphäre`
-    - "Sicherstellung" is feminine dative, requiring "zur", not "zu".
-- `uninstall_survey_button_label` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The verb "deinstallieren" is incorrectly capitalized.
-    - Current: `Feedback übermitteln und Deinstallieren`
-    - Source: `Submit feedback and uninstall`
-    - Suggest: `Feedback übermitteln und deinstallieren`
-    - "deinstallieren" here is an infinitive verb parallel to "übermitteln", not a noun, so it must be lowercase.
 
 ### D. Terminology, register & consistency
 
@@ -473,26 +526,11 @@ _Nothing in this category._
     - Source: `Tracking Protection is on`
     - Suggest: `Der Tracking-Schutz ist an`
     - The same source term on the same surface (tracking protection toolbar icon content descriptions) is rendered two different ways; the adjacent strings use "Tracking-Schutz".
-- `mozac_feature_addons_permissions_data_collection_browsingActivity_short_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "browsing activity" is rendered as "Surfaktivität" in the short description but as "Surf-Aktivität" in the corresponding long description.
-    - Current: `Surfaktivität`
-    - Source: `browsing activity`
-    - Suggest: `Surf-Aktivität`
-    - The same source term must use the same German term across the short/long description pair for the same permission (mozac_feature_addons_permissions_data_collection_browsingActivity_long_description uses "Surf-Aktivität").
-- `mozac_feature_addons_permissions_declarative_net_request_feedback_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Permission description rendered as an imperative sentence addressed to the user instead of an infinitive permission label.
-    - Current: `Lesen Sie Ihre Surf-Chronik`
-    - Source: `Read your browsing history`
-    - Suggest: `Ihre Surf-Chronik lesen`
-    - The source "Read your browsing history" is a permission description in a list; all sibling permission strings use the infinitive form ("Datenschutzeinstellungen lesen und ändern", "Auf Browsertabs zugreifen"). The current text reads as a command to the user ("You read your browsing history"), which reverses who performs the action.
 - `mozac_feature_addons_permissions_history_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Same source string "Access browsing history" is translated inconsistently with its _for_update counterpart ("Auf die Surf-Chronik zugreifen").
     - Current: `Auf Chronik zugreifen`
     - Source: `Access browsing history`
     - Suggest: `Auf die Surf-Chronik zugreifen`
     - mozac_feature_addons_permissions_history_description_for_update uses "Auf die Surf-Chronik zugreifen" for the identical source text; the bare "Auf Chronik zugreifen" also lacks the article.
-- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Permission description uses an imperative sentence addressed to the user instead of the infinitive style used by all sibling permission strings.
-    - Current: `Laden Sie KI-Modelle herunter und führen Sie diese auf Ihrem Gerät aus`
-    - Source: `Download and run AI models on your device`
-    - Suggest: `KI-Modelle herunterladen und auf Ihrem Gerät ausführen`
-    - The source is a permission description listing what the extension may do ("Download and run AI models on your device"), and every other description in this file, including the _for_update variant of the same string, uses the infinitive form. Here it reads as an instruction to the user.
 - `mozac_feature_addons_soft_blocked_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Inconsistent preposition for installation in the app: "auf %2$s installiert" vs. "in %2$s installiert" in the parallel blocklist string.
     - Current: `kann nicht auf %2$s installiert werden`
     - Source: `%1$s is restricted and can’t be installed on %2$s.`
@@ -503,11 +541,6 @@ _Nothing in this category._
     - Source: `Duplicate tab`
     - Suggest: `Tab duplizieren`
     - Source is "Duplicate tab"; German Firefox uses "duplizieren", not "klonen".
-- `debug_drawer_logins_add_login_button` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Button label translated as an imperative sentence instead of an infinitive label.
-    - Current: `Fügen Sie gefälschte Zugangsdaten für diese Domain hinzu`
-    - Source: `Add a fake login for this domain`
-    - Suggest: `Gefälschte Zugangsdaten für diese Domain hinzufügen`
-    - Per the developer comment this is a button label; German UI convention (and the sibling debug drawer buttons) use the infinitive form.
 - `download_clear_search_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Clear" for the search-field clear button is rendered as "Leeren" instead of the established "Löschen"/"Eingabe löschen".
     - Current: `Leeren`
     - Source: `Clear`
@@ -518,11 +551,6 @@ _Nothing in this category._
     - Source: `%1$s • paused`
     - Suggest: `%1$s • angehalten`
     - The same source term "paused" in the same downloads-list context must be rendered consistently; download_item_paused_description uses "angehalten".
-- `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "the site" is rendered as "Webseite" although the same string and surrounding strings use "Website" for site.
-    - Current: `vorübergehend für die Webseite deaktiviert`
-    - Source: `However, it’s also possible that an attacker is involved. If you continue to the website, you should not enter any sensitive info. If you continue, HTTPS-Only mode will be turned off temporarily for the site.`
-    - Suggest: `vorübergehend für die Website deaktiviert`
-    - The source uses "website"/"site" consistently; earlier in the same string it is translated as "Website". "Webseite" means a single page and is inconsistent.
 - `etp_suspected_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Fingerprinters" is rendered inconsistently: "Identifizierer (Fingerprinter)" in the titles but plain "Fingerprinter" in the description on the same settings surface.
     - Current: `Vermutete Identifizierer (Fingerprinter)`
     - Source: `Suspected Fingerprinters`
@@ -538,11 +566,6 @@ _Nothing in this category._
     - Source: `Share feedback`
     - Suggest: `Feedback geben`
     - The link label and its own content description (firefox_labs_share_feedback_content_description, "Geben Sie Feedback für %s.") describe the same control but use different terminology for "share feedback".
-- `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Shortcuts" (home screen shortcuts) is rendered as "Tastenkombinationen" (keyboard shortcuts), inconsistent with "Verknüpfungen" used elsewhere.
-    - Current: `Alle Tastenkombinationen anzeigen`
-    - Source: `Show all shortcuts`
-    - Suggest: `Alle Verknüpfungen anzeigen`
-    - The same feature is called "Verknüpfungen" in homepage_shortcuts_title, browser_menu_add_to_shortcuts etc.; "Tastenkombinationen" means keyboard shortcuts and is wrong for the shortcuts home screen section.
 - `nova_onboarding_customize_prompt_positive_button` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Button label rendered as a full sentence instead of a short imperative action label.
     - Current: `Beginnen Sie mit den Anpassungen`
     - Source: `Start customizing`
@@ -566,59 +589,21 @@ _Nothing in this category._
     - Source: `Loading`
     - Suggest: `Wird geladen`
     - Source "Loading" has no ellipsis; this is a screen-reader announcement.
-- `mozac_feature_addons_optional_permissions_with_data_collection_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Dialog title adds a trailing period not present in the source.
-    - Current: `%1$s bittet um zusätzliche Einstellungen.`
-    - Source: `%1$s requests additional settings`
-    - Suggest: `%1$s bittet um zusätzliche Einstellungen`
-    - Source "%1$s requests additional settings" is a dialog title without final punctuation.
-- `mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Dialog title adds a trailing period not present in the source.
-    - Current: `%1$s bittet um zusätzliche Datenerfassung.`
-    - Source: `%1$s requests additional data collection`
-    - Suggest: `%1$s bittet um zusätzliche Datenerfassung`
-    - Source "%1$s requests additional data collection" is a dialog title without final punctuation.
-- `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — `mozac_feature_findindpage_dismiss` uses straight double quotes
-    - Current: `"Seite durchsuchen" deaktivieren`
-    - Source: `Dismiss find in page`
-    - Suggest: `„Seite durchsuchen“ schließen`
-    - The locale's quote convention is `german-double` (22 occurrences).
-- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray straight double quote before the German opening quotation mark.
-    - Current: `von "„%1$s“ hochladen`
-    - Source: `Make sure you trust this site before you upload from “%1$s”.`
-    - Suggest: `von „%1$s“ hochladen`
-    - The source has only one pair of curly quotes around %1$s; the German adds an extra stray straight quote character.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — Stray space before the closing link markup after "Nutzungsbedingungen".
-    - Current: `Nutzungsbedingungen { </a> }`
-    - Source: `Logging in to %1$s with a %2$s account is subject to their <a href="%3$s">Privacy Policy{ </a> } and <a href="%4$s">Terms of Service{ </a> }`
-    - Suggest: `Nutzungsbedingungen{ </a> }`
-    - The source has no space between the link text and the closing tag placeholder ("Terms of Service{ </a> }"); the added space breaks the link text/markup alignment.
-- `certificate_warning_push_notification_pnw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — A final period was added to a notification title that has none in the source.
-    - Current: `Sie verwenden eine veraltete Firefox-Version.`
-    - Source: `You’re on an older version of Firefox`
-    - Suggest: `Sie verwenden eine veraltete Firefox-Version`
-    - The English title "You’re on an older version of Firefox" has no terminal punctuation; other titles in this batch also omit it.
-- `debug_drawer_autofill_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Hyphen used as a separating dash instead of the house en dash.
-    - Current: `Automatisches Ausfüllen - Werkzeuge`
-    - Source: `Autofill tools`
-    - Suggest: `Automatisches Ausfüllen – Werkzeuge`
-    - The locale convention is the en dash for parenthetical/separating dashes; a hyphen with spaces is incorrect German typography.
-- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The full stop at the end of the source sentence is missing.
-    - Current: `Diese Grafik konnte nicht geladen werden`
-    - Source: `Couldn’t load this image.`
-    - Suggest: `Diese Grafik konnte nicht geladen werden.`
-    - The source "Couldn’t load this image." ends with a full stop, and this snackbar message is a complete sentence.
-- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Straight/English quotes used instead of German quotation marks.
-    - Current: `Lesezeichen in “%s” gespeichert`
-    - Source: `Bookmarks saved in “%s”`
-    - Suggest: `Lesezeichen in „%s“ gespeichert`
-    - The de convention is german-double quotes („…“), as used elsewhere (e.g. preference_summary_delete_browsing_data_on_quit_2).
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (8)
 
-_Nothing dismissed._
+- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): "Download-Link für %1$s" correctly means the download link for the app; the meaning is not reversed.
+- `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+- `mozac_protections_dashboard_empty_subtitle` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): 'Sie werden sie hier sehen.' correctly means 'You will see them here' with formal 'Sie' as subject; the meaning is not reversed.
+- `preferences_downloads_delete_from_device_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>Sounds to me as if this is a deletion process that has been coompleted.</p>
+- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>Sounds to me as if this is a deletion process that has been coompleted.</p>
+- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+- `terms_of_use_prompt_body_line_two_alternative_link` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+- `terms_of_use_prompt_postpone` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): "Später erinnern" is a standard, idiomatic German button label (infinitive style used throughout German UI); no object is required.
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
 
@@ -632,6 +617,45 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (42)
 
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-09-10
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_browser_errorpages_no_internet_message_2` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_optional_permissions_with_data_collection_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_data_collection_browsingActivity_short_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_declarative_net_request_feedback_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_findindpage_dismiss` — `mozilla-mobile/android-components/components/feature/findinpage/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_prompt_folder_upload_confirm_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `alternative_app_icon_option_momo_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `certificate_warning_homepage_card_hcw3_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `certificate_warning_push_notification_pnw2_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `change_file_extension_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `debug_drawer_autofill_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `debug_drawer_logins_add_login_button` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `lens_camera_image_load_failed_v2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `nova_onboarding_marketing_body_3` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `nova_onboarding_marketing_body_line_two` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `nova_onboarding_notifications_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `pbm_authentication_leave_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `pdf_tools_signature_adding_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `preference_doh_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `preference_enhanced_tracking_protection_custom_cookies_5` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `preferences_android_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `translation_settings_always_download` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `translations_bottom_sheet_info_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03
+- `uninstall_survey_button_label` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — fixed 2026-11-03

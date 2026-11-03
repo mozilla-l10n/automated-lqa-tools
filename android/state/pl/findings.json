@@ -266,6 +266,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Zatwierdź zmiany",
+  "dismissed_because": "",
+  "fid": "936bcf07153e",
+  "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-03",
+  "impact": 2,
+  "last_seen": "2026-11-03",
+  "locale": "pl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says clicking this button opens an update confirmation dialog that lists the required changes. The approval itself happens later, through the dialog's \"Zaktualizuj\" button. \"Zatwierdź\" (approve) tells the user that clicking this button accepts the changes, when it only shows them for review.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5028fe26",
+  "string_id": "mozac_feature_addons_update_review_changes_button",
+  "suggest": "Przejrzyj zmiany",
+  "summary": "The button label says \"Approve changes\" when the source says \"Review changes\"; the button only opens a dialog listing the changes.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "Czy anulować pobieranie plików?",
   "dismissed_because": "",
   "fid": "0adda8a48884",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bc6fbd15dac8` |
-| **Previous run** | 2026-11-02 @ `a2d8921e4c16` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
+| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 47 of 2,583 |
+| **Strings reviewed this run** | 21 of 2,604 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for sk: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — "Pop-ups" is rendered as "kontextové informácie" (contextual information) instead of pop-up windows, and doesn't match the term used in the sibling string.
-    - Current: `ani kontextové informácie o nich`
-    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
-    - Suggest: `ani kontextové okná o nich`
-    - The source says "pop-ups about them". "Kontextové informácie" means contextual information, not pop-ups. The sibling string ai_controls_block_ai_description translates the same concept as "kontextové okná".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,583 |
-| Missing strings | 21 |
+| Strings | 2,604 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**21 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-sk/strings.xml` — 14
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sk/strings.xml` — 7
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
