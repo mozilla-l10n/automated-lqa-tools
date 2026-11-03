@@ -1,0 +1,500 @@
+{
+ "project": "firefox",
+ "locale": "sl",
+ "suggestions": [
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "appmenu-fxa-sign-in-promo-heading2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "appmenu-fxa-sign-in-promo-heading2"
+    ]
+   },
+   "fids": [
+    "266faf5932cd"
+   ],
+   "findings": [
+    "\"everywhere\" is translated as \"kjerkoli\" (anywhere) instead of \"povsod\" (everywhere)."
+   ],
+   "source": "Sync your data everywhere",
+   "original": "Sinhronizirajte svoje podatke kjerkoli",
+   "text": "Sinhronizirajte svoje podatke povsod",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "browser/browser/backupSettings.ftl",
+   "string_id": "backup-file-moz-browser-restore-step-2-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backupSettings.ftl",
+    "key": [
+     "backup-file-moz-browser-restore-step-2-1"
+    ]
+   },
+   "fids": [
+    "5522b358a976"
+   ],
+   "findings": [
+    "`backup-file-moz-browser-restore-step-2-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”"
+   ],
+   "source": "Click “Restore your data” and select this file",
+   "original": "Kliknite \"Obnovi podatke\" in izberite to datoteko",
+   "text": "Kliknite \"Obnovite podatke\" in izberite to datoteko",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "browser/browser/backupSettings.ftl",
+   "string_id": "backup-file-other-browser-restore-step-3-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backupSettings.ftl",
+    "key": [
+     "backup-file-other-browser-restore-step-3-1"
+    ]
+   },
+   "fids": [
+    "b94bebf0f67d"
+   ],
+   "findings": [
+    "`backup-file-other-browser-restore-step-3-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”"
+   ],
+   "source": "Click “Restore your data” and select this file",
+   "original": "Kliknite \"Obnovi podatke\" in izberite to datoteko",
+   "text": "Kliknite \"Obnovite podatke\" in izberite to datoteko",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "browser/browser/backupSettings.ftl",
+   "string_id": "restore-from-backup-profiles-disabled-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backupSettings.ftl",
+    "key": [
+     "restore-from-backup-profiles-disabled-message"
+    ]
+   },
+   "fids": [
+    "d92fa6c915e7"
+   ],
+   "findings": [
+    "Double space before \"zamenjali\"."
+   ],
+   "source": "This will replace all your current { -brand-short-name } data with your backup.",
+   "original": "S tem se bodo vsi trenutni podatki { -brand-short-name(sklon: \"rodilnik\") }  zamenjali s podatki iz varnostne kopije.",
+   "text": "S tem se bodo vsi trenutni podatki { -brand-short-name(sklon: \"rodilnik\") } zamenjali s podatki iz varnostne kopije.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "decoder-doctor-unsupported-libavcodec-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "decoder-doctor-unsupported-libavcodec-message"
+    ]
+   },
+   "fids": [
+    "a533821dc21b"
+   ],
+   "findings": [
+    "\"is not supported\" is translated as \"is not updated\"."
+   ],
+   "source": "libavcodec may be vulnerable or is not supported, and should be updated to play video.",
+   "original": "libavcodec je morda ranljiv ali ni posodobljen. Posodobite ga za predvajanje videoposnetkov.",
+   "text": "libavcodec je morda ranljiv ali ni podprt. Posodobite ga za predvajanje videoposnetkov.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "browser/browser/genai.ftl",
+   "string_id": "genai-settings-chat-gemini-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/genai.ftl",
+    "key": [
+     "genai-settings-chat-gemini-links"
+    ]
+   },
+   "fids": [
+    "800da1b73e18"
+   ],
+   "findings": [
+    "Last coordinated item not in instrumental to match \"se strinjate z … in …\". \"…in <a>obvestilo o zasebnosti…</a>\" → \"…in <a>obvestilom…</a>\"."
+   ],
+   "source": "By choosing Google Gemini, you agree to the <a data-l10n-name=\"link1\">Google Terms of Service</a>, <a data-l10n-name=\"link2\">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name=\"link3\">Gemini Apps Privacy Notice</a>.",
+   "original": "Z izbiro Google Gemini se strinjate z <a data-l10n-name=\"link1\">Googlovimi pogoji uporabe</a>, <a data-l10n-name=\"link2\">pravilnikom o prepovedani uporabi generativne UI</a> in <a data-l10n-name=\"link3\">obvestilo o zasebnosti Gemini Apps</a>.",
+   "text": "Z izbiro Google Gemini se strinjate z <a data-l10n-name=\"link1\">Googlovimi pogoji uporabe</a>, <a data-l10n-name=\"link2\">pravilnikom o prepovedani uporabi generativne UI</a> in <a data-l10n-name=\"link3\">obvestilom o zasebnosti Gemini Apps</a>.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-firefox-desert-light",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-firefox-desert-light"
+    ]
+   },
+   "fids": [
+    "e1d60b45be3f"
+   ],
+   "findings": [
+    "\"A fox running\" translated as \"a fox sitting\"."
+   ],
+   "source": "A fox running across a light desert",
+   "original": "Lisica, ki sedi v svetli puščavi",
+   "text": "Lisica, ki teče po svetli puščavi",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-your-images-folder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-your-images-folder"
+    ]
+   },
+   "fids": [
+    "b62fc607c2cf"
+   ],
+   "findings": [
+    "Accessible name changed from \"Your images, wallpapers that you have saved\" to \"Your images and wallpapers that you have saved\"."
+   ],
+   "source": "aria-label: Your images, wallpapers that you have saved",
+   "original": "Vaše slike in ozadja, ki ste jih shranili",
+   "text": "Vaše slike, ozadja, ki ste jih shranili",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-focused-tabs-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-focused-tabs-subtitle"
+    ]
+   },
+   "fids": [
+    "4c61bcc8f55a"
+   ],
+   "findings": [
+    "onboarding \"preizkusiti\" vs \"preskusiti\" — browser/browser/newtab/onboarding.ftl — onboarding-focused-tabs-subtitle / onboarding-genai-sidebar-title use \"preskusi(te)\"; most siblings use the more common \"Preizkusite\". → align. (both forms valid; low priority.)"
+   ],
+   "source": "For a streamlined view that can help you stay focused, try your tabs on the side. Or keep it classic with tabs on the top. Switch anytime.",
+   "original": "Za poenostavljen pogled, ki vam pomaga ostati osredotočen, preskusite zavihke ob strani. Ali pa naj bo klasika z zavihki na vrhu. Preklopite lahko kadarkoli.",
+   "text": "Za poenostavljen pogled, ki vam pomaga ostati osredotočen, preizkusite zavihke ob strani. Ali pa naj bo klasika z zavihki na vrhu. Preklopite lahko kadarkoli.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-genai-sidebar-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-genai-sidebar-title"
+    ]
+   },
+   "fids": [
+    "f4ac4e74d9a2"
+   ],
+   "findings": [
+    "onboarding \"preizkusiti\" vs \"preskusiti\" — browser/browser/newtab/onboarding.ftl — onboarding-focused-tabs-subtitle / onboarding-genai-sidebar-title use \"preskusi(te)\"; most siblings use the more common \"Preizkusite\". → align. (both forms valid; low priority.)"
+   ],
+   "source": "Try an AI chatbot in the sidebar",
+   "original": "Preskusite UI-klepetalnik v stranski vrstici",
+   "text": "Preizkusite UI-klepetalnik v stranski vrstici",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-PictureInPicture",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-PictureInPicture"
+    ]
+   },
+   "fids": [
+    "c0a1645cb4bb"
+   ],
+   "findings": [
+    "Missing sentence-final period (every other policy description ends with one)."
+   ],
+   "source": "Enable or disable Picture-in-Picture.",
+   "original": "Omogoči ali onemogoči sliko v sliki",
+   "text": "Omogoči ali onemogoči sliko v sliki.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "privacy-metrics-cookies",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "privacy-metrics-cookies"
+    ]
+   },
+   "fids": [
+    "2beceacac546"
+   ],
+   "findings": [
+    "privacy-metrics-cookies ([other]) — browser/browser/protections.ftl — \"{ $count } sledilnih piškotov\" → \"…piškotkov\" (genitive plural of piškotek)."
+   ],
+   "source": "{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies",
+   "original": "{ $count } sledilnih piškotov",
+   "text": "{ $count } sledilnih piškotkov",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "devtools/client/debugger.properties",
+   "string_id": "outline.placeholder.functions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/debugger.properties",
+    "key": [
+     "outline.placeholder.functions"
+    ]
+   },
+   "fids": [
+    "ee0aa063a196"
+   ],
+   "findings": [
+    "\"Filter functions\" (verb + object) translated as a noun phrase \"Filter funkcij\" (filter of functions)."
+   ],
+   "source": "Filter functions",
+   "original": "Filter funkcij",
+   "text": "Filtriraj funkcije",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-not-display-block-on-floated-fix",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-not-display-block-on-floated-fix"
+    ]
+   },
+   "fids": [
+    "9a610dfbe9d0"
+   ],
+   "findings": [
+    "devtools/client/tooltips.ftl — Missing space before markup: \"odstraniti<strong>float</strong>\" → \"odstraniti <strong>float</strong>\" (renders \"odstranitifloat\")."
+   ],
+   "source": "Try removing <strong>float</strong> or adding <strong>display:block</strong>. { learn-more }",
+   "original": "Poskusite odstraniti<strong>float</strong> ali dodati <strong>display:block</strong>. { learn-more }",
+   "text": "Poskusite odstraniti <strong>float</strong> ali dodati <strong>display:block</strong>. { learn-more }",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "E",
+   "file": "netwerk/netwerk/necko.ftl",
+   "string_id": "network-connection-status-connecting",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "netwerk/netwerk/necko.ftl",
+    "key": [
+     "network-connection-status-connecting"
+    ]
+   },
+   "fids": [
+    "d83d0d8aaa5a"
+   ],
+   "findings": [
+    "netwerk/netwerk/necko.ftl — Stray space before the ellipsis: \"{ $host } …\" → \"{ $host }…\" (siblings looking-up, sending-request, waiting are correct)."
+   ],
+   "source": "Connecting to { $host }…",
+   "original": "Povezovanje na stran { $host } …",
+   "text": "Povezovanje na stran { $host }…",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "pk11-bad-password",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "pk11-bad-password"
+    ]
+   },
+   "fids": [
+    "e19838d92156"
+   ],
+   "findings": [
+    "security/manager/security/certificates/certManager.ftl — Nonstandard participle \"Vnešeno/vnešeno\" → \"Vneseno/vneseno\" (also inconsistent with pippki-incorrect-pw, which is correct)."
+   ],
+   "source": "The password entered was incorrect.",
+   "original": "Vnešeno geslo je napačno.",
+   "text": "Vneseno geslo je napačno.",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutNetworking.ftl",
+   "string_id": "about-networking-ssl-tokens-new",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutNetworking.ftl",
+    "key": [
+     "about-networking-ssl-tokens-new"
+    ]
+   },
+   "fids": [
+    "37edf729bd87"
+   ],
+   "findings": [
+    "\"New this session\" translated with wrong case, producing ungrammatical \"Nov to sejo\"."
+   ],
+   "source": "alt: New this session\ntitle: New this session",
+   "original": "Nov to sejo",
+   "text": "Nov v tej seji",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "B",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-feature-annotate-heading",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-feature-annotate-heading"
+    ]
+   },
+   "fids": [
+    "2a0ca95212cd"
+   ],
+   "findings": [
+    "\"Mark up PDFs\" is rendered as \"Označujte dokumente\", dropping the PDF qualifier used consistently in the surrounding strings."
+   ],
+   "source": "Mark up PDFs",
+   "original": "Označujte dokumente",
+   "text": "Označujte dokumente PDF",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-03",
+   "group": "D",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-ti",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-ti"
+    ]
+   },
+   "fids": [
+    "bb9eec41cd98"
+   ],
+   "findings": [
+    "Tigrinya given the same name as Tigre (language-name-tig = \"tigrajščina\"). → \"tigrinjščina\" (must differ from Tigre)."
+   ],
+   "source": "Tigrinya",
+   "original": "tigrajščina",
+   "text": "tigrinjščina",
+   "status": "pending",
+   "status_date": "2026-11-03",
+   "comment": ""
+  }
+ ]
+}
