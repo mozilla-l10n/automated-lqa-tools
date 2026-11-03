@@ -72,6 +72,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Il limite si azzera il primo giorno di ogni mese.",
+  "dismissed_because": "",
+  "fid": "0758609e5a70",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-03",
+  "impact": 2,
+  "last_seen": "2026-11-03",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source \"Resets on the first of every month\" and the developer comment say the user's free monthly VPN data resets on the first of each month. That means the usage counter goes back to zero and the allowance renews. \"Azzerare\" means to set to zero, so \"il limite si azzera\" tells the user their limit becomes zero. That is the opposite of a fresh allowance. Better wording would make the counter the subject of \"si azzera\", or say the limit renews (\"il limite si rinnova\").",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5576ee19",
+  "string_id": "VPN.Settings.DataLimit.AccessibilityValue.v161",
+  "suggest": "Il conteggio si azzera il primo giorno di ogni mese.",
+  "summary": "\"Il limite si azzera\" says the monthly limit is set to zero, when it is the data used that resets each month.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Rétro 2004",

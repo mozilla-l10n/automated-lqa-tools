@@ -1,15 +1,15 @@
 # Firefox for iOS — l10n QA
 
-- **Generated:** 2026-11-02
+- **Generated:** 2026-11-03
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,822 raised, 221 fixed (5%), 2,309 open
-- **Closed by a person:** 37 dismissed, 52 suppressed by rule
+- **Findings:** 3,823 raised, 261 fixed (6%), 2,262 open
+- **Closed by a person:** 45 dismissed, 52 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
 ## Read these first
 
-### Reads as a deliberate edit (21)
+### Reads as a deliberate edit (20)
 
 The translation makes the product assert something the en-US never said. Nothing here says the change was intended — that cannot be read off the text, which is exactly the problem, because a user cannot read it off either.
 
@@ -25,10 +25,6 @@ The translation makes the product assert something the en-US never said. Nothing
     - Translation drops "only collect what we need to provide" and "for everyone", asserting a different claim about data collection.
     - Current: `Mozilla sbírá jenom informace potřebné pro vylepšování Firefoxu.`
     - Suggest: `Mozilla se snaží sbírat jen data, která potřebuje k poskytování a vylepšování Firefoxu pro všechny.`
-- **`de`** `TabToolbar.Accessibility.DataClearance.v122` — `Shared/Supporting Files/en-US.lproj/TabToolbar.strings`
-    - "Data Clearance" (deleting private session data) is translated as "Datenfreigabe", which means data sharing/release.
-    - Current: `Datenfreigabe`
-    - Suggest: `Datenlöschung`
 - **`el`** `This action will clear all of your private data, including history from your synced devices.` — `Shared/en-US.lproj/ClearHistoryConfirm.strings`
     - Because of how the sentence is built, the Greek says all private data (and history) is deleted from synced devices, not local private data plus history from synced devices.
     - Current: `Αυτή η ενέργεια θα διαγράψει όλα τα ιδιωτικά σας δεδομένα, καθώς και το ιστορικό, από τις συγχρονισμένες συσκευές σας.`
@@ -109,46 +105,46 @@ The value does not render as intended: a blank string, broken markup, a variable
     - Current: `Mit %3$@ auf %2$@ übersetzen?`
     - Suggest: `Mit %3$@ in %2$@ übersetzen?`
 
-### Wrong content — impact 2 (1060)
+### Wrong content — impact 2 (1047)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox_ios.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,245 | 728 | **51** | 12 | 0 | 0 | 0 |
-| [cs](cs/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **91** | 53 | 2 | 1 | 0 |
-| [da](da/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,915 | 58 | **35** | 7 | 0 | 0 | 0 |
-| [de](de/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **87** | 30 | 2 | 0 | 0 |
-| [el](el/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **47** | 7 | 1 | 0 | 0 |
-| [en-CA](en-CA/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **2** | 0 | 16 | 0 | 0 |
-| [en-GB](en-GB/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **9** | 4 | 3 | 0 | 50 |
-| [es-AR](es-AR/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **96** | 41 | 4 | 0 | 0 |
-| [es-ES](es-ES/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,848 | 125 | **57** | 31 | 0 | 1 | 0 |
-| [es-MX](es-MX/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,896 | 77 | **125** | 65 | 1 | 0 | 0 |
-| [fa](fa/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,915 | 58 | **406** | 207 | 66 | 0 | 0 |
-| [fi](fi/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **41** | 18 | 0 | 0 | 0 |
-| [fr](fr/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **26** | 19 | 20 | 7 | 0 |
-| [hi-IN](hi-IN/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,876 | 97 | **15** | 12 | 79 | 0 | 0 |
-| [hu](hu/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **89** | 37 | 0 | 0 | 0 |
-| [id](id/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **93** | 34 | 0 | 0 | 0 |
-| [it](it/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **0** | 0 | 20 | 22 | 2 |
-| [ja](ja/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **108** | 59 | 0 | 0 | 0 |
-| [ko](ko/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **96** | 44 | 0 | 0 | 0 |
-| [nb-NO](nb-NO/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **31** | 5 | 0 | 0 | 0 |
-| [nl](nl/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **52** | 22 | 0 | 0 | 0 |
-| [pl](pl/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **61** | 36 | 2 | 4 | 0 |
-| [pt-BR](pt-BR/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **50** | 32 | 3 | 2 | 0 |
-| [pt-PT](pt-PT/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **66** | 17 | 0 | 0 | 0 |
-| [ro](ro/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **42** | 22 | 0 | 0 | 0 |
-| [ru](ru/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **88** | 38 | 1 | 0 | 0 |
-| [sk](sk/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **36** | 14 | 0 | 0 | 0 |
-| [sl](sl/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,896 | 77 | **79** | 34 | 0 | 0 | 0 |
-| [sv-SE](sv-SE/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **49** | 17 | 0 | 0 | 0 |
-| [th](th/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,885 | 88 | **36** | 18 | 0 | 0 | 0 |
-| [tr](tr/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **82** | 44 | 0 | 0 | 0 |
-| [vi](vi/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,927 | 46 | **68** | 32 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,909 | 64 | **62** | 35 | 1 | 0 | 0 |
-| [zh-TW](zh-TW/firefox_ios.md) | 2026-11-02 | incremental | `14a6f5ae` | 1,973 | 0 | **33** | 15 | 0 | 0 | 0 |
+| [ar](ar/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,245 | 735 | **51** | 12 | 0 | 0 | 0 |
+| [cs](cs/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **91** | 53 | 2 | 1 | 0 |
+| [da](da/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,915 | 65 | **35** | 7 | 0 | 0 | 0 |
+| [de](de/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **39** | 16 | 42 | 8 | 0 |
+| [el](el/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **47** | 7 | 1 | 0 | 0 |
+| [en-CA](en-CA/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **2** | 0 | 16 | 0 | 0 |
+| [en-GB](en-GB/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **9** | 4 | 3 | 0 | 50 |
+| [es-AR](es-AR/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **96** | 41 | 4 | 0 | 0 |
+| [es-ES](es-ES/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,848 | 132 | **57** | 31 | 0 | 1 | 0 |
+| [es-MX](es-MX/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,896 | 84 | **125** | 65 | 1 | 0 | 0 |
+| [fa](fa/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,915 | 65 | **406** | 207 | 66 | 0 | 0 |
+| [fi](fi/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **41** | 18 | 0 | 0 | 0 |
+| [fr](fr/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **26** | 19 | 20 | 7 | 0 |
+| [hi-IN](hi-IN/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,876 | 104 | **15** | 12 | 79 | 0 | 0 |
+| [hu](hu/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **89** | 37 | 0 | 0 | 0 |
+| [id](id/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **93** | 34 | 0 | 0 | 0 |
+| [it](it/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **1** | 1 | 20 | 22 | 2 |
+| [ja](ja/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **108** | 59 | 0 | 0 | 0 |
+| [ko](ko/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **96** | 44 | 0 | 0 | 0 |
+| [nb-NO](nb-NO/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **31** | 5 | 0 | 0 | 0 |
+| [nl](nl/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **52** | 22 | 0 | 0 | 0 |
+| [pl](pl/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **61** | 36 | 2 | 4 | 0 |
+| [pt-BR](pt-BR/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **50** | 32 | 3 | 2 | 0 |
+| [pt-PT](pt-PT/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **66** | 17 | 0 | 0 | 0 |
+| [ro](ro/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **42** | 22 | 0 | 0 | 0 |
+| [ru](ru/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **88** | 38 | 1 | 0 | 0 |
+| [sk](sk/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **36** | 14 | 0 | 0 | 0 |
+| [sl](sl/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,896 | 84 | **79** | 34 | 0 | 0 | 0 |
+| [sv-SE](sv-SE/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **49** | 17 | 0 | 0 | 0 |
+| [th](th/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,885 | 95 | **36** | 18 | 0 | 0 | 0 |
+| [tr](tr/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,973 | 7 | **82** | 44 | 0 | 0 | 0 |
+| [vi](vi/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,927 | 53 | **68** | 32 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,909 | 71 | **62** | 35 | 1 | 0 | 0 |
+| [zh-TW](zh-TW/firefox_ios.md) | 2026-11-03 | incremental | `4006ca05` | 1,980 | 0 | **33** | 15 | 0 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

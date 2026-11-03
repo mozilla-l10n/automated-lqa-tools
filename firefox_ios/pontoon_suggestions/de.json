@@ -25,9 +25,13 @@
    "source": "%@ is asking to download a file and add an event to your calendar.",
    "original": "%@ bittet darum, eine Datei herunterzuladen und einen Termin in Ihrem Kalender hinzuzufügen.",
    "text": "%@ bittet darum, eine Datei herunterzuladen und einen Termin zu Ihrem Kalender hinzuzufügen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373962,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=313487",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -52,9 +56,13 @@
    "source": "Save sites as you browse. We’ll also grab bookmarks from other synced devices.",
    "original": "Speichern Sie Websites während sie surfen. Wir holen uns auch Lesezeichen von anderen synchronisierten Geräten.",
    "text": "Speichern Sie Websites, während Sie surfen. Wir holen uns auch Lesezeichen von anderen synchronisierten Geräten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373963,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=313525",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -79,9 +87,13 @@
    "source": "Save sites as you browse. Sign in to grab bookmarks from other synced devices.",
    "original": "Speichern Sie Websites während Sie surfen. Melden Sie sich an, um Lesezeichen von anderen synchronisierten Geräten zu holen.",
    "text": "Speichern Sie Websites, während Sie surfen. Melden Sie sich an, um Lesezeichen von anderen synchronisierten Geräten zu holen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373964,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=315279",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -106,9 +118,13 @@
    "source": "DESKTOP BOOKMARKS",
    "original": "Desktop-Lesezeichen",
    "text": "DESKTOP-LESEZEICHEN",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373965,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=314268",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -133,9 +149,13 @@
    "source": "To save and automatically fill passwords, enable Face ID, Touch ID, or a device passcode.",
    "original": "Um Passwörter zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätepasssatz.",
    "text": "Um Passwörter zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätecode.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373966,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=292067",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -160,9 +180,13 @@
    "source": "To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.",
    "original": "Um Kreditkarten zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätepasssatz.",
    "text": "Um Kreditkarten zu speichern und automatisch auszufüllen, aktivieren Sie Face ID, Touch ID oder einen Gerätecode.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373967,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=301277",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -187,9 +211,13 @@
    "source": "Proceed to %@ (Risky)",
    "original": "Weiter zu %@ (risikant)",
    "text": "Weiter zu %@ (riskant)",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373968,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=328569",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -214,9 +242,14 @@
    "source": "Be careful. Something doesn’t look right.",
    "original": "Seien Sie vorsichtig. Irgendetwas sieht nicht gut aus.",
    "text": "Seien Sie vorsichtig. Irgendetwas stimmt hier nicht.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "dismissal": "NativeErrorPage.BadCertDomain.TitleLabel.v149 @ Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; likely reason (inferred): The original was probably already acceptable: \"sieht nicht gut aus\" is a correct and closer rendering of \"doesn't look right\", and the wording difference from a separate generic-error string is a style variation, not an error.",
+   "pontoon_pk": 11621682,
+   "pontoon_url": "",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-02",
@@ -241,9 +274,13 @@
    "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
    "original": "Versuchen Sie, auf einem anderen Gerät eine Verbindung herzustellen. Überprüfen Sie Ihr Modem oder Router. Trennen Sie die WLAN-Verbindung und stellen Sie die Verbindung wieder her.",
    "text": "Versuchen Sie, auf einem anderen Gerät eine Verbindung herzustellen. Überprüfen Sie Ihr Modem oder Ihren Router. Trennen Sie die WLAN-Verbindung und stellen Sie die Verbindung wieder her.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373969,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=309493",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -268,9 +305,13 @@
    "source": "Unable to connect",
    "original": "Fehler: Verbindung fehlgeschlagen",
    "text": "Verbindung fehlgeschlagen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373970,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=337245",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -295,9 +336,13 @@
    "source": "Notifications help you stay safer with %@",
    "original": "Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen",
    "text": "Benachrichtigungen helfen Ihnen, mit %@ noch sicherer zu surfen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373971,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=327786",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -322,9 +367,13 @@
    "source": "Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.",
    "original": "Ihre Lesezeichen, Passwörter und mehr werden mit jedem Gerät synchronisiert. Alles ist durch Verschlüsselung geschützt, sodass nur Sie darauf zugreifen können.",
    "text": "Ihre Lesezeichen, Passwörter und mehr werden auf allen Geräten synchronisiert. Alles ist durch Verschlüsselung geschützt, sodass nur Sie darauf zugreifen können.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373972,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=324407",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -349,9 +398,13 @@
    "source": "Load sites lightning fast\nAutomatic tracking protection\nSync on all your devices",
    "original": "Laden Sie Websites blitzschnell\nAutomatischer Tracking-Schutz\nSynchronisiere auf allen deinen Geräten",
    "text": "Laden Sie Websites blitzschnell\nAutomatischer Tracking-Schutz\nSynchronisieren Sie auf allen Ihren Geräten",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373973,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=320464",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -376,9 +429,13 @@
    "source": "Say goodbye to creepy trackers",
    "original": "Verabschieden Sie sich von gruseligen Verfolgern",
    "text": "Verabschieden Sie sich von gruseligen Trackern",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373974,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=324423",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -403,9 +460,13 @@
    "source": "Instantly get passwords, history, and more on any device.",
    "original": "Holen Sie sich Passwörter, Chronik und mehr auf jedem Gerät.",
    "text": "Holen Sie sich sofort Passwörter, Chronik und mehr auf jedem Gerät.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373975,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=341264",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -430,9 +491,13 @@
    "source": "Close and exit %@ onboarding",
    "original": "%@ Onboarding beenden und schließen",
    "text": "%@-Onboarding beenden und schließen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373976,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=290616",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -457,9 +522,13 @@
    "source": "Our non-profit backed browser helps stop companies from secretly following you around the web.",
    "original": "Unser gemeinnütziger Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
    "text": "Unser von einer gemeinnützigen Organisation unterstützter Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373977,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=286497",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -484,9 +553,13 @@
    "source": "Our non-profit backed browser helps stop companies from secretly following you around the web.",
    "original": "Unser gemeinnütziger Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
    "text": "Unser von einer gemeinnützigen Organisation unterstützter Browser verhindert, dass Unternehmen heimlich Ihre Aktivitäten im Internet verfolgen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373978,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=286529",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -511,9 +584,14 @@
    "source": "(no username)",
    "original": "(Kein Benutzername)",
    "text": "(kein Benutzername)",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer this with a capital letter.</p>",
+   "dismissal": "PasswordAutofill.LoginListCellNoUsername.v129 @ Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer this with a capital letter.</p>",
+   "pontoon_pk": 12373979,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=307368",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -538,9 +616,13 @@
    "source": "Answering…",
    "original": "Antworten…",
    "text": "Antwort wird erstellt…",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373980,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=340126",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -565,9 +647,13 @@
    "source": "QUICK ANSWER",
    "original": "SCHNELLE ANTWORTEN",
    "text": "SCHNELLE ANTWORT",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373981,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=341466",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -592,9 +678,13 @@
    "source": "New and current AI enhancements are blocked by default. Unblock specific features below.",
    "original": "Neue und aktuelle KI-Verbesserungen werden standardmäßig blockiert. Blockieren Sie im Folgenden bestimmte Funktionen.",
    "text": "Neue und aktuelle KI-Verbesserungen werden standardmäßig blockiert. Heben Sie im Folgenden die Blockierung bestimmter Funktionen auf.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373982,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=331837",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -619,9 +709,13 @@
    "source": "Reduces ads and ad-related trackers. If a site looks broken, try turning this off.",
    "original": "Reduziert Werbung und werbebezogene Tracker. Wenn eine Website beschädigt aussieht, versuchen Sie, dies zu deaktivieren.",
    "text": "Reduziert Werbung und werbebezogene Tracker. Wenn eine Website fehlerhaft aussieht, versuchen Sie, dies zu deaktivieren.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373983,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=338147",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -646,9 +740,13 @@
    "source": "Support %@ with occasional sponsored suggestions",
    "original": "Unterstützen Sie %@ mit gelegentlich gesponserten Vorschlägen",
    "text": "Unterstützen Sie %@ mit gelegentlichen gesponserten Vorschlägen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373984,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=292682",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -673,9 +771,13 @@
    "source": "Provides access to summarize pages.",
    "original": "Bietet Zugriff auf Zusammenfassungsseiten.",
    "text": "Bietet Zugriff auf das Zusammenfassen von Seiten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373985,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=322321",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -700,9 +802,13 @@
    "source": "Page is still loading. Wait for it to finish, then hit summarize.",
    "original": "Die Seite wird noch geladen. Warten Sie, bis der Vorgang abgeschlossen ist, und klicken Sie dann auf Zusammenfassen.",
    "text": "Die Seite wird noch geladen. Warten Sie, bis der Vorgang abgeschlossen ist, und tippen Sie dann auf Zusammenfassen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373986,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=322330",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -727,9 +833,13 @@
    "source": "Data Clearance",
    "original": "Datenfreigabe",
    "text": "Datenlöschung",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373987,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=292675",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -754,9 +864,13 @@
    "source": "New colors. New convenience. Same commitment to people over profits.",
    "original": "Neue Farben. Neuer Komfort. Gleiches Engagement für Menschen über Gewinne.",
    "text": "Neue Farben. Neuer Komfort. Gleiches Engagement: Menschen vor Profit.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373988,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=279544",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -781,9 +895,13 @@
    "source": "Your screen’s pixel density",
    "original": "Pixelgröße Ihres Bildschirms",
    "text": "Pixeldichte Ihres Bildschirms",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373989,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=338857",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -808,9 +926,13 @@
    "source": "Captions are missing",
    "original": "Bildunterschriften fehlen",
    "text": "Untertitel fehlen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373990,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=337625",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -835,9 +957,13 @@
    "source": "Decrease Zoom Level",
    "original": "Zoomfaktor verringern",
    "text": "Zoomstufe verringern",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373991,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=278846",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -862,9 +988,13 @@
    "source": "Increase Zoom Level",
    "original": "Zoomfaktor erhöhen",
    "text": "Zoomstufe erhöhen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373992,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=278848",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -889,9 +1019,13 @@
    "source": "This action will clear all of your private data, including history from your synced devices.",
    "original": "Diese Aktion löscht Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.",
    "text": "Diese Aktion löscht alle Ihre persönlichen Daten, einschließlich Chronik von Ihren synchronisierten Geräten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373950,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=149420",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -916,9 +1050,14 @@
    "source": "New Bookmark",
    "original": "Lesezeichen hinzufügen",
    "text": "Neues Lesezeichen",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>We use „Lesezeichen hinzufügen“ everywhere else, as far as I can tell.</p>",
+   "dismissal": "Bookmarks.NewBookmark.Label @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>We use „Lesezeichen hinzufügen“ everywhere else, as far as I can tell.</p>",
+   "pontoon_pk": 12373951,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=199791",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -943,9 +1082,13 @@
    "source": "To use the AutoFill feature for Firefox, you must have a device passcode enabled.",
    "original": "Um die Funktion „Automatisches Ausfüllen“ für Firefox verwenden zu können, muss ein Gerätepasssatz aktiviert sein.",
    "text": "Um die Funktion „Automatisches Ausfüllen“ für Firefox verwenden zu können, muss ein Gerätecode aktiviert sein.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373952,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=234595",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -970,9 +1113,13 @@
    "source": "Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.",
    "original": "Websites können externe Anzeigen, Videos und andere Inhalten laden, die verborgene Tracker enthalten. Wenn Sie dies blockieren, werden Websites möglicherweise schneller geladen, aber einige Schaltflächen, Formulare und Anmeldefelder funktionieren möglicherweise nicht.",
    "text": "Websites können externe Anzeigen, Videos und andere Inhalte laden, die verborgene Tracker enthalten. Wenn Sie dies blockieren, werden Websites möglicherweise schneller geladen, aber einige Schaltflächen, Formulare und Anmeldefelder funktionieren möglicherweise nicht.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373953,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=201265",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -997,9 +1144,13 @@
    "source": "The settings on your browser and computer are unique. Fingerprinters collect a variety of these unique settings to create a profile of you, which can be used to track you as you browse.",
    "original": "Die Einstellungen in Ihrem Browser und auf Ihrem Computer sind eindeutig. Fingerabdrücke erfassen eine Vielzahl dieser einzigartigen Einstellungen, um ein Profil von Ihnen zu erstellen, mit dem Sie beim Surfen verfolgt werden können.",
    "text": "Die Einstellungen in Ihrem Browser und auf Ihrem Computer sind eindeutig. Identifizierer (Fingerprinter) erfassen eine Vielzahl dieser einzigartigen Einstellungen, um ein Profil von Ihnen zu erstellen, mit dem Sie beim Surfen verfolgt werden können.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373954,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=201281",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1024,9 +1175,13 @@
    "source": "New tab arrived from another device.",
    "original": "Neuen Tab von andere Gerät erhalten.",
    "text": "Neuen Tab von einem anderen Gerät erhalten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373955,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=167891",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1051,9 +1206,14 @@
    "source": "Recommended by Pocket",
    "original": "Empfehlung von Pocket",
    "text": "Empfohlen von Pocket",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer the noun here.</p>",
+   "dismissal": "Settings.Home.Option.Pocket @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer the noun here.</p>",
+   "pontoon_pk": 12373956,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=233036",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -1078,9 +1238,13 @@
    "source": "OPENING SCREEN",
    "original": "ÖFFNUNGSBILDSCHIRM",
    "text": "STARTBILDSCHIRM",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373957,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=237920",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1105,9 +1269,13 @@
    "source": "Your passwords are now protected by Face ID, Touch ID or a device passcode.",
    "original": "Ihre Passwörter sind jetzt durch Face ID, Touch ID oder einen Gerätepasssatz geschützt.",
    "text": "Ihre Passwörter sind jetzt durch Face ID, Touch ID oder einen Gerätecode geschützt.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373958,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=246172",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1132,9 +1300,13 @@
    "source": "Sync is offline",
    "original": "Sync ist offline.",
    "text": "Sync ist offline",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373959,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=152583",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1159,9 +1331,13 @@
    "source": "Undo",
    "original": "Wiederherstellen",
    "text": "Rückgängig",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373960,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=152634",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1186,9 +1362,13 @@
    "source": "Modified %@",
    "original": "Verändert: %@",
    "text": "Geändert: %@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12373961,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=196299",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -1213,9 +1393,14 @@
    "source": "There are ${count} options matching ‘New Private Search’.",
    "original": "Es gibt ${count} Optionen, die zu „Neue Private Suche“ passen.",
    "text": "Es gibt ${count} Optionen, die zu „Neue private Suche“ passen.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-02",
-   "comment": ""
+   "comment": "k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>„Private Suche“ is a name, so capital letters are ok.</p>",
+   "dismissal": "fi3W24-scEmjs @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>„Private Suche“ is a name, so capital letters are ok.</p>",
+   "pontoon_pk": 12373993,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=220670",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

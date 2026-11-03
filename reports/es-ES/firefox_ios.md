@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-02 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `14a6f5ae8f30` |
-| **Previous run** | 2026-11-02 @ `2804315b81ef` |
+| **Generated** | 2026-11-03 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
+| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,848 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,848 |
-| Missing strings | 125 |
+| Missing strings | 132 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -59,14 +59,15 @@ _Nothing retired._
 
 ### Completeness
 
-**125 strings** are not translated yet, concentrated in:
+**132 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
-- `es-ES/firefox-ios.xliff` — 24
+- `es-ES/firefox-ios.xliff` — 26
 - `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
 - `es-ES/firefox-ios.xliff` — 18
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `es-ES/firefox-ios.xliff` — 6
+- `es-ES/firefox-ios.xliff` — 5
 - `es-ES/firefox-ios.xliff` — 2
 - `es-ES/firefox-ios.xliff` — 1
 
