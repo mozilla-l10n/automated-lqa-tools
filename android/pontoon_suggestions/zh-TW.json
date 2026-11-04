@@ -1,0 +1,1566 @@
+{
+ "project": "android",
+ "locale": "zh-TW",
+ "suggestions": [
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_malformed_uri_message_alternative",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_malformed_uri_message_alternative"
+    ]
+   },
+   "fids": [
+    "c935a0be34c3"
+   ],
+   "findings": [
+    "Half-width colon followed by a space used inside Chinese text instead of a full-width colon."
+   ],
+   "source": "{ <ul> }\n{ <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> }\n{ <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> }\n{ </ul> }",
+   "original": "<ul>\n<li>網址通常長得像 <strong>http://www.example.com/</strong>。</li>\n<li>請確定您用的是斜線（例: <strong>/</strong>）。</li>\n</ul>",
+   "text": "<ul>\n<li>網址通常長得像 <strong>http://www.example.com/</strong>。</li>\n<li>請確定您用的是斜線（例：<strong>/</strong>）。</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_no_internet_message_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_no_internet_message_2"
+    ]
+   },
+   "fids": [
+    "bfffe482e14b"
+   ],
+   "findings": [
+    "The translation tells the user to connect to another device, not to try connecting from another device."
+   ],
+   "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
+   "original": "您可以試著連線到其他裝置、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
+   "text": "您可以試著改用其他裝置連線、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_enabled",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_enabled"
+    ]
+   },
+   "fids": [
+    "80a94e47a916"
+   ],
+   "findings": [
+    "Status label \"Enabled\" rendered as bare 啟用, which reads as the action \"Enable\" and is inconsistent with 已停用 for Disabled."
+   ],
+   "source": "Enabled",
+   "original": "啟用",
+   "text": "已啟用",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_failed_to_load_extensions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_failed_to_load_extensions"
+    ]
+   },
+   "fids": [
+    "74eaacc4937b"
+   ],
+   "findings": [
+    "「稍候」is misused for「稍後」in \"try again later\"."
+   ],
+   "source": "Couldn’t load extensions. Try again later.",
+   "original": "無法載入擴充套件，請稍候再試。",
+   "text": "無法載入擴充套件，請稍後再試。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_browser_settings_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_browser_settings_description_for_update"
+    ]
+   },
+   "fids": [
+    "a272378dde3c"
+   ],
+   "findings": [
+    "\"browser settings\" is rendered as 瀏覽器選項 here, but as 瀏覽器設定 in the same permission's non-update description."
+   ],
+   "source": "Read and modify browser settings.",
+   "original": "讀取或修改瀏覽器選項。",
+   "text": "讀取或修改瀏覽器設定。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_content_description_item",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_content_description_item"
+    ]
+   },
+   "fids": [
+    "38dda43dddce"
+   ],
+   "findings": [
+    "The counting word 組 (\"set/group\") is wrong for a single permission's position in a list."
+   ],
+   "source": "%1$s, %2$d of %3$d",
+   "original": "%1$s（第 %2$d 組，共 %3$d 組）",
+   "text": "%1$s（第 %2$d 項，共 %3$d 項）",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_updater_dialog_last_attempt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_updater_dialog_last_attempt"
+    ]
+   },
+   "fids": [
+    "b62e007e90d2"
+   ],
+   "findings": [
+    "Halfwidth colon used instead of the fullwidth colon required by zh-TW convention."
+   ],
+   "source": "Last attempt:",
+   "original": "上次嘗試:",
+   "text": "上次嘗試：",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_updater_dialog_status",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_updater_dialog_status"
+    ]
+   },
+   "fids": [
+    "a50cdf64da18"
+   ],
+   "findings": [
+    "Halfwidth colon used instead of the fullwidth colon required by zh-TW convention."
+   ],
+   "source": "Status:",
+   "original": "狀態:",
+   "text": "狀態：",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_user_rating_count_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_user_rating_count_2"
+    ]
+   },
+   "fids": [
+    "c220f22bda26"
+   ],
+   "findings": [
+    "Half-width colon used where the locale uses the full-width colon (：)."
+   ],
+   "source": "Reviews: %1$s",
+   "original": "評價: %1$s",
+   "text": "評價：%1$s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_ipprotection_unavaliable_dialog_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_ipprotection_unavaliable_dialog_body"
+    ]
+   },
+   "fids": [
+    "46617f9ca395"
+   ],
+   "findings": [
+    "\"your location may be visible\" is rendered as \"your actual location may be tracked by someone\"."
+   ],
+   "source": "VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.",
+   "original": "VPN 目前並未正常運作，您實際的所在位置可能會被人追蹤。可以不使用 VPN 繼續上網，或選擇要關閉哪些分頁。",
+   "text": "VPN 目前並未正常運作，您實際的所在位置可能會被他人看見。可以不使用 VPN 繼續上網，或選擇要關閉哪些分頁。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automotive_authentication_setup_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automotive_authentication_setup_dialog_title"
+    ]
+   },
+   "fids": [
+    "0794c25178af"
+   ],
+   "findings": [
+    "\"Secure\" was translated as 加密 (encrypt), but the dialog is about setting up a device lock."
+   ],
+   "source": "Secure your sensitive data",
+   "original": "加密您的敏感資料",
+   "text": "保護您的敏感資料",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "browser_menu_add_to_homescreen_xiaomi",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "browser_menu_add_to_homescreen_xiaomi"
+    ]
+   },
+   "fids": [
+    "7c2b6684ddfd"
+   ],
+   "findings": [
+    "The verb is missing: 「才能捷徑到主畫面」 treats the noun 捷徑 (shortcut) as if it were a verb."
+   ],
+   "source": "Xiaomi devices may need extra permissions to add shortcuts to the home screen. Please check your settings.",
+   "original": "小米裝置可能需要更多權限才能捷徑到主畫面，請到設定中確認。",
+   "text": "小米裝置可能需要更多權限才能新增捷徑到主畫面，請到設定中確認。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "browser_menu_remove_from_shortcuts",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "browser_menu_remove_from_shortcuts"
+    ]
+   },
+   "fids": [
+    "b32aa25719ca"
+   ],
+   "findings": [
+    "The menu button is translated as a past-tense status message (\"Removed from shortcuts\") instead of an action."
+   ],
+   "source": "Remove from shortcuts",
+   "original": "已從捷徑刪除",
+   "text": "從捷徑移除",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "download_item_paused_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "download_item_paused_description"
+    ]
+   },
+   "fids": [
+    "c789ceae58a8"
+   ],
+   "findings": [
+    "The \"paused\" status is translated as \"暫停下載\", which reads like a command to pause the download and doesn't match the \"已暫停\" used in the matching string."
+   ],
+   "source": "%1$s / %2$s • paused",
+   "original": "%1$s / %2$s • 暫停下載",
+   "text": "%1$s / %2$s • 已暫停",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "download_languages_default_system_language_require_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "download_languages_default_system_language_require_preference"
+    ]
+   },
+   "fids": [
+    "c0eb9e4d9fe0"
+   ],
+   "findings": [
+    "\"required\" is rendered as 必填 (a must-fill form field), not as \"necessary\" for a language package."
+   ],
+   "source": "required",
+   "original": "必填",
+   "text": "必要",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_redirect_trackers_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_redirect_trackers_description"
+    ]
+   },
+   "fids": [
+    "32c5483dba72"
+   ],
+   "findings": [
+    "The translation drops \"tracking\": it says cookies set by known websites during redirects, not cookies set by redirects to known tracking websites."
+   ],
+   "source": "Clears cookies set by redirects to known tracking websites.",
+   "original": "清除已知網站在重新導向時所設定的 Cookie。",
+   "text": "清除重新導向至已知追蹤網站時所設定的 Cookie。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "home_bookmarks_menu_item_remove",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "home_bookmarks_menu_item_remove"
+    ]
+   },
+   "fids": [
+    "a212b9eb4a55"
+   ],
+   "findings": [
+    "\"Remove\" (from the home screen section) is rendered as 刪除 \"delete\", implying the bookmark itself is deleted."
+   ],
+   "source": "Remove",
+   "original": "刪除",
+   "text": "移除",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "ip_protection_location_recommended_label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "ip_protection_location_recommended_label"
+    ]
+   },
+   "fids": [
+    "176e06511be4"
+   ],
+   "findings": [
+    "The \"Recommended\" location option is labeled 推薦, but the snackbars and cards on the same VPN screens call it 建議位置."
+   ],
+   "source": "Recommended",
+   "original": "推薦",
+   "text": "建議",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "login_deletion_confirmation_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "login_deletion_confirmation_2"
+    ]
+   },
+   "fids": [
+    "f3f9e4a3a85e"
+   ],
+   "findings": [
+    "The informal 你 is used here, while the other login and password strings address the user with the formal 您."
+   ],
+   "source": "Are you sure you want to delete this password?",
+   "original": "你確定要刪除這筆密碼嗎？",
+   "text": "您確定要刪除這筆密碼嗎？",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nimbus_survey_message_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nimbus_survey_message_text"
+    ]
+   },
+   "fids": [
+    "ca41b65b8bc5"
+   ],
+   "findings": [
+    "The character 變 is missing, so 「讓 Firefox 得更好」 is ungrammatical."
+   ],
+   "source": "Please help make Firefox better by taking a short survey.",
+   "original": "請協助填寫簡短問卷，讓 Firefox 得更好。",
+   "text": "請協助填寫簡短問卷，讓 Firefox 變得更好。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body"
+    ]
+   },
+   "fids": [
+    "2350d94d40a7"
+   ],
+   "findings": [
+    "\"and that you use it\" is rendered as \"how you use it\", which describes a much wider data share."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
+   "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。%1$s",
+   "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。%1$s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_2"
+    ]
+   },
+   "fids": [
+    "11606fe50352"
+   ],
+   "findings": [
+    "\"and that you use it\" is rendered as \"how you use it\", which describes a much wider data share."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
+   "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_4"
+    ]
+   },
+   "fids": [
+    "dbdd07571b3f"
+   ],
+   "findings": [
+    "The data flow is reversed: the Chinese says Mozilla learns where the user came from, but the source says Mozilla tells that platform the user uses Firefox."
+   ],
+   "source": "You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.",
+   "original": "您可以透過讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。",
+   "text": "您可以透過讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_5",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_5"
+    ]
+   },
+   "fids": [
+    "be85c2300da3"
+   ],
+   "findings": [
+    "The data flow is reversed: the Chinese says Mozilla learns the download platform, but the source says Mozilla informs that platform."
+   ],
+   "source": "Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.",
+   "original": "讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。",
+   "text": "讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_6",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_6"
+    ]
+   },
+   "fids": [
+    "660c0fe1c273"
+   ],
+   "findings": [
+    "The data flow is reversed: the Chinese says Mozilla learns the download platform, but the source says Mozilla informs that platform."
+   ],
+   "source": "Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s",
+   "original": "讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。%1$s",
+   "text": "讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。%1$s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_7",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_7"
+    ]
+   },
+   "fids": [
+    "1d249b563294"
+   ],
+   "findings": [
+    "The data flow is reversed: the Chinese says Mozilla learns the download platform, but the source says Mozilla informs that platform."
+   ],
+   "source": "You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s",
+   "original": "您可以透過讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。%1$s",
+   "text": "您可以透過讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。%1$s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_body_1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_body_1"
+    ]
+   },
+   "fids": [
+    "45d2b3789522"
+   ],
+   "findings": [
+    "\"that you use it\" is translated as \"how you use it\", which claims usage details are shared with marketing partners."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
+   "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_redesign_opt_out_checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_redesign_opt_out_checkbox"
+    ]
+   },
+   "fids": [
+    "b7f66ebd25d0"
+   ],
+   "findings": [
+    "\"that you use it\" is translated as \"how you use it\", which claims usage details are shared with marketing partners."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
+   "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "open_in_app_cfr_info_message_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "open_in_app_cfr_info_message_2"
+    ]
+   },
+   "fids": [
+    "82d4da3224a9"
+   ],
+   "findings": [
+    "Translation says Firefox opens links found inside apps, instead of Firefox opening links in (other) apps."
+   ],
+   "source": "You can set %1$s to automatically open links in apps.",
+   "original": "您可以設定使用 %1$s 自動開啟各應用程式當中的鏈結。",
+   "text": "您可以設定使用 %1$s 自動在應用程式中開啟鏈結。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "phone_feature_blocked_intro",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "phone_feature_blocked_intro"
+    ]
+   },
+   "fids": [
+    "432127b764e4"
+   ],
+   "findings": [
+    "The colon is halfwidth, but zh-TW uses fullwidth punctuation."
+   ],
+   "source": "To allow it:",
+   "original": "若要允許:",
+   "text": "若要允許：",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_doh_increased_protection_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_doh_increased_protection_summary"
+    ]
+   },
+   "fids": [
+    "a7cd487f928a"
+   ],
+   "findings": [
+    "Translation drops the part about the user controlling when secure DNS is used and only covers choosing a provider."
+   ],
+   "source": "You control when to use secure DNS and choose your provider.",
+   "original": "由您自行決定要使用哪個提供者的安全 DNS。",
+   "text": "由您決定何時使用安全 DNS，並選擇提供者。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_doh_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_doh_title"
+    ]
+   },
+   "fids": [
+    "43fbf55ed5f7"
+   ],
+   "findings": [
+    "Protocol name is written 'DNS Over HTTPS' with a capital O, unlike the source and the other DoH strings."
+   ],
+   "source": "DNS over HTTPS",
+   "original": "DNS Over HTTPS",
+   "text": "DNS over HTTPS",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_enhanced_tracking_protection_explanation_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_enhanced_tracking_protection_explanation_2"
+    ]
+   },
+   "fids": [
+    "6bb5826e8aec"
+   ],
+   "findings": [
+    "\"many of the most common trackers\" becomes \"common trackers\", which reads as protection against all common trackers."
+   ],
+   "source": "%s protects you from many of the most common trackers that follow what you do online.",
+   "original": "%s 不讓常見的追蹤器記錄您的上網行為。",
+   "text": "%s 不讓許多最常見的追蹤器記錄您的上網行為。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_android_autofill_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_android_autofill_description"
+    ]
+   },
+   "fids": [
+    "9c4ca3afd524"
+   ],
+   "findings": [
+    "The translation says \"other apps on other devices\" where the source says \"other apps on your device\"."
+   ],
+   "source": "Fill usernames and passwords in other apps on your device.",
+   "original": "使用其他裝置中的其他應用程式時也自動填寫使用者名稱與密碼。",
+   "text": "使用您裝置中的其他應用程式時也自動填寫使用者名稱與密碼。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_marketing_data_description_4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_marketing_data_description_4"
+    ]
+   },
+   "fids": [
+    "f72e9f566c4c"
+   ],
+   "findings": [
+    "The text says the user shares how they use Firefox, but the source means only that they use it."
+   ],
+   "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
+   "original": "與 Mozilla 的行銷技術夥伴分享您如何發現 Firefox 以及是如何使用。",
+   "text": "與 Mozilla 的行銷技術夥伴分享您如何發現 Firefox 以及您正在使用 Firefox。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_passwords_autofill2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_passwords_autofill2"
+    ]
+   },
+   "fids": [
+    "d41184ae2b14"
+   ],
+   "findings": [
+    "The translation means 'autofill %1$s fields' instead of 'autofill inside %1$s'."
+   ],
+   "source": "Autofill in %1$s",
+   "original": "自動填入 %1$s 欄位",
+   "text": "在 %1$s 中自動填入",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_pbm_lock_screen_summary_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_pbm_lock_screen_summary_3"
+    ]
+   },
+   "fids": [
+    "796b49c0e320"
+   ],
+   "findings": [
+    "\"face unlock\" is rendered as 表情 (facial expression), and \"View tabs\" is dropped."
+   ],
+   "source": "View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.",
+   "original": "使用您的指紋、PIN 碼或表情來解鎖，開啟此功能也可防止畫面截圖與分享。",
+   "text": "使用您的指紋、PIN 碼或臉部解鎖來檢視分頁，開啟此功能也可防止畫面截圖與分享。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_search_engines_suggestions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_search_engines_suggestions"
+    ]
+   },
+   "fids": [
+    "0346e71b0780"
+   ],
+   "findings": [
+    "Adds 其他 (\"other\"), which makes it say the suggestions come from other search engines."
+   ],
+   "source": "Suggestions from search engines",
+   "original": "來自其他搜尋引擎的建議",
+   "text": "來自搜尋引擎的建議",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_usage_data_description_1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_usage_data_description_1"
+    ]
+   },
+   "fids": [
+    "2cac0aef223c"
+   ],
+   "findings": [
+    "Translation adds \"for all users\" (為所有使用者), which is not in the source."
+   ],
+   "source": "Data about your device, hardware configuration, and usage helps us improve Firefox features, performance, and stability.",
+   "original": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們為所有使用者改進 Firefox 功能、效能與穩定度。",
+   "text": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們改進 Firefox 功能、效能與穩定度。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "protection_panel_banner_protected_no_blocked_trackers_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "protection_panel_banner_protected_no_blocked_trackers_description"
+    ]
+   },
+   "fids": [
+    "4f6568aab5e5"
+   ],
+   "findings": [
+    "The status message \"You’re protected.\" is translated as \"Let us protect you.\""
+   ],
+   "source": "You’re protected.",
+   "original": "讓我們保護您。",
+   "text": "您已受到保護。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_add_custom_engine_search_string_example",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_add_custom_engine_search_string_example"
+    ]
+   },
+   "fids": [
+    "e10640dc0fa8"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "Replace query with “%s”. Example:\nhttps://www.google.com/search?q=%s",
+   "original": "用「%s」取代查詢關鍵字。例如:\nhttps://www.google.com/search?q=%s",
+   "text": "用「%s」取代查詢關鍵字。例如：\nhttps://www.google.com/search?q=%s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_add_custom_engine_url_label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_add_custom_engine_url_label"
+    ]
+   },
+   "fids": [
+    "141315f30344"
+   ],
+   "findings": [
+    "Label drops 'URL', so the field no longer says it expects a URL."
+   ],
+   "source": "Search string URL",
+   "original": "搜尋字串",
+   "text": "搜尋字串網址",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_header_menu_item_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_header_menu_item_2"
+    ]
+   },
+   "fids": [
+    "e990e30fcdbf"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "This time search in:",
+   "original": "這次搜尋:",
+   "text": "這次搜尋：",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_3_steps_initial_state",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_3_steps_initial_state"
+    ]
+   },
+   "fids": [
+    "acf71695f2fd"
+   ],
+   "findings": [
+    "Duplicated particle \"的的\"."
+   ],
+   "source": "Complete these 3 steps to set up %1$s for the best browsing experience.",
+   "original": "完成下列 3 步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
+   "text": "完成下列 3 步驟，即可設定 %1$s 獲得最完整的上網體驗。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_5_steps_initial_state",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_5_steps_initial_state"
+    ]
+   },
+   "fids": [
+    "8e91ad2bf140"
+   ],
+   "findings": [
+    "Duplicated particle \"的的\"."
+   ],
+   "source": "Complete all 5 steps to set up %1$s for the best browsing experience.",
+   "original": "完成全部 5 個步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
+   "text": "完成全部 5 個步驟，即可設定 %1$s 獲得最完整的上網體驗。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_6_steps_initial_state",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_6_steps_initial_state"
+    ]
+   },
+   "fids": [
+    "a8316d9ecf5d"
+   ],
+   "findings": [
+    "Duplicated particle \"的的\"."
+   ],
+   "source": "Complete all 6 steps to set up %1$s for the best browsing experience.",
+   "original": "完成全部 6 個步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
+   "text": "完成全部 6 個步驟，即可設定 %1$s 獲得最完整的上網體驗。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "shortcut_url_hint",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "shortcut_url_hint"
+    ]
+   },
+   "fids": [
+    "7aea3db094d1"
+   ],
+   "findings": [
+    "The noun order is reversed, so the hint reads \"URL shortcut\" instead of \"the shortcut's URL\"."
+   ],
+   "source": "Shortcut URL",
+   "original": "網址捷徑",
+   "text": "捷徑網址",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "startup_crash_positive",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "startup_crash_positive"
+    ]
+   },
+   "fids": [
+    "a475d4b9adb8"
+   ],
+   "findings": [
+    "'Crash report' is rendered 錯誤報表 on the button but 錯誤報告 in the body text of the same crash page."
+   ],
+   "source": "Send crash report",
+   "original": "傳送錯誤報表",
+   "text": "傳送錯誤報告",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sync_failed_never_synced_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sync_failed_never_synced_summary"
+    ]
+   },
+   "fids": [
+    "6c00c7cb7347"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "Sync failed. Last synced: never",
+   "original": "同步失敗。上次同步: 從未",
+   "text": "同步失敗。上次同步：從未",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sync_failed_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sync_failed_summary"
+    ]
+   },
+   "fids": [
+    "40fe65814cdf"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "Sync failed. Last success: %s",
+   "original": "同步失敗。上次成功: %s",
+   "text": "同步失敗。上次成功：%s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sync_last_synced_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sync_last_synced_summary"
+    ]
+   },
+   "fids": [
+    "f737b94bf525"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "Last synced: %s",
+   "original": "上次同步: %s",
+   "text": "上次同步：%s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sync_never_synced_summary",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sync_never_synced_summary"
+    ]
+   },
+   "fids": [
+    "8fdc7c365e06"
+   ],
+   "findings": [
+    "Half-width colon used instead of the locale's full-width colon."
+   ],
+   "source": "Last synced: never",
+   "original": "上次同步: 從未",
+   "text": "上次同步：從未",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_manager_empty_tab_groups_page_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_manager_empty_tab_groups_page_description"
+    ]
+   },
+   "fids": [
+    "7809e9fdf778"
+   ],
+   "findings": [
+    "Human pronoun 他們 is used to refer to tabs (non-human)."
+   ],
+   "source": "Select tabs to create a group. They’re saved here, ready when you are.",
+   "original": "選擇分頁來建立群組。他們儲存在此處，準備好即可使用。",
+   "text": "選擇分頁來建立群組。它們儲存在此處，準備好即可使用。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_tray_close_tabs_banner_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_tray_close_tabs_banner_message"
+    ]
+   },
+   "fids": [
+    "c020f52cf678"
+   ],
+   "findings": [
+    "'the past day, week, or month' is rendered as 'several days, weeks or months', which doesn't match the actual auto-close options."
+   ],
+   "source": "Set open tabs to close automatically that haven’t been viewed in the past day, week, or month.",
+   "original": "設定自動關閉超過幾天、幾週或幾個月都沒有閱讀過的開啟分頁。",
+   "text": "設定自動關閉超過一天、一週或一個月都沒有閱讀過的開啟分頁。",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "trackers_blocked_empty",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "trackers_blocked_empty"
+    ]
+   },
+   "fids": [
+    "706584e9d699"
+   ],
+   "findings": [
+    "\"You’re protected\" is rendered as \"Let us protect you\", which turns a statement that protection is already active into an offer."
+   ],
+   "source": "You’re protected",
+   "original": "讓我們保護您",
+   "text": "您已受到保護",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_option_1_v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_option_1_v2"
+    ]
+   },
+   "fids": [
+    "20993110ba2f"
+   ],
+   "findings": [
+    "The translation says websites are slow or unreliable, but the source means the browser itself."
+   ],
+   "source": "It’s slow or unreliable",
+   "original": "網站速度很慢或不穩定",
+   "text": "速度很慢或不穩定",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_option_4_v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_option_4_v2"
+    ]
+   },
+   "fids": [
+    "21eb0771c614"
+   ],
+   "findings": [
+    "The sentence has no verb before 影片 (\"videos\"), so it is ungrammatical."
+   ],
+   "source": "Videos, downloads, or media didn’t work",
+   "original": "無法影片、下載檔案或播放媒體內容",
+   "text": "無法播放影片、下載檔案或播放媒體內容",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "unsubmitted_crash_dialog_positive_button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "unsubmitted_crash_dialog_positive_button"
+    ]
+   },
+   "fids": [
+    "097e137ea51b"
+   ],
+   "findings": [
+    "This button calls a crash report 錯誤報表, while the rest of the same dialog uses 錯誤報告."
+   ],
+   "source": "Send crash report",
+   "original": "傳送錯誤報表",
+   "text": "傳送錯誤報告",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "E",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "wallpapers_item_name_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "wallpapers_item_name_content_description"
+    ]
+   },
+   "fids": [
+    "be0ba004fa58"
+   ],
+   "findings": [
+    "The string uses a half-width colon where the locale uses full-width punctuation."
+   ],
+   "source": "Wallpaper Item: %1$s",
+   "original": "背景圖項目: %1$s",
+   "text": "背景圖項目：%1$s",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-04",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_reason_turn_off_adblocker",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_reason_turn_off_adblocker"
+    ]
+   },
+   "fids": [
+    "c6fe48c5b0c7"
+   ],
+   "findings": [
+    "\"ad blocker\" is translated as 廣告追蹤器 (\"ad tracker\"), which is a different thing."
+   ],
+   "source": "Site asked to turn off ad blocker",
+   "original": "網站要求關閉廣告追蹤器",
+   "text": "網站要求關閉廣告封鎖器",
+   "status": "pending",
+   "status_date": "2026-11-04",
+   "comment": ""
+  }
+ ]
+}
