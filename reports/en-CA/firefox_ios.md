@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,973 |
+| **Strings reviewed this run** | 7 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,973 |
-| Missing strings | 7 |
+| Strings | 1,980 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**7 strings** are not translated yet, concentrated in:
-
-- `en-CA/firefox-ios.xliff` — 5
-- `en-CA/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

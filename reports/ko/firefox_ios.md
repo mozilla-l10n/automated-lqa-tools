@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,973 |
+| **Strings reviewed this run** | 7 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ko: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `ko/firefox-ios.xliff` — The object particle 를 is used with the passive verb 사용되었습니다, which is ungrammatical.
+    - Current: `%1$@기가를 사용되었습니다`
+    - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
+    - Suggest: `%1$@기가바이트를 사용했습니다`
+    - In Korean, a passive verb (사용되다) cannot take an object marked with 을/를. It needs either the active form (를 사용했습니다) or a subject particle (가 사용되었습니다). The suggestion also uses the full unit 기가바이트, matching the first half of the sentence and the source's 'gigabytes'.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,973 |
-| Missing strings | 7 |
+| Strings | 1,980 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**7 strings** are not translated yet, concentrated in:
-
-- `ko/firefox-ios.xliff` — 5
-- `ko/firefox-ios.xliff` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -84,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (96)
+## 3. Open findings (97)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -100,7 +99,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 52 |
+| 3 | Degraded language (grammar, spelling, terminology) | 53 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -407,6 +406,11 @@ _Nothing in this category._
     - Source: `This helps us diagnose and fix issues with the browser.`
     - Suggest: `해결하는 데 도움이`
     - In '~하는 데 도움이 되다', 데 is a dependent noun, and standard Korean spacing separates it from the verb before it. The nearby string Settings.DailyUsagePing.Message.v135 spells the same pattern correctly as '예측하는 데'.
+- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `ko/firefox-ios.xliff` — The object particle 를 is used with the passive verb 사용되었습니다, which is ungrammatical.
+    - Current: `%1$@기가를 사용되었습니다`
+    - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
+    - Suggest: `%1$@기가바이트를 사용했습니다`
+    - In Korean, a passive verb (사용되다) cannot take an object marked with 을/를. It needs either the active form (를 사용했습니다) or a subject particle (가 사용되었습니다). The suggestion also uses the full unit 기가바이트, matching the first half of the sentence and the source's 'gigabytes'.
 - `WebCompatReporter.Preview.Data.PageLanguages.v155` — `ko/firefox-ios.xliff` — The bullet is ungrammatical: '언어 설정이 이 페이지로 보냄' makes the language settings the ones doing the sending.
     - Current: `언어 설정이 이 페이지로 보냄`
     - Source: `Language preferences sent to this page`

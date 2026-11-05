@@ -22,3 +22,4 @@ Settings.Home.Option.Wallpaper.CollectionTitle @ Shared/en-US.lproj/Localizable.
 PasswordGenerator.Description.v132 @ Shared/Supporting Files/en-US.lproj/PasswordGenerator.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 Search.SuggestSectionTitle.v102 @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 There was a problem accessing tabs from your other devices. Try again in a few moments. @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
+Summarizer.Error.Unknown.Message.v142 @ Shared/Supporting Files/en-US.lproj/Summarizer.strings — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear

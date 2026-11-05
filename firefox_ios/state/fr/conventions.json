@@ -6,7 +6,7 @@
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 374
+  "typographic": 376
  },
  "dash": {
   "em": 4,
@@ -27,7 +27,7 @@
   "before-punctuation": 99,
   "narrow": 0,
   "space-before-punctuation": 0,
-  "total": 166
+  "total": 167
  },
  "quotes": {
   "guillemet": 18

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,980 |
+| **Strings reviewed this run** | 1 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,17 @@ Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (1)
 
 - `VPN.Settings.DataLimit.AccessibilityValue.v161` — `it/firefox-ios.xliff` — "Il limite si azzera" says the monthly limit is set to zero, when it is the data used that resets each month.
     - Current: `Il limite si azzera il primo giorno di ogni mese.`
     - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
     - Suggest: `Il conteggio si azzera il primo giorno di ogni mese.`
     - The source "Resets on the first of every month" and the developer comment say the user's free monthly VPN data resets on the first of each month. That means the usage counter goes back to zero and the allowance renews. "Azzerare" means to set to zero, so "il limite si azzera" tells the user their limit becomes zero. That is the opposite of a fresh allowance. Better wording would make the counter…
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -85,13 +85,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -101,11 +101,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `it/firefox-ios.xliff` — "Il limite si azzera" says the monthly limit is set to zero, when it is the data used that resets each month.
-    - Current: `Il limite si azzera il primo giorno di ogni mese.`
-    - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
-    - Suggest: `Il conteggio si azzera il primo giorno di ogni mese.`
-    - The source "Resets on the first of every month" and the developer comment say the user's free monthly VPN data resets on the first of each month. That means the usage counter goes back to zero and the allowance renews. "Azzerare" means to set to zero, so "il limite si azzera" tells the user their limit becomes zero. That is the opposite of a fresh allowance. Better wording would make the counter…
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -165,8 +161,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (20)
+### Fixed to date (21)
 
+- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `it/firefox-ios.xliff` — fixed 2026-11-05
 - `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — fixed 2026-10-19
 - `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — fixed 2026-10-17
 - `Menu.TrackingProtectionDescription.Fingerprinters` — `it/firefox-ios.xliff` — fixed 2026-10-17
