@@ -25,9 +25,13 @@
    "source": "Saved in “Bookmarks”",
    "original": "Shranjeno v mapo “Zaznamki”",
    "text": "Shranjeno v mapo \"Zaznamki\"",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 10859462,
+   "pontoon_url": "",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-03",
@@ -52,9 +56,13 @@
    "source": "Saved in “%@”",
    "original": "Shranjeno v mapo “%@”",
    "text": "Shranjeno v mapo \"%@\"",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 10859463,
+   "pontoon_url": "",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-03",
@@ -79,9 +87,13 @@
    "source": "Enter a valid expiration date",
    "original": "Vnesite veljavno leto poteka",
    "text": "Vnesite veljaven datum poteka",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375929,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=276679",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -106,9 +118,13 @@
    "source": "Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.",
    "original": "Sporočite tehnološkim partnerjem organizacije %2$@ za trženje, kako ste odkrili %1$@ in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
    "text": "Sporočite partnerjem organizacije %2$@ za trženje, kako ste odkrili %1$@ in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375930,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=327780",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -133,9 +149,13 @@
    "source": "Manage settings",
    "original": "Nastavitve",
    "text": "Upravljanje nastavitev",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375931,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=324413",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -160,9 +180,13 @@
    "source": "Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@",
    "original": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za uporabnike po vsem svetu. %2$@",
    "text": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za vse. %2$@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375932,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=320461",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -187,9 +211,13 @@
    "source": "Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@",
    "original": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za uporabnike po vsem svetu. %2$@",
    "text": "Podatki o vaši napravi, nastavitvi strojne opreme in načinu uporabe brskalnika %1$@ pomagajo izboljšati funkcionalnost, zmogljivost in zanesljivost za vse. %2$@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375933,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=314020",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -214,9 +242,13 @@
    "source": "Limited Edition Wallpaper",
    "original": "Omejena izdaja",
    "text": "Ozadje omejene izdaje",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375934,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=279556",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -241,9 +273,13 @@
    "source": "Allow %@ to open?",
    "original": "Dovoli odpiranje %@?",
    "text": "Ali dovolite, da %@ odpre povezavo?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375935,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=307501",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -268,9 +304,13 @@
    "source": "Search Browsing History",
    "original": "Iskanje po zgodovini iskanja",
    "text": "Iskanje po zgodovini brskanja",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375936,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=301163",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -295,9 +335,14 @@
    "source": "Allow Feature Studies",
    "original": "Dovoli raziskave značilnosti",
    "text": "Dovoli raziskave funkcij",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "dismissal": "Settings.Studies.Title.v148 @ Shared/Supporting Files/en-US.lproj/Settings.strings — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12375937,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=327499",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -322,9 +367,13 @@
    "source": "Can’t handle this one at the moment. Try again later!",
    "original": "Tega trenutno ne morem narediti. Poskusite znova pozneje!",
    "text": "Tega trenutno ni mogoče narediti. Poskusite znova pozneje!",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375938,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=322331",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -349,9 +398,13 @@
    "source": "Pick up where you left off with tabs from other devices now on your homepage.",
    "original": "Nadaljujte tam, kjer ste končali - z zavihki iz drugih naprav, ki so zdaj na vaši domači strani.",
    "text": "Nadaljujte tam, kjer ste končali – z zavihki iz drugih naprav, ki so zdaj na vaši domači strani.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375939,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=279525",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -376,9 +429,13 @@
    "source": "Search Image with Google Lens",
    "original": "Išči slike z Google Lens",
    "text": "Išči sliko z Google Lens",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375940,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=335543",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -403,9 +460,13 @@
    "source": "min: %d",
    "original": "minut: %d",
    "text": "min: %d",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375918,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=320737",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -430,9 +491,14 @@
    "source": "Firefox Account",
    "original": "Firefox Račun",
    "text": "Račun Firefox",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "dismissal": "FxA.FirefoxAccount @ Shared/en-US.lproj/Localizable.strings — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The original capitalizes \"Račun\", so it likely treats \"Firefox Račun\" as a fixed product name, and the reviewer probably kept that brand form instead of reordering it into an ordinary noun phrase.",
+   "pontoon_pk": 12375919,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=170100",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -457,9 +523,13 @@
    "source": "Firefox logo, change the wallpaper.",
    "original": "Logtip Firefoxa, spremeni ozadje.",
    "text": "Logotip Firefoxa, spremeni ozadje.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375920,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=242816",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -484,9 +554,13 @@
    "source": "Cross-Site Trackers",
    "original": "Spletni sledilci",
    "text": "Sledilci med spletnimi mesti",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375921,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=201268",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -511,9 +585,13 @@
    "source": "Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.",
    "original": "Spletne strani lahko naložijo oglase, videoposnetke in drugo vsebino, ki vsebujejo skrite sledilce. Zavračanje te vsebine lahko pospeši nalaganje spletnih strani, vendar nekateri gumbi in obrazci morda ne bodo delovali.",
    "text": "Spletne strani lahko naložijo oglase, videoposnetke in drugo vsebino, ki vsebujejo skrite sledilce. Zavračanje te vsebine lahko pospeši nalaganje spletnih strani, vendar nekateri gumbi, obrazci in prijavna polja morda ne bodo delovali.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375922,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=201265",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -538,9 +616,13 @@
    "source": "Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.",
    "original": "Kriptorudarji izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja. Rudarski skripti vam praznijo baterijo, upočasnjujejo računalnik in zasolijo račun za elektriko.",
    "text": "Kriptorudarji na skrivaj izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja. Rudarski skripti vam praznijo baterijo, upočasnjujejo računalnik in zasolijo račun za elektriko.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375923,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=201796",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -565,9 +647,13 @@
    "source": "The new search engine will appear in the quick search bar.",
    "original": "Novi isklanik se bo pojavil v vrstici za hitro iskanje.",
    "text": "Novi iskalnik se bo pojavil v vrstici za hitro iskanje.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375924,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=152668",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -592,9 +678,13 @@
    "source": "You are not signed in to your Firefox Account.",
    "original": "Niste prijavljeni v vaš Firefox Račun.",
    "text": "Niste prijavljeni v svoj Firefox Račun.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375925,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=193235",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -619,9 +709,13 @@
    "source": "Clear All Website Data",
    "original": "Izbriši vse podatke spletne strani",
    "text": "Izbriši vse podatke spletnih strani",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375926,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=190703",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -646,9 +740,13 @@
    "source": "You don’t have any tabs open in Firefox on your other devices.",
    "original": "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.",
    "text": "V Firefoxu na drugih napravah nimate odprtih zavihkov.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375927,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=172617",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -673,9 +771,13 @@
    "source": "Open in New Private Tab",
    "original": "Odpri v zasebnem zavihku",
    "text": "Odpri v novem zasebnem zavihku",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375928,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=196132",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

@@ -50,6 +50,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "讓我們保護您",
+  "dismissed_because": "",
+  "fid": "cb9f45b6d75f",
+  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+  "first_seen": "2026-11-05",
+  "impact": 2,
+  "last_seen": "2026-11-05",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source and the developer comment describe a status label saying the user is already protected (shown when zero trackers have been blocked). The translation is a request or call to action meaning \"Let us protect you\", which says something different.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2df4a00a",
+  "string_id": "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153",
+  "suggest": "您已受到保護",
+  "summary": "\"You’re Protected\" is rendered as \"Let us protect you\" instead of a status saying the user is protected.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "網址",
   "dismissed_because": "",
   "fid": "a6285355ffdc",
@@ -261,6 +285,30 @@
   "string_id": "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124",
   "suggest": "搜尋瀏覽紀錄",
   "summary": "\"Search Browsing History\" is rendered as \"Show Browsing History\", inconsistent with the sibling toggles that use 搜尋.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們",
+  "dismissed_because": "",
+  "fid": "ae9ac404485b",
+  "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source is \"Data about your device… helps us\". The translation starts with 關於 (\"about\") but never names what the thing about the device is, so the subject is grammatically incomplete. Adding 的資料 fixes this.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ba0d81e4",
+  "string_id": "Settings.TechnicalData.Message.v136",
+  "suggest": "關於您的裝置、硬體設定與使用方式的資料，可幫助我們",
+  "summary": "The head noun \"data\" (資料) is missing, so the subject 關於… has no noun and the sentence is incomplete.",
   "suppressed_by": ""
  },
  {

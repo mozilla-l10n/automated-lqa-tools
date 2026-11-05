@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,980 |
+| **Strings reviewed this run** | 2 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox](firefox.md) · [F
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `zh-TW/firefox-ios.xliff` — "You’re Protected" is rendered as "Let us protect you" instead of a status saying the user is protected.
+    - Current: `讓我們保護您`
+    - Source: `You’re Protected`
+    - Suggest: `您已受到保護`
+    - The source and the developer comment describe a status label saying the user is already protected (shown when zero trackers have been blocked). The translation is a request or call to action meaning "Let us protect you", which says something different.
+- `Settings.TechnicalData.Message.v136` — `zh-TW/firefox-ios.xliff` — The head noun "data" (資料) is missing, so the subject 關於… has no noun and the sentence is incomplete.
+    - Current: `關於您的裝置、硬體設定，以及您的使用方式，可幫助我們`
+    - Source: `Data about your device, hardware configuration, and usage helps us improve %@ features, performance and stability.`
+    - Suggest: `關於您的裝置、硬體設定與使用方式的資料，可幫助我們`
+    - The source is "Data about your device… helps us". The translation starts with 關於 ("about") but never names what the thing about the device is, so the subject is grammatically incomplete. Adding 的資料 fixes this.
 
 ### ✅ Fixed since the last run (0)
 
@@ -80,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (35)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -95,8 +104,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
-| 3 | Degraded language (grammar, spelling, terminology) | 11 |
+| 2 | Wrong content (says something other than the English) | 16 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -115,6 +124,11 @@ _Nothing in this category._
     - Source: `Enter a valid expiration date`
     - Suggest: `到期日`
     - The source asks for a valid expiration date, which on a card is a month and a year. 年分 means only the year, so the error message misdescribes the field.
+- `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `zh-TW/firefox-ios.xliff` — "You’re Protected" is rendered as "Let us protect you" instead of a status saying the user is protected.
+    - Current: `讓我們保護您`
+    - Source: `You’re Protected`
+    - Suggest: `您已受到保護`
+    - The source and the developer comment describe a status label saying the user is already protected (shown when zero trackers have been blocked). The translation is a request or call to action meaning "Let us protect you", which says something different.
 - `FirefoxSync.AddressAutofillEngine.v124` — `zh-TW/firefox-ios.xliff` — "Addresses" (postal addresses for autofill) is translated as "網址", which means web address/URL.
     - Current: `網址`
     - Source: `Addresses`
@@ -193,6 +207,11 @@ _Nothing in this category._
     - Source: `New! %@ Relay email masks are now available on mobile.`
     - Suggest: `行動版`
     - The source says "available on mobile". The word for a mobile edition is 版 (version). 板 means board, so this is a spelling error.
+- `Settings.TechnicalData.Message.v136` — `zh-TW/firefox-ios.xliff` — The head noun "data" (資料) is missing, so the subject 關於… has no noun and the sentence is incomplete.
+    - Current: `關於您的裝置、硬體設定，以及您的使用方式，可幫助我們`
+    - Source: `Data about your device, hardware configuration, and usage helps us improve %@ features, performance and stability.`
+    - Suggest: `關於您的裝置、硬體設定與使用方式的資料，可幫助我們`
+    - The source is "Data about your device… helps us". The translation starts with 關於 ("about") but never names what the thing about the device is, so the subject is grammatically incomplete. Adding 的資料 fixes this.
 - `Settings.DisplayTheme.SectionFooter` — `zh-TW/firefox-ios.xliff` — The adverb 自動 is duplicated in the same clause.
     - Current: `佈景主題將自動根據螢幕顯示亮度自動切換`
     - Source: `The theme will automatically change based on your display brightness. You can set the threshold where the theme changes. The circle indicates your display’s current brightness.`

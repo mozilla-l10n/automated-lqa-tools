@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,896 |
+| **Strings reviewed this run** | 30 of 1,903 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,131 @@ Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.ReachedDataLimitPopup.ClosedXTabs.v160` — `sl/firefox-ios.xliff` — Fixed genitive plural "zavihkov zaprtih" is ungrammatical for counts 2–4 (the comment's own example is 3).
+    - Current: `%1$@ zavihkov zaprtih`
+    - Source: `Closed %1$@ Tabs`
+    - Suggest: `Zaprti zavihki: %1$@`
+    - The string has no plural variants, so a single form is used for every count above one. In Slovenian "zavihkov zaprtih" is correct only for 5 and above. For 2 it should be "zavihka zaprta" and for 3–4 "zavihki zaprti", and the comment gives 3 as an example. A form that works for any number avoids the agreement error.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (23)
 
-_Nothing was fixed._
+- `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `sl/firefox-ios.xliff` — Uses curly double quotes instead of the locale's straight double quotes.
+    - Current: `Shranjeno v mapo “Zaznamki”`
+    - Source: `Saved in “Bookmarks”`
+    - Suggest: `Shranjeno v mapo "Zaznamki"`
+    - The sl convention is straight-double quotes; the sibling string Bookmarks.Menu.DeletedBookmark.v131 uses straight quotes.
+- `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `sl/firefox-ios.xliff` — Uses curly double quotes instead of the locale's straight double quotes.
+    - Current: `Shranjeno v mapo “%@”`
+    - Source: `Saved in “%@”`
+    - Suggest: `Shranjeno v mapo "%@"`
+    - The sl convention is straight-double quotes; the sibling toast string uses straight quotes.
+- `CreditCard.ErrorState.CardExpirationDateSublabel.v112` — `sl/firefox-ios.xliff` — "expiration date" translated as "leto poteka" (expiration year).
+    - Current: `Vnesite veljavno leto poteka`
+    - Source: `Enter a valid expiration date`
+    - Suggest: `Vnesite veljaven datum poteka`
+    - The source asks for a valid expiration date, not year.
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `sl/firefox-ios.xliff` — "marketing partners" is rendered as "tehnološkim partnerjem ... za trženje", introducing "technology" that the source never mentions.
+    - Current: `tehnološkim partnerjem organizacije %2$@ za trženje`
+    - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
+    - Suggest: `trženjskim partnerjem organizacije %2$@`
+    - The en-US says only "%2$@’s marketing partners"; the word "tehnološkim" (technology) is not in the source and changes who the data is shared with.
+- `Onboarding.Modern.TermsOfService.ManageLink.v145` — `sl/firefox-ios.xliff` — "Manage settings" is translated only as "Nastavitve" ("Settings"), dropping the verb.
+    - Current: `Nastavitve`
+    - Source: `Manage settings`
+    - Suggest: `Upravljanje nastavitev`
+    - The source is an action link "Manage settings"; the translation loses the "manage" part.
+- `Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v140` — `sl/firefox-ios.xliff` — "for everyone" is translated as "za uporabnike po vsem svetu" ("for users all over the world").
+    - Current: `za uporabnike po vsem svetu`
+    - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
+    - Suggest: `za vse`
+    - The source says the data helps improve things for everyone, not specifically for users worldwide.
+- `Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135` — `sl/firefox-ios.xliff` — "for everyone" is rendered as "for users around the world", adding a claim the source does not make.
+    - Current: `za uporabnike po vsem svetu`
+    - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
+    - Suggest: `za vse`
+    - The en-US says features, performance and stability improve "for everyone"; the Slovenian asserts "for users all over the world", which is not what the source says.
+- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `sl/firefox-ios.xliff` — "Limited Edition Wallpaper" translated without the word "wallpaper".
+    - Current: `Omejena izdaja`
+    - Source: `Limited Edition Wallpaper`
+    - Suggest: `Ozadje omejene izdaje`
+    - The source is an accessibility label describing the wallpaper type; the parallel string uses "Klasično ozadje", so dropping "ozadje" loses the object being described.
+- `ScanQRCode.ConfirmOpenURL.Message.v129` — `sl/firefox-ios.xliff` — The translation reads "Allow opening of %@?" making the app the object being opened, instead of allowing the app to open (the scanned URL).
+    - Current: `Dovoli odpiranje %@?`
+    - Source: `Allow %@ to open?`
+    - Suggest: `Ali dovolite, da %@ odpre povezavo?`
+    - Per the comment, %@ is the app name and the prompt asks permission for the app to open a URL from the scanned QR code; the Slovenian instead asks permission to open the app itself.
+- `Settings.Search.Suggest.SearchBrowsingHistory.Title.v124` — `sl/firefox-ios.xliff` — "Search Browsing History" is rendered as "search history" instead of "browsing history".
+    - Current: `Iskanje po zgodovini iskanja`
+    - Source: `Search Browsing History`
+    - Suggest: `Iskanje po zgodovini brskanja`
+    - The source refers to browsing history (zgodovina brskanja), not search history.
+- `Summarizer.Error.RateLimited.Message.v142` — `sl/firefox-ios.xliff` — The impersonal source is rendered in the first person, making the app speak as "I".
+    - Current: `Tega trenutno ne morem narediti.`
+    - Source: `Can’t handle this one at the moment. Try again later!`
+    - Suggest: `Tega trenutno ni mogoče narediti.`
+    - The en-US "Can't handle this one at the moment." is impersonal; Slovenian UI convention avoids first-person app voice, and the rest of the file uses impersonal forms.
+- `Upgrade.SyncSign.Description.v114` — `sl/firefox-ios.xliff` — Hyphen used as a sentence dash instead of the house en dash.
+    - Current: `kjer ste končali - z zavihki`
+    - Source: `Pick up where you left off with tabs from other devices now on your homepage.`
+    - Suggest: `kjer ste končali – z zavihki`
+    - The locale convention is the en dash; a hyphen-minus is used here as a parenthetical dash.
+- `ContextMenu.GoogleLensButtonTitle.v153` — `sl/firefox-ios.xliff` — "Search Image" (singular, the specific image) rendered as plural "slike", changing the meaning to searching for images generally.
+    - Current: `Išči slike z Google Lens`
+    - Source: `Search Image with Google Lens`
+    - Suggest: `Išči sliko z Google Lens`
+    - The source refers to searching for the selected image with Google Lens, not for images in general.
+- `FirefoxHome.Stories.Minutes.v140` — `sl/firefox-ios.xliff` — "minut" is not abbreviated although the comment requires an abbreviation due to space constraints.
+    - Current: `minut: %d`
+    - Source: `min: %d`
+    - Suggest: `min: %d`
+    - Developer comment states minutes should be abbreviated due to space constraints; the source uses "min".
+- `FxHomepage.Wallpaper.ButtonLabel.v99` — `sl/firefox-ios.xliff` — Misspelling of "Logotip" as "Logtip".
+    - Current: `Logtip Firefoxa`
+    - Source: `Firefox logo, change the wallpaper.`
+    - Suggest: `Logotip Firefoxa`
+    - The Slovenian word for "logo" is "logotip"; "Logtip" is a typo.
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `sl/firefox-ios.xliff` — "Cross-Site Trackers" is rendered as "Spletni sledilci" (web trackers), losing the cross-site meaning.
+    - Current: `Spletni sledilci`
+    - Source: `Cross-Site Trackers`
+    - Suggest: `Sledilci med spletnimi mesti`
+    - The source specifies trackers that follow users across sites; "Spletni sledilci" just means "web trackers" and does not convey "cross-site".
+- `Menu.TrackingProtectionDescription.ContentTrackers` — `sl/firefox-ios.xliff` — Translation drops "outside" ads and omits "login fields" from the list of things that might not work.
+    - Current: `vendar nekateri gumbi in obrazci morda ne bodo delovali`
+    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
+    - Suggest: `vendar nekateri gumbi, obrazci in prijavna polja morda ne bodo delovali`
+    - The en-US lists "buttons, forms, and login fields"; the Slovenian omits login fields.
+- `Menu.TrackingProtectionDescription.CryptominersNew` — `sl/firefox-ios.xliff` — "secretly use your system's computing power" loses "secretly", and "increase your energy bill" is rendered with the colloquial "zasolijo račun".
+    - Current: `Kriptorudarji izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja.`
+    - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
+    - Suggest: `Kriptorudarji na skrivaj izrabljajo računsko zmogljivost vašega sistema za rudarjenje digitalnega denarja.`
+    - The source says cryptominers "secretly use your system’s computing power"; the omission of "secretly" drops meaning.
+- `Search.ThirdPartyEngines.AddMessage` — `sl/firefox-ios.xliff` — Typo: "isklanik" should be "iskalnik".
+    - Current: `Novi isklanik se bo pojavil v vrstici za hitro iskanje.`
+    - Source: `The new search engine will appear in the quick search bar.`
+    - Suggest: `Novi iskalnik se bo pojavil v vrstici za hitro iskanje.`
+    - The Slovenian word for "search engine" is "iskalnik"; the letters are transposed.
+- `SendTo.NotSignedIn.Title` — `sl/firefox-ios.xliff` — Incorrect case and unnecessary possessive pronoun; also "Firefox Račun" should not be capitalized mid-phrase as two nouns.
+    - Current: `Niste prijavljeni v vaš Firefox Račun.`
+    - Source: `You are not signed in to your Firefox Account.`
+    - Suggest: `Niste prijavljeni v svoj račun Firefox.`
+    - Slovenian requires the reflexive possessive "svoj", and the noun order/capitalization "Firefox Račun" is a calque of English; correct form is "račun Firefox".
+- `Settings.ClearAllWebsiteData.Clear.Button` — `sl/firefox-ios.xliff` — "all website data" rendered with a singular noun phrase, so it reads "all data of the website".
+    - Current: `Izbriši vse podatke spletne strani`
+    - Source: `Clear All Website Data`
+    - Suggest: `Izbriši vse podatke spletnih strani`
+    - The source clears data for all websites; the singular genitive "spletne strani" restricts it to one site.
+- `You don’t have any tabs open in Firefox on your other devices.` — `sl/firefox-ios.xliff` — Added word "drugih" changes the meaning to "no other tabs open".
+    - Current: `V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.`
+    - Source: `You don’t have any tabs open in Firefox on your other devices.`
+    - Suggest: `V Firefoxu na drugih napravah nimate odprtih zavihkov.`
+    - The source says the user has no tabs open; the translation says no *other* tabs are open, implying some tabs exist.
+- `ContextMenu.OpenInNewPrivateTabButtonTitle` — `sl/firefox-ios.xliff` — "New" is dropped, so the option reads "Open in private tab" instead of "Open in New Private Tab".
+    - Current: `Odpri v zasebnem zavihku`
+    - Source: `Open in New Private Tab`
+    - Suggest: `Odpri v novem zasebnem zavihku`
+    - The source says "Open in New Private Tab"; the translation omits "New", changing the action's meaning (an existing vs. a new tab).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +163,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,896 |
-| Missing strings | 84 |
+| Strings | 1,903 |
+| Missing strings | 77 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,13 +177,12 @@ _Nothing retired._
 
 ### Completeness
 
-**84 strings** are not translated yet, concentrated in:
+**77 strings** are not translated yet, concentrated in:
 
-- `sl/firefox-ios.xliff` — 35
+- `sl/firefox-ios.xliff` — 34
 - `sl/firefox-ios.xliff` — 20
-- `sl/firefox-ios.xliff` — 9
+- `sl/firefox-ios.xliff` — 8
 - `sl/firefox-ios.xliff` — 6
-- `sl/firefox-ios.xliff` — 5
 - `sl/firefox-ios.xliff` — 5
 - `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 1
@@ -79,10 +196,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 13, `curly-double` 2 | **straight-double** |
+| quotes | `straight-double` 15 | **straight-double** |
 | ellipsis | `char` 23 | **char** |
-| dash | `en` 10 | **en** |
-| register | `informal` 2, `formal` 65 | **formal** |
+| dash | `en` 11 | **en** |
+| register | `informal` 2, `formal` 64 | **formal** |
 
 ---
 
@@ -92,15 +209,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (79)
+## 3. Open findings (46)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 34 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 19 |
+| 3 | Degraded language (grammar, spelling, terminology) | 27 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -113,11 +230,6 @@ _Nothing in this category._
     - Source: `Websites you visit may request your location.`
     - Suggest: `Spletne strani, ki jih obiščete, lahko zahtevajo vašo lokacijo.`
     - The en-US limits the claim to websites the user visits; the translation drops that qualifier.
-- `Alerts.RestoreTabs.Message.v109` — `sl/firefox-ios.xliff` — "Sorry about that" is rendered as "Oprostite" (imperative "excuse me/forgive"), which reads as addressing the user rather than an apology.
-    - Current: `Oprostite.`
-    - Source: `Sorry about that. Restore tabs to pick up where you left off.`
-    - Suggest: `Oprostite za nevšečnost.`
-    - The source is an apology by the app for the crash; "Oprostite." alone is a bare imperative that does not convey the apology naturally.
 - `LoginsList.NoLoginsFound.Description.v122` — `sl/firefox-ios.xliff` — "All passwords you save are encrypted" is rendered as "all passwords are stored encrypted", dropping the restriction to saved passwords.
     - Current: `Vsa gesla so shranjena v šifrirani obliki.`
     - Source: `The passwords you save or sync to %@ will be listed here. All passwords you save are encrypted.`
@@ -128,11 +240,6 @@ _Nothing in this category._
     - Source: `Trackers blocked: %@`
     - Suggest: `Blokiranih sledilcev: %@`
     - The source says blocked; elsewhere in the same file "blocks" is translated as "blokira", so "zavrnjenih" is both inaccurate and inconsistent.
-- `CreditCard.ErrorState.CardExpirationDateSublabel.v112` — `sl/firefox-ios.xliff` — "expiration date" translated as "leto poteka" (expiration year).
-    - Current: `Vnesite veljavno leto poteka`
-    - Source: `Enter a valid expiration date`
-    - Suggest: `Vnesite veljaven datum poteka`
-    - The source asks for a valid expiration date, not year.
 - `ExternalLink.ExternalMailLinkConfirmation.v136` — `sl/firefox-ios.xliff` — Translation drops "open email", saying only "open the default mail application".
     - Current: `Želite odpreti privzeto aplikacijo za e-pošto?`
     - Source: `Open email in the default mail application?`
@@ -163,46 +270,16 @@ _Nothing in this category._
     - Source: `Indie. Non-profit. For good.`
     - Suggest: `Neodvisni. Neprofitni. Za dobro vseh.`
     - The source describes Firefox as being for good (a good cause); "Za vedno" means "forever", a different claim.
-- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `sl/firefox-ios.xliff` — "marketing partners" is rendered as "tehnološkim partnerjem ... za trženje", introducing "technology" that the source never mentions.
-    - Current: `tehnološkim partnerjem organizacije %2$@ za trženje`
-    - Source: `Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.`
-    - Suggest: `trženjskim partnerjem organizacije %2$@`
-    - The en-US says only "%2$@’s marketing partners"; the word "tehnološkim" (technology) is not in the source and changes who the data is shared with.
 - `Onboarding.Modern.Sync.Description.v145` — `sl/firefox-ios.xliff` — "sync on any device" mistranslated as syncing "with any other device".
     - Current: `se sinhronizirajo s katerokoli drugo napravo`
     - Source: `Your bookmarks, passwords, and more sync on any device. Everything’s protected with encryption, so only you can access it.`
     - Suggest: `se sinhronizirajo na vseh vaših napravah`
     - The source says bookmarks, passwords and more sync on any device, not that they sync with some other single device; the added "drugo" (other) is not in the source and changes the meaning.
-- `Onboarding.Modern.TermsOfService.ManageLink.v145` — `sl/firefox-ios.xliff` — "Manage settings" is translated only as "Nastavitve" ("Settings"), dropping the verb.
-    - Current: `Nastavitve`
-    - Source: `Manage settings`
-    - Suggest: `Upravljanje nastavitev`
-    - The source is an action link "Manage settings"; the translation loses the "manage" part.
-- `Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v140` — `sl/firefox-ios.xliff` — "for everyone" is translated as "za uporabnike po vsem svetu" ("for users all over the world").
-    - Current: `za uporabnike po vsem svetu`
-    - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
-    - Suggest: `za vse`
-    - The source says the data helps improve things for everyone, not specifically for users worldwide.
-- `Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135` — `sl/firefox-ios.xliff` — "for everyone" is rendered as "for users around the world", adding a claim the source does not make.
-    - Current: `za uporabnike po vsem svetu`
-    - Source: `Data about your device, hardware configuration, and how you use %1$@ helps improve features, performance, and stability for everyone. %2$@`
-    - Suggest: `za vse`
-    - The en-US says features, performance and stability improve "for everyone"; the Slovenian asserts "for users all over the world", which is not what the source says.
-- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `sl/firefox-ios.xliff` — "Limited Edition Wallpaper" translated without the word "wallpaper".
-    - Current: `Omejena izdaja`
-    - Source: `Limited Edition Wallpaper`
-    - Suggest: `Ozadje omejene izdaje`
-    - The source is an accessibility label describing the wallpaper type; the parallel string uses "Klasično ozadje", so dropping "ozadje" loses the object being described.
 - `PrivacyDashboard.Fingerprinters.v155` — `sl/firefox-ios.xliff` — "Fingerprinters" is rendered as "Sledilci prstnih odtisov" (trackers of fingerprints) instead of the established Slovenian term for fingerprinters.
     - Current: `Sledilci prstnih odtisov`
     - Source: `Fingerprinters`
     - Suggest: `Sledilci prstnih odtisov naprav`
     - Firefox sl uses "Sledilci prstnih odtisov naprav"/"Jemalci prstnih odtisov" for fingerprinters; the literal phrase suggests trackers that follow fingerprints rather than scripts that fingerprint the device.
-- `ScanQRCode.ConfirmOpenURL.Message.v129` — `sl/firefox-ios.xliff` — The translation reads "Allow opening of %@?" making the app the object being opened, instead of allowing the app to open (the scanned URL).
-    - Current: `Dovoli odpiranje %@?`
-    - Source: `Allow %@ to open?`
-    - Suggest: `Ali dovolite, da %@ odpre povezavo?`
-    - Per the comment, %@ is the app name and the prompt asks permission for the app to open a URL from the scanned QR code; the Slovenian instead asks permission to open the app itself.
 - `Settings.AIControls.AIPoweredFeaturesSection.Title.v151` — `sl/firefox-ios.xliff` — "AI-POWERED FEATURES" translated as "MOŽNOSTI UMETNE INTELIGENCE" (features of AI) instead of features powered by AI.
     - Current: `MOŽNOSTI UMETNE INTELIGENCE`
     - Source: `AI-POWERED FEATURES`
@@ -218,11 +295,6 @@ _Nothing in this category._
     - Source: `%@ will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `bo izboljševal funkcije, učinkovitost delovanja in stabilnost`
     - The source lists features, performance and stability; the translation drops "features" and renders the list as performance/reliability/performance.
-- `Settings.Search.Suggest.SearchBrowsingHistory.Title.v124` — `sl/firefox-ios.xliff` — "Search Browsing History" is rendered as "search history" instead of "browsing history".
-    - Current: `Iskanje po zgodovini iskanja`
-    - Source: `Search Browsing History`
-    - Suggest: `Iskanje po zgodovini brskanja`
-    - The source refers to browsing history (zgodovina brskanja), not search history.
 - `Settings.Studies.Message.v148` — `sl/firefox-ios.xliff` — "features" translated as "novosti" (new things) rather than features.
     - Current: `za preizkušanje novosti`
     - Source: `%@ randomly selects users to test features, which improves quality for everyone.`
@@ -248,41 +320,16 @@ _Nothing in this category._
     - Source: `Missing items`
     - Suggest: `Manjkajoči elementi`
     - The source says only "Missing items"; "strani" adds information the source does not state.
-- `ContextMenu.GoogleLensButtonTitle.v153` — `sl/firefox-ios.xliff` — "Search Image" (singular, the specific image) rendered as plural "slike", changing the meaning to searching for images generally.
-    - Current: `Išči slike z Google Lens`
-    - Source: `Search Image with Google Lens`
-    - Suggest: `Išči sliko z Google Lens`
-    - The source refers to searching for the selected image with Google Lens, not for images in general.
 - `Offline Website Data` — `sl/firefox-ios.xliff` — "Offline Website Data" translated as "Podatke pri delu brez povezave", dropping "Website".
     - Current: `Podatke pri delu brez povezave`
     - Source: `Offline Website Data`
     - Suggest: `Podatke spletnih strani brez povezave`
     - The source names data stored by websites for offline use; the translation says only "data when working offline", losing the website reference.
-- `DefaultBrowserCard.PeaceOfMind.Description.v108` — `sl/firefox-ios.xliff` — "blocks" trackers translated as "zavrne" (rejects/declines) instead of "blokira/zablokira".
-    - Current: `Firefox vsak mesec zavrne povprečno več kot 3000 sledilcev na uporabnika.`
-    - Source: `Firefox blocks 3,000+ trackers per user each month on average. Make us your default browser for privacy peace of mind.`
-    - Suggest: `Firefox vsak mesec blokira povprečno več kot 3000 sledilcev na uporabnika.`
-    - The product's established term for blocking trackers is "blokira"; "zavrne" describes a different action.
 - `ErrorPages.CertWarning.Title` — `sl/firefox-ios.xliff` — Title says "Your connection is not private" instead of "This Connection is Untrusted".
     - Current: `Vaša povezava ni zasebna`
     - Source: `This Connection is Untrusted`
     - Suggest: `Ta povezava ni zaupanja vredna`
     - The en-US says the connection is untrusted; the Slovenian asserts it is not private, a different claim.
-- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `sl/firefox-ios.xliff` — "Cross-Site Trackers" is rendered as "Spletni sledilci" (web trackers), losing the cross-site meaning.
-    - Current: `Spletni sledilci`
-    - Source: `Cross-Site Trackers`
-    - Suggest: `Sledilci med spletnimi mesti`
-    - The source specifies trackers that follow users across sites; "Spletni sledilci" just means "web trackers" and does not convey "cross-site".
-- `Menu.TrackingProtectionDescription.ContentTrackers` — `sl/firefox-ios.xliff` — Translation drops "outside" ads and omits "login fields" from the list of things that might not work.
-    - Current: `vendar nekateri gumbi in obrazci morda ne bodo delovali`
-    - Source: `Websites may load outside ads, videos, and other content that contains hidden trackers. Blocking this can make websites load faster, but some buttons, forms, and login fields, might not work.`
-    - Suggest: `vendar nekateri gumbi, obrazci in prijavna polja morda ne bodo delovali`
-    - The en-US lists "buttons, forms, and login fields"; the Slovenian omits login fields.
-- `Menu.TrackingProtectionDescription.CryptominersNew` — `sl/firefox-ios.xliff` — "secretly use your system's computing power" loses "secretly", and "increase your energy bill" is rendered with the colloquial "zasolijo račun".
-    - Current: `Kriptorudarji izrabljajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja.`
-    - Source: `Cryptominers secretly use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill.`
-    - Suggest: `Kriptorudarji na skrivaj izrabljajo računsko zmogljivost vašega sistema za rudarjenje digitalnega denarja.`
-    - The source says cryptominers "secretly use your system’s computing power"; the omission of "secretly" drops meaning.
 - `ScanQRCode.PermissionError.Message.v100` — `sl/firefox-ios.xliff` — The instruction to go to the device settings is reduced to "Izberite" (Select), dropping "device".
     - Current: `Izberite "Nastavitve" > "Firefox".`
     - Source: `Go to device ‘Settings’ > ‘Firefox’. Allow Firefox to access camera.`
@@ -313,16 +360,6 @@ _Nothing in this category._
     - Source: `BLOCKS`
     - Suggest: `BLOKIRANO`
     - The header labels a list of blocked websites; "zavrnjeno" means rejected, not blocked, and is inconsistent with the blocking terminology used elsewhere.
-- `You don’t have any tabs open in Firefox on your other devices.` — `sl/firefox-ios.xliff` — Added word "drugih" changes the meaning to "no other tabs open".
-    - Current: `V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.`
-    - Source: `You don’t have any tabs open in Firefox on your other devices.`
-    - Suggest: `V Firefoxu na drugih napravah nimate odprtih zavihkov.`
-    - The source says the user has no tabs open; the translation says no *other* tabs are open, implying some tabs exist.
-- `ContextMenu.OpenInNewPrivateTabButtonTitle` — `sl/firefox-ios.xliff` — "New" is dropped, so the option reads "Open in private tab" instead of "Open in New Private Tab".
-    - Current: `Odpri v zasebnem zavihku`
-    - Source: `Open in New Private Tab`
-    - Suggest: `Odpri v novem zasebnem zavihku`
-    - The source says "Open in New Private Tab"; the translation omits "New", changing the action's meaning (an existing vs. a new tab).
 
 ### C. Grammar, agreement & spelling
 
@@ -351,46 +388,26 @@ _Nothing in this category._
     - Source: `1 Week Ago`
     - Suggest: `1 teden`
     - Numeral 1 requires singular nominative "teden"; "tedna" is dual/genitive and is ungrammatical here.
+- `VPN.ReachedDataLimitPopup.ClosedXTabs.v160` — `sl/firefox-ios.xliff` — Fixed genitive plural "zavihkov zaprtih" is ungrammatical for counts 2–4 (the comment's own example is 3).
+    - Current: `%1$@ zavihkov zaprtih`
+    - Source: `Closed %1$@ Tabs`
+    - Suggest: `Zaprti zavihki: %1$@`
+    - The string has no plural variants, so a single form is used for every count above one. In Slovenian "zavihkov zaprtih" is correct only for 5 and above. For 2 it should be "zavihka zaprta" and for 3–4 "zavihki zaprti", and the comment gives 3 as an example. A form that works for any number avoids the agreement error.
 - `WebCompatReporter.SubOption.CaptionsMissing.v154` — `sl/firefox-ios.xliff` — Sentence "Captions are missing" rendered as a noun phrase "Manjkajoči napisi", inconsistent with the other sub-options which are full clauses.
     - Current: `Manjkajoči napisi`
     - Source: `Captions are missing`
     - Suggest: `Napisi manjkajo`
     - Source is a clause ("Captions are missing"), like the sibling options rendered as clauses ("Gumbi ali povezave ne delujejo").
-- `FxA.FirefoxAccount` — `sl/firefox-ios.xliff` — "Firefox Račun" uses English word order; Slovenian requires "Račun Firefox".
-    - Current: `Firefox Račun`
-    - Source: `Firefox Account`
-    - Suggest: `Račun Firefox`
-    - Slovenian noun phrase order places the brand after the noun; also the common noun should not be capitalized mid-phrase.
-- `FxHomepage.Wallpaper.ButtonLabel.v99` — `sl/firefox-ios.xliff` — Misspelling of "Logotip" as "Logtip".
-    - Current: `Logtip Firefoxa`
-    - Source: `Firefox logo, change the wallpaper.`
-    - Suggest: `Logotip Firefoxa`
-    - The Slovenian word for "logo" is "logotip"; "Logtip" is a typo.
-- `Search.ThirdPartyEngines.AddMessage` — `sl/firefox-ios.xliff` — Typo: "isklanik" should be "iskalnik".
-    - Current: `Novi isklanik se bo pojavil v vrstici za hitro iskanje.`
-    - Source: `The new search engine will appear in the quick search bar.`
-    - Suggest: `Novi iskalnik se bo pojavil v vrstici za hitro iskanje.`
-    - The Slovenian word for "search engine" is "iskalnik"; the letters are transposed.
 - `SendTo.NoDevicesFound.Message` — `sl/firefox-ios.xliff` — "Firefox Računom" uses English-style capitalization and word order for "Firefox Account".
     - Current: `S tem Firefox Računom`
     - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
     - Suggest: `S tem računom Firefox`
     - In Slovenian the generic noun is lowercase and follows the brand name: "račun Firefox".
-- `SendTo.NotSignedIn.Title` — `sl/firefox-ios.xliff` — Incorrect case and unnecessary possessive pronoun; also "Firefox Račun" should not be capitalized mid-phrase as two nouns.
-    - Current: `Niste prijavljeni v vaš Firefox Račun.`
-    - Source: `You are not signed in to your Firefox Account.`
-    - Suggest: `Niste prijavljeni v svoj račun Firefox.`
-    - Slovenian requires the reflexive possessive "svoj", and the noun order/capitalization "Firefox Račun" is a calque of English; correct form is "račun Firefox".
 - `SentTab_TabArrivingNotification_WithDevice_title` — `sl/firefox-ios.xliff` — Wrong preposition/case for device name: "z %@" should be "iz naprave %@" or "z naprave %@" — but here the source says "from %@" meaning received from a device.
     - Current: `Zavihek prejet z %@`
     - Source: `Tab received from %@`
     - Suggest: `Zavihek prejet iz %@`
     - The placeholder holds a device name; "prejet z %@" is ungrammatical/ambiguous, standard Slovenian uses "iz" for origin from a device.
-- `Settings.ClearAllWebsiteData.Clear.Button` — `sl/firefox-ios.xliff` — "all website data" rendered with a singular noun phrase, so it reads "all data of the website".
-    - Current: `Izbriši vse podatke spletne strani`
-    - Source: `Clear All Website Data`
-    - Suggest: `Izbriši vse podatke spletnih strani`
-    - The source clears data for all websites; the singular genitive "spletne strani" restricts it to one site.
 - `Settings.FxA.Title` — `sl/firefox-ios.xliff` — Brand-plus-noun compound needs Slovenian possessive form and lowercase noun.
     - Current: `Firefox Račun`
     - Source: `Firefox Account`
@@ -414,16 +431,6 @@ _Nothing in this category._
     - Source: `Tracking content: %@`
     - Suggest: `Sledilne vsebine: %@`
     - The other rows on the same screen (Piškotkov za sledenje..., Sledilcev prstnih odtisov..., Sledilcev družbenih omrežij...) use the genitive counting form; this row breaks the pattern on the same screen.
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `sl/firefox-ios.xliff` — Informal imperative "nadaljuj" breaks the locale's formal register.
-    - Current: `Strinjam se, nadaljuj`
-    - Source: `Agree and continue`
-    - Suggest: `Strinjam se in nadaljuj`
-    - The sl locale uses the formal register; button text mixing first-person "Strinjam se" with informal imperative "nadaljuj" is inconsistent with the established address form used elsewhere ("Strinjam se in nadaljuj").
-- `CreditCard.Settings.Yes.v122` — `sl/firefox-ios.xliff` — Inconsistent question/answer register: the prompt uses first person ("Posodobim kartico?") while other prompts use the formal second person ("Želite varno shraniti to kartico?").
-    - Current: `Posodobim kartico?`
-    - Source: `Update`
-    - Suggest: `Želite posodobiti kartico?`
-    - The locale convention is formal address; CreditCard.Settings.RememberThisCard.v122 on the same screen uses "Želite …", so "Posodobim kartico?" is inconsistent.
 - `Settings.AIControls.BlockAIEnhancementsTitle.v151` — `sl/firefox-ios.xliff` — Abbreviation "UI" for AI is used here and in BlockedInformation, while other strings on the same screen spell out "umetne inteligence"; inconsistent terminology within one screen.
     - Current: `Prepovej izboljšave s pomočjo UI`
     - Source: `Block AI Enhancements`
@@ -434,16 +441,6 @@ _Nothing in this category._
     - Source: `Scroll to Hide Tab and Address Bar`
     - Suggest: `Drsenje skrije vrstico z zavihki in naslovno vrstico`
     - En-US is a settings toggle title "Scroll to Hide Tab and Address Bar"; the Slovenian reads as a command telling the user to swipe, and merges the two bars into one.
-- `Settings.Studies.Title.v148` — `sl/firefox-ios.xliff` — "Feature Studies" rendered as "raziskave značilnosti" instead of the established term for features ("funkcije").
-    - Current: `Dovoli raziskave značilnosti`
-    - Source: `Allow Feature Studies`
-    - Suggest: `Dovoli raziskave funkcij`
-    - Elsewhere in this file "features" is translated as "funkcije" (e.g. Settings.Studies.Message.v136: "Preizkusite funkcije in ideje"); "značilnosti" is inconsistent terminology for feature studies.
-- `Summarizer.Error.RateLimited.Message.v142` — `sl/firefox-ios.xliff` — The impersonal source is rendered in the first person, making the app speak as "I".
-    - Current: `Tega trenutno ne morem narediti.`
-    - Source: `Can’t handle this one at the moment. Try again later!`
-    - Suggest: `Tega trenutno ni mogoče narediti.`
-    - The en-US "Can't handle this one at the moment." is impersonal; Slovenian UI convention avoids first-person app voice, and the rest of the file uses impersonal forms.
 - `Summarizer.ToS.InfoPanel.Title.Label.v143` — `sl/firefox-ios.xliff` — "Summarize this page?" is rendered in the first person singular ("Shall I summarize").
     - Current: `Povzamem vsebino strani?`
     - Source: `Summarize this page?`
@@ -459,11 +456,6 @@ _Nothing in this category._
     - Source: `Enter passcode`
     - Suggest: `Vnesite geslo za dostop`
     - In this file "password" and "passcode" are distinct; "geslo" is the established rendering of "password", making the passcode/password distinction disappear.
-- `FirefoxHome.Stories.Minutes.v140` — `sl/firefox-ios.xliff` — "minut" is not abbreviated although the comment requires an abbreviation due to space constraints.
-    - Current: `minut: %d`
-    - Source: `min: %d`
-    - Suggest: `min: %d`
-    - Developer comment states minutes should be abbreviated due to space constraints; the source uses "min".
 - `Menu.Share.v99` — `sl/firefox-ios.xliff` — "Share" translated as "Deli" (divide/share in the arithmetic sense) instead of the established "Deli z drugimi"/"Souporaba".
     - Current: `Deli`
     - Source: `Share`
@@ -472,54 +464,25 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `sl/firefox-ios.xliff` — Uses curly double quotes instead of the locale's straight double quotes.
-    - Current: `Shranjeno v mapo “Zaznamki”`
-    - Source: `Saved in “Bookmarks”`
-    - Suggest: `Shranjeno v mapo "Zaznamki"`
-    - The sl convention is straight-double quotes; the sibling string Bookmarks.Menu.DeletedBookmark.v131 uses straight quotes.
-- `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `sl/firefox-ios.xliff` — Uses curly double quotes instead of the locale's straight double quotes.
-    - Current: `Shranjeno v mapo “%@”`
-    - Source: `Saved in “%@”`
-    - Suggest: `Shranjeno v mapo "%@"`
-    - The sl convention is straight-double quotes; the sibling toast string uses straight quotes.
-- `MainMenu.Submenus.Tools.ReaderView.Off.Title.v131` — `sl/firefox-ios.xliff` — Space inserted before the ellipsis character.
-    - Current: `Prijavi nedelujočo stran …`
-    - Source: `Turn off Reader View`
-    - Suggest: `Prijavi nedelujočo stran…`
-    - The en-US "Report Broken Site…" has no space before the ellipsis; Slovenian should follow the same typography.
-- `Upgrade.SyncSign.Description.v114` — `sl/firefox-ios.xliff` — Hyphen used as a sentence dash instead of the house en dash.
-    - Current: `kjer ste končali - z zavihki`
-    - Source: `Pick up where you left off with tabs from other devices now on your homepage.`
-    - Suggest: `kjer ste končali – z zavihki`
-    - The locale convention is the en dash; a hyphen-minus is used here as a parenthetical dash.
-- `PzSrmZ-2GqvPe` — `sl/firefox-ios.xliff` — Straight ASCII double quotes used instead of Slovenian quotation marks („ “).
-    - Current: `"Pojdi na kopirano povezavo"`
-    - Source: `Just to confirm, you wanted ‘Go to Copied Link’?`
-    - Suggest: `„Pojdi na kopirano povezavo“`
-    - The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.
-- `PzSrmZ-eHmH1H` — `sl/firefox-ios.xliff` — Straight ASCII double quotes used instead of Slovenian quotation marks („ “).
-    - Current: `"Počisti zasebne zavihke"`
-    - Source: `Just to confirm, you wanted ‘Clear Private Tabs’?`
-    - Suggest: `„Počisti zasebne zavihke“`
-    - The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.
-- `PzSrmZ-scEmjs` — `sl/firefox-ios.xliff` — Straight ASCII double quotes used instead of Slovenian quotation marks („ “).
-    - Current: `"Novo zasebno iskanje"`
-    - Source: `Just to confirm, you wanted ‘New Private Search’?`
-    - Suggest: `„Novo zasebno iskanje“`
-    - The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.
-- `PzSrmZ-xRJbBP` — `sl/firefox-ios.xliff` — Straight ASCII double quotes used instead of Slovenian quotation marks („ “).
-    - Current: `"Novo iskanje"`
-    - Source: `Just to confirm, you wanted ‘New Search’?`
-    - Suggest: `„Novo iskanje“`
-    - The source uses typographic quotes ‘…’; Slovenian typography requires „…“ rather than straight ASCII quotes.
+_Nothing in this category._
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (11)
 
-_Nothing dismissed._
+- `Alerts.RestoreTabs.Message.v109` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): "Oprostite." is the standard formal Slovenian apology equivalent to "Sorry (about that)".
+- `CreditCard.Settings.Yes.v122` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The quoted text "Posodobim kartico?" is not in this string; the translation "Posodobi" correctly renders "Update".
+- `DefaultBrowserCard.PeaceOfMind.Description.v108` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): Slovenian Mozilla products consistently render tracker blocking with 'zavračati/zavrniti' (cf. 'Zavračanje' in string 10), so 'zavrne' is the established term.
+- `FxA.FirefoxAccount` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The original capitalizes "Račun", so it likely treats "Firefox Račun" as a fixed product name, and the reviewer probably kept that brand form instead of reordering it into an ordinary noun phrase.
+- `MainMenu.Submenus.Tools.ReaderView.Off.Title.v131` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The quoted text "Prijavi nedelujočo stran …" does not appear in this translation, which has no ellipsis.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
+- `PzSrmZ-2GqvPe` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-eHmH1H` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-scEmjs` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-xRJbBP` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `Settings.Studies.Title.v148` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
@@ -533,6 +496,28 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (23)
 
-_Nothing fixed yet._
+- `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `CreditCard.ErrorState.CardExpirationDateSublabel.v112` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Onboarding.Modern.BrandRefresh.Marketing.Description.v148` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Onboarding.Modern.TermsOfService.ManageLink.v145` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Onboarding.Modern.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v140` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Onboarding.TermsOfService.PrivacyPreferences.SendTechnicalDataDescription.v135` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Onboarding.Wallpaper.Accessibility.LimitedEdition.v114` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `ScanQRCode.ConfirmOpenURL.Message.v129` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Settings.Search.Suggest.SearchBrowsingHistory.Title.v124` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Summarizer.Error.RateLimited.Message.v142` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Upgrade.SyncSign.Description.v114` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `ContextMenu.GoogleLensButtonTitle.v153` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `FirefoxHome.Stories.Minutes.v140` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `FxHomepage.Wallpaper.ButtonLabel.v99` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Menu.TrackingProtectionCrossSiteTrackers.Title` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Menu.TrackingProtectionDescription.ContentTrackers` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Menu.TrackingProtectionDescription.CryptominersNew` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Search.ThirdPartyEngines.AddMessage` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `SendTo.NotSignedIn.Title` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `Settings.ClearAllWebsiteData.Clear.Button` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `You don’t have any tabs open in Firefox on your other devices.` — `sl/firefox-ios.xliff` — fixed 2026-11-05
+- `ContextMenu.OpenInNewPrivateTabButtonTitle` — `sl/firefox-ios.xliff` — fixed 2026-11-05

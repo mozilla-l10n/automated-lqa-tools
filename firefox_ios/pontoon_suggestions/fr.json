@@ -394,9 +394,14 @@
    "source": "Error summarizing page. Try again later.",
    "original": "Erreur lors de la synthèse de la page. Réessayez plus tard.",
    "text": "Erreur lors du résumé de la page. Réessayez plus tard.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "dismissal": "Summarizer.Error.Unknown.Message.v142 @ Shared/Supporting Files/en-US.lproj/Summarizer.strings — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373354,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=322332",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",

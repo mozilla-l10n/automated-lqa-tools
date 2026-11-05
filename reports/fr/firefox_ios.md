@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `4006ca053edd` |
-| **Previous run** | 2026-11-02 @ `14a6f5ae8f30` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
+| **Previous run** | 2026-11-03 @ `4006ca053edd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,980 |
+| **Strings reviewed this run** | 3 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -68,10 +68,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 374 | **typographic** |
+| apostrophe | `typographic` 376 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
-| nbsp | `total` 166, `before-punctuation` 99 | _mixed_ |
+| nbsp | `total` 167, `before-punctuation` 99 | _mixed_ |
 | register | `formal` 332 | **formal** |
 
 ---
@@ -82,14 +82,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (26)
+## 3. Open findings (25)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 19 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -229,11 +229,6 @@ _Nothing in this category._
     - Source: `Show suggestions from Firefox Suggest in private sessions`
     - Suggest: `Afficher les suggestions de Firefox suggère dans les sessions privées`
     - Settings.Search.Suggest.AddressBarSetting.Title.v124, Settings.Search.Suggest.LearnAboutSuggestions.v124 and Settings.Search.Accessibility.LearnAboutSuggestions.v124 all use "Firefox suggère" for the same product name on the same screen; one of the two renderings is inconsistent.
-- `Summarizer.Error.Unknown.Message.v142` — `fr/firefox-ios.xliff` — "summarizing" is translated as « synthèse » here while every other string in the same feature uses « résumé ».
-    - Current: `Erreur lors de la synthèse de la page.`
-    - Source: `Error summarizing page. Try again later.`
-    - Suggest: `Erreur lors du résumé de la page.`
-    - Terminology inconsistency within the Summarizer screen, where "summary/summarize" is consistently rendered with « résumé »/« résumer ».
 
 ### E. Typography, punctuation & spacing
 
@@ -243,13 +238,14 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (7)
+### Dismissed by hand (8)
 
 - `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
 - `PasswordGenerator.Description.v132` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `Search.SuggestSectionTitle.v102` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
 - `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): In this Summarizer error, 'this one' means the page being summarized, so 'Impossible de résumer cette page pour l’instant' says the same thing.
+- `Summarizer.Error.Unknown.Message.v142` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 - `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
 - `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 
