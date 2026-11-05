@@ -106,7 +106,8 @@ project's self-test, commit. A run never improvises its own logic.
 
 The one automation that reaches outside the repository is
 [`pontoon-suggestions.yml`](.github/workflows/pontoon-suggestions.yml),
-run by hand with a project, locales and a finding group (each may be `all`).
+run by hand with a project, locales and finding groups (each may be `all`;
+locales and groups also take a comma-separated list, such as `C,E`).
 It drives [`lib/autosuggest.py`](lib/autosuggest.py): the model gives each
 open finding a verdict, and it gets no tools for this either, just a plain
 API request. A `fix` is applied to a scratch copy under `work/`, verified the

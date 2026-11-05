@@ -423,11 +423,11 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
 def cmd_run(args) -> int:
     projects = list(PROJECTS) if args.project == "all" else [args.project]
     groups = (list(findings_mod.CATEGORIES) if args.group.lower() == "all"
-              else [g.strip().upper() for g in args.group.split(",") if g.strip()])
+              else sorted({g.strip().upper() for g in args.group.split(",") if g.strip()}))
     unknown = [g for g in groups if g not in findings_mod.CATEGORIES]
-    if unknown:
-        sys.exit(f"unknown group {', '.join(unknown)}; one of "
-                 f"{', '.join(findings_mod.CATEGORIES)} or all")
+    if unknown or not groups:
+        sys.exit(f"unknown group {', '.join(unknown) or repr(args.group)}; "
+                 f"comma-separated {', '.join(findings_mod.CATEGORIES)}, or all")
     l10n_dirs = _paths(args.l10n_dir, projects, "--l10n-dir")
     source_dirs = _paths(args.source_dir, projects, "--source-dir")
     missing = [p for p in projects if p not in l10n_dirs]

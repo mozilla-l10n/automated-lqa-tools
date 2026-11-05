@@ -29,11 +29,9 @@ on:
         required: true
         default: 'all'
       group:
-        description: 'Finding group (A functional, B meaning, C grammar, D terminology, E typography)'
+        description: 'Comma-separated finding groups, or "all" (A functional, B meaning, C grammar, D terminology, E typography)'
         required: true
         default: 'all'
-        type: choice
-        options: [all, A, B, C, D, E]
       dry_run:
         description: 'Show the fixes and dismissals, submit and write nothing'
         required: false
@@ -56,6 +54,7 @@ jobs:
     outputs:
       jobs: ${{ steps.pick.outputs.jobs }}
       projects: ${{ steps.pick.outputs.projects }}
+      groups: ${{ steps.pick.outputs.groups }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
@@ -63,10 +62,24 @@ jobs:
           python-version: '3.12'
       - run: pip install PyYAML
       - id: pick
-        name: Resolve the project and locale lists
+        name: Resolve the project, locale and group lists
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json, os, sys, yaml
+          sys.path.insert(0, "lib")
+          from findings import CATEGORIES
+          # Checked here, once, so a typo fails before any job is started.
+          asked = os.environ["GROUPS"].strip()
+          if not asked or asked.lower() == "all":
+              groups = list(CATEGORIES)
+          else:
+              groups = [g.strip().upper() for g in asked.split(",") if g.strip()]
+              unknown = [g for g in groups if g not in CATEGORIES]
+              if unknown or not groups:
+                  raise SystemExit(f"unknown group {', '.join(unknown) or repr(asked)}; "
+                                   f"comma-separated {', '.join(CATEGORIES)}, or all")
+              groups = sorted(set(groups))
+          print("groups=" + ",".join(groups))
           product = os.environ["PRODUCT"]
           requested = os.environ["REQUESTED"].strip()
           projects = (["firefox", "android", "focus_android", "firefox_ios"]
@@ -101,6 +114,7 @@ jobs:
         env:
           PRODUCT: ${{ inputs.product }}
           REQUESTED: ${{ inputs.locales }}
+          GROUPS: ${{ inputs.group }}
 
   suggest:
     needs: plan
@@ -174,7 +188,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PONTOON_TOKEN: ${{ secrets.PONTOON_TOKEN }}
-          GROUP: ${{ inputs.group }}
+          GROUP: ${{ needs.plan.outputs.groups }}
           SUBMIT: ${{ !inputs.dry_run && '--submit' || '' }}
         run: |
           python lib/autosuggest.py run --project "$PROJECT" --locales "$LOCALE" \
