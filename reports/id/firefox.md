@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,893 |
+| **Strings reviewed this run** | 31 of 13,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,38 @@ Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (6)
 
-_No new findings._
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Typo: “leman” should be “lemah” (weak).
+    - Current: `enkripsi leman`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `enkripsi lemah`
+    - en-US 'weak encryption'; 'leman' is not an Indonesian word, it is a misspelling of 'lemah'.
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
+    - Current: `kunci { $keySize } bita`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `kunci { $keySize } bit`
+    - en-US says 'bit keys'. In Indonesian 'bita' means byte, so a 256-bit key would read as 256 bytes.
+- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
+    - Current: `kunci { $keySize } bita`
+    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `kunci { $keySize } bit`
+    - en-US says 'bit keys'. In Indonesian 'bita' means byte, which is a different unit.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — “resolve” is translated as “memutuskan” (to decide), which makes no sense in this context.
+    - Current: `tidak memutuskan ke URL yang valid`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `tidak menghasilkan URL yang valid`
+    - Here 'resolve to a valid URL' means the id produces or resolves into a valid URL. 'Memutuskan' means to decide or make a decision.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes are used where the house style uses curly quotes.
+    - Current: `"{ $caName }"`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `“{ $caName }”`
+    - The source uses curly quotes, and the locale convention is curly-double.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The colon before the list of repeated purposes is missing.
+    - Current: `tujuan yang berulang { $purposes }`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `tujuan yang berulang: { $purposes }`
+    - en-US has 'repeated purpose(s): { $purposes }'. Without the colon, the list runs straight into the sentence.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +73,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 323 |
-| Strings | 13,893 |
-| Missing strings | 2,849 |
+| Files | 324 |
+| Strings | 13,922 |
+| Missing strings | 2,938 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -59,24 +88,24 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 77 |
+| Typography deviations from this locale's own norm | 78 |
 
 ### Completeness
 
-**2,849 strings** are not translated yet, concentrated in:
+**2,938 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 498
-- `browser/browser/preferences/preferences.ftl` — 462
-- `browser/browser/ipProtection.ftl` — 164
-- `browser/browser/newtab/onboarding.ftl` — 133
+- `browser/browser/newtab/newtab.ftl` — 491
+- `browser/browser/preferences/preferences.ftl` — 467
+- `browser/browser/ipProtection.ftl` — 160
+- `browser/browser/newtab/onboarding.ftl` — 155
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
 - `browser/browser/newtab/asrouter.ftl` — 87
-- `toolkit/toolkit/about/aboutAddons.ftl` — 61
+- `toolkit/toolkit/about/aboutAddons.ftl` — 62
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
-- `toolkit/toolkit/about/aboutGlean.ftl` — 43
+- `browser/browser/tabbrowser.ftl` — 45
+- `toolkit/toolkit/about/aboutGlean.ftl` — 44
 - `toolkit/toolkit/neterror/netError.ftl` — 42
-- `browser/browser/customkeys.ftl` — 42
 
 **Files absent from the locale:**
 
@@ -96,7 +125,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 413, `straight-double` 111, `curly-single` 79 | **curly-double** |
+| quotes | `curly-double` 413, `straight-double` 112, `curly-single` 79 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 41 | _mixed_ |
 | ellipsis | `char` 355, `ascii` 9 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
@@ -106,20 +135,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 77 strings** — 77 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockMixedActiveContent`, `CookieBlockedAll`, `CookieBlockedByPermission`, `CookieInvalidMaxAgeAttribute`, `CookiePartitionedForeign2`, `FeaturePolicyInvalidEmptyAllowValue`, `FullscreenDeniedContainerNotAllowed`, `HTTPSOnlyFailedDowngradeAgain`, `HTTPSOnlyNoUpgradeException`, `IframeSandboxBlockedDownload`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords` …and 62 more
+- **typography — 78 strings** — 78 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `CookieBlockedAll`, `CookieBlockedByPermission`, `CookieInvalidMaxAgeAttribute`, `CookiePartitionedForeign2`, `FeaturePolicyInvalidEmptyAllowValue`, `FullscreenDeniedContainerNotAllowed`, `HTTPSOnlyFailedDowngradeAgain`, `HTTPSOnlyNoUpgradeException`, `IframeSandboxBlockedDownload`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords` …and 63 more
 
 ---
 
-## 3. Open findings (285)
+## 3. Open findings (291)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
-| 2 | Wrong content (says something other than the English) | 152 |
-| 3 | Degraded language (grammar, spelling, terminology) | 49 |
-| 4 | Cosmetic (typography, spacing) | 17 |
+| 2 | Wrong content (says something other than the English) | 155 |
+| 3 | Degraded language (grammar, spelling, terminology) | 50 |
+| 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -468,6 +497,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Keep your email in your taskbar`
     - Suggest: `Tetap buka surel Anda di bilah tugas`
     - The source "Keep your email in your taskbar" means keeping the email app pinned/available in the taskbar, not saving/storing email there; "Simpan" suggests storing data in the taskbar.
+- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
+    - Current: `kunci { $keySize } bita`
+    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `kunci { $keySize } bit`
+    - en-US says 'bit keys'. In Indonesian 'bita' means byte, which is a different unit.
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
+    - Current: `kunci { $keySize } bita`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `kunci { $keySize } bit`
+    - en-US says 'bit keys'. In Indonesian 'bita' means byte, so a 256-bit key would read as 256 bytes.
 - `appearance-browser-icon-pride` — `browser/browser/preferences/browserIcon.ftl` — "Pride" translated as the emotion rather than kept as the name
     - Current: `Kebanggaan`
     - Source: `label: Pride`
@@ -538,6 +577,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `:unblock URL_STRING  Stop blocking network requests    It accepts only one argument, the exact same string previously passed to :block.`
     - Suggest: `:unblock URL_STRING`
     - `:unblock` is a literal command name; ":buka blokir" is not a valid command and even contains a space, so it cannot be typed as shown.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — “resolve” is translated as “memutuskan” (to decide), which makes no sense in this context.
+    - Current: `tidak memutuskan ke URL yang valid`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `tidak menghasilkan URL yang valid`
+    - Here 'resolve to a valid URL' means the id produces or resolves into a valid URL. 'Memutuskan' means to decide or make a decision.
 - `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — "Clean" was dropped, so the label is the same as the plain "Copy Link to Highlight" item.
     - Current: `Salin Tautan ke Sorotan`
     - Source: `accesskey: k label: Copy Clean Link to Highlight`
@@ -626,6 +670,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Extensions are like apps for your browser, and they let you protect passwords, download videos, find deals, block annoying ads, change how your browser looks, and much more.`
     - Suggest: `Ekstensi adalah seperti aplikasi untuk peramban Anda`
     - Every other occurrence of “browser” in this file is translated as “peramban” (e.g. mr1-return-to-amo-addon-title, mr2-onboarding-thank-you-text); leaving it untranslated here is inconsistent with the locale's established term.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Typo: “leman” should be “lemah” (weak).
+    - Current: `enkripsi leman`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `enkripsi lemah`
+    - en-US 'weak encryption'; 'leman' is not an Indonesian word, it is a misspelling of 'lemah'.
 - `fingerprinter-tab-content` — `browser/browser/protections.ftl` — "browser" is left in English where the locale consistently uses "peramban".
     - Current: `pengaturan dari browser dan komputer Anda`
     - Source: `Fingerprinters collect settings from your browser and computer to create a profile of you. Using this digital fingerprint, they can track you across different websites. <a data-l10n-name="learn-more-link">Learn more</a>`
@@ -1178,6 +1227,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Properties for “%S”`
     - Suggest: `Properti untuk “%S”`
     - dialogTitleEditBookmark in the same file uses “%S”; en-US uses curly quotes throughout.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The colon before the list of repeated purposes is missing.
+    - Current: `tujuan yang berulang { $purposes }`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `tujuan yang berulang: { $purposes }`
+    - en-US has 'repeated purpose(s): { $purposes }'. Without the colon, the list runs straight into the sentence.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes are used where the house style uses curly quotes.
+    - Current: `"{ $caName }"`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `“{ $caName }”`
+    - The source uses curly quotes, and the locale convention is curly-double.
 - `about-networking-http-clear-cache-button` — `toolkit/toolkit/about/aboutNetworking.ftl` — "Cache" rendered "Singgahan" here but "Tembolok" in the adjacent DNS button.
     - Current: `about-networking-http-clear-cache-button = Bersihkan Singgahan HTTP`
     - Source: `Clear HTTP Cache`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 33 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — A final period was added after the URL value, which the developer comment explicitly forbids.
+    - Current: `érvénytelen: { $value }.`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `érvénytelen: { $value }`
+    - The comment says there is no final period so that it is not mistaken for part of the URL; the translation appends one directly after { $value }.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — 'Repeated purpose(s)' is rendered as 'multiple purposes', losing the meaning of duplication.
+    - Current: `több célt is tartalmaz`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `ismétlődő célo(ka)t tartalmaz`
+    - The en-US warns that the same purpose appears more than once; 'több célt is tartalmaz' means the item has several purposes, which is valid and not the error being reported.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — 'For the following purposes' is mistranslated as 'in the following topics'.
+    - Current: `a következő témákban`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `a következő célokra`
+    - 'témákban' means 'in topics'; the source refers to trust purposes (e.g. identifying websites, email users), which is 'célokra'.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +48,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
+    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
+    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
+    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
 
 ---
 
@@ -44,9 +61,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +80,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +103,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 809, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 810, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
 | ellipsis | `char` 400, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 134 | **en** |
@@ -85,7 +117,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (270)
+## 3. Open findings (272)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -105,8 +137,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 127 |
-| 3 | Degraded language (grammar, spelling, terminology) | 87 |
+| 2 | Wrong content (says something other than the English) | 128 |
+| 3 | Degraded language (grammar, spelling, terminology) | 88 |
 | 4 | Cosmetic (typography, spacing) | 26 |
 
 ### A. Functional, markup, variables & plurals
@@ -449,11 +481,6 @@ _Also listed under their own category below._
     - Source: `Edit bookmark folder`
     - Suggest: `szerkesztése`
     - The en-US source means edit, but "hozzáadása" means "adding". The string looks copied from bookmark-properties-title-add-folder, so the add and edit dialogs now have the same title.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
-    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
-    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
 - `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — The translation tells the user to select an area and move the mini window, instead of selecting an area to move into a Mini Window.
     - Current: `Húzza vagy kattintson a terület kijelöléséhez, és mozgassa a mini ablakot.`
     - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
@@ -539,6 +566,16 @@ _Also listed under their own category below._
     - Source: `Inline event handlers on elements cloned by an SVG <use> element are not interoperable. See https://github.com/w3c/svgwg/issues/1211`
     - Suggest: `nem interoperábilisak (a böngészők eltérően kezelik őket)`
     - In web standards, "interoperable" means behaving the same way across implementations (browsers). "nem működnek egymással" says the handlers don't work together with each other, which misstates the warning.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — 'Repeated purpose(s)' is rendered as 'multiple purposes', losing the meaning of duplication.
+    - Current: `több célt is tartalmaz`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `ismétlődő célo(ka)t tartalmaz`
+    - The en-US warns that the same purpose appears more than once; 'több célt is tartalmaz' means the item has several purposes, which is valid and not the error being reported.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — 'For the following purposes' is mistranslated as 'in the following topics'.
+    - Current: `a következő témákban`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `a következő célokra`
+    - 'témákban' means 'in topics'; the source refers to trust purposes (e.g. identifying websites, email users), which is 'célokra'.
 - `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — Heading "Sync logs" rendered as "Naplók szinkronizálása" ("Synchronizing logs").
     - Current: `heading: Naplók szinkronizálása`
     - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
@@ -1206,19 +1243,24 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (809 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (809 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (809 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (809 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — A final period was added after the URL value, which the developer comment explicitly forbids.
+    - Current: `érvénytelen: { $value }.`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `érvénytelen: { $value }`
+    - The comment says there is no final period so that it is not mistaken for part of the URL; the translation appends one directly after { $value }.
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`

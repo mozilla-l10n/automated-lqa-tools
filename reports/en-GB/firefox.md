@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for en-GB: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `dom-manifest-invalid-type` — `dom/dom/manifest.ftl` — Straight apostrophe used where the source and locale convention use the typographic apostrophe.
+    - Current: `{ $objectName }'s`
+    - Source: `Expected the { $objectName }’s { $property } member to be a { $expectedType }.`
+    - Suggest: `{ $objectName }’s`
+    - The en-US source uses ’ and the locale overwhelmingly uses typographic apostrophes (1121 vs 56).
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +67,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,8 +90,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 548, `curly-single` 94, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1029, `straight` 43 | **typographic** |
+| quotes | `curly-double` 549, `curly-single` 94, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 1023, `straight` 43 | **typographic** |
 | ellipsis | `char` 400, `ascii` 1 | **char** |
 | dash | `em` 83, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
@@ -86,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (21)
 
 
 | Impact | Meaning | Count |
@@ -94,7 +113,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 5 |
 | 2 | Wrong content (says something other than the English) | 7 |
 | 3 | Degraded language (grammar, spelling, terminology) | 6 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -209,6 +228,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } couldn’t find any programs that contain bookmark, history or password data.`
     - Suggest: `couldn’t find any programs that contain bookmark, history or password data`
     - British English retains the spelling "program" for computer software and reserves "programme" for broadcasts, events and plans. The locale itself follows this everywhere else, including the equivalent legacy string no-migration-sources in browser/browser/migration.ftl ("No programs that contain bookmarks, history or password data could be found.") and toolkit/toolkit/global/extensionPermissions.f…
+- `dom-manifest-invalid-type` — `dom/dom/manifest.ftl` — Straight apostrophe used where the source and locale convention use the typographic apostrophe.
+    - Current: `{ $objectName }'s`
+    - Source: `Expected the { $objectName }’s { $property } member to be a { $expectedType }.`
+    - Suggest: `{ $objectName }’s`
+    - The en-US source uses ’ and the locale overwhelmingly uses typographic apostrophes (1121 vs 56).
 
 ---
 

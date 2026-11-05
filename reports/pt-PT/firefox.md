@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
+    - Current: `O ID do membro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `O membro id`
+    - The source refers to the manifest member named "id". "O ID do membro" means the identifier of the member, which is a different thing.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
+    - Current: `O ID do membro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `O membro id`
+    - The source refers to the manifest member named "id", matching the "start_url" member mentioned later in the same sentence. "O ID do membro" means the member's identifier.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The verb is in the infinitive where a conjugated form is needed.
+    - Current: `Outras pessoas poder ver`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Outras pessoas podem ver`
+    - The subject "Outras pessoas" needs the conjugated verb "podem". "poder" is ungrammatical here.
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency policy" is mistranslated as "the policy of the transparency certificate".
+    - Current: `política do certificado de transparência`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `política de Transparência de Certificados`
+    - Certificate Transparency is the name of a framework for certificates. It is not a certificate called "transparency".
+- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — "Broken Encryption" is rendered as "obsolete encryption".
+    - Current: `Encriptação obsoleta`
+    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `Encriptação quebrada`
+    - "Broken" means the encryption is compromised or insecure. "obsoleta" only says it is outdated, which is a different claim.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses don't match: a present subjunctive is paired with a past event.
+    - Current: `alguém leia esta página enquanto circulou`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `alguém tenha lido esta página enquanto circulou`
+    - The source says "anyone read this page as it traveled", which is in the past. The verb needs the perfect subjunctive "tenha lido" to agree with "circulou".
+- `menu-places-show-more-in-sidebar` — `browser/browser/menubar.ftl` — The label copies English title case, which pt-PT does not use.
+    - Current: `Mostrar Mais na Barra Lateral`
+    - Source: `label: Show More in Sidebar`
+    - Suggest: `Mostrar mais na barra lateral`
+    - pt-PT UI labels use sentence case. Capitalising each word copies English title case.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +78,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +97,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +120,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 568, `curly-single` 114, `straight-double` 40 | **curly-double** |
+| quotes | `curly-double` 569, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
 | ellipsis | `char` 373, `ascii` 28 | **char** |
 | dash | `em` 66, `en` 8 | **em** |
@@ -86,15 +135,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (313)
+## 3. Open findings (320)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 127 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -395,6 +444,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `By choosing ChatGPT, you agree to the OpenAI <a data-l10n-name="link1">Terms of Use</a> and <a data-l10n-name="link2">Privacy Policy</a>.`
     - Suggest: `OpenAI`
     - OpenAI is a brand name that must not be altered, and this string is the consent text pointing to that company's terms and privacy policy.
+- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — "Broken Encryption" is rendered as "obsolete encryption".
+    - Current: `Encriptação obsoleta`
+    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `Encriptação quebrada`
+    - "Broken" means the encryption is compromised or insecure. "obsoleta" only says it is outdated, which is a different claim.
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency policy" is mistranslated as "the policy of the transparency certificate".
+    - Current: `política do certificado de transparência`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `política de Transparência de Certificados`
+    - Certificate Transparency is the name of a framework for certificates. It is not a certificate called "transparency".
 - `fonts-langgroup-malayalam` — `browser/browser/preferences/fonts.ftl` — Malayalam is rendered as “Malaio” (Malay), a different language.
     - Current: `Malaio`
     - Source: `label: Malayalam`
@@ -445,6 +504,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Sanitizer: Calling allowElement() with “attributes” or non-empty “removeAttributes” was ignored because of the global “removeElements” list.`
     - Suggest: `Sanitizer:`
     - The comment says: Do not translate Sanitizer, allowElement, attributes, removeAttributes or removeElements.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
+    - Current: `O ID do membro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `O membro id`
+    - The source refers to the manifest member named "id". "O ID do membro" means the identifier of the member, which is a different thing.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
+    - Current: `O ID do membro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `O membro id`
+    - The source refers to the manifest member named "id", matching the "start_url" member mentioned later in the same sentence. "O ID do membro" means the member's identifier.
 - `CookieForeignNoPartitionedError` — `netwerk/necko.properties` — Cookie attribute name “Partitioned” translated despite the developer comment.
     - Current: `não tem o atributo “Particionado“`
     - Source: `Cookie “%1$S” has been rejected because it is foreign and does not have the “Partitioned“ attribute.`
@@ -613,6 +682,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Tidy Tabs`
     - Suggest: `Separadores organizados`
     - “Tidy Tabs” is descriptive, not a protected brand (the matching card label translates it as “Organize com separadores verticais e grupos”); “Tidy” conveys nothing to a Portuguese reader.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses don't match: a present subjunctive is paired with a past event.
+    - Current: `alguém leia esta página enquanto circulou`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `alguém tenha lido esta página enquanto circulou`
+    - The source says "anyone read this page as it traveled", which is in the past. The verb needs the perfect subjunctive "tenha lido" to agree with "circulou".
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The verb is in the infinitive where a conjugated form is needed.
+    - Current: `Outras pessoas poder ver`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Outras pessoas podem ver`
+    - The subject "Outras pessoas" needs the conjugated verb "podem". "poder" is ungrammatical here.
 - `briefcase-avatar-alt` — `browser/browser/profiles.ftl` — "Briefcase" is rendered "Pasta", colliding with the "Folder" avatar in the same list, and conflicting with its own tooltip which says "mala".
     - Current: `Pasta`
     - Source: `alt: Briefcase`
@@ -1170,6 +1249,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Import from a file…`
     - Suggest: `Importar de um ficheiro…`
     - en-US is “Import from a file…”; the sibling “Importar de outro navegador…” in the same menu uses the ellipsis.
+- `menu-places-show-more-in-sidebar` — `browser/browser/menubar.ftl` — The label copies English title case, which pt-PT does not use.
+    - Current: `Mostrar Mais na Barra Lateral`
+    - Source: `label: Show More in Sidebar`
+    - Suggest: `Mostrar mais na barra lateral`
+    - pt-PT UI labels use sentence case. Capitalising each word copies English title case.
 - `connection-dns-over-https-url-custom` — `browser/browser/preferences/connection.ftl` — “DNS over HTTPS” rendered as “DNS sob HTTPS”.
     - Current: `Introduza o endereço que pretende utilizar para resolver DNS sob HTTPS`
     - Source: `accesskey: C label: Custom tooltiptext: Enter your preferred URL for resolving DNS over HTTPS`

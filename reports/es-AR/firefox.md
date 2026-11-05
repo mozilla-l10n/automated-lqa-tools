@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,714 |
+| **Strings reviewed this run** | 101 of 16,796 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,68 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (12)
 
-_No new findings._
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — "start URL" rendered as "URL de alcance" (scope URL).
+    - Current: `URL de alcance está fuera de alcance`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `La URL de inicio está fuera del alcance`
+    - The en-US speaks of the start URL being outside the scope; the translation says the scope URL is outside the scope.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "repeated purpose(s)" translated as "unsupported purposes".
+    - Current: `propósito/s no admitidos`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `propósito/s repetido/s`
+    - Source says the purposes are repeated, not unsupported.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — Missing spaces before the variables, so words run together.
+    - Current: `El elemento{ $memberName } en el índice{ $index }`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `El elemento { $memberName } en el índice { $index }`
+    - The output reads e.g. "El elementoicons en el índice2".
+- `dom-manifest-image-unusable` — `dom/dom/manifest.ftl` — Missing spaces before the variables, so words run together.
+    - Current: `El elemento{ $memberName } en el índice{ $index }`
+    - Source: `{ $memberName } item at index { $index } lacks a usable purpose. It will be ignored.`
+    - Suggest: `El elemento { $memberName } en el índice { $index }`
+    - The output reads e.g. "El elementoicons en el índice2".
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — Missing preposition "de" in the windows-other variant.
+    - Current: `descargas y salir { -brand-short-name }?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `descargas y salir de { -brand-short-name }?`
+    - "salir" needs "de" here, as in all the other variants.
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — "item" rendered as "artículo" (article/product) instead of "elemento".
+    - Current: `El artículo { $memberName }`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `El elemento { $memberName }`
+    - "item" here means a list entry; the sibling manifest strings use "elemento".
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "member" left in English while other manifest strings use "miembro".
+    - Current: `El id member no resolvió`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id no resolvió`
+    - Mixing English and Spanish breaks the grammar; sibling strings translate member as "miembro".
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "member" left in English while other manifest strings use "miembro".
+    - Current: `El id member debe tener el mismo origen que start_url member.`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id debe tener el mismo origen que el miembro start_url.`
+    - Sibling strings translate member as "miembro"; the half-English phrase is ungrammatical.
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Missing accent on the verb "está".
+    - Current: `que esta visitando`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `que está visitando`
+    - "esta" is a demonstrative; the verb form "está" needs the accent.
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Gender agreement error: "transmitidos" should agree with feminine "Partes".
+    - Current: `antes de ser transmitidos por Internet`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `antes de ser transmitidas por Internet`
+    - The subject "Partes" is feminine plural (cf. "cifradas"), so the participle must be "transmitidas".
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Subject-verb agreement error: plural subject with singular verb.
+    - Current: `Otras personas puede ver`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Otras personas pueden ver`
+    - "Otras personas" is plural and requires "pueden".
+- `security-technical-no-encryption` — `browser/browser/pageInfo.ftl` — Stray trailing period on a status label that has none in the source or in sibling labels.
+    - Current: `Conexión no cifrada.`
+    - Source: `value: Connection Not Encrypted`
+    - Suggest: `Conexión no cifrada`
+    - The en-US label "Connection Not Encrypted" has no period, and the sibling labels ("Conexión parcialmente cifrada", "Conexión cifrada (…)") have none.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +103,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,714 |
-| Missing strings | 28 |
+| Files | 331 |
+| Strings | 16,796 |
+| Missing strings | 64 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,21 +118,24 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 83 |
+| Typography deviations from this locale's own norm | 84 |
 
 ### Completeness
 
-**28 strings** are not translated yet, concentrated in:
+**64 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/onboarding.ftl` — 17
 - `browser/browser/newtab/newtab.ftl` — 11
+- `browser/browser/preferences/preferences.ftl` — 8
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/tabbrowser.ftl` — 3
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/tabContextMenu.ftl` — 2
 - `devtools/client/debugger.properties` — 1
 - `dom/chrome/dom/dom.properties` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,31 +145,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 477, `straight-double` 139, `curly-single` 94 | **curly-double** |
+| quotes | `curly-double` 478, `straight-double` 140, `curly-single` 94 | **curly-double** |
 | apostrophe | `typographic` 106, `straight` 67 | _mixed_ |
-| ellipsis | `char` 400, `ascii` 1 | **char** |
+| ellipsis | `char` 401, `ascii` 1 | **char** |
 | dash | `em` 63, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 339, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 352, `open-exclamation` 69 | **open-question** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **typography — 83 strings** — 83 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockExtensionScriptWithWrongExt`, `CORPBlocked`, `CompositorAnimationWarningHasCurrentColor`, `CookieAllowedForOriginByHeuristic`, `CookieAllowedForOriginByStorageAccessAPI`, `CookieLaxForcedForBeta2`, `CookieOversize`, `CookiePartitionedForeign2`, `CookieRejectedByPermissionManager`, `CookieRejectedForNonSameSiteness`, `CookieRejectedInvalidCharName`, `CookieRejectedInvalidDomain` …and 70 more
+- **typography — 84 strings** — 84 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockExtensionScriptWithWrongExt`, `CORPBlocked`, `CompositorAnimationWarningHasCurrentColor`, `CookieAllowedForOriginByHeuristic`, `CookieAllowedForOriginByStorageAccessAPI`, `CookieLaxForcedForBeta2`, `CookieOversize`, `CookiePartitionedForeign2`, `CookieRejectedByPermissionManager`, `CookieRejectedForNonSameSiteness`, `CookieRejectedInvalidCharName`, `CookieRejectedInvalidDomain` …and 71 more
 
 ---
 
-## 3. Open findings (285)
+## 3. Open findings (297)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 109 |
-| 3 | Degraded language (grammar, spelling, terminology) | 95 |
-| 4 | Cosmetic (typography, spacing) | 28 |
+| 2 | Wrong content (says something other than the English) | 111 |
+| 3 | Degraded language (grammar, spelling, terminology) | 102 |
+| 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -543,6 +605,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Permissions Policy: Skipping unsupported allow value “%S”.`
     - Suggest: `el valor permitido no soportado “%S”`
     - In en-US, %S is the unsupported allow value itself ("Skipping unsupported allow value “%S”"). The translation says "value ... for “%S”", so the placeholder now reads as the feature rather than the value that was rejected.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "repeated purpose(s)" translated as "unsupported purposes".
+    - Current: `propósito/s no admitidos`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `propósito/s repetido/s`
+    - Source says the purposes are repeated, not unsupported.
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — "start URL" rendered as "URL de alcance" (scope URL).
+    - Current: `URL de alcance está fuera de alcance`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `La URL de inicio está fuera del alcance`
+    - The en-US speaks of the start URL being outside the scope; the translation says the scope URL is outside the scope.
 - `crashreporter-comment-prompt` — `toolkit/crashreporter/crashreporter.ftl` — The parenthetical remark is rewritten as a separate "Note:" sentence with a stray period and double space.
     - Current: `Agregar un comentario.  Nota: Los comentarios son visibles públicamente`
     - Source: `Add a comment (comments are publicly visible)`
@@ -681,6 +753,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Yes`
     - Suggest: `Sí`
     - The affirmative adverb requires the accent; security-visits-number in the same file uses "Sí".
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Missing accent on the verb "está".
+    - Current: `que esta visitando`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `que está visitando`
+    - "esta" is a demonstrative; the verb form "está" needs the accent.
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Gender agreement error: "transmitidos" should agree with feminine "Partes".
+    - Current: `antes de ser transmitidos por Internet`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `antes de ser transmitidas por Internet`
+    - The subject "Partes" is feminine plural (cf. "cifradas"), so the participle must be "transmitidas".
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Subject-verb agreement error: plural subject with singular verb.
+    - Current: `Otras personas puede ver`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Otras personas pueden ver`
+    - "Otras personas" is plural and requires "pueden".
 - `panic-button-thankyou-msg1` — `browser/browser/panelUI.ftl` — "es" written instead of the article "el".
     - Current: `Se limpió es historial reciente`
     - Source: `Your recent history is cleared.`
@@ -916,22 +1003,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
     - Suggest: `para JSON recuperada usando XMLHttpRequest`
     - Misspelling of “recuperada”.
-- `KillScriptWithDebugMessage` — `dom/chrome/dom/dom.properties` — Typo “el el debugger”.
-    - Current: `abrir el script el el debugger`
-    - Source: `A script on this page may be busy, or it may have stopped responding. You can stop the script now, open the script in the debugger, or let the script continue.`
-    - Suggest: `abrir el script en el depurador`
-    - Duplicated article instead of the preposition “en”; appears in a user-facing dialog.
-- `MediaEMEInsecureContextDeprecatedWarning` — `dom/chrome/dom/dom.properties` — Typo “cirada” for “cifrada”.
-    - Current: `Usar extensiones de medios cirada en %S`
-    - Source: `Using Encrypted Media Extensions at %S on an insecure (i.e. non-HTTPS) context is deprecated and will soon be removed. You should consider switching to a secure origin such as HTTPS.`
-    - Suggest: `Usar extensiones de medios cifrados (EME) en %S`
-    - Misspelling; “Encrypted Media Extensions” becomes unreadable.
-- `PEBadSelectorKeyframeRuleIgnored` — `dom/chrome/layout/css.properties` — Typo “devido”.
-    - Current: `Regla keyframe ignorada devido a un mal selector.`
-    - Source: `Keyframe rule ignored due to bad selector.`
-    - Suggest: `Regla keyframe ignorada debido a un mal selector.`
-    - Misspelling of “debido”.
-- _…and 27 more; see `state/` for the full list._
+- _…and 31 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -975,6 +1047,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
     - Suggest: `Establecé SpeechRecognition.lang o un atributo lang en el elemento raíz del documento.`
     - es-AR uses voseo imperatives ("Establecé") rather than "Establezca"; the rest of the locale addresses the user in Argentine form.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "member" left in English while other manifest strings use "miembro".
+    - Current: `El id member no resolvió`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id no resolvió`
+    - Mixing English and Spanish breaks the grammar; sibling strings translate member as "miembro".
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "member" left in English while other manifest strings use "miembro".
+    - Current: `El id member debe tener el mismo origen que start_url member.`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id debe tener el mismo origen que el miembro start_url.`
+    - Sibling strings translate member as "miembro"; the half-English phrase is ungrammatical.
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — "item" rendered as "artículo" (article/product) instead of "elemento".
+    - Current: `El artículo { $memberName }`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `El elemento { $memberName }`
+    - "item" here means a list entry; the sibling manifest strings use "elemento".
 - `config-new-pref-string` — `mobile/android/mobile/android/aboutConfig.ftl` — Voseo (“Ingresá”) where the locale uses the usted form.
     - Current: `Ingresá una cadena`
     - Source: `placeholder: Enter a string`
@@ -1118,6 +1205,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Celestial`
     - Suggest: `Celestial`
     - The developer comment says the word refers to astronomy; “Celeste” is used in this same file as the color name (newtab-wallpaper-light-blue = Celeste), so as a category title it reads as a color, not as an astronomy category.
+- `security-technical-no-encryption` — `browser/browser/pageInfo.ftl` — Stray trailing period on a status label that has none in the source or in sibling labels.
+    - Current: `Conexión no cifrada.`
+    - Source: `value: Connection Not Encrypted`
+    - Suggest: `Conexión no cifrada`
+    - The en-US label "Connection Not Encrypted" has no period, and the sibling labels ("Conexión parcialmente cifrada", "Conexión cifrada (…)") have none.
 - `policy-Windows10SSO` — `browser/browser/policies/policies-descriptions.ftl` — “single sign-on” rendered as “un solo inicio de sesión” (only one sign-in), inconsistent with the next policy.
     - Current: `Permitir un solo inicio de sesión de Windows`
     - Source: `Allow Windows single sign-on for Microsoft, work, and school accounts.`
@@ -1157,6 +1249,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `El atributo "coords" del tag <area shape="poly"> no tiene el formato "x1,y1,x2,y2 ...".`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
     - The tree uses … 462 times against 2 ASCII runs.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — Missing spaces before the variables, so words run together.
+    - Current: `El elemento{ $memberName } en el índice{ $index }`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `El elemento { $memberName } en el índice { $index }`
+    - The output reads e.g. "El elementoicons en el índice2".
+- `dom-manifest-image-unusable` — `dom/dom/manifest.ftl` — Missing spaces before the variables, so words run together.
+    - Current: `El elemento{ $memberName } en el índice{ $index }`
+    - Source: `{ $memberName } item at index { $index } lacks a usable purpose. It will be ignored.`
+    - Suggest: `El elemento { $memberName } en el índice { $index }`
+    - The output reads e.g. "El elementoicons en el índice2".
 - `newTabControlled.message2` — `toolkit/chrome/global/extensions.properties` — Tuteo "ves" among usted forms
     - Current: `cambió la página que ves cuando se abre una nueva pestaña`
     - Source: `An extension, %S, changed the page you see when you open a new tab.`

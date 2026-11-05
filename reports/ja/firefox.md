@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,773 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,24 @@ Also for ja: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
+    - Current: `porpose`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `purpose`
+    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — "sites that need extra privacy" mistranslated as "this site" and the meaning of the two options merged.
+    - Current: `このサイトで追加のプライバシー強化を使用するか VPN をオフにするルールを設定します。`
+    - Suggest: `追加のプライバシー保護が必要なサイトや VPN をオフにするサイトのルールを設定します。`
+    - en-US refers to plural "sites" generally, not "this site"; the description is about setting rules for sites needing extra privacy or with VPN turned off.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
@@ -44,10 +51,10 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
+| Files | 331 |
+| Strings | 16,773 |
+| Missing strings | 105 |
+| Obsolete strings | 18 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,6 +70,21 @@ _Nothing retired._
 
 ### Completeness
 
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
 **Files present but identical to en-US:**
 
 - `security/manager/chrome/pipnss/nsserrors.properties`
@@ -76,12 +98,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 446, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 447, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
 | ellipsis | `ascii` 398 | **ascii** |
 | dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 5120 | **punctuation** |
+| fullwidth | `punctuation` 5146 | **punctuation** |
 
 ---
 
@@ -111,8 +133,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 69 |
-| 3 | Degraded language (grammar, spelling, terminology) | 42 |
+| 2 | Wrong content (says something other than the English) | 68 |
+| 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
@@ -306,11 +328,6 @@ _Also listed under their own category below._
     - Source: `This site already has a rule.`
     - Suggest: `このサイトにはすでにルールが設定されています。`
     - The en-US is "This site already has a rule.", and the comment says it is shown when the typed site already has a rule. The Japanese uses エラー instead of ルール, which garbles the message.
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — "sites that need extra privacy" mistranslated as "this site" and the meaning of the two options merged.
-    - Current: `このサイトで追加のプライバシー強化を使用するか VPN をオフにするルールを設定します。`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage website rules`
-    - Suggest: `追加のプライバシー保護が必要なサイトや VPN をオフにするサイトのルールを設定します。`
-    - en-US refers to plural "sites" generally, not "this site"; the description is about setting rules for sites needing extra privacy or with VPN turned off.
 - `ipprotection-bandwidth-upgrade-title` — `browser/browser/ipProtection.ftl` — ipprotection-bandwidth-upgrade-title (ipProtection.ftl) — "Like built-in VPN?" is a question, read as "similar to". → 組み込み VPN が気に入りましたか？ …
     - Source: `Like built-in VPN? Get even more protection outside { -brand-product-name } with { -mozilla-vpn-brand-name }.`
     - Suggest: `組み込み VPN が気に入りましたか？ …`
@@ -497,7 +514,10 @@ _Also listed under their own category below._
     - Source: `{ -brand-short-name } uses this to help fill in address forms`
     - Suggest: `住所フォームの入力の補助`
     - en-US "address forms" refers to postal address entry forms in form autofill; アドレス in Japanese Firefox usually means URL/email address, so the meaning is wrong.
-- _…and 20 more; see `state/` for the full list._
+- `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
+    - Source: `About Logging`
+    - Suggest: `HTTP ログについて`
+- _…and 19 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -538,6 +558,11 @@ _Also listed under their own category below._
     - Current: `開きなおす`
     - Source: `accesskey: o label: {$tabCount ->} [1] Reopen Closed Tab [other] Reopen Closed Tabs`
     - Suggest: `開き直す`
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
+    - Current: `porpose`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `purpose`
+    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
 - `autofill-delete-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Typo "支払い時方法" instead of "支払い方法", and the macOS fragment is phrased as a full sentence unlike the source fragment.
     - Current: `保存した支払い時方法情報を削除しようとしています`
     - Source: `delete stored payment method information`
@@ -578,7 +603,6 @@ _Also listed under their own category below._
     - Source: `Wikimedia Commons picture of the day`
     - Suggest: `今日の写真`
 - `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
-    - Source: `aria-label: Show today’s picture title: Show today’s picture`
     - Suggest: `今日の写真`
 - `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
     - Current: `placeholder: 企業名または銘柄コードで検索します`
@@ -673,8 +697,9 @@ _One line each in `locales/ja/dismissed.txt`. Delete the line and the finding re
 
 _No suppression rules have matched._
 
-### Withdrawn to date (1)
+### Withdrawn to date (2)
 
+- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — raised by `llm`, withdrawn 2026-11-05
 - `autofill-address-family-name` — `browser/browser/preferences/formAutofill.ftl` — raised by `legacy`, withdrawn 2026-08-21
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._

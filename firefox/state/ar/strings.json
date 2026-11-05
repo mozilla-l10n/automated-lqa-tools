@@ -598,7 +598,6 @@
   "appmenuitem-save-page": "3b777ee3 c6541793",
   "appmenuitem-services-relay-description": "1f634018 9c41a336",
   "appmenuitem-settings": "b0c26c77 2cf0e539 9cd4aa19",
-  "appmenuitem-share-firefox-description": "191e8be7 efd91981",
   "appmenuitem-sign-in-account": "066545f1 bc849748",
   "appmenuitem-tab-groups": "97303620 66617d09",
   "appmenuitem-translate": "c838ce99 f6ba6f3f",
@@ -2927,7 +2926,6 @@
   "home-prefs-manage-widgets-link": "2b3babf6 3421eb77",
   "home-prefs-mission-message-learn-more-link-srd": "b6b2cacb f91dc738",
   "home-prefs-mission-message2": "80208a2f b09c408b",
-  "home-prefs-privacy-header": "08d7d42b 10b43a25 17a44a8d",
   "home-prefs-recent-activity-header-srd": "5aceff67 3720c47f",
   "home-prefs-recent-activity-select": "9c872607 ce1f32f2",
   "home-prefs-recommended-by-option-sponsored-stories-srd": "c87ea65b 81804724",
@@ -3786,6 +3784,18 @@
   "security-site-data-no": "169e0c2f f4959fa8",
   "security-site-data-only": "b9720952 e2548151",
   "security-tab": "79aa2012 8eb5c849",
+  "security-technical-broken-encryption": "f11566d7 d3baa2dd",
+  "security-technical-ct-compliant": "aebed2b6 daf1f130",
+  "security-technical-encrypted": "1d8e5334 a51466e8",
+  "security-technical-encrypted-description": "08cbc4d8 0a4a6061",
+  "security-technical-encrypted-page": "b83d0a2e 7abe8890",
+  "security-technical-mixed-content": "64172b2a 4d47c1b7",
+  "security-technical-mixed-content-description": "acd3e42d c2d7b259",
+  "security-technical-no-encryption": "8a330f3f 16292b61",
+  "security-technical-no-encryption-page": "a1f6e8ce b83eb4e8",
+  "security-technical-no-encryption-transit": "998ddda0 86b92eeb",
+  "security-technical-no-encryption-website": "15978331 fe216d8c 0822dae5",
+  "security-technical-weak-cipher": "c963534b ff152d72",
   "security-view": "eb2d79f4 40f64784",
   "security-view-identity": "09507f10 76c066e2",
   "security-view-identity-domain": "69d4f0f6 af0674ef",
@@ -9529,6 +9539,10 @@
   "xml-nostylesheet": "81222201 684a495f",
   "xml-nostylesheet-xslt-disabled": "a5ba1eaf 394f636e"
  },
+ "dom/dom/manifest.ftl": {
+  "dom-manifest-invalid-css-color": "1c4506b7 984b0df9 dca5dd8a",
+  "dom-manifest-should-be-object": "3d1ddba5 ddb77ecd"
+ },
  "dom/dom/media.ftl": {
   "default-audio-output-device-label": "6a82a47b cac07ecd",
   "mediastatus-fallback-title": "9562cf60 f25883d9"
@@ -10162,6 +10176,7 @@
  "security/manager/security/pippki/pippki.ftl": {
   "change-device-password-window": "4728a84f 85216f96",
   "change-password-new": "1bd35f7c 18e2ab55",
+  "change-password-not-set": "8df371e0 07e5d38a",
   "change-password-old": "5b584ded 021f35b2",
   "change-password-reenter": "ccb79354 734f9b2a",
   "change-password-token": "ac2baf0e 573edd64 e9878a9e",
@@ -10178,11 +10193,14 @@
   "download-cert-message": "d791895d c0b841ac",
   "download-cert-message-desc": "fa2144c2 0d870693",
   "download-cert-trust-email": "7314e291 ce6ad519",
+  "download-cert-trust-header": "0c3f2b8b 890a0b2c 91dcca45",
   "download-cert-trust-ssl": "c7c83233 e9074bea",
+  "download-cert-unnamed-ca": "61c65248 0fc0a80c 1824e423",
   "download-cert-view-cert": "5af604bd d78c2907",
   "download-cert-view-text": "bc22665b 24500f18",
   "download-cert-window2": "d0958f75 729e992d",
   "password-quality-meter": "6121a755 4c2ac678",
+  "pippki-get-pkcs12-password-message": "862b69f2 2660e7c5",
   "pippki-incorrect-pw": "48cdbb07 be06555b",
   "pippki-pw-erased-ok": "299352b3 f19b9bc4",
   "pippki-reset-password-confirmation-message": "b5d0f972 852bdf4d",
@@ -12925,7 +12943,8 @@
   "autocomplete-import-learn-more": "c1e20928 d9b20450",
   "autocomplete-import-logins-chrome": "99db714d 95b4999d",
   "autocomplete-import-logins-chromium": "363018b1 f9229ab8",
-  "autocomplete-import-logins-chromium-edge": "cf6999a9 8f80066e"
+  "autocomplete-import-logins-chromium-edge": "cf6999a9 8f80066e",
+  "autocomplete-insecure-login-warning": "fe48ec20 7001bdd2 23deeb83"
  },
  "toolkit/toolkit/main-window/findbar.ftl": {
   "findbar-case-sensitive": "5dcd4a52 d66454d1",

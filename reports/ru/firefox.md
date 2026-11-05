@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — There is a stray comma between the verb phrase and the adverbial «во время передачи».
+    - Current: `прочитает эту страницу, во время передачи`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `прочитает эту страницу во время передачи`
+    - Russian punctuation does not put a comma before an adverbial phrase like this one. The comma splits the phrase from the verb it modifies.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — The manifest "member" is rendered as «участник» (a participant) rather than a property or key.
+    - Current: `Участника id`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `Свойство id`
+    - "Member" here means a JSON object member, i.e. a property. «Участник» means a person who takes part in something. Other strings in the same file (dom-manifest-invalid-type) use «свойство».
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — The manifest "member" is rendered as «участник» rather than «свойство».
+    - Current: `Источник участника id должен совпадать с источником участника start_url.`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `Источник свойства id должен совпадать с источником свойства start_url.`
+    - "Member" here means a JSON object property. Elsewhere in manifest.ftl it is translated «свойство», so «участник» is both the wrong word and inconsistent with the rest of the file.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +48,15 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `newtab-horoscopes-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — Misspelling of "гороскопов".
+    - Current: `Настройки горскопов`
+    - Suggest: `Настройки гороскопов`
+    - "горскопов" is a typo; the correct Russian word is "гороскопов" (as used in newtab-custom-widget-horoscopes-toggle).
+- `newtab-picture-set-wallpaper` — `browser/browser/newtab/newtab.ftl` — newtab.ftl — a noun for an action button: Установка обоев → Установить обои (its own .aria-label already uses the verb)
+    - Current: `Установка обоев`
+    - Suggest: `Установить обои`
 
 ---
 
@@ -44,9 +64,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +83,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +106,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1072, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1073, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
 | ellipsis | `char` 403, `ascii` 5 | **char** |
 | dash | `em` 131, `en` 5 | **em** |
@@ -87,7 +122,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (604)
+## 3. Open findings (605)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -104,7 +139,7 @@ _Also listed under their own category below._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
 | 2 | Wrong content (says something other than the English) | 271 |
 | 3 | Degraded language (grammar, spelling, terminology) | 229 |
-| 4 | Cosmetic (typography, spacing) | 60 |
+| 4 | Cosmetic (typography, spacing) | 61 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -566,20 +601,11 @@ _Also listed under their own category below._
 - `newtab-error-fallback-info` — `browser/browser/newtab/newtab.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `Oops, something went wrong loading this content.`
     - Suggest: `-location-desc`
-- `newtab-horoscopes-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — Misspelling of "гороскопов".
-    - Current: `Настройки горскопов`
-    - Source: `aria-label: Horoscopes options`
-    - Suggest: `Настройки гороскопов`
-    - "горскопов" is a typo; the correct Russian word is "гороскопов" (as used in newtab-custom-widget-horoscopes-toggle).
 - `newtab-horoscopes-widget-open-menu-button` — `browser/browser/newtab/newtab.ftl` — The word for horoscopes is misspelled as «горскопов» in both the aria-label and the title.
     - Current: `Открыть меню горскопов`
     - Source: `aria-label: Open horoscopes menu title: Open horoscopes menu`
     - Suggest: `Открыть меню гороскопов`
     - The genitive plural of «гороскоп» is «гороскопов». The missing «о» is a spelling error, and screen readers will read it out.
-- `newtab-picture-set-wallpaper` — `browser/browser/newtab/newtab.ftl` — newtab.ftl — a noun for an action button: Установка обоев → Установить обои (its own .aria-label already uses the verb)
-    - Current: `Установка обоев`
-    - Source: `aria-label: Set today’s picture as your wallpaper label: Set wallpaper title: Set wallpaper`
-    - Suggest: `Установить обои`
 - `newtab-privacy-message-first-protection` — `browser/browser/newtab/newtab.ftl` — продолжать requires an infinitive: будет продолжать блокировки → блокировать
     - Current: `будет продолжать блокировки`
     - Source: `Keep browsing, { -brand-short-name } will keep blocking.`
@@ -666,7 +692,13 @@ _Also listed under their own category below._
     - Current: `с портфелей`
     - Source: `tooltiptext: Apply briefcase avatar`
     - Suggest: `с портфелем`
-- _…and 88 more; see `state/` for the full list._
+- `info-known-breaches-resolved` — `browser/browser/protections.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
+    - Source: `{$count ->} [one] Known data breach marked as resolved [other] Known data breaches marked as resolved`
+    - Suggest: `-location-desc`
+- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([one], [few]) — protections.ftl — gender and number are wrong and inconsistent with bar-tooltip-cookie in the same file
+    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
+    - Suggest: `[one]`
+- _…and 86 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -860,7 +892,7 @@ _Also listed under their own category below._
 - `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — toolbox-meatball-menu-splitconsole-label / -hideconsole-label use positional wording where toolbox-options.ftl uses разделённая консоль
     - Source: `Show Split Console`
     - Suggest: `-hideconsole-label`
-- _…and 17 more; see `state/` for the full list._
+- _…and 19 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -917,6 +949,11 @@ _Also listed under their own category below._
     - Suggest: `1–2 минуты`
 - `multi-profile-spotlight-body` — `browser/browser/newtab/onboarding.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Easily switch between browsing for work and fun. Profiles keep your browsing info, including search history and passwords, totally separate so you can stay organized.`
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — There is a stray comma between the verb phrase and the adverbial «во время передачи».
+    - Current: `прочитает эту страницу, во время передачи`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `прочитает эту страницу во время передачи`
+    - Russian punctuation does not put a comma before an adverbial phrase like this one. The comma splits the phrase from the verb it modifies.
 - `panic-button-open-new-window` — `browser/browser/panicButton.ftl` — новое чистое Окно → lowercase
     - Current: `новое чистое Окно`
     - Source: `Open a new clean Window`
@@ -1030,8 +1067,7 @@ _Also listed under their own category below._
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
     - The tree uses … 403 times against 5 ASCII runs.
-- `pdfjs-print-progress-percent` — `toolkit/toolkit/pdfviewer/viewer.ftl` — Missing space between number and unit: timer.end (mobile/android/chrome/browser.properties), console-timer-end (geckoViewConsole.ftl), throttling.profile.label (network-throttling.properties — spaced in …description, unspaced here), newtab-wallpaper-error-max-file-size ({ $filesize }МБ), printprogresspercent (browser/pdfviewer/viewer.properties — space added before %), pdfjs-print-progress-percen…
-    - Source: `{ $progress }%`
+- _…and 1 more; see `state/` for the full list._
 
 ---
 

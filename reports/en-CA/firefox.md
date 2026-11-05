@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,648 |
+| **Strings reviewed this run** | 124 of 16,754 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,648 |
-| Missing strings | 94 |
+| Files | 331 |
+| Strings | 16,754 |
+| Missing strings | 106 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**94 strings** are not translated yet, concentrated in:
+**106 strings** are not translated yet, concentrated in:
 
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
-- `browser/browser/genai.ftl` — 11
-- `browser/browser/sanitize.ftl` — 10
-- `browser/browser/aboutLogins.ftl` — 9
-- `browser/browser/newtab/newtab.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 7
-- `browser/browser/newtab/asrouter.ftl` — 5
-- `toolkit/toolkit/neterror/netError.ftl` — 3
-- `browser/browser/browser.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 2
-- `browser/browser/customkeys.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 2
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,9 +86,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 698, `curly-single` 64, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1005, `straight` 4 | **typographic** |
-| ellipsis | `char` 399 | **char** |
+| quotes | `curly-double` 699, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1010, `straight` 4 | **typographic** |
+| ellipsis | `char` 400 | **char** |
 | dash | `em` 84, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

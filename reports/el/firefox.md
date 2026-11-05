@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "Logins" (credentials) is translated as «Οι συνδέσεις» (connections), the same word used for "connection" earlier in the sentence.
+    - Current: `Οι συνδέσεις που γίνονται εδώ`
+    - Source: `This connection is not secure. Logins entered here could be compromised.`
+    - Suggest: `Τα στοιχεία σύνδεσης που εισάγονται εδώ`
+    - The en-US warns that login details typed into this field could be compromised. As translated, the Greek says the connections made here could be intercepted. That is a different statement, and it gets mixed up with "Αυτή η σύνδεση" (this connection) in the first sentence.
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "Scope" is translated as «πεδίου» here but as «εύρους» in the other manifest strings.
+    - Current: `Το URL πεδίου`
+    - Source: `The scope URL is invalid.`
+    - Suggest: `Το URL εύρους`
+    - The same manifest "scope" term is «εύρος» in dom-manifest-scope-not-same-origin and dom-manifest-start-url-outside-scope. Using «πεδίου» here is inconsistent and blurs which property is meant.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +53,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +72,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +95,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1015, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
+| quotes | `guillemet` 1016, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
 | ellipsis | `char` 399, `ascii` 2 | **char** |
 | dash | `em` 65, `en` 2 | **em** |
@@ -85,14 +109,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (217)
+## 3. Open findings (219)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 142 |
-| 2 | Wrong content (says something other than the English) | 67 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 2 | Wrong content (says something other than the English) | 68 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -415,6 +439,11 @@ _Nothing reported._
     - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
     - Suggest: `θα απέκλειαν`
     - A report-only policy blocks nothing; the source uses the conditional "would block", which in Greek is «θα απέκλειαν», not the future «θα αποκλείσουν».
+- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "Logins" (credentials) is translated as «Οι συνδέσεις» (connections), the same word used for "connection" earlier in the sentence.
+    - Current: `Οι συνδέσεις που γίνονται εδώ`
+    - Source: `This connection is not secure. Logins entered here could be compromised.`
+    - Suggest: `Τα στοιχεία σύνδεσης που εισάγονται εδώ`
+    - The en-US warns that login details typed into this field could be compromised. As translated, the Greek says the connections made here could be intercepted. That is a different statement, and it gets mixed up with "Αυτή η σύνδεση" (this connection) in the first sentence.
 
 ### C. Grammar, agreement & spelling
 
@@ -871,6 +900,11 @@ _Nothing reported._
     - Source: `Permission denied to create wrapper for object of class %S`
     - Suggest: `Άρνηση δικαιώματος για τη δημιουργία wrapper για το αντικείμενο της κλάσης %S`
     - The adjacent CreateWrapperDeniedForOrigin translates the same phrase fully; here “for object of class” remains English inside an otherwise Greek sentence.
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "Scope" is translated as «πεδίου» here but as «εύρους» in the other manifest strings.
+    - Current: `Το URL πεδίου`
+    - Source: `The scope URL is invalid.`
+    - Suggest: `Το URL εύρους`
+    - The same manifest "scope" term is «εύρος» in dom-manifest-scope-not-same-origin and dom-manifest-start-url-outside-scope. Using «πεδίου» here is inconsistent and blurs which property is meant.
 - `load-module-help-root-certs-module-name` — `security/manager/security/certificates/deviceManager.ftl` — A do-not-translate literal was translated.
     - Current: `Το ‘Πιστοποιητικά Ρίζας‘ είναι δεσμευμένο`
     - Source: `value: ‘Root Certs‘ is reserved and cannot be used as the module name.`
