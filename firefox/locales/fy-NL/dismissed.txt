@@ -24,3 +24,6 @@ popup-trigger-redirect-menuitem @ browser/browser/browser.ftl — auto-suggest (
 add-exception-valid-long @ security/manager/security/certificates/certManager.ftl — auto-suggest (2026-11-05): The double space between sentences is also present in the en-US source.
 more-from-moz-solo-description @ browser/browser/preferences/moreFromMozilla.ftl — auto-suggest (2026-11-05): Here 'fergees' is used adverbially ('keppelje fergees'), where the uninflected form is correct; 'fergese' is the attributive inflected form.
 permissions-block-popups-exceptions-button4 @ browser/browser/preferences/preferences.ftl — auto-suggest (2026-11-05): This string already uses 'trochliedingen', which is the suggested term.
+opensearch-error-duplicate-desc @ browser/browser/search.ftl — auto-suggest (2026-11-05): The source itself says 'an engine', which 'in masine' renders faithfully.
+opensearch-error-format-title @ browser/browser/search.ftl — auto-suggest (2026-11-05): 'Net falide formaat' correctly means 'invalid format'; the suggestion is just a synonym.
+autofill-delete-payment-method-os-prompt-windows @ toolkit/toolkit/formautofill/formAutofill.ftl — auto-suggest (2026-11-05): "bewarre betellingsgegevens" is an adequate rendering of "stored payment method information"; no meaning is changed.
