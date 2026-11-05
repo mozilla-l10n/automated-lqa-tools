@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,548 |
+| **Strings reviewed this run** | 78 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,548 |
-| Missing strings | 78 |
+| Strings | 2,626 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,14 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**78 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 54
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fa/strings.xml` — 12
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fa/strings.xml` — 5
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -80,7 +73,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 21 | **guillemet** |
+| quotes | `guillemet` 23 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 
 ---

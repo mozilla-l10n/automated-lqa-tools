@@ -376,9 +376,14 @@
    "source": "Required permissions:",
    "original": "Fereaske machtigingen:",
    "text": "Fereaske tastimmingen:",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "mozac_feature_addons_permissions_dialog_heading_required_permissions @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 11248834,
+   "pontoon_url": "",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-05",
@@ -402,9 +407,14 @@
    "source": "Read and modify privacy settings.",
    "original": "Privacyynstellingen lêze en oanpasse.",
    "text": "Privacyynstellingen lêze en bewurkje.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "mozac_feature_addons_permissions_privacy_description_for_update @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12388135,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321362",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-05",
@@ -428,9 +438,13 @@
    "source": "Link copied to clipboard",
    "original": "Koppeling nei klamboerd kopiearre",
    "text": "Keppeling nei klamboerd kopiearre",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388136,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values/strings.xml/?string=203903",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -506,9 +520,13 @@
    "source": "Allow %1$s to send notifications?",
    "original": "%1$s tastean om meldingen te ferstjoeren?",
    "text": "%1$s tastean om notifikaasjes te ferstjoeren?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388137,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values/strings.xml/?string=196850",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -688,9 +706,13 @@
    "source": "Secure your saved payment methods",
    "original": "Befeiligje jo bewarre betelmetoaden",
    "text": "Befeiligje jo bewarre betellingsmetoaden",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388141,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=300053",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -714,9 +736,13 @@
    "source": "Region Tools",
    "original": "Regiohelpmiddelen",
    "text": "Regio-ark",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388142,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317232",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -792,9 +818,13 @@
    "source": "One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).\n\nExtensions won’t be restarted during your current session.\n\nRemoving or disabling extensions may fix this issue.",
    "original": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de add-on(s) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
    "text": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de útwreiding(en) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388139,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=302797",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -870,9 +900,13 @@
    "source": "Turn VPN on to make your browsing more private and harder to trace.",
    "original": "Skeakelje VPN yn om jo navigaasje persoanliker en dreger te folgjen te meitsjen.",
    "text": "Skeakelje VPN yn om jo navigaasje mear privee en dreger te folgjen te meitsjen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388140,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=337090",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1104,9 +1138,13 @@
    "source": "%s: search engine selector",
    "original": "%s: sykmasjineselektor",
    "text": "%s: sykmasineselektor",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388138,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=314091",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",

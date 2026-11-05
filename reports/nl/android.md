@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 2,615 |
+| **Strings reviewed this run** | 1 of 2,615 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "more private" is translated as "persoonlijker" (more personal) instead of "meer privé".
+    - Current: `uw navigatie persoonlijker en moeilijker te volgen te maken`
+    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
+    - Suggest: `uw navigatie meer privé en moeilijker te volgen te maken`
+    - "persoonlijker" means "more personal", the opposite emphasis of "more private"; the parallel string ip_protection_onboarding_body_promo correctly uses "meer privé".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -91,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (61)
+## 3. Open findings (60)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 33 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 27 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -412,11 +416,6 @@ _Nothing reported._
     - Source: `Navigate back`
     - Suggest: `Terugnavigeren`
     - The source is a back button content description; "bladeren" means "to browse/leaf through" and misdescribes the control for screen-reader users. Mozilla nl uses "Terug"/"Terugnavigeren".
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "more private" is translated as "persoonlijker" (more personal) instead of "meer privé".
-    - Current: `uw navigatie persoonlijker en moeilijker te volgen te maken`
-    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
-    - Suggest: `uw navigatie meer privé en moeilijker te volgen te maken`
-    - "persoonlijker" means "more personal", the opposite emphasis of "more private"; the parallel string ip_protection_onboarding_body_promo correctly uses "meer privé".
 
 ### E. Typography, punctuation & spacing
 
@@ -442,6 +441,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-05
