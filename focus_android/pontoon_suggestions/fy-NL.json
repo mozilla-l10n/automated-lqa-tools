@@ -1,0 +1,136 @@
+{
+ "project": "focus_android",
+ "locale": "fy-NL",
+ "suggestions": [
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "exit_fullscreen_with_back_button_short",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "exit_fullscreen_with_back_button_short"
+    ]
+   },
+   "fids": [
+    "03d463e70f7a"
+   ],
+   "findings": [
+    "Back-button instruction wrongly says \"press the back gesture\" instead of pressing the back button, duplicating the gesture string."
+   ],
+   "source": "Drag from top & press back to exit",
+   "original": "Sleep fan de boppekant ôf & druk it gebear werom om ôf te sluten",
+   "text": "Sleep fan de boppekant ôf & druk op de weromknop om ôf te sluten",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "feedback_erase_custom_tab",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "feedback_erase_custom_tab"
+    ]
+   },
+   "fids": [
+    "61f307854967"
+   ],
+   "findings": [
+    "Singular \"Tab's browsing history\" rendered as plural \"of the tabs\"."
+   ],
+   "source": "Tab’s browsing history has been erased.",
+   "original": "Jo sneupskiednis fan de ljepblêden is wiske.",
+   "text": "Jo sneupskiednis fan it ljepblêd is wiske.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "firstrun_shortcut_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "firstrun_shortcut_title"
+    ]
+   },
+   "fids": [
+    "76d8684e3612"
+   ],
+   "findings": [
+    "\"shortcuts\" translated as \"keppelingen\" (links) instead of \"fluchkeppelingen\" (shortcuts)."
+   ],
+   "source": "Add shortcuts to your home screen",
+   "original": "Foegje keppelingen ta oan jo startskerm",
+   "text": "Foegje fluchkeppelingen ta oan jo startskerm",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_privacy_should_block_cookies_third_party_only_option",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_privacy_should_block_cookies_third_party_only_option"
+    ]
+   },
+   "fids": [
+    "758f844e0dd7"
+   ],
+   "findings": [
+    "The verb \"blokkearje\" (block) is missing, so the option reads \"Only third-party cookies\" instead of \"Block 3rd-party cookies only\"."
+   ],
+   "source": "Block 3rd-party cookies only",
+   "original": "Allinnich cookies fan tredden",
+   "text": "Allinnich cookies fan tredden blokkearje",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_security_biometric_summary2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_security_biometric_summary2"
+    ]
+   },
+   "fids": [
+    "d64eb0e47ebc"
+   ],
+   "findings": [
+    "\"Shortcuts\" (pinned website shortcuts) is rendered as \"fluchtoetsen\" (keyboard shortcuts)."
+   ],
+   "source": "Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.",
+   "original": "Untskoattelje mei fingerôfdruk as jo fluchtoetsen tafoege hawwe of as in website al iepen is yn %s.",
+   "text": "Untskoattelje mei fingerôfdruk as jo fluchkeppelingen tafoege hawwe of as in website al iepen is yn %s.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  }
+ ]
+}
