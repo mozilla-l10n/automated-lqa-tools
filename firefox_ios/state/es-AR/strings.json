@@ -334,7 +334,9 @@
   "ExternalLink.ExternalSmsLinkConfirmation.v136": "fd2d74d7 bc105275 2d0a7110"
  },
  "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings": {
+  "FirefoxHome.PrivacyNotice.Body.Markdown.v160": "b4ff1871 291c8443 5ce7ea0c",
   "FirefoxHome.PrivacyNotice.Body.v148": "f5b215b3 e9082260 fade0257",
+  "FirefoxHome.PrivacyNotice.Headline.v160": "79ce7c55 c8dc72ab 2bcb2a8c",
   "FirefoxHome.PrivacyNotice.LearnMoreLink.v148": "e373c3d8 8ed49578 79d95a90",
   "FirefoxHome.PrivacyNotice.PrivacyNoticeLink.v148": "854fadce f90e5f8c 260331a6",
   "FirefoxHome.ScreenTitle.v144": "8c4692b1 9e90592c a9e45512",
@@ -848,6 +850,7 @@
   "QuickAnswers.ContentView.Footer.v158": "3994b39d 2f8ace80 51573155",
   "QuickAnswers.ContentView.Listening.v158": "12884aa3 647477fe 206365c4",
   "QuickAnswers.ContentView.ListeningFollowUp.v160": "34501d19 58e05d3b 383d83dd",
+  "QuickAnswers.ContentView.NewQuestionButton.v161": "61f03c3f c8f2cc6e 139d73fc",
   "QuickAnswers.ContentView.Placeholder.v158": "ff9b4627 07b487b5 d5c1aeb3",
   "QuickAnswers.ContentView.ResultHeader.v160": "fe018df3 e2ed6049 0b132920",
   "QuickAnswers.ContentView.SearchingSources.v158": "c9dc54ec 955b7c57 a6d3ccc8",

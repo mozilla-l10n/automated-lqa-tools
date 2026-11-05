@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,915 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 97 |
 | Strings | 1,915 |
-| Missing strings | 65 |
+| Missing strings | 68 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -59,12 +59,13 @@ _Nothing retired._
 
 ### Completeness
 
-**65 strings** are not translated yet, concentrated in:
+**68 strings** are not translated yet, concentrated in:
 
-- `da/firefox-ios.xliff` — 34
+- `da/firefox-ios.xliff` — 35
 - `da/firefox-ios.xliff` — 13
 - `da/firefox-ios.xliff` — 6
 - `da/firefox-ios.xliff` — 5
+- `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 1

@@ -264,6 +264,78 @@
   "suppressed_by": ""
  },
  {
+  "category": "A",
+  "check": "llm",
+  "current": "(privacy_NOTICE_URL)",
+  "dismissed_because": "",
+  "fid": "8ac64e93a1bc",
+  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+  "first_seen": "2026-11-05",
+  "impact": 1,
+  "last_seen": "2026-11-05",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says to translate only the text inside the square brackets. The URL placeholder must stay exactly as it is or the link breaks.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "05d509c2",
+  "string_id": "FirefoxHome.PrivacyNotice.Body.Markdown.v160",
+  "suggest": "(PRIVACY_NOTICE_URL)",
+  "summary": "The URL placeholder PRIVACY_NOTICE_URL has been changed to privacy_NOTICE_URL, so the link will not be substituted.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "a nossa [Aviso de privacidade]",
+  "dismissed_because": "",
+  "fid": "8e677e33c1b8",
+  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "'Aviso' is masculine in Portuguese, so the article and possessive have to be 'o nosso'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "05d509c2",
+  "string_id": "FirefoxHome.PrivacyNotice.Body.Markdown.v160",
+  "suggest": "o nosso [Aviso de privacidade]",
+  "summary": "Gender agreement error: the feminine 'a nossa' is used with the masculine noun 'Aviso'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Informação de privacidade atualizada",
+  "dismissed_because": "",
+  "fid": "b8d3700bcbaa",
+  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Both strings refer to the same document on the same card. The card announces an update to a named document, so the headline should use the same term as the body.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c136b571",
+  "string_id": "FirefoxHome.PrivacyNotice.Headline.v160",
+  "suggest": "Aviso de privacidade atualizado",
+  "summary": "The headline calls the Privacy Notice 'Informação de privacidade', but the body text on the same card calls it 'Aviso de privacidade'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Rastreadores Bloqueados: %@",

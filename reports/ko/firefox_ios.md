@@ -3,28 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 1,980 |
+| **Strings reviewed this run** | 0 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ko: [Firefox for Android](android.md) · [Focus for Android](focus_android.md)
+Also for ko: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `ko/firefox-ios.xliff` — The object particle 를 is used with the passive verb 사용되었습니다, which is ungrammatical.
-    - Current: `%1$@기가를 사용되었습니다`
-    - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
-    - Suggest: `%1$@기가바이트를 사용했습니다`
-    - In Korean, a passive verb (사용되다) cannot take an object marked with 을/를. It needs either the active form (를 사용했습니다) or a subject particle (가 사용되었습니다). The suggestion also uses the full unit 기가바이트, matching the first half of the sentence and the source's 'gigabytes'.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -50,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 98 |
 | Strings | 1,980 |
-| Missing strings | 0 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +59,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**3 strings** are not translated yet, concentrated in:
+
+- `ko/firefox-ios.xliff` — 2
+- `ko/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

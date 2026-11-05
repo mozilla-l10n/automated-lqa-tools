@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,896 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 96 |
 | Strings | 1,896 |
-| Missing strings | 84 |
+| Missing strings | 87 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**84 strings** are not translated yet, concentrated in:
+**87 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
 - `es-MX/firefox-ios.xliff` — 19
@@ -67,6 +67,7 @@ _Nothing retired._
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `es-MX/firefox-ios.xliff` — 6
 - `es-MX/firefox-ios.xliff` — 5
+- `es-MX/firefox-ios.xliff` — 3
 - `es-MX/firefox-ios.xliff` — 2
 - `es-MX/firefox-ios.xliff` — 2
 - `es-MX/firefox-ios.xliff` — 1

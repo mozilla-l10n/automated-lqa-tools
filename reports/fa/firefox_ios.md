@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,915 |
+| **Strings reviewed this run** | 65 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,915 |
-| Missing strings | 65 |
+| Files | 98 |
+| Strings | 1,980 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,20 +59,10 @@ _Nothing retired._
 
 ### Completeness
 
-**65 strings** are not translated yet, concentrated in:
+**3 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `fa/firefox-ios.xliff` — 19
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `fa/firefox-ios.xliff` — 7
-- `fa/firefox-ios.xliff` — 5
 - `fa/firefox-ios.xliff` — 2
 - `fa/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -84,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 8, `guillemet` 5, `curly-double` 3 | _mixed_ |
 | apostrophe | `typographic` 34 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 1 | **em** |
 
 ---

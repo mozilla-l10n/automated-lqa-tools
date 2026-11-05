@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a1c273f4bf5e` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a1c273f4bf5e` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 1,980 |
+| **Strings reviewed this run** | 0 of 1,980 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox](firefox.md) · [F
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153` — `zh-TW/firefox-ios.xliff` — "You’re Protected" is rendered as "Let us protect you" instead of a status saying the user is protected.
-    - Current: `讓我們保護您`
-    - Source: `You’re Protected`
-    - Suggest: `您已受到保護`
-    - The source and the developer comment describe a status label saying the user is already protected (shown when zero trackers have been blocked). The translation is a request or call to action meaning "Let us protect you", which says something different.
-- `Settings.TechnicalData.Message.v136` — `zh-TW/firefox-ios.xliff` — The head noun "data" (資料) is missing, so the subject 關於… has no noun and the sentence is incomplete.
-    - Current: `關於您的裝置、硬體設定，以及您的使用方式，可幫助我們`
-    - Source: `Data about your device, hardware configuration, and usage helps us improve %@ features, performance and stability.`
-    - Suggest: `關於您的裝置、硬體設定與使用方式的資料，可幫助我們`
-    - The source is "Data about your device… helps us". The translation starts with 關於 ("about") but never names what the thing about the device is, so the subject is grammatically incomplete. Adding 的資料 fixes this.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -55,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 98 |
 | Strings | 1,980 |
-| Missing strings | 0 |
+| Missing strings | 3 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -68,7 +59,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**3 strings** are not translated yet, concentrated in:
+
+- `zh-TW/firefox-ios.xliff` — 2
+- `zh-TW/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
