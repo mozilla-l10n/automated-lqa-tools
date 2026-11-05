@@ -24,9 +24,13 @@
    "source": "{ <p> }This web page at %1$s has been blocked because one of your add-ons tried to open it. This site could be used to steal your info — like passwords or credit card numbers.{ </p> }",
    "original": "<p>Ta spletna stran na %1$s je bila blokirana, ker jo je poskušal odpreti eden izmed vaših dodatkov. Na tem spletnem mestu bi lahko ukradli vaše podatke, kot so gesla ali podatki o bančnem računu.</p>",
    "text": "<p>Ta spletna stran na %1$s je bila blokirana, ker jo je poskušal odpreti eden izmed vaših dodatkov. Na tem spletnem mestu bi lahko ukradli vaše podatke, kot so gesla ali številke kreditnih kartic.</p>",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375873,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=327363",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -50,9 +54,13 @@
    "source": "You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.",
    "original": "Omogočili ste način \"samo HTTPS\" za izboljšano varnost in varna različica HTTPS strani <em>%1$s</em> ni na voljo.",
    "text": "Omogočili ste način \"samo HTTPS\" za izboljšano varnost in različica HTTPS strani <em>%1$s</em> ni na voljo.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375874,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=236699",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -76,9 +84,13 @@
    "source": "{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> }\n{ <ul> }\n{ <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
    "original": "<p>Povezava s stranjo je bila nepričakovano prekinjena med pogajanjem za povezavo. Poskusite znova.</p>\n<ul>\n<li>Spletno mesto je morda začasno nedosegljivo ali preobremenjeno. Poskusite znova nekoliko pozneje.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
    "text": "<p>Omrežna povezava je bila prekinjena med pogajanjem za povezavo. Poskusite znova.</p>\n<ul>\n<li>Spletno mesto je morda začasno nedosegljivo ali preobremenjeno. Poskusite znova nekoliko pozneje.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375871,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196854",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -102,9 +114,13 @@
    "source": "{ <p> }The browser could not find the host server for the provided address.{ </p> }\n{ <ul> }\n{ <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </strong> }.example.com.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
    "original": "<p>Strani ni bilo mogoče najti.</p>\n<ul>\n<li>Morda ste se zmotili pri črkovanju naslova, npr. <strong>ww</strong>.example.com namesto <strong>www</strong>.example.com.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
    "text": "<p>Brskalnik ni mogel najti gostiteljskega strežnika za navedeni naslov.</p>\n<ul>\n<li>Morda ste se zmotili pri črkovanju naslova, npr. <strong>ww</strong>.example.com namesto <strong>www</strong>.example.com.</li>\n<li>Če ne morete naložiti nobene strani, preverite nastavitve podatkovne povezave ali Wi-Fi.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375872,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196858",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -128,9 +144,13 @@
    "source": "The developer says the extension wants to collect: %1$s",
    "original": "Razvijalec pravi, da razširitev zbira: %1$s",
    "text": "Razvijalec pravi, da želi razširitev zbirati: %1$s",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375876,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=320999",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -154,9 +174,13 @@
    "source": "Access browser activity during navigation",
    "original": "dostop do dejavnosti brskalnika",
    "text": "dostop do dejavnosti brskalnika med krmarjenjem",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375875,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206786",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -180,9 +204,13 @@
    "source": "Allow redirect to this site?",
    "original": "Dovolite preusmeritev na to stran?",
    "text": "Dovolite preusmeritev na to spletno mesto?",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375877,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=323762",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -206,9 +234,13 @@
    "source": "Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.",
    "original": "Zaščitite svoje račun z uporabo močnih, naključno ustvarjenih gesel. Shranjena bodo v vaš račun za nadaljnjo uporabo.",
    "text": "Zaščitite svoj račun z uporabo močnih, naključno ustvarjenih gesel. Shranjena bodo v vaš račun za nadaljnjo uporabo.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375878,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=310400",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -232,9 +264,13 @@
    "source": "Update card expiration date?",
    "original": "Posodobi datum poteka veljavnosti kartice?",
    "text": "Posodobim datum poteka veljavnosti kartice?",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375879,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=244659",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -258,9 +294,13 @@
    "source": "Adjust how hard you need to shake to trigger summarization.",
    "original": "Prilagodite, kako močno morate stresati, za povzetek.",
    "text": "Prilagodite, kako močno morate stresati za povzetek.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375880,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/android-components/components/feature/summarize/src/main/res/values/strings.xml/?string=335820",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -284,9 +324,13 @@
    "source": "🔇 sound off",
    "original": "🔈 zvok izključen",
    "text": "🔇 zvok izključen",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375881,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/longfox/src/main/res/values/strings.xml/?string=331986",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -310,9 +354,13 @@
    "source": "Select a language to manage ”always translate“ and ”never translate“ preferences.",
    "original": "Izberite jezik za upravljanje nastavitev ”vedno prevedi“ in ”nikoli ne prevajaj“.",
    "text": "Izberite jezik za upravljanje nastavitev \"vedno prevedi\" in \"nikoli ne prevajaj\".",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375905,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292106",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -336,9 +384,13 @@
    "source": "Add-ons and some features will stop working on March 14.",
    "original": "Dodatki in nekatere možnosti bodo 14. marca nehale delovati.",
    "text": "Dodatki in nekatere možnosti bodo 14. marca nehali delovati.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375909,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=313808",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -362,9 +414,13 @@
    "source": "Take photo and send to Google Lens",
    "original": "Fotografiraj in pošlji Google Lens",
    "text": "Fotografiraj in pošlji v Google Lens",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375912,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335632",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -388,9 +444,13 @@
    "source": "Unlock to use saved payment methods",
    "original": "Odklenite za ogled shranjenih plačilnih sredstev",
    "text": "Odklenite za uporabo shranjenih plačilnih sredstev",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375902,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=300023",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -414,9 +474,13 @@
    "source": "Active",
    "original": "Dejaven",
    "text": "Dejavni",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375907,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=305029",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -440,9 +504,13 @@
    "source": "Cross-Site Tracking Cookies",
    "original": "Spletni sledilni piškotki",
    "text": "Medspletni sledilni piškotki",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375897,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=201308",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-03",
@@ -466,9 +534,14 @@
    "source": "Known Fingerprinters",
    "original": "Znane sledilce prstnih odtisov",
    "text": "Znani sledilci prstnih odtisov",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je prav, da je v rodilniku.</p>",
+   "dismissal": "etp_known_fingerprinters_title @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je prav, da je v rodilniku.</p>",
+   "pontoon_pk": 12375899,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309032",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -492,9 +565,14 @@
    "source": "Suspected Fingerprinters",
    "original": "Morebitne sledilce prstnih odtisov",
    "text": "Morebitni sledilci prstnih odtisov",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "dismissal": "etp_suspected_fingerprinters_title @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12375898,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309026",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -518,9 +596,13 @@
    "source": "How satisfied are you with the search experience in Firefox?",
    "original": "Kako zadovoljni ste z možnostjo iskanja v Firefoxu?",
    "text": "Kako zadovoljni ste z izkušnjo iskanja v Firefoxu?",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375908,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309705",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -544,9 +626,13 @@
    "source": "Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.",
    "original": "Začnite vsako iskanje z domače strani svojega telefona in vedite, da vam Firefox s svojimi zaščitami krije hrbet.",
    "text": "Začnite vsako iskanje z domačega zaslona svojega telefona in vedite, da vam Firefox s svojimi zaščitami krije hrbet.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375890,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327918",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -570,9 +656,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
    "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali. %1$s",
    "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali. %1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375886,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327912",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -596,9 +686,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
    "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375887,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334024",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -622,9 +716,13 @@
    "source": "You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.",
    "original": "Pomagate nam lahko doseči več ljudi, tako da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvestimo, da ste vi njegov uporabnik.",
    "text": "Pomagate nam lahko doseči več ljudi, tako da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvesti, da ste vi njegov uporabnik.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375888,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334025",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -648,9 +746,13 @@
    "source": "Please consider allowing to help Firefox win.",
    "original": "Prosim, razmislite o tem, da dovolite in pomagajte Firefoxu, da zmaga.",
    "text": "Prosim, razmislite o tem, da dovolite in pomagate Firefoxu, da zmaga.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375889,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335843",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-03",
@@ -674,9 +776,13 @@
    "source": "Manage settings",
    "original": "Nastavitve",
    "text": "Upravljanje nastavitev",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375885,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327897",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -700,9 +806,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
    "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375884,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=316002",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -726,9 +836,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "Sporočite Mozillinim tehnološkim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
    "text": "Sporočite Mozillinim partnerjem za trženje, kako ste odkrili Firefox in da ga uporabljate. Ti podatki se nikoli ne bodo prodali.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375883,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323545",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -752,9 +866,14 @@
    "source": "Set by Battery Saver",
    "original": "Nastavi ohranjevalnik baterije",
    "text": "Nastavljeno z ohranjevalnikom baterije",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Razumem, zakaj je bot reagiral na ta niz, ampak če se prebere kot \"ohranjevalnik baterije nastavi to nastavitev\", je pravilen in slogovno boljši.</p>",
+   "dismissal": "preference_auto_battery_theme @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Razumem, zakaj je bot reagiral na ta niz, ampak če se prebere kot \"ohranjevalnik baterije nastavi to nastavitev\", je pravilen in slogovno boljši.</p>",
+   "pontoon_pk": 12375893,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197559",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -778,9 +897,13 @@
    "source": "%1$s won’t use secure DNS on these sites and their subdomains.",
    "original": "Na teh spletnih mestih in njihovih poddomenah %1$s ne bo uporabljal varnega DNS.",
    "text": "Na teh spletnih mestih in njihovih poddomenah %1$s ne bo uporabljal zavarovanega DNS.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375901,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315838",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -804,9 +927,14 @@
    "source": "Only use your default DNS resolver if there is a problem with secure DNS",
    "original": "privzeti razreševalnik DNS uporabi samo, če pride do težav z zavarovanim",
    "text": "privzeti razreševalnik DNS uporabi samo, če pride do težav z zavarovanim DNS",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je v redu, da je mala začetnica. Slovenski pravopis ima malo drugačna pravila za alinejno naštevanje kot angleški. Bodisi morajo biti male začetnice, bodisi mora biti na koncu vsake alineje končno ločilo.</p>",
+   "dismissal": "preference_doh_increased_protection_info_2 @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je v redu, da je mala začetnica. Slovenski pravopis ima malo drugačna pravila za alinejno naštevanje kot angleški. Bodisi morajo biti male začetnice, bodisi mora biti na koncu vsake alineje končno ločilo.</p>",
+   "pontoon_pk": 12375900,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315820",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -830,9 +958,13 @@
    "source": "Audio and video will play on Wi-Fi",
    "original": "Zvok in Video se bosta predvajala na Wi-Fi",
    "text": "Zvok in video se bosta predvajala na Wi-Fi",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375895,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=208686",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -856,9 +988,13 @@
    "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
    "original": "Objavite, kako ste odkrili Firefox in da ga uporabljate, z Mozillinimi tehnološkimi partnerji.",
    "text": "Objavite, kako ste odkrili Firefox in da ga uporabljate, z Mozillinimi trženjskimi tehnološkimi partnerji.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375892,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315223",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -882,9 +1018,13 @@
    "source": "Search browsing history",
    "original": "Išči po zgodovini iskanja",
    "text": "Išči po zgodovini brskanja",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Odlično, da se odkrivajo taki lapsusi.</p>",
+   "pontoon_pk": 12375891,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=203366",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -908,9 +1048,13 @@
    "source": "%s is off-duty. We suggest turning protections back on.",
    "original": "%s je izključena. Priporočamo, da zaščito znova vključite.",
    "text": "%s je izključen. Priporočamo, da zaščito znova vključite.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375906,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=313816",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -934,9 +1078,13 @@
    "source": "You’re halfway there! Three steps finished and 2 to go.",
    "original": "Ste preko polovice! Trije koraki dokončani in še dva do konca.",
    "text": "Ste na pol poti! Trije koraki dokončani in še dva do konca.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375910,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317589",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -960,9 +1108,13 @@
    "source": "Explore extensions",
    "original": "Razišči razširitve",
    "text": "Raziščite razširitve",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375911,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=316901",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -986,9 +1138,13 @@
    "source": "Bookmarks saved in “%s”",
    "original": "Zaznamki shranjeni v “%s”",
    "text": "Zaznamki shranjeni v \"%s\"",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375896,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323452",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -1012,9 +1168,13 @@
    "source": "You don’t have any tabs open in Firefox on your other devices.",
    "original": "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.",
    "text": "V Firefoxu na drugih napravah nimate odprtih zavihkov.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375903,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=212509",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -1038,9 +1198,13 @@
    "source": "Tabs you haven’t viewed for two weeks get moved here.",
    "original": "Zavihki, ki jih dva tedna niste odprli, se premaknejo sem.",
    "text": "Zavihki, ki si jih dva tedna niste ogledali, se premaknejo sem.",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12375882,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=232689",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -1064,9 +1228,13 @@
    "source": "For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s",
    "original": "Zasebnost je zagotovljena, saj prevodi nikoli ne zapustijo vašega računalnika. Novi jeziki in izboljšave so na poti! %1$s",
    "text": "Zasebnost je zagotovljena, saj prevodi nikoli ne zapustijo vaše naprave. Novi jeziki in izboljšave so na poti! %1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375904,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292295",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -1090,9 +1258,14 @@
    "source": "Clear selected reason",
    "original": "Prekliči izbrani razlog",
    "text": "Počisti izbrani razlog",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "dismissal": "webcompat_reporter_clear_reason_content_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12375894,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335626",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

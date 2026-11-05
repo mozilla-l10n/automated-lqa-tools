@@ -2562,5 +2562,29 @@
   "suggest": "Ich kann nicht bezahlen, den Kauf abschließen oder einkaufen",
   "summary": "\"check out\" (Kaufabschluss/Bezahlvorgang) was mistranslated as \"den Warenkorb leeren\" (empty the shopping cart).",
   "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Elfmeterschließen",
+  "dismissed_because": "",
+  "fid": "8d1d172189ce",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The German term for a penalty shootout is \"Elfmeterschießen\" (from \"schießen\", to shoot). \"Elfmeterschließen\" (from \"schließen\", to close) is a misspelling.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "cdc38b6b",
+  "string_id": "wrex_widget_match_penalties",
+  "suggest": "Elfmeterschießen",
+  "summary": "Typo: \"Elfmeterschließen\" should be \"Elfmeterschießen\".",
+  "suppressed_by": ""
  }
 ]

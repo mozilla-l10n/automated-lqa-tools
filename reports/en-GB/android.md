@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,604 |
+| **Strings reviewed this run** | 24 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for en-GB: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `wrex_widget_live_game_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-en-rGB/strings.xml` — The football widget uses the US term "game" where British English says "match".
-    - Current: `live game`
-    - Source: `%s, live game`
-    - Suggest: `live match`
-    - The sports widget is about football: the comment's example competition is the FA Cup, and the widget's other strings and comments say "match". British English calls a football fixture a "match", so "live game" reads as American and doesn't match the rest of the widget.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,604 |
+| Strings | 2,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -78,7 +74,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 173 | **typographic** |
+| apostrophe | `typographic` 176 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,551 |
+| **Strings reviewed this run** | 4 of 2,551 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,23 @@ Also for uk: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — "through %1$s" (until an end date) is rendered as "протягом %1$s" ("during"), which does not fit a single date.
+    - Current: `протягом %1$s`
+    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
+    - Suggest: `до %1$s`
+    - The developer comment says %1$s is a localized date such as "Jun 9" that marks when the promotion ends. So "through" here means "until" that date. "протягом" means "during" and needs a span of time, not a date, so "протягом 9 черв." does not say when the promotion ends.
+- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — A comma is missing before "що" after the participle "знаючи".
+    - Current: `знаючи що вас`
+    - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
+    - Suggest: `знаючи, що вас`
+    - The subordinate clause introduced by "що" after "знаючи" must be set off with a comma in Ukrainian punctuation.
+- `pbm_authentication_unlock_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — Typo in the genitive plural of "вкладка": "вкладкок" instead of "вкладок".
+    - Current: `вкладкок`
+    - Source: `Unlock private tabs`
+    - Suggest: `вкладок`
+    - The correct genitive plural of "вкладка" is "вкладок", which the other private-tabs strings in this batch use.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +60,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,551 |
-| Missing strings | 53 |
+| Missing strings | 75 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +77,12 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
+**75 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 30
+- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 54
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-uk/strings.xml` — 9
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-uk/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-uk/strings.xml` — 7
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-uk/strings.xml` — 5
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -93,7 +107,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (49)
+## 3. Open findings (46)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -108,9 +122,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
-| 4 | Cosmetic (typography, spacing) | 13 |
+| 2 | Wrong content (says something other than the English) | 21 |
+| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -153,11 +167,6 @@ _Nothing in this category._
     - Source: `Download complete languages for faster translations and to translate offline. %1$s`
     - Suggest: `Завантажте повні мовні пакети для швидшого перекладу та перекладу офлайн.`
     - Source lists two benefits: faster translations and the ability to translate offline. The Ukrainian says only 'for faster offline translation', which changes the claim and omits 'complete'.
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — "through %1$s" (until an end date) is rendered as "протягом %1$s" ("during"), which does not fit a single date.
-    - Current: `протягом %1$s`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `до %1$s`
-    - The developer comment says %1$s is a localized date such as "Jun 9" that marks when the promotion ends. So "through" here means "until" that date. "протягом" means "during" and needs a span of time, not a date, so "протягом 9 черв." does not say when the promotion ends.
 - `nova_onboarding_app_icon_prompt_body` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — "Home screen" is rendered as "домівка", which means a dwelling or, in uk Firefox, the Firefox Home page, not the device home screen.
     - Current: `Надайте своїй домівці індивідуальності.`
     - Source: `Give your home screen a personal touch.`
@@ -256,11 +265,6 @@ _Nothing in this category._
     - Source: `Tab Tools`
     - Suggest: `Інструменти вкладок`
     - The feature provides tools for tabs in general (count, bulk creation); sibling strings use the plural "вкладок" (e.g. "Інструмент створення вкладок"), so the singular genitive is a number error.
-- `pbm_authentication_unlock_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — Typo in the genitive plural of "вкладка": "вкладкок" instead of "вкладок".
-    - Current: `вкладкок`
-    - Source: `Unlock private tabs`
-    - Suggest: `вкладок`
-    - The correct genitive plural of "вкладка" is "вкладок", which the other private-tabs strings in this batch use.
 - `unsubmitted_crash_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — The adverbial participle 'Закривши' has no matching subject because the main clause is impersonal ('звіт буде проігноровано').
     - Current: `Закривши це сповіщення, звіт буде проігноровано.`
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
@@ -327,11 +331,6 @@ _Nothing in this category._
     - Source: `{ <label> }Someone could be trying to impersonate the site and you should not continue.{ </label> } { <br> }{ <br> } { <label> }Websites prove their identity via certificates. %1$s does not trust { <b> }%2$s{ </b> } bec…`
     - Suggest: `посередницькі сертифікати.{ </label> }`
     - The source sentence ends with a period; the translation drops it.
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — A comma is missing before "що" after the participle "знаючи".
-    - Current: `знаючи що вас`
-    - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
-    - Suggest: `знаючи, що вас`
-    - The subordinate clause introduced by "що" after "знаючи" must be set off with a comma in Ukrainian punctuation.
 - `open_all_warning_message` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — A comma is missing before the subordinate clause introduced by "поки".
     - Current: `сповільнити %s поки`
     - Source: `Opening this many tabs may slow down %s while the pages are loading. Are you sure you want to continue?`
@@ -390,6 +389,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (3)
 
-_Nothing fixed yet._
+- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — fixed 2026-11-05
+- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — fixed 2026-11-05
+- `pbm_authentication_unlock_private_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — fixed 2026-11-05

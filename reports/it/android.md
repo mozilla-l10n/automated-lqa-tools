@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,604 |
+| **Strings reviewed this run** | 26 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
+    - Current: `Raggruppato`
+    - Source: `Collapsed`
+    - Suggest: `Compresso`
+    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
+- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
+    - Current: `%1$s, raggruppato`
+    - Source: `%1$s, collapsed`
+    - Suggest: `%1$s, compresso`
+    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,604 |
+| Strings | 2,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,10 +83,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 22 | **curly-double** |
-| apostrophe | `typographic` 173 | **typographic** |
+| apostrophe | `typographic` 176 | **typographic** |
 | ellipsis | `char` 23 | **char** |
 | dash | `em` 2 | **em** |
-| register | `informal` 91, `formal` 4 | **informal** |
+| register | `informal` 93, `formal` 4 | **informal** |
 
 ---
 
@@ -87,13 +96,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 2 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -103,16 +112,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
-    - Current: `Raggruppato`
-    - Source: `Collapsed`
-    - Suggest: `Compresso`
-    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
-- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
-    - Current: `%1$s, raggruppato`
-    - Source: `%1$s, collapsed`
-    - Suggest: `%1$s, compresso`
-    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -164,8 +164,10 @@ _Suppressions live in `locales/it/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (41)
+### Fixed to date (43)
 
+- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — fixed 2026-11-05
+- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — fixed 2026-11-05
 - `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-21
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-it/strings.xml` — fixed 2026-08-20
@@ -204,5 +206,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `sync_connect_device_dialog` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `sync_offline` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
 - `sync_sent_tabs_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
-- `tab_manager_empty_private_tabs_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20
-- `tabs_header_tab_group_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-it/strings.xml` — fixed 2026-08-20

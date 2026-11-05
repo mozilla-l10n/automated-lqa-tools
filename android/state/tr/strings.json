@@ -147,13 +147,11 @@
  },
  "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml": {
   "mozac_menu_banner_dismiss_description": "a43147e5 7b9c61ad bb2c2c9b",
-  "mozac_menu_customize_back_button_content_description": "0fd160b4 b5da6784 a332b11e",
   "mozac_menu_customize_drag_to_hide": "dafd753e b6373ef0 e2002d76",
   "mozac_menu_customize_drag_to_reorder": "48026f4d 28afc349 d4e7cc97",
   "mozac_menu_customize_hidden_sections": "9fd24114 5f427ddf 0d3e5965",
   "mozac_menu_customize_preview": "093201d4 06deca68 5ff88d80",
   "mozac_menu_customize_reset_to_default": "fe4c3bc3 e32ba128 8e5a8ebe",
-  "mozac_menu_customize_toolbar_title": "ed90f54e 70ec115d ebc40850",
   "mozac_menu_item_new_indicator_label": "b9fab7b4 2270dfc6 12033a76"
  },
  "mozilla-mobile/android-components/components/compose/tabstray/src/main/res/values/strings.xml": {

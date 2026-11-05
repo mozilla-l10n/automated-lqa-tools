@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,604 |
+| **Strings reviewed this run** | 30 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,50 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — `wrex_widget_error_results_load_failed_title` uses a straight apostrophe
+    - Current: `Impossible d'afficher les résultats pour l'instant`
+    - Source: `Can’t show results right now`
+    - The tree uses ’ 702 times against 2 straight.
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Straight apostrophes are used instead of the locale's typographic apostrophe.
+    - Current: `Impossible d'afficher les résultats pour l'instant`
+    - Source: `Can’t show results right now`
+    - Suggest: `Impossible d’afficher les résultats pour l’instant`
+    - The fr convention is typographic apostrophes (718 occurrences). The sibling string wrex_widget_error_load_failed_title uses ’ correctly.
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
+    - Current: `dans les onglets ouverts`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `dans les onglets ouverts.`
+    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (5)
 
-_Nothing was fixed._
+- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
+    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts`
+    - Source: `Extend developer tools to access your data in open tabs`
+    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts`
+    - The source says the extension extends (adds to) the developer tools, not that it opens them.
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
+    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
+    - The source says the extension extends the developer tools, not that it opens them.
+- `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The action "Review" is dropped, leaving only "Update for %1$s".
+    - Current: `Mise à jour pour %1$s`
+    - Source: `Review update for %1$s`
+    - Suggest: `Examiner la mise à jour pour %1$s`
+    - The source tells the user to review an update that needs them to approve permission changes. The French only says an update exists and leaves out the action the user has to take.
+- `share_error_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says sharing this application is impossible, whereas the source means sharing to this app fails.
+    - Current: `Impossible de partager cette application`
+    - Source: `Cannot share to this app`
+    - Suggest: `Impossible de partager avec cette application`
+    - "Cannot share to this app" means the content cannot be shared to the target app; the translation reverses the object, saying the app itself cannot be shared.
+- `translations_bottom_sheet_positive_button_error` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Button label "Try again" is translated as a polite sentence "Veuillez réessayer" instead of a concise action label.
+    - Current: `Veuillez réessayer`
+    - Source: `Try again`
+    - Suggest: `Réessayer`
+    - The developer comment says this is button text; French UI buttons use the infinitive without "Veuillez", which reads as a message rather than an action label.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +82,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,604 |
+| Strings | 2,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -59,7 +96,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 0 |
+| Typography deviations from this locale's own norm | 1 |
 
 ### Completeness
 
@@ -74,11 +111,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 696 | **typographic** |
+| apostrophe | `typographic` 702, `straight` 2 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 213, `before-punctuation` 143, `space-before-punctuation` 63 | _mixed_ |
-| register | `formal` 446 | **formal** |
+| nbsp | `total` 215, `before-punctuation` 145, `space-before-punctuation` 63 | _mixed_ |
+| register | `formal` 451 | **formal** |
 
 ---
 
@@ -88,15 +125,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (52)
+## 3. Open findings (49)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
+| 2 | Wrong content (says something other than the English) | 35 |
 | 3 | Degraded language (grammar, spelling, terminology) | 12 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -114,16 +151,6 @@ _Nothing in this category._
     - Source: `Malware site issue`
     - Suggest: `Problème de site malveillant`
     - Source is "Malware site issue"; the other titles in the same family ("Problème de site indésirable", "Problème de site dangereux", "Problème de site trompeur") keep "site", so dropping it here is inconsistent and loses the meaning.
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
-    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts`
-    - The source says the extension extends (adds to) the developer tools, not that it opens them.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
-    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
-    - The source says the extension extends the developer tools, not that it opens them.
 - `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Access your data on other domains." drops the possessive "your data".
     - Current: `Accéder aux données d’autres domaines.`
     - Source: `Access your data on other domains.`
@@ -199,11 +226,6 @@ _Nothing in this category._
     - Source: `%1$s will translate this language automatically when the page loads.`
     - Suggest: `%1$s traduira automatiquement cette langue au chargement de la page.`
     - Source: "%1$s will translate this language automatically when the page loads." — the language is the one being translated from, matching the sibling strings ("ne proposera jamais de traduire les sites dans cette langue"). The current text says the page will be translated into that language.
-- `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The action "Review" is dropped, leaving only "Update for %1$s".
-    - Current: `Mise à jour pour %1$s`
-    - Source: `Review update for %1$s`
-    - Suggest: `Examiner la mise à jour pour %1$s`
-    - The source tells the user to review an update that needs them to approve permission changes. The French only says an update exists and leaves out the action the user has to take.
 - `browser_menu_webcompat_reporter_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Singular "Report broken site" is rendered as a plural "des problèmes" instead of reporting the site as broken.
     - Current: `Signaler des problèmes avec ce site`
     - Source: `Report broken site`
@@ -274,11 +296,6 @@ _Nothing in this category._
     - Source: `You’re 4 steps in. Only 2 more to go!`
     - Suggest: `Vous avez terminé quatre étapes. Plus que deux !`
     - The source states four steps are completed; the French phrasing does not convey completion clearly.
-- `share_error_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says sharing this application is impossible, whereas the source means sharing to this app fails.
-    - Current: `Impossible de partager cette application`
-    - Source: `Cannot share to this app`
-    - Suggest: `Impossible de partager avec cette application`
-    - "Cannot share to this app" means the content cannot be shared to the target app; the translation reverses the object, saying the app itself cannot be shared.
 - `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Section title "Active" is translated as a plural adjective "Activées" rather than the section heading "Actives".
     - Current: `Activées`
     - Source: `Active`
@@ -289,11 +306,6 @@ _Nothing in this category._
     - Source: `Dismiss tab group onboarding`
     - Suggest: `Ignorer la présentation des groupes d’onglets`
     - The source dismisses the tab group onboarding card; « accueil » means reception/home and does not convey onboarding/introduction.
-- `tab_tray_close_tabs_banner_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "in the past day, week, or month" is mistranslated as plural periods "les derniers jours, semaines ou mois".
-    - Current: `depuis les derniers jours, semaines ou mois`
-    - Source: `Set open tabs to close automatically that haven’t been viewed in the past day, week, or month.`
-    - Suggest: `depuis un jour, une semaine ou un mois`
-    - The source refers to a single choice of period (one day, one week, one month) for auto-closing, not several days/weeks/months.
 - `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translating" (action in progress) is rendered as the noun "Traduction".
     - Current: `Traduction`
     - Source: `Translating`
@@ -360,11 +372,6 @@ _Nothing in this category._
     - Source: `Not now`
     - Suggest: `Plus tard`
     - The same source string "Not now" on the same prompt surface is rendered « Plus tard » in mozac_feature_prompt_dont_save_2 and mozac_feature_prompt_dont_update_2.
-- `translations_bottom_sheet_positive_button_error` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Button label "Try again" is translated as a polite sentence "Veuillez réessayer" instead of a concise action label.
-    - Current: `Veuillez réessayer`
-    - Source: `Try again`
-    - Suggest: `Réessayer`
-    - The developer comment says this is button text; French UI buttons use the infinitive without "Veuillez", which reads as a message rather than an action label.
 - `webcompat_reporter_label_url` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "URL" is rendered as "Adresse web" while other Web Compat Reporter strings keep "URL".
     - Current: `Adresse web`
     - Source: `URL`
@@ -373,13 +380,26 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
+    - Current: `dans les onglets ouverts`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `dans les onglets ouverts.`
+    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — `wrex_widget_error_results_load_failed_title` uses a straight apostrophe
+    - Current: `Impossible d'afficher les résultats pour l'instant`
+    - Source: `Can’t show results right now`
+    - The tree uses ’ 702 times against 2 straight.
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Straight apostrophes are used instead of the locale's typographic apostrophe.
+    - Current: `Impossible d'afficher les résultats pour l'instant`
+    - Source: `Can’t show results right now`
+    - Suggest: `Impossible d’afficher les résultats pour l’instant`
+    - The fr convention is typographic apostrophes (718 occurrences). The sibling string wrex_widget_error_load_failed_title uses ’ correctly.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (6)
+### Dismissed by hand (7)
 
 - `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): "Si + imparfait, conditionnel" ("Si vous poursuiviez…, vous ne devriez…") is the standard, grammatical French hypothetical construction.
 - `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): "Aidez-nous à" is the idiomatic French rendering of an object-less "Help (to) do X"; "Aidez à attraper" would be unnatural.
@@ -387,6 +407,7 @@ _Nothing in this category._
 - `mozac_feature_downloads_time_remaining` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): « dans %1$s » is a literal, faithful rendering of the source "in %1$s".
 - `mozac_feature_prompts_suggest_strong_password_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `preference_doh_off_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): French naturally uses the definite article here; "le serveur … par défaut" conveys the same meaning as "your default".
+- `tab_tray_close_tabs_banner_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
@@ -400,8 +421,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (20)
+### Fixed to date (25)
 
+- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `share_error_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `translations_bottom_sheet_positive_button_error` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — fixed 2026-11-02
 - `mozac_browser_menu_highlighted` — `mozilla-mobile/android-components/components/browser/menu/src/main/res/values-fr/strings.xml` — fixed 2026-11-02
 - `mozac_browser_menu2_highlighted` — `mozilla-mobile/android-components/components/browser/menu2/src/main/res/values-fr/strings.xml` — fixed 2026-11-02
