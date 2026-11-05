@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `b4cac9524192` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,984 |
+| **Strings reviewed this run** | 80 of 17,089 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
+    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
+    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
+    - Current: `Tabs duplizieren`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Doppelte Tabs`
+    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
+    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Offene Tabs von Ihren anderen Geräten`
+    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
+    - Current: `{ -brand-short-name } Einstellungen`
+    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
+    - Suggest: `{ -brand-short-name }-Einstellungen`
+    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
+- `close-tabs-to-the-end-alt` — `browser/browser/tabContextMenu.ftl` — The label adds a redundant "schließen" inside the "Close Multiple" submenu and doesn't match its sibling "Tabs links davon".
+    - Current: `Tabs rechts schließen`
+    - Source: `accesskey: i label: Tabs to Right`
+    - Suggest: `Tabs rechts davon`
+    - The source is "Tabs to Right", parallel to "Tabs to Left" ("Tabs links davon"). The verb is already in the parent menu.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +69,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 341 |
-| Strings | 16,984 |
-| Missing strings | 105 |
+| Strings | 17,089 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
@@ -62,21 +86,6 @@ _Nothing retired._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
-
-**105 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
 
 **Files present but identical to en-US:**
 
@@ -105,12 +114,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 749, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 750, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 115 | **straight** |
-| ellipsis | `char` 415 | **char** |
-| dash | `em` 19, `en` 69 | **en** |
+| ellipsis | `char` 416 | **char** |
+| dash | `em` 19, `en` 70 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4024 | **formal** |
+| register | `informal` 12, `formal` 4055 | **formal** |
 
 ---
 
@@ -120,14 +129,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (22)
+## 3. Open findings (27)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 13 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -184,11 +193,21 @@ _Nothing reported._
     - Source: `aria-label: Search engines and shortcuts`
     - Suggest: `Suchmaschinen und Suchverknüpfungen`
     - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
+    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Offene Tabs von Ihren anderen Geräten`
+    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
 - `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
     - Current: `Auf diesem Gerät synchronisierte Daten`
     - Source: `Data syncing on this device`
     - Suggest: `Datensynchronisation auf diesem Gerät`
     - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
+    - Current: `Tabs duplizieren`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Doppelte Tabs`
+    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
 - `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
     - Current: `teilweise ausgewählt`
     - Source: `partially checked`
@@ -212,6 +231,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
+    - Current: `{ -brand-short-name } Einstellungen`
+    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
+    - Suggest: `{ -brand-short-name }-Einstellungen`
+    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
 - `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
     - Current: `denselben Ursprung (origin) als das Dokument`
     - Source: `The scope URL must be same origin as document.`
@@ -230,6 +254,11 @@ _Nothing reported._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `empfehlen Sie { -brand-product-name }`
     - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
+- `close-tabs-to-the-end-alt` — `browser/browser/tabContextMenu.ftl` — The label adds a redundant "schließen" inside the "Close Multiple" submenu and doesn't match its sibling "Tabs links davon".
+    - Current: `Tabs rechts schließen`
+    - Source: `accesskey: i label: Tabs to Right`
+    - Suggest: `Tabs rechts davon`
+    - The source is "Tabs to Right", parallel to "Tabs to Left" ("Tabs links davon"). The verb is already in the parent menu.
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Lokalen Modus” but the string it names, `options-local-mode-label`, reads “Lokaler Modus”
     - Current: `Dieses Dokument kann auch über den "Lokalen Modus" der DevTools von "{ $url }" geladen werden, der im Einstellungsbereich aktiviert werden kann.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
@@ -240,6 +269,11 @@ _Nothing reported._
     - Source: `Log modules to diagnose IP Protection (VPN) issues`
     - Suggest: `Module zur Diagnose von Problemen mit dem IP-Schutz (VPN) protokollieren`
     - The en-US "Log modules to diagnose…" is a preset description, not an instruction to the user; sibling preset descriptions use an infinitive/noun phrase.
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
+    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
+    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
 
 ### E. Typography, punctuation & spacing
 

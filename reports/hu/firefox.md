@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 61 of 16,816 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `download-ui-confirm-quit-button` — `toolkit/toolkit/downloads/downloadUI.ftl` — The Windows variant of this button label ends in a question mark, but the en-US source and the other variant do not.
+    - Current: `[windows] Kilép a { -brand-short-name }ból?`
+    - Source: `{$sel_1 ->} [windows] Exit { -brand-short-name } [other] Quit { -brand-short-name }`
+    - Suggest: `[windows] Kilép a { -brand-short-name }ból`
+    - The en-US "Exit { -brand-short-name }" is a button label, not a question. The [other] variant correctly has no question mark, so the Windows variant is inconsistent and shows a question mark on a button.
+- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — Uses the informal form "Kezdj el", but the Hungarian locale addresses the user formally (Ön).
+    - Current: `Kezdj el böngészni`
+    - Source: `Browse to start blocking.`
+    - Suggest: `Kezdjen el böngészni`
+    - The hu Firefox strings address the user formally (Ön/magázás), as the onboarding strings in this batch do (e.g. "Állítsa be", "Importálja"). The informal imperative breaks that register.
+- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The idiom "do your thing" is translated as "tegye a dolgát", which means "do your duty/job", the opposite of what the developer comment describes.
+    - Current: `Menjen, és tegye a dolgát.`
+    - Source: `All set. Go do your thing.`
+    - Suggest: `Vágjon bele abba, ami érdekli.`
+    - The developer comment says "do your thing" means doing what you're interested in or good at, rather than what everyone else does. In Hungarian, "tegye a dolgát" means doing what is expected of you, so it reverses the intended nuance.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,816 |
+| Missing strings | 44 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +77,19 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
+**44 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 9
+- `browser/browser/newtab/onboarding.ftl` — 7
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 3
 - `browser/browser/tabbrowser.ftl` — 3
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
+- `browser/browser/preferences/preferences.ftl` — 2
+- `dom/dom/manifest.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +101,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `polish-double` 810, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 400, `ascii` 4 | **char** |
+| ellipsis | `char` 401, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 134 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -100,7 +113,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (272)
+## 3. Open findings (275)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -120,9 +133,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 128 |
-| 3 | Degraded language (grammar, spelling, terminology) | 88 |
-| 4 | Cosmetic (typography, spacing) | 26 |
+| 2 | Wrong content (says something other than the English) | 129 |
+| 3 | Degraded language (grammar, spelling, terminology) | 89 |
+| 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -469,6 +482,11 @@ _Also listed under their own category below._
     - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
     - Suggest: `Húzással vagy kattintással jelöljön ki egy területet, amelyet áthelyez egy mini ablakba.`
     - en-US: 'Drag or click to select an area to move to a Mini Window.' The selected area is what gets moved into the Mini Window. The Hungarian reads 'select the area, and move the mini window', which describes a different action.
+- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The idiom "do your thing" is translated as "tegye a dolgát", which means "do your duty/job", the opposite of what the developer comment describes.
+    - Current: `Menjen, és tegye a dolgát.`
+    - Source: `All set. Go do your thing.`
+    - Suggest: `Vágjon bele abba, ami érdekli.`
+    - The developer comment says "do your thing" means doing what you're interested in or good at, rather than what everyone else does. In Hungarian, "tegye a dolgát" means doing what is expected of you, so it reverses the intended nuance.
 - `onboarding-refresh-data-collection-link` — `browser/browser/newtab/onboarding.ftl` — "Manage" translated as "módosítása" (change) instead of "kezelése" (manage).
     - Current: `Adatgyűjtési beállítások módosítása`
     - Source: `Manage data collection settings`
@@ -910,6 +928,11 @@ _Also listed under their own category below._
     - Source: `Find out how`
     - Suggest: `Tudja meg, hogyan`
     - Hungarian requires a comma before a subordinating conjunction; the same file writes "Tudja meg, hogyan működik…" (newtab-privacy-modal-link).
+- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — Uses the informal form "Kezdj el", but the Hungarian locale addresses the user formally (Ön).
+    - Current: `Kezdj el böngészni`
+    - Source: `Browse to start blocking.`
+    - Suggest: `Kezdjen el böngészni`
+    - The hu Firefox strings address the user formally (Ön/magázás), as the onboarding strings in this batch do (e.g. "Állítsa be", "Importálja"). The informal imperative breaks that register.
 - `newtab-widget-section-feedback` — `browser/browser/newtab/newtab.ftl` — Missing comma before the subordinate clause.
     - Current: `Mondja el nekünk mit gondol`
     - Source: `Tell us what you think`
@@ -1160,12 +1183,7 @@ _Also listed under their own category below._
     - Source: `Certificate nickname already in use.`
     - Suggest: `A tanúsítvány neve már használatban van.`
     - en-US: “Certificate nickname already in use.” As written the string is a dangling conditional clause, not a statement.
-- `SEC_ERROR_OLD_KRL` — `security/manager/chrome/pipnss/nsserrors.properties` — Wrong article “Az” before “KRL”, and the “new” KRL is not identified.
-    - Current: `Az KRL régebbi mint a jelenlegi.`
-    - Source: `New KRL is not later than the current one.`
-    - Suggest: `Az új KRL nem újabb, mint a jelenlegi.`
-    - en-US: “New KRL is not later than the current one.” Hungarian uses “a” before the consonant-initial “KRL”, and the sentence needs a comma before “mint”.
-- _…and 14 more; see `state/` for the full list._
+- _…and 15 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1217,7 +1235,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 400 times against 4 ASCII runs.
+    - The tree uses … 401 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1247,20 +1265,25 @@ _Also listed under their own category below._
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 400 times against 4 ASCII runs.
+    - The tree uses … 401 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 400 times against 4 ASCII runs.
+    - The tree uses … 401 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 400 times against 4 ASCII runs.
+    - The tree uses … 401 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`
     - Suggest: `Egymást követő képkockák`
     - This is in the video frame statistics block, where the same file consistently uses "képkocka" (about-webrtc-dropped-frames-label, about-webrtc-frames, about-webrtc-first-frame-timestamp). "keret" means a frame/border, not a video frame.
+- `download-ui-confirm-quit-button` — `toolkit/toolkit/downloads/downloadUI.ftl` — The Windows variant of this button label ends in a question mark, but the en-US source and the other variant do not.
+    - Current: `[windows] Kilép a { -brand-short-name }ból?`
+    - Source: `{$sel_1 ->} [windows] Exit { -brand-short-name } [other] Quit { -brand-short-name }`
+    - Suggest: `[windows] Kilép a { -brand-short-name }ból`
+    - The en-US "Exit { -brand-short-name }" is a button label, not a question. The [other] variant correctly has no question mark, so the Windows variant is inconsistent and shows a question mark on a button.
 - `neterror-dns-not-found-offline-hint-reconnect` — `toolkit/toolkit/neterror/netError.ftl` — "Wi-Fi" written with an en dash instead of a hyphen.
     - Current: `kapcsolódjon újra a Wi–Fi-hez`
     - Source: `Disconnect and reconnect to Wi-Fi.`

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 105 of 16,860 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The few/many variants use the singular "an unsupported purpose" when the source's plural form means several purposes.
+    - Current: `[few] Элемент { $memberName } по индексу { $index } имеет неподдерживаемое назначение: { $purposes }.`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - Suggest: `[few] Элемент { $memberName } по индексу { $index } имеет неподдерживаемые назначения: { $purposes }.`
+    - $count is the number of unknown purposes. The en-US [other] says "unsupported purposes", but the Russian few/many variants repeat the singular form from [one]. The many variant has the same problem.
+- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — In the [one] variant, the participle does not agree with the feminine noun.
+    - Current: `[one] Выбрано { $count } вкладка`
+    - Source: `{$count ->} [one] { $count } tab selected [other] { $count } tabs selected`
+    - Suggest: `[one] Выбрана { $count } вкладка`
+    - With "1/21 вкладка" the predicate must agree in gender, so it should be «Выбрана». «Выбрано … вкладка» is ungrammatical.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" for a report-only policy is rendered as a plain future tense, "will block".
+    - Current: `Настройки страницы будут блокировать перенаправление`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Настройки страницы заблокировали бы перенаправление`
+    - A Report-Only policy does not block anything; it only reports what would be blocked. «будут блокировать» says the redirect will be blocked.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (the duplicate tabs to close) is translated as the verb "duplicate the tabs".
+    - Current: `Дублировать вкладки`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Дубликаты вкладок`
+    - The developer comment says this item is in the "Close Multiple" submenu and closes the duplicates of the selected tab. «Дублировать вкладки» is a command to duplicate tabs, which is the wrong action.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip treats "Open" as a command ("Open tabs!") instead of describing tabs that are open.
+    - Current: `Открывайте вкладки с других ваших устройств`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Открытые вкладки с других ваших устройств`
+    - The developer comment says "Open" here describes tabs that are open. The label gets this right («Открытые вкладки»), but the tooltip uses an imperative verb.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +69,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,860 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -57,28 +81,13 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 149 |
+| Access keys not in their label | 159 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,23 +95,23 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1073, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1074, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 403, `ascii` 5 | **char** |
-| dash | `em` 131, `en` 5 | **em** |
+| ellipsis | `char` 404, `ascii` 5 | **char** |
+| dash | `em` 132, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 966, `formal` 3255 | **formal** |
+| register | `informal` 977, `formal` 3294 | **formal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 149 strings** — 149 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-payment-methods-require-device-sign-in-checkbox`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2` …and 137 more
+- **accesskey — 159 strings** — 159 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-payment-methods-require-device-sign-in-checkbox`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2` …and 147 more
 
 ---
 
-## 3. Open findings (605)
+## 3. Open findings (610)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -117,8 +126,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 271 |
-| 3 | Degraded language (grammar, spelling, terminology) | 229 |
+| 2 | Wrong content (says something other than the English) | 275 |
+| 3 | Degraded language (grammar, spelling, terminology) | 230 |
 | 4 | Cosmetic (typography, spacing) | 61 |
 
 ### A. Functional, markup, variables & plurals
@@ -451,7 +460,7 @@ _Also listed under their own category below._
     - Current: `Добавить все вкладки…`
     - Source: `label: Bookmark All Tabs…`
     - Suggest: `Добавить все вкладки в закладки…`
-- _…and 215 more; see `state/` for the full list._
+- _…and 219 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -678,7 +687,7 @@ _Also listed under their own category below._
 - `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([one], [few]) — protections.ftl — gender and number are wrong and inconsistent with bar-tooltip-cookie in the same file
     - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
     - Suggest: `[one]`
-- _…and 86 more; see `state/` for the full list._
+- _…and 87 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -891,7 +900,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 403 times against 5 ASCII runs.
+    - The tree uses … 404 times against 5 ASCII runs.
 - `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
     - Current: `<b>{ $agentName }</b> чтобы контролировать`
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
@@ -942,7 +951,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 403 times against 5 ASCII runs.
+    - The tree uses … 404 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -975,7 +984,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 403 times against 5 ASCII runs.
+    - The tree uses … 404 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1046,7 +1055,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 403 times against 5 ASCII runs.
+    - The tree uses … 404 times against 5 ASCII runs.
 - _…and 1 more; see `state/` for the full list._
 
 ---

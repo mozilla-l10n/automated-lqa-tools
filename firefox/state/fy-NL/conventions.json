@@ -6,15 +6,15 @@
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 1516
+  "typographic": 1518
  },
  "dash": {
   "em": 12,
-  "en": 84
+  "en": 86
  },
  "ellipsis": {
   "ascii": 0,
-  "char": 401
+  "char": 402
  },
  "fullwidth": {
   "punctuation": 0
@@ -26,12 +26,12 @@
  "nbsp": {
   "before-punctuation": 2,
   "narrow": 0,
-  "space-before-punctuation": 7,
+  "space-before-punctuation": 6,
   "total": 4
  },
  "quotes": {
   "curly-double": 16,
-  "curly-single": 811,
+  "curly-single": 814,
   "straight-double": 26
  }
 }
