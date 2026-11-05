@@ -24,9 +24,13 @@
    "source": "Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.",
    "original": "Obvestila vam omogočajo izbrisati %1$sovo sejo z enim dotikom. Aplikacije vam ni potrebno niti odpreti niti videti, kaj je v brskalniku odprto.",
    "text": "Obvestila vam omogočajo izbrisati %1$sovo sejo z enim dotikom. Aplikacije vam ni treba niti odpreti niti videti, kaj je v brskalniku odprto.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375915,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223934",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -50,9 +54,13 @@
    "source": "Remove custom URLs",
    "original": "Odstrani URL po meri",
    "text": "Odstrani URL-je po meri",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375913,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223876",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -76,9 +84,13 @@
    "source": "Block cross-site cookies",
    "original": "Zavračaj spletne piškotke",
    "text": "Zavračaj piškotke med spletnimi mesti",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375914,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=236645",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-03",
@@ -102,9 +114,13 @@
    "source": "Yes please",
    "original": "Da!",
    "text": "Da, prosim",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 8510718,
+   "pontoon_url": "",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-03",
@@ -128,9 +144,13 @@
    "source": "Block potentially dangerous and deceptive sites",
    "original": "Zavrni morebitne nevarne in zavajajoče strani",
    "text": "Zavrni morebitno nevarne in zavajajoče strani",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375916,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224094",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -154,9 +174,13 @@
    "source": "As a private browser, we never save and cannot restore this tab.",
    "original": "Kot zaseben brskalnik nikoli ne shranimo vaših zavihkov in ga ne moremo obnoviti.",
    "text": "Kot zaseben brskalnik nikoli ne shranimo tega zavihka in ga ne moremo obnoviti.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375917,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223929",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
