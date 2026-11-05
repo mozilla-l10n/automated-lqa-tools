@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 139 of 16,860 |
+| **Strings reviewed this run** | 0 of 16,860 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,9 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — There is a half-width colon where zh-TW convention calls for a full-width colon.
-    - Current: `用途:`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `用途：`
-    - The locale uses full-width punctuation. The parallel string dom-manifest-image-unsupported-purposes uses '用途：', so this one is inconsistent.
-- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The singular variant uses the plural 「這些檔案」 (these files) for a single download.
-    - Current: `[1] 將無法繼續下載這些檔案。`
-    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
-    - Suggest: `[1] 將無法繼續下載此檔案。`
-    - The en-US [1] variant says "this download", but the translation copies the plural wording 「這些」 (these), so it no longer matches the source.
-- `change-password-not-set` — `security/manager/security/pippki/pippki.ftl` — Half-width parentheses are used where the locale uses full-width punctuation.
-    - Current: `(未設定)`
-    - Source: `value: (not set)`
-    - Suggest: `（未設定）`
-    - The locale convention is full-width punctuation, and the same file uses full-width parentheses in 「憑證機構（未命名）」.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — 'Duplicate Tabs' (tabs that are duplicates) is rendered as the action 'copy tabs'.
-    - Current: `複製分頁`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `重複的分頁`
-    - The developer comment says this item sits under 'Close Multiple' and closes the duplicate tabs of the selected tab. 複製分頁 reads as the command 'duplicate/copy tab', which is a different function.
-- `tab-context-add-tab-to-group` — `browser/browser/tabbrowser.ftl` — The plural variant uses the possessive 的 where it needs the measure word 個, so it reads 'add the tabs of N to group'.
-    - Current: `將 { $tabCount } 的分頁加入至群組`
-    - Source: `accesskey: G label: {$tabCount ->} [1] Add to Group [other] Add { $tabCount } Tabs to Group`
-    - Suggest: `將 { $tabCount } 個分頁加入至群組`
-    - The en-US is 'Add N Tabs to Group'. A number in Chinese needs the classifier 個, as in the sibling string 移動 { $tabCount } 個分頁到. With 的 the phrase is ungrammatical.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the noun phrase 'open tabs from your other devices' into the command 'open the tabs on your other devices'.
-    - Current: `開啟您其他裝置上的分頁`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `您其他裝置上開啟的分頁`
-    - The developer comment says 'Open' modifies the noun (tabs that are open). This tooltip describes what gets synced; it is not an action, but the zh-TW text reads as an instruction to open tabs.
-- `hnt-card-taskbar-tabs-primary-button` — `browser/browser/newtab/onboarding.ftl` — The button translates "taskbar" as 工具列 ("toolbar") instead of 工作列.
-    - Current: `將網站新增至工具列`
-    - Source: `Add sites to taskbar`
-    - Suggest: `將網站新增至工作列`
-    - The en-US says "Add sites to taskbar", meaning the Windows taskbar. The card's header (hnt-card-taskbar-tabs-header) and hnt-card-pin-body both use 工作列 for taskbar, while 工具列 means a browser toolbar. As written, the button names a different place than the header does.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

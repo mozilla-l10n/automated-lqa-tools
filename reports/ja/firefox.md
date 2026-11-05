@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,773 |
+| **Strings reviewed this run** | 0 of 16,773 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,24 +18,17 @@ Also for ja: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
-    - Current: `porpose`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `purpose`
-    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
 _Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (1)
+### ↩︎ Withdrawn — no longer considered a defect (0)
 
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — "sites that need extra privacy" mistranslated as "this site" and the meaning of the two options merged.
-    - Current: `このサイトで追加のプライバシー強化を使用するか VPN をオフにするルールを設定します。`
-    - Suggest: `追加のプライバシー保護が必要なサイトや VPN をオフにするサイトのルールを設定します。`
-    - en-US refers to plural "sites" generally, not "this site"; the description is about setting rules for sites needing extra privacy or with VPN turned off.
+_Nothing withdrawn._
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 

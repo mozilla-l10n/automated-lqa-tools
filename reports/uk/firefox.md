@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 15,393 |
+| **Strings reviewed this run** | 0 of 15,393 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for uk: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Прозорості Сертифікату" uses English-style capitalisation and a nonstandard genitive form of "сертифікат".
-    - Current: `Прозорості Сертифікату`
-    - Source: `This website complies with the Certificate Transparency policy.`
-    - Suggest: `прозорості сертифікатів`
-    - Ukrainian doesn't capitalise common nouns in a policy name. The standard genitive is "сертифіката", the form used elsewhere in these strings (e.g. "резервної копії сертифіката"). Certificate Transparency covers certificates in general, so the plural "сертифікатів" fits.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

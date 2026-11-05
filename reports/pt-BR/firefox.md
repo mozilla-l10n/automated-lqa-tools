@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — Missing preposition "de" in "antes ser transmitida".
-    - Current: `antes ser transmitida`
-    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
-    - Suggest: `antes de ser transmitida`
-    - Portuguese needs "antes de" before an infinitive. "antes ser" is ungrammatical.
-- `security-technical-encrypted-page` — `browser/browser/pageInfo.ftl` — Missing preposition "de" in "antes ser transmitida".
-    - Current: `antes ser transmitida`
-    - Source: `The page you are viewing was encrypted before being transmitted over the Internet.`
-    - Suggest: `antes de ser transmitida`
-    - Portuguese needs "antes de" before an infinitive. "antes ser" is ungrammatical.
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The verb is in the infinitive ("poder") where the conjugated "podem" is needed.
-    - Current: `Outras pessoas poder ver`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `Outras pessoas podem ver`
-    - The plural subject "Outras pessoas" needs the conjugated present-tense verb "podem". The infinitive is ungrammatical here.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

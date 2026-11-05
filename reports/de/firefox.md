@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `b4cac9524192` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 16,984 |
+| **Strings reviewed this run** | 0 of 16,984 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,31 +18,13 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here. The sibling string dom-manifest-id-not-same-origin correctly uses "wie".
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here.
+_No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `newtab-wallpaper-firefox-sky-light` — `browser/browser/newtab/newtab.ftl` — "Light hills" (helle Hügel) mistranslated as "Leichte Hügel" (lightweight hills).
-    - Current: `Leichte Hügel unter einem sanften Himmel`
-    - Source: `Light hills under a soft sky`
-    - Suggest: `Helle Hügel unter einem sanften Himmel`
-    - In this wallpaper set "light" means bright/hell (contrast with "dark purple hills"), not "leicht" (not heavy). Other strings in the same set correctly use "helle Hügel".
-- `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "Split" (PDFs aufteilen/teilen in Einzeldokumente) is rendered as "PDFs teilen", which in German primarily means "share".
-    - Current: `PDFs teilen, zusammenführen und mehr.`
-    - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
-    - Suggest: `PDFs aufteilen, zusammenführen und mehr.`
-    - en-US "Split, merge, and more" refers to splitting a PDF into parts; "teilen" reads as sharing, giving users a different feature claim.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

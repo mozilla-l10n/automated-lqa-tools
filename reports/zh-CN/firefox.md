@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 216 of 16,433 |
+| **Strings reviewed this run** | 0 of 16,433 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says not to enable the preference, when it should say to enable emulation of the "no preference" value.
-    - Current: `不启用减弱动态效果模拟的首选项`
-    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
-    - Suggest: `启用“无偏好”减弱动态效果模拟`
-    - en-US "Enable no preference for reduced motion emulation" means this option turns on emulation of prefers-reduced-motion: no-preference. The translation reads as "do not enable the preference of reduced motion emulation". That inverts the action and makes this option sound like the "No emulation" option.
-- `autocomplete-delete-form-history-entry2` — `toolkit/toolkit/main-window/autocomplete.ftl` — "form history" is rendered as plain "历史记录" (history), so the word "form" is lost.
-    - Current: `从历史记录删除`
-    - Source: `Delete { $entry } from form history`
-    - Suggest: `从表单历史记录中删除`
-    - The en-US and the developer comment both say the entry is removed from form history. Plain 历史记录 usually means browsing history, so screen reader users could misunderstand what is being deleted.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — "Loading URL" is a noun phrase (the URL that loads the tested URL), but it is translated as the progress message "正在加载 URL".
-    - Current: `正在加载 URL`
-    - Source: `Loading URL`
-    - Suggest: `加载方 URL`
-    - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

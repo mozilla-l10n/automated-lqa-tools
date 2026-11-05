@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 54 of 16,751 |
+| **Strings reviewed this run** | 0 of 16,751 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
-    - Current: `URL'ye`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `URL’ye`
-    - tr convention is the typographic apostrophe ’ (U+2019); sibling strings in the same file use “URL’si”.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

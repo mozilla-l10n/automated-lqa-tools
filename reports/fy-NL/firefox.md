@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 34 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,41 +18,13 @@ Also for fy-NL: [Firefox for Android](android.md) · [Focus for Android](focus_a
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — 'deselfe' is misspelled; the Frisian form is 'deselde'.
-    - Current: `deselfe`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `deselde`
-    - 'Deselde' is the correct Frisian word. The neighbouring strings use it, so 'deselfe' reads as a mix of Dutch and Frisian.
-- `security-technical-mixed-content` — `browser/browser/pageInfo.ftl` — Typo 'fersisere' should be 'fersifere' (encrypted).
-    - Current: `Foar in part fersisere ferbining`
-    - Source: `value: Connection Partially Encrypted`
-    - Suggest: `Foar in part fersifere ferbining`
-    - Everywhere else in this file, 'encrypted' is rendered as 'fersifere'. 'Fersisere' is a typo.
-- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — Missing circumflex: 'Unbetroubere' should be 'Ûnbetroubere'.
-    - Current: `Unbetroubere`
-    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `Ûnbetroubere`
-    - The Frisian negative prefix is written 'ûn-', with a circumflex, as in 'ûnjildige' elsewhere in this batch.
-- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — The verb uses the infinitive 'besjen' where the conjugated form 'besjogge' is needed.
-    - Current: `dy’t jo besjen wie`
-    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
-    - Suggest: `dy’t jo besjogge wie`
-    - The subject 'jo' needs a finite verb. The sibling strings correctly use 'dy’t jo besjogge'.
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The singular verb 'wurdt' does not agree with the plural noun 'gegevens'.
-    - Current: `útwiksele wurdt`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `útwiksele wurde`
-    - 'Gegevens' is plural, so the relative clause needs the plural 'wurde'.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
-    - Current: `Ferbinings-tasteanlist:`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The developer comment says explicitly: "Do not translate Connection-Allowlist."
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

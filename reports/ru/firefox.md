@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — There is a stray comma between the verb phrase and the adverbial «во время передачи».
-    - Current: `прочитает эту страницу, во время передачи`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `прочитает эту страницу во время передачи`
-    - Russian punctuation does not put a comma before an adverbial phrase like this one. The comma splits the phrase from the verb it modifies.
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — The manifest "member" is rendered as «участник» (a participant) rather than a property or key.
-    - Current: `Участника id`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `Свойство id`
-    - "Member" here means a JSON object member, i.e. a property. «Участник» means a person who takes part in something. Other strings in the same file (dom-manifest-invalid-type) use «свойство».
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — The manifest "member" is rendered as «участник» rather than «свойство».
-    - Current: `Источник участника id должен совпадать с источником участника start_url.`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `Источник свойства id должен совпадать с источником свойства start_url.`
-    - "Member" here means a JSON object property. Elsewhere in manifest.ftl it is translated «свойство», so «участник» is both the wrong word and inconsistent with the rest of the file.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,15 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-horoscopes-widget-menu-button` — `browser/browser/newtab/newtab.ftl` — Misspelling of "гороскопов".
-    - Current: `Настройки горскопов`
-    - Suggest: `Настройки гороскопов`
-    - "горскопов" is a typo; the correct Russian word is "гороскопов" (as used in newtab-custom-widget-horoscopes-toggle).
-- `newtab-picture-set-wallpaper` — `browser/browser/newtab/newtab.ftl` — newtab.ftl — a noun for an action button: Установка обоев → Установить обои (its own .aria-label already uses the verb)
-    - Current: `Установка обоев`
-    - Suggest: `Установить обои`
+_Nothing retired._
 
 ---
 

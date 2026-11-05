@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 138 of 17,090 |
+| **Strings reviewed this run** | 0 of 17,090 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
-    - Current: `L’id del membro`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `Il membro id`
-    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
-    - Current: `L’id del membro deve`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `Il membro id deve`
-    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
-- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
-    - Current: `L’ambito dell’URL`
-    - Source: `The scope URL is invalid.`
-    - Suggest: `L’URL dell’ambito`
-    - The en-US means the URL given for the scope. The Italian says the scope of a URL, which reverses the relationship.
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
-    - Current: `L’ambito dell’URL deve`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `L’URL dell’ambito deve`
-    - The en-US means the URL given for the scope. The Italian says the scope of a URL.
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "Repeated purpose(s)" is rendered as "more than one purpose".
-    - Current: `include più di uno scopo (“purpose”)`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `include scopi (“purpose”) ripetuti`
-    - The warning is about duplicated purpose values. Having more than one purpose is valid, so the Italian describes the wrong problem.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
