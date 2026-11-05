@@ -301,6 +301,240 @@
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336843",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_dialog_heading_required_permissions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_dialog_heading_required_permissions"
+    ]
+   },
+   "fids": [
+    "30fa0f78b6a1"
+   ],
+   "findings": [
+    "‘permissions’ is rendered as ‘machtigingen’ here but as ‘tastimmingen’ in the parallel optional-permissions heading."
+   ],
+   "source": "Required permissions:",
+   "original": "Fereaske machtigingen:",
+   "text": "Fereaske tastimmingen:",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_privacy_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_privacy_description_for_update"
+    ]
+   },
+   "fids": [
+    "6801ee5013e3"
+   ],
+   "findings": [
+    "\"modify\" rendered as \"oanpasse\" here but as \"bewurkje\" in the identical non-update string."
+   ],
+   "source": "Read and modify privacy settings.",
+   "original": "Privacyynstellingen lêze en oanpasse.",
+   "text": "Privacyynstellingen lêze en bewurkje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_contextmenu_snackbar_link_copied",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_contextmenu_snackbar_link_copied"
+    ]
+   },
+   "fids": [
+    "0ca24eb2f258"
+   ],
+   "findings": [
+    "\"Link\" is rendered as \"Koppeling\" (Dutch) here while the rest of the file consistently uses the Frisian \"Keppeling\"."
+   ],
+   "source": "Link copied to clipboard",
+   "original": "Koppeling nei klamboerd kopiearre",
+   "text": "Keppeling nei klamboerd kopiearre",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_sitepermissions_notification_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_sitepermissions_notification_title"
+    ]
+   },
+   "fids": [
+    "a3fb429550e2"
+   ],
+   "findings": [
+    "\"notifications\" is rendered as \"meldingen\" here but as \"notifikaasjes\" in the sibling notification-permission string on the same surface."
+   ],
+   "source": "Allow %1$s to send notifications?",
+   "original": "%1$s tastean om meldingen te ferstjoeren?",
+   "text": "%1$s tastean om notifikaasjes te ferstjoeren?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "credit_cards_warning_dialog_title_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "credit_cards_warning_dialog_title_2"
+    ]
+   },
+   "fids": [
+    "cbe01d66af75"
+   ],
+   "findings": [
+    "\"payment methods\" is rendered \"betelmetoaden\" here but \"betellingsmetoaden\" in the neighbouring credit card strings."
+   ],
+   "source": "Secure your saved payment methods",
+   "original": "Befeiligje jo bewarre betelmetoaden",
+   "text": "Befeiligje jo bewarre betellingsmetoaden",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "debug_drawer_region_tools_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "debug_drawer_region_tools_title"
+    ]
+   },
+   "fids": [
+    "ff2c618ee3fb"
+   ],
+   "findings": [
+    "\"Tools\" rendered as \"helpmiddelen\" here while the same debug-drawer surface uses \"ark\" elsewhere (CFR-ark, Add-ons-ark, Ark foar automatysk ynfoljen)."
+   ],
+   "source": "Region Tools",
+   "original": "Regiohelpmiddelen",
+   "text": "Regio-ark",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "extension_process_crash_dialog_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "extension_process_crash_dialog_message"
+    ]
+   },
+   "fids": [
+    "e18eb686cdb3"
+   ],
+   "findings": [
+    "\"extension(s)\" rendered as \"add-on(s)\" while the rest of the string uses \"útwreidingen\" for extensions."
+   ],
+   "source": "One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).\n\nExtensions won’t be restarted during your current session.\n\nRemoving or disabling extensions may fix this issue.",
+   "original": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de add-on(s) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
+   "text": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de útwreiding(en) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "ip_protection_settings_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "ip_protection_settings_description"
+    ]
+   },
+   "fids": [
+    "9bff08fec9f9"
+   ],
+   "findings": [
+    "\"more private\" rendered as \"persoanliker\" (more personal) instead of the privacy term used in the parallel string."
+   ],
+   "source": "Turn VPN on to make your browsing more private and harder to trace.",
+   "original": "Skeakelje VPN yn om jo navigaasje persoanliker en dreger te folgjen te meitsjen.",
+   "text": "Skeakelje VPN yn om jo navigaasje mear privee en dreger te folgjen te meitsjen.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_engine_selector_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_engine_selector_content_description"
+    ]
+   },
+   "fids": [
+    "43927cb27e48"
+   ],
+   "findings": [
+    "\"Search engine\" is rendered as \"sykmasjine\" here but \"sykmasine\" everywhere else in the same surface."
+   ],
+   "source": "%s: search engine selector",
+   "original": "%s: sykmasjineselektor",
+   "text": "%s: sykmasineselektor",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
   }
  ]
 }
