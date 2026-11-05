@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,245 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 72 |
 | Strings | 1,245 |
-| Missing strings | 735 |
+| Missing strings | 738 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 26 |
 | Files with no en-US counterpart | 0 |
@@ -59,18 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-**735 strings** are not translated yet, concentrated in:
+**738 strings** are not translated yet, concentrated in:
 
 - `ar/firefox-ios.xliff` — 150
 - `ar/firefox-ios.xliff` — 98
 - `ar/firefox-ios.xliff` — 81
 - `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
-- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 43
+- `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 44
 - `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 38
 - `Shared/Supporting Files/en-US.lproj/Translations.strings` — 31
 - `Shared/Supporting Files/en-US.lproj/Summarizer.strings` — 21
 - `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `ar/firefox-ios.xliff` — 14
+- `ar/firefox-ios.xliff` — 16
 - `ar/firefox-ios.xliff` — 14
 - `ar/firefox-ios.xliff` — 12
 

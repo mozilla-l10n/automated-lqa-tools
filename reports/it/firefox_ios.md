@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `101a216ab7b8` |
-| **Previous run** | 2026-11-03 @ `4006ca053edd` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
+| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,980 |
+| **Strings reviewed this run** | 3 of 1,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,21 @@ Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — `QuickAnswers.ContentView.NewQuestionButton.v161` uses a straight apostrophe
+    - Current: `Fai un'altra domanda`
+    - Source: `Ask a New Question`
+    - The tree uses ’ 76 times against 1 straight.
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — This string uses a straight apostrophe, but the locale convention is the typographic one (’).
+    - Current: `un'altra`
+    - Source: `Ask a New Question`
+    - Suggest: `un’altra`
+    - The Italian convention for this locale is the typographic apostrophe, and other strings in the batch already use it (e.g. dell’informativa).
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `VPN.Settings.DataLimit.AccessibilityValue.v161` — `it/firefox-ios.xliff` — "Il limite si azzera" says the monthly limit is set to zero, when it is the data used that resets each month.
-    - Current: `Il limite si azzera il primo giorno di ogni mese.`
-    - Source: `%1$@ of %2$@ gigabytes used. Resets on the first of every month.`
-    - Suggest: `Il conteggio si azzera il primo giorno di ogni mese.`
-    - The source "Resets on the first of every month" and the developer comment say the user's free monthly VPN data resets on the first of each month. That means the usage counter goes back to zero and the allowance renews. "Azzerare" means to set to zero, so "il limite si azzera" tells the user their limit becomes zero. That is the opposite of a fresh allowance. Better wording would make the counter…
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,7 +53,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,980 |
+| Strings | 1,983 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -59,7 +63,7 @@ _Nothing retired._
 | printf placeholder mismatches | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Typography deviations from this locale's own norm | 0 |
+| Typography deviations from this locale's own norm | 1 |
 
 ### Completeness
 
@@ -72,7 +76,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 75 | **typographic** |
+| apostrophe | `typographic` 76, `straight` 1 | **typographic** |
 | ellipsis | `char` 32 | **char** |
 | dash | `em` 1 | **em** |
 | register | `informal` 86, `formal` 4 | **informal** |
@@ -85,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
@@ -93,7 +97,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -113,7 +117,15 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — `QuickAnswers.ContentView.NewQuestionButton.v161` uses a straight apostrophe
+    - Current: `Fai un'altra domanda`
+    - Source: `Ask a New Question`
+    - The tree uses ’ 76 times against 1 straight.
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — This string uses a straight apostrophe, but the locale convention is the typographic one (’).
+    - Current: `un'altra`
+    - Source: `Ask a New Question`
+    - Suggest: `un’altra`
+    - The Italian convention for this locale is the typographic apostrophe, and other strings in the batch already use it (e.g. dell’informativa).
 
 ---
 
