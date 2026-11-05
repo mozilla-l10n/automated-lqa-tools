@@ -304,6 +304,58 @@
   },
   {
    "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_net_timeout_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_net_timeout_message"
+    ]
+   },
+   "fids": [
+    "656652da2ba7"
+   ],
+   "findings": [
+    "\"temporary outage\" is rendered as \"stroomûnderbrekking\" (power cut), changing the meaning."
+   ],
+   "source": "{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> }\n{ <ul> }\n{ <li> }Could the server be experiencing high demand or a temporary outage? Try again later.{ </li> }\n{ <li> }Are you unable to browse other sites? Check the device’s network connection.{ </li> }\n{ <li> }Is your device or network protected by a firewall or proxy? Incorrect settings can interfere with Web browsing.{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
+   "original": "<p>De opfrege website hat net op in ferbiningsfersyk antwurde en de browser wachtet net mear op in antwurd.</p>\n<ul>\n<li>Miskien ûnderfynt de server in hege fraach of in tydlike stroomûnderbrekking? Probearje it letter opnij.</li>\n<li>Kinne jo gjin oare websites besykje? Kontrolearje de netwurkferbining fan it apparaat.</li>\n<li>Wurdt jo apparaat of netwurk beskerme troch in firewall of proxy? Ferkearde ynstellingen kinne in goede wurking wylst it webbrowsen tsjin gean.</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
+   "text": "<p>De opfrege website hat net op in ferbiningsfersyk antwurde en de browser wachtet net mear op in antwurd.</p>\n<ul>\n<li>Miskien ûnderfynt de server in hege fraach of in tydlike ûnderbrekking? Probearje it letter opnij.</li>\n<li>Kinne jo gjin oare websites besykje? Kontrolearje de netwurkferbining fan it apparaat.</li>\n<li>Wurdt jo apparaat of netwurk beskerme troch in firewall of proxy? Ferkearde ynstellingen kinne in goede wurking wylst it webbrowsen tsjin gean.</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_safe_harmful_uri_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_safe_harmful_uri_message"
+    ]
+   },
+   "fids": [
+    "f61094f8f010"
+   ],
+   "findings": [
+    "\"potentially harmful site\" is rendered as \"fertochte side\" (suspicious site), duplicating the malware string instead of translating \"potentially harmful\"."
+   ],
+   "source": "{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }",
+   "original": "<p>De website op %1$s is rapportearre as in fertochte side en is blokkearre op basis fan jo befeiligingsfoarkarren.</p>",
+   "text": "<p>De website op %1$s is rapportearre as in mooglik skealike side en is blokkearre op basis fan jo befeiligingsfoarkarren.</p>",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "D",
    "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
    "string_id": "mozac_feature_addons_permissions_dialog_heading_required_permissions",
@@ -382,6 +434,58 @@
   },
   {
    "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_prompt_folder_upload_confirm_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_prompt_folder_upload_confirm_title"
+    ]
+   },
+   "fids": [
+    "fffa55b54004"
+   ],
+   "findings": [
+    "Plural \"files\" rendered as singular \"Bestân\"."
+   ],
+   "source": "Upload files?",
+   "original": "Bestân oplade?",
+   "text": "Bestannen oplade?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_readerview_font_size_increase_desc",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_readerview_font_size_increase_desc"
+    ]
+   },
+   "fids": [
+    "64a3c07aabf4"
+   ],
+   "findings": [
+    "\"Font size increase\" is rendered as \"Lettertype fergrutsje\" (enlarge font/typeface) instead of font size, inconsistent with the decrease counterpart."
+   ],
+   "source": "Font size increase",
+   "original": "Lettertype fergrutsje",
+   "text": "Lettergrutte fergrutsje",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "D",
    "file": "mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values/strings.xml",
    "string_id": "mozac_feature_sitepermissions_notification_title",
@@ -402,6 +506,162 @@
    "source": "Allow %1$s to send notifications?",
    "original": "%1$s tastean om meldingen te ferstjoeren?",
    "text": "%1$s tastean om notifikaasjes te ferstjoeren?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "addresses_eircode",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "addresses_eircode"
+    ]
+   },
+   "fids": [
+    "f5d959b9207f"
+   ],
+   "findings": [
+    "\"Eircode\" is a proper Irish postal-code system name and should not be translated as \"Eirkoade\"."
+   ],
+   "source": "Eircode",
+   "original": "Eirkoade",
+   "text": "Eircode",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automatic_translation_option_never_translate_summary_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automatic_translation_option_never_translate_summary_preference"
+    ]
+   },
+   "fids": [
+    "579bdf2f2414"
+   ],
+   "findings": [
+    "The \"never translate\" summary omits the negation and duplicates the \"offer to translate\" text."
+   ],
+   "source": "%1$s will never offer to translate sites in this language.",
+   "original": "%1$s sil oanbiede om websites yn dizze taal oer te setten.",
+   "text": "%1$s sil nea oanbiede om websites yn dizze taal oer te setten.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "bookmark_save_in_label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "bookmark_save_in_label"
+    ]
+   },
+   "fids": [
+    "76f5d6ec79fc"
+   ],
+   "findings": [
+    "\"Save in\" translated as \"Besparje yn\" (to economize/save money) instead of the storage sense used elsewhere."
+   ],
+   "source": "Save in",
+   "original": "Besparje yn",
+   "text": "Bewarje yn",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "close_tab_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "close_tab_title"
+    ]
+   },
+   "fids": [
+    "1ac562169bf5"
+   ],
+   "findings": [
+    "Singular \"Close tab %s\" is rendered as plural \"Ljepblêden\" (tabs)."
+   ],
+   "source": "Close tab %s",
+   "original": "Ljepblêden %s slute",
+   "text": "Ljepblêd %s slute",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "confirm_clear_permission_site",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "confirm_clear_permission_site"
+    ]
+   },
+   "fids": [
+    "3e1873570e44"
+   ],
+   "findings": [
+    "Singular \"this permission\" is rendered as \"alle tastimmingen\" (all permissions), duplicating the other, plural dialog."
+   ],
+   "source": "Are you sure that you want to clear this permission for this site?",
+   "original": "Binne jo wis dat jo alle tastimmingen foar dizze website wiskje wolle?",
+   "text": "Binne jo wis dat jo dizze tastimming foar dizze website wiskje wolle?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "create_collection_default_name",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "create_collection_default_name"
+    ]
+   },
+   "fids": [
+    "5ba6c1ae16d1"
+   ],
+   "findings": [
+    "Default collection name is pluralized: \"Kolleksjes %d\" instead of singular \"Kolleksje %d\"."
+   ],
+   "source": "Collection %d",
+   "original": "Kolleksjes %d",
+   "text": "Kolleksje %d",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
@@ -460,6 +720,58 @@
   },
   {
    "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "delete_language_all_languages_file_dialog_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "delete_language_all_languages_file_dialog_message"
+    ]
+   },
+   "fids": [
+    "5679027b0705"
+   ],
+   "findings": [
+    "\"If you delete all languages\" rendered as \"As jo dizze talen fuortsmite\" (if you delete these languages)."
+   ],
+   "source": "If you delete all languages, %1$s will download partial languages to your cache as you translate.",
+   "original": "As jo dizze talen fuortsmite, sil %1$s in part fan de talen nei jo buffer downloade wylst jo oersette.",
+   "text": "As jo alle talen fuortsmite, sil %1$s in part fan de talen nei jo buffer downloade wylst jo oersette.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "exit_fullscreen_with_back_button_short",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "exit_fullscreen_with_back_button_short"
+    ]
+   },
+   "fids": [
+    "c1564c3d2d6a"
+   ],
+   "findings": [
+    "The back-button variant was translated as if it were the gesture variant (\"press back\" rendered as \"press the back gesture\")."
+   ],
+   "source": "Drag from top & press back to exit",
+   "original": "Sleep fan de boppekant & druk it gebear werom om ôf te sluten",
+   "text": "Sleep fan de boppekant & druk op werom om ôf te sluten",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "D",
    "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
    "string_id": "extension_process_crash_dialog_message",
@@ -480,6 +792,58 @@
    "source": "One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).\n\nExtensions won’t be restarted during your current session.\n\nRemoving or disabling extensions may fix this issue.",
    "original": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de add-on(s) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
    "text": "Ien of mear útwreidingen wurkje net mear, wêrtroch jo systeem ynstabyl wurdt. It is %1$s net slagge om de útwreiding(en) opnij te starten.\n\nUtwreidingen sille net opnij starte wurden wylst jo aktuele sesje.\n\nIt fuortsmiten of útskeakeljen fan útwreidingen kin dit probleem oplosse.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "firefox_suggest_header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "firefox_suggest_header"
+    ]
+   },
+   "fids": [
+    "dcb3de16c678"
+   ],
+   "findings": [
+    "The brand name \"Firefox Suggest\" has been altered with a Frisian plural suffix."
+   ],
+   "source": "Firefox Suggest",
+   "original": "Firefox Suggestjes",
+   "text": "Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "homepage_shortcuts_show_all_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "homepage_shortcuts_show_all_content_description"
+    ]
+   },
+   "fids": [
+    "89e1f695ef0c"
+   ],
+   "findings": [
+    "\"shortcuts\" (fluchkeppelingen) rendered as \"fluchtoetsen\" (keyboard shortcuts)."
+   ],
+   "source": "Show all shortcuts",
+   "original": "Alle fluchtoetsen toane",
+   "text": "Alle fluchkeppelingen toane",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
@@ -512,6 +876,214 @@
   },
   {
    "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "likert_scale_option_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "likert_scale_option_3"
+    ]
+   },
+   "fids": [
+    "9e20eb02e6ce"
+   ],
+   "findings": [
+    "\"Neutral\" is rendered as \"Gemiddeld\" (average), not the neutral midpoint label."
+   ],
+   "source": "Neutral",
+   "original": "Gemiddeld",
+   "text": "Neutraal",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "microsurvey_homepage_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "microsurvey_homepage_title"
+    ]
+   },
+   "fids": [
+    "9d49585127f7"
+   ],
+   "findings": [
+    "The translation adds \"ûnderfining fan\" (experience of), which is not in the source."
+   ],
+   "source": "How satisfied are you with your Firefox homepage?",
+   "original": "Hoe tefreden binne jo mei jo ûnderfining fan de Firefox-Startside?",
+   "text": "Hoe tefreden binne jo mei jo Firefox-Startside?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "microsurvey_prompt_search_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "microsurvey_prompt_search_title"
+    ]
+   },
+   "fids": [
+    "f3bf6aad196c"
+   ],
+   "findings": [
+    "The translation drops \"search\", making the prompt about Firefox in general instead of search in Firefox."
+   ],
+   "source": "Help make search in Firefox better. It only takes a minute",
+   "original": "Help Firefox te ferbetterjen. It duorret mar in minút",
+   "text": "Help it sykjen yn Firefox te ferbetterjen. It duorret mar in minút",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body"
+    ]
+   },
+   "fids": [
+    "772d37737af9"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"marketingtechnologypartners\", adding a word not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
+   "original": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht. %1$s",
+   "text": "Diel mei Mozilla’s marketingpartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht. %1$s",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_redesign_set_default_browser_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_redesign_set_default_browser_body"
+    ]
+   },
+   "fids": [
+    "edb583bd2463"
+   ],
+   "findings": [
+    "The translation drops \"helps\", turning \"One tap helps stop…\" into \"With one tap you prevent…\" and losing the subject."
+   ],
+   "source": "One tap helps stop companies spying on your clicks.",
+   "original": "Mei ien tik foarkomme dat bedriuwen jo tikken bespionearje.",
+   "text": "Ien tik helpt foar te kommen dat bedriuwen jo klikken bespionearje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_gestures_swipe_toolbar_switch_tabs_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_gestures_swipe_toolbar_switch_tabs_2"
+    ]
+   },
+   "fids": [
+    "efcf10af756a"
+   ],
+   "findings": [
+    "\"address bar\" translated as \"arkbalke\" (toolbar) instead of \"adresbalke\"."
+   ],
+   "source": "Swipe address bar sideways to switch tabs",
+   "original": "De arkbalke op side feie om fan ljepblêd te wikseljen",
+   "text": "De adresbalke op side feie om fan ljepblêd te wikseljen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_search_address_bar_fx_suggest",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_search_address_bar_fx_suggest"
+    ]
+   },
+   "fids": [
+    "d2a422bbedcc"
+   ],
+   "findings": [
+    "\"Firefox Suggest\" brand name is translated as \"Firefox Suggestjes\"."
+   ],
+   "source": "Address bar - Firefox Suggest",
+   "original": "Adresbalke – Firefox Suggestjes",
+   "text": "Adresbalke – Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_search_learn_about_fx_suggest",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_search_learn_about_fx_suggest"
+    ]
+   },
+   "fids": [
+    "fe9a5ff4cdbe"
+   ],
+   "findings": [
+    "\"Firefox Suggest\" brand name is translated and inconsistently rendered."
+   ],
+   "source": "Learn more about Firefox Suggest",
+   "original": "Mear ynfo oer Firefox Suggestes",
+   "text": "Mear ynfo oer Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "D",
    "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
    "string_id": "search_engine_selector_content_description",
@@ -532,6 +1104,214 @@
    "source": "%s: search engine selector",
    "original": "%s: sykmasjineselektor",
    "text": "%s: sykmasineselektor",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_suggestions_onboarding_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_suggestions_onboarding_title"
+    ]
+   },
+   "fids": [
+    "cc5d96392a67"
+   ],
+   "findings": [
+    "\"private sessions\" is translated as \"priveefinsters\" (private windows)."
+   ],
+   "source": "Allow search suggestions in private sessions?",
+   "original": "Syksuggestjes tastean yn priveefinsters?",
+   "text": "Syksuggestjes tastean yn priveesesjes?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_manager_close_all_tabs_dialog_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_manager_close_all_tabs_dialog_body"
+    ]
+   },
+   "fids": [
+    "7a7d28b08876"
+   ],
+   "findings": [
+    "Dropped \"open\" from \"all open tabs\"."
+   ],
+   "source": "This will close all open tabs.",
+   "original": "Dit slút alle ljepblêden.",
+   "text": "Dit slút alle iepen ljepblêden.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_tray_close_tabs_banner_positive_button_text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_tray_close_tabs_banner_positive_button_text"
+    ]
+   },
+   "fids": [
+    "f780ab34e3b1"
+   ],
+   "findings": [
+    "\"View options\" is rendered as \"Byldopsjes\" (display/image options), not \"view the options\"."
+   ],
+   "source": "View options",
+   "original": "Byldopsjes",
+   "text": "Opsjes besjen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translation_option_bottom_sheet_switch_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translation_option_bottom_sheet_switch_description"
+    ]
+   },
+   "fids": [
+    "4bb19739842c"
+   ],
+   "findings": [
+    "\"Overrides offers to translate\" is rendered as \"Ignores translation offers\" instead of \"overrides\"."
+   ],
+   "source": "Overrides offers to translate",
+   "original": "Negearret oersetoanbiedingen",
+   "text": "Oerskriuwt oersetoanbiedingen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_error_failed",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_error_failed"
+    ]
+   },
+   "fids": [
+    "3acd32eb5851"
+   ],
+   "findings": [
+    "\"system uninstall prompt\" mistranslated as \"prompt for uninstalling the system\"."
+   ],
+   "source": "Failed to open the system uninstall prompt, please use the system uninstall action directly.",
+   "original": "It iepenjen fan de prompt foar it de-ynstallearjen fan it systeem is mislearre; brûk streekrjocht de aksje foar de-ynstallaasje fan it systeem.",
+   "text": "It iepenjen fan de systeemprompt foar de-ynstallaasje is mislearre; brûk streekrjocht de aksje foar de-ynstallaasje fan it systeem.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_option_1_v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_option_1_v2"
+    ]
+   },
+   "fids": [
+    "25c5e947590d"
+   ],
+   "findings": [
+    "Disjunction \"or\" translated as conjunction \"en\"."
+   ],
+   "source": "It’s slow or unreliable",
+   "original": "De browser is stadich en ûnbetrouber",
+   "text": "De browser is stadich of ûnbetrouber",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "unsubmitted_crashes_requested_by_devs_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "unsubmitted_crashes_requested_by_devs_dialog_title"
+    ]
+   },
+   "fids": [
+    "9c9f6eb4d617"
+   ],
+   "findings": [
+    "Plural \"these reports\" rendered as singular \"dit rapport\"."
+   ],
+   "source": "You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.",
+   "original": "Jo hawwe net-ferstjoerde ûngelokrapporten (%1$d) relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe %2$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
+   "text": "Jo hawwe net-ferstjoerde ûngelokrapporten (%1$d) relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe %2$s te ferbetterjen. As jo dizze notifikaasje slute, wurde dizze rapporten negearre.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_label_mandatory_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_label_mandatory_description"
+    ]
+   },
+   "fids": [
+    "397440548c4e"
+   ],
+   "findings": [
+    "“to help us investigate the issue” rendered as “so that we can investigate it”, dropping the help sense; inconsistent with the optional variant."
+   ],
+   "source": "Describe the problem in detail to help us investigate the issue",
+   "original": "Beskriuw it probleem yn detail, sadat wy it ûndersykje kinne",
+   "text": "Beskriuw it probleem yn detail om ús te helpen it te ûndersykjen",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
