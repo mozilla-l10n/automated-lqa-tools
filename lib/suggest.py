@@ -53,6 +53,7 @@ import urllib.parse
 import urllib.request
 import uuid
 from collections import Counter
+from dataclasses import replace
 from fnmatch import fnmatch
 from json import dumps
 
@@ -191,6 +192,12 @@ def _placeables(entry) -> Counter:
     A typography fix moves spaces and punctuation around these; it never
     adds, drops or rewrites one. Counted, not listed: reordering them is a
     legitimate edit in a right-to-left or verb-final language.
+
+    Options are compared by name, not position: their order means nothing
+    in Fluent or MF2, and moz.l10n's Fluent serializer writes named
+    arguments sorted. Keyed on the written order, every edited string with
+    `DATETIME($date, year: …, month: …)` read back from its work copy as a
+    changed placeholder, and refused its whole locale.
     """
     out: Counter = Counter()
     messages = [entry.value, *(entry.properties or {}).values()]
@@ -202,6 +209,11 @@ def _placeables(entry) -> Counter:
         for pattern in patterns:
             for part in pattern:
                 if isinstance(part, (Expression, Markup)):
+                    part = replace(
+                        part,
+                        options=dict(sorted(part.options.items())),
+                        attributes=dict(sorted(part.attributes.items())),
+                    )
                     out[_preview_part(part)] += 1
     return out
 

@@ -654,6 +654,32 @@ def run(suite) -> None:
         check("pontoon-rejected" not in text and "a person's own line" in text,
               "withdrawing a Pontoon dismissal leaves a person's line alone")
 
+    suite.section("A work copy's round trip is not a changed placeholder")
+    # moz.l10n writes Fluent named arguments sorted, so an edited string read
+    # back from its work copy has its options in a different order from the
+    # clone. Compared positionally, fy-NL's whole Firefox upload was refused
+    # over about-unloads-last-updated.
+    from moz.l10n.resource import serialize_resource
+    with tempfile.TemporaryDirectory() as tmp:
+        clone = os.path.join(tmp, "clone.ftl")
+        work = os.path.join(tmp, "work.ftl")
+        with open(clone, "w", encoding="utf-8") as fh:
+            fh.write('x = A { DATETIME($date, year: "numeric", month: "numeric", '
+                     'hour12: "false") } <b>b</b>\n')
+        res, _ = suggest._entries(clone)
+        with open(work, "w", encoding="utf-8") as fh:
+            fh.write("".join(serialize_resource(res)))
+        (_, before), = suggest._entries(clone)[1].items()
+        (_, after), = suggest._entries(work)[1].items()
+        check(suggest._placeables(before) == suggest._placeables(after),
+              "options written in another order are the same placeholder")
+        with open(work, "w", encoding="utf-8") as fh:
+            fh.write('x = A { DATETIME($date, year: "2-digit", month: "numeric", '
+                     'hour12: "false") } <b>b</b>\n')
+        (_, changed), = suggest._entries(work)[1].items()
+        check(suggest._placeables(before) != suggest._placeables(changed),
+              "but a changed option value still is a changed placeholder")
+
     suite.section("Local secrets fill gaps and never override the environment")
     import local_secrets
     with tempfile.TemporaryDirectory() as tmp:
