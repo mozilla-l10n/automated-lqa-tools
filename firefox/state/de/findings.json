@@ -2001,6 +2001,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "{ -brand-short-name } Einstellungen",
+  "dismissed_because": "",
+  "fid": "9a85f19a9e12",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "German spelling requires a hyphenated compound here (e.g. \"Firefox-Einstellungen\"), and the de locale uses that form elsewhere.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e95190f4",
+  "string_id": "sync-engine-settings2",
+  "suggest": "{ -brand-short-name }-Einstellungen",
+  "summary": "The compound of brand name and \"Einstellungen\" is missing its hyphen.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Öffnen Sie Tabs von Ihren anderen Geräten",
+  "dismissed_because": "",
+  "fid": "ba1ed00f58b0",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-11-05",
+  "impact": 2,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says \"Open\" modifies the noun (tabs that are open), so it is not an instruction to open tabs.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ca6d4f5c",
+  "string_id": "sync-engine-tabs2",
+  "suggest": "Offene Tabs von Ihren anderen Geräten",
+  "summary": "The tooltip turns the adjective \"Open\" into an imperative (\"Öffnen Sie Tabs\").",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Auf diesem Gerät synchronisierte Daten",
@@ -2105,6 +2153,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Tabs rechts schließen",
+  "dismissed_because": "",
+  "fid": "f2951ddda240",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source is \"Tabs to Right\", parallel to \"Tabs to Left\" (\"Tabs links davon\"). The verb is already in the parent menu.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "15355a9e",
+  "string_id": "close-tabs-to-the-end-alt",
+  "suggest": "Tabs rechts davon",
+  "summary": "The label adds a redundant \"schließen\" inside the \"Close Multiple\" submenu and doesn't match its sibling \"Tabs links davon\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "",
@@ -2130,6 +2202,30 @@
   "string_id": "duplicate-tabs2",
   "suggest": "",
   "summary": "duplicate-tabs2 (.label) — browser/browser/tabContextMenu.ftl:37 — menu label \"duplizieren\" → \"Duplizieren\" (cf. duplicate-tab2 line 31).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Tabs duplizieren",
+  "dismissed_because": "",
+  "fid": "413143d28fef",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-05",
+  "impact": 2,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this item closes duplicate tabs in the \"Close Multiple\" menu. \"Duplicate\" is an adjective here, but it was translated as a verb (to copy).",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "06c10ce7",
+  "string_id": "tab-context-close-duplicate-tabs-alt",
+  "suggest": "Doppelte Tabs",
+  "summary": "\"Tabs duplizieren\" means \"duplicate (copy) tabs\" instead of naming the duplicate tabs that get closed.",
   "suppressed_by": ""
  },
  {
@@ -2998,6 +3094,30 @@
   "string_id": "contentanalysis-slow-agent-dialog-body-dropped-text",
   "suggest": "",
   "summary": "DE: \"den von Ihnen gelöschten Text\" (= deleted) → \"…abgelegten/gezogenen Text\" (EN drag-and-drop \"dropped\").",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "1 Download abbrechen und { -brand-short-name } beenden?",
+  "dismissed_because": "",
+  "fid": "629d48854f35",
+  "file": "toolkit/toolkit/downloads/downloadUI.ftl",
+  "first_seen": "2026-11-05",
+  "impact": 3,
+  "last_seen": "2026-11-05",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US uses \"Stop\" in every variant, and the follow-up message says the download will be resumed. \"abbrechen\" means cancel, which contradicts that. The other macOS/Linux variants use \"stoppen\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "5496883a",
+  "string_id": "download-ui-confirm-quit-title",
+  "suggest": "1 Download stoppen und { -brand-short-name } beenden?",
+  "summary": "\"Stop\" is rendered as \"abbrechen\" (cancel) in one variant, while the other variants of the same message use \"anhalten\"/\"stoppen\".",
   "suppressed_by": ""
  },
  {

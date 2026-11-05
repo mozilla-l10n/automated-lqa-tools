@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,089 |
+| **Strings reviewed this run** | 5 of 17,089 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -91,7 +91,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 411 | **char** |
 | dash | `em` 45, `en` 9 | **em** |
 | nbsp | `total` 4078, `before-punctuation` 1789 | _mixed_ |
-| register | `formal` 2931 | **formal** |
+| register | `formal` 2930 | **formal** |
 
 ---
 

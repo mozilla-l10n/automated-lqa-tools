@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 15,393 |
 

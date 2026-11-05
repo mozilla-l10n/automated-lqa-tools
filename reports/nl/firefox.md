@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 12 of 16,815 |
+| **Strings reviewed this run** | 17 of 16,815 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,56 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — The preposition 'in' is missing before the @position-try rules.
+    - Current: `wordt niet ondersteund <strong>@position-try</strong>-regels`
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+    - Suggest: `wordt niet ondersteund in <strong>@position-try</strong>-regels`
+    - The en-US says 'is not supported in @position-try rules'. Without 'in', the Dutch sentence is ungrammatical.
+- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — The builder is given as 'Mozilla Firefox' when the source and comment say 'Mozilla'.
+    - Current: `door Mozilla Firefox gebouwde`
+    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
+    - Suggest: `door Mozilla gebouwde`
+    - The source and developer comment say the extension is built by Mozilla, the organization, and 'Mozilla' is hard-coded on purpose. 'Mozilla Firefox' is a product name, so it names the wrong builder.
+- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — The compound is missing the linking 's': it should be 'toepassingshandlers'.
+    - Current: `toepassinghandlers`
+    - Source: `Configure default application handlers.`
+    - Suggest: `toepassingshandlers`
+    - Compounds built on 'toepassing' take the linking s in Dutch, as in 'toepassingsprogramma'.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (11)
 
-_Nothing was fixed._
+- `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `Prevent the user from blocking third-party modules that get injected into the { -brand-short-name } process.`
+    - Suggest: `.message`
+- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `Configure default application handlers.`
+    - Suggest: `.message`
+- `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `Disable the feature enforcing a separate profile for each installation.`
+    - Suggest: `.message`
+- `home-prefs-weather-description` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
+    - Source: `Today’s forecast at a glance`
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — missing preposition and wrong final punctuation. Suggest: "… wordt niet ondersteund in <strong>@position-try</strong>-regels."
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+- `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.`
+    - Suggest: `.message`
+- `inactive-css-first-line-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `<strong>{ $property }</strong> is not supported on ::first-line pseudo-elements.`
+    - Suggest: `.message`
+- `pippki-reset-password-confirmation-message` — `security/manager/security/pippki/pippki.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `Your Primary Password has been reset.`
+    - Suggest: `.message`
+- `crashreporter-checkbox-send-report` — `toolkit/crashreporter/crashreporter.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `Tell { -vendor-short-name } about this crash so they can fix it.`
+    - Suggest: `.message`
+- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
+    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
+    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
+- `about-httpsonly-explanation-continue` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — stray space before the final period.
+    - Source: `If you continue, HTTPS-Only Mode will be turned off temporarily for this site.`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -100,15 +143,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (347)
+## 3. Open findings (339)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 9 |
 | 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 191 |
-| 4 | Cosmetic (typography, spacing) | 27 |
+| 3 | Degraded language (grammar, spelling, terminology) | 193 |
+| 4 | Cosmetic (typography, spacing) | 18 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -132,9 +175,6 @@ _Nothing reported._
     - Source: `Start a group`
 - `return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — double space around <img data-l10n-name="icon"/>.
     - Source: `Now let’s get you <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.`
-- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
-    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
-    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
 - `about-glean-profiler-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — both <q> items are literal Profiler UI labels; "Marker Chart" was kept but "Telemetry" was translated. Suggest: <q>Telemetry</q>
     - Current: `<q>`
     - Source: `To see a full view of all recorded metrics, you can use the { -profiler-brand-name }. First you must <a data-l10n-name="firefox-profiler-link">capture a performance profile</a>. Once you capture the profile, select <q>M…`
@@ -298,8 +338,6 @@ _Nothing reported._
     - Suggest: `"Aangepaste formatters"`
 - `options-netmonitor-body-limit-label` — `devtools/client/toolbox-options.ftl` — "body" dropped. Suggest: "Maximale grootte van verzoek- en antwoordtekst…"
     - Source: `Maximum request and response body size (set to 0 for unlimited):`
-- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — missing preposition and wrong final punctuation. Suggest: "… wordt niet ondersteund in <strong>@position-try</strong>-regels."
-    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
 - `inactive-css-column-span-fix` — `devtools/client/tooltips.ftl` — inactive-css-column-span-fix, inactive-css-column-span-fix-1 — client/tooltips.ftl — "voorlopende" is not a Dutch word and "ancestor" ≠ "preceding". Suggest: "…aan een van de bovenliggende elementen…"
     - Source: `Try adding <strong>column-count</strong> or <strong>column-width</strong> to one of its ancestor elements. { learn-more }`
 - `inactive-css-column-span-fix-1` — `devtools/client/tooltips.ftl` — inactive-css-column-span-fix, inactive-css-column-span-fix-1 — client/tooltips.ftl — "voorlopende" is not a Dutch word and "ancestor" ≠ "preceding". Suggest: "…aan een van de bovenliggende elementen…"
@@ -313,6 +351,8 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
+    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
 - _…and 61 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
@@ -407,6 +447,11 @@ _Nothing reported._
     - Suggest: `"Vooruitgaan"`
 - `places-view-sortby-name` — `browser/browser/places.ftl` — places-view-sortby-name, -url, -date, -visit-count, -date-added, -last-modified — places.ftl — "Sorteren op Naam / Locatie / Meest recente bezoek / Bezoekteller / Toegevoegd / Laatst gewijzigd" → lowercase after "op" (cf. places-sortby-name)
     - Source: `accesskey: N label: Sort by Name`
+- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — The compound is missing the linking 's': it should be 'toepassingshandlers'.
+    - Current: `toepassinghandlers`
+    - Source: `Configure default application handlers.`
+    - Suggest: `toepassingshandlers`
+    - Compounds built on 'toepassing' take the linking s in Dutch, as in 'toepassingsprogramma'.
 - `policy-SkipTermsOfUse2` — `browser/browser/policies/policies-descriptions.ftl` — "(Ge)bruiksvoorwaarden" capitalised differently in its two sentences.
     - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
 - `connection-proxy-option-wpad` — `browser/browser/preferences/connection.ftl` — "…voor Automatische detectie van webproxy…" → lowercase "automatische"
@@ -471,11 +516,12 @@ _Nothing reported._
 - `styleeditor-go-to-line` — `devtools/client/styleeditor.ftl` — imperative among infinitive menu labels. Current: "Spring naar regel…" → Suggest: "Naar regel springen…"
     - Source: `accesskey: J label: Jump to Line…`
     - Suggest: `"Naar regel springen…"`
-- `whypaused-get-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
-    - Source: `Paused on property get`
-- `whypaused-set-watchpoint` — `devtools/shared/debugger-paused-reasons.ftl` — devtools/shared/debugger-paused-reasons.ftl — the get/set pair is broken: one translated, one keeps the English keyword. Suggest: "Gepauzeerd bij property get" / "Gepauzeerd bij property set"
-    - Source: `Paused on property set`
-- _…and 24 more; see `state/` for the full list._
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — The preposition 'in' is missing before the @position-try rules.
+    - Current: `wordt niet ondersteund <strong>@position-try</strong>-regels`
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+    - Suggest: `wordt niet ondersteund in <strong>@position-try</strong>-regels`
+    - The en-US says 'is not supported in @position-try rules'. Without 'in', the Dutch sentence is ungrammatical.
+- _…and 26 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -658,35 +704,10 @@ _Nothing reported._
 - `mr2022-onboarding-no-mobile-download-cta-text` — `browser/browser/newtab/onboarding.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
     - Source: `Scan the QR code to get { -brand-product-name } for mobile.`
     - Suggest: `.message`
-- `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Prevent the user from blocking third-party modules that get injected into the { -brand-short-name } process.`
-    - Suggest: `.message`
-- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Configure default application handlers.`
-    - Suggest: `.message`
-- `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Disable the feature enforcing a separate profile for each installation.`
-    - Suggest: `.message`
-- `home-prefs-weather-description` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
-    - Source: `Today’s forecast at a glance`
 - `preferences-doh-radio-default` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `description: Use secure DNS in regions where it’s available label: Default`
 - `preferences-doh-radio-off` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
     - Source: `description: Use your default DNS resolver label: Off`
-- `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.`
-    - Suggest: `.message`
-- `inactive-css-first-line-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `<strong>{ $property }</strong> is not supported on ::first-line pseudo-elements.`
-    - Suggest: `.message`
-- `pippki-reset-password-confirmation-message` — `security/manager/security/pippki/pippki.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Your Primary Password has been reset.`
-    - Suggest: `.message`
-- `crashreporter-checkbox-send-report` — `toolkit/crashreporter/crashreporter.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Tell { -vendor-short-name } about this crash so they can fix it.`
-    - Suggest: `.message`
-- `about-httpsonly-explanation-continue` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — stray space before the final period.
-    - Source: `If you continue, HTTPS-Only Mode will be turned off temporarily for this site.`
 - `about-processes-total-memory-size-changed` — `toolkit/toolkit/about/aboutProcesses.ftl` — a space between the number and its unit in two of the three, none in the third. (The space is correct Dutch; the third should match.)
     - Source: `(value): { $total }{ $totalUnit } title: Evolution: { $deltaSign }{ $delta }{ $deltaUnit }`
 - `about-processes-total-memory-size-no-change` — `toolkit/toolkit/about/aboutProcesses.ftl` — a space between the number and its unit in two of the three, none in the third. (The space is correct Dutch; the third should match.)
@@ -735,8 +756,19 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (127)
+### Fixed to date (138)
 
+- `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
+- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
+- `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
+- `home-prefs-weather-description` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-05
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — fixed 2026-11-05
+- `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — fixed 2026-11-05
+- `inactive-css-first-line-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — fixed 2026-11-05
+- `pippki-reset-password-confirmation-message` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-05
+- `crashreporter-checkbox-send-report` — `toolkit/crashreporter/crashreporter.ftl` — fixed 2026-11-05
+- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-05
+- `about-httpsonly-explanation-continue` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — fixed 2026-11-05
 - `trustpanel-description-disabled` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `urlbar-placeholder-search-mode-other-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `urlbar-result-action-search-actions` — `browser/browser/browser.ftl` — fixed 2026-08-24
@@ -766,14 +798,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `clear-data-for-site-cookies` — `browser/browser/clearDataForSite.ftl` — fixed 2026-08-10
 - `sidebar-callout-survey-neutral` — `browser/browser/featureCallout.ftl` — fixed 2026-08-10
 - `ipprotection-feature-introduction-description-private-browsing` — `browser/browser/ipProtection.ftl` — fixed 2026-08-10
-- `fxa-adoption-addresses-backup-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `relay-50-masks-announcement-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `windows-10-eos-feature-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-10
-- `newtab-custom-wallpaper-title` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-privacy-message-info-2` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-privacy-message-promo-monitor-1` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-sports-widget-loading-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-wallpaper-abstract-purple-green` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `newtab-wallpaper-reset` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-10
-- `create-backup-screen-1-backup-body` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-10

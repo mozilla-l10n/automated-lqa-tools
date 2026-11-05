@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,433 |
+| **Strings reviewed this run** | 2 of 16,435 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,433 |
-| Missing strings | 427 |
+| Strings | 16,435 |
+| Missing strings | 425 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**427 strings** are not translated yet, concentrated in:
+**425 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
 - `browser/browser/newtab/onboarding.ftl` — 45
@@ -92,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 889, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 379, `ascii` 12 | **char** |
+| ellipsis | `char` 380, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
 | fullwidth | `punctuation` 8539 | **punctuation** |
 | register | `informal` 24, `formal` 1543 | **formal** |

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `83c84062ba97` |
+| **Previous run** | 2026-11-05 @ `181c4859abf3` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 18 of 16,773 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,773 |
+| Missing strings | 87 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
+**87 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/onboarding.ftl` — 22
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
 - `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
 - `browser/browser/preferences/preferences.ftl` — 5
 - `browser/browser/newtab/newtab.ftl` — 4
 - `browser/browser/tabbrowser.ftl` — 3
 - `dom/chrome/security/security.properties` — 2
 - `toolkit/toolkit/firefoxlabs/features.ftl` — 2
 - `browser/browser/genai.ftl` — 2
+- `dom/dom/manifest.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
