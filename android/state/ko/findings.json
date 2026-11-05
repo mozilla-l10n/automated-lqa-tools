@@ -1918,5 +1918,53 @@
   "suggest": "사기성 사이트",
   "summary": "\"deceptive\" is translated as \"suspicious\" (의심스러운).",
   "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "페널티",
+  "dismissed_because": "",
+  "fid": "c778f2b5f7fa",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-05",
+  "impact": 2,
+  "last_seen": "2026-11-05",
+  "locale": "ko",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says this is a match status shown during the penalties phase of a soccer match, i.e. the penalty shootout. In Korean that is \"승부차기\". \"페널티\" on its own does not name a match phase.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "effac21e",
+  "string_id": "wrex_widget_match_penalties",
+  "suggest": "승부차기",
+  "summary": "Match status \"Penalties\" (penalty shootout) rendered as \"페널티\", which usually means a single foul penalty rather than the shootout phase.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "팀 결정",
+  "dismissed_because": "",
+  "fid": "9739505423a5",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-05",
+  "impact": 2,
+  "last_seen": "2026-11-05",
+  "locale": "ko",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source and the developer comment both refer to a team that has not been determined yet. \"팀 결정\" reads as a noun meaning \"team decision\", and screen readers will announce that wrong meaning.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9af4b9aa",
+  "string_id": "wrex_widget_team_to_be_determined",
+  "suggest": "미정 팀",
+  "summary": "\"팀 결정\" (\"team decision/decide team\") drops the 'to be determined' meaning, so it no longer says the team is not yet known.",
+  "suppressed_by": ""
  }
 ]

@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,551 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 44 |
 | Strings | 2,551 |
-| Missing strings | 53 |
+| Missing strings | 75 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
+**75 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 30
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 54
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — 9
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — 7
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 5
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

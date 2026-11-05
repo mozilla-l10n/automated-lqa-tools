@@ -24,9 +24,13 @@
    "source": "{ <ul> }\n{ <li> }Web addresses are usually written like { <strong> }http://www.example.com/{ </strong> }{ </li> }\n{ <li> }Make sure that you’re using forward slashes (i.e. { <strong> }/{ </strong> }).{ </li> }\n{ </ul> }",
    "original": "<ul>\n<li>網址通常長得像 <strong>http://www.example.com/</strong>。</li>\n<li>請確定您用的是斜線（例: <strong>/</strong>）。</li>\n</ul>",
    "text": "<ul>\n<li>網址通常長得像 <strong>http://www.example.com/</strong>。</li>\n<li>請確定您用的是斜線（例：<strong>/</strong>）。</li>\n</ul>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379548,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196861",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -50,9 +54,14 @@
    "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
    "original": "您可以試著連線到其他裝置、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
    "text": "您可以試著改用其他裝置連線、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>the suggested translation is less accurate from the original approved translation</p>",
+   "dismissal": "mozac_browser_errorpages_no_internet_message_2 @ mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>the suggested translation is less accurate from the original approved translation</p>",
+   "pontoon_pk": 12379547,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=311415",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -76,9 +85,14 @@
    "source": "Enabled",
    "original": "啟用",
    "text": "已啟用",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>chinese does not have a past perfect tense, simply use 啟用 for indicators</p>",
+   "dismissal": "mozac_feature_addons_enabled @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>chinese does not have a past perfect tense, simply use 啟用 for indicators</p>",
+   "pontoon_pk": 12379551,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=207724",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -102,9 +116,14 @@
    "source": "Couldn’t load extensions. Try again later.",
    "original": "無法載入擴充套件，請稍候再試。",
    "text": "無法載入擴充套件，請稍後再試。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "dismissal": "mozac_feature_addons_failed_to_load_extensions @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12379553,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=332483",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -128,9 +147,14 @@
    "source": "Read and modify browser settings.",
    "original": "讀取或修改瀏覽器選項。",
    "text": "讀取或修改瀏覽器設定。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>",
+   "dismissal": "mozac_feature_addons_permissions_browser_settings_description_for_update @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>",
+   "pontoon_pk": 12379550,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321367",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -154,9 +178,14 @@
    "source": "%1$s, %2$d of %3$d",
    "original": "%1$s（第 %2$d 組，共 %3$d 組）",
    "text": "%1$s（第 %2$d 項，共 %3$d 項）",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>",
+   "dismissal": "mozac_feature_addons_permissions_content_description_item @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>",
+   "pontoon_pk": 12379549,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=300192",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -180,9 +209,13 @@
    "source": "Last attempt:",
    "original": "上次嘗試:",
    "text": "上次嘗試：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379554,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=208862",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -206,9 +239,13 @@
    "source": "Status:",
    "original": "狀態:",
    "text": "狀態：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379555,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=208865",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -232,9 +269,13 @@
    "source": "Reviews: %1$s",
    "original": "評價: %1$s",
    "text": "評價：%1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379552,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=214870",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -258,9 +299,13 @@
    "source": "VPN isn’t working right now so your location may be visible. Continue browsing without VPN, or choose tabs to close.",
    "original": "VPN 目前並未正常運作，您實際的所在位置可能會被人追蹤。可以不使用 VPN 繼續上網，或選擇要關閉哪些分頁。",
    "text": "VPN 目前並未正常運作，您實際的所在位置可能會被他人看見。可以不使用 VPN 繼續上網，或選擇要關閉哪些分頁。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379557,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml/?string=335530",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -284,9 +329,13 @@
    "source": "Secure your sensitive data",
    "original": "加密您的敏感資料",
    "text": "保護您的敏感資料",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379595,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=343563",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -310,9 +359,13 @@
    "source": "Xiaomi devices may need extra permissions to add shortcuts to the home screen. Please check your settings.",
    "original": "小米裝置可能需要更多權限才能捷徑到主畫面，請到設定中確認。",
    "text": "小米裝置可能需要更多權限才能新增捷徑到主畫面，請到設定中確認。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379562,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309940",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -336,9 +389,13 @@
    "source": "Remove from shortcuts",
    "original": "已從捷徑刪除",
    "text": "從捷徑移除",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379599,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=243553",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -362,9 +419,14 @@
    "source": "%1$s / %2$s • paused",
    "original": "%1$s / %2$s • 暫停下載",
    "text": "%1$s / %2$s • 已暫停",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct but original approved translation provides more context</p>",
+   "dismissal": "download_item_paused_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct but original approved translation provides more context</p>",
+   "pontoon_pk": 12379583,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=320501",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -388,9 +450,13 @@
    "source": "required",
    "original": "必填",
    "text": "必要",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379602,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292128",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -414,9 +480,13 @@
    "source": "Clears cookies set by redirects to known tracking websites.",
    "original": "清除已知網站在重新導向時所設定的 Cookie。",
    "text": "清除重新導向至已知追蹤網站時所設定的 Cookie。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>original approved string has better sentence structure; missed term for \"tracking\"</p>",
+   "pontoon_pk": 12379589,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=215269",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -440,9 +510,14 @@
    "source": "Remove",
    "original": "刪除",
    "text": "移除",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>",
+   "dismissal": "home_bookmarks_menu_item_remove @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>",
+   "pontoon_pk": 12379559,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=304588",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -466,9 +541,14 @@
    "source": "Recommended",
    "original": "推薦",
    "text": "建議",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>",
+   "dismissal": "ip_protection_location_recommended_label @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>",
+   "pontoon_pk": 12379594,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=332734",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -492,9 +572,13 @@
    "source": "Are you sure you want to delete this password?",
    "original": "你確定要刪除這筆密碼嗎？",
    "text": "您確定要刪除這筆密碼嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379600,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=300046",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -518,9 +602,13 @@
    "source": "Please help make Firefox better by taking a short survey.",
    "original": "請協助填寫簡短問卷，讓 Firefox 得更好。",
    "text": "請協助填寫簡短問卷，讓 Firefox 變得更好。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379586,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=276853",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -544,9 +632,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
    "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。%1$s",
    "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。%1$s",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379567,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327912",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -570,9 +662,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
    "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379568,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334024",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -596,9 +692,13 @@
    "source": "You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.",
    "original": "您可以透過讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。",
    "text": "您可以透過讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>shorter and more precise</p>",
+   "pontoon_pk": 12379569,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334026",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -622,9 +722,13 @@
    "source": "Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox.",
    "original": "讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。",
    "text": "讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>shorter and more precise</p>",
+   "pontoon_pk": 12379570,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334027",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -648,9 +752,13 @@
    "source": "Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s",
    "original": "讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。%1$s",
    "text": "讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。%1$s",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>shorter and more precise</p>",
+   "pontoon_pk": 12379571,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=334123",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -674,9 +782,13 @@
    "source": "You can help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s",
    "original": "您可以透過讓 Mozilla 知道您是從哪個平台下載 Firefox 的，幫助我們接觸更多人。%1$s",
    "text": "您可以透過讓 Mozilla 向您所來自的平台告知您正在使用 Firefox，幫助我們接觸更多人。%1$s",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>shorter and more precise</p>",
+   "pontoon_pk": 12379572,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335841",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -700,9 +812,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
    "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379566,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=316002",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -726,9 +842,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
    "original": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及是如何使用的，我們絕不會販售此資料。",
    "text": "與 Mozilla 的行銷夥伴分享您如何發現 Firefox 以及您正在使用 Firefox 的事實，我們絕不會販售此資料。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379565,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323545",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -752,9 +872,13 @@
    "source": "You can set %1$s to automatically open links in apps.",
    "original": "您可以設定使用 %1$s 自動開啟各應用程式當中的鏈結。",
    "text": "您可以設定使用 %1$s 自動在應用程式中開啟鏈結。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation; incorrect in suggestion too</p>",
+   "pontoon_pk": 12379560,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=242752",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -778,9 +902,13 @@
    "source": "To allow it:",
    "original": "若要允許:",
    "text": "若要允許：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379598,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=207692",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -804,9 +932,13 @@
    "source": "You control when to use secure DNS and choose your provider.",
    "original": "由您自行決定要使用哪個提供者的安全 DNS。",
    "text": "由您決定何時使用安全 DNS，並選擇提供者。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379591,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315818",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -830,9 +962,13 @@
    "source": "DNS over HTTPS",
    "original": "DNS Over HTTPS",
    "text": "DNS over HTTPS",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>style fix</p>",
+   "pontoon_pk": 12379590,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315803",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -856,9 +992,14 @@
    "source": "%s protects you from many of the most common trackers that follow what you do online.",
    "original": "%s 不讓常見的追蹤器記錄您的上網行為。",
    "text": "%s 不讓許多最常見的追蹤器記錄您的上網行為。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct but doesn't sound natural</p>",
+   "dismissal": "preference_enhanced_tracking_protection_explanation_2 @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct but doesn't sound natural</p>",
+   "pontoon_pk": 12379587,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=276208",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -882,9 +1023,13 @@
    "source": "Fill usernames and passwords in other apps on your device.",
    "original": "使用其他裝置中的其他應用程式時也自動填寫使用者名稱與密碼。",
    "text": "使用您裝置中的其他應用程式時也自動填寫使用者名稱與密碼。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379593,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=228804",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -908,9 +1053,13 @@
    "source": "Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.",
    "original": "與 Mozilla 的行銷技術夥伴分享您如何發現 Firefox 以及是如何使用。",
    "text": "與 Mozilla 的行銷技術夥伴分享您如何發現 Firefox 以及您正在使用 Firefox。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct, but changed sentence order</p>",
+   "pontoon_pk": 12379581,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315223",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -934,9 +1083,13 @@
    "source": "Autofill in %1$s",
    "original": "自動填入 %1$s 欄位",
    "text": "在 %1$s 中自動填入",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>did not match Terminology</p>",
+   "pontoon_pk": 12379592,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=228791",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -960,9 +1113,13 @@
    "source": "View tabs with your fingerprint, PIN, or face unlock. Turning this on also prevents screen capture and sharing.",
    "original": "使用您的指紋、PIN 碼或表情來解鎖，開啟此功能也可防止畫面截圖與分享。",
    "text": "使用您的指紋、PIN 碼或臉部解鎖來檢視分頁，開啟此功能也可防止畫面截圖與分享。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379574,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323713",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -986,9 +1143,13 @@
    "source": "Suggestions from search engines",
    "original": "來自其他搜尋引擎的建議",
    "text": "來自搜尋引擎的建議",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379573,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=286221",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1012,9 +1173,13 @@
    "source": "Data about your device, hardware configuration, and usage helps us improve Firefox features, performance, and stability.",
    "original": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們為所有使用者改進 Firefox 功能、效能與穩定度。",
    "text": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們改進 Firefox 功能、效能與穩定度。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379580,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=315221",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -1038,9 +1203,14 @@
    "source": "You’re protected.",
    "original": "讓我們保護您。",
    "text": "您已受到保護。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>",
+   "dismissal": "protection_panel_banner_protected_no_blocked_trackers_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>",
+   "pontoon_pk": 12379603,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335077",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -1064,9 +1234,13 @@
    "source": "Replace query with “%s”. Example:\nhttps://www.google.com/search?q=%s",
    "original": "用「%s」取代查詢關鍵字。例如:\nhttps://www.google.com/search?q=%s",
    "text": "用「%s」取代查詢關鍵字。例如：\nhttps://www.google.com/search?q=%s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379597,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=205607",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1090,9 +1264,13 @@
    "source": "Search string URL",
    "original": "搜尋字串",
    "text": "搜尋字串網址",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379596,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=281038",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1116,9 +1294,13 @@
    "source": "This time search in:",
    "original": "這次搜尋:",
    "text": "這次搜尋：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379563,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=265835",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1142,9 +1324,13 @@
    "source": "Complete these 3 steps to set up %1$s for the best browsing experience.",
    "original": "完成下列 3 步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
    "text": "完成下列 3 步驟，即可設定 %1$s 獲得最完整的上網體驗。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379606,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317211",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1168,9 +1354,13 @@
    "source": "Complete all 5 steps to set up %1$s for the best browsing experience.",
    "original": "完成全部 5 個步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
    "text": "完成全部 5 個步驟，即可設定 %1$s 獲得最完整的上網體驗。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379608,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317586",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1194,9 +1384,13 @@
    "source": "Complete all 6 steps to set up %1$s for the best browsing experience.",
    "original": "完成全部 6 個步驟，即可設定 %1$s 獲得最完整的的上網體驗。",
    "text": "完成全部 6 個步驟，即可設定 %1$s 獲得最完整的上網體驗。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379607,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317215",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1220,9 +1414,13 @@
    "source": "Shortcut URL",
    "original": "網址捷徑",
    "text": "捷徑網址",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379601,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309199",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1246,9 +1444,14 @@
    "source": "Send crash report",
    "original": "傳送錯誤報表",
    "text": "傳送錯誤報告",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>",
+   "dismissal": "startup_crash_positive @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>",
+   "pontoon_pk": 12379564,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323040",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -1272,9 +1475,13 @@
    "source": "Sync failed. Last synced: never",
    "original": "同步失敗。上次同步: 從未",
    "text": "同步失敗。上次同步：從未",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379577,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197530",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1298,9 +1505,13 @@
    "source": "Sync failed. Last success: %s",
    "original": "同步失敗。上次成功: %s",
    "text": "同步失敗。上次成功：%s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379576,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197577",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1324,9 +1535,13 @@
    "source": "Last synced: %s",
    "original": "上次同步: %s",
    "text": "上次同步：%s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379578,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197472",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1350,9 +1565,13 @@
    "source": "Last synced: never",
    "original": "上次同步: 從未",
    "text": "上次同步：從未",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12379579,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197499",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1376,9 +1595,13 @@
    "source": "Select tabs to create a group. They’re saved here, ready when you are.",
    "original": "選擇分頁來建立群組。他們儲存在此處，準備好即可使用。",
    "text": "選擇分頁來建立群組。它們儲存在此處，準備好即可使用。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379582,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=332724",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1402,9 +1625,13 @@
    "source": "Set open tabs to close automatically that haven’t been viewed in the past day, week, or month.",
    "original": "設定自動關閉超過幾天、幾週或幾個月都沒有閱讀過的開啟分頁。",
    "text": "設定自動關閉超過一天、一週或一個月都沒有閱讀過的開啟分頁。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation; suggestion is incorrect too</p>",
+   "pontoon_pk": 12379561,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=214852",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-04",
@@ -1428,9 +1655,14 @@
    "source": "You’re protected",
    "original": "讓我們保護您",
    "text": "您已受到保護",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>",
+   "dismissal": "trackers_blocked_empty @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>",
+   "pontoon_pk": 12379588,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=331321",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -1454,9 +1686,13 @@
    "source": "It’s slow or unreliable",
    "original": "網站速度很慢或不穩定",
    "text": "速度很慢或不穩定",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>over-translation in original approved translation</p>",
+   "pontoon_pk": 12379604,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336840",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1480,9 +1716,13 @@
    "source": "Videos, downloads, or media didn’t work",
    "original": "無法影片、下載檔案或播放媒體內容",
    "text": "無法播放影片、下載檔案或播放媒體內容",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379605,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336843",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1506,9 +1746,14 @@
    "source": "Send crash report",
    "original": "傳送錯誤報表",
    "text": "傳送錯誤報告",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>",
+   "dismissal": "unsubmitted_crash_dialog_positive_button @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>",
+   "pontoon_pk": 12379585,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=310402",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-04",
@@ -1532,9 +1777,13 @@
    "source": "Wallpaper Item: %1$s",
    "original": "背景圖項目: %1$s",
    "text": "背景圖項目：%1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>colon fix</p>",
+   "pontoon_pk": 12379575,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=237828",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-04",
@@ -1558,9 +1807,13 @@
    "source": "Site asked to turn off ad blocker",
    "original": "網站要求關閉廣告追蹤器",
    "text": "網站要求關閉廣告封鎖器",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-04",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>incorrect original approved translation</p>",
+   "pontoon_pk": 12379584,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=318912",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

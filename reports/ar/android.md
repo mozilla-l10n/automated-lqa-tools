@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,391 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 42 |
 | Strings | 2,391 |
-| Missing strings | 213 |
+| Missing strings | 235 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-**213 strings** are not translated yet, concentrated in:
+**235 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 141
+- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 165
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1

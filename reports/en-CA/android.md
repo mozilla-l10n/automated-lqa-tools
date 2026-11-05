@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,552 |
+| **Strings reviewed this run** | 50 of 2,602 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,552 |
-| Missing strings | 52 |
+| Strings | 2,602 |
+| Missing strings | 24 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**52 strings** are not translated yet, concentrated in:
+**24 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-en-rCA/strings.xml` — 29
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-en-rCA/strings.xml` — 9
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-en-rCA/strings.xml` — 7
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-en-rCA/strings.xml` — 7
+- `mozilla-mobile/fenix/app/src/main/res/values-en-rCA/strings.xml` — 24
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -81,7 +78,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 172 | **typographic** |
+| apostrophe | `typographic` 173 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 

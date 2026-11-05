@@ -204,9 +204,13 @@
    "source": "Extend developer tools to access your data in open tabs",
    "original": "Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts",
    "text": "Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373316,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206785",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -230,9 +234,13 @@
    "source": "Extend developer tools to access your data in open tabs.",
    "original": "Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts.",
    "text": "Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373318,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321388",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -541,9 +549,13 @@
    "source": "Cannot share to this app",
    "original": "Impossible de partager cette application",
    "text": "Impossible de partager avec cette application",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373326,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=203370",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",
@@ -597,9 +609,14 @@
    "source": "Set open tabs to close automatically that haven’t been viewed in the past day, week, or month.",
    "original": "Configurez les onglets ouverts pour qu’ils se ferment automatiquement lorsqu’ils n’ont pas été vus depuis les derniers jours, semaines ou mois.",
    "text": "Configurez les onglets ouverts pour qu’ils se ferment automatiquement lorsqu’ils n’ont pas été vus depuis un jour, une semaine ou un mois.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "dismissal": "tab_tray_close_tabs_banner_message @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373323,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=214852",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -653,9 +670,13 @@
    "source": "Try again",
    "original": "Veuillez réessayer",
    "text": "Réessayer",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373328,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292611",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",

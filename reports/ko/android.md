@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,604 |
+| **Strings reviewed this run** | 24 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ko: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `wrex_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "팀 결정" ("team decision/decide team") drops the 'to be determined' meaning, so it no longer says the team is not yet known.
+    - Current: `팀 결정`
+    - Source: `Team to be determined`
+    - Suggest: `미정 팀`
+    - The source and the developer comment both refer to a team that has not been determined yet. "팀 결정" reads as a noun meaning "team decision", and screen readers will announce that wrong meaning.
+- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Match status "Penalties" (penalty shootout) rendered as "페널티", which usually means a single foul penalty rather than the shootout phase.
+    - Current: `페널티`
+    - Source: `Penalties`
+    - Suggest: `승부차기`
+    - The developer comment says this is a match status shown during the penalties phase of a soccer match, i.e. the penalty shootout. In Korean that is "승부차기". "페널티" on its own does not name a match phase.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,604 |
+| Strings | 2,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,7 +94,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (82)
 
 > **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -125,7 +134,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 38 |
+| 2 | Wrong content (says something other than the English) | 40 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -335,6 +344,16 @@ _Nothing in this category._
     - Source: `This site is deceptive`
     - Suggest: `사기성 사이트`
     - The reason option says the site is deceptive. 의심스러운 means only 'suspicious', a weaker and different claim. Firefox usually uses 사기 wording for deceptive sites.
+- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Match status "Penalties" (penalty shootout) rendered as "페널티", which usually means a single foul penalty rather than the shootout phase.
+    - Current: `페널티`
+    - Source: `Penalties`
+    - Suggest: `승부차기`
+    - The developer comment says this is a match status shown during the penalties phase of a soccer match, i.e. the penalty shootout. In Korean that is "승부차기". "페널티" on its own does not name a match phase.
+- `wrex_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "팀 결정" ("team decision/decide team") drops the 'to be determined' meaning, so it no longer says the team is not yet known.
+    - Current: `팀 결정`
+    - Source: `Team to be determined`
+    - Suggest: `미정 팀`
+    - The source and the developer comment both refer to a team that has not been determined yet. "팀 결정" reads as a noun meaning "team decision", and screen readers will announce that wrong meaning.
 
 ### C. Grammar, agreement & spelling
 

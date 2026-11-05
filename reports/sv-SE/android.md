@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,604 |
+| **Strings reviewed this run** | 24 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,22 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
+    - Current: `matchningsinformation`
+    - Source: `Can’t show match info right now`
+    - Suggest: `matchinformation`
+    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
+- `ai_controls_listen_to_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Predicative adjective does not agree with the plural compound subject "Text och ljud".
+    - Current: `Text och ljud förblir privat.`
+    - Source: `Your device may use AI to read aloud. The text and audio stay private.`
+    - Suggest: `Text och ljud förblir privata.`
+    - A coordinated subject (text and audio) takes the plural form of the adjective in Swedish: "privata".
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The status for a match suspended after kick-off is translated as "Avstängd", which means switched off, or banned (as a player is), not a halted match.
-    - Current: `Avstängd`
-    - Source: `Suspended`
-    - Suggest: `Avbruten`
-    - The developer comment says this badge shows when a match is suspended after it has started. In Swedish sports usage, a halted match is "avbruten". "Avstängd" is used for a device that is turned off or a player who is banned, so the badge gives the wrong meaning.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,604 |
+| Strings | 2,626 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -89,14 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (73)
+## 3. Open findings (75)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 44 |
+| 2 | Wrong content (says something other than the English) | 30 |
+| 3 | Degraded language (grammar, spelling, terminology) | 45 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -250,6 +255,11 @@ _Nothing in this category._
     - Source: `Site asked to turn off ad blocker`
     - Suggest: `Webbplatsen bad mig stänga av annonsblockeraren`
     - Source: 'Site asked to turn off ad blocker' means the site made the request. 'ombeds' is passive ('is asked'), so it reverses who is asking whom.
+- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
+    - Current: `matchningsinformation`
+    - Source: `Can’t show match info right now`
+    - Suggest: `matchinformation`
+    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
 
 ### C. Grammar, agreement & spelling
 
@@ -313,6 +323,11 @@ _Nothing in this category._
     - Source: `Add to a tab group, collapse drag handle`
     - Suggest: `draghandtaget`
     - The Swedish word for drag handle is "draghandtag", but the g is missing here. Screen readers read this string aloud.
+- `ai_controls_listen_to_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Predicative adjective does not agree with the plural compound subject "Text och ljud".
+    - Current: `Text och ljud förblir privat.`
+    - Source: `Your device may use AI to read aloud. The text and audio stay private.`
+    - Suggest: `Text och ljud förblir privata.`
+    - A coordinated subject (text and audio) takes the plural form of the adjective in Swedish: "privata".
 - `automatic_translation_option_offer_to_translate_title_preference` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The radio label uses the infinitive "Erbjuda" where the imperative "Erbjud" is needed.
     - Current: `Erbjuda att översätta`
     - Source: `Offer to translate (default)`
