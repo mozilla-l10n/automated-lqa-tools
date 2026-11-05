@@ -134,6 +134,32 @@
   },
   {
    "date": "2026-11-05",
+   "group": "D",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "quickactions-cmd-manageai",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "quickactions-cmd-manageai"
+    ]
+   },
+   "fids": [
+    "74583b38d849"
+   ],
+   "findings": [
+    "Also: quickactions-cmd-manageai (browser/browser/browser.ftl) lists ai útskeakelje, ai útskeakelje, ai beheare — the first keyword is duplicated, so one of en-US's three search keywords (\"off ai\") is unreachable."
+   ],
+   "source": "disable ai, off ai, manage ai",
+   "original": "ai útskeakelje, ai útskeakelje, ai beheare",
+   "text": "ai útskeakelje, ai út, ai beheare",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "E",
    "file": "browser/browser/defaultBrowserNotification.ftl",
    "string_id": "default-browser-guidance-notification-info-page",
@@ -310,6 +336,32 @@
    "source": "Turn VPN off for a specific site and we’ll remember it next time you visit.",
    "original": "Skeakelje VPN út foar in spesifike website en wy sille dit ûnthâlde foar de folgjende kear  dat jo dizze besykje.",
    "text": "Skeakelje VPN út foar in spesifike website en wy sille dit ûnthâlde foar de folgjende kear dat jo dizze besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "taskbar-tabs-spotlight-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "taskbar-tabs-spotlight-subtitle"
+    ]
+   },
+   "fids": [
+    "626b2e54d4a8"
+   ],
+   "findings": [
+    "The English word \"streamlined\" was left untranslated inside an otherwise Frisian sentence."
+   ],
+   "source": "One click launches your most used sites in a streamlined window with all of { -brand-short-name }’s protections.",
+   "original": "Mei ien klik starte jo jo meast brûkte siden yn in streamlined finster mei alle beskermingen fan { -brand-short-name }.",
+   "text": "Mei ien klik starte jo jo meast brûkte siden yn in ferienfâldich finster mei alle beskermingen fan { -brand-short-name }.",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""

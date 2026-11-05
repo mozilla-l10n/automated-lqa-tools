@@ -22,3 +22,5 @@ sidebar-resize-splitter — Sidebar — sydbalke vs sidebalke: sidebar-resize-sp
 aboutdialog-update-downloading @ browser/browser/aboutDialog.ftl — auto-suggest (2026-11-05): The translation uses the en dash (–), which is the measured fy-NL house dash (en 95 vs em 26).
 popup-trigger-redirect-menuitem @ browser/browser/browser.ftl — auto-suggest (2026-11-05): Curly single quotes are the measured fy-NL quote convention (875 uses).
 add-exception-valid-long @ security/manager/security/certificates/certManager.ftl — auto-suggest (2026-11-05): The double space between sentences is also present in the en-US source.
+more-from-moz-solo-description @ browser/browser/preferences/moreFromMozilla.ftl — auto-suggest (2026-11-05): Here 'fergees' is used adverbially ('keppelje fergees'), where the uninflected form is correct; 'fergese' is the attributive inflected form.
+permissions-block-popups-exceptions-button4 @ browser/browser/preferences/preferences.ftl — auto-suggest (2026-11-05): This string already uses 'trochliedingen', which is the suggested term.
