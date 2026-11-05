@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 250 |
 
@@ -84,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (18)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 8 |
 | 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -125,16 +125,6 @@ _Nothing in this category._
     - Source: `Add shortcuts to your home screen`
     - Suggest: `Foegje fluchkeppelingen ta oan jo startskerm`
     - Source says "Add shortcuts to your home screen"; elsewhere (menu_add_to_shortcuts) "Shortcuts" is "fluchkeppelingen", while "keppelingen" means links.
-- `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Developer tools" is rendered as "Untwikkelersark" (singular/odd form) — should be the plural "Untwikkeldersark"/"Ark foar ûntwikkelers", and the word is misspelled without the initial circumflex.
-    - Current: `Untwikkelersark`
-    - Source: `Developer tools`
-    - Suggest: `Ûntwikkelersark`
-    - Frisian "ûntwikkelder/ûntwikkeler" starts with û (circumflex); "Untwikkelersark" is a spelling error.
-- `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Crashes" (app crash reports) is translated as "Ungelokken" (accidents), the wrong sense, and also lacks the Frisian accented initial letter.
-    - Current: `Ungelokken`
-    - Source: `Crashes`
-    - Suggest: `Fêstrinnen`
-    - The developer comment says this links to Focus crash reports; "ûngelokken" means real-world accidents, not software crashes. Also the initial U should be Û.
 - `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — The verb "blokkearje" (block) is missing, so the option reads "Only third-party cookies" instead of "Block 3rd-party cookies only".
     - Current: `Allinnich cookies fan tredden`
     - Source: `Block 3rd-party cookies only`
@@ -215,9 +205,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (2)
 
-_Nothing dismissed._
+- `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): The fy-NL tree writes capital Û as U (e.g. 'Untskoattelje'), and 'Untwikkelersark' is a correct compound for 'developer tools'.
+- `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Mozilla fy-NL uses 'ûngelok' (e.g. ûngelokrapporten) as the term for software crashes, and capital Û is written U in this tree (cf. 'Untskoattelje').
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
 

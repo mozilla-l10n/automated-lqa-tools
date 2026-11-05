@@ -5,8 +5,8 @@
   "strings": 2876
  },
  "apostrophe": {
-  "straight": 2,
-  "typographic": 702
+  "straight": 0,
+  "typographic": 701
  },
  "dash": {
   "em": 2,
@@ -33,7 +33,7 @@
   "guillemet": 23
  },
  "register": {
-  "formal": 451,
+  "formal": 452,
   "informal": 0
  }
 }

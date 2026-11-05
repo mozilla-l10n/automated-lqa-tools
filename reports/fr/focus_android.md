@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 250 |
 
@@ -72,11 +72,11 @@ The count includes Firefox for Android's strings for this locale, which the same
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 702, `straight` 2 | **typographic** |
+| apostrophe | `typographic` 701 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | nbsp | `total` 215, `before-punctuation` 145, `space-before-punctuation` 63 | _mixed_ |
-| register | `formal` 451 | **formal** |
+| register | `formal` 452 | **formal** |
 
 ---
 

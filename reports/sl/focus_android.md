@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 250 |
+| **Strings reviewed this run** | 0 of 250 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,38 +22,9 @@ Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 _No new findings._
 
-### ✅ Fixed since the last run (6)
+### ✅ Fixed since the last run (0)
 
-- `notification_browsing_session_channel_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "ni potrebno" should be "ni treba" in standard Slovenian.
-    - Current: `Aplikacije vam ni potrebno niti odpreti`
-    - Source: `Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.`
-    - Suggest: `Aplikacije vam ni treba niti odpreti`
-    - With an infinitive the correct impersonal construction is "ni treba"; "ni potrebno" is a well-known non-standard usage.
-- `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Plural "custom URLs" translated as singular.
-    - Current: `Odstrani URL po meri`
-    - Source: `Remove custom URLs`
-    - Suggest: `Odstrani URL-je po meri`
-    - Source is "Remove custom URLs" (plural, screen for removing multiple URLs); the target is singular.
-- `preference_privacy_should_block_cookies_cross_site_option` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Block cross-site cookies" is rendered as "Zavračaj spletne piškotke" (block web cookies), losing the "cross-site" qualifier.
-    - Current: `Zavračaj spletne piškotke`
-    - Source: `Block cross-site cookies`
-    - Suggest: `Zavračaj piškotke med spletnimi mesti`
-    - The source restricts blocking to cross-site cookies; "spletne piškotke" means simply "web cookies", i.e. all cookies, which is a different (and misleading) setting.
-- `preference_privacy_should_block_cookies_yes_option2` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Yes please" is translated as "Da!", dropping the polite "please" and adding an exclamation mark.
-    - Current: `Da!`
-    - Source: `Yes please`
-    - Suggest: `Da, prosim`
-    - The source is a polite option label paired with "No thanks" (translated "Ne, hvala"); the Slovenian loses the politeness marker and changes the punctuation.
-- `preference_safe_browsing_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — Adjective agreement error: "Zavrni morebitne nevarne" should be "morebiti nevarne", and the verb form is inconsistent with the other block-preference titles.
-    - Current: `Zavrni morebitne nevarne in zavajajoče strani`
-    - Source: `Block potentially dangerous and deceptive sites`
-    - Suggest: `Zavračaj morebitno nevarne in zavajajoče strani`
-    - "morebitne nevarne" stacks two adjectives ungrammatically; the intended sense is "potentially dangerous" ("morebiti/morebitno nevarne"). Other Block* titles use the imperfective "Zavračaj".
-- `tab_crash_report_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — The translation says "we never save your tabs" (plural) and then refers to "it", garbling the source's "we never save and cannot restore this tab".
-    - Current: `Kot zaseben brskalnik nikoli ne shranimo vaših zavihkov in ga ne moremo obnoviti.`
-    - Source: `As a private browser, we never save and cannot restore this tab.`
-    - Suggest: `Kot zasebni brskalnik tega zavihka nikoli ne shranimo in ga ne moremo obnoviti.`
-    - Source refers to a single tab ("this tab"); the target introduces "vaših zavihkov" (your tabs, plural) leaving the following singular pronoun "ga" without a matching antecedent.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
