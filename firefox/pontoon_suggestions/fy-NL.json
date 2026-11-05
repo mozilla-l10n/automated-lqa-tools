@@ -30,6 +30,32 @@
   },
   {
    "date": "2026-11-05",
+   "group": "A",
+   "file": "browser/browser/aboutUnloads.ftl",
+   "string_id": "about-unloads-last-updated",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutUnloads.ftl",
+    "key": [
+     "about-unloads-last-updated"
+    ]
+   },
+   "fids": [
+    "f3d96151d5e6"
+   ],
+   "findings": [
+    "Left in English: \"Last updated: …\""
+   ],
+   "source": "Last updated: { $date }",
+   "original": "Last updated: { DATETIME($date, day: \"numeric\", hour: \"numeric\", hour12: \"false\", minute: \"numeric\", month: \"numeric\", second: \"numeric\", year: \"numeric\") }",
+   "text": "Lêst bywurke: { DATETIME($date, day: \"numeric\", hour: \"numeric\", hour12: \"false\", minute: \"numeric\", month: \"numeric\", second: \"numeric\", year: \"numeric\") }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "E",
    "file": "browser/browser/appmenu.ftl",
    "string_id": "appmenuitem-monitor-description2",
@@ -1304,6 +1330,58 @@
   },
   {
    "date": "2026-11-05",
+   "group": "A",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-not-grid-or-flex-container-or-multicol-container-fix",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-not-grid-or-flex-container-or-multicol-container-fix"
+    ]
+   },
+   "fids": [
+    "418feb413be6"
+   ],
+   "findings": [
+    "CSS keyword garbled: colums:2 → columns:2"
+   ],
+   "source": "Try adding either <strong>display:grid</strong>, <strong>display:flex</strong>, or <strong>columns:2</strong>. { learn-more }",
+   "original": "Probearje <strong>display:grid</strong>, of <strong>display:flex</strong>, of <strong>colums:2</strong> ta te foegjen. { learn-more }",
+   "text": "Probearje <strong>display:grid</strong>, of <strong>display:flex</strong>, of <strong>columns:2</strong> ta te foegjen. { learn-more }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "A",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-ruby-element-fix",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-ruby-element-fix"
+    ]
+   },
+   "fids": [
+    "ff38d3814ec5"
+   ],
+   "findings": [
+    "CSS property translated inside <strong>: lettertypegrutte → font-size"
+   ],
+   "source": "Try changing the <strong>font-size</strong> of the ruby text. { learn-more }",
+   "original": "Probearje de <strong>lettertypegrutte</strong> fan de rubytekst te wizigjen. { learn-more }",
+   "text": "Probearje de <strong>font-size</strong> fan de rubytekst te wizigjen. { learn-more }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "E",
    "file": "dom/chrome/dom/dom.properties",
    "string_id": "SVGUseInlineEventHandlerWarning",
@@ -1616,6 +1694,32 @@
   },
   {
    "date": "2026-11-05",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-button-dictionary-link",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-button-dictionary-link"
+    ]
+   },
+   "fids": [
+    "2a7212c8b5f7"
+   ],
+   "findings": [
+    "Comment: \"Docs\" = documentation. Dokuminten → Dokumintaasje"
+   ],
+   "source": "Docs",
+   "original": "Dokuminten",
+   "text": "Dokumintaasje",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "E",
    "file": "toolkit/toolkit/about/aboutHttpsOnlyError.ftl",
    "string_id": "about-httpsonly-explanation-continue",
@@ -1720,6 +1824,32 @@
   },
   {
    "date": "2026-11-05",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "app-basics-update-dir",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "app-basics-update-dir"
+    ]
+   },
+   "fids": [
+    "b897321c37f4"
+   ],
+   "findings": [
+    "Comment says \"Update\" is a noun. Map fernije → Fernijingsmap (both variants)"
+   ],
+   "source": "{$sel_1 ->} [linux] Update Directory [other] Update Folder",
+   "original": "Map fernije",
+   "text": "Fernijingsmap",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
    "group": "E",
    "file": "toolkit/toolkit/about/aboutSupport.ftl",
    "string_id": "support-remote-experiments-see-about-studies",
@@ -1766,6 +1896,32 @@
    "source": "This page shows the most recent messages sent by Windows\nto the { -brand-short-name } browser windows. The\nbolded entry represents this window. Note that this page shows\nthe most recent messages at the time the page was loaded;\nto see current ones you will need to refresh the page.",
    "original": "Dizze side toant de meast resinte berjochten dy’t troch Windows ferstjoerd  binne\nnei de { -brand-short-name }-browserfinsters. De\nfetdrukte ynfier fertsjinwurdiget dit finster. Tink derom dat dizze side\nde meast resinte berjochten op it stuit dat de side laden waard toant;\nom de aktuele te sjen, moatte jo de side ferfarskje.",
    "text": "Dizze side toant de meast resinte berjochten dy’t troch Windows ferstjoerd binne\nnei de { -brand-short-name }-browserfinsters. De\nfetdrukte ynfier fertsjinwurdiget dit finster. Tink derom dat dizze side\nde meast resinte berjochten op it stuit dat de side laden waard toant;\nom de aktuele te sjen, moatte jo de side ferfarskje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "A",
+   "file": "toolkit/toolkit/about/url-classifier.ftl",
+   "string_id": "url-classifier-content-classifier-col-important",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/url-classifier.ftl",
+    "key": [
+     "url-classifier-content-classifier-col-important"
+    ]
+   },
+   "fids": [
+    "20676204dd7f"
+   ],
+   "findings": [
+    "Comment says \"Important\" must not be translated; currently Wichtich"
+   ],
+   "source": "Important",
+   "original": "Wichtich",
+   "text": "Important",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
@@ -1896,6 +2052,32 @@
    "source": "You can continue with your default DNS resolver. However, a third-party might be able to see what websites you visit.",
    "original": "Jo kinne trochgean mei jo standert DNS-resolver, in tredde partij kin lykwols mooglik sjen hokker websites jo besykje",
    "text": "Jo kinne trochgean mei jo standert DNS-resolver, in tredde partij kin lykwols mooglik sjen hokker websites jo besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-ocsp-bad-signature",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-ocsp-bad-signature"
+    ]
+   },
+   "fids": [
+    "a7af1de2b37f"
+   ],
+   "findings": [
+    "OCSP response left in English; the file uses OCSP-antwurd"
+   ],
+   "source": "OCSP response has an invalid signature.",
+   "original": "OCSP response hat in ynfalide ûndertekening.",
+   "text": "OCSP-antwurd hat in ynfalide ûndertekening.",
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
