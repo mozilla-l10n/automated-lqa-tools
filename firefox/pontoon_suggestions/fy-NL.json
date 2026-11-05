@@ -1,0 +1,1852 @@
+{
+ "project": "firefox",
+ "locale": "fy-NL",
+ "suggestions": [
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/aboutLogins.ftl",
+   "string_id": "about-logins-intro-import3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutLogins.ftl",
+    "key": [
+     "about-logins-intro-import3"
+    ]
+   },
+   "fids": [
+    "152dcdcb68bf"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Select the plus sign button above to add a password now. You can also <a data-l10n-name=\"import-browser-link\">import passwords from another browser</a> or <a data-l10n-name=\"import-file-link\">from a file</a>.",
+   "original": "Selektearje de knop mei it plusteken hjirboppe om daliks in wachtwurd ta te foegjen. Jo kinne ek <a data-l10n-name=\"import-browser-link\">wachtwurden út in oare browser</a> of  <a data-l10n-name=\"import-file-link\">út in bestân ymportearje</a>.",
+   "text": "Selektearje de knop mei it plusteken hjirboppe om daliks in wachtwurd ta te foegjen. Jo kinne ek <a data-l10n-name=\"import-browser-link\">wachtwurden út in oare browser</a> of <a data-l10n-name=\"import-file-link\">út in bestân ymportearje</a>.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "appmenuitem-monitor-description2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "appmenuitem-monitor-description2"
+    ]
+   },
+   "fids": [
+    "776eec6964c5"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "Get alerts about data breaches",
+   "original": "Untfang meldingen oer datalekken.",
+   "text": "Untfang meldingen oer datalekken",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "fxa-menu-sync-status-off",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "fxa-menu-sync-status-off"
+    ]
+   },
+   "fids": [
+    "db5d081ca101"
+   ],
+   "findings": [
+    "fxa-menu-sync-status-off (Syngronisaasje is Ut → … is út) · add-exception-expired-short (Alde Ynformaasje) · menu-tools-extensions-and-themes (Utwreidingen en Tema’s) · skip-troubleshoot-refresh-profile (sentence starts lowercase)."
+   ],
+   "source": "Sync is Off",
+   "original": "Syngronisaasje is Ut",
+   "text": "Syngronisaasje is út",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "profiler-popup-presets-networking-with-logs-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "profiler-popup-presets-networking-with-logs-description"
+    ]
+   },
+   "fids": [
+    "86026b5415d8"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Preset for investigating networking bugs in { -brand-shorter-name }, including networking logs. These logs may contain sensitive information such as the URLs you visit.",
+   "original": "Foarynstelling foar it ûndersykjen fan netwurkbugs yn { -brand-shorter-name }, ynklusyf netwurklochboeken. Dizze lochboeken kinne gefoelige ynformaasje befetsje, lykas de URL’s dy’t jo besykje",
+   "text": "Foarynstelling foar it ûndersykjen fan netwurkbugs yn { -brand-shorter-name }, ynklusyf netwurklochboeken. Dizze lochboeken kinne gefoelige ynformaasje befetsje, lykas de URL’s dy’t jo besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "filepicker-blocked-infobar",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "filepicker-blocked-infobar"
+    ]
+   },
+   "fids": [
+    "e17fe44d3698"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Your organization has blocked access to local files on this computer",
+   "original": "Jo organisaasje hat tagong ta lokale bestannen op dizze kompjûter blokkearre.",
+   "text": "Jo organisaasje hat tagong ta lokale bestannen op dizze kompjûter blokkearre",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/defaultBrowserNotification.ftl",
+   "string_id": "default-browser-guidance-notification-info-page",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/defaultBrowserNotification.ftl",
+    "key": [
+     "default-browser-guidance-notification-info-page"
+    ]
+   },
+   "fids": [
+    "e38cda08c263"
+   ],
+   "findings": [
+    "Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported."
+   ],
+   "source": "Show me",
+   "original": "Toane:",
+   "text": "Toane",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/editBookmarkOverlay.ftl",
+   "string_id": "bookmark-overlay-tags-empty-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/editBookmarkOverlay.ftl",
+    "key": [
+     "bookmark-overlay-tags-empty-description"
+    ]
+   },
+   "fids": [
+    "bc996213dddd"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "placeholder: Separate tags with commas",
+   "original": "Labels skiede troch komma’s.",
+   "text": "Labels skiede troch komma’s",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/firefoxRelay.ftl",
+   "string_id": "firefox-relay-and-fxa-popup-notification-second-sentence-with-domain-and-value-prop",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/firefoxRelay.ftl",
+    "key": [
+     "firefox-relay-and-fxa-popup-notification-second-sentence-with-domain-and-value-prop"
+    ]
+   },
+   "fids": [
+    "13811402f9d0"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "First, sign up or sign in to your account to use an email mask.",
+   "original": "Registrearje of meld jo earst oan by jo account om in e-mailmasker te brûken",
+   "text": "Registrearje of meld jo earst oan by jo account om in e-mailmasker te brûken.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/genai.ftl",
+   "string_id": "genai-chatbot-summarize-footer-generic-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/genai.ftl",
+    "key": [
+     "genai-chatbot-summarize-footer-generic-subtitle"
+    ]
+   },
+   "fids": [
+    "a80924c1c34e"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Add an AI chatbot to the { -brand-short-name } sidebar to quickly summarize pages.",
+   "original": "Foegje in AI-chatbot ta oan de  { -brand-short-name }-sydbalke om fluch siden gear te fetsjen.",
+   "text": "Foegje in AI-chatbot ta oan de { -brand-short-name }-sydbalke om fluch siden gear te fetsjen.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ip-protection-description-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ip-protection-description-1"
+    ]
+   },
+   "fids": [
+    "6c95ebb33aaa"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "description: Get extra privacy by hiding your location while browsing.\nlabel: Built-in VPN",
+   "original": "Untfang ekstra privacy troch jo lokaasje te ferstopjen wylst jo navigearje",
+   "text": "Untfang ekstra privacy troch jo lokaasje te ferstopjen wylst jo navigearje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-feature-introduction-link-text-privacy-3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-feature-introduction-link-text-privacy-3"
+    ]
+   },
+   "fids": [
+    "3724310865b8"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Get <a data-l10n-name=\"learn-more-vpn\">extra privacy</a> by choosing from multiple locations to hide where you browse.",
+   "original": "Untfang <a data-l10n-name=\"learn-more-vpn\">ekstra privacy</a> troch te kiezen út meardere lokaasjes  om te ferbergjen wêr’t jo sneupe.",
+   "text": "Untfang <a data-l10n-name=\"learn-more-vpn\">ekstra privacy</a> troch te kiezen út meardere lokaasjes om te ferbergjen wêr’t jo sneupe.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-site-settings-callout-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-site-settings-callout-subtitle"
+    ]
+   },
+   "fids": [
+    "fc81377e948f"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Turn VPN off for a specific site and we’ll remember it next time you visit.",
+   "original": "Skeakelje VPN út foar in spesifike website en wy sille dit ûnthâlde foar de folgjende kear  dat jo dizze besykje.",
+   "text": "Skeakelje VPN út foar in spesifike website en wy sille dit ûnthâlde foar de folgjende kear dat jo dizze besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "home-mode-choice-custom-srd",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "home-mode-choice-custom-srd"
+    ]
+   },
+   "fids": [
+    "9b603c7ce3ad"
+   ],
+   "findings": [
+    "Dropped where en-US has one: menu-help-share-ideas.label · home-mode-choice-custom.label · home-mode-choice-custom-srd.label · forms-master-pw-change.label."
+   ],
+   "source": "label: Custom URLs…",
+   "original": "Oanpaste URL’s",
+   "text": "Oanpaste URL’s…",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-widget-lists-menu-delete",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-widget-lists-menu-delete"
+    ]
+   },
+   "fids": [
+    "42406629024f"
+   ],
+   "findings": [
+    "website-remove-language-button.aria-label and .title (en-US: \"Remove { $locale }\") · newtab-widget-lists-menu-delete (en-US: \"Delete this list\") · delete-ca-cert-confirm (en-US is declarative)."
+   ],
+   "source": "Delete this list",
+   "original": "Dizze list fuortsmite?",
+   "text": "Dizze list fuortsmite",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "create-backup-screen-1-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "create-backup-screen-1-title"
+    ]
+   },
+   "fids": [
+    "4fc5febed87a"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Upgrading to Windows 11?\nLet’s back up your { -brand-product-name } data.",
+   "original": "Upgrade nei Windows 11?\nLitte wy in reservekopy fan jo { -brand-product-name }-gegevens meitjse",
+   "text": "Upgrade nei Windows 11?\nLitte wy in reservekopy fan jo { -brand-product-name }-gegevens meitjse.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr1-onboarding-theme-description-dark",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr1-onboarding-theme-description-dark"
+    ]
+   },
+   "fids": [
+    "e91fec8c0b06"
+   ],
+   "findings": [
+    "load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s)."
+   ],
+   "source": "aria-description: Use a dark theme for buttons,\nmenus, and windows.",
+   "original": "In donker tema brûke foar knoppen,\nmenu‘s en finsters.",
+   "text": "In donker tema brûke foar knoppen,\nmenu’s en finsters.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr1-onboarding-theme-description-light",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr1-onboarding-theme-description-light"
+    ]
+   },
+   "fids": [
+    "cea90ff596fd"
+   ],
+   "findings": [
+    "load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s)."
+   ],
+   "source": "aria-description: Use a light theme for buttons,\nmenus, and windows.",
+   "original": "In ljocht tema brûke foar knoppen,\nmenu‘s en finsters.",
+   "text": "In ljocht tema brûke foar knoppen,\nmenu’s en finsters.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr1-onboarding-theme-tooltip-dark",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr1-onboarding-theme-tooltip-dark"
+    ]
+   },
+   "fids": [
+    "299dd0c1cfb2"
+   ],
+   "findings": [
+    "load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s)."
+   ],
+   "source": "title: Use a dark theme for buttons,\nmenus, and windows.",
+   "original": "In donker tema brûke foar knoppen,\nmenu‘s en finsters.",
+   "text": "In donker tema brûke foar knoppen,\nmenu’s en finsters.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr1-onboarding-theme-tooltip-light",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr1-onboarding-theme-tooltip-light"
+    ]
+   },
+   "fids": [
+    "4886967210a3"
+   ],
+   "findings": [
+    "load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s)."
+   ],
+   "source": "title: Use a light theme for buttons,\nmenus, and windows.",
+   "original": "In ljocht tema brûke foar knoppen,\nmenu‘s en finsters.",
+   "text": "In ljocht tema brûke foar knoppen,\nmenu’s en finsters.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-gratitude-security-and-privacy-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-gratitude-security-and-privacy-subtitle"
+    ]
+   },
+   "fids": [
+    "fe5197fc20a9"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet safer and more accessible for everyone.",
+   "original": "Tank foar it brûken fan { -brand-short-name }, stipe troch de Mozilla Foundation. Mei jo stipe wurkje wy om it ynternet  foar elkenien feiliger en mear tagonklik te meitsjen.",
+   "text": "Tank foar it brûken fan { -brand-short-name }, stipe troch de Mozilla Foundation. Mei jo stipe wurkje wy om it ynternet foar elkenien feiliger en mear tagonklik te meitsjen.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-refresh-gratitude-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-refresh-gratitude-subtitle"
+    ]
+   },
+   "fids": [
+    "e65955862b93"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.",
+   "original": "Tank foar it brûken fan { -brand-short-name }, de iennige browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet  foar elkenien feiliger en mear tagonklik te meitsjen.",
+   "text": "Tank foar it brûken fan { -brand-short-name }, de iennige browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet foar elkenien feiliger en mear tagonklik te meitsjen.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-refresh-import-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-refresh-import-title"
+    ]
+   },
+   "fids": [
+    "dd9a30603b5a"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "Make { -brand-short-name } feel more like home",
+   "original": "Lit { -brand-short-name } mear as thús fiele.",
+   "text": "Lit { -brand-short-name } mear as thús fiele",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "page-info-frame",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "page-info-frame"
+    ]
+   },
+   "fids": [
+    "728f2fd73f7c"
+   ],
+   "findings": [
+    "page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —."
+   ],
+   "source": "title: Frame Info — { $website }",
+   "original": "Dielfinsterynfo - { $website }",
+   "text": "Dielfinsterynfo – { $website }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "page-info-page",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "page-info-page"
+    ]
+   },
+   "fids": [
+    "194714c4f7e6"
+   ],
+   "findings": [
+    "page-info-page, page-info-frame, tabbrowser-container-tab-title use - where the locale's house dash is – · tab-group-menu-closed-tab-group uses — while sibling tab-group strings use – · aboutdialog-update-downloading uses – while settings-update-downloading uses —."
+   ],
+   "source": "title: Page Info — { $website }",
+   "original": "Sydeynfo - { $website }",
+   "text": "Sydeynfo – { $website }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-BlockAboutProfiles2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-BlockAboutProfiles2"
+    ]
+   },
+   "fids": [
+    "a397779b9d36"
+   ],
+   "findings": [
+    "The parentheses around about:profiles are missing."
+   ],
+   "source": "Block access to About Profiles (about:profiles).",
+   "original": "Tagong ta Oer profilen about:profiles blokkearje.",
+   "text": "Tagong ta Oer profilen (about:profiles) blokkearje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-DefaultDownloadDirectory",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-DefaultDownloadDirectory"
+    ]
+   },
+   "fids": [
+    "592d97074558"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Set the default download directory.",
+   "original": "Standert downloadmap ynstellen",
+   "text": "Standert downloadmap ynstellen.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-DisableThirdPartyModuleBlocking",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-DisableThirdPartyModuleBlocking"
+    ]
+   },
+   "fids": [
+    "7e6cd5e1f55f"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Prevent the user from blocking third-party modules that get injected into the { -brand-short-name } process.",
+   "original": "Foarkomme dat de brûker modulen fan tredden dy’t yn it { -brand-short-name }-proses ynjektearre wurde blokkearret",
+   "text": "Foarkomme dat de brûker modulen fan tredden dy’t yn it { -brand-short-name }-proses ynjektearre wurde blokkearret.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-Handlers",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-Handlers"
+    ]
+   },
+   "fids": [
+    "428c25b48bb0"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Configure default application handlers.",
+   "original": "Standert tapassinghandlers konfigurearje",
+   "text": "Standert tapassinghandlers konfigurearje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-LegacyProfiles",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-LegacyProfiles"
+    ]
+   },
+   "fids": [
+    "cabdf2749f51"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Disable the feature enforcing a separate profile for each installation.",
+   "original": "Funksje om in ôfsûnderlik profyl foar elke ynstallaasje ôf te twingen útskeakelje",
+   "text": "Funksje om in ôfsûnderlik profyl foar elke ynstallaasje ôf te twingen útskeakelje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/languages.ftl",
+   "string_id": "languages-code-format",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/languages.ftl",
+    "key": [
+     "languages-code-format"
+    ]
+   },
+   "fids": [
+    "96e5684c764a"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "label: { $locale } [{ $code }]",
+   "original": "{ $locale }  [{ $code }]",
+   "text": "{ $locale } [{ $code }]",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "confirm-browser-language-change-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "confirm-browser-language-change-description"
+    ]
+   },
+   "fids": [
+    "f5a87fe7f6b6"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "Restart { -brand-short-name } to apply these changes",
+   "original": "Start { -brand-short-name } opnij om dizze wizigingen ta te passen.",
+   "text": "Start { -brand-short-name } opnij om dizze wizigingen ta te passen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "forms-master-pw-fips-desc",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "forms-master-pw-fips-desc"
+    ]
+   },
+   "fids": [
+    "720aca0a27ee"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "Password Change Failed",
+   "original": "Wachtwurdwiziging mislearre.",
+   "text": "Wachtwurdwiziging mislearre",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "home-mode-choice-custom",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "home-mode-choice-custom"
+    ]
+   },
+   "fids": [
+    "35e3c7a20883"
+   ],
+   "findings": [
+    "Dropped where en-US has one: menu-help-share-ideas.label · home-mode-choice-custom.label · home-mode-choice-custom-srd.label · forms-master-pw-change.label."
+   ],
+   "source": "label: Custom URLs…",
+   "original": "Oanpaste URL’s",
+   "text": "Oanpaste URL’s…",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "home-prefs-weather-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "home-prefs-weather-description"
+    ]
+   },
+   "fids": [
+    "ed8ecfbb21fc"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "Today’s forecast at a glance",
+   "original": "It waar fan hjoed yn ien eachopslach.",
+   "text": "It waar fan hjoed yn ien eachopslach",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "settings-translations-subpage-never-translate-sites-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "settings-translations-subpage-never-translate-sites-description"
+    ]
+   },
+   "fids": [
+    "b22b5c23b237"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "To add a site, open the <img data-l10n-name=\"translations-icon\"/> translation panel, select <img data-l10n-name=\"settings-icon\"/> translation settings, then choose “Never translate this site”",
+   "original": "Iepenje om in website ta te foegjen it <img data-l10n-name=\"translations-icon\"/>  oersetpaniel, selektearje <img data-l10n-name=\"settings-icon\"/> oersetynstellingen en kies ‘Dizze website nea oersette’",
+   "text": "Iepenje om in website ta te foegjen it <img data-l10n-name=\"translations-icon\"/> oersetpaniel, selektearje <img data-l10n-name=\"settings-icon\"/> oersetynstellingen en kies ‘Dizze website nea oersette’",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "website-remove-language-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "website-remove-language-button"
+    ]
+   },
+   "fids": [
+    "ab1c239b5f13"
+   ],
+   "findings": [
+    "website-remove-language-button.aria-label and .title (en-US: \"Remove { $locale }\") · newtab-widget-lists-menu-delete (en-US: \"Delete this list\") · delete-ca-cert-confirm (en-US is declarative)."
+   ],
+   "source": "aria-label: Remove { $locale }\ntitle: Remove { $locale }",
+   "original": "{ $locale } fuortsmite?",
+   "text": "{ $locale } fuortsmite",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "monitor-header-content-signed-in",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "monitor-header-content-signed-in"
+    ]
+   },
+   "fids": [
+    "9d9160029e68"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "{ -monitor-brand-name } warns you if your info has appeared in a known data breach.",
+   "original": "{ -monitor-brand-name } warskôget jo as jo gegevens foarkomme yn in bekend datalek",
+   "text": "{ -monitor-brand-name } warskôget jo as jo gegevens foarkomme yn in bekend datalek.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "protections-vpn-banner-content",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "protections-vpn-banner-content"
+    ]
+   },
+   "fids": [
+    "d94bb1d14b41"
+   ],
+   "findings": [
+    "`protections-vpn-banner-content` uses straight double quotes"
+   ],
+   "source": "Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”",
+   "original": "Probearje { -mozilla-vpn-brand-name } sûnder risiko en sjoch wêrom’t TechRadar seit: \"syn snelheid, ienfâld en lege moanlikse priis meitsje it de muoite wurdich om te probearjen.\"",
+   "text": "Probearje { -mozilla-vpn-brand-name } sûnder risiko en sjoch wêrom’t TechRadar seit: ‘syn snelheid, ienfâld en lege moanlikse priis meitsje it de muoite wurdich om te probearjen.’",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/search.ftl",
+   "string_id": "add-engine-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/search.ftl",
+    "key": [
+     "add-engine-button"
+    ]
+   },
+   "fids": [
+    "5cd2989d906d"
+   ],
+   "findings": [
+    "Added where en-US has none: add-engine-button (both search.ftl and preferences/addEngine.ftl) · quickactions-plugins · main-context-menu-bookmark-page.tooltiptext · main-context-menu-edit-bookmark.tooltiptext."
+   ],
+   "source": "Add Custom Engine",
+   "original": "Oanpaste sykmasine tafoegje…",
+   "text": "Oanpaste sykmasine tafoegje",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/spotlight.ftl",
+   "string_id": "spotlight-focus-promo-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/spotlight.ftl",
+    "key": [
+     "spotlight-focus-promo-subtitle"
+    ]
+   },
+   "fids": [
+    "fb66f19a2a65"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Scan the QR code to download.",
+   "original": "Scan de QR-koade om te downloaden",
+   "text": "Scan de QR-koade om te downloaden.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "browser/browser/webProtocolHandler.ftl",
+   "string_id": "protocolhandler-mailto-handler-set",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/webProtocolHandler.ftl",
+    "key": [
+     "protocolhandler-mailto-handler-set"
+    ]
+   },
+   "fids": [
+    "b16530cf83e8"
+   ],
+   "findings": [
+    "load-module-help-root-certs-module-name.value (‘Root Certs‘ — inherited from en-US) · protocolhandler-mailto-handler-set (dy‘t) · mr1-onboarding-theme-tooltip-light.title, mr1-onboarding-theme-description-light.aria-description, mr1-onboarding-theme-tooltip-dark.title, mr1-onboarding-theme-description-dark.aria-description (all menu‘s)."
+   ],
+   "source": "Use <strong>{ -brand-short-name } to open { $url }</strong> every time you click a link that opens your email?",
+   "original": "Hieltyd <strong>{ -brand-short-name } brûke om { $url } te iepenjen</strong> as jo op in keppeling klikke dy‘t jo e-mail iepenet?",
+   "text": "Hieltyd <strong>{ -brand-short-name } brûke om { $url } te iepenjen</strong> as jo op in keppeling klikke dy’t jo e-mail iepenet?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/perftools.ftl",
+   "string_id": "perftools-presets-networking-with-logs-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/perftools.ftl",
+    "key": [
+     "perftools-presets-networking-with-logs-description"
+    ]
+   },
+   "fids": [
+    "84fa11f91288"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Preset for investigating networking bugs in { -brand-shorter-name }, including networking logs. These logs may contain sensitive information such as the URLs you visit.",
+   "original": "Foarynstelling foar it ûndersykjen fan netwurkbugs yn { -brand-shorter-name }, ynklusyf netwurklochboeken. Dizze lochboeken kinne gefoelige ynformaasje befetsje, lykas de URL’s dy’t jo besykje",
+   "text": "Foarynstelling foar it ûndersykjen fan netwurkbugs yn { -brand-shorter-name }, ynklusyf netwurklochboeken. Dizze lochboeken kinne gefoelige ynformaasje befetsje, lykas de URL’s dy’t jo besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/storage.ftl",
+   "string_id": "storage-cookie-create-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/storage.ftl",
+    "key": [
+     "storage-cookie-create-error"
+    ]
+   },
+   "fids": [
+    "10aca764b836"
+   ],
+   "findings": [
+    "storage-cookie-create-error, storage-cookie-edit-error (devtools/client/storage.ftl) · toolbox-meatball-menu-pseudo-locale-accented (devtools/client/toolbox.ftl)."
+   ],
+   "source": "Cookie could not be created: “{ $errorString }”.",
+   "original": "Cookie koe net oanmakke wurde: ’{ $errorString }’.",
+   "text": "Cookie koe net oanmakke wurde: ‘{ $errorString }’.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/storage.ftl",
+   "string_id": "storage-cookie-edit-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/storage.ftl",
+    "key": [
+     "storage-cookie-edit-error"
+    ]
+   },
+   "fids": [
+    "c76d5176ef54"
+   ],
+   "findings": [
+    "storage-cookie-create-error, storage-cookie-edit-error (devtools/client/storage.ftl) · toolbox-meatball-menu-pseudo-locale-accented (devtools/client/toolbox.ftl)."
+   ],
+   "source": "Cookie could not be updated: “{ $errorString }”.",
+   "original": "Cookie koe net bywurke wurde: ’{ $errorString }’.",
+   "text": "Cookie koe net bywurke wurde: ‘{ $errorString }’.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/toolbox.ftl",
+   "string_id": "toolbox-meatball-menu-pseudo-locale-accented",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox.ftl",
+    "key": [
+     "toolbox-meatball-menu-pseudo-locale-accented"
+    ]
+   },
+   "fids": [
+    "8234321af76a"
+   ],
+   "findings": [
+    "storage-cookie-create-error, storage-cookie-edit-error (devtools/client/storage.ftl) · toolbox-meatball-menu-pseudo-locale-accented (devtools/client/toolbox.ftl)."
+   ],
+   "source": "Enable “accented” locale",
+   "original": "’Aksintuearre’ locale ynskeakelje",
+   "text": "‘Aksintuearre’ locale ynskeakelje",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-at-position-try-not-supported",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-at-position-try-not-supported"
+    ]
+   },
+   "fids": [
+    "e385098b8e8e"
+   ],
+   "findings": [
+    "Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported."
+   ],
+   "source": "<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.",
+   "original": "<strong>{ $property }</strong> wurdt net stipe yn de folgjende browsers <strong>@position-try</strong>-regels:",
+   "text": "<strong>{ $property }</strong> wurdt net stipe yn de folgjende browsers <strong>@position-try</strong>-regels.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-first-letter-pseudo-element-not-supported",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-first-letter-pseudo-element-not-supported"
+    ]
+   },
+   "fids": [
+    "4d333dbd4e1b"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.",
+   "original": "<strong>{ $property }</strong> wurdt net stipe op ::first-letter-pseudo-eleminten",
+   "text": "<strong>{ $property }</strong> wurdt net stipe op ::first-letter-pseudo-eleminten.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-first-line-pseudo-element-not-supported",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-first-line-pseudo-element-not-supported"
+    ]
+   },
+   "fids": [
+    "e796ebad6645"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "<strong>{ $property }</strong> is not supported on ::first-line pseudo-elements.",
+   "original": "<strong>{ $property }</strong> wurdt net stipe op ::first-line-pseudo-eleminten",
+   "text": "<strong>{ $property }</strong> wurdt net stipe op ::first-line-pseudo-eleminten.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "SVGUseInlineEventHandlerWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "SVGUseInlineEventHandlerWarning"
+    ]
+   },
+   "fids": [
+    "2a4948142284"
+   ],
+   "findings": [
+    "The space between 'SVG' and '<use>' is missing."
+   ],
+   "source": "Inline event handlers on elements cloned by an SVG <use> element are not interoperable. See https://github.com/w3c/svgwg/issues/1211",
+   "original": "Inline barren-handlers op eleminten dy’t in kloon binne troch in SVG<use>-elemint binne net ynteroperabel. Sjoch https://github.com/w3c/svgwg/issues/1211",
+   "text": "Inline barren-handlers op eleminten dy’t in kloon binne troch in SVG <use>-elemint binne net ynteroperabel. Sjoch https://github.com/w3c/svgwg/issues/1211",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "add-exception-invalid-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "add-exception-invalid-header"
+    ]
+   },
+   "fids": [
+    "018be7904b96"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "This site attempts to identify itself with invalid information.",
+   "original": "Dizze side probearret om himsels te identifisearjen mei foute ynformaasje",
+   "text": "Dizze side probearret om himsels te identifisearjen mei foute ynformaasje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "delete-ca-cert-confirm",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "delete-ca-cert-confirm"
+    ]
+   },
+   "fids": [
+    "3615a52748bc"
+   ],
+   "findings": [
+    "website-remove-language-button.aria-label and .title (en-US: \"Remove { $locale }\") · newtab-widget-lists-menu-delete (en-US: \"Delete this list\") · delete-ca-cert-confirm (en-US is declarative)."
+   ],
+   "source": "You have requested to delete these CA certificates. For built-in certificates all trust will be removed, which has the same effect. Are you sure you want to delete or distrust?",
+   "original": "Jo hawwe frege om dizze CA-sertifikaten fuort te smiten? Foar ynboude sertifikaten sil alle fertrouwen fuortsmiten wurde, wat itselde effekt hat. Binne jo wis dat jo fuortsmite of net fertroue wolle?",
+   "text": "Jo hawwe frege om dizze CA-sertifikaten fuort te smiten. Foar ynboude sertifikaten sil alle fertrouwen fuortsmiten wurde, wat itselde effekt hat. Binne jo wis dat jo fuortsmite of net fertroue wolle?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "security/manager/security/pippki/pippki.ftl",
+   "string_id": "pippki-reset-password-confirmation-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/pippki/pippki.ftl",
+    "key": [
+     "pippki-reset-password-confirmation-message"
+    ]
+   },
+   "fids": [
+    "5b0b1745d878"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Your Primary Password has been reset.",
+   "original": "Jo haadwachtwurd is opnij ynsteld",
+   "text": "Jo haadwachtwurd is opnij ynsteld.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "security/manager/security/pippki/pippki.ftl",
+   "string_id": "set-password-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/pippki/pippki.ftl",
+    "key": [
+     "set-password-message"
+    ]
+   },
+   "fids": [
+    "c3bdeaef53f9"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "The certificate backup password you set here protects the backup file that you are about to create. You must set this password to proceed with the backup.",
+   "original": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reserverkopybestân dat jo op it punt stean te meitsjen.  Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
+   "text": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reserverkopybestân dat jo op it punt stean te meitsjen. Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "security/manager/security/pippki/pippki.ftl",
+   "string_id": "set-password-reminder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/pippki/pippki.ftl",
+    "key": [
+     "set-password-reminder"
+    ]
+   },
+   "fids": [
+    "d174e3623c3d"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Important: If you forget your certificate backup password, you will not be able to restore this backup later. Please record it in a safe location.",
+   "original": "Wichtich: as jo jo wachtwurd foar de reservekopy fan it sertifikaat ferjitte, kinne jo dizze reservekopy letter net ferhelpe.  Bewarje it op in feilich plak.",
+   "text": "Wichtich: as jo jo wachtwurd foar de reservekopy fan it sertifikaat ferjitte, kinne jo dizze reservekopy letter net ferhelpe. Bewarje it op in feilich plak.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/crashreporter/aboutcrashes.ftl",
+   "string_id": "delete-unsubmitted-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/crashreporter/aboutcrashes.ftl",
+    "key": [
+     "delete-unsubmitted-description"
+    ]
+   },
+   "fids": [
+    "babfe3942470"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "This will delete all unsubmitted crash reports and cannot be undone.",
+   "original": "Dit sil alle net-ferstjoerde ûngelokrapporten fuortsmite en kin net ûngedien makke wurde",
+   "text": "Dit sil alle net-ferstjoerde ûngelokrapporten fuortsmite en kin net ûngedien makke wurde.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/crashreporter/crashreporter.ftl",
+   "string_id": "crashreporter-checkbox-send-report",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/crashreporter/crashreporter.ftl",
+    "key": [
+     "crashreporter-checkbox-send-report"
+    ]
+   },
+   "fids": [
+    "b437c801a0a0"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "Tell { -vendor-short-name } about this crash so they can fix it.",
+   "original": "{ -vendor-short-name } fan dit ûngelok op de hichte stelle, sadat se dit ferhelpe kinne",
+   "text": "{ -vendor-short-name } fan dit ûngelok op de hichte stelle, sadat se dit ferhelpe kinne.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "addon-badge-line4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "addon-badge-line4"
+    ]
+   },
+   "fids": [
+    "0df09dabd907"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "title: Official extension built by Mozilla. Meets security and performance standards",
+   "original": "Offisjele troch Mozilla Firefox boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen.",
+   "text": "Offisjele troch Mozilla Firefox boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "addon-badge-recommended4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "addon-badge-recommended4"
+    ]
+   },
+   "fids": [
+    "bdb1c28625fb"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "title: Firefox only recommends extensions that meet standards for security and performance",
+   "original": "Firefox rekommandearret allinnich útwreidingen oan dy’t oan noarms foar befeiliging en prestaasjes foldogge.",
+   "text": "Firefox rekommandearret allinnich útwreidingen oan dy’t oan noarms foar befeiliging en prestaasjes foldogge",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "detail-rating",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "detail-rating"
+    ]
+   },
+   "fids": [
+    "1cfc99b84655"
+   ],
+   "findings": [
+    "Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported."
+   ],
+   "source": "value: Rating",
+   "original": "Wurdearring:",
+   "text": "Wurdearring",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "private-browsing-description2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "private-browsing-description2"
+    ]
+   },
+   "fids": [
+    "ef4de90f836a"
+   ],
+   "findings": [
+    "appmenuitem-monitor-description2 · bookmark-overlay-tags-empty-description.placeholder · choose-language-description · confirm-browser-language-change-description · download-always-ask-where2.label · home-prefs-weather-description · forms-master-pw-fips-desc · preferences-doh-status-item-not-active.message · preferences-doh-status-item-not-active-local.message · onboarding-refresh-import-title ·…"
+   ],
+   "source": "{ -brand-short-name } is changing how extensions work in private browsing. Any new extensions you add to\n{ -brand-short-name } won’t run by default in Private Windows. Unless you allow it in settings, the\nextension won’t work while private browsing, and won’t have access to your online activities\nthere. We’ve made this change to keep your private browsing private.\n<label data-l10n-name=\"private-browsing-learn-more\">Learn how to manage extension settings</label>",
+   "original": "{ -brand-short-name } wizigt de manier wêrop útwreidingen yn priveenavigaasje wurkje. Nije útwreidingen dy’t jo oan\n{ -brand-short-name } tafoegje, wurkje standert net yn priveefinsters. Utsein jo dit tastean yn de ynstellingen, wurket\nde útwreiding net yn priveenavigaasje, en hat dizze dêryn gjin tagong ta jo online-aktiviteiten.\nDizze wiziging is oanbrocht om jo priveenavigaasje privee te hâlden.\n<label data-l10n-name=\"private-browsing-learn-more\">Mear ynfo oer it behearen fan útwreidingen-ynstellingen.</label>",
+   "text": "{ -brand-short-name } wizigt de manier wêrop útwreidingen yn priveenavigaasje wurkje. Nije útwreidingen dy’t jo oan\n{ -brand-short-name } tafoegje, wurkje standert net yn priveefinsters. Utsein jo dit tastean yn de ynstellingen, wurket\nde útwreiding net yn priveenavigaasje, en hat dizze dêryn gjin tagong ta jo online-aktiviteiten.\nDizze wiziging is oanbrocht om jo priveenavigaasje privee te hâlden.\n<label data-l10n-name=\"private-browsing-learn-more\">Mear ynfo oer it behearen fan útwreidingen-ynstellingen</label>",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutHttpsOnlyError.ftl",
+   "string_id": "about-httpsonly-explanation-continue",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutHttpsOnlyError.ftl",
+    "key": [
+     "about-httpsonly-explanation-continue"
+    ]
+   },
+   "fids": [
+    "65cebab4a6d4"
+   ],
+   "findings": [
+    "ipprotection-locations-subview-promo.message (mear as300) · support-remote-experiments-see-about-studies (missing space before the placeable) · about-logging-unknown-error (bard :) · download-ui-confirm-quit-cancel-downloads-mac (stopje ,) · about-httpsonly-explanation-continue (útskeakele .) · experimental-features-custom-wallpaper-description (Nij-ljepblêdside .) · plus the 47 doubled-space str…"
+   ],
+   "source": "If you continue, HTTPS-Only Mode will be turned off temporarily for this site.",
+   "original": "As jo trochgean, wurdt de Allinnich-HTTPS-modus foar dizze website tydlik útskeakele .",
+   "text": "As jo trochgean, wurdt de Allinnich-HTTPS-modus foar dizze website tydlik útskeakele.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutLogging.ftl",
+   "string_id": "about-logging-preset-web-compat-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutLogging.ftl",
+    "key": [
+     "about-logging-preset-web-compat-description"
+    ]
+   },
+   "fids": [
+    "c0a7f178f937"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "Log modules to diagnose web compatibility issues",
+   "original": "Logboekmodulen om webkompatibiliteitsproblemen  te diagnostisearjen",
+   "text": "Logboekmodulen om webkompatibiliteitsproblemen te diagnostisearjen",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutLogging.ftl",
+   "string_id": "about-logging-unknown-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutLogging.ftl",
+    "key": [
+     "about-logging-unknown-error"
+    ]
+   },
+   "fids": [
+    "db433c4d9707"
+   ],
+   "findings": [
+    "ipprotection-locations-subview-promo.message (mear as300) · support-remote-experiments-see-about-studies (missing space before the placeable) · about-logging-unknown-error (bard :) · download-ui-confirm-quit-cancel-downloads-mac (stopje ,) · about-httpsonly-explanation-continue (útskeakele .) · experimental-features-custom-wallpaper-description (Nij-ljepblêdside .) · plus the 47 doubled-space str…"
+   ],
+   "source": "An error happened: { $errorText }",
+   "original": "Der is in flater bard : { $errorText }",
+   "text": "Der is in flater bard: { $errorText }",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "app-basics-disk-available",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "app-basics-disk-available"
+    ]
+   },
+   "fids": [
+    "f26cc2906218"
+   ],
+   "findings": [
+    "Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported."
+   ],
+   "source": "Disk Space Available",
+   "original": "Beskikbere skiifromte:",
+   "text": "Beskikbere skiifromte",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "support-remote-experiments-see-about-studies",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "support-remote-experiments-see-about-studies"
+    ]
+   },
+   "fids": [
+    "a72f27140190"
+   ],
+   "findings": [
+    "ipprotection-locations-subview-promo.message (mear as300) · support-remote-experiments-see-about-studies (missing space before the placeable) · about-logging-unknown-error (bard :) · download-ui-confirm-quit-cancel-downloads-mac (stopje ,) · about-httpsonly-explanation-continue (útskeakele .) · experimental-features-custom-wallpaper-description (Nij-ljepblêdside .) · plus the 47 doubled-space str…"
+   ],
+   "source": "See <a data-l10n-name=\"support-about-studies-link\">about:studies</a> for more information, including how to disable individual experiments or to disable { -brand-short-name } from running this type of experiment in the future.",
+   "original": "Sjoch <a data-l10n-name=\"support-about-studies-link\">about:studies</a> foar mear ynformaasje, wêrûnder hoe’t jo yndividuele eksperiminten útskeakelje kinne of foarkomme kinne dat{ -brand-short-name } dit soarte eksperiminten yn de takomst útfiert.",
+   "text": "Sjoch <a data-l10n-name=\"support-about-studies-link\">about:studies</a> foar mear ynformaasje, wêrûnder hoe’t jo yndividuele eksperiminten útskeakelje kinne of foarkomme kinne dat { -brand-short-name } dit soarte eksperiminten yn de takomst útfiert.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/about/aboutWindowsMessages.ftl",
+   "string_id": "windows-messages-intro",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWindowsMessages.ftl",
+    "key": [
+     "windows-messages-intro"
+    ]
+   },
+   "fids": [
+    "ddb7de8a4e42"
+   ],
+   "findings": [
+    "about-logins-intro-import3, ipprotection-feature-introduction-link-text-privacy-3, ipprotection-site-settings-callout-subtitle, migration-chrome-windows-password-import-step1, migration-safari-password-import-step2, onboarding-gratitude-security-and-privacy-subtitle, onboarding-refresh-gratitude-subtitle, fxa-qrcode-pair-step2-signin, extension-controlled-enable, settings-translations-subpage-nev…"
+   ],
+   "source": "This page shows the most recent messages sent by Windows\nto the { -brand-short-name } browser windows. The\nbolded entry represents this window. Note that this page shows\nthe most recent messages at the time the page was loaded;\nto see current ones you will need to refresh the page.",
+   "original": "Dizze side toant de meast resinte berjochten dy’t troch Windows ferstjoerd  binne\nnei de { -brand-short-name }-browserfinsters. De\nfetdrukte ynfier fertsjinwurdiget dit finster. Tink derom dat dizze side\nde meast resinte berjochten op it stuit dat de side laden waard toant;\nom de aktuele te sjen, moatte jo de side ferfarskje.",
+   "text": "Dizze side toant de meast resinte berjochten dy’t troch Windows ferstjoerd binne\nnei de { -brand-short-name }-browserfinsters. De\nfetdrukte ynfier fertsjinwurdiget dit finster. Tink derom dat dizze side\nde meast resinte berjochten op it stuit dat de side laden waard toant;\nom de aktuele te sjen, moatte jo de side ferfarskje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/downloads/downloadUI.ftl",
+   "string_id": "download-ui-confirm-quit-cancel-downloads-mac",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/downloads/downloadUI.ftl",
+    "key": [
+     "download-ui-confirm-quit-cancel-downloads-mac"
+    ]
+   },
+   "fids": [
+    "280735d3a9c9"
+   ],
+   "findings": [
+    "ipprotection-locations-subview-promo.message (mear as300) · support-remote-experiments-see-about-studies (missing space before the placeable) · about-logging-unknown-error (bard :) · download-ui-confirm-quit-cancel-downloads-mac (stopje ,) · about-httpsonly-explanation-continue (útskeakele .) · experimental-features-custom-wallpaper-description (Nij-ljepblêdside .) · plus the 47 doubled-space str…"
+   ],
+   "source": "{$downloadsCount ->} [1] If you quit now, 1 download will be canceled. Are you sure you want to quit? [other] If you quit now, { $downloadsCount } downloads will be canceled. Are you sure you want to quit?",
+   "original": "As jo no stopje , wurde { $downloadsCount } downloadsesjes annulearre. Binne jo wis dat jo stopje wolle?",
+   "text": "As jo no stopje, wurde { $downloadsCount } downloadsesjes annulearre. Binne jo wis dat jo stopje wolle?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-custom-wallpaper-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-custom-wallpaper-description"
+    ]
+   },
+   "fids": [
+    "54f03ce01454"
+   ],
+   "findings": [
+    "ipprotection-locations-subview-promo.message (mear as300) · support-remote-experiments-see-about-studies (missing space before the placeable) · about-logging-unknown-error (bard :) · download-ui-confirm-quit-cancel-downloads-mac (stopje ,) · about-httpsonly-explanation-continue (útskeakele .) · experimental-features-custom-wallpaper-description (Nij-ljepblêdside .) · plus the 47 doubled-space str…"
+   ],
+   "source": "Upload your own wallpaper or pick a custom color for your New Tab background.",
+   "original": "Laad jo eigen eftergrûn op of kies in oanpaste kleur foar de eftergrûn fan jo Nij-ljepblêdside .",
+   "text": "Laad jo eigen eftergrûn op of kies in oanpaste kleur foar de eftergrûn fan jo Nij-ljepblêdside.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/formautofill/formAutofill.ftl",
+   "string_id": "credit-card-save-security-code-doorhanger-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/formautofill/formAutofill.ftl",
+    "key": [
+     "credit-card-save-security-code-doorhanger-header"
+    ]
+   },
+   "fids": [
+    "9c6b806bcecc"
+   ],
+   "findings": [
+    "The question mark is missing from the header."
+   ],
+   "source": "Save security code?",
+   "original": "Befeiligingskoade bewarje",
+   "text": "Befeiligingskoade bewarje?",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/main-window/findbar.ftl",
+   "string_id": "findbar-fast-find-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/main-window/findbar.ftl",
+    "key": [
+     "findbar-fast-find-links"
+    ]
+   },
+   "fids": [
+    "a728274a5387"
+   ],
+   "findings": [
+    "Added: import-source-page-title · findbar-fast-find-links.placeholder · app-basics-disk-available · detail-rating.value · default-browser-guidance-notification-info-page · inactive-css-at-position-try-not-supported."
+   ],
+   "source": "placeholder: Quick find (links only)",
+   "original": "Fluch sykje (allinnich keppelingen):",
+   "text": "Fluch sykje (allinnich keppelingen)",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-05",
+   "group": "E",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-dns-not-found-trr-third-party-warning2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-dns-not-found-trr-third-party-warning2"
+    ]
+   },
+   "fids": [
+    "a1ac8b67eaba"
+   ],
+   "findings": [
+    "pippki-reset-password-confirmation-message · add-exception-invalid-header · monitor-header-content-signed-in · profiler-popup-presets-networking-with-logs-description · perftools-presets-networking-with-logs-description · spotlight-focus-promo-subtitle · firefoxview-tabpickup-description · redirect-warning-with-popup-message · ipprotection-locations-subview-promo.message · ipprotection-message-ba…"
+   ],
+   "source": "You can continue with your default DNS resolver. However, a third-party might be able to see what websites you visit.",
+   "original": "Jo kinne trochgean mei jo standert DNS-resolver, in tredde partij kin lykwols mooglik sjen hokker websites jo besykje",
+   "text": "Jo kinne trochgean mei jo standert DNS-resolver, in tredde partij kin lykwols mooglik sjen hokker websites jo besykje.",
+   "status": "pending",
+   "status_date": "2026-11-05",
+   "comment": ""
+  }
+ ]
+}
