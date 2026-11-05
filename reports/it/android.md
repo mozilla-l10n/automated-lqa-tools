@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 2,626 |
+| **Strings reviewed this run** | 0 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `mozac_feature_listentopage_dropdown_voice_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — The 'Collapsed' state of a closed dropdown is translated as 'Raggruppato', which means 'grouped'.
-    - Current: `Raggruppato`
-    - Source: `Collapsed`
-    - Suggest: `Compresso`
-    - The comment says this is what the screen reader announces while the menu is closed. In Italian that state is called 'compresso' (the usual pair is espanso/compresso). 'Raggruppato' means 'grouped' and gives the wrong state.
-- `mozac_feature_listentopage_playback_speed_collapsed` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-it/strings.xml` — 'collapsed' is translated as 'raggruppato' ('grouped') instead of the menu state 'compresso'.
-    - Current: `%1$s, raggruppato`
-    - Source: `%1$s, collapsed`
-    - Suggest: `%1$s, compresso`
-    - The comment says this is the screen reader state while the menu is closed. 'Raggruppato' means 'grouped', not 'collapsed', and it doesn't match the 'Espanso' used for the open state.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

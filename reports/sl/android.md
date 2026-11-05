@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 58 of 2,568 |
+| **Strings reviewed this run** | 0 of 2,568 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,206 +18,13 @@ Also for sl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Objavite" (publish) is used for "Share … with" partners, which implies making the information public.
-    - Current: `Objavite, kako ste odkrili Firefox`
-    - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - Suggest: `Delite, kako ste odkrili Firefox`
-    - The source means sharing the information with specific marketing partners. "Objaviti" means to publish or announce publicly. "Deliti z" is the right verb here.
+_No new findings._
 
-### ✅ Fixed since the last run (38)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_harmful_addon_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — "credit card numbers" mistranslated as "podatki o bančnem računu" (bank account details).
-    - Current: `podatki o bančnem računu`
-    - Source: `{ <p> }This web page at %1$s has been blocked because one of your add-ons tried to open it. This site could be used to steal your info — like passwords or credit card numbers.{ </p> }`
-    - Suggest: `številke kreditnih kartic`
-    - The source says credit card numbers, not bank account information.
-- `mozac_browser_errorpages_httpsonly_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — Translation adds "varna" (secure) not present in the source when describing the HTTPS version.
-    - Current: `varna različica HTTPS strani`
-    - Source: `You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { <em> }%1$s{ </em> } is not available.`
-    - Suggest: `različica HTTPS strani`
-    - Source states only that an HTTPS version of the site is not available; "varna" is added content.
-- `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — "The network link was interrupted" rendered as "Povezava s stranjo je bila nepričakovano prekinjena", changing network link to page connection and adding "nepričakovano".
-    - Current: `Povezava s stranjo je bila nepričakovano prekinjena med pogajanjem za povezavo.`
-    - Source: `{ <p> }The network link was interrupted while negotiating a connection. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If y…`
-    - Suggest: `Omrežna povezava je bila prekinjena med vzpostavljanjem povezave.`
-    - The source refers to the network link, and contains no "unexpectedly".
-- `mozac_browser_errorpages_unknown_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — First sentence mistranslated: source says the browser could not find the host server for the provided address, translation says only "The page could not be found".
-    - Current: `Strani ni bilo mogoče najti.`
-    - Source: `{ <p> }The browser could not find the host server for the provided address.{ </p> } { <ul> } { <li> }Check the address for typing errors such as { <strong> }ww{ </strong> }.example.com instead of { <strong> }www{ </stro…`
-    - Suggest: `Brskalnik ni mogel najti gostiteljskega strežnika za navedeni naslov.`
-    - The en-US text refers to the host server for the provided address; the translation drops that content and says something different.
-- `mozac_feature_addons_permissions_data_collection_optional_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — "wants to collect" is rendered as a plain present tense "zbira" (collects), dropping the intent/request meaning.
-    - Current: `Razvijalec pravi, da razširitev zbira: %1$s`
-    - Source: `The developer says the extension wants to collect: %1$s`
-    - Suggest: `Razvijalec pravi, da želi razširitev zbirati: %1$s`
-    - The source states the extension *wants to* collect the listed data (a request for consent), not that it already collects it.
-- `mozac_feature_prompts_redirect_dialog_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — "this site" is rendered as "to stran" (page) while the parallel string uses "spletno mesto" for site.
-    - Current: `Dovolite preusmeritev na to stran?`
-    - Source: `Allow redirect to this site?`
-    - Suggest: `Dovolite preusmeritev na to spletno mesto?`
-    - The neighbouring string mozac_feature_prompts_popup_dialog_title translates "site" as "spletno mesto"; here "site" is rendered "stran" (page), an inconsistent term on the same surface.
-- `mozac_feature_prompts_suggest_strong_password_description_3` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — Agreement error: "svoje račun" should be "svoj račun".
-    - Current: `Zaščitite svoje račun`
-    - Source: `Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.`
-    - Suggest: `Zaščitite svoj račun`
-    - "račun" is masculine singular accusative, so the possessive pronoun must be "svoj", not the neuter/plural "svoje".
-- `mozac_feature_prompts_update_credit_card_prompt_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — Dialog title question uses imperative/1st-person form inconsistent with the parallel address dialog and the formal register.
-    - Current: `Posodobi datum poteka veljavnosti kartice?`
-    - Source: `Update card expiration date?`
-    - Suggest: `Želite posodobiti datum poteka veljavnosti kartice?`
-    - Source "Update card expiration date?" is a confirmation question; the sibling strings use "Posodobim naslov?" / "Želite uporabiti močno geslo?". "Posodobi ...?" is an imperative and reads as a command, not a question.
-- `mozac_summarize_settings_shake_sensitivity_description` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — Superfluous comma before the prepositional phrase "za povzetek".
-    - Current: `Prilagodite, kako močno morate stresati, za povzetek.`
-    - Source: `Adjust how hard you need to shake to trigger summarization.`
-    - Suggest: `Prilagodite, kako močno morate stresati za povzetek.`
-    - In Slovenian no comma separates the verb from its purpose phrase; the comma breaks the sentence incorrectly.
-- `sound_off` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-sl/strings.xml` — The muted-sound emoji 🔇 was replaced with the speaker emoji 🔈, making "sound off" and "sound on" visually identical.
-    - Current: `🔈 zvok izključen`
-    - Source: `🔇 sound off`
-    - Suggest: `🔇 zvok izključen`
-    - The source uses 🔇 (muted) for sound off and 🔈 for sound on; the translation uses 🔈 for both, losing the distinction.
-- `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Quotation marks are reversed/incorrect; the locale convention is straight double quotes.
-    - Current: `”vedno prevedi“ in ”nikoli ne prevajaj“`
-    - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
-    - Suggest: `"vedno prevedi" in "nikoli ne prevajaj"`
-    - The translation uses closing curly quote before and opening-style low quote after, which is neither correct Slovenian quoting nor the established straight-double convention.
-- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Verb gender agreement error: "Dodatki in nekatere možnosti" (masculine + feminine subjects) requires masculine plural "nehali", not feminine "nehale".
-    - Current: `Dodatki in nekatere možnosti bodo 14. marca nehale delovati.`
-    - Source: `Add-ons and some features will stop working on March 14.`
-    - Suggest: `Dodatki in nekatere možnosti bodo 14. marca nehali delovati.`
-    - In Slovenian, with mixed-gender coordinated subjects the participle takes masculine plural form; "nehale" agrees only with the feminine noun.
-- `content_description_take_photo` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Missing preposition in "pošlji Google Lens"; the source says "send to Google Lens".
-    - Current: `Fotografiraj in pošlji Google Lens`
-    - Source: `Take photo and send to Google Lens`
-    - Suggest: `Fotografiraj in pošlji v Google Lens`
-    - "pošlji Google Lens" lacks the preposition "v"; the parallel string content_description_gallery correctly uses "za pošiljanje v Google Lens".
-- `credit_cards_biometric_prompt_unlock_message_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Unlock to use saved payment methods" is translated as "unlock to view saved payment methods".
-    - Current: `Odklenite za ogled shranjenih plačilnih sredstev`
-    - Source: `Unlock to use saved payment methods`
-    - Suggest: `Odklenite za uporabo shranjenih plačilnih sredstev`
-    - The source says "use" (uporabo), not "view" (ogled); the developer comment states it is shown before allowing users to use their stored payment method information.
-- `debug_drawer_tab_tools_tab_count_active` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Active" tab-count category uses singular masculine "Dejaven" while the sibling categories use plural forms.
-    - Current: `Dejaven`
-    - Source: `Active`
-    - Suggest: `Dejavni`
-    - Parallel strings debug_drawer_tab_tools_tab_count_inactive ("Nedejavni") and _private ("Zasebni") use the plural form for the same tab-count category list; "Dejaven" is inconsistent and grammatically mismatched.
-- `etp_cookies_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Cross-Site Tracking Cookies" rendered as "Spletni sledilni piškotki", dropping the cross-site meaning.
-    - Current: `Spletni sledilni piškotki`
-    - Source: `Cross-Site Tracking Cookies`
-    - Suggest: `Medspletni sledilni piškotki`
-    - The source specifies cookies that track across sites; "Spletni" only means "web/online" and loses the cross-site distinction, which the sibling string etp_cookies_title_2 renders as "Medspletni".
-- `microsurvey_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "search experience" translated as "možnost iskanja" (search option).
-    - Current: `Kako zadovoljni ste z možnostjo iskanja v Firefoxu?`
-    - Source: `How satisfied are you with the search experience in Firefox?`
-    - Suggest: `Kako zadovoljni ste z izkušnjo iskanja v Firefoxu?`
-    - The source asks about the search experience, not about a search option; the parallel string microsurvey_sync_title also drops "experience" but this one changes the meaning to a feature/option.
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "home screen" of the phone is translated as "domača stran" (web homepage) instead of "domači zaslon".
-    - Current: `Začnite vsako iskanje z domače strani svojega telefona`
-    - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
-    - Suggest: `Začnite vsako iskanje z domačega zaslona svojega telefona`
-    - The source refers to the phone's home screen; Slovenian uses "domači zaslon" for that (as correctly used in nova_onboarding_app_icon_prompt_body), while "domača stran" means a website homepage.
-- `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "marketing partners" is rendered as "tehnološkim partnerjem za trženje", adding "tehnološkim" (technology) which is not in the source.
-    - Current: `Mozillinim tehnološkim partnerjem za trženje`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s`
-    - Suggest: `Mozillinim tržnim partnerjem`
-    - The source says only "Mozilla’s marketing partners"; "tehnološkim" (technological) is invented content.
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "marketing partners" is rendered as "tehnološkim partnerjem za trženje", adding "tehnološkim" (technology) which is not in the source.
-    - Current: `Mozillinim tehnološkim partnerjem za trženje`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozillinim tržnim partnerjem`
-    - The source says only "Mozilla’s marketing partners"; "tehnološkim" (technological) is invented content.
-- `nova_onboarding_marketing_body_3` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Verb agreement error: "da ... obvestimo" should be third person "obvesti", since the subject of the subordinate clause is Mozilla.
-    - Current: `da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvestimo, da ste vi njegov uporabnik`
-    - Source: `You can help us reach more people by allowing Mozilla to inform the channels where we promote Firefox that you’re a Firefox user.`
-    - Suggest: `da Mozilli dovolite, da kanale, na katerih promoviramo Firefox, obvesti, da ste njegov uporabnik`
-    - Source: "allowing Mozilla to inform the channels ... that you’re a Firefox user" — Mozilla informs, not "we inform"; parallel strings correctly use "obvesti".
-- `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Informal/incorrect "Prosim" plus an inconsistent imperative construction instead of the formal polite request.
-    - Current: `Prosim, razmislite o tem, da dovolite in pomagajte Firefoxu, da zmaga.`
-    - Source: `Please consider allowing to help Firefox win.`
-    - Suggest: `Prosimo, razmislite o tem, da to dovolite in pomagate Firefoxu do zmage.`
-    - Formal register requires "Prosimo"; also "pomagajte" breaks the subordinate clause introduced by "da", which needs "pomagate".
-- `nova_onboarding_tou_body_line_3_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Link text "Manage settings" is rendered only as "Nastavitve", dropping the verb.
-    - Current: `Nastavitve`
-    - Source: `Manage settings`
-    - Suggest: `Upravljanje nastavitev`
-    - Source is "Manage settings"; the parallel string onboarding_redesign_tou_body_three_link_text correctly uses "Upravljanje nastavitev". "Nastavitve" means just "Settings".
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "marketing partners" is translated as "tehnološkim partnerjem za trženje", adding "technology" which is not in the source.
-    - Current: `Mozillinim tehnološkim partnerjem za trženje`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozillinim partnerjem za trženje`
-    - The source says only "Mozilla’s marketing partners"; "tehnološkim" (technology) is an addition not present in the English.
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "marketing partners" is translated as "tehnološkim partnerjem za trženje", adding "technology" which is not in the source.
-    - Current: `Mozillinim tehnološkim partnerjem za trženje`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozillinim partnerjem za trženje`
-    - The source says only "Mozilla’s marketing partners"; "tehnološkim" (technology) is an addition not present in the English.
-- `preference_doh_exceptions_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "secure DNS" is rendered "varnega DNS" here but "zavarovanega DNS" in the sibling DoH strings.
-    - Current: `varnega DNS`
-    - Source: `%1$s won’t use secure DNS on these sites and their subdomains.`
-    - Suggest: `zavarovanega DNS`
-    - The same source term "secure DNS" is translated as "zavarovanega DNS" in preference_doh_default_protection_info_2/_5 and _summary on the same DNS over HTTPS surface; this one is inconsistent.
-- `preference_option_autoplay_allowed_wifi_subtext` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Video" is incorrectly capitalized mid-sentence in Slovenian.
-    - Current: `Zvok in Video se bosta predvajala na Wi-Fi`
-    - Source: `Audio and video will play on Wi-Fi`
-    - Suggest: `Zvok in video se bosta predvajala na Wi-Fi`
-    - Slovenian does not capitalize common nouns mid-sentence; the source is "Audio and video" and other strings use lowercase "video".
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Objavite" (publish) is used for "Share … with" partners, which implies making the information public.
-    - Current: `Objavite, kako ste odkrili Firefox`
-    - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - Suggest: `Delite, kako ste odkrili Firefox`
-    - The source means sharing the information with specific marketing partners. "Objaviti" means to publish or announce publicly. "Deliti z" is the right verb here.
-- `preferences_search_browsing_history` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Search browsing history" is rendered as "search history" instead of "browsing history".
-    - Current: `Išči po zgodovini iskanja`
-    - Source: `Search browsing history`
-    - Suggest: `Iskanje po zgodovini brskanja`
-    - The source refers to browsing history (zgodovina brskanja), not search history; also inconsistent with the parallel items "Iskanje po zaznamkih"/"Iskanje po sinhroniziranih zavihkih".
-- `protection_panel_banner_not_protected_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Verb agrees with feminine gender although %s is the app name (Firefox), which is masculine in Slovenian.
-    - Current: `%s je izključena.`
-    - Source: `%s is off-duty. We suggest turning protections back on.`
-    - Suggest: `%s je izključen.`
-    - The developer comment says %s is the app name (e.g. "Firefox"); "izključena" is feminine and wrongly agrees, as if referring to protection rather than the app.
-- `setup_checklist_subtitle_5_steps_third_step` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Ste preko polovice" (you are past halfway) differs from the source "You’re halfway there".
-    - Current: `Ste preko polovice!`
-    - Source: `You’re halfway there! Three steps finished and 2 to go.`
-    - Suggest: `Ste na pol poti!`
-    - Source says "halfway there"; the parallel 6-step string correctly uses "Ste na pol poti!", making this both a mistranslation and an inconsistency.
-- `setup_checklist_task_explore_extensions` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Imperative form is inconsistent with the other setup checklist task titles, which use the formal plural.
-    - Current: `Razišči razširitve`
-    - Source: `Explore extensions`
-    - Suggest: `Raziščite razširitve`
-    - Sibling task titles use the formal address ("Raziščite pripomoček za iskanje", "Izberite temo", "Prijavite se v račun"); the sl convention is formal.
-- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — English-style opening quotation mark used instead of the locale's straight double quotes.
-    - Current: `Zaznamki shranjeni v “%s”`
-    - Source: `Bookmarks saved in “%s”`
-    - Suggest: `Zaznamki shranjeni v "%s"`
-    - The sl convention is straight double quotes; the target uses English curly quotes “ ” with the opening mark in the English position.
-- `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "drugih" ("other tabs"), changing the meaning of the source.
-    - Current: `V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.`
-    - Source: `You don’t have any tabs open in Firefox on your other devices.`
-    - Suggest: `V Firefoxu na drugih napravah nimate odprtih zavihkov.`
-    - Source says the user has no tabs open in Firefox on other devices; "odprtih drugih zavihkov" implies "no other tabs open", which is not the source meaning.
-- `tab_tray_inactive_onboarding_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "haven’t viewed" is rendered as "niste odprli" (haven't opened) instead of "si niste ogledali".
-    - Current: `ki jih dva tedna niste odprli`
-    - Source: `Tabs you haven’t viewed for two weeks get moved here.`
-    - Suggest: `ki si jih dva tedna niste ogledali`
-    - Source says tabs not viewed for two weeks; opening and viewing are different actions, and the parallel string tab_tray_inactive_auto_close_body_2 uses "si jih niste ogledali".
-- `translations_bottom_sheet_info_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "your device" is translated as "računalnika" (computer) in a mobile app.
-    - Current: `nikoli ne zapustijo vašega računalnika`
-    - Source: `For your privacy, translations never leave your device. New languages and improvements coming soon! %1$s`
-    - Suggest: `nikoli ne zapustijo vaše naprave`
-    - The source says "never leave your device"; other strings in the same feature use "naprava" (translation_settings_control_description). "Računalnik" means computer and is wrong on Android.
-- `mozac_feature_addons_permissions_web_navigation_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Translation drops "during navigation" from the webNavigation permission description.
-    - Current: `dostop do dejavnosti brskalnika`
-    - Source: `Access browser activity during navigation`
-    - Suggest: `dostop do dejavnosti brskalnika med krmarjenjem`
-    - Source is "Access browser activity during navigation"; the qualifier is omitted, and the paired _for_update string does include it, creating inconsistency.
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Objavite" (publish) is used for "Share … with" partners, which implies making the information public.
-    - Current: `Objavite, kako ste odkrili Firefox`
-    - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
-    - Suggest: `Delite, kako ste odkrili Firefox`
-    - The source means sharing the information with specific marketing partners. "Objaviti" means to publish or announce publicly. "Deliti z" is the right verb here.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

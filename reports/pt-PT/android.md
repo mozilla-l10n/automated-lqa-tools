@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 2,626 |
+| **Strings reviewed this run** | 5 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,22 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `wrex_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "live" (a match in progress) is rendered as "ativos" ("active", plural), which is the wrong sense.
-    - Current: `ativos`
-    - Source: `%1$s %2$d, %3$s %4$d, %5$s, live`
-    - Suggest: `em direto`
-    - Here "live" means the match is being played right now. In pt-PT that is "em direto". "ativos" means "active", and its plural form doesn't agree with anything in the announcement.
+_No new findings._
+
+### ✅ Fixed since the last run (2)
+
 - `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "match info" (a sports match) is translated as "informações da correspondência", which is the matching sense of the word.
     - Current: `informações da correspondência`
     - Source: `Can’t show match info right now`
     - Suggest: `informações do jogo`
     - The comment says this is the sports widget and the data is about a match, so a game. In pt-PT that is "jogo" (or "partida"). "Correspondência" means a match in the sense of matching, or mail.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
+- `wrex_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "live" (a match in progress) is rendered as "ativos" ("active", plural), which is the wrong sense.
+    - Current: `ativos`
+    - Source: `%1$s %2$d, %3$s %4$d, %5$s, live`
+    - Suggest: `em direto`
+    - Here "live" means the match is being played right now. In pt-PT that is "em direto". "ativos" means "active", and its plural form doesn't agree with anything in the announcement.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -94,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (76)
+## 3. Open findings (74)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 26 |
+| 2 | Wrong content (says something other than the English) | 24 |
 | 3 | Degraded language (grammar, spelling, terminology) | 40 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -230,16 +230,6 @@ _Nothing in this category._
     - Source: `Translating`
     - Suggest: `A traduzir`
     - The developer comment says this inactive button text indicates a translation is currently in progress; pt-PT expresses that with "A traduzir", whereas "Tradução" is just the noun.
-- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "match info" (a sports match) is translated as "informações da correspondência", which is the matching sense of the word.
-    - Current: `informações da correspondência`
-    - Source: `Can’t show match info right now`
-    - Suggest: `informações do jogo`
-    - The comment says this is the sports widget and the data is about a match, so a game. In pt-PT that is "jogo" (or "partida"). "Correspondência" means a match in the sense of matching, or mail.
-- `wrex_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "live" (a match in progress) is rendered as "ativos" ("active", plural), which is the wrong sense.
-    - Current: `ativos`
-    - Source: `%1$s %2$d, %3$s %4$d, %5$s, live`
-    - Suggest: `em direto`
-    - Here "live" means the match is being played right now. In pt-PT that is "em direto". "ativos" means "active", and its plural form doesn't agree with anything in the announcement.
 
 ### C. Grammar, agreement & spelling
 
@@ -517,6 +507,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — fixed 2026-11-05
+- `wrex_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — fixed 2026-11-05

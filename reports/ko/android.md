@@ -3,33 +3,24 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 2,626 |
+| **Strings reviewed this run** | 0 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ko: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
+Also for ko: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.md)
 
 ---
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `wrex_widget_team_to_be_determined` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — "팀 결정" ("team decision/decide team") drops the 'to be determined' meaning, so it no longer says the team is not yet known.
-    - Current: `팀 결정`
-    - Source: `Team to be determined`
-    - Suggest: `미정 팀`
-    - The source and the developer comment both refer to a team that has not been determined yet. "팀 결정" reads as a noun meaning "team decision", and screen readers will announce that wrong meaning.
-- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Match status "Penalties" (penalty shootout) rendered as "페널티", which usually means a single foul penalty rather than the shootout phase.
-    - Current: `페널티`
-    - Source: `Penalties`
-    - Suggest: `승부차기`
-    - The developer comment says this is a match status shown during the penalties phase of a soccer match, i.e. the penalty shootout. In Korean that is "승부차기". "페널티" on its own does not name a match phase.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

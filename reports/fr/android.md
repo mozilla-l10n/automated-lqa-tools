@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 30 of 2,626 |
+| **Strings reviewed this run** | 9 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,11 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (2)
 
 - `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — `wrex_widget_error_results_load_failed_title` uses a straight apostrophe
     - Current: `Impossible d'afficher les résultats pour l'instant`
@@ -29,39 +33,6 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
     - Source: `Can’t show results right now`
     - Suggest: `Impossible d’afficher les résultats pour l’instant`
     - The fr convention is typographic apostrophes (718 occurrences). The sibling string wrex_widget_error_load_failed_title uses ’ correctly.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
-    - Current: `dans les onglets ouverts`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `dans les onglets ouverts.`
-    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
-
-### ✅ Fixed since the last run (5)
-
-- `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
-    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts`
-    - Source: `Extend developer tools to access your data in open tabs`
-    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts`
-    - The source says the extension extends (adds to) the developer tools, not that it opens them.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Extend developer tools" is mistranslated as "Ouvrir les outils de développement" (open developer tools).
-    - Current: `Ouvrir les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Étendre les outils de développement afin d’accéder à vos données dans les onglets ouverts.`
-    - The source says the extension extends the developer tools, not that it opens them.
-- `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The action "Review" is dropped, leaving only "Update for %1$s".
-    - Current: `Mise à jour pour %1$s`
-    - Source: `Review update for %1$s`
-    - Suggest: `Examiner la mise à jour pour %1$s`
-    - The source tells the user to review an update that needs them to approve permission changes. The French only says an update exists and leaves out the action the user has to take.
-- `share_error_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says sharing this application is impossible, whereas the source means sharing to this app fails.
-    - Current: `Impossible de partager cette application`
-    - Source: `Cannot share to this app`
-    - Suggest: `Impossible de partager avec cette application`
-    - "Cannot share to this app" means the content cannot be shared to the target app; the translation reverses the object, saying the app itself cannot be shared.
-- `translations_bottom_sheet_positive_button_error` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Button label "Try again" is translated as a polite sentence "Veuillez réessayer" instead of a concise action label.
-    - Current: `Veuillez réessayer`
-    - Source: `Try again`
-    - Suggest: `Réessayer`
-    - The developer comment says this is button text; French UI buttons use the infinitive without "Veuillez", which reads as a message rather than an action label.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -96,7 +67,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 1 |
+| Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
@@ -111,11 +82,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 702, `straight` 2 | **typographic** |
+| apostrophe | `typographic` 701 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | nbsp | `total` 215, `before-punctuation` 145, `space-before-punctuation` 63 | _mixed_ |
-| register | `formal` 451 | **formal** |
+| register | `formal` 452 | **formal** |
 
 ---
 
@@ -125,7 +96,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (49)
+## 3. Open findings (47)
 
 
 | Impact | Meaning | Count |
@@ -133,7 +104,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 35 |
 | 3 | Degraded language (grammar, spelling, terminology) | 12 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -385,15 +356,6 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs.`
     - Suggest: `dans les onglets ouverts.`
     - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
-- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — `wrex_widget_error_results_load_failed_title` uses a straight apostrophe
-    - Current: `Impossible d'afficher les résultats pour l'instant`
-    - Source: `Can’t show results right now`
-    - The tree uses ’ 702 times against 2 straight.
-- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Straight apostrophes are used instead of the locale's typographic apostrophe.
-    - Current: `Impossible d'afficher les résultats pour l'instant`
-    - Source: `Can’t show results right now`
-    - Suggest: `Impossible d’afficher les résultats pour l’instant`
-    - The fr convention is typographic apostrophes (718 occurrences). The sibling string wrex_widget_error_load_failed_title uses ’ correctly.
 
 ---
 
@@ -421,13 +383,15 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (25)
+### Fixed to date (27)
 
 - `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `share_error_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `translations_bottom_sheet_positive_button_error` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
+- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — fixed 2026-11-02
 - `mozac_browser_menu_highlighted` — `mozilla-mobile/android-components/components/browser/menu/src/main/res/values-fr/strings.xml` — fixed 2026-11-02
 - `mozac_browser_menu2_highlighted` — `mozilla-mobile/android-components/components/browser/menu2/src/main/res/values-fr/strings.xml` — fixed 2026-11-02

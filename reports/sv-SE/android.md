@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 2,626 |
+| **Strings reviewed this run** | 0 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
-    - Current: `matchningsinformation`
-    - Source: `Can’t show match info right now`
-    - Suggest: `matchinformation`
-    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
-- `ai_controls_listen_to_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Predicative adjective does not agree with the plural compound subject "Text och ljud".
-    - Current: `Text och ljud förblir privat.`
-    - Source: `Your device may use AI to read aloud. The text and audio stay private.`
-    - Suggest: `Text och ljud förblir privata.`
-    - A coordinated subject (text and audio) takes the plural form of the adjective in Swedish: "privata".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

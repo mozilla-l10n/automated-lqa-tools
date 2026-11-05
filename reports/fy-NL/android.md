@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,602 |
+| **Strings reviewed this run** | 26 of 2,621 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,48 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (8)
 
-_Nothing was fixed._
+- `mozac_feature_contextmenu_snackbar_link_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fy-rNL/strings.xml` — "Link" is rendered as "Koppeling" (Dutch) here while the rest of the file consistently uses the Frisian "Keppeling".
+    - Current: `Koppeling nei klamboerd kopiearre`
+    - Source: `Link copied to clipboard`
+    - Suggest: `Keppeling nei klamboerd kopiearre`
+    - Sibling strings (mozac_feature_contextmenu_share_link, mozac_feature_contextmenu_snackbar_link_text_copied) use "Keppeling"; "Koppeling" is the Dutch spelling and is inconsistent on the same surface.
+- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fy-rNL/strings.xml` — "notifications" is rendered as "meldingen" here but as "notifikaasjes" in the sibling notification-permission string on the same surface.
+    - Current: `%1$s tastean om meldingen te ferstjoeren?`
+    - Source: `Allow %1$s to send notifications?`
+    - Suggest: `%1$s tastean om notifikaasjes te ferstjoeren?`
+    - mozac_feature_sitepermissions_notification_permission_rationale_dialog_message translates "notifications" as "notifikaasjes"; the same term in the same notification-permission dialog flow should be consistent.
+- `credit_cards_warning_dialog_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "payment methods" is rendered "betelmetoaden" here but "betellingsmetoaden" in the neighbouring credit card strings.
+    - Current: `betelmetoaden`
+    - Source: `Secure your saved payment methods`
+    - Suggest: `betellingsmetoaden`
+    - Inconsistent terminology for the same source term on the same surface (see credit_cards_warning_dialog_message_3 and credit_cards_biometric_prompt_unlock_message_2).
+- `debug_drawer_region_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Tools" rendered as "helpmiddelen" here while the same debug-drawer surface uses "ark" elsewhere (CFR-ark, Add-ons-ark, Ark foar automatysk ynfoljen).
+    - Current: `Regiohelpmiddelen`
+    - Source: `Region Tools`
+    - Suggest: `Regio-ark`
+    - Terminology inconsistency for "Tools" on the same Debug Drawer surface, where "ark" is the established rendering.
+- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "extension(s)" rendered as "add-on(s)" while the rest of the string uses "útwreidingen" for extensions.
+    - Current: `de add-on(s) opnij te starten`
+    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
+    - Suggest: `de útwreiding(en) opnij te starten`
+    - Source consistently says "extension(s)"; the surrounding sentences use útwreidingen, so add-on is an inconsistent term for the same source word.
+- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "more private" rendered as "persoanliker" (more personal) instead of the privacy term used in the parallel string.
+    - Current: `persoanliker`
+    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
+    - Suggest: `mear privee`
+    - The source says "more private"; the parallel string ip_protection_onboarding_body_promo translates the same phrase as "mear privee", so "persoanliker" (more personal) is both a mistranslation and inconsistent.
+- `search_engine_selector_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Search engine" is rendered as "sykmasjine" here but "sykmasine" everywhere else in the same surface.
+    - Current: `%s: sykmasjineselektor`
+    - Source: `%s: search engine selector`
+    - Suggest: `%s: sykmasineselektor`
+    - Neighbouring strings (search_engine_edit_custom_search_engine_title, search_engine_icon_content_description_1, search_engine_use_default) all use "sykmasine"; this spelling is inconsistent.
+- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical verb form and incomplete clause in the second paragraph.
+    - Current: `Utwreidingen sille net opnij starte wurden wylst jo aktuele sesje.`
+    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
+    - Suggest: `Utwreidingen wurde net opnij start yn jo aktuele sesje.`
+    - "starte wurden" is not a valid passive construction and "wylst jo aktuele sesje" misuses "wylst" (a conjunction) as a preposition.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +84,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,602 |
-| Missing strings | 24 |
+| Strings | 2,621 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +102,9 @@ _Nothing retired._
 
 ### Completeness
 
-**24 strings** are not translated yet, concentrated in:
+**5 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 24
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 5
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,14 +129,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (149)
+## 3. Open findings (134)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 46 |
-| 3 | Degraded language (grammar, spelling, terminology) | 102 |
+| 2 | Wrong content (says something other than the English) | 42 |
+| 3 | Degraded language (grammar, spelling, terminology) | 91 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -241,11 +280,6 @@ _Nothing in this category._
     - Source: `To allow it:`
     - Suggest: `Om dit ta te stean:`
     - The source is a heading introducing the steps to allow the permission ("To allow it:"), not a command "Allow:".
-- `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Order of "share & sell" is reversed in the translation.
-    - Current: `gegevens net te ferkeapjen en te dielen`
-    - Source: `Tell websites not to share & sell data`
-    - Suggest: `gegevens net te dielen en te ferkeapjen`
-    - Source says "not to share & sell data" (share first, then sell); the target swaps the verbs.
 - `preference_gestures_swipe_toolbar_switch_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "address bar" translated as "arkbalke" (toolbar) instead of "adresbalke".
     - Current: `De arkbalke op side feie om fan ljepblêd te wikseljen`
     - Source: `Swipe address bar sideways to switch tabs`
@@ -266,11 +300,6 @@ _Nothing in this category._
     - Source: `Sort passwords menu`
     - Suggest: `Menu Wachtwurden sortearje`
     - The source is a noun phrase naming the menu used to sort passwords, not an instruction to sort a 'password menu'.
-- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Search %s" (search using engine %s) is translated as "%s trochsykje", meaning "search through %s".
-    - Current: `%s trochsykje`
-    - Source: `Search %s`
-    - Suggest: `Sykje mei %s`
-    - %s is the suggested search engine name; the source means to search with that engine, not to search inside it.
 - `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "private sessions" is translated as "priveefinsters" (private windows).
     - Current: `priveefinsters`
     - Source: `Allow search suggestions in private sessions?`
@@ -286,26 +315,11 @@ _Nothing in this category._
     - Source: `This will close all open tabs.`
     - Suggest: `Dit slút alle iepen ljepblêden.`
     - Source says "This will close all open tabs."; the translation omits "open".
-- `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Dismiss" (dismiss the banner) is translated as "Slute" (Close), the same word used elsewhere for closing tabs.
-    - Current: `Slute`
-    - Source: `Dismiss`
-    - Suggest: `Ferbergje`
-    - The source is "Dismiss", meaning dismiss/hide the banner; "Slute" means "Close" and duplicates the translation of the separate "Close" strings.
 - `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "View options" is rendered as "Byldopsjes" (display/image options), not "view the options".
     - Current: `Byldopsjes`
     - Source: `View options`
     - Suggest: `Opsjes besjen`
     - Per the developer comment the button opens Settings for auto-close tabs; "View" is a verb here, not "display". "Byldopsjes" means "image/display options".
-- `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Word order makes "Syngronisearre" modify the wrong element compared to "Synced Tabs Open".
-    - Current: `Syngronisearre iepen ljepblêden: %1$s.`
-    - Source: `Synced Tabs Open: %1$s. Tap to switch tabs.`
-    - Suggest: `Iepen syngronisearre ljepblêden: %1$s.`
-    - The source means open synced tabs; the sibling strings use "Iepen normale ljepblêden" and "Iepen priveeljepblêden", so this one is inconsistent and reads as "synchronised open tabs".
-- `translation_in_progress_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Translating…" (ongoing action) rendered as the infinitive "Oersette…".
-    - Current: `Oersette…`
-    - Source: `Translating…`
-    - Suggest: `Dwaande mei oersetten…`
-    - The snackbar reports a translation in progress, not a command/infinitive; the same word is also used for the Translate shortcut label, losing the progress meaning.
 - `translation_option_bottom_sheet_switch_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Overrides offers to translate" is rendered as "Ignores translation offers" instead of "overrides".
     - Current: `Negearret oersetoanbiedingen`
     - Source: `Overrides offers to translate`
@@ -579,11 +593,6 @@ _Nothing in this category._
     - Source: `Total Cookie Protection isolates cookies to the site you’re on so trackers like ad networks can’t use them to follow you across sites.`
     - Suggest: `isolearret cookies op de website`
     - The source says cookies are isolated to the site you are on; 'isolearret cookies yn op de website' contains a superfluous 'yn' that breaks the sentence.
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical verb form and incomplete clause in the second paragraph.
-    - Current: `Utwreidingen sille net opnij starte wurden wylst jo aktuele sesje.`
-    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
-    - Suggest: `Utwreidingen wurde net opnij start yn jo aktuele sesje.`
-    - "starte wurden" is not a valid passive construction and "wylst jo aktuele sesje" misuses "wylst" (a conjunction) as a preposition.
 - `firefox_labs_no_labs_available_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "No" appears misplaced/incorrect rendering of "right now".
     - Current: `No gjin eksperimintele funksjes om te probearjen`
     - Source: `No experimental features to try right now`
@@ -644,7 +653,12 @@ _Nothing in this category._
     - Source: `Sync`
     - Suggest: `Synchronisaasje`
     - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
-- _…and 28 more; see `state/` for the full list._
+- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "downloadskiednis" as "downloadskeiednis".
+    - Current: `downloadskeiednis`
+    - Source: `File is removed from your download history, but is still saved on your device`
+    - Suggest: `downloadskiednis`
+    - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
+- _…and 27 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -658,51 +672,6 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs.`
     - Suggest: `Untwikkelersark útwreidzje om jo gegevens yn iepen ljepblêden te benaderjen.`
     - mozac_feature_addons_permissions_devtools_description translates the identical source as ‘Untwikkelersark útwreidzje om jo gegevens yn iepen ljepblêden te benaderjen’; the update string must match in style (infinitive) and term (ûntwikkelersark vs ûntwikkelark) since these appear on the same surface.
-- `mozac_feature_addons_permissions_dialog_heading_required_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — ‘permissions’ is rendered as ‘machtigingen’ here but as ‘tastimmingen’ in the parallel optional-permissions heading.
-    - Current: `Fereaske machtigingen:`
-    - Source: `Required permissions:`
-    - Suggest: `Fereaske tastimmingen:`
-    - mozac_feature_addons_permissions_dialog_heading_optional_permissions translates ‘New permissions:’ as ‘Nije tastimmingen:’; both headings appear in the same add-on permissions dialog and must use one term.
-- `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — "modify" rendered as "oanpasse" here but as "bewurkje" in the identical non-update string.
-    - Current: `Privacyynstellingen lêze en oanpasse.`
-    - Source: `Read and modify privacy settings.`
-    - Suggest: `Privacyynstellingen lêze en bewurkje.`
-    - mozac_feature_addons_permissions_privacy_description translates the same source sentence as "Privacyynstellingen lêze en bewurkje"; the paired update string must match.
-- `mozac_feature_contextmenu_snackbar_link_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fy-rNL/strings.xml` — "Link" is rendered as "Koppeling" (Dutch) here while the rest of the file consistently uses the Frisian "Keppeling".
-    - Current: `Koppeling nei klamboerd kopiearre`
-    - Source: `Link copied to clipboard`
-    - Suggest: `Keppeling nei klamboerd kopiearre`
-    - Sibling strings (mozac_feature_contextmenu_share_link, mozac_feature_contextmenu_snackbar_link_text_copied) use "Keppeling"; "Koppeling" is the Dutch spelling and is inconsistent on the same surface.
-- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fy-rNL/strings.xml` — "notifications" is rendered as "meldingen" here but as "notifikaasjes" in the sibling notification-permission string on the same surface.
-    - Current: `%1$s tastean om meldingen te ferstjoeren?`
-    - Source: `Allow %1$s to send notifications?`
-    - Suggest: `%1$s tastean om notifikaasjes te ferstjoeren?`
-    - mozac_feature_sitepermissions_notification_permission_rationale_dialog_message translates "notifications" as "notifikaasjes"; the same term in the same notification-permission dialog flow should be consistent.
-- `credit_cards_warning_dialog_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "payment methods" is rendered "betelmetoaden" here but "betellingsmetoaden" in the neighbouring credit card strings.
-    - Current: `betelmetoaden`
-    - Source: `Secure your saved payment methods`
-    - Suggest: `betellingsmetoaden`
-    - Inconsistent terminology for the same source term on the same surface (see credit_cards_warning_dialog_message_3 and credit_cards_biometric_prompt_unlock_message_2).
-- `debug_drawer_region_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Tools" rendered as "helpmiddelen" here while the same debug-drawer surface uses "ark" elsewhere (CFR-ark, Add-ons-ark, Ark foar automatysk ynfoljen).
-    - Current: `Regiohelpmiddelen`
-    - Source: `Region Tools`
-    - Suggest: `Regio-ark`
-    - Terminology inconsistency for "Tools" on the same Debug Drawer surface, where "ark" is the established rendering.
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "extension(s)" rendered as "add-on(s)" while the rest of the string uses "útwreidingen" for extensions.
-    - Current: `de add-on(s) opnij te starten`
-    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
-    - Suggest: `de útwreiding(en) opnij te starten`
-    - Source consistently says "extension(s)"; the surrounding sentences use útwreidingen, so add-on is an inconsistent term for the same source word.
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "more private" rendered as "persoanliker" (more personal) instead of the privacy term used in the parallel string.
-    - Current: `persoanliker`
-    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
-    - Suggest: `mear privee`
-    - The source says "more private"; the parallel string ip_protection_onboarding_body_promo translates the same phrase as "mear privee", so "persoanliker" (more personal) is both a mistranslation and inconsistent.
-- `search_engine_selector_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Search engine" is rendered as "sykmasjine" here but "sykmasine" everywhere else in the same surface.
-    - Current: `%s: sykmasjineselektor`
-    - Source: `%s: search engine selector`
-    - Suggest: `%s: sykmasineselektor`
-    - Neighbouring strings (search_engine_edit_custom_search_engine_title, search_engine_icon_content_description_1, search_engine_use_default) all use "sykmasine"; this spelling is inconsistent.
 - `setup_checklist_subtitle_5_steps_completed_state` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "setup steps" translated as "ynstallaasjestappen" (installation steps) instead of setup/configuration steps.
     - Current: `ynstallaasjestappen`
     - Source: `You’ve completed all 5 setup steps. Enjoy the speed, privacy, and security of %1$s.`
@@ -727,9 +696,15 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (7)
 
-_Nothing dismissed._
+- `mozac_feature_addons_permissions_dialog_heading_required_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
+- `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
+- `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Swapping the order of the two joined verbs does not change the meaning; both share and sell are translated.
+- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "%s trochsykje" follows the standard Dutch/Frisian Mozilla pattern (cf. nl "%s doorzoeken") for searching with a named engine.
+- `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "Slute" (close) is an accepted rendering of "Dismiss" for a banner button, as in Dutch "Sluiten".
+- `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "Syngronisearre iepen ljepblêden" correctly means synced open tabs; word order is only a stylistic difference.
+- `translation_in_progress_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Infinitive plus ellipsis ("Oersette…") is the standard Dutch/Frisian way to express an in-progress action.
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
 
@@ -743,8 +718,16 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (13)
+### Fixed to date (21)
 
+- `mozac_feature_contextmenu_snackbar_link_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `credit_cards_warning_dialog_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `debug_drawer_region_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
+- `search_engine_selector_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
 - `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
 - `connection_security_panel_verified_by` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
 - `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18

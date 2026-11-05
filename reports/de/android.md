@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `f8e5f3a985cd` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 2,626 |
+| **Strings reviewed this run** | 0 of 2,626 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Typo: "Elfmeterschließen" should be "Elfmeterschießen".
-    - Current: `Elfmeterschließen`
-    - Source: `Penalties`
-    - Suggest: `Elfmeterschießen`
-    - The German term for a penalty shootout is "Elfmeterschießen" (from "schießen", to shoot). "Elfmeterschließen" (from "schließen", to close) is a misspelling.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
