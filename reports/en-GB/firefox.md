@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for en-GB: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `dom-manifest-invalid-type` — `dom/dom/manifest.ftl` — Straight apostrophe used where the source and locale convention use the typographic apostrophe.
-    - Current: `{ $objectName }'s`
-    - Source: `Expected the { $objectName }’s { $property } member to be a { $expectedType }.`
-    - Suggest: `{ $objectName }’s`
-    - The en-US source uses ’ and the locale overwhelmingly uses typographic apostrophes (1121 vs 56).
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

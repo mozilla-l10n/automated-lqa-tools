@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 137 of 16,860 |
+| **Strings reviewed this run** | 0 of 16,860 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,83 +18,9 @@ Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (15)
+### 🆕 New findings (0)
 
-- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular variant reads "(flik 1)" ("tab 1") instead of "(1 flik)".
-    - Current: `(flik { $count })`
-    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
-    - Suggest: `({ $count } flik)`
-    - en-US "(1 tab)" is a count. Putting the number after the noun turns it into an ordinal label ("tab number 1"), and it no longer matches the plural variant.
-- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular uses "vald" but plural uses "markerade" for the same "selected".
-    - Current: `{ $count } flik vald`
-    - Source: `{$count ->} [one] { $count } tab selected [other] { $count } tabs selected`
-    - Suggest: `{ $count } flik markerad`
-    - The same term is rendered two ways in one message. The rest of this surface uses "markera" ("Markera alla flikar", "Avbryt markering").
-- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Leaves out "unload tabs you’re not using".
-    - Current: `och frigör resurser.`
-    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
-    - Suggest: `och inaktivera flikar du inte använder för att frigöra resurser.`
-    - en-US says you can unload unused tabs to free up resources. The Swedish only says "free up resources", so the feature's main action is missing.
-- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — Adjective doesn't agree with the neuter noun "Objektet".
-    - Current: `vid index { $index } är ogiltig.`
-    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
-    - Suggest: `vid index { $index } är ogiltigt.`
-    - "Objektet" is neuter, so the adjective must be "ogiltigt".
-- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
-    - Current: `Start URL:en`
-    - Source: `The start URL is invalid.`
-    - Suggest: `Start-URL:en`
-    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
-- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
-    - Current: `Start URL:en`
-    - Source: `The start URL is outside the scope, so the scope is invalid.`
-    - Suggest: `Start-URL:en`
-    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
-    - Current: `Start URL:en`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `Start-URL:en`
-    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
-- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The numeral 1 is followed by the definite form "nedladdningen", which is ungrammatical in Swedish.
-    - Current: `stoppa 1 nedladdningen`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and close this Private Window? [other] Stop { $downloadsCount } downloads and close this Private Window?`
-    - Suggest: `stoppa 1 nedladdning`
-    - In Swedish a numeral takes the indefinite noun form ("1 nedladdning"). "1 nedladdningen" is a grammar error.
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The name is split into two words and capitalised instead of being written as a hyphenated compound.
-    - Current: `OLED Svart`
-    - Source: `OLED Black`
-    - Suggest: `OLED-svart`
-    - In Swedish, a compound that starts with an abbreviation takes a hyphen and a lowercase second part ("OLED-svart"). "OLED Svart" is särskrivning, an incorrectly split compound, and uses English-style title case.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (beginning of tab strip) translated as the verb "Starta".
-    - Current: `Starta`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Början`
-    - Developer comment says this moves the tab to the start of the tab strip; "Starta" is the imperative verb "to start", not the position.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (noun, tabs that are duplicates) translated as the verb phrase "Duplicera flikar".
-    - Current: `Duplicera flikar`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Dubblettflikar`
-    - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
-- `tab-context-add-tab-to-group-closed-groups` — `browser/browser/tabContextMenu.ftl` — "Closed Groups" rendered as "Slutna grupper" (exclusive/sealed groups) instead of groups that have been closed.
-    - Current: `Slutna grupper`
-    - Source: `label: Closed Groups`
-    - Suggest: `Stängda grupper`
-    - The groups have been closed (stängda); "slutna" means closed in the sense of exclusive or sealed.
-- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — Typo "flikat" for "flikar".
-    - Current: `Flytta { $tabCount } flikat till`
-    - Source: `accesskey: v label: {$tabCount ->} [1] Move to [other] Move { $tabCount } Tabs to`
-    - Suggest: `Flytta { $tabCount } flikar till`
-    - The plural of "flik" is "flikar"; "flikat" is a misspelling.
-- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — Verb "Separate" translated as the adjective "Separata".
-    - Current: `Separata flikar`
-    - Source: `accesskey: t label: Separate Tabs`
-    - Suggest: `Separera flikar`
-    - Developer comment says the action separates the two split-view tabs; "Separata flikar" means "separate (distinct) tabs" rather than the command.
-- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — "Öka" (increase) does not work with the browser as object; "boost" here means enhance/improve.
-    - Current: `Öka { -brand-short-name } med tillägg`
-    - Source: `Boost { -brand-short-name } with extensions`
-    - Suggest: `Förbättra { -brand-short-name } med tillägg`
-    - en-US "Boost Firefox with extensions" means enhance it. Swedish "öka" means to increase a quantity, so "Öka Firefox" is unidiomatic and close to meaningless.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 16,321 |
+| **Strings reviewed this run** | 0 of 16,321 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — "It is therefore unlikely that anyone read this page" is rendered as an absolute "no one could read this page".
-    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
-    - The en-US only says it is unlikely the page was read. The Vietnamese says nobody can read it, a security guarantee the product does not make.
-- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "Logins entered here could be compromised" is rendered as "Logging in here could harm you".
-    - Current: `Đăng nhập vào đây có thể gây tổn hại cho bạn.`
-    - Source: `This connection is not secure. Logins entered here could be compromised.`
-    - Suggest: `Thông tin đăng nhập được nhập tại đây có thể bị đánh cắp.`
-    - The source warns that the credentials typed here could be compromised. The Vietnamese turns this into a vague claim that logging in could harm the user, and the point about credentials is lost.
-- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency" is rendered as "Chứng chỉ minh bạch" (transparent certificate) instead of transparency of certificates.
-    - Current: `Chứng chỉ minh bạch`
-    - Source: `This website complies with the Certificate Transparency policy.`
-    - Suggest: `Minh bạch chứng chỉ`
-    - In Vietnamese word order, "Chứng chỉ minh bạch" means "a transparent certificate". The policy is Certificate Transparency, which is "Minh bạch chứng chỉ".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

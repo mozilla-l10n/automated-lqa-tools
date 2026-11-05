@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 37 of 15,371 |
+| **Strings reviewed this run** | 0 of 15,371 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
-    - Current: `El id del miembro`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `El miembro id`
-    - In the en-US, "id" is the name of the manifest member. "El id del miembro" means "the member's id", which is a different thing.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
-    - Current: `El id del miembro`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `El miembro id`
-    - In the en-US, "id" is the member's name, just as start_url is in the same sentence. The translation instead talks about a member's id.
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" should agree with the feminine noun "conexión".
-    - Current: `no es privado`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `no es privada`
-    - The subject is "Su conexión", which is feminine, so the adjective must be "privada".
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses do not match: present subjunctive "lea" is used alongside past "viajó".
-    - Current: `improbable que nadie lea esta página mientras viajó`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `improbable que nadie haya leído esta página mientras viajaba`
-    - The en-US "anyone read this page as it traveled" refers to the past. "lea" (present) does not fit with "viajó" (past), so the sentence is ungrammatical.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

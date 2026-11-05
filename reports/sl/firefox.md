@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 120 of 16,011 |
+| **Strings reviewed this run** | 0 of 16,011 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,74 +18,13 @@ Also for sl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
-    - Current: `enako poreklo`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `enak izvor`
-    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
-    - Current: `Drugi osebe`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `Druge osebe`
-    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
-    - Current: `vstavljenih v proces`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `vstavljene v proces`
-    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
+_No new findings._
 
-### ✅ Fixed since the last run (14)
+### ✅ Fixed since the last run (0)
 
-- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
-    - Current: `ni posodobljen`
-    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
-    - Suggest: `ni podprt`
-    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
-- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
-    - Current: `Lisica, ki sedi v svetli puščavi`
-    - Source: `A fox running across a light desert`
-    - Suggest: `Lisica, ki teče po svetli puščavi`
-    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
-    - Current: `Vaše slike in ozadja, ki ste jih shranili`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `Vaše slike, ozadja, ki ste jih shranili`
-    - The en-US is the tile label "Your images" followed by an appositive description; the Slovenian turns it into a coordinated list, implying two separate categories.
-- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
-    - Current: `Filter funkcij`
-    - Source: `Filter functions`
-    - Suggest: `Filtriraj funkcije`
-    - The en-US placeholder is an imperative instructing the user to filter functions; "Filter funkcij" reads as "a filter of functions", changing the meaning. Compare the parallel at-rules string.
-- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
-    - Current: `Nov to sejo`
-    - Source: `alt: New this session title: New this session`
-    - Suggest: `Nov v tej seji`
-    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
-- `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
-    - Source: `This will replace all your current { -brand-short-name } data with your backup.`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Last coordinated item not in instrumental to match "se strinjate z … in …". "…in <a>obvestilo o zasebnosti…</a>" → "…in <a>obvestilom…</a>".
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (every other policy description ends with one).
-    - Source: `Enable or disable Picture-in-Picture.`
-- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([other]) — browser/browser/protections.ftl — "{ $count } sledilnih piškotov" → "…piškotkov" (genitive plural of piškotek).
-    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
-    - Suggest: `"…piškotkov"`
-- `inactive-css-not-display-block-on-floated-fix` — `devtools/client/tooltips.ftl` — devtools/client/tooltips.ftl — Missing space before markup: "odstraniti<strong>float</strong>" → "odstraniti <strong>float</strong>" (renders "odstranitifloat").
-    - Source: `Try removing <strong>float</strong> or adding <strong>display:block</strong>. { learn-more }`
-- `network-connection-status-connecting` — `netwerk/netwerk/necko.ftl` — netwerk/netwerk/necko.ftl — Stray space before the ellipsis: "{ $host } …" → "{ $host }…" (siblings looking-up, sending-request, waiting are correct).
-    - Source: `Connecting to { $host }…`
-- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
-    - Source: `The password entered was incorrect.`
-- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
-    - Current: `Označujte dokumente`
-    - Source: `Mark up PDFs`
-    - Suggest: `Označujte dokumente PDF`
-    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
-- `language-name-ti` — `toolkit/toolkit/intl/languageNames.ftl` — Tigrinya given the same name as Tigre (language-name-tig = "tigrajščina"). → "tigrinjščina" (must differ from Tigre).
-    - Source: `Tigrinya`
-    - Suggest: `"tigrinjščina"`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

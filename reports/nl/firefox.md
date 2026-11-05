@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 82 of 16,803 |
+| **Strings reviewed this run** | 12 of 16,815 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-picture-menu-hide-photo` — `browser/browser/newtab/newtab.ftl` — newtab-picture-header, newtab-picture-menu-hide-photo, newtab-picture-image-alt — newtab/newtab.ftl — "Afbeelding van de dag" vs "Foto van de dag" in newtab-picture-header-main, home-prefs-picture-header, newtab-custom-widget-picture-toggle, newtab-picture-menu-show-photo, newtab-picture-widget-menu-button — both shown side by side in the same widget.
+_Nothing retired._
 
 ---
 
@@ -45,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,803 |
-| Missing strings | 57 |
+| Strings | 16,815 |
+| Missing strings | 45 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +63,15 @@ _Nothing to re-read._
 
 ### Completeness
 
-**57 strings** are not translated yet, concentrated in:
+**45 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/onboarding.ftl` — 17
-- `browser/browser/tabContextMenu.ftl` — 14
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
 - `toolkit/toolkit/downloads/downloadUI.ftl` — 6
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 5
+- `browser/browser/tabContextMenu.ftl` — 5
 - `browser/browser/preferences/preferences.ftl` — 5
 - `dom/chrome/security/security.properties` — 2
 - `dom/dom/manifest.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `toolkit/toolkit/about/aboutGlean.ftl` — 1
 - `toolkit/toolkit/firefoxlabs/features.ftl` — 1
 - `browser/browser/tabbrowser.ftl` — 1
@@ -87,7 +86,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 824, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1045 | **typographic** |
+| apostrophe | `typographic` 1046 | **typographic** |
 | ellipsis | `char` 401 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |

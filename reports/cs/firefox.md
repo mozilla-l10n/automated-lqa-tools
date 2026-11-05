@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `b4cac9524192` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
-    - Current: `Začátek adresy URL je mimo rozsah`
-    - Source: `The start URL is outside the scope, so the scope is invalid.`
-    - Suggest: `Počáteční adresa URL je mimo rozsah`
-    - In this message, start URL means the manifest's start_url, the address the app opens at. It does not mean the beginning part of a URL. The Czech reads as "the beginning of the URL is outside the scope".
-- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
-    - Current: `Začátek adresy URL je neplatný.`
-    - Source: `The start URL is invalid.`
-    - Suggest: `Počáteční adresa URL je neplatná.`
-    - Start URL means the manifest's start_url (the starting address). The Czech says the beginning of the URL is invalid.
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
-    - Current: `Začátek adresy URL musí být stejného původu`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `Počáteční adresa URL musí být stejného původu`
-    - Start URL means the manifest's start_url (the starting address). The Czech refers to the beginning of a URL.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — "extra privacy" mistranslated as "zvlášť soukromí", which is not meaningful Czech.
-    - Current: `<a data-l10n-name="learn-more-vpn">zvlášť soukromí</a>`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
-    - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
+_Nothing retired._
 
 ---
 

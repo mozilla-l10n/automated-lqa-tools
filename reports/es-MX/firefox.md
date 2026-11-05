@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 126 of 16,119 |
+| **Strings reviewed this run** | 0 of 16,119 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,63 +18,9 @@ Also for es-MX: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (11)
+### 🆕 New findings (0)
 
-- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "could be compromised" is rendered as "pueden ser peligrosos" (could be dangerous).
-    - Current: `Inicios de sesión ingresados aquí pueden ser peligrosos.`
-    - Source: `This connection is not secure. Logins entered here could be compromised.`
-    - Suggest: `Los inicios de sesión ingresados aquí podrían verse comprometidos.`
-    - The en-US says credentials typed on an insecure page could be compromised, meaning exposed or stolen. The Spanish says the logins themselves are dangerous, which is a different meaning.
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
-    - Current: `El id del miembro`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `El miembro id`
-    - In the source, "id" is the name of a manifest member. The Spanish makes it sound like an id that belongs to some member.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
-    - Current: `El id del miembro`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `El miembro id`
-    - "id" names the manifest member, just as start_url does later in the same sentence ("el miembro start_url"). The rendering should match that pattern.
-- `genai-selection-callout-title` — `browser/browser/genai.ftl` — Formal imperative "Resalte" breaks the locale's informal register.
-    - Current: `Resalte el texto`
-    - Source: `Highlight text to choose an action`
-    - Suggest: `Resalta el texto`
-    - es-MX uses informal address throughout (e.g. "Selecciona" in the same file); "Resalte" is the usted form.
-- `genai-more-actions-ai-provider` — `browser/browser/genai.ftl` — Missing personal preposition "a" before the provider being asked.
-    - Current: `Preguntar { $provider }`
-    - Source: `label: Ask { $provider }`
-    - Suggest: `Preguntar a { $provider }`
-    - "Preguntar" takes the person or entity being asked with "a"; the sibling string correctly reads "Preguntar a la IA".
-- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes used instead of the locale's curly double quotes.
-    - Current: `"{ $caName }"`
-    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
-    - Suggest: `“{ $caName }”`
-    - The source uses curly quotes, and the es-MX convention is curly-double.
-- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — "Conección" is misspelled, and "encriptada" doesn't match the "cifrado" used in the other strings.
-    - Current: `Conección encriptada`
-    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `Conexión cifrada`
-    - The correct spelling is "Conexión". The sibling strings consistently use "cifrado/cifrada".
-- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — The key size reads as a separate item followed by a meaningless "llaves bit" instead of "N-bit keys".
-    - Current: `{ $keySize }, llaves bit`
-    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `claves de { $keySize } bits`
-    - The source says "{ $keySize } bit keys". The comma breaks the number off from the keys, and "llaves bit" is meaningless. The broken-encryption string already uses "claves de { $keySize } bits".
-- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — The policy's name is mistranslated as "certificado de transparencia" ("transparency certificate").
-    - Current: `política de certificado de transparencia`
-    - Source: `This website complies with the Certificate Transparency policy.`
-    - Suggest: `política de Transparencia de certificados`
-    - Certificate Transparency is about making certificates transparent. It is not a certificate of transparency.
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" refers to the feminine noun "conexión".
-    - Current: `no es privado`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `no es privada`
-    - The subject is "Tu conexión", which is feminine.
-- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — The extra "que" turns the sentence into a fragment with no main verb.
-    - Current: `Partes de la página que estás viendo que no fueron cifradas`
-    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
-    - Suggest: `Partes de la página que estás viendo no fueron cifradas`
-    - The source is a complete statement. The second "que" makes it a noun phrase with no main verb.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

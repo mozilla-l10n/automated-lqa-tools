@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 31 of 13,922 |
+| **Strings reviewed this run** | 0 of 13,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,38 +18,9 @@ Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (6)
+### 🆕 New findings (0)
 
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Typo: “leman” should be “lemah” (weak).
-    - Current: `enkripsi leman`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `enkripsi lemah`
-    - en-US 'weak encryption'; 'leman' is not an Indonesian word, it is a misspelling of 'lemah'.
-- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
-    - Current: `kunci { $keySize } bita`
-    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `kunci { $keySize } bit`
-    - en-US says 'bit keys'. In Indonesian 'bita' means byte, so a 256-bit key would read as 256 bytes.
-- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — “bit” is rendered as “bita” (byte), which reports the key size in the wrong unit.
-    - Current: `kunci { $keySize } bita`
-    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `kunci { $keySize } bit`
-    - en-US says 'bit keys'. In Indonesian 'bita' means byte, which is a different unit.
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — “resolve” is translated as “memutuskan” (to decide), which makes no sense in this context.
-    - Current: `tidak memutuskan ke URL yang valid`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `tidak menghasilkan URL yang valid`
-    - Here 'resolve to a valid URL' means the id produces or resolves into a valid URL. 'Memutuskan' means to decide or make a decision.
-- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes are used where the house style uses curly quotes.
-    - Current: `"{ $caName }"`
-    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
-    - Suggest: `“{ $caName }”`
-    - The source uses curly quotes, and the locale convention is curly-double.
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The colon before the list of repeated purposes is missing.
-    - Current: `tujuan yang berulang { $purposes }`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `tujuan yang berulang: { $purposes }`
-    - en-US has 'repeated purpose(s): { $purposes }'. Without the colon, the list runs straight into the sentence.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

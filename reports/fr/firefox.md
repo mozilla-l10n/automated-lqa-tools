@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 137 of 17,089 |
+| **Strings reviewed this run** | 0 of 17,089 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,108 +18,9 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (20)
+### 🆕 New findings (0)
 
-- `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier Connection-Allowlist was translated as « Connexion-Allowlist ».
-    - Current: `Connexion-Allowlist`
-    - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
-    - Suggest: `Connection-Allowlist`
-    - The developer comment says not to translate Connection-Allowlist. It is a header/policy name, and the sibling string keeps it in English.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — "Redirect of %1$S" became "redirection vers %1$S" (redirect to).
-    - Current: `une redirection vers %1$S`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `une redirection de %1$S`
-    - The comment says %1$S is the URI of the resource that was redirected, not where it was redirected to. The sibling string correctly uses « de ».
-- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — The singular variant puts the noun before the number and keeps it plural: « (onglets 1) ».
-    - Current: `(onglets { $count })`
-    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
-    - Suggest: `({ $count } onglet)`
-    - The en-US is "(1 tab)". The French needs the number first and the singular noun, matching the other variant.
-- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" was rendered as « La portée de l’URL » (the scope of the URL).
-    - Current: `La portée de l’URL est invalide.`
-    - Source: `The scope URL is invalid.`
-    - Suggest: `L’URL de portée est invalide.`
-    - The message is about the manifest's scope URL being invalid, not about the scope of some URL.
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" was rendered as « La portée de l’URL » (the scope of the URL).
-    - Current: `La portée de l’URL doit`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `L’URL de portée doit`
-    - It is the scope URL that must share the document's origin, not the scope of a URL.
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The plural variant uses « fins » for "purposes" while the singular variant and sibling strings use « objectif(s) ».
-    - Current: `contient des fins non prises en charge`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - Suggest: `possède des objectifs non pris en charge`
-    - The same term "purpose" is translated differently within one message and across the manifest strings.
-- `about-processes-reload-site` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Reload" is « Recharger » here but « Actualiser » in the other reload strings, and « depuis » wrongly suggests the reload comes from the site.
-    - Current: `Recharger les onglets depuis { $site }`
-    - Source: `title: Reload tabs from { $site }`
-    - Suggest: `Actualiser les onglets de { $site }`
-    - about-processes-reload-tab and bulk-reload-tabs use « Actualiser ». "Tabs from site" means the tabs belonging to the site, as the unload string's « de » shows.
-- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The [1] variant adds a spurious pronoun, giving the ungrammatical "et le passer hors connexion".
-    - Current: `et le passer hors connexion`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
-    - Suggest: `et passer hors connexion`
-    - The source says "Stop 1 download and go offline?". "le passer" makes the download the object of going offline, which is ungrammatical and doesn't match the other variants.
-- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" is rendered as a progress being interrupted.
-    - Current: `mais une progression pourra être interrompue`
-    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
-    - Suggest: `mais leur progression pourrait être perdue`
-    - The source says progress may be lost, not interrupted. The matching quit message correctly uses "perdue".
-- `pippki-get-pkcs12-password-message` — `security/manager/security/pippki/pippki.ftl` — The prompt is garbled and doesn't say this is the password used to encrypt the certificate backup.
-    - Current: `Veuillez saisir le mot de passe portable de sécurité protégeant ce certificat de sécurité et la clé privée :`
-    - Source: `Please enter the password that was used to encrypt this certificate backup:`
-    - Suggest: `Veuillez saisir le mot de passe utilisé pour chiffrer cette sauvegarde de certificat :`
-    - The source asks for the password that was used to encrypt this certificate backup. "mot de passe portable de sécurité" is meaningless, and the private key and "certificat de sécurité" are not in the source.
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The acronym OLED is written in lowercase and in an unnatural word order.
-    - Current: `Oled noir`
-    - Source: `OLED Black`
-    - Suggest: `Noir OLED`
-    - OLED is an acronym and stays uppercase. The theme is a black theme for OLED screens, so French says "Noir OLED".
-- `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — The singular variant reads as "delete password number 1?" instead of "delete 1 password?".
-    - Current: `Supprimer le mot de passe { $total } ?`
-    - Source: `{$total ->} [one] Delete { $total } password? [other] Delete { $total } passwords?`
-    - Suggest: `Supprimer { $total } mot de passe ?`
-    - The source says "Delete { $total } password?". Placing the number after "le mot de passe" turns the count into an identifier.
-- `genai-menu-summarize-with-ai` — `browser/browser/genai.ftl` — The menu command uses the imperative instead of the infinitive used for French menu items.
-    - Current: `Résumez avec l’IA`
-    - Source: `Summarize with AI`
-    - Suggest: `Résumer avec l’IA`
-    - French Firefox menu commands use the infinitive, as the sibling string "Demander à l’IA…" does. The imperative "Résumez" is inconsistent with that.
-- `close-tabs-to-the-start-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs" is translated as "Tabulations" instead of "Onglets".
-    - Current: `Tabulations à gauche`
-    - Source: `accesskey: l label: Tabs to Left`
-    - Suggest: `Onglets à gauche`
-    - Browser tabs are "onglets" in fr, and the sibling labels use "Onglets". "Tabulations" means tab characters.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (a position in the tab strip) is translated as the verb "Démarrer".
-    - Current: `Démarrer`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Début`
-    - The developer comment says this moves the tab to the start of the tab strip. It is a position, and it pairs with "Fin".
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — The label reads as "Duplicate the tabs" (a command) instead of naming the duplicate tabs to close.
-    - Current: `Dupliquer les onglets`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Onglets en double`
-    - The comment says the item, under "Close Multiple", closes duplicates of the selected tab. "Dupliquer" tells the user it copies tabs.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip uses "Open" as a verb, but the source means tabs that are open.
-    - Current: `Ouvrir des onglets depuis vos autres appareils`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Onglets ouverts sur vos autres appareils`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open).
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps English word order and isn't grammatical French.
-    - Current: `{ -brand-short-name } paramètres le cas échéant`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `Paramètres de { -brand-short-name }, le cas échéant`
-    - French needs "Paramètres de X". A brand name placed before the noun is not grammatical.
-- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — The tooltip starts with a lowercase letter.
-    - Current: `moyens de paiement enregistrés`
-    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
-    - Suggest: `Moyens de paiement enregistrés`
-    - The source and the sibling tooltips start with a capital letter.
-- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — The header is garbled and ungrammatical, and does not say "Boost Firefox with extensions".
-    - Current: `Plus de { -brand-short-name } d’extensions`
-    - Source: `Boost { -brand-short-name } with extensions`
-    - Suggest: `Boostez { -brand-short-name } avec des extensions`
-    - The en-US says "Boost {brand} with extensions". The French "Plus de Firefox d’extensions" reads roughly as "more of Firefox of extensions". It is ungrammatical and does not get the meaning across.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -133,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `appmenuitem-share-firefox-title2` — `browser/browser/appmenu.ftl` — "Share { -brand-product-name }" is rendered "Partager" here while all other referral strings use "Recommander".
-    - Current: `Partager { -brand-product-name }`
-    - Suggest: `Recommander { -brand-product-name }`
-    - The developer comment says this button links to the Referrals page, the same surface as appmenu-referrals2, menu-referrals2 and referrals-link2, which all translate "Share" as "Recommander"; the inconsistent term is wrong here.
-- `ipprotection-site-inclusions-callout-description` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as accessing sites from another location, changing the meaning.
-    - Current: `Activez-le sur les sites où vous souhaitez renforcer votre confidentialité ou y accéder depuis un autre emplacement`
-    - Suggest: `Activez-le lorsque vous souhaitez renforcer votre confidentialité ou naviguer en fonction de votre localisation`
-    - The en-US says "when you want extra privacy or location-based browsing"; the French adds "sur les sites" and reinterprets it as accessing sites from another location.
+_Nothing retired._
 
 ---
 

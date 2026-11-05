@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,9 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
-    - Current: `O ID do membro`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `O membro id`
-    - The source refers to the manifest member named "id". "O ID do membro" means the identifier of the member, which is a different thing.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's ID" instead of the manifest's id member.
-    - Current: `O ID do membro`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `O membro id`
-    - The source refers to the manifest member named "id", matching the "start_url" member mentioned later in the same sentence. "O ID do membro" means the member's identifier.
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The verb is in the infinitive where a conjugated form is needed.
-    - Current: `Outras pessoas poder ver`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `Outras pessoas podem ver`
-    - The subject "Outras pessoas" needs the conjugated verb "podem". "poder" is ungrammatical here.
-- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency policy" is mistranslated as "the policy of the transparency certificate".
-    - Current: `política do certificado de transparência`
-    - Source: `This website complies with the Certificate Transparency policy.`
-    - Suggest: `política de Transparência de Certificados`
-    - Certificate Transparency is the name of a framework for certificates. It is not a certificate called "transparency".
-- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — "Broken Encryption" is rendered as "obsolete encryption".
-    - Current: `Encriptação obsoleta`
-    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
-    - Suggest: `Encriptação quebrada`
-    - "Broken" means the encryption is compromised or insecure. "obsoleta" only says it is outdated, which is a different claim.
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses don't match: a present subjunctive is paired with a past event.
-    - Current: `alguém leia esta página enquanto circulou`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `alguém tenha lido esta página enquanto circulou`
-    - The source says "anyone read this page as it traveled", which is in the past. The verb needs the perfect subjunctive "tenha lido" to agree with "circulou".
-- `menu-places-show-more-in-sidebar` — `browser/browser/menubar.ftl` — The label copies English title case, which pt-PT does not use.
-    - Current: `Mostrar Mais na Barra Lateral`
-    - Source: `label: Show More in Sidebar`
-    - Suggest: `Mostrar mais na barra lateral`
-    - pt-PT UI labels use sentence case. Capitalising each word copies English title case.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `b4cac9524192` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 13,554 |
+| **Strings reviewed this run** | 0 of 13,554 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,9 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `dom-manifest-should-be-object` — `dom/dom/manifest.ftl` — "Manifest" is mistranslated as "الكيان" (entity).
-    - Current: `يجب أن يكون الكيان كائنًا.`
-    - Source: `Manifest should be an object.`
-    - Suggest: `يجب أن يكون البيان كائنًا.`
-    - The source refers to the web app manifest, which is usually rendered as "البيان" or "ملف البيان". "الكيان" means "entity", so the message no longer names the manifest.
-- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The verb "view" is missing, so the sentence is ungrammatical and loses its meaning.
-    - Current: `تصعّب التعمية غير المخوّلين على المعلومات`
-    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
-    - Suggest: `تصعّب التعمية على غير المخوّلين الاطلاع على المعلومات`
-    - The source says encryption makes it difficult for unauthorized people to view information. The Arabic leaves out "الاطلاع" (view) and puts the preposition in the wrong place, so the sentence does not say what is made difficult.
-- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
-    - Current: `لم تُعمّى`
-    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
-    - Suggest: `لم تُعمَّ`
-    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
-- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
-    - Current: `لم تُعمّى`
-    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
-    - Suggest: `لم تُعمَّ`
-    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
-- `dom-manifest-invalid-css-color` — `dom/dom/manifest.ftl` — The adjective after "ليس" must be accusative (صالحًا).
-    - Current: `ليس لون CSS صالح`
-    - Source: `{ $property }: { $value } is not a valid CSS color.`
-    - Suggest: `ليس لون CSS صالحًا`
-    - The predicate of ليس is accusative, and the adjective agrees with it, so it should be "صالحًا".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

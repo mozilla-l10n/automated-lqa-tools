@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,206 |
+| **Strings reviewed this run** | 0 of 16,206 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The en-US question asking whether to trust the CA has become a Finnish statement saying the CA is trusted.
-    - Current: `Varmentajaan { $caName } luotetaan seuraavissa toimissa:`
-    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
-    - Suggest: `Haluatko luottaa varmentajaan ”{ $caName }” seuraavissa toimissa?`
-    - The en-US asks the user to decide ('Do you want to trust … for the following purposes?'), and the dialog then lets them choose the purposes. The Finnish says 'The CA is trusted for the following purposes:', which tells the user trust is already granted. That is not what this dialog does.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

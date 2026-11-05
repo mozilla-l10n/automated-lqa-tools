@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `b4cac9524192` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "Logins" (credentials) is translated as «Οι συνδέσεις» (connections), the same word used for "connection" earlier in the sentence.
-    - Current: `Οι συνδέσεις που γίνονται εδώ`
-    - Source: `This connection is not secure. Logins entered here could be compromised.`
-    - Suggest: `Τα στοιχεία σύνδεσης που εισάγονται εδώ`
-    - The en-US warns that login details typed into this field could be compromised. As translated, the Greek says the connections made here could be intercepted. That is a different statement, and it gets mixed up with "Αυτή η σύνδεση" (this connection) in the first sentence.
-- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "Scope" is translated as «πεδίου» here but as «εύρους» in the other manifest strings.
-    - Current: `Το URL πεδίου`
-    - Source: `The scope URL is invalid.`
-    - Suggest: `Το URL εύρους`
-    - The same manifest "scope" term is «εύρος» in dom-manifest-scope-not-same-origin and dom-manifest-start-url-outside-scope. Using «πεδίου» here is inconsistent and blurs which property is meant.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

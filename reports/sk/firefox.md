@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — The translation says the start URL ("beginning of the URL") is invalid, but the source says the scope is invalid.
-    - Current: `Začiatok URL adresy je mimo rozsah, a tým je neplatný.`
-    - Source: `The start URL is outside the scope, so the scope is invalid.`
-    - Suggest: `Úvodná URL adresa je mimo rozsahu, a preto je rozsah neplatný.`
-    - en-US: 'The start URL is outside the scope, so the scope is invalid.' In the Slovak, 'neplatný' agrees with 'Začiatok', so it calls the start URL invalid. Also, 'Začiatok URL adresy' means 'beginning of the URL', not the manifest's start URL.
-- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
-    - Current: `Začiatok URL adresy je neplatný.`
-    - Source: `The start URL is invalid.`
-    - Suggest: `Úvodná URL adresa je neplatná.`
-    - 'Start URL' means the manifest's start_url, the URL the app opens at. 'Začiatok URL adresy' means 'the beginning of the URL address'.
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
-    - Current: `Začiatok URL adresy musí byť rovnakého pôvodu`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `Úvodná URL adresa musí mať rovnaký pôvod`
-    - 'Start URL' means the manifest's start_url, not the beginning of a URL.
-- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The question ends with a colon instead of a question mark.
-    - Current: `pre nasledujúce účely:`
-    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
-    - Suggest: `pre nasledujúce účely?`
-    - The en-US is a question ('...for the following purposes?') and the Slovak is a question too ('Chcete dôverovať...'), but it ends with a colon.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

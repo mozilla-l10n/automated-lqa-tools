@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `181c4859abf3` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
+| **Previous run** | 2026-11-05 @ `83c84062ba97` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 16,755 |
+| **Strings reviewed this run** | 0 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — A final period was added after the URL value, which the developer comment explicitly forbids.
-    - Current: `érvénytelen: { $value }.`
-    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
-    - Suggest: `érvénytelen: { $value }`
-    - The comment says there is no final period so that it is not mistaken for part of the URL; the translation appends one directly after { $value }.
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — 'Repeated purpose(s)' is rendered as 'multiple purposes', losing the meaning of duplication.
-    - Current: `több célt is tartalmaz`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `ismétlődő célo(ka)t tartalmaz`
-    - The en-US warns that the same purpose appears more than once; 'több célt is tartalmaz' means the item has several purposes, which is valid and not the error being reported.
-- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — 'For the following purposes' is mistranslated as 'in the following topics'.
-    - Current: `a következő témákban`
-    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
-    - Suggest: `a következő célokra`
-    - 'témákban' means 'in topics'; the source refers to trust purposes (e.g. identifying websites, email users), which is 'célokra'.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — The description reverses who needs the extra privacy, asserting that the sites must provide privacy rather than that the user wants extra privacy on them.
-    - Current: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknek fokozott adatvédelmet kell biztosítaniuk, vagy ki kell kapcsolni a VPN-t.`
-    - Suggest: `Állítson be szabályokat azokhoz a webhelyekhez, amelyeknél fokozott adatvédelemre van szükség, vagy amelyeknél ki kell kapcsolni a VPN-t.`
-    - en-US "sites that need extra privacy or VPN turned off" means sites for which the user needs extra privacy; the Hungarian says the sites are obliged to provide extra privacy.
+_Nothing retired._
 
 ---
 

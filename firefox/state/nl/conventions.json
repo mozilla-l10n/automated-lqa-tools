@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "nl",
-  "prose_chunks": 17617,
-  "strings": 16803
+  "prose_chunks": 17629,
+  "strings": 16815
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 1045
+  "typographic": 1046
  },
  "dash": {
   "em": 0,
