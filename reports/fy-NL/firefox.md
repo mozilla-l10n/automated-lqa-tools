@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,742 |
+| **Strings reviewed this run** | 34 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,41 @@ Also for fy-NL: [Firefox for Android](android.md) · [Focus for Android](focus_a
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (5)
 
-- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
-    - Current: `Ferbinings-tastimmingslist:`
-    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — 'deselfe' is misspelled; the Frisian form is 'deselde'.
+    - Current: `deselfe`
+    - Source: `The scope URL must be same origin as document.`
+    - Suggest: `deselde`
+    - 'Deselde' is the correct Frisian word. The neighbouring strings use it, so 'deselfe' reads as a mix of Dutch and Frisian.
+- `security-technical-mixed-content` — `browser/browser/pageInfo.ftl` — Typo 'fersisere' should be 'fersifere' (encrypted).
+    - Current: `Foar in part fersisere ferbining`
+    - Source: `value: Connection Partially Encrypted`
+    - Suggest: `Foar in part fersifere ferbining`
+    - Everywhere else in this file, 'encrypted' is rendered as 'fersifere'. 'Fersisere' is a typo.
+- `security-technical-broken-encryption` — `browser/browser/pageInfo.ftl` — Missing circumflex: 'Unbetroubere' should be 'Ûnbetroubere'.
+    - Current: `Unbetroubere`
+    - Source: `value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `Ûnbetroubere`
+    - The Frisian negative prefix is written 'ûn-', with a circumflex, as in 'ûnjildige' elsewhere in this batch.
+- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — The verb uses the infinitive 'besjen' where the conjugated form 'besjogge' is needed.
+    - Current: `dy’t jo besjen wie`
+    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
+    - Suggest: `dy’t jo besjogge wie`
+    - The subject 'jo' needs a finite verb. The sibling strings correctly use 'dy’t jo besjogge'.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The singular verb 'wurdt' does not agree with the plural noun 'gegevens'.
+    - Current: `útwiksele wurdt`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `útwiksele wurde`
+    - 'Gegevens' is plural, so the relative clause needs the plural 'wurde'.
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (1)
 
-- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
-    - Current: `Ferbinings-tastimmingslist:`
-    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate token "Connection-Allowlist" has been translated.
+    - Current: `Ferbinings-tasteanlist:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
     - Suggest: `Connection-Allowlist:`
-    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
-- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The identifier 'Connection-Allowlist' has been translated, but the localization note says not to translate it.
-    - Current: `Ferbinings-tastimmingslist:`
-    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The developer comment says 'Do not translate Connection-Allowlist.' It is a technical header or policy name. Translating it means developers can no longer find it in the console message.
+    - The developer comment says explicitly: "Do not translate Connection-Allowlist."
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -57,9 +72,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -76,7 +91,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -84,8 +114,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 810, `straight-double` 26, `curly-double` 16 | **curly-single** |
-| apostrophe | `typographic` 1512 | **typographic** |
+| quotes | `curly-single` 811, `straight-double` 26, `curly-double` 16 | **curly-single** |
+| apostrophe | `typographic` 1516 | **typographic** |
 | ellipsis | `char` 401 | **char** |
 | dash | `em` 12, `en` 84 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
@@ -98,14 +128,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (489)
+## 3. Open findings (493)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 12 |
-| 2 | Wrong content (says something other than the English) | 125 |
-| 3 | Degraded language (grammar, spelling, terminology) | 250 |
+| 2 | Wrong content (says something other than the English) | 124 |
+| 3 | Degraded language (grammar, spelling, terminology) | 255 |
 | 4 | Cosmetic (typography, spacing) | 102 |
 
 ### A. Functional, markup, variables & plurals
@@ -398,7 +428,7 @@ _Nothing reported._
     - Current: `Net falide formaat`
     - Source: `Invalid Format`
     - Suggest: `Unjildich formaat`
-- _…and 68 more; see `state/` for the full list._
+- _…and 67 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -647,7 +677,7 @@ _Nothing reported._
     - Current: `wylst gouden oere`
     - Source: `Silhouette of coconut palm trees during golden hour`
     - Suggest: `tidens it gouden oere`
-- _…and 168 more; see `state/` for the full list._
+- _…and 173 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -908,8 +938,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (276)
+### Fixed to date (277)
 
+- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — fixed 2026-11-05
 - `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — fixed 2026-11-03
 - `appmenu-recently-closed-windows` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `cfr-doorhanger-milestone-heading2` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-09-03
@@ -949,4 +980,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `about-logins-import-report-row-description-modified2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
 - `about-logins-intro-import2` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-11
 - `restore-page-restore-header` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11
-- `restore-page-tab-title` — `browser/browser/aboutSessionRestore.ftl` — fixed 2026-08-11

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,716 |
+| **Strings reviewed this run** | 54 of 16,751 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
+    - Current: `URL'ye`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `URL’ye`
+    - tr convention is the typographic apostrophe ’ (U+2019); sibling strings in the same file use “URL’si”.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,716 |
-| Missing strings | 26 |
+| Files | 331 |
+| Strings | 16,751 |
+| Missing strings | 109 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,22 +63,24 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 24 |
+| Typography deviations from this locale's own norm | 25 |
 
 ### Completeness
 
-**26 strings** are not translated yet, concentrated in:
+**109 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aboutLogins.ftl` — 9
-- `browser/browser/newtab/newtab.ftl` — 5
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-- `browser/browser/ipProtection.ftl` — 2
-- `browser/browser/preferences/moreFromMozilla.ftl` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/neterror/netError.ftl` — 1
-- `toolkit/toolkit/branding/brandings.ftl` — 1
-- `browser/browser/newtab/asrouter.ftl` — 1
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/genai.ftl` — 4
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -84,9 +90,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 621, `curly-single` 157, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 899, `straight` 46 | **typographic** |
-| ellipsis | `char` 397 | **char** |
+| quotes | `curly-double` 622, `curly-single` 157, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 903, `straight` 47 | **typographic** |
+| ellipsis | `char` 398 | **char** |
 | dash | `em` 46, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
 | register | `informal` 2, `formal` 48 | **formal** |
@@ -95,11 +101,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-_Nothing reported._
+- **typography — 25 strings** — 25 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BadOpaqueRedirectInterceptionWithURL`, `BlockAutoplayWebAudioStartError`, `InterceptedErrorResponseWithURL`, `InterceptedUsedResponseWithURL`, `LenientThisWarning`, `ManifestIdIsInvalid`, `MediaEMENoCodecsDeprecatedWarning`, `NavigatorGetUserMediaWarning`, `PEDisallowedImportRule`, `PushMessageBadCryptoError`, `PushMessageBadSalt`, `RewriteYouTubeEmbedPathParams` …and 13 more
 
 ---
 
-## 3. Open findings (166)
+## 3. Open findings (167)
 
 
 | Impact | Meaning | Count |
@@ -107,7 +114,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
 | 2 | Wrong content (says something other than the English) | 59 |
 | 3 | Degraded language (grammar, spelling, terminology) | 69 |
-| 4 | Cosmetic (typography, spacing) | 35 |
+| 4 | Cosmetic (typography, spacing) | 36 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -674,6 +681,11 @@ _Nothing reported._
     - Current: `“<?” görüldü. Olası sebep: HTML içinde XML işleme talimatı girişimi. (XML işleme talimatları HTML'de desteklenmez.)`
     - Source: `Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)`
     - The tree uses ’ 899 times against 46 straight.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — Straight apostrophe used instead of the typographic apostrophe required by the locale convention.
+    - Current: `URL'ye`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `URL’ye`
+    - tr convention is the typographic apostrophe ’ (U+2019); sibling strings in the same file use “URL’si”.
 - `about-glean-label-for-tag-pings-with-requirements` — `toolkit/toolkit/about/aboutGlean.ftl` — `about-glean-label-for-tag-pings-with-requirements` uses a straight apostrophe
     - Current: `Ping'lerinizi daha sonra tanıyabilmeniz için akılda kalıcı bir hata ayıklama etiketi <span>(en fazla 20 karakter; yalnızca harf, rakam ve “-”)</span> belirleyin.`
     - Source: `Set a memorable debug tag <span>(20 characters or fewer, alphanumerics and - only)</span> so you can recognize your pings later.`

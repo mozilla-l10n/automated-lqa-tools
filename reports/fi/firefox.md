@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,191 |
+| **Strings reviewed this run** | 32 of 16,206 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The en-US question asking whether to trust the CA has become a Finnish statement saying the CA is trusted.
+    - Current: `Varmentajaan { $caName } luotetaan seuraavissa toimissa:`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `Haluatko luottaa varmentajaan ”{ $caName }” seuraavissa toimissa?`
+    - The en-US asks the user to decide ('Do you want to trust … for the following purposes?'), and the dialog then lets them choose the purposes. The Finnish says 'The CA is trusted for the following purposes:', which tells the user trust is already granted. That is not what this dialog does.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,191 |
-| Missing strings | 551 |
+| Files | 331 |
+| Strings | 16,206 |
+| Missing strings | 654 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**551 strings** are not translated yet, concentrated in:
+**654 strings** are not translated yet, concentrated in:
 
 - `dom/chrome/dom/dom.properties` — 72
-- `toolkit/toolkit/about/aboutGlean.ftl` — 62
-- `browser/browser/ipProtection.ftl` — 50
+- `toolkit/toolkit/about/aboutGlean.ftl` — 63
+- `browser/browser/ipProtection.ftl` — 48
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 36
 - `dom/chrome/security/csp.properties` — 34
-- `dom/chrome/security/security.properties` — 30
+- `dom/chrome/security/security.properties` — 32
+- `browser/browser/newtab/onboarding.ftl` — 29
+- `browser/browser/newtab/newtab.ftl` — 25
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
-- `browser/browser/newtab/newtab.ftl` — 21
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 20
-- `browser/browser/genai.ftl` — 18
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 17
 
 **Files present but identical to en-US:**
 
@@ -123,13 +127,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (156)
+## 3. Open findings (157)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 108 |
-| 2 | Wrong content (says something other than the English) | 38 |
+| 2 | Wrong content (says something other than the English) | 39 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
@@ -419,6 +423,11 @@ _Nothing reported._
     - Source: `tooltiptext: Translate this page - Beta`
     - Suggest: `Käännä tämä sivu - Beta`
     - The comment states: "here 'Beta' should not be translated, as it is a reflection of the un-localized BETA icon that is in the panel". The localized form no longer matches the untranslated BETA icon shown in the panel.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The en-US question asking whether to trust the CA has become a Finnish statement saying the CA is trusted.
+    - Current: `Varmentajaan { $caName } luotetaan seuraavissa toimissa:`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `Haluatko luottaa varmentajaan ”{ $caName }” seuraavissa toimissa?`
+    - The en-US asks the user to decide ('Do you want to trust … for the following purposes?'), and the dialog then lets them choose the purposes. The Finnish says 'The CA is trusted for the following purposes:', which tells the user trust is already granted. That is not what this dialog does.
 - `certificate-viewer-state-province` — `toolkit/toolkit/about/certviewer.ftl` — “State/Province” rendered as “Paikkakunta” (municipality/town).
     - Current: `certificate-viewer-state-province = Paikkakunta`
     - Source: `State/Province`

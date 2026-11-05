@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL je mimo rozsah`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Počáteční adresa URL je mimo rozsah`
+    - In this message, start URL means the manifest's start_url, the address the app opens at. It does not mean the beginning part of a URL. The Czech reads as "the beginning of the URL is outside the scope".
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL je neplatný.`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Počáteční adresa URL je neplatná.`
+    - Start URL means the manifest's start_url (the starting address). The Czech says the beginning of the URL is invalid.
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL musí být stejného původu`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Počáteční adresa URL musí být stejného původu`
+    - Start URL means the manifest's start_url (the starting address). The Czech refers to the beginning of a URL.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +48,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — "extra privacy" mistranslated as "zvlášť soukromí", which is not meaningful Czech.
+    - Current: `<a data-l10n-name="learn-more-vpn">zvlášť soukromí</a>`
+    - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
+    - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
 
 ---
 
@@ -44,9 +61,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +80,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +103,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 475, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 476, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
 | ellipsis | `char` 392, `ascii` 3 | **char** |
 | dash | `em` 67, `en` 30 | _mixed_ |
@@ -86,14 +118,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (253)
+## 3. Open findings (255)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 123 |
-| 3 | Degraded language (grammar, spelling, terminology) | 65 |
+| 2 | Wrong content (says something other than the English) | 126 |
+| 3 | Degraded language (grammar, spelling, terminology) | 64 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -422,11 +454,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `New Bookmarks`
     - Suggest: `Nové záložky`
     - The en-US is "New Bookmarks", and the comment says the title is used when bookmarking multiple tabs at once, not necessarily all of them. The Czech names a different action, "all tabs", which is wrong when only selected tabs are bookmarked. It looks like a stale translation of the older "Bookmark All Tabs" string.
-- `ipprotection-feature-introduction-description-private-browsing-1` — `browser/browser/ipProtection.ftl` — "extra privacy" mistranslated as "zvlášť soukromí", which is not meaningful Czech.
-    - Current: `<a data-l10n-name="learn-more-vpn">zvlášť soukromí</a>`
-    - Source: `Help hide your location for <a data-l10n-name="learn-more-vpn">extra privacy</a> as you browse. Set rules to turn on the VPN for extra privacy or location-based browsing, and off where you don’t.`
-    - Suggest: `<a data-l10n-name="learn-more-vpn">větší soukromí</a>`
-    - "extra privacy" means more privacy; the sibling string renders it as "větší soukromí". "zvlášť soukromí" is ungrammatical and inconsistent.
 - `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — "pick them up again" (resume/reuse the searches) is rendered as "znovu obnovit" (restore again), and the number disagrees with the pronoun.
     - Current: `Nedávné vyhledávání se zobrazí zde, takže je můžete kdykoli znovu obnovit.`
     - Source: `Recent searches will show here so you can pick them up again anytime.`
@@ -477,6 +504,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Resource monitor`
     - Suggest: `Monitor prostředků`
     - en-US says "Resource monitor"; "Správce procesů" corresponds to Process Manager, not resource monitoring.
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL je neplatný.`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Počáteční adresa URL je neplatná.`
+    - Start URL means the manifest's start_url (the starting address). The Czech says the beginning of the URL is invalid.
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL je mimo rozsah`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Počáteční adresa URL je mimo rozsah`
+    - In this message, start URL means the manifest's start_url, the address the app opens at. It does not mean the beginning part of a URL. The Czech reads as "the beginning of the URL is outside the scope".
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
+    - Current: `Začátek adresy URL musí být stejného původu`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Počáteční adresa URL musí být stejného původu`
+    - Start URL means the manifest's start_url (the starting address). The Czech refers to the beginning of a URL.
 - `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — Plural "filters" rendered as singular "filtru".
     - Current: `Žádný protokol neodpovídá aktuálnímu filtru.`
     - Source: `No logs match the current filters.`

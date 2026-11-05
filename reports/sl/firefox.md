@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,919 |
+| **Strings reviewed this run** | 120 of 16,011 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,74 @@ Also for sl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
+    - Current: `enako poreklo`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `enak izvor`
+    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
+    - Current: `Drugi osebe`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Druge osebe`
+    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
+    - Current: `vstavljenih v proces`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `vstavljene v proces`
+    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (14)
 
-_Nothing was fixed._
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
+    - Current: `ni posodobljen`
+    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
+    - Suggest: `ni podprt`
+    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
+- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
+    - Current: `Lisica, ki sedi v svetli puščavi`
+    - Source: `A fox running across a light desert`
+    - Suggest: `Lisica, ki teče po svetli puščavi`
+    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
+    - Current: `Vaše slike in ozadja, ki ste jih shranili`
+    - Source: `aria-label: Your images, wallpapers that you have saved`
+    - Suggest: `Vaše slike, ozadja, ki ste jih shranili`
+    - The en-US is the tile label "Your images" followed by an appositive description; the Slovenian turns it into a coordinated list, implying two separate categories.
+- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
+    - Current: `Filter funkcij`
+    - Source: `Filter functions`
+    - Suggest: `Filtriraj funkcije`
+    - The en-US placeholder is an imperative instructing the user to filter functions; "Filter funkcij" reads as "a filter of functions", changing the meaning. Compare the parallel at-rules string.
+- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
+    - Current: `Nov to sejo`
+    - Source: `alt: New this session title: New this session`
+    - Suggest: `Nov v tej seji`
+    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
+- `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
+    - Source: `This will replace all your current { -brand-short-name } data with your backup.`
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Last coordinated item not in instrumental to match "se strinjate z … in …". "…in <a>obvestilo o zasebnosti…</a>" → "…in <a>obvestilom…</a>".
+    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
+- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (every other policy description ends with one).
+    - Source: `Enable or disable Picture-in-Picture.`
+- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([other]) — browser/browser/protections.ftl — "{ $count } sledilnih piškotov" → "…piškotkov" (genitive plural of piškotek).
+    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
+    - Suggest: `"…piškotkov"`
+- `inactive-css-not-display-block-on-floated-fix` — `devtools/client/tooltips.ftl` — devtools/client/tooltips.ftl — Missing space before markup: "odstraniti<strong>float</strong>" → "odstraniti <strong>float</strong>" (renders "odstranitifloat").
+    - Source: `Try removing <strong>float</strong> or adding <strong>display:block</strong>. { learn-more }`
+- `network-connection-status-connecting` — `netwerk/netwerk/necko.ftl` — netwerk/netwerk/necko.ftl — Stray space before the ellipsis: "{ $host } …" → "{ $host }…" (siblings looking-up, sending-request, waiting are correct).
+    - Source: `Connecting to { $host }…`
+- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
+    - Source: `The password entered was incorrect.`
+- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
+    - Current: `Označujte dokumente`
+    - Source: `Mark up PDFs`
+    - Suggest: `Označujte dokumente PDF`
+    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
+- `language-name-ti` — `toolkit/toolkit/intl/languageNames.ftl` — Tigrinya given the same name as Tigre (language-name-tig = "tigrajščina"). → "tigrinjščina" (must differ from Tigre).
+    - Source: `Tigrinya`
+    - Suggest: `"tigrinjščina"`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +105,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 15,919 |
-| Missing strings | 823 |
+| Files | 329 |
+| Strings | 16,011 |
+| Missing strings | 849 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +124,20 @@ _Nothing retired._
 
 ### Completeness
 
-**823 strings** are not translated yet, concentrated in:
+**849 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 140
-- `browser/browser/ipProtection.ftl` — 93
+- `browser/browser/ipProtection.ftl` — 86
 - `browser/browser/aiWindowContent.ftl` — 58
 - `dom/chrome/dom/dom.properties` — 50
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/preferences/preferences.ftl` — 45
-- `browser/browser/newtab/newtab.ftl` — 45
-- `dom/chrome/security/security.properties` — 28
+- `browser/browser/preferences/preferences.ftl` — 41
+- `browser/browser/newtab/newtab.ftl` — 34
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 33
+- `dom/chrome/security/security.properties` — 30
 - `browser/browser/aiFeatures.ftl` — 27
+- `browser/browser/newtab/onboarding.ftl` — 24
 - `browser/browser/genai.ftl` — 20
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
-- `toolkit/toolkit/about/aboutGlean.ftl` — 18
 
 **Files absent from the locale:**
 
@@ -91,12 +152,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 268, `straight-double` 259, `curly-single` 50, `guillemet` 5 | _mixed_ |
+| quotes | `curly-double` 268, `straight-double` 267, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 363, `ascii` 33 | **char** |
+| ellipsis | `char` 365, `ascii` 33 | **char** |
 | dash | `em` 15, `en` 119 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 539 | **formal** |
+| register | `informal` 8, `formal` 543 | **formal** |
 
 ---
 
@@ -107,15 +168,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (51)
+## 3. Open findings (32)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
-| 4 | Cosmetic (typography, spacing) | 7 |
+| 2 | Wrong content (says something other than the English) | 9 |
+| 3 | Degraded language (grammar, spelling, terminology) | 21 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -123,16 +184,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — "everywhere" is translated as "kjerkoli" (anywhere) instead of "povsod" (everywhere).
-    - Current: `Sinhronizirajte svoje podatke kjerkoli`
-    - Source: `Sync your data everywhere`
-    - Suggest: `Sinhronizirajte svoje podatke povsod`
-    - en-US "Sync your data everywhere" means across all devices; "kjerkoli" means "anywhere", shifting the meaning.
-- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — "is not supported" is translated as "is not updated".
-    - Current: `ni posodobljen`
-    - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
-    - Suggest: `ni podprt`
-    - The en-US says libavcodec "is not supported", but "ni posodobljen" means "is not updated", which is a different condition. The update instruction is already in the following sentence.
 - `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
     - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
     - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
@@ -143,16 +194,6 @@ _Nothing in this category._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
     - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
-- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — "A fox running" translated as "a fox sitting".
-    - Current: `Lisica, ki sedi v svetli puščavi`
-    - Source: `A fox running across a light desert`
-    - Suggest: `Lisica, ki teče po svetli puščavi`
-    - The en-US says the fox is running across a light desert, not sitting; the dark variant is the sitting one.
-- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — Accessible name changed from "Your images, wallpapers that you have saved" to "Your images and wallpapers that you have saved".
-    - Current: `Vaše slike in ozadja, ki ste jih shranili`
-    - Source: `aria-label: Your images, wallpapers that you have saved`
-    - Suggest: `Vaše slike, ozadja, ki ste jih shranili`
-    - The en-US is the tile label "Your images" followed by an appositive description; the Slovenian turns it into a coordinated list, implying two separate categories.
 - `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
     - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
@@ -163,21 +204,11 @@ _Nothing in this category._
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
     - Suggest: `V { -brand-short-name } prepoznavanje govora poteka krajevno, zato zvok nikoli ne zapusti vaše naprave. Za nastavitev se bo ob nadaljevanju začel prenos velikosti ~{ $sizeMB } MB.`
     - The en-US says the download will start when you continue; the target states it will simply be downloaded, omitting the condition, and the second sentence also lacks a subject ("bo na napravo preneslo").
-- `outline.placeholder.functions` — `devtools/client/debugger.properties` — "Filter functions" (verb + object) translated as a noun phrase "Filter funkcij" (filter of functions).
-    - Current: `Filter funkcij`
-    - Source: `Filter functions`
-    - Suggest: `Filtriraj funkcije`
-    - The en-US placeholder is an imperative instructing the user to filter functions; "Filter funkcij" reads as "a filter of functions", changing the meaning. Compare the parallel at-rules string.
 - `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
     - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
-- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Mark up PDFs" is rendered as "Označujte dokumente", dropping the PDF qualifier used consistently in the surrounding strings.
-    - Current: `Označujte dokumente`
-    - Source: `Mark up PDFs`
-    - Suggest: `Označujte dokumente PDF`
-    - The en-US explicitly says PDFs; other strings in the same file keep "PDF" (e.g. "datoteke PDF", "dokumentih PDF").
 - `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
     - Current: `Pišite opombe`
     - Source: `Add notes`
@@ -214,28 +245,19 @@ _Nothing in this category._
 - `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
     - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
     - Suggest: `"Strani za deljenje…".`
-- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — Last coordinated item not in instrumental to match "se strinjate z … in …". "…in <a>obvestilo o zasebnosti…</a>" → "…in <a>obvestilom…</a>".
-    - Source: `By choosing Google Gemini, you agree to the <a data-l10n-name="link1">Google Terms of Service</a>, <a data-l10n-name="link2">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name="link3">Gemini Apps Privacy Not…`
-- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([other]) — browser/browser/protections.ftl — "{ $count } sledilnih piškotov" → "…piškotkov" (genitive plural of piškotek).
-    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
-    - Suggest: `"…piškotkov"`
-- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — Same dual defect: [two]/[few] … zavihkov → zavihka / zavihke.
-    - Source: `label: {$tabCount ->} [one] Unmute tab [other] Unmute { $tabCount } tabs`
-    - Suggest: `zavihka`
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — [two]/[few] forms use genitive plural "zavihkov" instead of the dual/paucal. → [two] … zavihka / [few] … zavihke (the parallel mute string is correct).
-    - Current: `[few]`
-    - Source: `label: {$tabCount ->} [one] Unmute tab ({ $shortcut }) [other] Unmute { $tabCount } tabs ({ $shortcut })`
-    - Suggest: `[two] … zavihka`
-- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — security/manager/security/certificates/certManager.ftl — Nonstandard participle "Vnešeno/vnešeno" → "Vneseno/vneseno" (also inconsistent with pippki-incorrect-pw, which is correct).
-    - Source: `The password entered was incorrect.`
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
+    - Current: `Drugi osebe`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Druge osebe`
+    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
+    - Current: `vstavljenih v proces`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `vstavljene v proces`
+    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
 - `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
     - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
     - Suggest: `"…kombinacij."`
-- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — "New this session" translated with wrong case, producing ungrammatical "Nov to sejo".
-    - Current: `Nov to sejo`
-    - Source: `alt: New this session title: New this session`
-    - Suggest: `Nov v tej seji`
-    - en-US "New this session" means the token is new in the current session; "Nov to sejo" is not grammatical Slovenian for that meaning.
 - `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
     - Source: `async touch input disabled due to unsupported pref: { $preferenceKey }`
     - Suggest: `"…nepodprte…"`
@@ -248,16 +270,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”
-    - Current: `Kliknite "Obnovi podatke" in izberite to datoteko`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovite podatke`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnovi podatke” but the string it names, `restore-from-backup-header`, reads “Obnovite podatke”
-    - Current: `Kliknite "Obnovi podatke" in izberite to datoteko`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovite podatke`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `newtab-section-block-button` — `browser/browser/newtab/newtab.ftl` — newtab "Block" verb — browser/browser/newtab/newtab.ftl — Inconsistent across the same feature: newtab-section-block-button etc. use "Prepovej/Prepovedano/Dovoli" while the topic strings (newtab-section-block-topic etc.) use "Blokiraj/Blokirano/Odblokiraj". → standardize on one verb.
     - Source: `Block`
     - Suggest: `standardize on one verb.`
@@ -270,12 +282,6 @@ _Nothing in this category._
 - `newtab-section-follow-topic` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — "slediti" (newtab-section-follow-button etc.) vs "spremljati" (newtab-section-follow-topic etc.) within the same feature. → pick one verb.
     - Source: `aria-label: Follow { $topic }`
     - Suggest: `pick one verb.`
-- `onboarding-focused-tabs-subtitle` — `browser/browser/newtab/onboarding.ftl` — onboarding "preizkusiti" vs "preskusiti" — browser/browser/newtab/onboarding.ftl — onboarding-focused-tabs-subtitle / onboarding-genai-sidebar-title use "preskusi(te)"; most siblings use the more common "Preizkusite". → align. (both forms valid; low priority.)
-    - Source: `For a streamlined view that can help you stay focused, try your tabs on the side. Or keep it classic with tabs on the top. Switch anytime.`
-    - Suggest: `align.`
-- `onboarding-genai-sidebar-title` — `browser/browser/newtab/onboarding.ftl` — onboarding "preizkusiti" vs "preskusiti" — browser/browser/newtab/onboarding.ftl — onboarding-focused-tabs-subtitle / onboarding-genai-sidebar-title use "preskusi(te)"; most siblings use the more common "Preizkusite". → align. (both forms valid; low priority.)
-    - Source: `Try an AI chatbot in the sidebar`
-    - Suggest: `align.`
 - `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Kaj je novega” but the string it names, `releaseNotes-link`, reads “Novosti”
     - Current: `Preglasi stran "Kaj je novega", ki se odpre po posodobitvi. Če želite onemogočiti prikaz strani po posodobitvi, nastavite pravilnik na prazno vrednost.`
     - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
@@ -297,6 +303,11 @@ _Nothing in this category._
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
     - Suggest: `Lokalni način`
     - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
+    - Current: `enako poreklo`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `enak izvor`
+    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
 - `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
     - Source: `Certificate Authority`
     - Suggest: `align on "overitelj`
@@ -304,30 +315,14 @@ _Nothing in this category._
     - Current: `Vijolična`
     - Source: `label: Violet`
     - Suggest: `unify gender.`
-- `language-name-ti` — `toolkit/toolkit/intl/languageNames.ftl` — Tigrinya given the same name as Tigre (language-name-tig = "tigrajščina"). → "tigrinjščina" (must differ from Tigre).
-    - Source: `Tigrinya`
-    - Suggest: `"tigrinjščina"`
 
 ### E. Typography, punctuation & spacing
 
-- `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — Double space before "zamenjali".
-    - Source: `This will replace all your current { -brand-short-name } data with your backup.`
-- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — Straight ASCII double quotes used instead of the curly quotes in the source.
-    - Current: `Odstrani "{ $search }" iz nedavnih iskanj`
-    - Source: `aria-label: Remove “{ $search }” from recent searches`
-    - Suggest: `Odstrani „{ $search }“ iz nedavnih iskanj`
-    - The en-US uses typographic quotes “ ”; Slovenian convention here uses curly quotes.
 - `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
     - Current: `Nalaganje …`
     - Source: `Loading…`
     - Suggest: `Nalaganje…`
     - The en-US source is "Loading…" with no space before the ellipsis; Slovenian does not insert a space before the ellipsis in such loading strings.
-- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (every other policy description ends with one).
-    - Source: `Enable or disable Picture-in-Picture.`
-- `inactive-css-not-display-block-on-floated-fix` — `devtools/client/tooltips.ftl` — devtools/client/tooltips.ftl — Missing space before markup: "odstraniti<strong>float</strong>" → "odstraniti <strong>float</strong>" (renders "odstranitifloat").
-    - Source: `Try removing <strong>float</strong> or adding <strong>display:block</strong>. { learn-more }`
-- `network-connection-status-connecting` — `netwerk/netwerk/necko.ftl` — netwerk/netwerk/necko.ftl — Stray space before the ellipsis: "{ $host } …" → "{ $host }…" (siblings looking-up, sending-request, waiting are correct).
-    - Source: `Connecting to { $host }…`
 - `btp-warning-tracker-classified` — `toolkit/toolkit/global/antiTracking.ftl` — btp-warning-tracker-classified ([two]) — toolkit/toolkit/global/antiTracking.ftl — Missing space before the variable: "v naslednjih{ $gracePeriodSeconds } sekundah" → "v naslednjih { $gracePeriodSeconds } sekundah" (the [few]/[other] variants have the space).
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
     - Suggest: `[few]`
@@ -336,9 +331,16 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (0)
+### Dismissed by hand (8)
 
-_Nothing dismissed._
+- `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je "Obnovi podatke". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
+- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — auto-suggest (2026-11-03): The sl tree uses straight double quotes (259) and curly double quotes (268) about equally, so straight quotes are an accepted convention.
+- `onboarding-focused-tabs-subtitle` — `browser/browser/newtab/onboarding.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Ni potrebe po spreminjanju, pravilno je oboje.</p>
+- `onboarding-genai-sidebar-title` — `browser/browser/newtab/onboarding.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The finding itself says both "preskusiti" and "preizkusiti" are valid and marks it low priority, so the reviewer probably saw a purely stylistic change that wasn't needed.
+- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov), so the forms are correct.
+- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov); the mute string uses accusative, hence differs.
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
@@ -356,8 +358,22 @@ _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (44)
+### Fixed to date (58)
 
+- `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — fixed 2026-11-05
+- `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — fixed 2026-11-05
+- `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-11-05
+- `newtab-wallpaper-firefox-desert-light` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-05
+- `newtab-wallpaper-your-images-folder` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-05
+- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
+- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — fixed 2026-11-05
+- `outline.placeholder.functions` — `devtools/client/debugger.properties` — fixed 2026-11-05
+- `inactive-css-not-display-block-on-floated-fix` — `devtools/client/tooltips.ftl` — fixed 2026-11-05
+- `network-connection-status-connecting` — `netwerk/netwerk/necko.ftl` — fixed 2026-11-05
+- `pk11-bad-password` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-11-05
+- `about-networking-ssl-tokens-new` — `toolkit/toolkit/about/aboutNetworking.ftl` — fixed 2026-11-05
+- `about-pdf-feature-annotate-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-11-05
+- `language-name-ti` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-11-05
 - `main-context-menu-media-video-leave-fullscreen` — `browser/browser/browserContext.ftl` — fixed 2026-09-28
 - `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
 - `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — fixed 2026-07-29 (undated)
@@ -384,17 +400,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `certmgr-edit-cert-trust-email` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-29 (undated)
 - `pkcs12-unknown-err-restore` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-29 (undated)
 - `devinfo-fwversion` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-07-29 (undated)
-- `unable-to-toggle-fips` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-07-29 (undated)
-- `client-auth-cert-details-serial-number` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-07-29 (undated)
-- `rights-webservices-term-4` — `toolkit/toolkit/about/aboutRights.ftl` — fixed 2026-07-29 (undated)
-- `fission-status-enabled-by-rollout` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-29 (undated)
-- `about-telemetry-page-subtitle` — `toolkit/toolkit/about/aboutTelemetry.ftl` — fixed 2026-07-29 (undated)
-- `about-webrtc-ice-restart-count-label` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-07-29 (undated)
-- `certificate-viewer-modulus` — `toolkit/toolkit/about/certviewer.ftl` — fixed 2026-07-29 (undated)
-- `contentanalysis-slow-agent-dialog-body-dropped-text` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — fixed 2026-07-29 (undated)
-- `user-context-color-gray` — `toolkit/toolkit/global/contextual-identity.ftl` — fixed 2026-07-29 (undated)
-- `language-name-xh` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-07-29 (undated)
-- `region-name-cw` — `toolkit/toolkit/intl/regionNames.ftl` — fixed 2026-07-29 (undated)
-- `region-name-tr` — `toolkit/toolkit/intl/regionNames.ftl` — fixed 2026-07-29 (undated)
-- `cert-error-symantec-distrust-description` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)
-- `cert-error-trust-cert-invalid` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-07-29 (undated)

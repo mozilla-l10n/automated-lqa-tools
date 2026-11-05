@@ -24,9 +24,14 @@
    "source": "Sync your data everywhere",
    "original": "Sinhronizirajte svoje podatke kjerkoli",
    "text": "Sinhronizirajte svoje podatke povsod",
-   "status": "pending",
-   "status_date": "2026-11-03",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "dismissal": "appmenu-fxa-sign-in-promo-heading2 @ browser/browser/appmenu.ftl — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12375852,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/appmenu.ftl/?string=340827",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -50,9 +55,14 @@
    "source": "Click “Restore your data” and select this file",
    "original": "Kliknite \"Obnovi podatke\" in izberite to datoteko",
    "text": "Kliknite \"Obnovite podatke\" in izberite to datoteko",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je \"Obnovi podatke\". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>",
+   "dismissal": "backup-file-moz-browser-restore-step-2-1 @ browser/browser/backupSettings.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je \"Obnovi podatke\". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>",
+   "pontoon_pk": 12375854,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=334464",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -76,9 +86,14 @@
    "source": "Click “Restore your data” and select this file",
    "original": "Kliknite \"Obnovi podatke\" in izberite to datoteko",
    "text": "Kliknite \"Obnovite podatke\" in izberite to datoteko",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "dismissal": "backup-file-other-browser-restore-step-3-1 @ browser/browser/backupSettings.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so \"Obnovi podatke\" likely matches the actual button rather than the \"Obnovite podatke\" header the finding compared it to.",
+   "pontoon_pk": 12375855,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=334465",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -102,9 +117,13 @@
    "source": "This will replace all your current { -brand-short-name } data with your backup.",
    "original": "S tem se bodo vsi trenutni podatki { -brand-short-name(sklon: \"rodilnik\") }  zamenjali s podatki iz varnostne kopije.",
    "text": "S tem se bodo vsi trenutni podatki { -brand-short-name(sklon: \"rodilnik\") } zamenjali s podatki iz varnostne kopije.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375853,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=331160",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -128,9 +147,13 @@
    "source": "libavcodec may be vulnerable or is not supported, and should be updated to play video.",
    "original": "libavcodec je morda ranljiv ali ni posodobljen. Posodobite ga za predvajanje videoposnetkov.",
    "text": "libavcodec je morda ranljiv ali ni podprt. Posodobite ga za predvajanje videoposnetkov.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375856,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/browser.ftl/?string=342522",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-03",
@@ -154,9 +177,13 @@
    "source": "By choosing Google Gemini, you agree to the <a data-l10n-name=\"link1\">Google Terms of Service</a>, <a data-l10n-name=\"link2\">Generative AI Prohibited Use Policy</a>, and <a data-l10n-name=\"link3\">Gemini Apps Privacy Notice</a>.",
    "original": "Z izbiro Google Gemini se strinjate z <a data-l10n-name=\"link1\">Googlovimi pogoji uporabe</a>, <a data-l10n-name=\"link2\">pravilnikom o prepovedani uporabi generativne UI</a> in <a data-l10n-name=\"link3\">obvestilo o zasebnosti Gemini Apps</a>.",
    "text": "Z izbiro Google Gemini se strinjate z <a data-l10n-name=\"link1\">Googlovimi pogoji uporabe</a>, <a data-l10n-name=\"link2\">pravilnikom o prepovedani uporabi generativne UI</a> in <a data-l10n-name=\"link3\">obvestilom o zasebnosti Gemini Apps</a>.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375857,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/genai.ftl/?string=309369",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -180,9 +207,13 @@
    "source": "A fox running across a light desert",
    "original": "Lisica, ki sedi v svetli puščavi",
    "text": "Lisica, ki teče po svetli puščavi",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375859,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/newtab/newtab.ftl/?string=339625",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -206,9 +237,13 @@
    "source": "aria-label: Your images, wallpapers that you have saved",
    "original": "Vaše slike in ozadja, ki ste jih shranili",
    "text": "Vaše slike, ozadja, ki ste jih shranili",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375858,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/newtab/newtab.ftl/?string=339548",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -232,9 +267,14 @@
    "source": "For a streamlined view that can help you stay focused, try your tabs on the side. Or keep it classic with tabs on the top. Switch anytime.",
    "original": "Za poenostavljen pogled, ki vam pomaga ostati osredotočen, preskusite zavihke ob strani. Ali pa naj bo klasika z zavihki na vrhu. Preklopite lahko kadarkoli.",
    "text": "Za poenostavljen pogled, ki vam pomaga ostati osredotočen, preizkusite zavihke ob strani. Ali pa naj bo klasika z zavihki na vrhu. Preklopite lahko kadarkoli.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Ni potrebe po spreminjanju, pravilno je oboje.</p>",
+   "dismissal": "onboarding-focused-tabs-subtitle @ browser/browser/newtab/onboarding.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Ni potrebe po spreminjanju, pravilno je oboje.</p>",
+   "pontoon_pk": 12375860,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/newtab/onboarding.ftl/?string=314062",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -258,9 +298,14 @@
    "source": "Try an AI chatbot in the sidebar",
    "original": "Preskusite UI-klepetalnik v stranski vrstici",
    "text": "Preizkusite UI-klepetalnik v stranski vrstici",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "dismissal": "onboarding-genai-sidebar-title @ browser/browser/newtab/onboarding.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The finding itself says both \"preskusiti\" and \"preizkusiti\" are valid and marks it low priority, so the reviewer probably saw a purely stylistic change that wasn't needed.",
+   "pontoon_pk": 12375861,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/newtab/onboarding.ftl/?string=310603",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-03",
@@ -284,9 +329,13 @@
    "source": "Enable or disable Picture-in-Picture.",
    "original": "Omogoči ali onemogoči sliko v sliki",
    "text": "Omogoči ali onemogoči sliko v sliki.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375862,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/policies/policies-descriptions.ftl/?string=210829",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -310,9 +359,13 @@
    "source": "{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies",
    "original": "{ $count } sledilnih piškotov",
    "text": "{ $count } sledilnih piškotkov",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375863,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/protections.ftl/?string=331672",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -336,9 +389,13 @@
    "source": "Filter functions",
    "original": "Filter funkcij",
    "text": "Filtriraj funkcije",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375864,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/devtools/client/debugger.properties/?string=336832",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -362,9 +419,13 @@
    "source": "Try removing <strong>float</strong> or adding <strong>display:block</strong>. { learn-more }",
    "original": "Poskusite odstraniti<strong>float</strong> ali dodati <strong>display:block</strong>. { learn-more }",
    "text": "Poskusite odstraniti <strong>float</strong> ali dodati <strong>display:block</strong>. { learn-more }",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375865,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/devtools/client/tooltips.ftl/?string=204044",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -388,9 +449,13 @@
    "source": "Connecting to { $host }…",
    "original": "Povezovanje na stran { $host } …",
    "text": "Povezovanje na stran { $host }…",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375866,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/netwerk/netwerk/necko.ftl/?string=311780",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -414,9 +479,13 @@
    "source": "The password entered was incorrect.",
    "original": "Vnešeno geslo je napačno.",
    "text": "Vneseno geslo je napačno.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375867,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/security/manager/security/certificates/certManager.ftl/?string=193169",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -440,9 +509,13 @@
    "source": "alt: New this session\ntitle: New this session",
    "original": "Nov to sejo",
    "text": "Nov v tej seji",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375868,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutNetworking.ftl/?string=337744",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -466,9 +539,13 @@
    "source": "Mark up PDFs",
    "original": "Označujte dokumente",
    "text": "Označujte dokumente PDF",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375869,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutPDF.ftl/?string=340310",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-03",
@@ -492,9 +569,13 @@
    "source": "Tigrinya",
    "original": "tigrajščina",
    "text": "tigrinjščina",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-03",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12375870,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194443",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

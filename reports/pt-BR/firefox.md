@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 32 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — Missing preposition "de" in "antes ser transmitida".
+    - Current: `antes ser transmitida`
+    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
+    - Suggest: `antes de ser transmitida`
+    - Portuguese needs "antes de" before an infinitive. "antes ser" is ungrammatical.
+- `security-technical-encrypted-page` — `browser/browser/pageInfo.ftl` — Missing preposition "de" in "antes ser transmitida".
+    - Current: `antes ser transmitida`
+    - Source: `The page you are viewing was encrypted before being transmitted over the Internet.`
+    - Suggest: `antes de ser transmitida`
+    - Portuguese needs "antes de" before an infinitive. "antes ser" is ungrammatical.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The verb is in the infinitive ("poder") where the conjugated "podem" is needed.
+    - Current: `Outras pessoas poder ver`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Outras pessoas podem ver`
+    - The plural subject "Outras pessoas" needs the conjugated present-tense verb "podem". The infinitive is ungrammatical here.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +58,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +77,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,12 +100,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 598, `curly-single` 124, `straight-double` 64 | **curly-double** |
+| quotes | `curly-double` 599, `curly-single` 124, `straight-double` 64 | **curly-double** |
 | apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
 | ellipsis | `char` 394, `ascii` 4 | **char** |
 | dash | `em` 49, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 10, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1539 | **informal** |
+| register | `informal` 1538 | **informal** |
 
 ---
 
@@ -86,14 +115,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (546)
+## 3. Open findings (549)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
 | 2 | Wrong content (says something other than the English) | 181 |
-| 3 | Degraded language (grammar, spelling, terminology) | 263 |
+| 3 | Degraded language (grammar, spelling, terminology) | 266 |
 | 4 | Cosmetic (typography, spacing) | 91 |
 
 ### A. Functional, markup, variables & plurals
@@ -619,7 +648,7 @@ _Nothing reported._
     - Source: `It stays yours. { -brand-product-name } never sells personal data.`
     - Suggest: `permanecem`
     - The verb "permanecer" (stay/remain) is misspelled. The meaning matches the en-US "It stays yours", so only the spelling is wrong.
-- _…and 91 more; see `state/` for the full list._
+- _…and 94 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -900,11 +929,11 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
     - Current: `"Restaurar o { -brand-short-name }"`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
@@ -913,21 +942,21 @@ _Nothing reported._
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -980,7 +1009,7 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -1008,7 +1037,7 @@ _Nothing reported._
 - `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
     - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
     - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (598 occurrences).
+    - The locale's quote convention is `curly-double` (599 occurrences).
 - _…and 25 more; see `state/` for the full list._
 
 ---

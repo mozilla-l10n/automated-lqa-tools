@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,000 |
+| **Strings reviewed this run** | 126 of 16,119 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,63 @@ Also for es-MX: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (11)
 
-_No new findings._
+- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "could be compromised" is rendered as "pueden ser peligrosos" (could be dangerous).
+    - Current: `Inicios de sesión ingresados aquí pueden ser peligrosos.`
+    - Source: `This connection is not secure. Logins entered here could be compromised.`
+    - Suggest: `Los inicios de sesión ingresados aquí podrían verse comprometidos.`
+    - The en-US says credentials typed on an insecure page could be compromised, meaning exposed or stolen. The Spanish says the logins themselves are dangerous, which is a different meaning.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
+    - Current: `El id del miembro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id`
+    - In the source, "id" is the name of a manifest member. The Spanish makes it sound like an id that belongs to some member.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
+    - Current: `El id del miembro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id`
+    - "id" names the manifest member, just as start_url does later in the same sentence ("el miembro start_url"). The rendering should match that pattern.
+- `genai-selection-callout-title` — `browser/browser/genai.ftl` — Formal imperative "Resalte" breaks the locale's informal register.
+    - Current: `Resalte el texto`
+    - Source: `Highlight text to choose an action`
+    - Suggest: `Resalta el texto`
+    - es-MX uses informal address throughout (e.g. "Selecciona" in the same file); "Resalte" is the usted form.
+- `genai-more-actions-ai-provider` — `browser/browser/genai.ftl` — Missing personal preposition "a" before the provider being asked.
+    - Current: `Preguntar { $provider }`
+    - Source: `label: Ask { $provider }`
+    - Suggest: `Preguntar a { $provider }`
+    - "Preguntar" takes the person or entity being asked with "a"; the sibling string correctly reads "Preguntar a la IA".
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes used instead of the locale's curly double quotes.
+    - Current: `"{ $caName }"`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `“{ $caName }”`
+    - The source uses curly quotes, and the es-MX convention is curly-double.
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — "Conección" is misspelled, and "encriptada" doesn't match the "cifrado" used in the other strings.
+    - Current: `Conección encriptada`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `Conexión cifrada`
+    - The correct spelling is "Conexión". The sibling strings consistently use "cifrado/cifrada".
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — The key size reads as a separate item followed by a meaningless "llaves bit" instead of "N-bit keys".
+    - Current: `{ $keySize }, llaves bit`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `claves de { $keySize } bits`
+    - The source says "{ $keySize } bit keys". The comma breaks the number off from the keys, and "llaves bit" is meaningless. The broken-encryption string already uses "claves de { $keySize } bits".
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — The policy's name is mistranslated as "certificado de transparencia" ("transparency certificate").
+    - Current: `política de certificado de transparencia`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `política de Transparencia de certificados`
+    - Certificate Transparency is about making certificates transparent. It is not a certificate of transparency.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" refers to the feminine noun "conexión".
+    - Current: `no es privado`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `no es privada`
+    - The subject is "Tu conexión", which is feminine.
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — The extra "que" turns the sentence into a fragment with no main verb.
+    - Current: `Partes de la página que estás viendo que no fueron cifradas`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `Partes de la página que estás viendo no fueron cifradas`
+    - The source is a complete statement. The second "que" makes it a noun phrase with no main verb.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +98,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 324 |
-| Strings | 16,000 |
-| Missing strings | 742 |
+| Files | 327 |
+| Strings | 16,119 |
+| Missing strings | 741 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 6 |
+| Files absent from the locale | 4 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -57,35 +111,33 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 119 |
+| Access keys not in their label | 120 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 111 |
+| Typography deviations from this locale's own norm | 112 |
 
 ### Completeness
 
-**742 strings** are not translated yet, concentrated in:
+**741 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 137
-- `browser/browser/ipProtection.ftl` — 61
-- `browser/browser/preferences/preferences.ftl` — 45
-- `browser/browser/newtab/onboarding.ftl` — 35
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
-- `toolkit/services/aboutSyncLog.ftl` — 26
-- `browser/browser/browser.ftl` — 25
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
-- `browser/browser/genai.ftl` — 22
-- `toolkit/toolkit/about/aboutPDF.ftl` — 21
-- `toolkit/toolkit/main-window/autocomplete.ftl` — 20
-- `toolkit/toolkit/about/aboutAddons.ftl` — 18
+- `browser/browser/newtab/newtab.ftl` — 124
+- `browser/browser/ipProtection.ftl` — 55
+- `browser/browser/newtab/onboarding.ftl` — 55
+- `browser/browser/preferences/preferences.ftl` — 50
+- `toolkit/services/aboutSyncLog.ftl` — 25
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 25
+- `toolkit/toolkit/formautofill/formAutofill.ftl` — 25
+- `toolkit/toolkit/pdfviewer/viewer.ftl` — 22
+- `browser/browser/browser.ftl` — 21
+- `toolkit/toolkit/about/aboutAddons.ftl` — 16
+- `toolkit/toolkit/about/aboutPDF.ftl` — 16
+- `toolkit/toolkit/neterror/netError.ftl` — 15
 
 **Files absent from the locale:**
 
 - `browser/browser/miniWindow.ftl`
 - `browser/browser/sharePanel.ftl`
-- `toolkit/services/aboutSyncLog.ftl`
 - `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 - `toolkit/toolkit/global/rosettaNotification.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -95,26 +147,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 464, `straight-double` 133, `curly-single` 79, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 464, `straight-double` 134, `curly-single` 79, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 91, `straight` 37 | _mixed_ |
-| ellipsis | `char` 368, `ascii` 19 | **char** |
+| ellipsis | `char` 370, `ascii` 19 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 324, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1235, `formal` 208 | **informal** |
+| inverted marks | `open-question` 329, `open-exclamation` 72 | **open-question** |
+| register | `informal` 1243, `formal` 209 | **informal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 119 strings** — 119 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 106 more
-- **typography — 111 strings** — 111 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
-    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 99 more
+- **accesskey — 120 strings** — 120 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 107 more
+- **typography — 112 strings** — 112 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
+    - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 100 more
 
 ---
 
-## 3. Open findings (68)
+## 3. Open findings (79)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -129,9 +181,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 25 |
-| 3 | Degraded language (grammar, spelling, terminology) | 33 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 2 | Wrong content (says something other than the English) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 40 |
+| 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -204,6 +256,16 @@ _Nothing in this category._
     - Source: `You can still open it whenever you need it.`
     - Suggest: `Aún puedes abrirlo cuando lo necesites.`
     - en-US says "You can still open it whenever you need it" — present ability with "still"; the Spanish states a future capability and omits "still".
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — The policy's name is mistranslated as "certificado de transparencia" ("transparency certificate").
+    - Current: `política de certificado de transparencia`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `política de Transparencia de certificados`
+    - Certificate Transparency is about making certificates transparent. It is not a certificate of transparency.
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — The key size reads as a separate item followed by a meaningless "llaves bit" instead of "N-bit keys".
+    - Current: `{ $keySize }, llaves bit`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `claves de { $keySize } bits`
+    - The source says "{ $keySize } bit keys". The comma breaks the number off from the keys, and "llaves bit" is meaningless. The broken-encryption string already uses "claves de { $keySize } bits".
 - `passports-no-passports-stored-message` — `browser/browser/preferences/preferences.ftl` — "No passports added" translated as "No hay pasaportes guardados" (stored/saved).
     - Current: `No hay pasaportes guardados`
     - Source: `label: No passports added`
@@ -234,6 +296,16 @@ _Nothing in this category._
     - Source: `(requires reopening the toolbox)`
     - Suggest: `(requiere volver a abrir la caja de herramientas)`
     - The source says the toolbox must be reopened, not restarted; also the source is lowercase inside parentheses.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
+    - Current: `El id del miembro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id`
+    - In the source, "id" is the name of a manifest member. The Spanish makes it sound like an id that belongs to some member.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "El id del miembro" (the member's id).
+    - Current: `El id del miembro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id`
+    - "id" names the manifest member, just as start_url does later in the same sentence ("el miembro start_url"). The rendering should match that pattern.
 - `theme-disabled-heading3` — `toolkit/toolkit/about/aboutAddons.ftl` — "Saved Themes" is rendered as the imperative "Guardar temas" (Save themes).
     - Current: `Guardar temas`
     - Source: `heading: Saved Themes`
@@ -266,6 +338,11 @@ _Nothing in this category._
     - Source: `accesskey: h label: Copy Link to Highlight`
     - Suggest: `Copiar enlace al resaltado`
     - The developer comment says this copies a Text Fragment link to the current selection. It does not copy a link so that something can be highlighted.
+- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "could be compromised" is rendered as "pueden ser peligrosos" (could be dangerous).
+    - Current: `Inicios de sesión ingresados aquí pueden ser peligrosos.`
+    - Source: `This connection is not secure. Logins entered here could be compromised.`
+    - Suggest: `Los inicios de sesión ingresados aquí podrían verse comprometidos.`
+    - The en-US says credentials typed on an insecure page could be compromised, meaning exposed or stolen. The Spanish says the logins themselves are dangerous, which is a different meaning.
 
 ### C. Grammar, agreement & spelling
 
@@ -284,11 +361,31 @@ _Nothing in this category._
     - Source: `{ $agent } timed out, so this file was blocked.`
     - Suggest: `Se agotó el tiempo de espera de { $agent }, por lo que este archivo fue bloqueado.`
     - In Spanish "agotarse el tiempo" takes "el tiempo" as its subject. The agent therefore has to be attached with "de" ("el tiempo de espera de X"), or the sentence has to be rephrased, so that it correctly says that { $agent } timed out.
+- `genai-more-actions-ai-provider` — `browser/browser/genai.ftl` — Missing personal preposition "a" before the provider being asked.
+    - Current: `Preguntar { $provider }`
+    - Source: `label: Ask { $provider }`
+    - Suggest: `Preguntar a { $provider }`
+    - "Preguntar" takes the person or entity being asked with "a"; the sibling string correctly reads "Preguntar a la IA".
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "mas" is missing its accent; should be "más adelante".
     - Current: `Puedes cambiar esta preferencia mas adelante en los ajustes.`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
     - Suggest: `Puedes cambiar esta preferencia más adelante en los ajustes.`
     - "más" (adverb of quantity/time) requires the accent; "mas" means "but".
+- `security-technical-encrypted` — `browser/browser/pageInfo.ftl` — "Conección" is misspelled, and "encriptada" doesn't match the "cifrado" used in the other strings.
+    - Current: `Conección encriptada`
+    - Source: `value: Connection Encrypted ({ $algorithm }, { $keySize } bit keys, { $protocol })`
+    - Suggest: `Conexión cifrada`
+    - The correct spelling is "Conexión". The sibling strings consistently use "cifrado/cifrada".
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — The extra "que" turns the sentence into a fragment with no main verb.
+    - Current: `Partes de la página que estás viendo que no fueron cifradas`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `Partes de la página que estás viendo no fueron cifradas`
+    - The source is a complete statement. The second "que" makes it a noun phrase with no main verb.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" refers to the feminine noun "conexión".
+    - Current: `no es privado`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `no es privada`
+    - The subject is "Tu conexión", which is feminine.
 - `manifest-icon-img-title-no-sizes` — `devtools/client/application.ftl` — Wrong word / duplicated word: perftools-thread-jvm-pool ("creador" → "creados", devtools/perftools.ftl); manifest-icon-img-title-no-sizes (see devtools terminology); accessibility-text-label-issue-figure ("más más", devtools/accessibility.ftl); inactive-css-not-grid-or-flex-item ("un un ítem", devtools/tooltips.ftl); permissions-exceptions-manage-etp-desc ("clic en en", preferences/permissions.ft…
     - Source: `Unspecified size icon`
 - `url-classifier-content-classifier-col-exception` — `toolkit/toolkit/about/url-classifier.ftl` — Column header rendered in plural although the source is singular, unlike the matching verdict string.
@@ -339,6 +436,11 @@ _Nothing in this category._
     - Source: `tooltiptext: Data Loss Prevention (DLP) by { $agentName }. Click for more info.`
     - Suggest: `Haz clic para saber más información.`
     - es-MX convention is informal address (tú); also "click" should be "clic" in Spanish.
+- `genai-selection-callout-title` — `browser/browser/genai.ftl` — Formal imperative "Resalte" breaks the locale's informal register.
+    - Current: `Resalte el texto`
+    - Source: `Highlight text to choose an action`
+    - Suggest: `Resalta el texto`
+    - es-MX uses informal address throughout (e.g. "Selecciona" in the same file); "Resalte" is the usted form.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Sincronizar con el móvil” but the string it names, `sync-to-mobile-button-label`, reads “Sincronización con el móvil”
     - Current: `Escanea el código QR para descargar { -brand-product-name } para móvil. Una vez instalado, seleccione "Sincronizar con el móvil" para acceder a sus contraseñas, marcadores y mucho más sobre la marcha.`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
@@ -439,6 +541,11 @@ _Nothing in this category._
     - Source: `Delete “{ $profilename }” profile?`
     - Suggest: `¿Eliminar el perfil “{ $profilename }”?`
     - The source uses “…”; the localized string closes with a left double quotation mark, breaking the curly-double convention.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes used instead of the locale's curly double quotes.
+    - Current: `"{ $caName }"`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `“{ $caName }”`
+    - The source uses curly quotes, and the es-MX convention is curly-double.
 - `about-glean-profiler-explanation` — `toolkit/toolkit/about/aboutGlean.ftl` — Missing/incorrect terminal punctuation: about-httpsonly-suggestion-box-www-text (missing "."), about-webauthn-text-not-available (comma instead of "."), about-webauthn-ctap2-enroll-feedback-too-right (missing "."), about-glean-profiler-explanation (missing "."), remote-debugging-title (space before ")").
     - Source: `To see a full view of all recorded metrics, you can use the { -profiler-brand-name }. First you must <a data-l10n-name="firefox-profiler-link">capture a performance profile</a>. Once you capture the profile, select <q>M…`
 - `remote-debugging-title` — `toolkit/toolkit/about/aboutSupport.ftl` — Missing/incorrect terminal punctuation: about-httpsonly-suggestion-box-www-text (missing "."), about-webauthn-text-not-available (comma instead of "."), about-webauthn-ctap2-enroll-feedback-too-right (missing "."), about-glean-profiler-explanation (missing "."), remote-debugging-title (space before ")").

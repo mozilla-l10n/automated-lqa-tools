@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,013 |
+| **Strings reviewed this run** | 138 of 17,090 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `Il membro id`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro deve`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `Il membro id deve`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL`
+    - Source: `The scope URL is invalid.`
+    - Suggest: `L’URL dell’ambito`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL, which reverses the relationship.
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL deve`
+    - Source: `The scope URL must be same origin as document.`
+    - Suggest: `L’URL dell’ambito deve`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "Repeated purpose(s)" is rendered as "more than one purpose".
+    - Current: `include più di uno scopo (“purpose”)`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `include scopi (“purpose”) ripetuti`
+    - The warning is about duplicated purpose values. Having more than one purpose is valid, so the Italian describes the wrong problem.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,10 +68,10 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 340 |
-| Strings | 17,013 |
+| Files | 341 |
+| Strings | 17,090 |
 | Missing strings | 0 |
-| Obsolete strings | 49 |
+| Obsolete strings | 1 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 10 |
 | Fluent / properties syntax errors | 0 |
@@ -78,7 +102,7 @@ The locale is complete against the en-US source.
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_222 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_229 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -86,9 +110,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 965, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1772, `straight` 6 | **typographic** |
-| ellipsis | `char` 418 | **char** |
+| quotes | `curly-double` 977, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1789, `straight` 6 | **typographic** |
+| ellipsis | `char` 419 | **char** |
 | dash | `em` 53, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
 | register | `informal` 738, `formal` 47 | **informal** |
@@ -101,13 +125,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (5)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 5 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -117,7 +141,31 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `Il membro id`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro deve`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `Il membro id deve`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "Repeated purpose(s)" is rendered as "more than one purpose".
+    - Current: `include più di uno scopo (“purpose”)`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `include scopi (“purpose”) ripetuti`
+    - The warning is about duplicated purpose values. Having more than one purpose is valid, so the Italian describes the wrong problem.
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL deve`
+    - Source: `The scope URL must be same origin as document.`
+    - Suggest: `L’URL dell’ambito deve`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL.
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL`
+    - Source: `The scope URL is invalid.`
+    - Suggest: `L’URL dell’ambito`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL, which reverses the relationship.
 
 ### C. Grammar, agreement & spelling
 

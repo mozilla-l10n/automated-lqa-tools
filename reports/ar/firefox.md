@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `b4cac9524192` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,537 |
+| **Strings reviewed this run** | 19 of 13,554 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `dom-manifest-should-be-object` — `dom/dom/manifest.ftl` — "Manifest" is mistranslated as "الكيان" (entity).
+    - Current: `يجب أن يكون الكيان كائنًا.`
+    - Source: `Manifest should be an object.`
+    - Suggest: `يجب أن يكون البيان كائنًا.`
+    - The source refers to the web app manifest, which is usually rendered as "البيان" or "ملف البيان". "الكيان" means "entity", so the message no longer names the manifest.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The verb "view" is missing, so the sentence is ungrammatical and loses its meaning.
+    - Current: `تصعّب التعمية غير المخوّلين على المعلومات`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `تصعّب التعمية على غير المخوّلين الاطلاع على المعلومات`
+    - The source says encryption makes it difficult for unauthorized people to view information. The Arabic leaves out "الاطلاع" (view) and puts the preposition in the wrong place, so the sentence does not say what is made difficult.
+- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
+    - Current: `لم تُعمّى`
+    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
+    - Suggest: `لم تُعمَّ`
+    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
+    - Current: `لم تُعمّى`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `لم تُعمَّ`
+    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
+- `dom-manifest-invalid-css-color` — `dom/dom/manifest.ftl` — The adjective after "ليس" must be accusative (صالحًا).
+    - Current: `ليس لون CSS صالح`
+    - Source: `{ $property }: { $value } is not a valid CSS color.`
+    - Suggest: `ليس لون CSS صالحًا`
+    - The predicate of ليس is accusative, and the adjective agrees with it, so it should be "صالحًا".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +68,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 325 |
-| Strings | 13,537 |
-| Missing strings | 3,205 |
+| Files | 326 |
+| Strings | 13,554 |
+| Missing strings | 3,306 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +87,20 @@ _Nothing retired._
 
 ### Completeness
 
-**3,205 strings** are not translated yet, concentrated in:
+**3,306 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 356
+- `browser/browser/newtab/newtab.ftl` — 350
 - `dom/chrome/dom/dom.properties` — 215
 - `browser/browser/aiWindow.ftl` — 160
 - `devtools/client/tooltips.ftl` — 98
 - `dom/chrome/layout/htmlparser.properties` — 94
 - `devtools/client/netmonitor.properties` — 92
-- `browser/browser/ipProtection.ftl` — 86
+- `dom/chrome/security/security.properties` — 85
 - `devtools/client/debugger.properties` — 83
-- `dom/chrome/security/security.properties` — 83
-- `toolkit/toolkit/about/aboutGlean.ftl` — 66
+- `browser/browser/ipProtection.ftl` — 82
+- `browser/browser/newtab/onboarding.ftl` — 71
+- `toolkit/toolkit/about/aboutGlean.ftl` — 67
 - `toolkit/toolkit/about/aboutSupport.ftl` — 66
-- `toolkit/toolkit/about/aboutWebauthn.ftl` — 66
 
 **Files absent from the locale:**
 
@@ -108,14 +132,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (357)
+## 3. Open findings (362)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 200 |
-| 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 2 | Wrong content (says something other than the English) | 121 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
@@ -426,6 +450,11 @@ _Nothing reported._
     - Source: `Karachi`
     - Suggest: `كراتشي`
     - The standard Arabic spelling of the Pakistani city Karachi is كراتشي; كراجي is not the city’s name.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The verb "view" is missing, so the sentence is ungrammatical and loses its meaning.
+    - Current: `تصعّب التعمية غير المخوّلين على المعلومات`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `تصعّب التعمية على غير المخوّلين الاطلاع على المعلومات`
+    - The source says encryption makes it difficult for unauthorized people to view information. The Arabic leaves out "الاطلاع" (view) and puts the preposition in the wrong place, so the sentence does not say what is made difficult.
 - `ForgotFileEnctypeWarning` — `dom/chrome/layout/HtmlForm.properties` — Space inserted inside the code value “multipart/form-data”.
     - Current: `enctype=multipart /form-data`
     - Source: `Form contains a file input, but is missing method=POST and enctype=multipart/form-data on the form.  The file will not be sent.`
@@ -441,6 +470,11 @@ _Nothing reported._
     - Source: `reserved prefix (xmlns) must not be declared or undeclared`
     - Suggest: `السّابقة المحجوزة (xmlns) يجب ألّا يصرّح عنها أو يلغى تصريحها`
     - en-US error 39 is “reserved prefix (xmlns) must not be declared or undeclared”; error 38 is the (xml) one. Naming the wrong prefix points the author at the wrong code.
+- `dom-manifest-should-be-object` — `dom/dom/manifest.ftl` — "Manifest" is mistranslated as "الكيان" (entity).
+    - Current: `يجب أن يكون الكيان كائنًا.`
+    - Source: `Manifest should be an object.`
+    - Suggest: `يجب أن يكون البيان كائنًا.`
+    - The source refers to the web app manifest, which is usually rendered as "البيان" or "ملف البيان". "الكيان" means "entity", so the message no longer names the manifest.
 
 ### C. Grammar, agreement & spelling
 
@@ -484,6 +518,16 @@ _Nothing reported._
     - Source: `Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.`
     - Suggest: `مدعوم من مؤسسة Mozilla`
     - brand.ftl states the Mozilla brand cannot be transliterated or translated; the same screen family (onboarding-gratitude-security-and-privacy-subtitle) correctly writes “مؤسسة Mozilla”.
+- `security-technical-mixed-content-description` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
+    - Current: `لم تُعمّى`
+    - Source: `Parts of the page you are viewing were not encrypted before being transmitted over the Internet.`
+    - Suggest: `لم تُعمَّ`
+    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
+- `security-technical-no-encryption-page` — `browser/browser/pageInfo.ftl` — Wrong verb form after "لم": the jussive must drop the final alif maqsura.
+    - Current: `لم تُعمّى`
+    - Source: `The page you are viewing was not encrypted before being transmitted over the Internet.`
+    - Suggest: `لم تُعمَّ`
+    - After "لم" the verb takes the jussive, so the weak final letter of تُعمّى drops: "لم تُعمَّ".
 - `policy-AllowedDomainsForApps` — `browser/browser/policies/policies-descriptions.ftl` — The product name “Google Workspace” is translated/transliterated.
     - Current: `مساحة عمل جوجل`
     - Source: `Define domains allowed to access Google Workspace.`
@@ -584,6 +628,11 @@ _Nothing reported._
     - Source: `Request for pointer lock was denied because the requesting element is not in a document.`
     - Suggest: `رُفض طلب قفل المؤشر`
     - Letters transposed; PointerLockDeniedDisabled spells it correctly as ”قفل المؤشر“. The same typo appears in PointerLockDeniedHidden, PointerLockDeniedNotFocused and PointerLockDeniedMovedDocument.
+- `dom-manifest-invalid-css-color` — `dom/dom/manifest.ftl` — The adjective after "ليس" must be accusative (صالحًا).
+    - Current: `ليس لون CSS صالح`
+    - Source: `{ $property }: { $value } is not a valid CSS color.`
+    - Suggest: `ليس لون CSS صالحًا`
+    - The predicate of ليس is accusative, and the adjective agrees with it, so it should be "صالحًا".
 - `SEC_ERROR_BAD_DATABASE` — `security/manager/chrome/pipnss/nsserrors.properties` — Misspelling of “سيئة”.
     - Current: `قاعدة بيانات شيئة`
     - Source: `security library: bad database.`

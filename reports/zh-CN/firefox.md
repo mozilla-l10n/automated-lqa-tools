@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,230 |
+| **Strings reviewed this run** | 216 of 16,433 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,26 @@ Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says not to enable the preference, when it should say to enable emulation of the "no preference" value.
+    - Current: `不启用减弱动态效果模拟的首选项`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `启用“无偏好”减弱动态效果模拟`
+    - en-US "Enable no preference for reduced motion emulation" means this option turns on emulation of prefers-reduced-motion: no-preference. The translation reads as "do not enable the preference of reduced motion emulation". That inverts the action and makes this option sound like the "No emulation" option.
+- `autocomplete-delete-form-history-entry2` — `toolkit/toolkit/main-window/autocomplete.ftl` — "form history" is rendered as plain "历史记录" (history), so the word "form" is lost.
+    - Current: `从历史记录删除`
+    - Source: `Delete { $entry } from form history`
+    - Suggest: `从表单历史记录中删除`
+    - The en-US and the developer comment both say the entry is removed from form history. Plain 历史记录 usually means browsing history, so screen reader users could misunderstand what is being deleted.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — "Loading URL" is a noun phrase (the URL that loads the tested URL), but it is translated as the progress message "正在加载 URL".
+    - Current: `正在加载 URL`
+    - Source: `Loading URL`
+    - Suggest: `加载方 URL`
+    - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,11 +57,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,230 |
-| Missing strings | 512 |
+| Files | 330 |
+| Strings | 16,433 |
+| Missing strings | 427 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,26 +76,24 @@ _Nothing retired._
 
 ### Completeness
 
-**512 strings** are not translated yet, concentrated in:
+**427 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 59
+- `browser/browser/ipProtection.ftl` — 52
+- `browser/browser/newtab/onboarding.ftl` — 45
 - `browser/browser/newtab/newtab.ftl` — 42
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
-- `browser/browser/preferences/preferences.ftl` — 33
-- `browser/browser/newtab/onboarding.ftl` — 23
-- `toolkit/services/aboutSyncLog.ftl` — 20
-- `toolkit/toolkit/about/aboutPDF.ftl` — 19
+- `browser/browser/preferences/preferences.ftl` — 38
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
 - `devtools/client/toolbox-options.ftl` — 18
 - `dom/chrome/dom/dom.properties` — 16
-- `toolkit/toolkit/about/aboutNetworking.ftl` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/miniWindow.ftl` — 15
+- `browser/browser/tabContextMenu.ftl` — 14
+- `toolkit/toolkit/neterror/netError.ftl` — 13
+- `browser/browser/appExtensionFields.ftl` — 11
+- `browser/browser/policies/policies-descriptions.ftl` — 11
 
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
-- `browser/browser/miniWindow.ftl`
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,12 +103,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 882, `straight-double` 46, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 889, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 379, `ascii` 12 | **char** |
-| dash | `em` 51, `en` 2 | **em** |
-| fullwidth | `punctuation` 8410 | **punctuation** |
-| register | `informal` 14, `formal` 1525 | **formal** |
+| dash | `em` 53, `en` 2 | **em** |
+| fullwidth | `punctuation` 8539 | **punctuation** |
+| register | `informal` 24, `formal` 1543 | **formal** |
 
 ---
 
@@ -108,13 +119,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (77)
+## 3. Open findings (78)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 21 |
+| 2 | Wrong content (says something other than the English) | 22 |
 | 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 35 |
 
@@ -261,6 +272,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `tab-note-preview-expand` — `browser/browser/tabbrowser.ftl` — tab-note-preview-expand (tabbrowser.ftl) — "Read more" (expand truncated note, per comment) → "详细了解" (Learn more) → SUGGEST: "阅读全文" / "展开".
     - Source: `Read more`
     - Suggest: `"详细了解"`
+- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says not to enable the preference, when it should say to enable emulation of the "no preference" value.
+    - Current: `不启用减弱动态效果模拟的首选项`
+    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
+    - Suggest: `启用“无偏好”减弱动态效果模拟`
+    - en-US "Enable no preference for reduced motion emulation" means this option turns on emulation of prefers-reduced-motion: no-preference. The translation reads as "do not enable the preference of reduced motion emulation". That inverts the action and makes this option sound like the "No emulation" option.
 - `list-empty-get-extensions-promo` — `toolkit/toolkit/about/aboutAddons.ftl` — "improve focus, privacy and more" is rendered as "更专注、更隐私、更安全", inventing "security" in place of "and more".
     - Current: `更专注、更隐私、更安全`
     - Source: `heading: A few extensions go a long way message: We’ve got recommendations to help you improve focus, privacy and more.`
@@ -271,11 +287,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `certificate-viewer-modulus` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-modulus (certviewer.ftl) — RSA "Modulus" → "模块" (software module) → SUGGEST: "模数".
     - Source: `Modulus`
     - Suggest: `"模块"`
-- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — "Loading URL" is a noun phrase (the URL that loads the tested URL), but it is translated as the progress message "正在加载 URL".
-    - Current: `正在加载 URL`
-    - Source: `Loading URL`
-    - Suggest: `加载方 URL`
-    - Developer comment says this is the URL that loads the URL being tested (a frame's URL), i.e. a label, not a status message.
 - `user-context-banking2` — `toolkit/toolkit/global/contextual-identity.ftl` — "Banking" is rendered as 金融 (finance) rather than 银行/网银.
     - Current: `金融`
     - Source: `label: Banking`
@@ -286,6 +297,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Opens in a new tab`
     - Suggest: `在新标签页中打开`
     - en-US says "Opens in a new tab"; the translation says window, which is a different UI concept.
+- `autocomplete-delete-form-history-entry2` — `toolkit/toolkit/main-window/autocomplete.ftl` — "form history" is rendered as plain "历史记录" (history), so the word "form" is lost.
+    - Current: `从历史记录删除`
+    - Source: `Delete { $entry } from form history`
+    - Suggest: `从表单历史记录中删除`
+    - The en-US and the developer comment both say the entry is removed from form history. Plain 历史记录 usually means browsing history, so screen reader users could misunderstand what is being deleted.
 
 ### C. Grammar, agreement & spelling
 
@@ -444,8 +460,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (50)
+### Fixed to date (51)
 
+- `url-classifier-content-classifier-loading-url` — `toolkit/toolkit/about/url-classifier.ftl` — fixed 2026-11-05
 - `restart-required-heading2` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-10-12
 - `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-14
 - `newtab-privacy-message-info-1-cta` — `browser/browser/newtab/newtab.ftl` — fixed 2026-09-14
@@ -485,4 +502,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `exception-mgr-cert-location-url` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-28
 - `change-password-token` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-07-28
 - `about-logging-invalid-output` — `toolkit/toolkit/about/aboutLogging.ftl` — fixed 2026-07-28
-- `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-07-28

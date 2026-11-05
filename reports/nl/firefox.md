@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,740 |
+| **Strings reviewed this run** | 82 of 16,803 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-picture-menu-hide-photo` — `browser/browser/newtab/newtab.ftl` — newtab-picture-header, newtab-picture-menu-hide-photo, newtab-picture-image-alt — newtab/newtab.ftl — "Afbeelding van de dag" vs "Foto van de dag" in newtab-picture-header-main, home-prefs-picture-header, newtab-custom-widget-picture-toggle, newtab-picture-menu-show-photo, newtab-picture-widget-menu-button — both shown side by side in the same widget.
 
 ---
 
@@ -44,9 +44,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,740 |
-| Missing strings | 2 |
+| Files | 331 |
+| Strings | 16,803 |
+| Missing strings | 57 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**57 strings** are not translated yet, concentrated in:
 
+- `browser/browser/newtab/onboarding.ftl` — 17
+- `browser/browser/tabContextMenu.ftl` — 14
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 6
+- `browser/browser/preferences/preferences.ftl` — 5
 - `dom/chrome/security/security.properties` — 2
+- `dom/dom/manifest.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `browser/browser/tabbrowser.ftl` — 1
+- `browser/browser/newtab/newtab.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -75,12 +86,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 823, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1044 | **typographic** |
-| ellipsis | `char` 400 | **char** |
+| quotes | `curly-single` 824, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1045 | **typographic** |
+| ellipsis | `char` 401 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2780 | **formal** |
+| register | `formal` 2788 | **formal** |
 
 ---
 
@@ -90,14 +101,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (348)
+## 3. Open findings (347)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
 | 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 192 |
+| 3 | Degraded language (grammar, spelling, terminology) | 191 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -506,8 +517,6 @@ _Nothing reported._
     - Source: `Picture of the day · Wikimedia Commons`
 - `newtab-picture-image-alt` — `browser/browser/newtab/newtab.ftl` — newtab-picture-header, newtab-picture-menu-hide-photo, newtab-picture-image-alt — newtab/newtab.ftl — "Afbeelding van de dag" vs "Foto van de dag" in newtab-picture-header-main, home-prefs-picture-header, newtab-custom-widget-picture-toggle, newtab-picture-menu-show-photo, newtab-picture-widget-menu-button — both shown side by side in the same widget.
     - Source: `Wikimedia Commons picture of the day`
-- `newtab-picture-menu-hide-photo` — `browser/browser/newtab/newtab.ftl` — newtab-picture-header, newtab-picture-menu-hide-photo, newtab-picture-image-alt — newtab/newtab.ftl — "Afbeelding van de dag" vs "Foto van de dag" in newtab-picture-header-main, home-prefs-picture-header, newtab-custom-widget-picture-toggle, newtab-picture-menu-show-photo, newtab-picture-widget-menu-button — both shown side by side in the same widget.
-    - Source: `Hide today’s picture`
 - `newtab-section-unfollow-button` — `browser/browser/newtab/newtab.ftl` — newtab-menu-section-unfollow-topic, newtab-section-unfollow-button — newtab/newtab.ftl — "Ontvolgen" (a non-standard neologism) vs "niet meer volgen" in newtab-menu-section-unfollow, newtab-section-unfollow-topic, newtab-section-toast-unfollow.
     - Source: `Unfollow`
 - `newtab-sports-widget-match-aria-label-upcoming-suspended` — `browser/browser/newtab/newtab.ftl` — newtab-sports-widget-suspended vs newtab-sports-widget-match-aria-label-upcoming-suspended (.aria-label) — "Onderbroken" vs "opgeschort".
@@ -609,7 +618,10 @@ _Nothing reported._
     - Source: `title: Size/transferred size of all requests`
 - `network-menu-summary-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
     - Source: `{ $formattedContentSize } / { $formattedTransferredSize } transferred`
-- _…and 44 more; see `state/` for the full list._
+- `styleeditor-visibility-toggle-system` — `devtools/client/styleeditor.ftl` — styleeditor-visibility-toggle-system (.tooltiptext) — "Systeemstylesheets" while the file uses "stijlblad(en)".
+    - Source: `tooltiptext: System style sheets can’t be disabled`
+    - Suggest: `.tooltiptext`
+- _…and 43 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

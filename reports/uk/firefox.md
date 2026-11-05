@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,363 |
+| **Strings reviewed this run** | 31 of 15,393 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for uk: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Прозорості Сертифікату" uses English-style capitalisation and a nonstandard genitive form of "сертифікат".
+    - Current: `Прозорості Сертифікату`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `прозорості сертифікатів`
+    - Ukrainian doesn't capitalise common nouns in a policy name. The standard genitive is "сертифіката", the form used elsewhere in these strings (e.g. "резервної копії сертифіката"). Certificate Transparency covers certificates in general, so the plural "сертифікатів" fits.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 15,363 |
-| Missing strings | 1,379 |
+| Files | 328 |
+| Strings | 15,393 |
+| Missing strings | 1,467 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,379 strings** are not translated yet, concentrated in:
+**1,467 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 374
-- `browser/browser/ipProtection.ftl` — 71
-- `browser/browser/preferences/preferences.ftl` — 61
-- `browser/browser/newtab/onboarding.ftl` — 58
+- `browser/browser/newtab/newtab.ftl` — 367
+- `browser/browser/newtab/onboarding.ftl` — 80
+- `browser/browser/ipProtection.ftl` — 67
+- `browser/browser/preferences/preferences.ftl` — 66
 - `browser/browser/newtab/asrouter.ftl` — 39
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 36
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
+- `browser/browser/genai.ftl` — 28
+- `toolkit/toolkit/about/aboutAddons.ftl` — 26
 - `toolkit/toolkit/about/url-classifier.ftl` — 26
-- `toolkit/toolkit/neterror/netError.ftl` — 26
-- `browser/browser/appmenu.ftl` — 26
-- `browser/browser/firefoxView.ftl` — 26
 
 **Files absent from the locale:**
 
@@ -92,8 +96,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 509, `straight-double` 128, `curly-single` 112 | **curly-double** |
-| apostrophe | `typographic` 127, `straight` 721 | **straight** |
+| quotes | `curly-double` 510, `straight-double` 128, `curly-single` 112 | **curly-double** |
+| apostrophe | `typographic` 127, `straight` 728 | **straight** |
 | ellipsis | `char` 384, `ascii` 4 | **char** |
 | dash | `em` 14, `en` 99 | **en** |
 | nbsp | `total` 4, `space-before-punctuation` 7 | _mixed_ |
@@ -107,14 +111,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (202)
+## 3. Open findings (203)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 112 |
 | 2 | Wrong content (says something other than the English) | 82 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -499,6 +503,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `value: { $type } Image`
     - Suggest: `Зображення { $type }`
     - Ukrainian places the type after the noun, as the sibling string media-animated-image-type already does (“Зображення { $type } (анімація…)”); the current order renders as e.g. “JPEG Зображення”.
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Прозорості Сертифікату" uses English-style capitalisation and a nonstandard genitive form of "сертифікат".
+    - Current: `Прозорості Сертифікату`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `прозорості сертифікатів`
+    - Ukrainian doesn't capitalise common nouns in a policy name. The standard genitive is "сертифіката", the form used elsewhere in these strings (e.g. "резервної копії сертифіката"). Certificate Transparency covers certificates in general, so the plural "сертифікатів" fits.
 - `speech-recognition-model-download-progressbar` — `browser/browser/permissions.ftl` — 'Процес' ('process') is used where the English says 'progress' ('Прогрес'). It looks like a typo.
     - Current: `Процес завантаження`
     - Source: `aria-label: Speech recognition model download progress`

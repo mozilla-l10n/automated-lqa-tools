@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,336 |
+| **Strings reviewed this run** | 37 of 15,371 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
+    - Current: `El id del miembro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id`
+    - In the en-US, "id" is the name of the manifest member. "El id del miembro" means "the member's id", which is a different thing.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
+    - Current: `El id del miembro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id`
+    - In the en-US, "id" is the member's name, just as start_url is in the same sentence. The translation instead talks about a member's id.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" should agree with the feminine noun "conexión".
+    - Current: `no es privado`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `no es privada`
+    - The subject is "Su conexión", which is feminine, so the adjective must be "privada".
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses do not match: present subjunctive "lea" is used alongside past "viajó".
+    - Current: `improbable que nadie lea esta página mientras viajó`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `improbable que nadie haya leído esta página mientras viajaba`
+    - The en-US "anyone read this page as it traveled" refers to the past. "lea" (present) does not fit with "viajó" (past), so the sentence is ungrammatical.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +63,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 320 |
-| Strings | 15,336 |
-| Missing strings | 1,406 |
+| Files | 321 |
+| Strings | 15,371 |
+| Missing strings | 1,489 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 10 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +82,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,406 strings** are not translated yet, concentrated in:
+**1,489 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 226
+- `browser/browser/newtab/newtab.ftl` — 219
 - `browser/browser/aiWindow.ftl` — 135
-- `browser/browser/appmenu.ftl` — 65
-- `browser/browser/newtab/onboarding.ftl` — 58
+- `browser/browser/newtab/onboarding.ftl` — 80
+- `browser/browser/appmenu.ftl` — 63
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/ipProtection.ftl` — 50
 - `browser/browser/browser.ftl` — 49
-- `browser/browser/preferences/preferences.ftl` — 42
+- `browser/browser/ipProtection.ftl` — 48
+- `browser/browser/preferences/preferences.ftl` — 47
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 33
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `devtools/client/toolbox-options.ftl` — 28
-- `browser/browser/newtab/asrouter.ftl` — 27
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
 
 **Files absent from the locale:**
 
@@ -99,13 +118,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 447, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 448, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 57, `straight` 71 | _mixed_ |
 | ellipsis | `char` 376 | **char** |
 | dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 300, `open-exclamation` 66 | **open-question** |
-| register | `informal` 4, `formal` 1190 | **formal** |
+| inverted marks | `open-question` 301, `open-exclamation` 66 | **open-question** |
+| register | `informal` 4, `formal` 1195 | **formal** |
 
 ---
 
@@ -116,14 +135,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (40)
+## 3. Open findings (44)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 2 | Wrong content (says something other than the English) | 24 |
+| 3 | Degraded language (grammar, spelling, terminology) | 19 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -213,6 +232,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Clear all cookies and site data`
     - Suggest: `datos de sitios`
     - "Clear all cookies and site data" covers all sites; singular definite "del sitio" narrows it to one site.
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
+    - Current: `El id del miembro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `El miembro id`
+    - In the en-US, "id" is the name of the manifest member. "El id del miembro" means "the member's id", which is a different thing.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the id of the member" instead of "the member called id".
+    - Current: `El id del miembro`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `El miembro id`
+    - In the en-US, "id" is the member's name, just as start_url is in the same sentence. The translation instead talks about a member's id.
 - `pdfjs-digital-signature-properties-timestamp` — `toolkit/toolkit/pdfviewer/viewer.ftl` — "Timestamp" translated as "Fecha" (date), losing the time component.
     - Current: `Fecha: { $dateObj }`
     - Source: `Timestamp: { $dateObj }`
@@ -231,6 +260,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
     - Suggest: `Ahora { -brand-short-name } se inicia cuando inicia sesión en Windows.`
     - The en-US states a present habitual fact ("starts up when you sign in"); the Spanish subjunctive "inicie" after the indicative main clause is ungrammatical in this context.
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — The tenses do not match: present subjunctive "lea" is used alongside past "viajó".
+    - Current: `improbable que nadie lea esta página mientras viajó`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `improbable que nadie haya leído esta página mientras viajaba`
+    - The en-US "anyone read this page as it traveled" refers to the past. "lea" (present) does not fit with "viajó" (past), so the sentence is ungrammatical.
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — The adjective has the wrong gender: "privado" should agree with the feminine noun "conexión".
+    - Current: `no es privado`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `no es privada`
+    - The subject is "Su conexión", which is feminine, so the adjective must be "privada".
 - `containers-sites-card-header` — `browser/browser/preferences/preferences.ftl` — Typo: "Elia" instead of "Elija".
     - Current: `Elia un contenedor para un sitio`
     - Source: `description: Choose a container for a site and { -brand-short-name } will use it every time the site opens. label: Site-specific containers`

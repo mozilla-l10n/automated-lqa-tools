@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 137 of 16,860 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,83 @@ Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (15)
 
-_No new findings._
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular variant reads "(flik 1)" ("tab 1") instead of "(1 flik)".
+    - Current: `(flik { $count })`
+    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
+    - Suggest: `({ $count } flik)`
+    - en-US "(1 tab)" is a count. Putting the number after the noun turns it into an ordinal label ("tab number 1"), and it no longer matches the plural variant.
+- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular uses "vald" but plural uses "markerade" for the same "selected".
+    - Current: `{ $count } flik vald`
+    - Source: `{$count ->} [one] { $count } tab selected [other] { $count } tabs selected`
+    - Suggest: `{ $count } flik markerad`
+    - The same term is rendered two ways in one message. The rest of this surface uses "markera" ("Markera alla flikar", "Avbryt markering").
+- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Leaves out "unload tabs you’re not using".
+    - Current: `och frigör resurser.`
+    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
+    - Suggest: `och inaktivera flikar du inte använder för att frigöra resurser.`
+    - en-US says you can unload unused tabs to free up resources. The Swedish only says "free up resources", so the feature's main action is missing.
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — Adjective doesn't agree with the neuter noun "Objektet".
+    - Current: `vid index { $index } är ogiltig.`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `vid index { $index } är ogiltigt.`
+    - "Objektet" is neuter, so the adjective must be "ogiltigt".
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
+- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The numeral 1 is followed by the definite form "nedladdningen", which is ungrammatical in Swedish.
+    - Current: `stoppa 1 nedladdningen`
+    - Source: `{$downloadsCount ->} [1] Stop 1 download and close this Private Window? [other] Stop { $downloadsCount } downloads and close this Private Window?`
+    - Suggest: `stoppa 1 nedladdning`
+    - In Swedish a numeral takes the indefinite noun form ("1 nedladdning"). "1 nedladdningen" is a grammar error.
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The name is split into two words and capitalised instead of being written as a hyphenated compound.
+    - Current: `OLED Svart`
+    - Source: `OLED Black`
+    - Suggest: `OLED-svart`
+    - In Swedish, a compound that starts with an abbreviation takes a hyphen and a lowercase second part ("OLED-svart"). "OLED Svart" is särskrivning, an incorrectly split compound, and uses English-style title case.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (beginning of tab strip) translated as the verb "Starta".
+    - Current: `Starta`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Början`
+    - Developer comment says this moves the tab to the start of the tab strip; "Starta" is the imperative verb "to start", not the position.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (noun, tabs that are duplicates) translated as the verb phrase "Duplicera flikar".
+    - Current: `Duplicera flikar`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Dubblettflikar`
+    - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
+- `tab-context-add-tab-to-group-closed-groups` — `browser/browser/tabContextMenu.ftl` — "Closed Groups" rendered as "Slutna grupper" (exclusive/sealed groups) instead of groups that have been closed.
+    - Current: `Slutna grupper`
+    - Source: `label: Closed Groups`
+    - Suggest: `Stängda grupper`
+    - The groups have been closed (stängda); "slutna" means closed in the sense of exclusive or sealed.
+- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — Typo "flikat" for "flikar".
+    - Current: `Flytta { $tabCount } flikat till`
+    - Source: `accesskey: v label: {$tabCount ->} [1] Move to [other] Move { $tabCount } Tabs to`
+    - Suggest: `Flytta { $tabCount } flikar till`
+    - The plural of "flik" is "flikar"; "flikat" is a misspelling.
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — Verb "Separate" translated as the adjective "Separata".
+    - Current: `Separata flikar`
+    - Source: `accesskey: t label: Separate Tabs`
+    - Suggest: `Separera flikar`
+    - Developer comment says the action separates the two split-view tabs; "Separata flikar" means "separate (distinct) tabs" rather than the command.
+- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — "Öka" (increase) does not work with the browser as object; "boost" here means enhance/improve.
+    - Current: `Öka { -brand-short-name } med tillägg`
+    - Source: `Boost { -brand-short-name } with extensions`
+    - Suggest: `Förbättra { -brand-short-name } med tillägg`
+    - en-US "Boost Firefox with extensions" means enhance it. Swedish "öka" means to increase a quantity, so "Öka Firefox" is unidiomatic and close to meaningless.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +118,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
+| Files | 331 |
+| Strings | 16,860 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,9 +145,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 307, `curly-double` 221, `curly-single` 122 | _mixed_ |
+| quotes | `straight-double` 307, `curly-double` 223, `curly-single` 122 | _mixed_ |
 | apostrophe | `typographic` 126, `straight` 42 | **typographic** |
-| ellipsis | `char` 387, `ascii` 16 | **char** |
+| ellipsis | `char` 388, `ascii` 16 | **char** |
 | dash | `em` 69, `en` 9 | **em** |
 | nbsp | `total` 9, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
 
@@ -85,14 +159,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (337)
+## 3. Open findings (352)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 98 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 2 | Wrong content (says something other than the English) | 104 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -423,11 +497,41 @@ _Nothing reported._
     - Source: `Desktop Background`
     - Suggest: `Skrivbordsbakgrund`
     - The en-US and the developer comment both describe the file used as the desktop background. "Firefox-bakgrund" names a different thing, so the saved file gets the wrong name.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (beginning of tab strip) translated as the verb "Starta".
+    - Current: `Starta`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Början`
+    - Developer comment says this moves the tab to the start of the tab strip; "Starta" is the imperative verb "to start", not the position.
+- `tab-context-add-tab-to-group-closed-groups` — `browser/browser/tabContextMenu.ftl` — "Closed Groups" rendered as "Slutna grupper" (exclusive/sealed groups) instead of groups that have been closed.
+    - Current: `Slutna grupper`
+    - Source: `label: Closed Groups`
+    - Suggest: `Stängda grupper`
+    - The groups have been closed (stängda); "slutna" means closed in the sense of exclusive or sealed.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (noun, tabs that are duplicates) translated as the verb phrase "Duplicera flikar".
+    - Current: `Duplicera flikar`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Dubblettflikar`
+    - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — Verb "Separate" translated as the adjective "Separata".
+    - Current: `Separata flikar`
+    - Source: `accesskey: t label: Separate Tabs`
+    - Suggest: `Separera flikar`
+    - Developer comment says the action separates the two split-view tabs; "Separata flikar" means "separate (distinct) tabs" rather than the command.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
     - Current: `Fråga för att öppna applänkar`
     - Source: `Ask to open app links`
     - Suggest: `Fråga om att öppna applänkar`
     - The comment says this permission controls whether the site may ask to open app links. "för att" expresses purpose, which changes the meaning. It is also inconsistent with "fråga om att öppna applänkar" in preferences.ftl.
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular variant reads "(flik 1)" ("tab 1") instead of "(1 flik)".
+    - Current: `(flik { $count })`
+    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
+    - Suggest: `({ $count } flik)`
+    - en-US "(1 tab)" is a count. Putting the number after the noun turns it into an ordinal label ("tab number 1"), and it no longer matches the plural variant.
+- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Leaves out "unload tabs you’re not using".
+    - Current: `och frigör resurser.`
+    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
+    - Suggest: `och inaktivera flikar du inte använder för att frigöra resurser.`
+    - en-US says you can unload unused tabs to free up resources. The Swedish only says "free up resources", so the feature's main action is missing.
 - `language-name-se` — `toolkit/toolkit/intl/languageNames.ftl` — "Northern Sami" rendered as the name of the whole Sami language group.
     - Current: `Samiska`
     - Source: `Northern Sami`
@@ -466,6 +570,11 @@ _Nothing reported._
     - Source: `Share the pages referenced in this chat`
     - Suggest: `i den här chatten`
     - The rest of the file consistently uses "chatt"/"chattar"; "chat" is a misspelling in Swedish.
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The name is split into two words and capitalised instead of being written as a hyphenated compound.
+    - Current: `OLED Svart`
+    - Source: `OLED Black`
+    - Suggest: `OLED-svart`
+    - In Swedish, a compound that starts with an abbreviation takes a hyphen and a lowercase second part ("OLED-svart"). "OLED Svart" is särskrivning, an incorrectly split compound, and uses English-style title case.
 - `appmenuitem-fxa-sync-off-description` — `browser/browser/appmenu.ftl` — Mixed verb forms: imperative "Skydda" coordinated with the infinitive "komma åt".
     - Current: `Skydda och komma åt dina bokmärken`
     - Source: `Protect and access your bookmarks, passwords, and more anywhere.`
@@ -531,6 +640,11 @@ _Nothing reported._
     - Source: `Choose where you use VPN`
     - Suggest: `Välj var du använder VPN`
     - No motion is involved; the equivalent settings strings use "var" (e.g. "dölja var du surfar").
+- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — "Öka" (increase) does not work with the browser as object; "boost" here means enhance/improve.
+    - Current: `Öka { -brand-short-name } med tillägg`
+    - Source: `Boost { -brand-short-name } with extensions`
+    - Suggest: `Förbättra { -brand-short-name } med tillägg`
+    - en-US "Boost Firefox with extensions" means enhance it. Swedish "öka" means to increase a quantity, so "Öka Firefox" is unidiomatic and close to meaningless.
 - `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — Missing "att" after "så", giving subordinate word order in a main clause.
     - Current: `så ljudet aldrig lämnar din enhet`
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
@@ -576,6 +690,11 @@ _Nothing reported._
     - Source: `accesskey: v label: {$tabCount ->} [1] Move Tab to [other] Move { $tabCount } Tabs to`
     - Suggest: `Flytta { $tabCount } flikar till`
     - "flikat" is not a word; the plural of "flik" is "flikar", as used in every other plural variant in this file.
+- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — Typo "flikat" for "flikar".
+    - Current: `Flytta { $tabCount } flikat till`
+    - Source: `accesskey: v label: {$tabCount ->} [1] Move to [other] Move { $tabCount } Tabs to`
+    - Suggest: `Flytta { $tabCount } flikar till`
+    - The plural of "flik" is "flikar"; "flikat" is a misspelling.
 - `tabbrowser-allow-dialogs-to-get-focus` — `browser/browser/tabbrowser.ftl` — Ungrammatical sentence; the infinitive clause "to take you to their tab" is rendered as a finite verb.
     - Current: `Tillåt liknande meddelanden från { $domain } leder dig till deras flik`
     - Source: `label: Allow notifications like this from { $domain } to take you to their tab`
@@ -641,6 +760,26 @@ _Nothing reported._
     - Source: `Loading script from file: URI (“%1$S”) was blocked because its MIME type (“%2$S”) is not a valid JavaScript MIME type.`
     - Suggest: `Laddar skript från file: URI`
     - The developer comment says do not translate "file: URI"; “fil:” is not a valid scheme.
+- `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — Adjective doesn't agree with the neuter noun "Objektet".
+    - Current: `vid index { $index } är ogiltig.`
+    - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
+    - Suggest: `vid index { $index } är ogiltigt.`
+    - "Objektet" is neuter, so the adjective must be "ogiltigt".
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — Compound written as two words ("Start URL:en").
+    - Current: `Start URL:en`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Start-URL:en`
+    - In Swedish this compound is written as one word, joined with a hyphen before the abbreviation: "start-URL".
 - `SSL_ERROR_MISSING_EXTENDED_MASTER_SECRET` — `security/manager/chrome/pipnss/nsserrors.properties` — Technical identifier mangled: extended_master_secre.
     - Current: `extended_master_secre utökning`
     - Source: `The peer tried to resume without a correct extended_master_secret extension.`
@@ -676,6 +815,11 @@ _Nothing reported._
     - Source: `MDN Web Docs`
     - Suggest: `MDN Web Docs`
     - The file header states these feature names must be treated as brands and neither transliterated nor translated; sibling entries keep their English names.
+- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The numeral 1 is followed by the definite form "nedladdningen", which is ungrammatical in Swedish.
+    - Current: `stoppa 1 nedladdningen`
+    - Source: `{$downloadsCount ->} [1] Stop 1 download and close this Private Window? [other] Stop { $downloadsCount } downloads and close this Private Window?`
+    - Suggest: `stoppa 1 nedladdning`
+    - In Swedish a numeral takes the indefinite noun form ("1 nedladdning"). "1 nedladdningen" is a grammar error.
 - `experimental-features-link-previews-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — The macOS key name Option is translated as "Alternativ" in one variant and kept as "Option" in the parallel string.
     - Current: `tryck på Shift (⇧) plus Alternativ (⌥) eller Alt`
     - Source: `{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. For some webpages, AI can also…`
@@ -993,7 +1137,7 @@ _Nothing reported._
     - Source: `Animation cannot be run on the compositor because the area of the frame (%1$S) is too large relative to the viewport (larger than %2$S)`
     - Suggest: `eftersom området för ramen (%1$S) är för stort`
     - “område” is neuter and requires “stort”.
-- _…and 45 more; see `state/` for the full list._
+- _…and 46 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1008,7 +1152,7 @@ _Nothing reported._
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — `ai-window-delete-all-memories-message` uses three dots where this locale uses …
     - Current: `Befintliga minnen raderas. Om du inte vill skapa några nya minnen, avmarkera alternativen för "Lär dig av..." i inställningarna för { -smart-window-brand-name }.`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `smart-window-grouped-tabs-summary` — `browser/browser/aiWindowContent.ftl` — Missing space between "till" and the count in the singular variant, producing e.g. "la till1 flik".
     - Current: `och la till{ $count } flik.`
     - Source: `{$count ->} [one] Created the group “{ $label }” and added { $count } tab. [other] Created the group “{ $label }” and added { $count } tabs.`
@@ -1017,15 +1161,15 @@ _Nothing reported._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `edit-popup-settings2` — `browser/browser/browser.ftl` — `edit-popup-settings2` uses three dots where this locale uses …
     - Current: `Hantera popup-inställningar och omdirigeringsinställningar för tredje part...`
     - Source: `accesskey: M label: Manage pop-up and third-party redirect settings…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `Meddelanden, Mail och mer...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `restore-session-startup-suggestion-message` — `browser/browser/browser.ftl` — Missing space after the bold question, so the two sentences run together in the visible text.
     - Current: `</strong>Du kan återställa`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -1034,7 +1178,7 @@ _Nothing reported._
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `Dela idéer och feedback...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `migration-chrome-windows-password-import-step1` — `browser/browser/migrationWizard.ftl` — Missing space before the ">" separator in the menu path.
     - Current: `Lösenord och autofyll> Googles lösenordshantering.`
     - Source: `Open the main menu <img data-l10n-name="chrome-icon-3dots"/> and go to Passwords and Autofill > Google Password Manager.`
@@ -1043,7 +1187,7 @@ _Nothing reported._
 - `cfr-doorhanger-bookmark-fxa-link-text` — `browser/browser/newtab/asrouter.ftl` — `cfr-doorhanger-bookmark-fxa-link-text` uses three dots where this locale uses …
     - Current: `Synkronisera bokmärken nu...`
     - Source: `Sync bookmarks now…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `restore-session-startup-suggestion-message` — `browser/browser/newtab/asrouter.ftl` — Missing space between the bold heading and the following sentence.
     - Current: `flikar?</strong>Du`
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
@@ -1052,7 +1196,7 @@ _Nothing reported._
 - `home-mode-choice-custom-srd` — `browser/browser/newtab/newtab.ftl` — `home-mode-choice-custom-srd` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `newtab-widget-section-minimize` — `browser/browser/newtab/newtab.ftl` — The English plural "widgets" is left untranslated in the tooltip while the rest of the surface uses "widgetar".
     - Current: `Minimera widgets`
     - Source: `aria-label: Collapse all widgets to compact size title: Minimize widgets`
@@ -1061,11 +1205,11 @@ _Nothing reported._
 - `places-edit-folder2` — `browser/browser/places.ftl` — `places-edit-folder2` uses three dots where this locale uses …
     - Current: `Redigera mapp...`
     - Source: `accesskey: E label: Edit Folder…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — `browser-languages-search` uses three dots where this locale uses …
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `browser-languages-search` — `browser/browser/preferences/languages.ftl` — Stray apostrophe at end of the string
     - Current: `Sök efter fler språk...'`
     - Source: `Search for more languages…`
@@ -1074,15 +1218,15 @@ _Nothing reported._
 - `browser-languages-searching` — `browser/browser/preferences/languages.ftl` — `browser-languages-searching` uses three dots where this locale uses …
     - Current: `Söker efter språk...`
     - Source: `label: Searching for languages…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `home-mode-choice-custom` — `browser/browser/preferences/preferences.ftl` — `home-mode-choice-custom` uses three dots where this locale uses …
     - Current: `Anpassade webbadresser...`
     - Source: `label: Custom URLs…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `Du synkroniserar ingenting ... ännu. Börja synkronisera för att få all din data på alla dina enheter.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `safeb-blocked-malware-page-learn-more-sumo` — `browser/browser/safebrowsing/blockedSite.ftl` — English genitive apostrophe used on the brand term
     - Current: `{ -brand-short-name }’s skydd mot nätfiske och skadlig programvara`
     - Source: `Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_support'>support.mozilla.org</a>.`
@@ -1121,11 +1265,11 @@ _Nothing reported._
 - `about-debugging-sidebar-runtime-item-waiting-for-browser` — `devtools/client/aboutdebugging.ftl` — `about-debugging-sidebar-runtime-item-waiting-for-browser` uses three dots where this locale uses …
     - Current: `Väntar på webbläsare...`
     - Source: `Waiting for browser…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `manifest-loading` — `devtools/client/application.ftl` — `manifest-loading` uses three dots where this locale uses …
     - Current: `Laddar manifest...`
     - Source: `Loading manifest…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `collapseSources` — `devtools/client/debugger.properties` — The Sources pane is called "resurs" here but "Källor" everywhere else in the debugger.
     - Current: `Fäll ihop resurs och konturpanel`
     - Source: `Collapse Sources and Outline panes`
@@ -1144,7 +1288,7 @@ _Nothing reported._
 - `sourceSearch.search` — `devtools/client/debugger.properties` — `sourceSearch.search` uses three dots where this locale uses …
     - Current: `Sök...`
     - Source: `Search sources…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `inspectorBreakpointSubmenu.label` — `devtools/client/inspector.properties` — "Break on…" rendered as "Avbryt vid…" (cancel at…), while the debugger uses "Bryt vid…".
     - Current: `Avbryt vid…`
     - Source: `Break on…`
@@ -1193,7 +1337,7 @@ _Nothing reported._
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — `about-reader-loading` uses three dots where this locale uses …
     - Current: `Laddar...`
     - Source: `Loading…`
-    - The tree uses … 387 times against 16 ASCII runs.
+    - The tree uses … 388 times against 16 ASCII runs.
 - `about-reader-loading` — `toolkit/toolkit/about/aboutReader.ftl` — Three periods instead of an ellipsis character
     - Current: `Laddar...`
     - Source: `Loading…`

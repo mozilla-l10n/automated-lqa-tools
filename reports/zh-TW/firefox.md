@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 139 of 16,860 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — There is a half-width colon where zh-TW convention calls for a full-width colon.
+    - Current: `用途:`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `用途：`
+    - The locale uses full-width punctuation. The parallel string dom-manifest-image-unsupported-purposes uses '用途：', so this one is inconsistent.
+- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The singular variant uses the plural 「這些檔案」 (these files) for a single download.
+    - Current: `[1] 將無法繼續下載這些檔案。`
+    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
+    - Suggest: `[1] 將無法繼續下載此檔案。`
+    - The en-US [1] variant says "this download", but the translation copies the plural wording 「這些」 (these), so it no longer matches the source.
+- `change-password-not-set` — `security/manager/security/pippki/pippki.ftl` — Half-width parentheses are used where the locale uses full-width punctuation.
+    - Current: `(未設定)`
+    - Source: `value: (not set)`
+    - Suggest: `（未設定）`
+    - The locale convention is full-width punctuation, and the same file uses full-width parentheses in 「憑證機構（未命名）」.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — 'Duplicate Tabs' (tabs that are duplicates) is rendered as the action 'copy tabs'.
+    - Current: `複製分頁`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `重複的分頁`
+    - The developer comment says this item sits under 'Close Multiple' and closes the duplicate tabs of the selected tab. 複製分頁 reads as the command 'duplicate/copy tab', which is a different function.
+- `tab-context-add-tab-to-group` — `browser/browser/tabbrowser.ftl` — The plural variant uses the possessive 的 where it needs the measure word 個, so it reads 'add the tabs of N to group'.
+    - Current: `將 { $tabCount } 的分頁加入至群組`
+    - Source: `accesskey: G label: {$tabCount ->} [1] Add to Group [other] Add { $tabCount } Tabs to Group`
+    - Suggest: `將 { $tabCount } 個分頁加入至群組`
+    - The en-US is 'Add N Tabs to Group'. A number in Chinese needs the classifier 個, as in the sibling string 移動 { $tabCount } 個分頁到. With 的 the phrase is ungrammatical.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the noun phrase 'open tabs from your other devices' into the command 'open the tabs on your other devices'.
+    - Current: `開啟您其他裝置上的分頁`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `您其他裝置上開啟的分頁`
+    - The developer comment says 'Open' modifies the noun (tabs that are open). This tooltip describes what gets synced; it is not an action, but the zh-TW text reads as an instruction to open tabs.
+- `hnt-card-taskbar-tabs-primary-button` — `browser/browser/newtab/onboarding.ftl` — The button translates "taskbar" as 工具列 ("toolbar") instead of 工作列.
+    - Current: `將網站新增至工具列`
+    - Source: `Add sites to taskbar`
+    - Suggest: `將網站新增至工作列`
+    - The en-US says "Add sites to taskbar", meaning the Windows taskbar. The card's header (hnt-card-taskbar-tabs-header) and hnt-card-pin-body both use 工作列 for taskbar, while 工具列 means a browser toolbar. As written, the button names a different place than the header does.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +78,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
+| Files | 331 |
+| Strings | 16,860 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,12 +109,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 895, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
+| quotes | `corner` 897, `straight-double` 34, `curly-single` 9, `curly-double` 6 | **corner** |
 | apostrophe | `typographic` 9, `straight` 9 | _mixed_ |
-| ellipsis | `char` 403 | **char** |
+| ellipsis | `char` 405 | **char** |
 | dash | `em` 54, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8484 | **punctuation** |
+| fullwidth | `punctuation` 8561 | **punctuation** |
 
 ---
 
@@ -90,15 +124,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (246)
+## 3. Open findings (253)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 140 |
-| 2 | Wrong content (says something other than the English) | 81 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
-| 4 | Cosmetic (typography, spacing) | 19 |
+| 2 | Wrong content (says something other than the English) | 85 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 4 | Cosmetic (typography, spacing) | 21 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -414,16 +448,36 @@ _Nothing reported._
     - Source: `accesskey: w label: Move Section to Mini Window`
     - Suggest: `將區域移動到迷你視窗`
     - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
+- `hnt-card-taskbar-tabs-primary-button` — `browser/browser/newtab/onboarding.ftl` — The button translates "taskbar" as 工具列 ("toolbar") instead of 工作列.
+    - Current: `將網站新增至工具列`
+    - Source: `Add sites to taskbar`
+    - Suggest: `將網站新增至工作列`
+    - The en-US says "Add sites to taskbar", meaning the Windows taskbar. The card's header (hnt-card-taskbar-tabs-header) and hnt-card-pin-body both use 工作列 for taskbar, while 工具列 means a browser toolbar. As written, the button names a different place than the header does.
 - `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical.
     - Current: `為受管理或對注重安全性的組織進行瀏覽器治理。`
     - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
     - Suggest: `為受法規監管及注重安全性的組織提供瀏覽器治理。`
     - "Regulated organizations" are ones under regulatory oversight, not organizations that are "managed". Also, 或對注重安全性的組織 has a dangling 對 that breaks the sentence.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the noun phrase 'open tabs from your other devices' into the command 'open the tabs on your other devices'.
+    - Current: `開啟您其他裝置上的分頁`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `您其他裝置上開啟的分頁`
+    - The developer comment says 'Open' modifies the noun (tabs that are open). This tooltip describes what gets synced; it is not an action, but the zh-TW text reads as an instruction to open tabs.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — 'Duplicate Tabs' (tabs that are duplicates) is rendered as the action 'copy tabs'.
+    - Current: `複製分頁`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `重複的分頁`
+    - The developer comment says this item sits under 'Close Multiple' and closes the duplicate tabs of the selected tab. 複製分頁 reads as the command 'duplicate/copy tab', which is a different function.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
     - Current: `開啟應用程式鏈結前先問我`
     - Source: `Ask to open app links`
     - Suggest: `詢問是否可開啟應用程式鏈結`
     - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
+- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The singular variant uses the plural 「這些檔案」 (these files) for a single download.
+    - Current: `[1] 將無法繼續下載這些檔案。`
+    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
+    - Suggest: `[1] 將無法繼續下載此檔案。`
+    - The en-US [1] variant says "this download", but the translation copies the plural wording 「這些」 (these), so it no longer matches the source.
 - `narrate-skip-next` — `toolkit/toolkit/global/narrate.ftl` — "Forward" in the narration controls is translated as "next page", but narration skips by paragraph, not by page.
     - Current: `下一頁`
     - Source: `title: Forward ({ $shortcut })`
@@ -507,6 +561,11 @@ _Nothing reported._
     - Source: `You can’t use speech synthesis because Speech Dispatcher won’t open.`
     - Suggest: `Speech Dispatcher`
     - The file comment says the name must not be localized.
+- `tab-context-add-tab-to-group` — `browser/browser/tabbrowser.ftl` — The plural variant uses the possessive 的 where it needs the measure word 個, so it reads 'add the tabs of N to group'.
+    - Current: `將 { $tabCount } 的分頁加入至群組`
+    - Source: `accesskey: G label: {$tabCount ->} [1] Add to Group [other] Add { $tabCount } Tabs to Group`
+    - Suggest: `將 { $tabCount } 個分頁加入至群組`
+    - The en-US is 'Add N Tabs to Group'. A number in Chinese needs the classifier 個, as in the sibling string 移動 { $tabCount } 個分頁到. With 的 the phrase is ungrammatical.
 - `addProtocolHandlerMessage` — `browser/chrome/browser/feeds/subscribe.properties` — Typo: 鍵結 should be 鏈結 ('link').
     - Current: `鍵結`
     - Source: `Add “%1$S” as an application for %2$S links?`
@@ -851,33 +910,43 @@ _Nothing reported._
 - `ImageMapCircleNegativeRadius` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleNegativeRadius` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性不能有負的半徑。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag has a negative radius.`
-    - The locale's quote convention is `corner` (895 occurrences).
+    - The locale's quote convention is `corner` (897 occurrences).
 - `ImageMapCircleWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapCircleWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="circle"> 標籤中的 "coords" 屬性並不是 "center-x,center-y,radius" 的格式。`
     - Source: `The “coords” attribute of the <area shape="circle"> tag is not in the “center-x,center-y,radius” format.`
-    - The locale's quote convention is `corner` (895 occurrences).
+    - The locale's quote convention is `corner` (897 occurrences).
 - `ImageMapPolyOddNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyOddNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性少了最後的 y 座標 (正確格式是 "x1,y1,x2,y2,…")。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).`
-    - The locale's quote convention is `corner` (895 occurrences).
+    - The locale's quote convention is `corner` (897 occurrences).
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses straight double quotes
     - Current: `<area shape="poly"> 標籤中的 "coords" 屬性並不是 "x1,y1,x2,y2,…" 的格式。`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
-    - The locale's quote convention is `corner` (895 occurrences).
+    - The locale's quote convention is `corner` (897 occurrences).
 - `ImageMapRectBoundsError` — `dom/chrome/layout/layout_errors.properties` — `ImageMapRectBoundsError` uses straight double quotes
     - Current: `<area shape="rect">的"coords" 屬性不是 "left,top,right,bottom" 格式。`
     - Source: `The “coords” attribute of the <area shape="rect"> tag is not in the “left,top,right,bottom” format.`
-    - The locale's quote convention is `corner` (895 occurrences).
+    - The locale's quote convention is `corner` (897 occurrences).
 - `BlockMixedDisplayContent` — `dom/chrome/security/security.properties` — 'mixed content' is written 混和 here but 混合 elsewhere in the same file.
     - Current: `已封鎖載入混和的顯示內容`
     - Source: `Blocked loading mixed display content “%1$S”`
     - Suggest: `已封鎖載入混合的顯示內容`
     - LoadingMixedActiveContent2 and LoadingMixedDisplayContent2 in the same file use 混合, the standard term for mixed content. BlockMixedActiveContent and csp.properties obsoleteBlockAllMixedContent also use 混和.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — There is a half-width colon where zh-TW convention calls for a full-width colon.
+    - Current: `用途:`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `用途：`
+    - The locale uses full-width punctuation. The parallel string dom-manifest-image-unsupported-purposes uses '用途：', so this one is inconsistent.
 - `xpath-bad-extension-function` — `dom/dom/xslt.ftl` — The sentence ends with a full-width comma instead of a full stop.
     - Current: `呼叫了未知的 XPath 擴充功能，`
     - Source: `An unknown XPath extension function was called.`
     - Suggest: `呼叫了未知的 XPath 擴充函式。`
     - en-US ends with a period and nothing follows. A trailing comma looks truncated. 'function' is also rendered 功能 (feature) here but 函式 elsewhere in the file.
+- `change-password-not-set` — `security/manager/security/pippki/pippki.ftl` — Half-width parentheses are used where the locale uses full-width punctuation.
+    - Current: `(未設定)`
+    - Source: `value: (not set)`
+    - Suggest: `（未設定）`
+    - The locale convention is full-width punctuation, and the same file uses full-width parentheses in 「憑證機構（未命名）」.
 - `webauthn-related-origin-create-header` — `toolkit/toolkit/webauthnDialog.ftl` — 'passkey' is left in English here, but the same dialog translates it as 密碼金鑰
     - Current: `建立一把 Passkey`
     - Source: `{ $origin } wants to create a passkey for { $rpId }.`

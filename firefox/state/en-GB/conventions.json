@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "en-GB",
-  "prose_chunks": 17559,
-  "strings": 16742
+  "prose_chunks": 17568,
+  "strings": 16755
  },
  "apostrophe": {
   "straight": 43,
-  "typographic": 1029
+  "typographic": 1023
  },
  "dash": {
   "em": 83,
@@ -30,7 +30,7 @@
   "total": 5
  },
  "quotes": {
-  "curly-double": 548,
+  "curly-double": 549,
   "curly-single": 94,
   "straight-double": 55
  }

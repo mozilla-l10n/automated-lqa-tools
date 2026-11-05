@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,742 |
+| **Strings reviewed this run** | 33 of 16,755 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — The translation says the start URL ("beginning of the URL") is invalid, but the source says the scope is invalid.
+    - Current: `Začiatok URL adresy je mimo rozsah, a tým je neplatný.`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Úvodná URL adresa je mimo rozsahu, a preto je rozsah neplatný.`
+    - en-US: 'The start URL is outside the scope, so the scope is invalid.' In the Slovak, 'neplatný' agrees with 'Začiatok', so it calls the start URL invalid. Also, 'Začiatok URL adresy' means 'beginning of the URL', not the manifest's start URL.
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
+    - Current: `Začiatok URL adresy je neplatný.`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Úvodná URL adresa je neplatná.`
+    - 'Start URL' means the manifest's start_url, the URL the app opens at. 'Začiatok URL adresy' means 'the beginning of the URL address'.
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
+    - Current: `Začiatok URL adresy musí byť rovnakého pôvodu`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Úvodná URL adresa musí mať rovnaký pôvod`
+    - 'Start URL' means the manifest's start_url, not the beginning of a URL.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The question ends with a colon instead of a question mark.
+    - Current: `pre nasledujúce účely:`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `pre nasledujúce účely?`
+    - The en-US is a question ('...for the following purposes?') and the Slovak is a question too ('Chcete dôverovať...'), but it ends with a colon.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +63,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,742 |
-| Missing strings | 0 |
+| Files | 331 |
+| Strings | 16,755 |
+| Missing strings | 105 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +82,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**105 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/onboarding.ftl` — 22
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/tabContextMenu.ftl` — 14
+- `browser/browser/appExtensionFields.ftl` — 11
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
+- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/preferences/preferences.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/genai.ftl` — 2
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 523, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
+| quotes | `curly-double` 524, `curly-single` 79, `straight-double` 78, `german-double` 9 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
 | ellipsis | `char` 402 | **char** |
 | dash | `em` 29, `en` 67 | _mixed_ |
@@ -88,15 +122,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (225)
+## 3. Open findings (229)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 68 |
+| 2 | Wrong content (says something other than the English) | 71 |
 | 3 | Degraded language (grammar, spelling, terminology) | 2 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -429,6 +463,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Choose a new tab layout`
     - Suggest: `Vyberte si rozloženie novej karty`
     - In en-US "new tab" modifies "layout": this is the layout of the New Tab page. "nové rozloženie kariet" means a new arrangement of tabs, which is a different thing.
+- `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
+    - Current: `Začiatok URL adresy je neplatný.`
+    - Source: `The start URL is invalid.`
+    - Suggest: `Úvodná URL adresa je neplatná.`
+    - 'Start URL' means the manifest's start_url, the URL the app opens at. 'Začiatok URL adresy' means 'the beginning of the URL address'.
+- `dom-manifest-start-url-outside-scope` — `dom/dom/manifest.ftl` — The translation says the start URL ("beginning of the URL") is invalid, but the source says the scope is invalid.
+    - Current: `Začiatok URL adresy je mimo rozsah, a tým je neplatný.`
+    - Source: `The start URL is outside the scope, so the scope is invalid.`
+    - Suggest: `Úvodná URL adresa je mimo rozsahu, a preto je rozsah neplatný.`
+    - en-US: 'The start URL is outside the scope, so the scope is invalid.' In the Slovak, 'neplatný' agrees with 'Začiatok', so it calls the start URL invalid. Also, 'Začiatok URL adresy' means 'beginning of the URL', not the manifest's start URL.
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
+    - Current: `Začiatok URL adresy musí byť rovnakého pôvodu`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `Úvodná URL adresa musí mať rovnaký pôvod`
+    - 'Start URL' means the manifest's start_url, not the beginning of a URL.
 
 ### C. Grammar, agreement & spelling
 
@@ -988,6 +1037,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `<strong>{ $property }</strong> has no effect because it only applies to floated elements.`
     - Suggest: `pretože sa vzťahuje iba na plávajúce prvky`
     - inactive-css-not-display-block-on-floated-2 in the same file uses “plávajúci” for float; “pohyblivé” means movable and does not denote CSS float.
+- `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — The question ends with a colon instead of a question mark.
+    - Current: `pre nasledujúce účely:`
+    - Source: `Do you want to trust “{ $caName }” for the following purposes?`
+    - Suggest: `pre nasledujúce účely?`
+    - The en-US is a question ('...for the following purposes?') and the Slovak is a question too ('Chcete dôverovať...'), but it ends with a colon.
 - `download-cert-view-text` — `security/manager/security/pippki/pippki.ftl` — CA rendered as "certifikačná agentúra" instead of "certifikačná autorita".
     - Current: `Preskúmať certifikát certifikačnej agentúry`
     - Source: `Examine CA certificate`

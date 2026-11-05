@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4b9474c2df52` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `0e1a4ee7e1e7` |
-| **Previous run** | 2026-11-02 @ `ca562c968023` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `83c84062ba97` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
+| **Previous run** | 2026-11-03 @ `4b9474c2df52` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,308 |
+| **Strings reviewed this run** | 31 of 16,321 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — "It is therefore unlikely that anyone read this page" is rendered as an absolute "no one could read this page".
+    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
+    - The en-US only says it is unlikely the page was read. The Vietnamese says nobody can read it, a security guarantee the product does not make.
+- `autocomplete-insecure-login-warning` — `toolkit/toolkit/main-window/autocomplete.ftl` — "Logins entered here could be compromised" is rendered as "Logging in here could harm you".
+    - Current: `Đăng nhập vào đây có thể gây tổn hại cho bạn.`
+    - Source: `This connection is not secure. Logins entered here could be compromised.`
+    - Suggest: `Thông tin đăng nhập được nhập tại đây có thể bị đánh cắp.`
+    - The source warns that the credentials typed here could be compromised. The Vietnamese turns this into a vague claim that logging in could harm the user, and the point about credentials is lost.
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency" is rendered as "Chứng chỉ minh bạch" (transparent certificate) instead of transparency of certificates.
+    - Current: `Chứng chỉ minh bạch`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `Minh bạch chứng chỉ`
+    - In Vietnamese word order, "Chứng chỉ minh bạch" means "a transparent certificate". The policy is Certificate Transparency, which is "Minh bạch chứng chỉ".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +58,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,308 |
-| Missing strings | 434 |
+| Files | 331 |
+| Strings | 16,321 |
+| Missing strings | 539 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +77,20 @@ _Nothing retired._
 
 ### Completeness
 
-**434 strings** are not translated yet, concentrated in:
+**539 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
 - `dom/chrome/dom/dom.properties` — 30
 - `devtools/client/tooltips.ftl` — 28
-- `browser/browser/preferences/preferences.ftl` — 21
+- `browser/browser/preferences/preferences.ftl` — 26
+- `browser/browser/newtab/onboarding.ftl` — 24
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
 - `dom/chrome/layout/htmlparser.properties` — 15
-- `toolkit/toolkit/about/aboutGlean.ftl` — 13
-- `devtools/client/perftools.ftl` — 11
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,7 +100,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 497, `curly-single` 133, `straight-double` 88 | **curly-double** |
+| quotes | `curly-double` 498, `curly-single` 133, `straight-double` 88 | **curly-double** |
 | apostrophe | `typographic` 134, `straight` 12 | **typographic** |
 | ellipsis | `char` 376, `ascii` 18 | **char** |
 | dash | `em` 69, `en` 3 | **em** |
@@ -103,10 +117,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (498)
+## 3. Open findings (501)
 
-> **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — "It is therefore unlikely that anyone read this page" is rendered as an absolute "no one could read this page".
+    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
+    - The en-US only says it is unlikely the page was read. The Vietnamese says nobody can read it, a security guarantee the product does not make.
 - `pageInfo_Privacy_Encrypted2` — `security/manager/chrome/pippki/pippki.properties` — "It is unlikely that anyone read this page" was rendered as "no one could read this page", which turns a likelihood into a guarantee.
     - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
     - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
@@ -123,8 +142,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 182 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 2 | Wrong content (says something other than the English) | 184 |
+| 3 | Degraded language (grammar, spelling, terminology) | 62 |
 | 4 | Cosmetic (typography, spacing) | 43 |
 
 ### A. Functional, markup, variables & plurals
@@ -453,6 +472,16 @@ _Also listed under their own category below._
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
     - Suggest: `Mở các thẻ trước đó?`
     - The source is an invitation to reopen previous tabs. "Đã" turns it into a question about something that already happened.
+- `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency" is rendered as "Chứng chỉ minh bạch" (transparent certificate) instead of transparency of certificates.
+    - Current: `Chứng chỉ minh bạch`
+    - Source: `This website complies with the Certificate Transparency policy.`
+    - Suggest: `Minh bạch chứng chỉ`
+    - In Vietnamese word order, "Chứng chỉ minh bạch" means "a transparent certificate". The policy is Certificate Transparency, which is "Minh bạch chứng chỉ".
+- `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — "It is therefore unlikely that anyone read this page" is rendered as an absolute "no one could read this page".
+    - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
+    - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
+    - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
+    - The en-US only says it is unlikely the page was read. The Vietnamese says nobody can read it, a security guarantee the product does not make.
 - `mathmlroot` — `dom/chrome/accessibility/AccessFu.properties` — MathML 'root' is translated as 'gốc', which means a tree root or origin, not the math root (radical).
     - Current: `gốc`
     - Source: `root`
@@ -723,17 +752,7 @@ _Also listed under their own category below._
     - Source: `Redirecting to data: URI not allowed (Blocked loading of: “%1$S”)`
     - Suggest: `Chuyển hướng đến data: URI`
     - "data:" is a URI scheme and must stay literal, as the sibling string BlockTopLevelDataURINavigation tells translators ("Do not translate 'data: URI'"). "dữ liệu: URI" doesn't make sense.
-- `CORSNotSupportingCredentials` — `dom/chrome/security/security.properties` — "Credential" is translated as "Chứng chỉ" (certificate) rather than credentials or login information.
-    - Current: `Chứng chỉ không được hỗ trợ`
-    - Source: `Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at ‘%1$S’. (Reason: Credential is not supported if the CORS header ‘Access-Control-Allow-Origin’ is ‘*’).`
-    - Suggest: `Thông tin xác thực không được hỗ trợ`
-    - In CORS, credentials means cookies and HTTP authentication, not certificates. "Chứng chỉ" means certificate, which misleads developers.
-- `InsecureFormActionPasswordsPresent` — `dom/chrome/security/security.properties` — "form action" is rendered as "biểu mẫu hành động" ("action form"), with head and modifier reversed.
-    - Current: `với biểu mẫu hành động (http://) không an toàn`
-    - Source: `Password fields present in a form with an insecure (http://) form action. This is a security risk that allows user login credentials to be stolen.`
-    - Suggest: `có hành động biểu mẫu (http://) không an toàn`
-    - The en-US means the form's action attribute is insecure. "biểu mẫu hành động" means a form of type 'action', which is a different thing.
-- _…and 48 more; see `state/` for the full list._
+- _…and 51 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "sk",
-  "prose_chunks": 17564,
-  "strings": 16742
+  "prose_chunks": 17573,
+  "strings": 16755
  },
  "apostrophe": {
   "straight": 54,
@@ -30,7 +30,7 @@
   "total": 116
  },
  "quotes": {
-  "curly-double": 523,
+  "curly-double": 524,
   "curly-single": 79,
   "german-double": 9,
   "straight-double": 78

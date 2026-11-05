@@ -284,9 +284,13 @@
    "source": "Light hills under a soft sky",
    "original": "Leichte Hügel unter einem sanften Himmel",
    "text": "Helle Hügel unter einem sanften Himmel",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-04",
+   "comment": "",
+   "pontoon_pk": 12373902,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/newtab/newtab.ftl/?string=339637",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -490,9 +494,14 @@
    "source": "Translate to",
    "original": "Übersetzen auf",
    "text": "Übersetzen in",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "dismissal": "translations-panel-revisit-to-label @ browser/browser/translations.ftl — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373909,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/translations.ftl/?string=340289",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -546,9 +555,14 @@
    "source": "console.clear() was prevented due to “Persist Logs”",
    "original": "console.clear() wurde aufgrund von \"Logs nicht leeren\" verhindert",
    "text": "console.clear() wurde aufgrund von \"Log nicht leeren\" verhindert",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>\"Persist Logs\" is a plural form in my opinion.</p>",
+   "dismissal": "preventedConsoleClear @ devtools/shared/webconsole.properties — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>\"Persist Logs\" is a plural form in my opinion.</p>",
+   "pontoon_pk": 12373911,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/devtools/shared/webconsole.properties/?string=332125",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -602,9 +616,13 @@
    "source": "Split, merge, and more. <a data-l10n-name=\"features-link\">See PDF features</a>",
    "original": "PDFs teilen, zusammenführen und mehr. <a data-l10n-name=\"features-link\">PDF-Funktionen entdecken</a>",
    "text": "PDFs aufteilen, zusammenführen und mehr. <a data-l10n-name=\"features-link\">PDF-Funktionen entdecken</a>",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12373913,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/toolkit/toolkit/about/pdfFeaturesNotification.ftl/?string=339720",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
