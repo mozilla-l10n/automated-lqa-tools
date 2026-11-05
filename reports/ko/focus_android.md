@@ -3,16 +3,16 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `b66e03acefb4` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 250 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
 
-Also for ko: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md)
+Also for ko: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ---
 

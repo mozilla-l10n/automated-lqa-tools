@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
-| **Previous run** | 2026-11-03 @ `e7dee4574947` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
+| **Previous run** | 2026-11-05 @ `f8e5f3a985cd` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 250 |
 
