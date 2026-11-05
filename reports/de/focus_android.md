@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-03 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `e7dee4574947` |
-| **Previous run** | 2026-11-02 @ `bc6fbd15dac8` |
+| **Generated** | 2026-11-05 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f8e5f3a985cd` |
+| **Previous run** | 2026-11-03 @ `e7dee4574947` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 250 |
+| **Strings reviewed this run** | 0 of 250 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,56 +18,13 @@ Also for de: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
-    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
-    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
-    - Current: `und fortfahren könnte riskant sein`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `und Fortfahren könnte riskant sein`
-    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
+_No new findings._
 
-### ✅ Fixed since the last run (7)
+### ✅ Fixed since the last run (0)
 
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
-    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
-    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
-- `menu_open_with_a_browser2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — Missing space before the ellipsis, inconsistent with the German convention used in menu_share ("Teilen …").
-    - Current: `Öffnen in…`
-    - Source: `Open in…`
-    - Suggest: `Öffnen in …`
-    - German typography (and the sibling string menu_share) places a space before the ellipsis character.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
-    - Current: `und fortfahren könnte riskant sein`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `und Fortfahren könnte riskant sein`
-    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
-- `preference_performance_block_javascript_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The modal "may" of "Pages may load faster" is dropped, turning a possibility into a statement of fact.
-    - Current: `Seiten laden schneller, verhalten sich aber möglicherweise unerwartet`
-    - Source: `Pages may load faster, but may also behave unexpectedly`
-    - Suggest: `Seiten laden möglicherweise schneller, verhalten sich aber eventuell unerwartet`
-    - Source says "Pages may load faster"; the German asserts they do load faster.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Regulation" (EU) 2024/1183 is a Verordnung, not a Richtlinie (directive).
-    - Current: `Qualifiziert im Sinne der Richtlinie (EU) 2024/1183.`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Qualifiziert im Sinne der Verordnung (EU) 2024/1183.`
-    - EU legal terminology: "Regulation" = "Verordnung"; "Richtlinie" would be "Directive", naming the wrong legal instrument.
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — The Erase bullet now says removing cookies is how you delete search and browsing history, instead of saying Erase deletes cookies plus history.
-    - Current: `Entfernen Sie Cookies, um Such- und Browserverlauf zu löschen`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Löschen Sie Cookies sowie Such- und Browserverlauf mit einem Tippen`
-    - Source: 'Erase to delete cookies as well as search and browsing history' – the Erase action deletes cookies and also the histories. The German says 'remove cookies in order to delete search and browsing history', which gets the relationship wrong and drops the Erase action.
-- `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — 'fortfahren' is used as a noun here, so it must be capitalised.
-    - Current: `und fortfahren könnte riskant sein`
-    - Source: `{ <label> }Someone could be trying to impersonate the site and continuing could be risky.{ </label> } { <br> }{ <br> } { <label> }%1$s does not trust { <b> }%2$s{ </b> } because its certificate issuer is unknown, the ce…`
-    - Suggest: `und Fortfahren könnte riskant sein`
-    - 'fortfahren' is the subject of 'könnte riskant sein', so it is a verb used as a noun and German spelling rules require a capital letter.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -117,7 +74,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 | quotes | `german-double` 23, `curly-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 7 | **en** |
-| register | `formal` 667 | **formal** |
+| register | `formal` 676 | **formal** |
 
 ---
 
