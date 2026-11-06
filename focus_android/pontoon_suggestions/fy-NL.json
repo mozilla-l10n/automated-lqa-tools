@@ -131,6 +131,84 @@
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_first_screen_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_first_screen_title"
+    ]
+   },
+   "fids": [
+    "0768a8011d7e"
+   ],
+   "findings": [
+    "Dutch spelling \"bij\" used instead of Frisian \"by\"."
+   ],
+   "source": "Welcome to %1$s",
+   "original": "Wolkom bij %1$s",
+   "text": "Wolkom by %1$s",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "search_add_manually_example",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_add_manually_example"
+    ]
+   },
+   "fids": [
+    "a7da94710222"
+   ],
+   "findings": [
+    "Misspelling of \"Bygelyks\"."
+   ],
+   "source": "Example: example.com/search/?q=%s",
+   "original": "Bygelyls: example.com/search/?q=%s",
+   "text": "Bygelyks: example.com/search/?q=%s",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "tabs_tray_action_add_new_tab",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "tabs_tray_action_add_new_tab"
+    ]
+   },
+   "fids": [
+    "38c7d2423656"
+   ],
+   "findings": [
+    "Adjective agreement error: 'ljepblêd' is neuter, so the attributive adjective should be 'Nij', not 'Nije'."
+   ],
+   "source": "Add new tab",
+   "original": "Nije ljepblêd tafoegje",
+   "text": "Nij ljepblêd tafoegje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
   }
  ]
 }

@@ -17,3 +17,7 @@
 # sentence in conventions.md so the reviewer never raises it.
 preference_advanced_summary @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-05): The fy-NL tree writes capital Û as U (e.g. 'Untskoattelje'), and 'Untwikkelersark' is a correct compound for 'developer tools'.
 preference_crashes @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-05): Mozilla fy-NL uses 'ûngelok' (e.g. ûngelokrapporten) as the term for software crashes, and capital Û is written U in this tree (cf. 'Untskoattelje').
+about_content @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-06): Frisian orthography customarily omits diacritics on capital letters (cf. 'Us Heit', 'Us Mem'), so 'Us' is the expected capitalized form of 'ús'.
+crash_report_send_crash_label @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-06): Frisian customarily drops the circumflex on a capital initial (as in 'Us Mem'), so 'Ungelok-' is the normal capitalized spelling.
+preference_state_off @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Ut' is the normal capitalized form of 'út'.
+show_biometric_button_text @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Untskoattelje' is the normal capitalized spelling of 'ûntskoattelje'.
