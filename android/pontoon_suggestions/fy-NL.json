@@ -1353,6 +1353,734 @@
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_archive_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_archive_description"
+    ]
+   },
+   "fids": [
+    "5e873fd6e5a3"
+   ],
+   "findings": [
+    "English word \"the\" left in the Frisian sentence and the phrasing duplicates \"fan\" awkwardly."
+   ],
+   "source": "%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.",
+   "original": "%1$s kin in eardere ferzje fan dizze side sykje fan %2$s út fan the Internet Archive.",
+   "text": "%1$s kin in eardere ferzje fan dizze side sykje fan %2$s út fan it Internet Archive.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_connection_failure_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_connection_failure_message"
+    ]
+   },
+   "fids": [
+    "9c98ae66bc73"
+   ],
+   "findings": [
+    "Predicative adjective wrongly inflected: \"oerbelêste\" should be \"oerbelêst\"."
+   ],
+   "source": "{ <ul> }\n{ <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
+   "original": "<ul>\n<li>Miskien is de website tydlik net beskikber of oerbelêste. Probearje it oer inkelde mominten opnij.</li>\n<li>As jo gjin inkelde side lade kinne, kontrolearje dan de gegevens- of wifi-ferbining fan jo apparaat.</li>\n</ul>",
+   "text": "<ul>\n<li>Miskien is de website tydlik net beskikber of oerbelêst. Probearje it oer inkelde mominten opnij.</li>\n<li>As jo gjin inkelde side lade kinne, kontrolearje dan de gegevens- of wifi-ferbining fan jo apparaat.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_proxy_connection_refused_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_proxy_connection_refused_message"
+    ]
+   },
+   "fids": [
+    "2f1f4122dd00"
+   ],
+   "findings": [
+    "\"in oarder\" should be \"yn oarder\" (typo for the preposition)."
+   ],
+   "source": "{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> }\n{ <ul> }\n{ <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> }\n{ <li> }Does the proxy service allow connections from this network?{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser is konfigurearre om in proxyserver te brûken, mar de proxy wegere in ferbining.</p>\n<ul>\n<li>Is de proxykonfiguraasje fan de browser in oarder? Kontrolearje de ynstellingen en probearje it opnij.</li>\n<li>Stiet de proxyservice ferbiningen fan dit netwurk ta?</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
+   "text": "<p>De browser is konfigurearre om in proxyserver te brûken, mar de proxy wegere in ferbining.</p>\n<ul>\n<li>Is de proxykonfiguraasje fan de browser yn oarder? Kontrolearje de ynstellingen en probearje it opnij.</li>\n<li>Stiet de proxyservice ferbiningen fan dit netwurk ta?</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_redirect_loop_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_redirect_loop_message"
+    ]
+   },
+   "fids": [
+    "ce8289081ea2"
+   ],
+   "findings": [
+    "Wrong article gender: \"It website\" should be \"De website\"."
+   ],
+   "source": "{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> }\n{ <ul> }\n{ <li> }Have you disabled or blocked cookies required by this site?{ </li> }\n{ <li> }If accepting the site’s cookies does not resolve the problem, it is likely a server configuration issue and not your device.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser is stoppe mei te probearjen it opfrege item op te heljen. It website ferwiist de oanfraach troch op in manier dy’t nea dien wêze sil.</p>\n<ul>\n<li>Hawwe jo cookies dy’t nedich binne foar dizze website útskeakele of blokkearre?</li>\n<li>As it akseptearjen fan cookies fan dizze website it probleem net oplost is it wierskynlik in serverkonfiguraasjeprobleem en net jo apparaat.</li>\n</ul>",
+   "text": "<p>De browser is stoppe mei te probearjen it opfrege item op te heljen. De website ferwiist de oanfraach troch op in manier dy’t nea dien wêze sil.</p>\n<ul>\n<li>Hawwe jo cookies dy’t nedich binne foar dizze website útskeakele of blokkearre?</li>\n<li>As it akseptearjen fan cookies fan dizze website it probleem net oplost is it wierskynlik in serverkonfiguraasjeprobleem en net jo apparaat.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_unknown_protocol_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_unknown_protocol_message"
+    ]
+   },
+   "fids": [
+    "3d356618c5bb"
+   ],
+   "findings": [
+    "\"net werkend\" is a misspelling of \"net werkent\" (does not recognize)."
+   ],
+   "source": "{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> }\n{ <ul> }\n{ <li> }Are you trying to access multimedia or other non-text services? Check the site for extra requirements.{ </li> }\n{ <li> }Some protocols may require third-party software or plugins before the browser can recognize them.{ </li> }\n{ </ul> }",
+   "original": "<p>It adres spesifisearret in protokol (byg. <q>wxyz://</q>) dat de browser net werkend, wêrtroch de browser net op in krekte manier mei de website ferbine kin.</p>\n<ul>\n<li>Probearje jo tagong te krijen ta multimedia- of oare net-tekstservices? Kontrolearje de website op ekstra nedichheden.</li>\n<li>Guon protokollen kinne programmatuer of ynstekkers fan tredden fereaskje foardat de browser se werkenne kin.</li>\n</ul>",
+   "text": "<p>It adres spesifisearret in protokol (byg. <q>wxyz://</q>) dat de browser net werkent, wêrtroch de browser net op in krekte manier mei de website ferbine kin.</p>\n<ul>\n<li>Probearje jo tagong te krijen ta multimedia- of oare net-tekstservices? Kontrolearje de website op ekstra nedichheden.</li>\n<li>Guon protokollen kinne programmatuer of ynstekkers fan tredden fereaskje foardat de browser se werkenne kin.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_failed_to_disable",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_failed_to_disable"
+    ]
+   },
+   "fids": [
+    "4bde3a89a6e3"
+   ],
+   "findings": [
+    "Missing preposition \"fan\" before the placeholder, unlike the parallel enable/remove/uninstall strings."
+   ],
+   "source": "Failed to disable %1$s",
+   "original": "Utskeakeljen %1$s mislearre",
+   "text": "Utskeakeljen fan %1$s mislearre",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description"
+    ]
+   },
+   "fids": [
+    "58765b0bb7a3"
+   ],
+   "findings": [
+    "Compound noun misspelled: \"útwreidingûntwikkeler\" is missing the linking -s- used in all sibling strings (\"útwreidingsûntwikkeler\")."
+   ],
+   "source": "Share technical and interaction data with extension developer",
+   "original": "Technyske en ynteraksjegegevens diele mei útwreidingûntwikkeler",
+   "text": "Technyske en ynteraksjegegevens diele mei útwreidingsûntwikkeler",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_dialog_technical_and_interaction_data",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_dialog_technical_and_interaction_data"
+    ]
+   },
+   "fids": [
+    "f76d06aae19a"
+   ],
+   "findings": [
+    "Compound ‘útwreidingûntwikkeler’ is missing the linking -s- used elsewhere (‘útwreidingsûntwikkeler’)."
+   ],
+   "source": "Share technical and interaction data with extension developer",
+   "original": "Technyske en ynteraksjegegevens mei útwreidingûntwikkeler diele",
+   "text": "Technyske en ynteraksjegegevens mei útwreidingsûntwikkeler diele",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_management_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_management_description"
+    ]
+   },
+   "fids": [
+    "0585972c1785"
+   ],
+   "findings": [
+    "Misspelling of ‘útwreidingsgebrûk’ and missing diacritic on the initial U."
+   ],
+   "source": "Monitor extension usage and manage themes",
+   "original": "Utwreidigsgebrûk kontrolearje en tema’s beheare",
+   "text": "Utwreidingsgebrûk kontrolearje en tema’s beheare",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_management_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_management_description_for_update"
+    ]
+   },
+   "fids": [
+    "7e865127c2d5"
+   ],
+   "findings": [
+    "Misspelling of ‘útwreidingsgebrûk’."
+   ],
+   "source": "Monitor extension usage and manage themes.",
+   "original": "Utwreidigsgebrûk kontrolearje en tema’s beheare.",
+   "text": "Utwreidingsgebrûk kontrolearje en tema’s beheare.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/downloads/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_downloads_open_existing_file",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/downloads/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_downloads_open_existing_file"
+    ]
+   },
+   "fids": [
+    "9ac0a6c6e898"
+   ],
+   "findings": [
+    "Adjective inflection missing before neuter noun 'bestân'."
+   ],
+   "source": "Open existing file",
+   "original": "Besteande bestân iepenje",
+   "text": "Besteand bestân iepenje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "ai_controls_blocked_info_banner",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "ai_controls_blocked_info_banner"
+    ]
+   },
+   "fids": [
+    "35a38f3a0aca"
+   ],
+   "findings": [
+    "Plural \"specific features\" rendered as singular \"spesifike funksje\"."
+   ],
+   "source": "New and current AI enhancements are blocked by default. Unblock specific features below.",
+   "original": "Nije en aktuele AI-ferbetteringen wurde standert blokkearre. Deblokkearje hjirûnder spesifike funksje.",
+   "text": "Nije en aktuele AI-ferbetteringen wurde standert blokkearre. Deblokkearje hjirûnder spesifike funksjes.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "bookmark_menu_open_all_in_private_tabs_button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "bookmark_menu_open_all_in_private_tabs_button"
+    ]
+   },
+   "fids": [
+    "ec91a65324a0"
+   ],
+   "findings": [
+    "Misspelling of \"priveeljepblêden\" as \"proveeljepblêden\"."
+   ],
+   "source": "Open all in private tabs",
+   "original": "Alles yn proveeljepblêden iepenje",
+   "text": "Alles yn priveeljepblêden iepenje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "create_collection_deselect_all",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "create_collection_deselect_all"
+    ]
+   },
+   "fids": [
+    "22880c0b20fb"
+   ],
+   "findings": [
+    "\"Alle deselektearje\" is inconsistent with the parallel \"Alles selektearje\"."
+   ],
+   "source": "Deselect all",
+   "original": "Alle deselektearje",
+   "text": "Alles deselektearje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_enhanced_tracking_protection_allow_list_dialog_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_enhanced_tracking_protection_allow_list_dialog_message"
+    ]
+   },
+   "fids": [
+    "2bc5940daa09"
+   ],
+   "findings": [
+    "Misspelling of \"funksje\" as \"funskje\"."
+   ],
+   "source": "This setting helps fix the most common site problems. If you turn it off, some sites may not work, and %1$s won’t be able to help troubleshoot those issues.",
+   "original": "Dizze ynstelling helpt de meast foarkommende websiteproblemen op te lossen. As jo de funskje útskeakelje, wurkje guon siden miskien net, en kin %1$s net helpe by it oplossen fan dy problemen.",
+   "text": "Dizze ynstelling helpt de meast foarkommende websiteproblemen op te lossen. As jo de funksje útskeakelje, wurkje guon siden miskien net, en kin %1$s net helpe by it oplossen fan dy problemen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_downloads_remove_from_download_history_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_downloads_remove_from_download_history_description"
+    ]
+   },
+   "fids": [
+    "2299f568a5a1"
+   ],
+   "findings": [
+    "Misspelling of \"downloadskiednis\" as \"downloadskeiednis\"."
+   ],
+   "source": "File is removed from your download history, but is still saved on your device",
+   "original": "Bestân is fuortsmiten út jo downloadskeiednis, mar noch hieltyd bewarre op jo apparaat",
+   "text": "Bestân is fuortsmiten út jo downloadskiednis, mar noch hieltyd bewarre op jo apparaat",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_passwords_exceptions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_passwords_exceptions"
+    ]
+   },
+   "fids": [
+    "3f029c8956e9"
+   ],
+   "findings": [
+    "Missing diacritic in \"Utsûnderingen\"; should be \"Utsûnderingen\" with Ú."
+   ],
+   "source": "Exceptions",
+   "original": "Utsûnderingen",
+   "text": "Útsûnderingen",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_show_search_suggestions",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_show_search_suggestions"
+    ]
+   },
+   "fids": [
+    "05baf013ab96"
+   ],
+   "findings": [
+    "Misspelling of \"suggestjes\" as \"suggesjes\"."
+   ],
+   "source": "Show search suggestions",
+   "original": "Syksuggesjes toane",
+   "text": "Syksuggestjes toane",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_sync_tabs_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_sync_tabs_2"
+    ]
+   },
+   "fids": [
+    "28b57a604660"
+   ],
+   "findings": [
+    "Misspelling of \"ljepblêden\" as \"ljeplêden\"."
+   ],
+   "source": "Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "privacy_notice_updated_homepage_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "privacy_notice_updated_homepage_message"
+    ]
+   },
+   "fids": [
+    "80f9da1df95c"
+   ],
+   "findings": [
+    "Duplicated/garbled verb phrase \"yn Firefox te wer te jaan\"."
+   ],
+   "source": "We’ve updated our %1$s to reflect the latest features in Firefox. %2$s",
+   "original": "Wy hawwe ús %1$s bywurke om de nijste funksjes yn Firefox te wer te jaan. %2$s",
+   "text": "Wy hawwe ús %1$s bywurke om de nijste funksjes yn Firefox wer te jaan. %2$s",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "protection_panel_etp_disabled_no_trackers_blocked",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "protection_panel_etp_disabled_no_trackers_blocked"
+    ]
+   },
+   "fids": [
+    "86c2ad927c9d"
+   ],
+   "findings": [
+    "Misspelled verb \"wirde\" instead of \"wurde\"."
+   ],
+   "source": "Trackers aren’t blocked",
+   "original": "Trackers wirde net blokkearre",
+   "text": "Trackers wurde net blokkearre",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_suggestions_delete_history_item_snackbar",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_suggestions_delete_history_item_snackbar"
+    ]
+   },
+   "fids": [
+    "af3c5204e862"
+   ],
+   "findings": [
+    "Confirmation of a completed deletion is rendered as an infinitive/imperative instead of a past participle."
+   ],
+   "source": "Deleted %1$s from history",
+   "original": "%1$s út skiednis fuortsmite",
+   "text": "%1$s út skiednis fuortsmiten",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_3_steps_first_step",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_3_steps_first_step"
+    ]
+   },
+   "fids": [
+    "69efb5e28516"
+   ],
+   "findings": [
+    "\"Goed j!\" is a garbled/incomplete rendering of \"Great start!\"."
+   ],
+   "source": "Great start! You’ve completed 1 out of 3 steps.",
+   "original": "Goed j! Jo hawwe 1 fan de 3 stappen foltôge.",
+   "text": "Goed begjin! Jo hawwe 1 fan de 3 stappen foltôge.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_5_steps_first_step",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_5_steps_first_step"
+    ]
+   },
+   "fids": [
+    "8178db8953bb"
+   ],
+   "findings": [
+    "\"Goed j!\" is a garbled/incomplete rendering of \"Great start!\"."
+   ],
+   "source": "Great start! You’ve completed 1 out of 5 steps.",
+   "original": "Goed j! Jo hawwe 1 fan de 5 stappen foltôge.",
+   "text": "Goed begjin! Jo hawwe 1 fan de 5 stappen foltôge.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "setup_checklist_subtitle_6_steps_first_step",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "setup_checklist_subtitle_6_steps_first_step"
+    ]
+   },
+   "fids": [
+    "eabd4bf0e0d2"
+   ],
+   "findings": [
+    "\"Goed j!\" is a garbled/incomplete rendering of \"Great start!\"."
+   ],
+   "source": "Great start! You’ve completed 1 out of 6 steps.",
+   "original": "Goed j! Jo hawwe 1 fan de 6 stappen foltôge.",
+   "text": "Goed begjin! Jo hawwe 1 fan de 6 stappen foltôge.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "startup_crash_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "startup_crash_body"
+    ]
+   },
+   "fids": [
+    "b30e1b2a6fac"
+   ],
+   "findings": [
+    "Verb agreement error: \"helpe\" should be \"helpt\" with the singular subject \"It ferstjoeren fan in ûngelokrapport\"."
+   ],
+   "source": "There was a problem opening %s.\n\nSending a crash report helps us diagnose and fix problems with the browser. Reports may include personal or sensitive data.",
+   "original": "Der is in probleem bard by it iepenjen fan %s.\n\nIt ferstjoeren fan in ûngelokrapport helpe ús problemen mei de browser te analysearjen en op te lossen. Rapporten kinne persoanlike of gefoelige gegevens befetsje.",
+   "text": "Der is in probleem bard by it iepenjen fan %s.\n\nIt ferstjoeren fan in ûngelokrapport helpt ús problemen mei de browser te analysearjen en op te lossen. Rapporten kinne persoanlike of gefoelige gegevens befetsje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_group_sheet_dismiss_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_group_sheet_dismiss_description"
+    ]
+   },
+   "fids": [
+    "8bb48b9140a3"
+   ],
+   "findings": [
+    "Misspelling of \"ljepblêdgroep\" as \"Ljepbêdgroep\"."
+   ],
+   "source": "View tab group, collapse drag handle",
+   "original": "Ljepbêdgroep besjen, sleepgreep ynklappe",
+   "text": "Ljepblêdgroep besjen, sleepgreep ynklappe",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "unsubmitted_crash_requested_by_devs_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "unsubmitted_crash_requested_by_devs_dialog_title"
+    ]
+   },
+   "fids": [
+    "dd11b9ab3c92"
+   ],
+   "findings": [
+    "Wrong article gender: \"in net-ferstjoerde ûngelokrapport\" uses inflected adjective form with a neuter noun."
+   ],
+   "source": "You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.",
+   "original": "Jo hawwe in net-ferstjoerde ûngelokrapport relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe om %1$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
+   "text": "Jo hawwe in net-ferstjoerd ûngelokrapport relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe om %1$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
   }
  ]
 }
