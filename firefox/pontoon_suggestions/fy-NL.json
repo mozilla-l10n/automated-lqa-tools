@@ -3967,6 +3967,4296 @@
    "status": "pending",
    "status_date": "2026-11-05",
    "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutDialog.ftl",
+   "string_id": "settings-update-unsupported",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutDialog.ftl",
+    "key": [
+     "settings-update-unsupported"
+    ]
+   },
+   "fids": [
+    "c1cd8e791b4a"
+   ],
+   "findings": [
+    "fernijngen → fernijingen"
+   ],
+   "source": "You can not perform further updates on this system. <a data-l10n-name=\"unsupported-link\">Learn more</a>",
+   "original": "Jo kinne gjin fernijngen mear útfiere op dit systeem. <a data-l10n-name=\"unsupported-link\">Mear ynfo</a>",
+   "text": "Jo kinne gjin fernijingen mear útfiere op dit systeem. <a data-l10n-name=\"unsupported-link\">Mear ynfo</a>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutDialog.ftl",
+   "string_id": "update-unsupported",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutDialog.ftl",
+    "key": [
+     "update-unsupported"
+    ]
+   },
+   "fids": [
+    "e78b86d55265"
+   ],
+   "findings": [
+    "fernijngen → fernijingen"
+   ],
+   "source": "You can not perform further updates on this system. <label data-l10n-name=\"unsupported-link\">Learn more</label>",
+   "original": "Jo kinne gjin fernijngen mear útfiere op dit systeem. <label data-l10n-name=\"unsupported-link\">Mear ynfo</label>",
+   "text": "Jo kinne gjin fernijingen mear útfiere op dit systeem. <label data-l10n-name=\"unsupported-link\">Mear ynfo</label>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutLogins.ftl",
+   "string_id": "login-list-intro-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutLogins.ftl",
+    "key": [
+     "login-list-intro-description"
+    ]
+   },
+   "fids": [
+    "5cfe15b16160"
+   ],
+   "findings": [
+    "Wannear jo → Wannear’t jo"
+   ],
+   "source": "When you save a password in { -brand-product-name }, it will show up here.",
+   "original": "Wannear jo in wachtwurd bewarje yn { -brand-product-name }, wurdt dit hjir werjûn.",
+   "text": "Wannear’t jo in wachtwurd bewarje yn { -brand-product-name }, wurdt dit hjir werjûn.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutPrivateBrowsing.ftl",
+   "string_id": "about-private-browsing-nova-info-subheader2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutPrivateBrowsing.ftl",
+    "key": [
+     "about-private-browsing-nova-info-subheader2"
+    ]
+   },
+   "fids": [
+    "a14eaa062dec"
+   ],
+   "findings": [
+    "al jo priveefinster → al jo priveefinsters"
+   ],
+   "source": "We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.",
+   "original": "Wy wiskje elke sykopdracht en oanmelding as jo al jo priveefinster slute. De ynboude beskermingen fan { -brand-short-name } binne hjir ek oanwêzich, lykas it blokkearjen fan trackers.",
+   "text": "Wy wiskje elke sykopdracht en oanmelding as jo al jo priveefinsters slute. De ynboude beskermingen fan { -brand-short-name } binne hjir ek oanwêzich, lykas it blokkearjen fan trackers.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutRestartRequired.ftl",
+   "string_id": "restart-required-single-instance-answer-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutRestartRequired.ftl",
+    "key": [
+     "restart-required-single-instance-answer-2"
+    ]
+   },
+   "fids": [
+    "212e166fc6bc"
+   ],
+   "findings": [
+    "\"wykst\" is a misspelling of \"wylst\" (while/during)."
+   ],
+   "source": "This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.",
+   "original": "Dit kin barre wykst in lange navigaasjesesje, of as jo bestjoeringssysteem { -brand-short-name } bywurket. Opnij starte hâldt { -brand-short-name } feilich en normaal.",
+   "text": "Dit kin barre wylst in lange navigaasjesesje, of as jo bestjoeringssysteem { -brand-short-name } bywurket. Opnij starte hâldt { -brand-short-name } feilich en normaal.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aboutSessionRestore.ftl",
+   "string_id": "welcome-back-restore-some-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutSessionRestore.ftl",
+    "key": [
+     "welcome-back-restore-some-label"
+    ]
+   },
+   "fids": [
+    "7e798c2d93f9"
+   ],
+   "findings": [
+    "dy’t jo winske (past) → dy’t jo winskje"
+   ],
+   "source": "Restore only the ones you want",
+   "original": "Allinnich dyjinge werom bringe dy’t jo winske",
+   "text": "Allinnich dyjinge werom bringe dy’t jo winskje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/addonNotifications.ftl",
+   "string_id": "addon-install-full-screen-blocked",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/addonNotifications.ftl",
+    "key": [
+     "addon-install-full-screen-blocked"
+    ]
+   },
+   "fids": [
+    "2ce80892e603"
+   ],
+   "findings": [
+    "Add-on-installaasje → Add-on-ynstallaasje"
+   ],
+   "source": "Add-on installation is not allowed while in or before entering fullscreen mode.",
+   "original": "Add-on-installaasje is net tastien yn of foar it iepenjen fan de modus folslein skerm.",
+   "text": "Add-on-ynstallaasje is net tastien yn of foar it iepenjen fan de modus folslein skerm.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aiWindow.ftl",
+   "string_id": "aiwindow-starter-browsing-compare",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindow.ftl",
+    "key": [
+     "aiwindow-starter-browsing-compare"
+    ]
+   },
+   "fids": [
+    "0b32017ee1fa"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "Compare tabs",
+   "original": "Fergelykje ljeplêden",
+   "text": "Fergelykje ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aiWindow.ftl",
+   "string_id": "smartbar-placeholder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindow.ftl",
+    "key": [
+     "smartbar-placeholder"
+    ]
+   },
+   "fids": [
+    "2c6cba74616b"
+   ],
+   "findings": [
+    "in URL type → in URL typje"
+   ],
+   "source": "placeholder: Ask, search, or type a URL",
+   "original": "Freegje, sykje of in URL type",
+   "text": "Freegje, sykje of in URL typje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/aiWindowContent.ftl",
+   "string_id": "smart-window-opened-tabs-row-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindowContent.ftl",
+    "key": [
+     "smart-window-opened-tabs-row-label"
+    ]
+   },
+   "fids": [
+    "34c8642bb8fa"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "Opened tabs",
+   "original": "Iepene ljeplêden",
+   "text": "Iepene ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/appmenu.ftl",
+   "string_id": "appmenu-remote-tabs-tabsnotsyncing",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/appmenu.ftl",
+    "key": [
+     "appmenu-remote-tabs-tabsnotsyncing"
+    ]
+   },
+   "fids": [
+    "0c8d0c632027"
+   ],
+   "findings": [
+    "ljepblêdsyngroanisaasje → ljepblêdsyngronisaasje"
+   ],
+   "source": "Turn on tab syncing to view a list of tabs from your other devices.",
+   "original": "Set ljepblêdsyngroanisaasje oan om in list fan ljepblêden fan jo oare apparaten wer te jaan.",
+   "text": "Set ljepblêdsyngronisaasje oan om in list fan ljepblêden fan jo oare apparaten wer te jaan.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/autoTabGrouping.ftl",
+   "string_id": "smartwindow-group-tabs-all-sorted",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/autoTabGrouping.ftl",
+    "key": [
+     "smartwindow-group-tabs-all-sorted"
+    ]
+   },
+   "fids": [
+    "1964a1813e1c"
+   ],
+   "findings": [
+    "'ljeplêden' is misspelled; it should be 'ljepblêden' (tabs)."
+   ],
+   "source": "Nice work organizing your tabs",
+   "original": "Jo ljeplêden binne kreas oardere",
+   "text": "Jo ljepblêden binne kreas oardere",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/backgroundtasks/defaultagent.ftl",
+   "string_id": "default-browser-agent-task-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/backgroundtasks/defaultagent.ftl",
+    "key": [
+     "default-browser-agent-task-description"
+    ]
+   },
+   "fids": [
+    "d02f511e855d"
+   ],
+   "findings": [
+    "Two occurrences of wannear → wannear’t"
+   ],
+   "source": "The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-name } no more than two times. This task is installed automatically by { -brand-short-name }, and is reinstalled when { -brand-short-name } updates. To disable this task, update the “default-browser-agent.enabled” preference on the about:config page or the { -brand-short-name } enterprise policy setting “DisableDefaultBrowserAgent”.",
+   "original": "De taak Standert-browseragent kontrolearret wannear de standert wiziget fan { -brand-short-name } nei in oare browser. As dizze wiziging ûnder fertochte omstannichheden plakhat, wurdt net faker as twa kear oan de brûker frege om wer nei { -brand-short-name } werom te wizigjen. De taak wurdt automatysk troch { -brand-short-name } ynstallearre en wurdt opnij ynstallearre wannear { -brand-short-name } bywurke wurdt. Wurkje, om dizze taak út te skeakeljen, de foarkar ‘default-browser-agent.enabled’ op de side about:config by, of de beliedsynstelling ‘DisableDefaultBrowserAgent’ fan { -brand-short-name } foar bedriuwen.",
+   "text": "De taak Standert-browseragent kontrolearret wannear’t de standert wiziget fan { -brand-short-name } nei in oare browser. As dizze wiziging ûnder fertochte omstannichheden plakhat, wurdt net faker as twa kear oan de brûker frege om wer nei { -brand-short-name } werom te wizigjen. De taak wurdt automatysk troch { -brand-short-name } ynstallearre en wurdt opnij ynstallearre wannear’t { -brand-short-name } bywurke wurdt. Wurkje, om dizze taak út te skeakeljen, de foarkar ‘default-browser-agent.enabled’ op de side about:config by, of de beliedsynstelling ‘DisableDefaultBrowserAgent’ fan { -brand-short-name } foar bedriuwen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "data-reporting-notification-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "data-reporting-notification-message"
+    ]
+   },
+   "fids": [
+    "ad278d29b478"
+   ],
+   "findings": [
+    "ferstjoerd → ferstjoert"
+   ],
+   "source": "{ -brand-short-name } automatically sends some data to { -vendor-short-name } so that we can improve your experience.",
+   "original": "{ -brand-short-name } ferstjoerd automatysk in pear gegevens nei { -vendor-short-name }, sadat wy jo ûnderfining ferbetterje kinne.",
+   "text": "{ -brand-short-name } ferstjoert automatysk in pear gegevens nei { -vendor-short-name }, sadat wy jo ûnderfining ferbetterje kinne.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "decoder-doctor-decode-error-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "decoder-doctor-decode-error-message"
+    ]
+   },
+   "fids": [
+    "6d82e2912919"
+   ],
+   "findings": [
+    "\"wylst\" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical."
+   ],
+   "source": "An error occurred while decoding a media resource.",
+   "original": "Der is in flater bard wylst it dekodearjen fan in mediaboarne.",
+   "text": "Der is in flater bard by it dekodearjen fan in mediaboarne.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "decoder-doctor-decode-warning-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "decoder-doctor-decode-warning-message"
+    ]
+   },
+   "fids": [
+    "d4d5f1e7a7ac"
+   ],
+   "findings": [
+    "\"wylst\" is a conjunction but is followed by a noun phrase, which makes the sentence ungrammatical."
+   ],
+   "source": "A recoverable error occurred while decoding a media resource.",
+   "original": "Der is in werstelbere flater bard wylst it dekodearjen fan in mediaboarne.",
+   "text": "Der is in werstelbere flater bard by it dekodearjen fan in mediaboarne.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/downloads.ftl",
+   "string_id": "downloads-blocked-potentially-insecure",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/downloads.ftl",
+    "key": [
+     "downloads-blocked-potentially-insecure"
+    ]
+   },
+   "fids": [
+    "7baa3efd63a1"
+   ],
+   "findings": [
+    "The infinitive 'downloaden' is used where the past participle 'download' is needed, so the message reads as 'do not download the file' instead of 'file not downloaded'."
+   ],
+   "source": "File not downloaded: Potential security risk.",
+   "original": "Bestân net downloaden: mooglik befeiligingsrisiko.",
+   "text": "Bestân net download: mooglik befeiligingsrisiko.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "bookmarks-toolbar-callout-2b-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "bookmarks-toolbar-callout-2b-title"
+    ]
+   },
+   "fids": [
+    "e0bc79fab90c"
+   ],
+   "findings": [
+    "blêdwizerakbalke → blêdwizerarkbalke"
+   ],
+   "source": "Keep your bookmarks toolbar open?",
+   "original": "Jo blêdwizerakbalke iepen hâlde?",
+   "text": "Jo blêdwizerarkbalke iepen hâlde?",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "sidebar-callout-survey-features-question",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "sidebar-callout-survey-features-question"
+    ]
+   },
+   "fids": [
+    "88cc36a8a0c1"
+   ],
+   "findings": [
+    "Preposition 'in' should be Frisian 'yn'."
+   ],
+   "source": "The following are potential sidebar features. Which would improve your productivity in { -brand-short-name } the most?",
+   "original": "Hjirûnder folgje mooglike funksjes yn de sydbalke. Hokker soe jo produktiviteit in { -brand-short-name } it meast ferbetterje?",
+   "text": "Hjirûnder folgje mooglike funksjes yn de sydbalke. Hokker soe jo produktiviteit yn { -brand-short-name } it meast ferbetterje?",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "vertical-tabs-callout-1-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "vertical-tabs-callout-1-subtitle"
+    ]
+   },
+   "fids": [
+    "fb08300c4dc5"
+   ],
+   "findings": [
+    "Doubled fluch"
+   ],
+   "source": "Try our new vertical tabs layout to quickly scan your list of tabs. Early testers report this layout helps them feel more organized. Switch anytime.",
+   "original": "Probearje ús nije fertikale ljepblêdyndieling om fluch jo list mei ljepblêden fluch te scannen. Iere testers melde dat dizze yndieling harren helpt om mear organisearre te fielen. Wikselje op elk winske momint.",
+   "text": "Probearje ús nije fertikale ljepblêdyndieling om jo list mei ljepblêden fluch te scannen. Iere testers melde dat dizze yndieling harren helpt om mear organisearre te fielen. Wikselje op elk winske momint.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "windows-10-eos-sync-split-dismiss-button-show-fewer-option",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "windows-10-eos-sync-split-dismiss-button-show-fewer-option"
+    ]
+   },
+   "fids": [
+    "5c9fe5524b47"
+   ],
+   "findings": [
+    "Minder oanrekommandearre toane → Minder oanrekommandaasjes toane"
+   ],
+   "source": "label: Show fewer recommendations",
+   "original": "Minder oanrekommandearre toane",
+   "text": "Minder oanrekommandaasjes toane",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "windows-10-eos-sync-urgency-subtitle-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "windows-10-eos-sync-urgency-subtitle-1"
+    ]
+   },
+   "fids": [
+    "f4ce06b223aa"
+   ],
+   "findings": [
+    "-ynstelling → -ynstellingen"
+   ],
+   "source": "Sync now to keep your { -brand-short-name } bookmarks, passwords, and settings safe and easy to restore.",
+   "original": "Syngronisearje no om jo { -brand-short-name }-blêdwizers, -wachtwurden en -ynstelling feilich en maklik te werstellen.",
+   "text": "Syngronisearje no om jo { -brand-short-name }-blêdwizers, -wachtwurden en -ynstellingen feilich en maklik te werstellen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/firefoxRelay.ftl",
+   "string_id": "firefox-relay-get-reusable-masks-failed",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/firefoxRelay.ftl",
+    "key": [
+     "firefox-relay-get-reusable-masks-failed"
+    ]
+   },
+   "fids": [
+    "69e8617659d4"
+   ],
+   "findings": [
+    "Stray nij: gjin nij opnij brûkbere maskers"
+   ],
+   "source": "{ -relay-brand-name } could not find reusable masks. HTTP error code: { $status }.",
+   "original": "{ -relay-brand-name } kin gjin nij opnij brûkbere maskers fine. HTTP-flaterkoade: { $status }.",
+   "text": "{ -relay-brand-name } kin gjin opnij brûkbere maskers fine. HTTP-flaterkoade: { $status }.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/firefoxView.ftl",
+   "string_id": "firefoxview-opentabs-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/firefoxView.ftl",
+    "key": [
+     "firefoxview-opentabs-header"
+    ]
+   },
+   "fids": [
+    "5119cd123c80"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/firefoxView.ftl",
+   "string_id": "firefoxview-opentabs-nav",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/firefoxView.ftl",
+    "key": [
+     "firefoxview-opentabs-nav"
+    ]
+   },
+   "fids": [
+    "af6e18fc7752"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "(value): Open tabs\ntitle: Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-button-turn-vpn-off-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-button-turn-vpn-off-1"
+    ]
+   },
+   "fids": [
+    "63a5fd3c5d3e"
+   ],
+   "findings": [
+    "\"Utskeakelje\" is missing the accent on Ú."
+   ],
+   "source": "Turn off",
+   "original": "Utskeakelje",
+   "text": "Útskeakelje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-connection-status-blocked-error-description-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-connection-status-blocked-error-description-1"
+    ]
+   },
+   "fids": [
+    "1f42ab883c72"
+   ],
+   "findings": [
+    "Comma splits subject from verb"
+   ],
+   "source": "Local laws and restrictions limit where you can use VPN. <a data-l10n-name=\"learn-more-link\">Learn more</a>",
+   "original": "Lokale wetten en beheiningen, beheine wêr’t jo VPN brûke kinne. <a data-l10n-name=\"learn-more-link\">Mear ynfo</a>",
+   "text": "Lokale wetten en beheiningen beheine wêr’t jo VPN brûke kinne. <a data-l10n-name=\"learn-more-link\">Mear ynfo</a>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-connection-status-network-error-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-connection-status-network-error-description"
+    ]
+   },
+   "fids": [
+    "94bf3bfce302"
+   ],
+   "findings": [
+    "dernei → dêrnei"
+   ],
+   "source": "Connect to the internet, then try turning VPN on.",
+   "original": "Meitsje ferbining mei it ynternet en probearje dernei VPN yn te skeakeljen.",
+   "text": "Meitsje ferbining mei it ynternet en probearje dêrnei VPN yn te skeakeljen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ipprotection-locations-subview-recommended-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ipprotection-locations-subview-recommended-description"
+    ]
+   },
+   "fids": [
+    "ca92262b5369"
+   ],
+   "findings": [
+    "Fyn (imperative) → Fynt"
+   ],
+   "source": "Finds the fastest location",
+   "original": "Fyn de rapste lokaasje",
+   "text": "Fynt de rapste lokaasje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "site-rules-inclusion-prompt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "site-rules-inclusion-prompt"
+    ]
+   },
+   "fids": [
+    "9506d8d95c00"
+   ],
+   "findings": [
+    "\"ynkseakelje\" is a typo for \"ynskeakelje\"."
+   ],
+   "source": "heading: Always turn on VPN for { $website }?\nmessage: Update your rules anytime in settings.",
+   "original": "VPN altyd ynkseakelje foar { $website }?",
+   "text": "VPN altyd ynskeakelje foar { $website }?",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "july-jam-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "july-jam-body"
+    ]
+   },
+   "fids": [
+    "fdce98cf13e3"
+   ],
+   "findings": [
+    "feilich en flugge tagong → feilige en flugge tagong"
+   ],
+   "source": "Every month, { -brand-short-name } blocks an average of 3,000+ trackers per user, giving you safe, speedy access to the good internet.",
+   "original": "Elke moanne blokkearret { -brand-short-name } gemiddeld mear as 3.000 trackers per brûker, wêrtroch jo feilich en flugge tagong hawwe ta it goede ynternet.",
+   "text": "Elke moanne blokkearret { -brand-short-name } gemiddeld mear as 3.000 trackers per brûker, wêrtroch jo feilige en flugge tagong hawwe ta it goede ynternet.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "nova-early-access-infobar-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "nova-early-access-infobar-title"
+    ]
+   },
+   "fids": [
+    "e84727a7de11"
+   ],
+   "findings": [
+    "úterlik → uterlik (spurious accent)"
+   ],
+   "source": "<strong>{ -brand-product-name } is getting a new look.</strong> You’re previewing an early, unpolished version before the launch later this year.",
+   "original": "<strong>{ -brand-product-name } krijt in nij úterlik.</strong> Jo besjogge in betide, net-polyste ferzje foarôfgeand oan de lansearring letter dit jier.",
+   "text": "<strong>{ -brand-product-name } krijt in nij uterlik.</strong> Jo besjogge in betide, net-polyste ferzje foarôfgeand oan de lansearring letter dit jier.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "set-default-menu-message-split-layout-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "set-default-menu-message-split-layout-subtitle"
+    ]
+   },
+   "fids": [
+    "e957eafe51ae"
+   ],
+   "findings": [
+    "Untfang flugger sneupe → … sneupen"
+   ],
+   "source": "{$sel_1 ->} [macos] Make it your default and keep it in your Dock. [other] Get faster browsing and automatic privacy protection.",
+   "original": "Untfang flugger sneupe en automatyske privacybeskerming.",
+   "text": "Untfang flugger sneupen en automatyske privacybeskerming.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "spotlight-public-wifi-vpn-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "spotlight-public-wifi-vpn-body"
+    ]
+   },
+   "fids": [
+    "35765126aaf7"
+   ],
+   "findings": [
+    "wylst it navigearjen → wylst jo navigearje"
+   ],
+   "source": "To hide your location and browsing activity, consider a Virtual Private Network. It will help keep you protected when browsing in public places like airports and coffee shops.",
+   "original": "Oerwaach in Virtual Private Network om jo lokaasje en sneupaktiviteit te ferbergjen. It helpt jo beskerme te bliuwen wylst it navigearjen op iepenbiere plakken, lykas flechthavens en kofjebars.",
+   "text": "Oerwaach in Virtual Private Network om jo lokaasje en sneupaktiviteit te ferbergjen. It helpt jo beskerme te bliuwen wylst jo navigearje op iepenbiere plakken, lykas flechthavens en kofjebars.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "windows-10-eos-challenger-pin-callout-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "windows-10-eos-challenger-pin-callout-subtitle"
+    ]
+   },
+   "fids": [
+    "31633380053a"
+   ],
+   "findings": [
+    "jo it nedich binne → jo it nedich hawwe"
+   ],
+   "source": "Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.",
+   "original": "Set { -brand-shorter-name } oan jo taakbalke fêst, sadat de browser dy’t jo keazen hawwe der altyd is as jo it nedich binne.",
+   "text": "Set { -brand-shorter-name } oan jo taakbalke fêst, sadat de browser dy’t jo keazen hawwe der altyd is as jo it nedich hawwe.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-empty-section-topstories-generic",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-empty-section-topstories-generic"
+    ]
+   },
+   "fids": [
+    "93f9953e6d36"
+   ],
+   "findings": [
+    "Kin jo net wachtsje? → Kinne jo net wachtsje?"
+   ],
+   "source": "You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.",
+   "original": "Jo binne wer by. Kom letter werom foar mear ferhalen. Kin jo net wachtsje? Selektearje in populêr ûnderwerp om mear bjusterbaarlike ferhalen fan it hiele web te finen.",
+   "text": "Jo binne wer by. Kom letter werom foar mear ferhalen. Kinne jo net wachtsje? Selektearje in populêr ûnderwerp om mear bjusterbaarlike ferhalen fan it hiele web te finen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-picture-header-date",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-picture-header-date"
+    ]
+   },
+   "fids": [
+    "1575e05fbbdd"
+   ],
+   "findings": [
+    "\"Ofbylding\" is missing the circumflex; the Frisian spelling is \"Ôfbylding\"."
+   ],
+   "source": "Picture of the day: { $date }",
+   "original": "Ofbylding fan de dei: { DATETIME($date, day: \"numeric\", month: \"numeric\", year: \"numeric\") }",
+   "text": "Ôfbylding fan de dei: { DATETIME($date, day: \"numeric\", month: \"numeric\", year: \"numeric\") }",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-picture-menu-show-photo2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-picture-menu-show-photo2"
+    ]
+   },
+   "fids": [
+    "7c14cd253ecf"
+   ],
+   "findings": [
+    "\"Ofbylding\" is missing the circumflex; the Frisian spelling is \"Ôfbylding\"."
+   ],
+   "source": "Show picture",
+   "original": "Ofbylding toane",
+   "text": "Ôfbylding toane",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-picture-show-button2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-picture-show-button2"
+    ]
+   },
+   "fids": [
+    "248113010798"
+   ],
+   "findings": [
+    "\"Ofbylding\" is missing the circumflex in the aria-label and title; the Frisian spelling is \"Ôfbylding\"."
+   ],
+   "source": "aria-label: Show picture\ntitle: Show picture",
+   "original": "Ofbylding toane",
+   "text": "Ôfbylding toane",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-privacy-message-promo-monitor-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-privacy-message-promo-monitor-1"
+    ]
+   },
+   "fids": [
+    "94b421e2bc8c"
+   ],
+   "findings": [
+    "foar komme → foarkomme"
+   ],
+   "source": "Find out if your personal info shows up in a data breach.",
+   "original": "Untdek oft jo persoanlike gegevens foar komme yn in datalek.",
+   "text": "Untdek oft jo persoanlike gegevens foarkomme yn in datalek.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-privacy-message-promo-relay-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-privacy-message-promo-relay-1"
+    ]
+   },
+   "fids": [
+    "fa4cc86ed96b"
+   ],
+   "findings": [
+    "reagistraasjes → registraasjes"
+   ],
+   "source": "Save your real email for people you trust; use an email mask for sign-ups.",
+   "original": "Bewarje jo echte e-mailadres foar minsken dy’t jo fertrouwe; brûk in e-mailmasker foar reagistraasjes.",
+   "text": "Bewarje jo echte e-mailadres foar minsken dy’t jo fertrouwe; brûk in e-mailmasker foar registraasjes.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-sports-widget-message-wallpapers-semifinals-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-sports-widget-message-wallpapers-semifinals-body"
+    ]
+   },
+   "fids": [
+    "fe2ec4e25aff"
+   ],
+   "findings": [
+    "Meitsje ien dekôr → Meitsje it dekôr"
+   ],
+   "source": "Set the stage for the World Cup’s biggest matches.",
+   "original": "Meitsje ien dekôr foar de grutste wedstriden fan it WK.",
+   "text": "Meitsje it dekôr foar de grutste wedstriden fan it WK.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-light-landscape",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-light-landscape"
+    ]
+   },
+   "fids": [
+    "c061fffb57c7"
+   ],
+   "findings": [
+    "Berch lânskip → Berchlânskip"
+   ],
+   "source": "Blue mist mountain landscape",
+   "original": "Berch lânskip mei blauwe mist",
+   "text": "Berchlânskip mei blauwe mist",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-palm-trees",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-palm-trees"
+    ]
+   },
+   "fids": [
+    "e7f9ff2cfbd7"
+   ],
+   "findings": [
+    "wylst gouden oere → tidens it gouden oere"
+   ],
+   "source": "Silhouette of coconut palm trees during golden hour",
+   "original": "Silhûet fan kokospalms wylst gouden oere",
+   "text": "Silhûet fan kokospalms tidens it gouden oere",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr2022-upgrade-onboarding-pin-private-window-primary-button-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr2022-upgrade-onboarding-pin-private-window-primary-button-label"
+    ]
+   },
+   "fids": [
+    "627d7c6c7b24"
+   ],
+   "findings": [
+    "fêst meitsje → fêstmeitsje"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } private browsing in Dock [other] Pin { -brand-short-name } private browsing to taskbar",
+   "original": "{ -brand-short-name }-priveenavigaasje yn taakbalke fêst meitsje",
+   "text": "{ -brand-short-name }-priveenavigaasje yn taakbalke fêstmeitsje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-new-tabs-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-new-tabs-subtitle"
+    ]
+   },
+   "fids": [
+    "0ad8a83f5bff"
+   ],
+   "findings": [
+    "sybalkeynstellingen → sidebalkeynstellingen"
+   ],
+   "source": "Switch it up whenever you want in the sidebar settings.",
+   "original": "Wizigje it wannear’t jo mar wolle yn de sybalkeynstellingen.",
+   "text": "Wizigje it wannear’t jo mar wolle yn de sidebalkeynstellingen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "smartwindow-sidebar-auto-open-callout-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "smartwindow-sidebar-auto-open-callout-body"
+    ]
+   },
+   "fids": [
+    "30e838570d7c"
+   ],
+   "findings": [
+    "jo it nedich binne → jo it nedich hawwe"
+   ],
+   "source": "You can still open it whenever you need it.",
+   "original": "Jo kinne it noch altyd iepenje wannear’t jo it nedich binne.",
+   "text": "Jo kinne it noch altyd iepenje wannear’t jo it nedich hawwe.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "security-technical-broken-encryption",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "security-technical-broken-encryption"
+    ]
+   },
+   "fids": [
+    "424bc8af2ce9"
+   ],
+   "findings": [
+    "Missing circumflex: 'Unbetroubere' should be 'Ûnbetroubere'."
+   ],
+   "source": "value: Broken Encryption ({ $algorithm }, { $keySize } bit keys, { $protocol })",
+   "original": "Unbetroubere fersifering ({ $algorithm }, { $keySize }-bits kaaien, { $protocol })",
+   "text": "Ûnbetroubere fersifering ({ $algorithm }, { $keySize }-bits kaaien, { $protocol })",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "security-technical-encrypted-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "security-technical-encrypted-description"
+    ]
+   },
+   "fids": [
+    "9e0cad0d9603"
+   ],
+   "findings": [
+    "The singular verb 'wurdt' does not agree with the plural noun 'gegevens'."
+   ],
+   "source": "Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.",
+   "original": "Fersifering makket it swier foar persoanen sûnder foech om gegevens te besjen dy’t tusken kompjûters útwiksele wurdt. It is dêrom net wierskynlik dat ien dizze side lêzen hat wylst dit oer it netwurk ferstjoerd waard.",
+   "text": "Fersifering makket it swier foar persoanen sûnder foech om gegevens te besjen dy’t tusken kompjûters útwiksele wurde. It is dêrom net wierskynlik dat ien dizze side lêzen hat wylst dit oer it netwurk ferstjoerd waard.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "security-technical-mixed-content",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "security-technical-mixed-content"
+    ]
+   },
+   "fids": [
+    "a9793d68feba"
+   ],
+   "findings": [
+    "Typo 'fersisere' should be 'fersifere' (encrypted)."
+   ],
+   "source": "value: Connection Partially Encrypted",
+   "original": "Foar in part fersisere ferbining",
+   "text": "Foar in part fersifere ferbining",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "security-technical-no-encryption-page",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "security-technical-no-encryption-page"
+    ]
+   },
+   "fids": [
+    "2d60a35d4d74"
+   ],
+   "findings": [
+    "The verb uses the infinitive 'besjen' where the conjugated form 'besjogge' is needed."
+   ],
+   "source": "The page you are viewing was not encrypted before being transmitted over the Internet.",
+   "original": "De side dy’t jo besjen wie net fersifere eardat dizze oer it ynternet ferstjoerd waard.",
+   "text": "De side dy’t jo besjogge wie net fersifere eardat dizze oer it ynternet ferstjoerd waard.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/panelUI.ftl",
+   "string_id": "panic-button-thankyou-msg1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/panelUI.ftl",
+    "key": [
+     "panic-button-thankyou-msg1"
+    ]
+   },
+   "fids": [
+    "282c037bda6f"
+   ],
+   "findings": [
+    "is wiskje → is wiske"
+   ],
+   "source": "Your recent history is cleared.",
+   "original": "Jo resinte skiednis is wiskje.",
+   "text": "Jo resinte skiednis is wiske.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/places.ftl",
+   "string_id": "places-locked-prompt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/places.ftl",
+    "key": [
+     "places-locked-prompt"
+    ]
+   },
+   "fids": [
+    "3ea7ee1c5187"
+   ],
+   "findings": [
+    "\"ien de bestannen fan\" is ungrammatical; should be \"ien fan de bestannen fan\" (one of the files)."
+   ],
+   "source": "The bookmarks and history system will not be functional because one of { -brand-short-name }’s files is in use by another application. Some security software can cause this problem.",
+   "original": "It blêdwizer- en skiednissysteem sil net funksjoneel wêze, omdat ien de bestannen fan { -brand-short-name } yn gebrûk is troch in oare applikaasje. Guon feilichheidsprogramma’s kinne dit feroarsaakje.",
+   "text": "It blêdwizer- en skiednissysteem sil net funksjoneel wêze, omdat ien fan de bestannen fan { -brand-short-name } yn gebrûk is troch in oare applikaasje. Guon feilichheidsprogramma’s kinne dit feroarsaakje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/placesPrompts.ftl",
+   "string_id": "places-bookmarks-backup-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/placesPrompts.ftl",
+    "key": [
+     "places-bookmarks-backup-title"
+    ]
+   },
+   "fids": [
+    "dc336c742554"
+   ],
+   "findings": [
+    "Betânsnamme → Bestânsnamme"
+   ],
+   "source": "Bookmarks backup filename",
+   "original": "Betânsnamme foar blêdwizerreservekopy",
+   "text": "Bestânsnamme foar blêdwizerreservekopy",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-AutofillCreditCardEnabled",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-AutofillCreditCardEnabled"
+    ]
+   },
+   "fids": [
+    "be999842a4e0"
+   ],
+   "findings": [
+    "beteelingsmetoaden → betelmetoaden"
+   ],
+   "source": "Enable autofill for payment methods.",
+   "original": "Automatysk ynfolje foar beteelingsmetoaden ynskeakelje.",
+   "text": "Automatysk ynfolje foar betelmetoaden ynskeakelje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-Bookmarks",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-Bookmarks"
+    ]
+   },
+   "fids": [
+    "ae6316e3bfde"
+   ],
+   "findings": [
+    "Blêdwizerakbalke → Blêdwizerarkbalke"
+   ],
+   "source": "Create bookmarks in the Bookmarks toolbar, Bookmarks menu, or a specified folder inside them.",
+   "original": "Blêdwizers meitsje yn de Blêdwizerakbalke, it menu Blêdwizers, of in hjirbinnen opjûne map.",
+   "text": "Blêdwizers meitsje yn de Blêdwizerarkbalke, it menu Blêdwizers, of in hjirbinnen opjûne map.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-DisableMacOSUserPolicies",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-DisableMacOSUserPolicies"
+    ]
+   },
+   "fids": [
+    "8ee473c49468"
+   ],
+   "findings": [
+    "\"út negearje\" is ungrammatical, because \"negearje\" (ignore) does not take the particle \"út\"."
+   ],
+   "source": "Ignore policies from the user’s preferences and from user-scope configuration profiles on macOS.",
+   "original": "Beliedsregels fan de foarkarren fan de brûker en fan konfiguraasjeprofilen binnen it brûkersberik op macOS út negearje.",
+   "text": "Beliedsregels fan de foarkarren fan de brûker en fan konfiguraasjeprofilen binnen it brûkersberik op macOS negearje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-HttpsOnlyMode",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-HttpsOnlyMode"
+    ]
+   },
+   "fids": [
+    "106db142d335"
+   ],
+   "findings": [
+    "tasean → tastean"
+   ],
+   "source": "Allow HTTPS-Only Mode to be enabled.",
+   "original": "Allinnich-HTTPS-modus tasean om yn te skeakeljen.",
+   "text": "Allinnich-HTTPS-modus tastean om yn te skeakeljen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-UseSystemPrintDialog",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-UseSystemPrintDialog"
+    ]
+   },
+   "fids": [
+    "93bc98d56b83"
+   ],
+   "findings": [
+    "systeemdialoochfienster fan it systeem → printdialoochfinster fan it systeem"
+   ],
+   "source": "Print using the system print dialog.",
+   "original": "Ofdrukke fia it systeemdialoochfienster fan it systeem.",
+   "text": "Ofdrukke fia it printdialoochfinster fan it systeem.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/browserIcon.ftl",
+   "string_id": "appearance-browser-icon-unlocked",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/browserIcon.ftl",
+    "key": [
+     "appearance-browser-icon-unlocked"
+    ]
+   },
+   "fids": [
+    "259afde6f1c8"
+   ],
+   "findings": [
+    "bonupsiktogrammen → bonuspiktogrammen"
+   ],
+   "source": "message: You unlocked all of the bonus icons!",
+   "original": "Jo hawwe alle bonupsiktogrammen ûntskoattele!",
+   "text": "Jo hawwe alle bonuspiktogrammen ûntskoattele!",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/moreFromMozilla.ftl",
+   "string_id": "more-from-moz-mdn-card",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/moreFromMozilla.ftl",
+    "key": [
+     "more-from-moz-mdn-card"
+    ]
+   },
+   "fids": [
+    "e285da9e8457"
+   ],
+   "findings": [
+    "webûntwikling → webûntwikkeling"
+   ],
+   "source": "description: Learn web development with free guides and references.\nlabel: { -mdn-brand-name }",
+   "original": "Lear webûntwikling mei fergeze gidsen en referinsjes.",
+   "text": "Lear webûntwikkeling mei fergeze gidsen en referinsjes.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "account-sync-section",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "account-sync-section"
+    ]
+   },
+   "fids": [
+    "6faab9269c4d"
+   ],
+   "findings": [
+    "Accoant → Account"
+   ],
+   "source": "heading: Account and sync",
+   "original": "Accoant en syngronisaasje",
+   "text": "Account en syngronisaasje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "applications-setting2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "applications-setting2"
+    ]
+   },
+   "fids": [
+    "9969d26c1089"
+   ],
+   "findings": [
+    "hoe → hoe’t"
+   ],
+   "source": "description: Choose how { -brand-short-name } handles downloaded files and content.\nlabel: Files and applications",
+   "original": "Kies hoe { -brand-short-name } omgiet mei downloade bestannen en ynhâld.",
+   "text": "Kies hoe’t { -brand-short-name } omgiet mei downloade bestannen en ynhâld.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "content-blocking-etp-strict-desc",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "content-blocking-etp-strict-desc"
+    ]
+   },
+   "fids": [
+    "4a7227d688a9"
+   ],
+   "findings": [
+    "der foar soargje → derfoar soargje"
+   ],
+   "source": "Stronger protection, but may cause some sites or content to break.",
+   "original": "Sterkere beskerming, mar kin der foar soargje dat guon websites of ynhâld net wurkje.",
+   "text": "Sterkere beskerming, mar kin derfoar soargje dat guon websites of ynhâld net wurkje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "language-and-appearance-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "language-and-appearance-header"
+    ]
+   },
+   "fids": [
+    "8fcf20e26a6f"
+   ],
+   "findings": [
+    "úterlik → uterlik (2×)"
+   ],
+   "source": "Language and Appearance",
+   "original": "Taal en úterlik",
+   "text": "Taal en uterlik",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "performance-limit-content-process-blocked-desc",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "performance-limit-content-process-blocked-desc"
+    ]
+   },
+   "fids": [
+    "7a532f9b2064"
+   ],
+   "findings": [
+    "kontrolearjen of → kontrolearjen oft (whether)"
+   ],
+   "source": "Modifying the number of content processes is only possible with multiprocess { -brand-short-name }. <a data-l10n-name=\"learn-more\">Learn how to check if multiprocess is enabled</a>",
+   "original": "Oanpassen fan it oantal ynhâldsprosessen is allinnich mooglik mei multiproses-{ -brand-short-name }. <a data-l10n-name=\"learn-more\">Ynformaasje oer it kontrolearjen of multiproses ynskeakele is</a>",
+   "text": "Oanpassen fan it oantal ynhâldsprosessen is allinnich mooglik mei multiproses-{ -brand-short-name }. <a data-l10n-name=\"learn-more\">Ynformaasje oer it kontrolearjen oft multiproses ynskeakele is</a>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-etp-advanced-settings-group",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-etp-advanced-settings-group"
+    ]
+   },
+   "fids": [
+    "563f552c7b51"
+   ],
+   "findings": [
+    "wêrby → wêrby’t"
+   ],
+   "source": "description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking most trackers automatically so you’re in control of your digital trail.\nlabel: Advanced settings",
+   "original": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
+   "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-etp-custom-control-group",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-etp-custom-control-group"
+    ]
+   },
+   "fids": [
+    "47749a3f3a27"
+   ],
+   "findings": [
+    "yn of út skeakelje → yn- of útskeakelje"
+   ],
+   "source": "description: Choose which protections to turn on or off.\nlabel: Tracking protection",
+   "original": "Kies hokker beskermingsynstellingen jo yn of út skeakelje wolle.",
+   "text": "Kies hokker beskermingsynstellingen jo yn- of útskeakelje wolle.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-etp-status-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-etp-status-header"
+    ]
+   },
+   "fids": [
+    "e4ac60be1ae2"
+   ],
+   "findings": [
+    "wêrby → wêrby’t"
+   ],
+   "source": "description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking trackers automatically so you’re in control of your digital trail.\nlabel: Enhanced Tracking Protection",
+   "original": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
+   "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-profiles-section-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-profiles-section-header"
+    ]
+   },
+   "fids": [
+    "a2601ee99e78"
+   ],
+   "findings": [
+    "navigaasjejegegevens → navigaasjegegevens"
+   ],
+   "source": "description: Each profile has separate browsing data and settings, including history, passwords, and more.\nlabel: Profiles",
+   "original": "Elk profyl hat aparte navigaasjejegegevens en -ynstellingen, wêrûnder skiednis, wachtwurden en mear.",
+   "text": "Elk profyl hat aparte navigaasjegegevens en -ynstellingen, wêrûnder skiednis, wachtwurden en mear.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-profiles-subpane-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-profiles-subpane-description"
+    ]
+   },
+   "fids": [
+    "4edea0b70a35"
+   ],
+   "findings": [
+    "navigaasjejegegevens → navigaasjegegevens"
+   ],
+   "source": "description: Each profile has separate browsing data and settings, including history, passwords, and more.",
+   "original": "Elk profyl hat aparte navigaasjejegegevens en -ynstellingen, wêrûnder skiednis, wachtwurden en mear.",
+   "text": "Elk profyl hat aparte navigaasjegegevens en -ynstellingen, wêrûnder skiednis, wachtwurden en mear.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "sitedata-heading",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "sitedata-heading"
+    ]
+   },
+   "fids": [
+    "39a28a9a7066"
+   ],
+   "findings": [
+    "Duplicated en in the list"
+   ],
+   "source": "description: Manage your cookies, history, cache, website data, and more.\nlabel: Browsing data",
+   "original": "Jo cookies, skiednis, buffer en websitegegevens en mear beheare.",
+   "text": "Jo cookies, skiednis, buffer, websitegegevens en mear beheare.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/profile/default-bookmarks.ftl",
+   "string_id": "default-bookmarks-crashes",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/profile/default-bookmarks.ftl",
+    "key": [
+     "default-bookmarks-crashes"
+    ]
+   },
+   "fids": [
+    "f45738e6d148"
+   ],
+   "findings": [
+    "ungelokken → ûngelokken"
+   ],
+   "source": "All your crashes",
+   "original": "Al jo ungelokken",
+   "text": "Al jo ûngelokken",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/profiles.ftl",
+   "string_id": "delete-profile-tabs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/profiles.ftl",
+    "key": [
+     "delete-profile-tabs"
+    ]
+   },
+   "fids": [
+    "38e73ca491c9"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "monitor-no-breaches-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "monitor-no-breaches-description"
+    ]
+   },
+   "fids": [
+    "2ceedcb5a6d0"
+   ],
+   "findings": [
+    "dan litten wy it jo witte → dan litte wy it jo witte"
+   ],
+   "source": "You have no known breaches. If that changes, we will let you know.",
+   "original": "Jo binne net troch bekende datalekken troffen. As dit wiziget, dan litten wy it jo witte.",
+   "text": "Jo binne net troch bekende datalekken troffen. As dit wiziget, dan litte wy it jo witte.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/reportBrokenSite.ftl",
+   "string_id": "report-broken-site-panel-url-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/reportBrokenSite.ftl",
+    "key": [
+     "report-broken-site-panel-url-label"
+    ]
+   },
+   "fids": [
+    "8b95c37eb446"
+   ],
+   "findings": [
+    "net-wurkende → net-wurkjende"
+   ],
+   "source": "URL of broken site",
+   "original": "URL fan net-wurkende website",
+   "text": "URL fan net-wurkjende website",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/safeMode.ftl",
+   "string_id": "skip-troubleshoot-refresh-profile",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/safeMode.ftl",
+    "key": [
+     "skip-troubleshoot-refresh-profile"
+    ]
+   },
+   "fids": [
+    "9b8eb7c1d5e3"
+   ],
+   "findings": [
+    "Sentence begins lowercase: jo kinne → Jo kinne"
+   ],
+   "source": "You can also skip troubleshooting and refresh { -brand-short-name }, instead.",
+   "original": "jo kinne probleemoplossing ek oerslaan en { -brand-short-name } yn stee hjirfan opfrisse.",
+   "text": "Jo kinne probleemoplossing ek oerslaan en { -brand-short-name } yn stee hjirfan opfrisse.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/setDesktopBackground.ftl",
+   "string_id": "set-desktop-background-filename",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/setDesktopBackground.ftl",
+    "key": [
+     "set-desktop-background-filename"
+    ]
+   },
+   "fids": [
+    "d9bdd1ef640f"
+   ],
+   "findings": [
+    "buroblêdeftergrûn → Búroblêdeftergrûn"
+   ],
+   "source": "Desktop Background",
+   "original": "buroblêdeftergrûn",
+   "text": "Buroblêdeftergrûn",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "menu-view-open-tabs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "menu-view-open-tabs"
+    ]
+   },
+   "fids": [
+    "7d9f3c7e31f2"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "label: Open Tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "sidebar-menu-open-tabs-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "sidebar-menu-open-tabs-header"
+    ]
+   },
+   "fids": [
+    "de85823f22e6"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "heading: Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "sidebar-menu-open-tabs-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "sidebar-menu-open-tabs-label"
+    ]
+   },
+   "fids": [
+    "5b13d4017846"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "label: Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "sidebar-opentabs-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "sidebar-opentabs-title"
+    ]
+   },
+   "fids": [
+    "14abfaad4ff7"
+   ],
+   "findings": [
+    "ljeplêden → ljepblêden"
+   ],
+   "source": "Open tabs",
+   "original": "Iepen ljeplêden",
+   "text": "Iepen ljepblêden",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "browser/browser/tabbrowser.ftl",
+   "string_id": "tab-splitview-splitter",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabbrowser.ftl",
+    "key": [
+     "tab-splitview-splitter"
+    ]
+   },
+   "fids": [
+    "23a89a219a5b"
+   ],
+   "findings": [
+    "ljepblêdwerjefe → ljepblêdwerjefte"
+   ],
+   "source": "aria-label: Resize split view tabs",
+   "original": "Formaat fan splitste ljepblêdwerjefe wizigje",
+   "text": "Formaat fan splitste ljepblêdwerjefte wizigje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/aboutdebugging.ftl",
+   "string_id": "about-debugging-sidebar-item-connect-button-connection-not-responding",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/aboutdebugging.ftl",
+    "key": [
+     "about-debugging-sidebar-item-connect-button-connection-not-responding"
+    ]
+   },
+   "fids": [
+    "1e77311f963d"
+   ],
+   "findings": [
+    "nochyin → noch yn"
+   ],
+   "source": "Connection still pending, check for messages on the target browser",
+   "original": "Ferbining nochyin behanneling, kontrolearje op berjochten yn de doelbrowser",
+   "text": "Ferbining noch yn behanneling, kontrolearje op berjochten yn de doelbrowser",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/accessibility.ftl",
+   "string_id": "accessibility-keyboard-issue-focus-visible",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/accessibility.ftl",
+    "key": [
+     "accessibility-keyboard-issue-focus-visible"
+    ]
+   },
+   "fids": [
+    "909b779726e6"
+   ],
+   "findings": [
+    "elemint dy’t → elemint dat (neuter)"
+   ],
+   "source": "Focusable element may be missing focus styling. <a>Learn more</a>",
+   "original": "In elemint dy’t in fokus krije kin mist mooglik de fokusstyl. <a>Mear ynfo</a>",
+   "text": "In elemint dat in fokus krije kin mist mooglik de fokusstyl. <a>Mear ynfo</a>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/application.ftl",
+   "string_id": "manifest-loaded-devtools-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/application.ftl",
+    "key": [
+     "manifest-loaded-devtools-error"
+    ]
+   },
+   "fids": [
+    "70e9f0669fd1"
+   ],
+   "findings": [
+    "Devtools → DevTools"
+   ],
+   "source": "Firefox DevTools error",
+   "original": "Firefox Devtools-flater",
+   "text": "Firefox DevTools-flater",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/perftools.ftl",
+   "string_id": "perftools-button-save-settings",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/perftools.ftl",
+    "key": [
+     "perftools-button-save-settings"
+    ]
+   },
+   "fids": [
+    "83e972841494"
+   ],
+   "findings": [
+    "Ynstellen bewarje → Ynstellingen bewarje"
+   ],
+   "source": "Save settings and go back",
+   "original": "Ynstellen bewarje en tebekgean",
+   "text": "Ynstellingen bewarje en tebekgean",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/perftools.ftl",
+   "string_id": "perftools-record-all-registered-threads",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/perftools.ftl",
+    "key": [
+     "perftools-record-all-registered-threads"
+    ]
+   },
+   "fids": [
+    "1d3942863557"
+   ],
+   "findings": [
+    "pasearje → passearje"
+   ],
+   "source": "Bypass selections above and record all registered threads",
+   "original": "Boppesteande seleksje pasearje en alle registrearre threads opnimme",
+   "text": "Boppesteande seleksje passearje en alle registrearre threads opnimme",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/storage.ftl",
+   "string_id": "storage-tree-labels-local-storage",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/storage.ftl",
+    "key": [
+     "storage-tree-labels-local-storage"
+    ]
+   },
+   "fids": [
+    "96d89e22f91a"
+   ],
+   "findings": [
+    "Lokale ûnthâld → Lokaal ûnthâld"
+   ],
+   "source": "Local Storage",
+   "original": "Lokale ûnthâld",
+   "text": "Lokaal ûnthâld",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/styleeditor.ftl",
+   "string_id": "styleeditor-filter-input",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/styleeditor.ftl",
+    "key": [
+     "styleeditor-filter-input"
+    ]
+   },
+   "fids": [
+    "040c34abeece"
+   ],
+   "findings": [
+    "Styblêden → Stylblêden"
+   ],
+   "source": "placeholder: Filter style sheets",
+   "original": "Styblêden filterje",
+   "text": "Stylblêden filterje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/toolbox-options.ftl",
+   "string_id": "options-default-color-unit-name",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox-options.ftl",
+    "key": [
+     "options-default-color-unit-name"
+    ]
+   },
+   "fids": [
+    "49bbb9c171c5"
+   ],
+   "findings": [
+    "Kleurmammen → Kleurnammen"
+   ],
+   "source": "Color Names",
+   "original": "Kleurmammen",
+   "text": "Kleurnammen",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/toolbox-options.ftl",
+   "string_id": "options-source-maps-tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox-options.ftl",
+    "key": [
+     "options-source-maps-tooltip"
+    ]
+   },
+   "fids": [
+    "b9195c7409a7"
+   ],
+   "findings": [
+    "tawizen wurde → tawiisd wurde"
+   ],
+   "source": "title: If you enable this option sources will be mapped in the tools.",
+   "original": "As jo dizze opsje ynskeakelje, sille boarnen yn it ark tawizen wurde.",
+   "text": "As jo dizze opsje ynskeakelje, sille boarnen yn it ark tawiisd wurde.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/toolbox-options.ftl",
+   "string_id": "options-stylesheet-autocompletion-tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox-options.ftl",
+    "key": [
+     "options-stylesheet-autocompletion-tooltip"
+    ]
+   },
+   "fids": [
+    "4d95625042ff"
+   ],
+   "findings": [
+    "Stylbebwurker → Stylbewurker; as weardes → en wearden"
+   ],
+   "source": "title: Autocomplete CSS properties, values and selectors in Style Editor as you type",
+   "original": "CSS-eigenskippen as weardes en selectors yn Stylbebwurker auto-oanfolje as jo type",
+   "text": "CSS-eigenskippen as weardes en selectors yn Stylbewurker auto-oanfolje as jo type",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-not-flex-item-fix-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-not-flex-item-fix-2"
+    ]
+   },
+   "fids": [
+    "419d806b042c"
+   ],
+   "findings": [
+    "boppe lizzende → boppelizzende"
+   ],
+   "source": "Try adding <strong>display:flex</strong> or <strong>display:inline-flex</strong> to the element’s parent. { learn-more }",
+   "original": "Probearje <strong>display:flex</strong> of <strong>display:inline-flex</strong> oan it boppe lizzende elemint ta te foegjen. { learn-more }",
+   "text": "Probearje <strong>display:flex</strong> of <strong>display:inline-flex</strong> oan it boppelizzende elemint ta te foegjen. { learn-more }",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-not-grid-item-fix-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-not-grid-item-fix-2"
+    ]
+   },
+   "fids": [
+    "01c55383d2b3"
+   ],
+   "findings": [
+    "boppe lizzende → boppelizzende"
+   ],
+   "source": "Try adding <strong>display:grid</strong> or <strong>display:inline-grid</strong> to the element’s parent. { learn-more }",
+   "original": "Probearje <strong>display:grid</strong> of <strong>display:inline-grid</strong> oan it boppe lizzende elemint ta te foegjen. { learn-more }",
+   "text": "Probearje <strong>display:grid</strong> of <strong>display:inline-grid</strong> oan it boppelizzende elemint ta te foegjen. { learn-more }",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/shared/debugger-paused-reasons.ftl",
+   "string_id": "whypaused-event-breakpoint",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/debugger-paused-reasons.ftl",
+    "key": [
+     "whypaused-event-breakpoint"
+    ]
+   },
+   "fids": [
+    "8a8fdb87c3ac"
+   ],
+   "findings": [
+    "Pausearre → Pauzearre (10 sibling strings use the latter)"
+   ],
+   "source": "Paused on event breakpoint",
+   "original": "Pausearre by barrensbreakpoint",
+   "text": "Pauzearre by barrensbreakpoint",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/shared/debugger-paused-reasons.ftl",
+   "string_id": "whypaused-interrupted",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/debugger-paused-reasons.ftl",
+    "key": [
+     "whypaused-interrupted"
+    ]
+   },
+   "fids": [
+    "f7be4b1c09f5"
+   ],
+   "findings": [
+    "Pausearre → Pauzearre (10 sibling strings use the latter)"
+   ],
+   "source": "Paused at Execution",
+   "original": "Pausearre by útfiering",
+   "text": "Pauzearre by útfiering",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/shared/debugger-paused-reasons.ftl",
+   "string_id": "whypaused-mutation-breakpoint",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/debugger-paused-reasons.ftl",
+    "key": [
+     "whypaused-mutation-breakpoint"
+    ]
+   },
+   "fids": [
+    "a60de5d708be"
+   ],
+   "findings": [
+    "Pausearre → Pauzearre (10 sibling strings use the latter)"
+   ],
+   "source": "Paused on DOM mutation",
+   "original": "Pausearre by DOM-mutaasje",
+   "text": "Pauzearre by DOM-mutaasje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "devtools/shared/debugger-paused-reasons.ftl",
+   "string_id": "whypaused-pause-on-dom-events",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/debugger-paused-reasons.ftl",
+    "key": [
+     "whypaused-pause-on-dom-events"
+    ]
+   },
+   "fids": [
+    "36f37c4879de"
+   ],
+   "findings": [
+    "barrenlúterer → barrenslústerer"
+   ],
+   "source": "Paused on event listener",
+   "original": "Pauzearre by barrenlúterer",
+   "text": "Pauzearre by barrenlústerer",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "dom/dom/XMLPrettyPrint.ftl",
+   "string_id": "xml-nostylesheet",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/XMLPrettyPrint.ftl",
+    "key": [
+     "xml-nostylesheet"
+    ]
+   },
+   "fids": [
+    "be8069f3ce65"
+   ],
+   "findings": [
+    "stylynformaaasje → stylynformaasje (tripled a)"
+   ],
+   "source": "This XML file does not appear to have any style information associated with it. The document tree is shown below.",
+   "original": "Dit XML-bestân liket net mei in stylynformaaasje ferbûn te wêzen. De dokumintbeam stiet hjirûnder.",
+   "text": "Dit XML-bestân liket net mei in stylynformaasje ferbûn te wêzen. De dokumintbeam stiet hjirûnder.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "netwerk/netwerk/necko.ftl",
+   "string_id": "network-connection-status-wrote",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "netwerk/netwerk/necko.ftl",
+    "key": [
+     "network-connection-status-wrote"
+    ]
+   },
+   "fids": [
+    "3f233da0b2cd"
+   ],
+   "findings": [
+    "skreun → skreaun"
+   ],
+   "source": "Wrote { $host }",
+   "original": "{ $host } skreun",
+   "text": "{ $host } skreaun",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "add-exception-expired-short",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "add-exception-expired-short"
+    ]
+   },
+   "fids": [
+    "6e69b34ea7c3"
+   ],
+   "findings": [
+    "Alde Ynformaasje → Alde ynformaasje (stray mid-phrase capital)"
+   ],
+   "source": "Outdated Information",
+   "original": "Alde Ynformaasje",
+   "text": "Alde ynformaasje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "delete-ssl-override-impact",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "delete-ssl-override-impact"
+    ]
+   },
+   "fids": [
+    "bc32276c3455"
+   ],
+   "findings": [
+    "Inverted-subject agreement: werstelt jo / fereasket jo → werstelle jo / fereaskje jo"
+   ],
+   "source": "If you delete a server exception, you restore the usual security checks for that server and require it uses a valid certificate.",
+   "original": "As jo in serverútsûndering fuortsmite, werstelt jo de standert befeiligingskontrôle foar dy server en fereasket jo dat dizze gebrûk makket fan in jildich sertifikaat.",
+   "text": "As jo in serverútsûndering fuortsmite, werstelle jo de standert befeiligingskontrôle foar dy server en fereaskje jo dat dizze gebrûk makket fan in jildich sertifikaat.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "exception-mgr-supplemental-warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "exception-mgr-supplemental-warning"
+    ]
+   },
+   "fids": [
+    "ebd1efc37c41"
+   ],
+   "findings": [
+    "oare publike sides → siden"
+   ],
+   "source": "Legitimate banks, stores, and other public sites will not ask you to do this.",
+   "original": "Legitime banken, winkels, en oare publike sides sille net freegje om dit te dwaan.",
+   "text": "Legitime banken, winkels, en oare publike siden sille net freegje om dit te dwaan.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "security/manager/security/certificates/certManager.ftl",
+   "string_id": "pkcs12-decode-err",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/certManager.ftl",
+    "key": [
+     "pkcs12-decode-err"
+    ]
+   },
+   "fids": [
+    "956d3befda2c"
+   ],
+   "findings": [
+    "skansjearre → skansearre"
+   ],
+   "source": "Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.",
+   "original": "It ûntsiferjen fan dit bestân is mislearre. It is net yn de PKCS #12-opmaak kodearre, is skansjearre, of it troch jo ynfierde wachtwurd is net korrekt.",
+   "text": "It ûntsiferjen fan dit bestân is mislearre. It is net yn de PKCS #12-opmaak kodearre, is skansearre, of it troch jo ynfierde wachtwurd is net korrekt.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "security/manager/security/pippki/pippki.ftl",
+   "string_id": "download-cert-trust-email",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/pippki/pippki.ftl",
+    "key": [
+     "download-cert-trust-email"
+    ]
+   },
+   "fids": [
+    "c14459ebe889"
+   ],
+   "findings": [
+    "Fertrouw → Fertrou (sibling uses Fertrou)"
+   ],
+   "source": "label: Trust this CA to identify email users.",
+   "original": "Fertrouw dizze CA foar it identifisearjen fan e-mailbrûkers.",
+   "text": "Fertrou dizze CA foar it identifisearjen fan e-mailbrûkers.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/crashreporter/crashreporter.ftl",
+   "string_id": "crashreporter-report-info",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/crashreporter/crashreporter.ftl",
+    "key": [
+     "crashreporter-report-info"
+    ]
+   },
+   "fids": [
+    "f55000f9bd69"
+   ],
+   "findings": [
+    "doe it ferûngelokke → doe’t it ferûngelokke"
+   ],
+   "source": "This report also contains technical information about the state of the application when it crashed.",
+   "original": "Dit rapport hat ek technyske ynformaasje oer de steat fan de applikaasje doe it ferûngelokke.",
+   "text": "Dit rapport hat ek technyske ynformaasje oer de steat fan de applikaasje doe’t it ferûngelokke.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/crashreporter/crashreporter.ftl",
+   "string_id": "crashreporter-submit-in-progress",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/crashreporter/crashreporter.ftl",
+    "key": [
+     "crashreporter-submit-in-progress"
+    ]
+   },
+   "fids": [
+    "82f2fb8dea47"
+   ],
+   "findings": [
+    "Ferstjoert jo rapport… → Ferstjoeren fan jo rapport…"
+   ],
+   "source": "Submitting your report…",
+   "original": "Ferstjoert jo rapport…",
+   "text": "Ferstjoeren fan jo rapport…",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "aboutaddons-themes-picker-disable-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "aboutaddons-themes-picker-disable-button"
+    ]
+   },
+   "fids": [
+    "3f8bab8a8dd5"
+   ],
+   "findings": [
+    "Utskeakele (participle) → Utskeakelje"
+   ],
+   "source": "label: Disable",
+   "original": "Utskeakele",
+   "text": "Utskeakelje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "detail-contributions-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "detail-contributions-description"
+    ]
+   },
+   "fids": [
+    "c724ab1fac7b"
+   ],
+   "findings": [
+    "ûnwikkeler → ûntwikkeler"
+   ],
+   "source": "The developer of this add-on asks that you help support its continued development by making a small contribution.",
+   "original": "De ûnwikkeler fan dizze add-on freget om stipe foar de trochgeande ûntwikkeling troch it meitsjen fan in lytse bydrage.",
+   "text": "De ûntwikkeler fan dizze add-on freget om stipe foar de trochgeande ûntwikkeling troch it meitsjen fan in lytse bydrage.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "discopane-intro3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "discopane-intro3"
+    ]
+   },
+   "fids": [
+    "c50813b85d65"
+   ],
+   "findings": [
+    "Me útwreidingen → Mei útwreidingen"
+   ],
+   "source": "Extensions and themes let you customize { -brand-product-name }. They can boost privacy,\nenhance productivity, improve media, change the way { -brand-product-name } looks, and\nso much more. These small software programs are often developed by a third party. Here’s\na selection Firefox <a data-l10n-name=\"learn-more-trigger\">recommends</a> for\nexceptional security, performance, and functionality.",
+   "original": "Me útwreidingen en tema’s kinne jo { -brand-product-name } oanpasse. Se kinne privacy,\nproduktiviteit en media ferbetterje, it uterlik fan { -brand-product-name } wizigje, en\nsa folle mear. Dizze lytse softwareprogramma’s wurde faak troch in tredde partij ûntwikkele. Dit is\nin seleksje dy’t Firefox <a data-l10n-name=\"learn-more-trigger\">oanrekommandearret</a>\nfoar útsûnderlike befeiliging, prestaasjes en funksjonaliteit.",
+   "text": "Mei útwreidingen en tema’s kinne jo { -brand-product-name } oanpasse. Se kinne privacy,\nproduktiviteit en media ferbetterje, it uterlik fan { -brand-product-name } wizigje, en\nsa folle mear. Dizze lytse softwareprogramma’s wurde faak troch in tredde partij ûntwikkele. Dit is\nin seleksje dy’t Firefox <a data-l10n-name=\"learn-more-trigger\">oanrekommandearret</a>\nfoar útsûnderlike befeiliging, prestaasjes en funksjonaliteit.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "legacy-extensions-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "legacy-extensions-description"
+    ]
+   },
+   "fids": [
+    "531f0354feef"
+   ],
+   "findings": [
+    "Two main clauses run together — missing en"
+   ],
+   "source": "These extensions do not meet current { -brand-short-name } standards so they have been deactivated. <label data-l10n-name=\"legacy-learn-more\">Learn about the changes to add-ons</label>",
+   "original": "Dizze útwreidingen foldogge op dit stuit net oan de { -brand-short-name }-standerts binne dêrom de-aktivearre. <label data-l10n-name=\"legacy-learn-more\">Lear mear oer de wizigingen oan add-ons</label>",
+   "text": "Dizze útwreidingen foldogge op dit stuit net oan de { -brand-short-name }-standerts en binne dêrom de-aktivearre. <label data-l10n-name=\"legacy-learn-more\">Lear mear oer de wizigingen oan add-ons</label>",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-about-data-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-about-data-description"
+    ]
+   },
+   "fids": [
+    "e28c76e90e82"
+   ],
+   "findings": [
+    "ark dy’t → ark dat"
+   ],
+   "source": "There are a few different tools you can use to see your data, depending on\nwhat you are looking for.",
+   "original": "Der is ferskillend ark dy’t jo brûke kinne om jo gegevens te besjen, ôfhinklik fan\nwêr’t jo nei sykje.",
+   "text": "Der is ferskillend ark dat jo brûke kinne om jo gegevens te besjen, ôfhinklik fan\nwêr’t jo nei sykje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-additional-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-additional-links"
+    ]
+   },
+   "fids": [
+    "1484d3a6ab93"
+   ],
+   "findings": [
+    "Main verb dropped (\"please reference\")"
+   ],
+   "source": "For an explanation of different ways to record and find data, please reference the\n<strong>About Data</strong> tab.",
+   "original": "Foar in útlis oer ferskate manieren om gegevens fêst te lizzen en te finen it\nljepblêd <strong>Oer gegevens</strong>.",
+   "text": "Foar in útlis oer ferskate manieren om gegevens fêst te lizzen en te finen, sjoch it\nljepblêd <strong>Oer gegevens</strong>.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-interface-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-interface-description"
+    ]
+   },
+   "fids": [
+    "9410535c9e32"
+   ],
+   "findings": [
+    "Missing article: is gegevenssamlingsbiblioteek → is in …"
+   ],
+   "source": "The <a data-l10n-name=\"glean-sdk-doc-link\">{ glean-sdk-brand-name }</a>\nis a data collection library used in { -vendor-short-name } projects.\nThis interface is designed to be used by developers and testers to manually\n<a data-l10n-name=\"fog-link\">test instrumentation</a>.",
+   "original": "De <a data-l10n-name=\"glean-sdk-doc-link\">{ glean-sdk-brand-name }</a>\nis gegevenssamlingsbiblioteek dy’t brûkt wurdt yn { -vendor-short-name }-projekten.\nDizze interface is ûntwurpen foar gebrûk troch ûntwikkelers en testers om hânmjittich\n<a data-l10n-name=\"fog-link\">ynstrumintaasje te testen</a>.",
+   "text": "De <a data-l10n-name=\"glean-sdk-doc-link\">{ glean-sdk-brand-name }</a>\nis in gegevenssamlingsbiblioteek dy’t brûkt wurdt yn { -vendor-short-name }-projekten.\nDizze interface is ûntwurpen foar gebrûk troch ûntwikkelers en testers om hânmjittich\n<a data-l10n-name=\"fog-link\">ynstrumintaasje te testen</a>.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-profiler-explanation-profiler",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-profiler-explanation-profiler"
+    ]
+   },
+   "fids": [
+    "f19d25510d3a"
+   ],
+   "findings": [
+    "Missing subject: wannear’t sammele binne → wannear’t se sammele binne"
+   ],
+   "source": "In the performance profile you can see all the metrics collected, when they were\ncollected, and exactly what values were collected. By hovering on individual markers,\nyou can verify that the correct value was collected and that collection happened at the right time.",
+   "original": "Yn it prestaasjesprofyl kinne jo alle sammele statistiken besjen, wannear’t sammele\nbinne, en krekt hokker wearden sammele binne. Troch yndividuele markearringen oan te wizen,\nkinne jo ferifiearje dat de krekte wearde sammele is en oft de kolleksje barde op it krekte momint.",
+   "text": "Yn it prestaasjesprofyl kinne jo alle sammele statistiken besjen, wannear’t se sammele\nbinne, en krekt hokker wearden sammele binne. Troch yndividuele markearringen oan te wizen,\nkinne jo ferifiearje dat de krekte wearde sammele is en oft de kolleksje barde op it krekte momint.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutGlean.ftl",
+   "string_id": "about-glean-upload-fake-enabled",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutGlean.ftl",
+    "key": [
+     "about-glean-upload-fake-enabled"
+    ]
+   },
+   "fids": [
+    "cfcecd5c9786"
+   ],
+   "findings": [
+    "wurden → wurde; nettsjinsteandede → nettsjinsteande de"
+   ],
+   "source": "Data upload is disabled,\nbut we’re lying and telling the { glean-sdk-brand-name } it is enabled\nso that data is still recorded locally.\nNote: If you set a debug tag, pings will be uploaded to the\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a> regardless of settings.",
+   "original": "Gegevensoplaad is útskeakele,\nmar wy lige en sizze tsjin de { glean-sdk-brand-name } dat dizze ynskeakele is,\nsadat gegevens noch hieltyd lokaal opnomen wurde.\nNoat: as jo in debuglabel ynstelle, wurden pings oplaad nei de\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a>, nettsjinsteandede ynstellingen.",
+   "text": "Gegevensoplaad is útskeakele,\nmar wy lige en sizze tsjin de { glean-sdk-brand-name } dat dizze ynskeakele is,\nsadat gegevens noch hieltyd lokaal opnomen wurde.\nNoat: as jo in debuglabel ynstelle, wurde pings oplaad nei de\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a>, nettsjinsteande de ynstellingen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-feature-comments-heading",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-feature-comments-heading"
+    ]
+   },
+   "fids": [
+    "939862352e95"
+   ],
+   "findings": [
+    "Plural \"notes\" rendered as singular \"Notysje\"."
+   ],
+   "source": "Add notes",
+   "original": "Notysje tafoegje",
+   "text": "Notysjes tafoegje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutProfiles.ftl",
+   "string_id": "profiles-delete-profile-failed-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutProfiles.ftl",
+    "key": [
+     "profiles-delete-profile-failed-message"
+    ]
+   },
+   "fids": [
+    "b6e1d8fe010f"
+   ],
+   "findings": [
+    "wylst in besykjen → by it besykjen"
+   ],
+   "source": "There was an error while attempting to delete this profile.",
+   "original": "Der is in flater bard wylst in besykjen om dit profyl fuort te smiten.",
+   "text": "Der is in flater bard by it besykjen om dit profyl fuort te smiten.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "has-privileged-user-namespaces",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "has-privileged-user-namespaces"
+    ]
+   },
+   "fids": [
+    "c3b90f2e89e2"
+   ],
+   "findings": [
+    "proscessen → prosessen"
+   ],
+   "source": "User Namespaces for privileged processes",
+   "original": "Namespaces fan brûker foar proscessen mei foech",
+   "text": "Namespaces fan brûker foar prosessen mei foech",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "pending-reports",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "pending-reports"
+    ]
+   },
+   "fids": [
+    "66f5b699030d"
+   ],
+   "findings": [
+    "Extra closing parenthesis ))"
+   ],
+   "source": "{$reports ->} [one] All Crash Reports (including { $reports } pending crash in the given time range) [other] All Crash Reports (including { $reports } pending crashes in the given time range)",
+   "original": "Alle ûngelokrapporten (ynklusyf { $reports } ûngelokken op wacht yn it opjûne tiidsrak))",
+   "text": "Alle ûngelokrapporten (ynklusyf { $reports } ûngelokken op wacht yn it opjûne tiidsrak)",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "webgpu-default-adapter",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "webgpu-default-adapter"
+    ]
+   },
+   "fids": [
+    "19895092bb62"
+   ],
+   "findings": [
+    "standertdadapter → standertadapter"
+   ],
+   "source": "WebGPU Default Adapter",
+   "original": "WebGPU-standertdadapter",
+   "text": "WebGPU-standertadapter",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutThirdParty.ftl",
+   "string_id": "third-party-blocking-requires-restart",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutThirdParty.ftl",
+    "key": [
+     "third-party-blocking-requires-restart"
+    ]
+   },
+   "fids": [
+    "3cd846d6ba09"
+   ],
+   "findings": [
+    "opnij start wurden → opnij start wurde"
+   ],
+   "source": "To block a third-party module, { -brand-short-name } must restart.",
+   "original": "Om in eksterne module te blokkearjen, moat { -brand-short-name } opnij start wurden.",
+   "text": "Om in eksterne module te blokkearjen, moat { -brand-short-name } opnij start wurde.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
+   "string_id": "about-webauthn-ctap2-enroll-feedback-too-left",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebauthn.ftl",
+    "key": [
+     "about-webauthn-ctap2-enroll-feedback-too-left"
+    ]
+   },
+   "fids": [
+    "a4718f27efbb"
+   ],
+   "findings": [
+    "te tefolle → tefolle"
+   ],
+   "source": "Sample was too left.",
+   "original": "Scan wie te tefolle nei links.",
+   "text": "Scan wie tefolle nei links.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutWebrtc.ftl",
+   "string_id": "about-webrtc-save-page-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebrtc.ftl",
+    "key": [
+     "about-webrtc-save-page-label"
+    ]
+   },
+   "fids": [
+    "7bf9bd3953cd"
+   ],
+   "findings": [
+    "Side bewarre (participle) → Side bewarje"
+   ],
+   "source": "Save Page",
+   "original": "Side bewarre",
+   "text": "Side bewarje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/about/certviewer.ftl",
+   "string_id": "certificate-viewer-critical-extension",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/certviewer.ftl",
+    "key": [
+     "certificate-viewer-critical-extension"
+    ]
+   },
+   "fids": [
+    "9336bcf8bf23"
+   ],
+   "findings": [
+    "wegerje moatten → wegerje moatte"
+   ],
+   "source": "title: This extension has been marked as critical, meaning that clients must reject the certificate if they do not understand it.",
+   "original": "Dizze útwreiding is as krityk markearre, wat betsjut dat clients it sertifikaat wegerje moatten as se it net begripe.",
+   "text": "Dizze útwreiding is as krityk markearre, wat betsjut dat clients it sertifikaat wegerje moatte as se it net begripe.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-custom-wallpaper",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-custom-wallpaper"
+    ]
+   },
+   "fids": [
+    "00bbec7af63a"
+   ],
+   "findings": [
+    "Nij-ljepbledside → Nij-ljepblêdside"
+   ],
+   "source": "label: Choose a custom wallpaper or color for New Tab",
+   "original": "Kies in oanpaste eftergrûn of kleur foar Nij-ljepbledside",
+   "text": "Kies in oanpaste eftergrûn of kleur foar Nij-ljepblêdside",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/extensionPermissions.ftl",
+   "string_id": "webext-perms-description-data-long-technicalAndInteraction",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/extensionPermissions.ftl",
+    "key": [
+     "webext-perms-description-data-long-technicalAndInteraction"
+    ]
+   },
+   "fids": [
+    "885060c7e3b9"
+   ],
+   "findings": [
+    "útwreidingûntwikkeler → útwreidingsûntwikkeler"
+   ],
+   "source": "Share technical and interaction data with extension developer",
+   "original": "Technyske en ynteraksjegegevens diele mei útwreidingûntwikkeler",
+   "text": "Technyske en ynteraksjegegevens diele mei útwreidingsûntwikkeler",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/extensionPermissions.ftl",
+   "string_id": "webext-perms-description-management",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/extensionPermissions.ftl",
+    "key": [
+     "webext-perms-description-management"
+    ]
+   },
+   "fids": [
+    "9dd42b0b1ffd"
+   ],
+   "findings": [
+    "Utwreidigsgebrûk → Utwreidingsgebrûk"
+   ],
+   "source": "Monitor extension usage and manage themes",
+   "original": "Utwreidigsgebrûk kontrolearje en tema’s beheare",
+   "text": "Utwreidingsgebrûk kontrolearje en tema’s beheare",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/htmlForm.ftl",
+   "string_id": "form-post-secure-to-insecure-warning-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/htmlForm.ftl",
+    "key": [
+     "form-post-secure-to-insecure-warning-message"
+    ]
+   },
+   "fids": [
+    "d31776205bf6"
+   ],
+   "findings": [
+    "gegegevens → gegevens"
+   ],
+   "source": "The information you have entered on this page will be sent over an insecure connection and could be read by a third party.\n\nAre you sure you want to send this information?",
+   "original": "De gegevens dy’t jo op dizze side ynfierd hawwe, sille oer in net-befeilige ferbining ferstjoerd wurde en kinne troch in tredde partij lêzen wurde.\n\nBinne jo wis dat jo dizze gegegevens ferstjoere wolle?",
+   "text": "De gegevens dy’t jo op dizze side ynfierd hawwe, sille oer in net-befeilige ferbining ferstjoerd wurde en kinne troch in tredde partij lêzen wurde.\n\nBinne jo wis dat jo dizze gegevens ferstjoere wolle?",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/mozBoxBase.ftl",
+   "string_id": "moz-box-group-reorder-announcement",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/mozBoxBase.ftl",
+    "key": [
+     "moz-box-group-reorder-announcement"
+    ]
+   },
+   "fids": [
+    "6ed0a23fa356"
+   ],
+   "findings": [
+    "The verb is in the infinitive or imperative ('ferpleatse') when it should be the past participle ('ferpleatst')."
+   ],
+   "source": "Item moved to position { $position } of { $total }",
+   "original": "Item nei posysje { $position } fan { $total } ferpleatse",
+   "text": "Item nei posysje { $position } fan { $total } ferpleatst",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/processTypes.ftl",
+   "string_id": "process-type-utility-actor-hw-inference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/processTypes.ftl",
+    "key": [
+     "process-type-utility-actor-hw-inference"
+    ]
+   },
+   "fids": [
+    "2a96638adecb"
+   ],
+   "findings": [
+    "Spelling error: \"Helpprogamma\" is missing an \"r\" (should be \"Helpprogramma\")."
+   ],
+   "source": "Utility Hardware Accelerated Inference",
+   "original": "Helpprogamma hardware-fersnelde ynferinsje",
+   "text": "Helpprogramma hardware-fersnelde ynferinsje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/run-from-dmg.ftl",
+   "string_id": "install-failed-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/run-from-dmg.ftl",
+    "key": [
+     "install-failed-message"
+    ]
+   },
+   "fids": [
+    "1db91b954ea8"
+   ],
+   "findings": [
+    "ysntallaasje → ynstallaasje"
+   ],
+   "source": "{ -brand-short-name } failed to install but will continue to run.",
+   "original": "{ -brand-short-name }-ysntallaasje is mislearre, mar sil wurkje bliuwe.",
+   "text": "{ -brand-short-name }-ynstallaasje is mislearre, mar sil wurkje bliuwe.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/run-from-dmg.ftl",
+   "string_id": "prompt-to-install-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/run-from-dmg.ftl",
+    "key": [
+     "prompt-to-install-message"
+    ]
+   },
+   "fids": [
+    "0f37c616b5e7"
+   ],
+   "findings": [
+    "gegevensfelies → gegevensferlies"
+   ],
+   "source": "Complete this one-step installation to help keep { -brand-short-name } up to date and prevent data loss. { -brand-short-name } will be added to your Applications folder and Dock.",
+   "original": "Foltôgje dizze ien-stap-ynstallaasje om { -brand-short-name } by de tiid te hâlden en gegevensfelies foar te kommen. { -brand-short-name } sil oan jo applikaasjemap en Dock tafoege wurde.",
+   "text": "Foltôgje dizze ien-stap-ynstallaasje om { -brand-short-name } by de tiid te hâlden en gegevensferlies foar te kommen. { -brand-short-name } sil oan jo applikaasjemap en Dock tafoege wurde.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/global/viewSource.ftl",
+   "string_id": "view-source-out-of-range-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/viewSource.ftl",
+    "key": [
+     "view-source-out-of-range-title"
+    ]
+   },
+   "fids": [
+    "2df1a2e406e4"
+   ],
+   "findings": [
+    "'Rige' is a typo for 'Rigel' (line), which the neighbouring strings use."
+   ],
+   "source": "Line not found",
+   "original": "Rige net fûn",
+   "text": "Rigel net fûn",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/certError.ftl",
+   "string_id": "fp-certerror-self-signed-important-note",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/certError.ftl",
+    "key": [
+     "fp-certerror-self-signed-important-note"
+    ]
+   },
+   "fids": [
+    "1edbec5e63f0"
+   ],
+   "findings": [
+    "WICHTICH OPMERKING → WICHTIGE OPMERKING"
+   ],
+   "source": "IMPORTANT NOTE: If you are trying to visit this site on a corporate intranet, your IT staff may use self-signed certificates. They can help you check their authenticity.",
+   "original": "WICHTICH OPMERKING: As jo probearje dizze side op in bedriuwsyntranet te besykjen, brûkt jo IT-ôfdieling mooglik selsûndertekene sertifikaten. Se kinne jo helpe by it kontrolearjen fan de echtheid derfan.",
+   "text": "WICHTIGE OPMERKING: As jo probearje dizze side op in bedriuwsyntranet te besykjen, brûkt jo IT-ôfdieling mooglik selsûndertekene sertifikaten. Se kinne jo helpe by it kontrolearjen fan de echtheid derfan.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/certError.ftl",
+   "string_id": "fp-certerror-self-signed-what-can-you-do-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/certError.ftl",
+    "key": [
+     "fp-certerror-self-signed-what-can-you-do-body"
+    ]
+   },
+   "fids": [
+    "71224494749f"
+   ],
+   "findings": [
+    "Doubled is"
+   ],
+   "source": "Not much. It’s likely there’s a problem with the site itself.",
+   "original": "Net folle. It is wierskynlik in probleem is mei de website sels.",
+   "text": "Net folle. It is wierskynlik in probleem mei de website sels.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "certerror-expired-cert-what-can-you-do-about-it-clock",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "certerror-expired-cert-what-can-you-do-about-it-clock"
+    ]
+   },
+   "fids": [
+    "41036ce9d12f"
+   ],
+   "findings": [
+    "tiidssône → tiidsône"
+   ],
+   "source": "Your computer clock is set to { $now }. Make sure your computer is set to the correct date, time, and time zone in your system settings, and then refresh <b>{ $hostname }</b>.",
+   "original": "Jo kompjûterklok is ynsteld op { DATETIME($now, dateStyle: \"medium\") }. Soargje derfoar dat jo kompjûter op de krekte datum, tiid en tiidssône ynsteld is yn jo systeemynstellingen, en fernij dêrnei <b>{ $hostname }</b>.",
+   "text": "Jo kompjûterklok is ynsteld op { DATETIME($now, dateStyle: \"medium\") }. Soargje derfoar dat jo kompjûter op de krekte datum, tiid en tiidsône ynsteld is yn jo systeemynstellingen, en fernij dêrnei <b>{ $hostname }</b>.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-generic-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-generic-error"
+    ]
+   },
+   "fids": [
+    "062190c721fb"
+   ],
+   "findings": [
+    "ien oft oare reden → ien of oare reden"
+   ],
+   "source": "{ -brand-short-name } can’t load this page for some reason.",
+   "original": "{ -brand-short-name } kin om ien oft oare reden dizze side net lade.",
+   "text": "{ -brand-short-name } kin om ien of oare reden dizze side net lade.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-loopback-refused-wrong-port",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-loopback-refused-wrong-port"
+    ]
+   },
+   "fids": [
+    "b03910e20014"
+   ],
+   "findings": [
+    "'of' ('or') is used where the conjunction 'oft' ('whether') is needed."
+   ],
+   "source": "If it is running, check that it is using port { $port }.",
+   "original": "As dizze aktyf is, kontrolearje dan of dizze poarte { $port } brûkt.",
+   "text": "As dizze aktyf is, kontrolearje dan oft dizze poarte { $port } brûkt.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "mozilla-pkix-error-key-pinning-failure",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "mozilla-pkix-error-key-pinning-failure"
+    ]
+   },
+   "fids": [
+    "d9eae5e1419c"
+   ],
+   "findings": [
+    "Auxiliary wurde dropped"
+   ],
+   "source": "The server uses key pinning (HPKP) but no trusted certificate chain could be constructed that matches the pinset. Key pinning violations cannot be overridden.",
+   "original": "De server brûkt kaaipinning (HPKP), mar der kin gjin fertroude sertifikaatketen makke dy’t mei de pinset oerienkomt. Skeining fan kaaipinning kin net negearre wurde.",
+   "text": "De server brûkt kaaipinning (HPKP), mar der kin gjin fertroude sertifikaatketen makke wurde dy’t mei de pinset oerienkomt. Skeining fan kaaipinning kin net negearre wurde.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-baggage-not-created",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-baggage-not-created"
+    ]
+   },
+   "fids": [
+    "d817646fd8a1"
+   ],
+   "findings": [
+    "meitesjen → meitsjen; bagage objekt → bagageobjekt"
+   ],
+   "source": "error while creating baggage object",
+   "original": "flater tiidens it meitesjen fan bagage objekt",
+   "text": "flater tiidens it meitsjen fan bagageobjekt",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-busy",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-busy"
+    ]
+   },
+   "fids": [
+    "921322911007"
+   ],
+   "findings": [
+    "noch in gebrûk → noch yn gebrûk"
+   ],
+   "source": "NSS could not shutdown. Objects are still in use.",
+   "original": "NSS koe net ôfslute. Objekten binne noch in gebrûk.",
+   "text": "NSS koe net ôfslute. Objekten binne noch yn gebrûk.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-cert-usages-invalid",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-cert-usages-invalid"
+    ]
+   },
+   "fids": [
+    "e2a308527035"
+   ],
+   "findings": [
+    "Sertifikaatgebrûksfjld → …fjild"
+   ],
+   "source": "Certificate usages field is invalid.",
+   "original": "Sertifikaatgebrûksfjld is ûnjildich.",
+   "text": "Sertifikaatgebrûksfjild is ûnjildich.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-crl-invalid-version",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-crl-invalid-version"
+    ]
+   },
+   "fids": [
+    "531fb428ddeb"
+   ],
+   "findings": [
+    "Sertifikaateerroppingslist → Sertifikaatwerroppingslist"
+   ],
+   "source": "Issuer’s Certificate Revocation List has an unknown version number.",
+   "original": "Sertifikaateerroppingslist fan útjouwer hat in ûnjildich ferzjenûmer.",
+   "text": "Sertifikaatwerroppingslist fan útjouwer hat in ûnjildich ferzjenûmer.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-duplicate-cert",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-duplicate-cert"
+    ]
+   },
+   "fids": [
+    "65c7ebf2d030"
+   ],
+   "findings": [
+    "bestiat → bestiet"
+   ],
+   "source": "Certificate already exists in your database.",
+   "original": "Sertifikaat bestiat al yn jo database.",
+   "text": "Sertifikaat bestiet al yn jo database.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-module-stuck",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-module-stuck"
+    ]
+   },
+   "fids": [
+    "ca2538ae4374"
+   ],
+   "findings": [
+    "noch in gebrûk → noch yn gebrûk"
+   ],
+   "source": "PKCS #11 module could not be removed because it is still in use.",
+   "original": "PKCS #11-module koe net fuortsmiten wurde, omdat dizze noch in gebrûk is.",
+   "text": "PKCS #11-module koe net fuortsmiten wurde, omdat dizze noch yn gebrûk is.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-ocsp-malformed-request",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-ocsp-malformed-request"
+    ]
+   },
+   "fids": [
+    "5a36749d80db"
+   ],
+   "findings": [
+    "skansearr → skansearre"
+   ],
+   "source": "The OCSP server found the request to be corrupted or improperly formed.",
+   "original": "De OCSP-server beskôge it fersyk as skansearr of ferkeard opsteld.",
+   "text": "De OCSP-server beskôge it fersyk as skansearre of ferkeard opsteld.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-ocsp-not-enabled",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-ocsp-not-enabled"
+    ]
+   },
+   "fids": [
+    "03bb4e12a0b1"
+   ],
+   "findings": [
+    "úfieren → útfieren"
+   ],
+   "source": "You must enable OCSP before performing this operation.",
+   "original": "Jo moatte OCSP ynskeakelje foar it úfieren fan dizze bewurking.",
+   "text": "Jo moatte OCSP ynskeakelje foar it útfieren fan dizze bewurking.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-ocsp-unknown-response-status",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-ocsp-unknown-response-status"
+    ]
+   },
+   "fids": [
+    "8c2480a3f85e"
+   ],
+   "findings": [
+    "De OCSP-server jou → jout"
+   ],
+   "source": "The OCSP server returned an unrecognizable status.",
+   "original": "De OCSP-server jou in ûnherkenbere steat werom.",
+   "text": "De OCSP-server jout in ûnherkenbere steat werom.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-revoked-key",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-revoked-key"
+    ]
+   },
+   "fids": [
+    "5f499f29d6a6"
+   ],
+   "findings": [
+    "ynlûkt → ynlutsen"
+   ],
+   "source": "The key for this site’s certificate has been revoked.",
+   "original": "De kaai foar it sertifikaat fan dizze website is ynlûkt.",
+   "text": "De kaai foar it sertifikaat fan dizze website is ynlutsen.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-cipher-disallowed-for-version",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-cipher-disallowed-for-version"
+    ]
+   },
+   "fids": [
+    "9418d323081d"
+   ],
+   "findings": [
+    "selektearre yn cipher suite → in cipher suite"
+   ],
+   "source": "SSL peer selected a cipher suite disallowed for the selected protocol version.",
+   "original": "SSL peer selektearre yn cipher suite net tastien foar de selektearre protokolferzje.",
+   "text": "SSL peer selektearre in cipher suite net tastien foar de selektearre protokolferzje.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-incorrect-signature-algorithm",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-incorrect-signature-algorithm"
+    ]
+   },
+   "fids": [
+    "4301aba8c896"
+   ],
+   "findings": [
+    "ûndertekeneingsalgoritme → ûndertekeningsalgoritme"
+   ],
+   "source": "Incorrect signature algorithm specified in a digitally-signed element.",
+   "original": "Ferkearde ûndertekeneingsalgoritme spesifisearre yn in digitaal-ûndertekene elemint.",
+   "text": "Ferkearde ûndertekeningsalgoritme spesifisearre yn in digitaal-ûndertekene elemint.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-rx-unexpected-cert-status",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-rx-unexpected-cert-status"
+    ]
+   },
+   "fids": [
+    "a0da799071cb"
+   ],
+   "findings": [
+    "unferwacht → ûnferwacht"
+   ],
+   "source": "SSL received an unexpected Certificate Status handshake message.",
+   "original": "SSL ûntfong in unferwacht Certificate Status handshake-berjocht.",
+   "text": "SSL ûntfong in ûnferwacht Certificate Status handshake-berjocht.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-rx-unexpected-hello-verify-request",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-rx-unexpected-hello-verify-request"
+    ]
+   },
+   "fids": [
+    "f72cff175cea"
+   ],
+   "findings": [
+    "unferwacht → ûnferwacht"
+   ],
+   "source": "SSL received an unexpected Hello Verify Request handshake message.",
+   "original": "SSL ûntfong in unferwacht Hello Verify Request handshake-berjocht.",
+   "text": "SSL ûntfong in ûnferwacht Hello Verify Request handshake-berjocht.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-session-not-found",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-session-not-found"
+    ]
+   },
+   "fids": [
+    "f87d1f2364bf"
+   ],
+   "findings": [
+    "net fûn in sesjebuffer → net fûn yn sesjebuffer"
+   ],
+   "source": "Client’s SSL session ID not found in server’s session cache.",
+   "original": "SSL-sesje-ID fan client net fûn in sesjebuffer fan server.",
+   "text": "SSL-sesje-ID fan client net fûn yn sesjebuffer fan server.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "ssl-error-us-only-server",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "ssl-error-us-only-server"
+    ]
+   },
+   "fids": [
+    "eedc0a39b8cc"
+   ],
+   "findings": [
+    "\"wurd\" should be the verb form \"wurdt\" in \"hokker net stipe wurd\"."
+   ],
+   "source": "Unable to communicate securely. Peer requires high-grade encryption which is not supported.",
+   "original": "Befeilige kommunikaasje net mooglik. Peer fereasket hege graad fan fersifering, hokker net stipe wurd.",
+   "text": "Befeilige kommunikaasje net mooglik. Peer fereasket hege graad fan fersifering, hokker net stipe wurdt.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "xp-java-cert-not-exists-error",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "xp-java-cert-not-exists-error"
+    ]
+   },
+   "fids": [
+    "5d73cc7a2585"
+   ],
+   "findings": [
+    "Dit haadpersoan → Dizze haadpersoan"
+   ],
+   "source": "This principal doesn’t have a certificate",
+   "original": "Dit haadpersoan hat gjin sertifikaat",
+   "text": "Dizze haadpersoan hat gjin sertifikaat",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-digital-signature-properties-status-unknown",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-digital-signature-properties-status-unknown"
+    ]
+   },
+   "fids": [
+    "14141fd58bf3"
+   ],
+   "findings": [
+    "kin net ferifiearje wurde → ferifiearre wurde"
+   ],
+   "source": "Status: Unable to verify (unsupported)",
+   "original": "Status: kin net ferifiearje wurde (net stipe)",
+   "text": "Status: kin net ferifiearre wurde (net stipe)",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-editor-color-picker-free-text-input",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-editor-color-picker-free-text-input"
+    ]
+   },
+   "fids": [
+    "a2e4310421b0"
+   ],
+   "findings": [
+    "Tekstleur → Tekstkleur"
+   ],
+   "source": "title: Change text color",
+   "original": "Tekstleur wizigje",
+   "text": "Tekstkleur wizigje",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-editor-highlight-editor",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-editor-highlight-editor"
+    ]
+   },
+   "fids": [
+    "79399a35d42e"
+   ],
+   "findings": [
+    "Markearingsbewurker → Markearringsbewurker"
+   ],
+   "source": "aria-label: Highlight editor",
+   "original": "Markearingsbewurker",
+   "text": "Markearringsbewurker",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-print-progress-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-print-progress-message"
+    ]
+   },
+   "fids": [
+    "44b37cd381ff"
+   ],
+   "findings": [
+    "tariede oar ôfdrukken → tariede foar ôfdrukken"
+   ],
+   "source": "Preparing document for printing…",
+   "original": "Dokumint tariede oar ôfdrukken…",
+   "text": "Dokumint tariede foar ôfdrukken…",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/printing/printUI.ftl",
+   "string_id": "printui-headers-footers-checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/printing/printUI.ftl",
+    "key": [
+     "printui-headers-footers-checkbox"
+    ]
+   },
+   "fids": [
+    "7e0566a56303"
+   ],
+   "findings": [
+    "foetteksten → fuotteksten"
+   ],
+   "source": "Print headers and footers",
+   "original": "Kop- en foetteksten ôfdrukke",
+   "text": "Kop- en fuotteksten ôfdrukke",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/printing/printUI.ftl",
+   "string_id": "printui-system-dialog-link",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/printing/printUI.ftl",
+    "key": [
+     "printui-system-dialog-link"
+    ]
+   },
+   "fids": [
+    "96e96e2eca4d"
+   ],
+   "findings": [
+    "systeemdialoochfienster → systeemdialoochfinster"
+   ],
+   "source": "Print using the system dialog…",
+   "original": "Ofdrukke fia it systeemdialoochfienster…",
+   "text": "Ofdrukke fia it systeemdialoochfinster…",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-06",
+   "group": "C",
+   "file": "toolkit/toolkit/updates/elevation.ftl",
+   "string_id": "elevation-finished-background-page",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/updates/elevation.ftl",
+    "key": [
+     "elevation-finished-background-page"
+    ]
+   },
+   "fids": [
+    "d1c2fd79b038"
+   ],
+   "findings": [
+    "stabliliteitsfernijing → stabiliteitsfernijing"
+   ],
+   "source": "A security and stability update for { -brand-short-name } has been\ndownloaded and is ready to be installed.",
+   "original": "In feilichheids- en stabliliteitsfernijing foar { -brand-short-name } is krekt downloaden\nen is ree om ynstallearre te wurden.",
+   "text": "In feilichheids- en stabiliteitsfernijing foar { -brand-short-name } is krekt downloaden\nen is ree om ynstallearre te wurden.",
+   "status": "pending",
+   "status_date": "2026-11-06",
+   "comment": ""
   }
  ]
 }
