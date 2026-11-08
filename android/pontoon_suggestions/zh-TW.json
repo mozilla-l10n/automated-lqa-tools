@@ -1814,6 +1814,32 @@
    "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=318912",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_edit_url_dialog_dismiss",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_edit_url_dialog_dismiss"
+    ]
+   },
+   "fids": [
+    "c697d8a305f9"
+   ],
+   "findings": [
+    "The dismiss button in the Edit URL dialog is rendered as \"Got it!\" instead of a cancel/close action."
+   ],
+   "source": "Dismiss",
+   "original": "知道了！",
+   "text": "取消",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
   }
  ]
 }
