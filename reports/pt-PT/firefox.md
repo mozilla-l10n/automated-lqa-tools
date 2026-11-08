@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 16,773 |
+| **Strings reviewed this run** | 53 of 16,823 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — "Open tabs" is translated as a verb instead of a noun in both the label and the tooltip.
+    - Current: `Abrir separadores`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Separadores abertos`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). "Abrir separadores" means "to open tabs", an action. The tooltip should read "Separadores abertos dos seus outros dispositivos".
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps the English word order, which is ungrammatical in Portuguese.
+    - Current: `{ -brand-short-name } definições onde aplicável`
+    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
+    - Suggest: `Definições do { -brand-short-name }, quando aplicável`
+    - In Portuguese the possessor has to follow the noun with "do". Putting the brand name first as a modifier is ungrammatical.
+- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — There is a double space between "do" and "Wrexham" in the menu label.
+    - Current: `Abrir menu do  Wrexham AFC`
+    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
+    - Suggest: `Abrir menu do Wrexham AFC`
+    - The extra space is in text that users read, and screen readers announce this label.
+- `hnt-card-import-body` — `browser/browser/newtab/onboarding.ftl` — There is a serial comma before "e", which Portuguese punctuation does not use.
+    - Current: `palavras-passe, e muito mais`
+    - Source: `Bring in your bookmarks, passwords, and more from another browser.`
+    - Suggest: `palavras-passe e muito mais`
+    - Portuguese does not put a comma before the final "e" in a list. This copies the English Oxford comma.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,773 |
-| Missing strings | 87 |
+| Strings | 16,823 |
+| Missing strings | 52 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +82,17 @@ _Nothing retired._
 
 ### Completeness
 
-**87 strings** are not translated yet, concentrated in:
+**52 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 22
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `browser/browser/tabContextMenu.ftl` — 14
 - `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
+- `browser/browser/tabbrowser.ftl` — 2
 - `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-- `dom/dom/manifest.ftl` — 1
+- `dom/chrome/security/security.properties` — 2
 - `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `dom/dom/manifest.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +104,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 569, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
-| ellipsis | `char` 373, `ascii` 28 | **char** |
+| ellipsis | `char` 374, `ascii` 28 | **char** |
 | dash | `em` 66, `en` 8 | **em** |
 | nbsp | `total` 42, `before-punctuation` 2, `space-before-punctuation` 6 | **total** |
 
@@ -101,15 +117,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (320)
+## 3. Open findings (324)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
-| 2 | Wrong content (says something other than the English) | 127 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 128 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -430,6 +446,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Townland`
     - Suggest: `autofill-address-townland = Lugar`
     - The developer comment says this is an Irish sublocality below a locality; a townland is a small rural division, not a city, and the file already uses “Cidade” for autofill-address-city.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — "Open tabs" is translated as a verb instead of a noun in both the label and the tooltip.
+    - Current: `Abrir separadores`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Separadores abertos`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). "Abrir separadores" means "to open tabs", an action. The tooltip should read "Separadores abertos dos seus outros dispositivos".
 - `netmonitor.security.usedOcsp` — `devtools/client/netmonitor.properties` — The OCSP acronym is misspelled as OSCSP.
     - Current: `(OSCSP)`
     - Source: `Used Online Certificate Status Protocol (OCSP):`
@@ -658,6 +679,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
     - Suggest: `Outras pessoas podem ver`
     - The subject "Outras pessoas" needs the conjugated verb "podem". "poder" is ungrammatical here.
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps the English word order, which is ungrammatical in Portuguese.
+    - Current: `{ -brand-short-name } definições onde aplicável`
+    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
+    - Suggest: `Definições do { -brand-short-name }, quando aplicável`
+    - In Portuguese the possessor has to follow the noun with "do". Putting the brand name first as a modifier is ungrammatical.
 - `briefcase-avatar-alt` — `browser/browser/profiles.ftl` — "Briefcase" is rendered "Pasta", colliding with the "Folder" avatar in the same list, and conflicting with its own tooltip which says "mala".
     - Current: `Pasta`
     - Source: `alt: Briefcase`
@@ -883,11 +909,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
     - Suggest: `um bounce tracker`
     - The comment states: Do not translate "bounce tracker"; btp-warning-tracker-classified in the same file keeps it in English.
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — Participle is plural but refers to a single security code name.
-    - Current: `{ $securityCode } guardados`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $securityCode } guardado`
-    - $securityCode is one code name (e.g. "CVV", masculine singular), so the participle should be "guardado", not plural "guardados".
+- _…and 1 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1220,6 +1242,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Show More in Sidebar`
     - Suggest: `Mostrar mais na barra lateral`
     - pt-PT UI labels use sentence case. Capitalising each word copies English title case.
+- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — There is a double space between "do" and "Wrexham" in the menu label.
+    - Current: `Abrir menu do  Wrexham AFC`
+    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
+    - Suggest: `Abrir menu do Wrexham AFC`
+    - The extra space is in text that users read, and screen readers announce this label.
+- `hnt-card-import-body` — `browser/browser/newtab/onboarding.ftl` — There is a serial comma before "e", which Portuguese punctuation does not use.
+    - Current: `palavras-passe, e muito mais`
+    - Source: `Bring in your bookmarks, passwords, and more from another browser.`
+    - Suggest: `palavras-passe e muito mais`
+    - Portuguese does not put a comma before the final "e" in a list. This copies the English Oxford comma.
 - `connection-dns-over-https-url-custom` — `browser/browser/preferences/connection.ftl` — “DNS over HTTPS” rendered as “DNS sob HTTPS”.
     - Current: `Introduza o endereço que pretende utilizar para resolver DNS sob HTTPS`
     - Source: `accesskey: C label: Custom tooltiptext: Enter your preferred URL for resolving DNS over HTTPS`

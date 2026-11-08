@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,321 |
+| **Strings reviewed this run** | 2 of 16,321 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 331 |
 | Strings | 16,321 |
-| Missing strings | 539 |
+| Missing strings | 554 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**539 strings** are not translated yet, concentrated in:
+**554 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
-- `dom/chrome/dom/dom.properties` — 30
+- `dom/chrome/dom/dom.properties` — 33
 - `devtools/client/tooltips.ftl` — 28
 - `browser/browser/preferences/preferences.ftl` — 26
 - `browser/browser/newtab/onboarding.ftl` — 24
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/newtab/newtab.ftl` — 20
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
-- `dom/chrome/layout/htmlparser.properties` — 15
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

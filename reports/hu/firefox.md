@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 61 of 16,816 |
+| **Strings reviewed this run** | 3 of 16,816 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `download-ui-confirm-quit-button` — `toolkit/toolkit/downloads/downloadUI.ftl` — The Windows variant of this button label ends in a question mark, but the en-US source and the other variant do not.
-    - Current: `[windows] Kilép a { -brand-short-name }ból?`
-    - Source: `{$sel_1 ->} [windows] Exit { -brand-short-name } [other] Quit { -brand-short-name }`
-    - Suggest: `[windows] Kilép a { -brand-short-name }ból`
-    - The en-US "Exit { -brand-short-name }" is a button label, not a question. The [other] variant correctly has no question mark, so the Windows variant is inconsistent and shows a question mark on a button.
-- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — Uses the informal form "Kezdj el", but the Hungarian locale addresses the user formally (Ön).
-    - Current: `Kezdj el böngészni`
-    - Source: `Browse to start blocking.`
-    - Suggest: `Kezdjen el böngészni`
-    - The hu Firefox strings address the user formally (Ön/magázás), as the onboarding strings in this batch do (e.g. "Állítsa be", "Importálja"). The informal imperative breaks that register.
-- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The idiom "do your thing" is translated as "tegye a dolgát", which means "do your duty/job", the opposite of what the developer comment describes.
-    - Current: `Menjen, és tegye a dolgát.`
-    - Source: `All set. Go do your thing.`
-    - Suggest: `Vágjon bele abba, ami érdekli.`
-    - The developer comment says "do your thing" means doing what you're interested in or good at, rather than what everyone else does. In Hungarian, "tegye a dolgát" means doing what is expected of you, so it reverses the intended nuance.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -60,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 331 |
 | Strings | 16,816 |
-| Missing strings | 44 |
+| Missing strings | 59 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -77,18 +63,19 @@ _Nothing retired._
 
 ### Completeness
 
-**44 strings** are not translated yet, concentrated in:
+**59 strings** are not translated yet, concentrated in:
 
 - `browser/browser/tabContextMenu.ftl` — 14
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 9
+- `browser/browser/newtab/newtab.ftl` — 7
 - `browser/browser/newtab/onboarding.ftl` — 7
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 3
+- `browser/browser/browser.ftl` — 4
 - `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 3
 - `browser/browser/preferences/preferences.ftl` — 2
-- `dom/dom/manifest.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `dom/chrome/security/security.properties` — 2
+- `browser/browser/customkeys.ftl` — 1
 - `toolkit/toolkit/firefoxlabs/features.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._

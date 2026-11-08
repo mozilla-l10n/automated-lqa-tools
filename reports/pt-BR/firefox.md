@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 49 of 16,801 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `urlbar-view-context-menu-search-in-window` — `browser/browser/browser.ftl` — The menu label has a double space between "em" and "nova".
+    - Current: `Pesquisar em  nova janela`
+    - Source: `(value): Search in New Window accesskey: N`
+    - Suggest: `Pesquisar em nova janela`
+    - Users see a doubled space between two words in the label. The sibling strings ("Pesquisar em nova aba", "Pesquisar em nova janela privativa") use a single space.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,801 |
+| Missing strings | 74 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
+**74 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 9
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 7
 - `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/newtab/newtab.ftl` — 5
 - `browser/browser/tabbrowser.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 3
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
+- `browser/browser/contextual-manager.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 599, `curly-single` 124, `straight-double` 64 | **curly-double** |
 | apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
-| ellipsis | `char` 394, `ascii` 4 | **char** |
+| ellipsis | `char` 395, `ascii` 4 | **char** |
 | dash | `em` 49, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 10, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
 | register | `informal` 1538 | **informal** |
@@ -101,7 +105,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (549)
+## 3. Open findings (550)
 
 
 | Impact | Meaning | Count |
@@ -109,7 +113,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
 | 2 | Wrong content (says something other than the English) | 181 |
 | 3 | Degraded language (grammar, spelling, terminology) | 266 |
-| 4 | Cosmetic (typography, spacing) | 91 |
+| 4 | Cosmetic (typography, spacing) | 92 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -841,13 +845,18 @@ _Nothing reported._
 - `quickactions-cmd-private` — `browser/browser/browser.ftl` — Lowercase where the sibling is capitalized: about-webrtc-fold-hide-msg/-show-msg, about-webrtc-raw-cand-hide-msg/-show-msg, about-webrtc-log-hide-msg/-show-msg and the matching .title attributes (aboutWebrtc.ftl); about-webrtc-aec-logging-off-state-msg, about-webrtc-save-page-msg (aboutWebrtc.ftl); about-telemetry-current-data-sidebar (aboutTelemetry.ftl); quickactions-cmd-clearhistory, quickacti…
     - Source: `private browsing`
     - Suggest: `-show-msg`
+- `urlbar-view-context-menu-search-in-window` — `browser/browser/browser.ftl` — The menu label has a double space between "em" and "nova".
+    - Current: `Pesquisar em  nova janela`
+    - Source: `(value): Search in New Window accesskey: N`
+    - Suggest: `Pesquisar em nova janela`
+    - Users see a doubled space between two words in the label. The sibling strings ("Pesquisar em nova aba", "Pesquisar em nova janela privativa") use a single space.
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `label: Save selection as…`
     - Suggest: `.label`
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 394 times against 4 ASCII runs.
+    - The tree uses … 395 times against 4 ASCII runs.
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -884,7 +893,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 394 times against 4 ASCII runs.
+    - The tree uses … 395 times against 4 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -965,7 +974,7 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 394 times against 4 ASCII runs.
+    - The tree uses … 395 times against 4 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
@@ -977,7 +986,7 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 394 times against 4 ASCII runs.
+    - The tree uses … 395 times against 4 ASCII runs.
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)
@@ -1020,11 +1029,7 @@ _Nothing reported._
     - Suggest: `para <strong>`
 - `inactive-css-resize` — `devtools/client/tooltips.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `<strong>{ $property }</strong> has no effect on this element since it can only be applied to elements with an overflow value other than visible, and to certain replaced elements, such as textareas.`
-- `screenshotFilenameManual` — `devtools/shared/screenshot.properties` — `screenshotFilenameManual` uses straight double quotes
-    - Current: `O nome do arquivo (deve ter extensão ".png") onde gravar a captura de tela.`
-    - Source: `The name of the file (should have a ‘.png’ extension) to which we write the screenshot.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
-- _…and 25 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ---
 

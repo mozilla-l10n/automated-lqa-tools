@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,206 |
+| **Strings reviewed this run** | 2 of 16,206 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 331 |
 | Strings | 16,206 |
-| Missing strings | 654 |
+| Missing strings | 669 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**654 strings** are not translated yet, concentrated in:
+**669 strings** are not translated yet, concentrated in:
 
-- `dom/chrome/dom/dom.properties` — 72
+- `dom/chrome/dom/dom.properties` — 75
 - `toolkit/toolkit/about/aboutGlean.ftl` — 63
 - `browser/browser/ipProtection.ftl` — 48
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 36
 - `dom/chrome/security/csp.properties` — 34
+- `browser/browser/newtab/newtab.ftl` — 32
 - `dom/chrome/security/security.properties` — 32
 - `browser/browser/newtab/onboarding.ftl` — 29
-- `browser/browser/newtab/newtab.ftl` — 25
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 20
+- `browser/browser/genai.ftl` — 20
 
 **Files present but identical to en-US:**
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 123 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,22 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,9 +71,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 549, `curly-single` 94, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1023, `straight` 43 | **typographic** |
-| ellipsis | `char` 400, `ascii` 1 | **char** |
+| quotes | `curly-double` 550, `curly-single` 94, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 1037, `straight` 43 | **typographic** |
+| ellipsis | `char` 401, `ascii` 1 | **char** |
 | dash | `em` 83, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

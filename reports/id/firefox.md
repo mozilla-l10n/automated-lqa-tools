@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,922 |
+| **Strings reviewed this run** | 2 of 13,922 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The word "usang" is misspelled as "usangi".
+    - Current: `sudah usangi`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Suggest: `sudah usang`
+    - "Deprecated" is rendered as "sudah usang", and that is how the matching captureEvents string has it. "Usangi" is not an Indonesian word.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Typo "usangi".
+    - Current: `Penggunaan releaseEvents() sudah usangi.`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Suggest: `Penggunaan releaseEvents() sudah usang.`
+    - "usangi" is not a word; the parallel string UseOfCaptureEventsWarning correctly uses "sudah usang".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +54,7 @@ _Nothing retired._
 |---|---|
 | Files | 324 |
 | Strings | 13,922 |
-| Missing strings | 2,938 |
+| Missing strings | 2,953 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +71,9 @@ _Nothing retired._
 
 ### Completeness
 
-**2,938 strings** are not translated yet, concentrated in:
+**2,953 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 491
+- `browser/browser/newtab/newtab.ftl` — 498
 - `browser/browser/preferences/preferences.ftl` — 467
 - `browser/browser/ipProtection.ftl` — 160
 - `browser/browser/newtab/onboarding.ftl` — 155
@@ -76,7 +84,7 @@ _Nothing retired._
 - `browser/browser/profiles.ftl` — 57
 - `browser/browser/tabbrowser.ftl` — 45
 - `toolkit/toolkit/about/aboutGlean.ftl` — 44
-- `toolkit/toolkit/neterror/netError.ftl` — 42
+- `browser/browser/customkeys.ftl` — 43
 
 **Files absent from the locale:**
 
@@ -116,9 +124,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 66 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 65 |
 | 2 | Wrong content (says something other than the English) | 155 |
-| 3 | Degraded language (grammar, spelling, terminology) | 50 |
+| 3 | Degraded language (grammar, spelling, terminology) | 51 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -751,6 +759,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Refused to expand <select> option list via assignment to HTMLOptionsCollection.length (value %1$S). The maximum supported size is %2$S.`
     - Suggest: `HTMLOptionsCollection.length`
     - The developer comment says do not translate "HTMLOptionsCollection.length"; the localized identifier is missing the "s" and does not exist.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The word "usang" is misspelled as "usangi".
+    - Current: `sudah usangi`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Suggest: `sudah usang`
+    - "Deprecated" is rendered as "sudah usang", and that is how the matching captureEvents string has it. "Usangi" is not an Indonesian word.
 - `WebExtContentScriptModuleSourceNotAllowed` — `dom/chrome/dom/dom.properties` — URL scheme miscapitalized as moz-Extension.
     - Current: `URL moz-Extension`
     - Source: `WebExtension content scripts may only load modules with moz-extension URLs and not: “%S”.`
@@ -1024,11 +1037,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Someone pretending to be the site could try to steal your info. Your connection settings could also be set up incorrectly.`
     - Suggest: `situs tersebut`
     - Misspelling of "tersebut" in a user-facing network error page.
-- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Typo "usangi".
-    - Current: `Penggunaan releaseEvents() sudah usangi.`
-    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
-    - Suggest: `Penggunaan releaseEvents() sudah usang.`
-    - "usangi" is not a word; the parallel string UseOfCaptureEventsWarning correctly uses "sudah usang".
 - `ImageTitleWithDimensions2` — `dom/chrome/layout/MediaDocument.properties` — The word "Image" is both translated and left in English.
     - Current: `(Gambar %S Image, %S × %S piksel)`
     - Source: `(%S Image, %S × %S pixels)`
@@ -1114,7 +1122,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Video format or MIME type is not supported.`
     - Suggest: `Format atau jenis MIME video tidak didukung.`
     - The next string in the same file correctly uses "didukung".
-- _…and 6 more; see `state/` for the full list._
+- `language-name-af` — `toolkit/toolkit/intl/languageNames.ftl` — Afrikaans is missing its final -s.
+    - Current: `Afrikaan`
+    - Source: `Afrikaans`
+    - Suggest: `Afrikaans`
+    - The language name is "Afrikaans" in Indonesian as in English; "Afrikaan" is not a language name.
+- _…and 5 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1245,7 +1258,8 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (2)
+### Fixed to date (3)
 
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-08
 - `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01
