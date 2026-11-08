@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,568 |
+| **Strings reviewed this run** | 1 of 2,542 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Trackers blocked" rendered as "Zavrnjeni sledilci" instead of the consistent "blokirani" used in neighbouring protection-panel strings.
+    - Current: `Zavrnjeni sledilci: %d`
+    - Suggest: `Blokirani sledilci: %d`
+    - Other strings on the same panel translate "blocked" as "blokiran" (e.g. "Sledilci niso blokirani", "je bil blokiran %1$d sledilec"); "zavrnjeni" (rejected) is inconsistent terminology on the same surface.
 
 ---
 
@@ -45,8 +48,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,568 |
-| Missing strings | 58 |
+| Strings | 2,542 |
+| Missing strings | 59 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +66,9 @@ _Nothing retired._
 
 ### Completeness
 
-**58 strings** are not translated yet, concentrated in:
+**59 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 41
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 42
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-sl/strings.xml` — 4
@@ -84,7 +87,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `straight-double` 17, `curly-double` 2 | **straight-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 5 | **en** |
-| register | `informal` 4, `formal` 93 | **formal** |
+| register | `informal` 4, `formal` 90 | **formal** |
 
 ---
 
@@ -94,14 +97,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (44)
+## 3. Open findings (43)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 27 |
-| 3 | Degraded language (grammar, spelling, terminology) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 14 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -306,11 +309,6 @@ _Nothing in this category._
     - Source: `AI controls`
     - Suggest: `Nadzor umetne inteligence`
     - "Nadzor UI" is ambiguous/incorrect in Slovenian (UI also reads as user interface); the settings screen title for AI controls should spell out "umetne inteligence".
-- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Trackers blocked" rendered as "Zavrnjeni sledilci" instead of the consistent "blokirani" used in neighbouring protection-panel strings.
-    - Current: `Zavrnjeni sledilci: %d`
-    - Source: `Trackers blocked: %d`
-    - Suggest: `Blokirani sledilci: %d`
-    - Other strings on the same panel translate "blocked" as "blokiran" (e.g. "Sledilci niso blokirani", "je bil blokiran %1$d sledilec"); "zavrnjeni" (rejected) is inconsistent terminology on the same surface.
 - `quick_setting_option_autoplay_block_audio` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Block" is rendered as "Zavrni" (deny/reject) instead of "Blokiraj"/"Zavračaj", inconsistent with the "Allow" counterpart and the standard blocking terminology.
     - Current: `Zavrni samo zvok`
     - Source: `Block audio only`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,602 |
+| **Strings reviewed this run** | 0 of 2,576 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Trackers" is translated as 追跡 here while other strings in the same panel use トラッカー.
+    - Current: `ブロックされた追跡: %d`
+    - Suggest: `ブロックしたトラッカー: %d`
+    - protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked render "trackers" as トラッカー; 追跡 means "tracking" (the act), not the trackers themselves.
 
 ---
 
@@ -45,8 +48,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,602 |
-| Missing strings | 24 |
+| Strings | 2,576 |
+| Missing strings | 25 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +66,9 @@ _Nothing retired._
 
 ### Completeness
 
-**24 strings** are not translated yet, concentrated in:
+**25 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 24
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 25
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -79,7 +82,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 734 | **punctuation** |
+| fullwidth | `punctuation` 727 | **punctuation** |
 
 ---
 
@@ -89,14 +92,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (143)
+## 3. Open findings (142)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 110 |
-| 3 | Degraded language (grammar, spelling, terminology) | 26 |
+| 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -520,11 +523,6 @@ _Nothing reported._
     - Source: `Enhanced Tracking Protection`
     - Suggest: `強化型トラッキング保護`
     - The established Mozilla ja term for Enhanced Tracking Protection is 強化型トラッキング保護; the panel also uses 追跡防止 elsewhere, so the same source term appears in three different forms on one surface.
-- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Trackers" is translated as 追跡 here while other strings in the same panel use トラッカー.
-    - Current: `ブロックされた追跡: %d`
-    - Source: `Trackers blocked: %d`
-    - Suggest: `ブロックしたトラッカー: %d`
-    - protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked render "trackers" as トラッカー; 追跡 means "tracking" (the act), not the trackers themselves.
 - `webcompat_reporter_reason_site_is_deceptive` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Dropdown option is rendered as a full sentence with polite copula, inconsistent with the other reason options which are all plain-form noun/verb phrases.
     - Current: `これは詐欺サイトです`
     - Source: `This site is deceptive`

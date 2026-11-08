@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,615 |
+| **Strings reviewed this run** | 14 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -24,11 +24,11 @@ _No new findings._
 
 ### ✅ Fixed since the last run (1)
 
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "more private" is translated as "persoonlijker" (more personal) instead of "meer privé".
-    - Current: `uw navigatie persoonlijker en moeilijker te volgen te maken`
-    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
-    - Suggest: `uw navigatie meer privé en moeilijker te volgen te maken`
-    - "persoonlijker" means "more personal", the opposite emphasis of "more private"; the parallel string ip_protection_onboarding_body_promo correctly uses "meer privé".
+- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View options" (view the settings/options) is translated as "Beeldopties" (display options).
+    - Current: `Beeldopties`
+    - Source: `View options`
+    - Suggest: `Opties bekijken`
+    - Per the developer comment the button goes to Settings for auto close tabs; "View" is a verb here, not "display/beeld".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,615 |
-| Missing strings | 11 |
+| Strings | 2,601 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,11 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 11
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,7 +81,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | apostrophe | `typographic` 46 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 443 | **formal** |
+| register | `formal` 435 | **formal** |
 
 ---
 
@@ -95,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (60)
+## 3. Open findings (59)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 33 |
+| 2 | Wrong content (says something other than the English) | 32 |
 | 3 | Degraded language (grammar, spelling, terminology) | 27 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -295,11 +291,6 @@ _Nothing reported._
     - Source: `Navigate back`
     - Suggest: `Terug`
     - 'Bladeren' means browsing/paging; the control is a back navigation button, and elsewhere Mozilla nl uses 'Terug' or 'Terugnavigeren'.
-- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View options" (view the settings/options) is translated as "Beeldopties" (display options).
-    - Current: `Beeldopties`
-    - Source: `View options`
-    - Suggest: `Opties bekijken`
-    - Per the developer comment the button goes to Settings for auto close tabs; "View" is a verb here, not "display/beeld".
 - `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Word order makes "Gesynchroniseerde open tabbladen" inconsistent with the parallel normal/private strings.
     - Current: `Gesynchroniseerde open tabbladen: %1$s.`
     - Source: `Synced Tabs Open: %1$s. Tap to switch tabs.`
@@ -441,6 +432,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-08
 - `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-05

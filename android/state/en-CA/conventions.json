@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "en-CA",
-  "prose_chunks": 2852,
-  "strings": 2852
+  "prose_chunks": 2821,
+  "strings": 2821
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 173
+  "typographic": 171
  },
  "dash": {
   "em": 3,

@@ -1048,13 +1048,13 @@
    "source": "%s is off-duty. We suggest turning protections back on.",
    "original": "%s je izključena. Priporočamo, da zaščito znova vključite.",
    "text": "%s je izključen. Priporočamo, da zaščito znova vključite.",
-   "status": "approved",
-   "status_date": "2026-11-04",
+   "status": "rejected",
+   "status_date": "2026-11-06",
    "comment": "",
    "pontoon_pk": 12375906,
    "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=313816",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-03",

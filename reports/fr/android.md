@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,626 |
+| **Strings reviewed this run** | 1 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,17 +22,9 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — `wrex_widget_error_results_load_failed_title` uses a straight apostrophe
-    - Current: `Impossible d'afficher les résultats pour l'instant`
-    - Source: `Can’t show results right now`
-    - The tree uses ’ 702 times against 2 straight.
-- `wrex_widget_error_results_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Straight apostrophes are used instead of the locale's typographic apostrophe.
-    - Current: `Impossible d'afficher les résultats pour l'instant`
-    - Source: `Can’t show results right now`
-    - Suggest: `Impossible d’afficher les résultats pour l’instant`
-    - The fr convention is typographic apostrophes (718 occurrences). The sibling string wrex_widget_error_load_failed_title uses ’ correctly.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -53,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,626 |
+| Strings | 2,601 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -82,11 +74,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 701 | **typographic** |
+| apostrophe | `typographic` 696 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 215, `before-punctuation` 145, `space-before-punctuation` 63 | _mixed_ |
-| register | `formal` 452 | **formal** |
+| nbsp | `total` 214, `before-punctuation` 144, `space-before-punctuation` 62 | _mixed_ |
+| register | `formal` 443 | **formal** |
 
 ---
 
