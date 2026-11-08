@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 7 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,48 @@ Also for fy-NL: [Firefox for Android](android.md) · [Firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (8)
 
-_Nothing was fixed._
+- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Back-button instruction wrongly says "press the back gesture" instead of pressing the back button, duplicating the gesture string.
+    - Current: `druk it gebear werom`
+    - Source: `Drag from top & press back to exit`
+    - Suggest: `druk op de weromknop`
+    - Source is "press back to exit" (hardware/back button), not a gesture; the gesture wording belongs to exit_fullscreen_with_gesture_short.
+- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Tab's browsing history" rendered as plural "of the tabs".
+    - Current: `Jo sneupskiednis fan de ljepblêden is wiske.`
+    - Source: `Tab’s browsing history has been erased.`
+    - Suggest: `De sneupskiednis fan it ljepblêd is wiske.`
+    - Source refers to a single tab's browsing history; the translation says the history of the tabs (plural) and adds "Jo" (your).
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch spelling "bij" used instead of Frisian "by".
+    - Current: `Wolkom bij %1$s`
+    - Source: `Welcome to %1$s`
+    - Suggest: `Wolkom by %1$s`
+    - In Frisian the preposition is "by"; "bij" is the Dutch form (Frisian "bij" means the insect).
+- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Shortcuts" (pinned website shortcuts) is rendered as "fluchtoetsen" (keyboard shortcuts).
+    - Current: `fluchtoetsen`
+    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
+    - Suggest: `fluchkeppelingen`
+    - The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.
+- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "Bygelyks".
+    - Current: `Bygelyls`
+    - Source: `Example: example.com/search/?q=%s`
+    - Suggest: `Bygelyks`
+    - "Bygelyls" is a typo for the Frisian "Bygelyks" (Example/For example).
+- `tabs_tray_action_add_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Adjective agreement error: 'ljepblêd' is neuter, so the attributive adjective should be 'Nij', not 'Nije'.
+    - Current: `Nije ljepblêd tafoegje`
+    - Source: `Add new tab`
+    - Suggest: `Nij ljepblêd tafoegje`
+    - In Frisian, indefinite neuter nouns take the uninflected adjective form ('in nij ljepblêd'), as also used correctly in tip_open_in_new_tab ('in nij ljepblêd').
+- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — The verb "blokkearje" (block) is missing, so the option reads "Only third-party cookies" instead of "Block 3rd-party cookies only".
+    - Current: `Allinnich cookies fan tredden`
+    - Source: `Block 3rd-party cookies only`
+    - Suggest: `Allinnich cookies fan tredden blokkearje`
+    - Source is "Block 3rd-party cookies only"; the parallel option string for tracker cookies correctly ends in "blokkearje".
+- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Untskoattelje".
+    - Current: `Untskoattelje`
+    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
+    - Suggest: `Ûntskoattelje`
+    - Frisian spelling requires Û; the same verb is written "ûntskoatteljen" in preference_security_biometric.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +73,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "shortcuts" translated as "keppelingen" (links) instead of "fluchkeppelingen" (shortcuts).
+    - Current: `Foegje keppelingen ta oan jo startskerm`
+    - Suggest: `Foegje fluchkeppelingen ta oan jo startskerm`
+    - Source says "Add shortcuts to your home screen"; elsewhere (menu_add_to_shortcuts) "Shortcuts" is "fluchkeppelingen", while "keppelingen" means links.
 
 ---
 
@@ -45,7 +87,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 250 |
+| Strings | 245 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -84,14 +126,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (18)
+## 3. Open findings (5)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 8 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
+| 2 | Wrong content (says something other than the English) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -110,84 +152,19 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Slute`
     - The developer comment says the button dismisses a message; "Fuortsmite" means delete/remove, which conveys a destructive action not present in the source.
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Back-button instruction wrongly says "press the back gesture" instead of pressing the back button, duplicating the gesture string.
-    - Current: `druk it gebear werom`
-    - Source: `Drag from top & press back to exit`
-    - Suggest: `druk op de weromknop`
-    - Source is "press back to exit" (hardware/back button), not a gesture; the gesture wording belongs to exit_fullscreen_with_gesture_short.
-- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Tab's browsing history" rendered as plural "of the tabs".
-    - Current: `Jo sneupskiednis fan de ljepblêden is wiske.`
-    - Source: `Tab’s browsing history has been erased.`
-    - Suggest: `De sneupskiednis fan it ljepblêd is wiske.`
-    - Source refers to a single tab's browsing history; the translation says the history of the tabs (plural) and adds "Jo" (your).
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "shortcuts" translated as "keppelingen" (links) instead of "fluchkeppelingen" (shortcuts).
-    - Current: `Foegje keppelingen ta oan jo startskerm`
-    - Source: `Add shortcuts to your home screen`
-    - Suggest: `Foegje fluchkeppelingen ta oan jo startskerm`
-    - Source says "Add shortcuts to your home screen"; elsewhere (menu_add_to_shortcuts) "Shortcuts" is "fluchkeppelingen", while "keppelingen" means links.
-- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — The verb "blokkearje" (block) is missing, so the option reads "Only third-party cookies" instead of "Block 3rd-party cookies only".
-    - Current: `Allinnich cookies fan tredden`
-    - Source: `Block 3rd-party cookies only`
-    - Suggest: `Allinnich cookies fan tredden blokkearje`
-    - Source is "Block 3rd-party cookies only"; the parallel option string for tracker cookies correctly ends in "blokkearje".
 - `preference_privacy_stealth_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Coordination makes "apps" and "taking screenshots" both objects of switching, distorting the meaning.
     - Current: `Websiden ferstopje by wikseljen fan apps en meitsjen fan skermôfdrukken blokkearje.`
     - Source: `Hide webpages when switching apps and block taking screenshots.`
     - Suggest: `Websiden ferstopje by it wikseljen fan apps en it meitsjen fan skermôfdrukken blokkearje.`
     - Source: hide webpages when switching apps AND block taking screenshots; current wording reads as "switching apps and taking screenshots".
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Shortcuts" (pinned website shortcuts) is rendered as "fluchtoetsen" (keyboard shortcuts).
-    - Current: `fluchtoetsen`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `fluchkeppelingen`
-    - The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.
 
 ### C. Grammar, agreement & spelling
 
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on “Us” (should be “Ús”).
-    - Current: `Us missy is it fersoargjen`
-    - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
-    - Suggest: `Ús missy is it fersoargjen`
-    - The Frisian possessive “ús” keeps its accent when capitalized.
-- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Ungelokrapport".
-    - Current: `Ungelokrapport`
-    - Source: `Send crash report to Mozilla`
-    - Suggest: `Ûngelokrapport`
-    - The Frisian word is "ûngelok"; capitalized at sentence start it must be "Û", as elsewhere the locale uses proper diacritics (e.g. "ÚT").
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch spelling "bij" used instead of Frisian "by".
-    - Current: `Wolkom bij %1$s`
-    - Source: `Welcome to %1$s`
-    - Suggest: `Wolkom by %1$s`
-    - In Frisian the preposition is "by"; "bij" is the Dutch form (Frisian "bij" means the insect).
 - `phone_feature_blocked_step_permissions` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch word "Machtigingen" used instead of Frisian "Machtigingen" spelling/term.
     - Current: `2. Tik op { <b> }Machtigingen{ </b> }`
     - Source: `2. Tap { <b> }Permissions{ </b> }`
     - Suggest: `2. Tik op { <b> }Tastimmingen{ </b> }`
     - "Machtigingen" is Dutch; the Frisian term for Android permissions is "Tastimmingen" (or "Machtigings"), consistent with other permission strings.
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Untskoattelje".
-    - Current: `Untskoattelje`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `Ûntskoattelje`
-    - Frisian spelling requires Û; the same verb is written "ûntskoatteljen" in preference_security_biometric.
-- `preference_state_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Ut" (Off).
-    - Current: `Ut`
-    - Source: `Off`
-    - Suggest: `Ût`
-    - The Frisian word for "off" is "Út/Ût" with a diacritic; plain "Ut" is a misspelling.
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "Bygelyks".
-    - Current: `Bygelyls`
-    - Source: `Example: example.com/search/?q=%s`
-    - Suggest: `Bygelyks`
-    - "Bygelyls" is a typo for the Frisian "Bygelyks" (Example/For example).
-- `show_biometric_button_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Ûntskoattelje".
-    - Current: `Untskoattelje`
-    - Source: `Unlock`
-    - Suggest: `Ûntskoattelje`
-    - Frisian spells the prefix "ûnt-" with a circumflex; "Untskoattelje" is misspelled.
-- `tabs_tray_action_add_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Adjective agreement error: 'ljepblêd' is neuter, so the attributive adjective should be 'Nij', not 'Nije'.
-    - Current: `Nije ljepblêd tafoegje`
-    - Source: `Add new tab`
-    - Suggest: `Nij ljepblêd tafoegje`
-    - In Frisian, indefinite neuter nouns take the uninflected adjective form ('in nij ljepblêd'), as also used correctly in tip_open_in_new_tab ('in nij ljepblêd').
 
 ### D. Terminology, register & consistency
 
@@ -205,10 +182,14 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (6)
 
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography customarily omits diacritics on capital letters (cf. 'Us Heit', 'Us Mem'), so 'Us' is the expected capitalized form of 'ús'.
+- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily drops the circumflex on a capital initial (as in 'Us Mem'), so 'Ungelok-' is the normal capitalized spelling.
 - `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): The fy-NL tree writes capital Û as U (e.g. 'Untskoattelje'), and 'Untwikkelersark' is a correct compound for 'developer tools'.
 - `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Mozilla fy-NL uses 'ûngelok' (e.g. ûngelokrapporten) as the term for software crashes, and capital Û is written U in this tree (cf. 'Untskoattelje').
+- `preference_state_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Ut' is the normal capitalized form of 'út'.
+- `show_biometric_button_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Untskoattelje' is the normal capitalized spelling of 'ûntskoattelje'.
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
 
@@ -222,6 +203,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (8)
 
-_Nothing fixed yet._
+- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `tabs_tray_action_add_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08

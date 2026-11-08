@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Uses informal "你" while the locale convention is the formal "您".
+    - Current: `用你的方式搜你所寻`
+    - Suggest: `用您的方式搜您所寻`
+    - The zh-CN tree is established as formal register (您); neighboring first-run strings such as firstrun_privacy_text and firstrun_shortcut_text use 您.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 250 |
+| Strings | 245 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,10 +74,10 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 75 | **curly-double** |
+| quotes | `curly-double` 74 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1027 | **punctuation** |
-| register | `informal` 3, `formal` 262 | **formal** |
+| fullwidth | `punctuation` 1019 | **punctuation** |
+| register | `informal` 1, `formal` 257 | **formal** |
 
 ---
 
@@ -84,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (18)
+## 3. Open findings (17)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 13 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -182,11 +185,6 @@ _Nothing in this category._
     - Source: `Shortcut will open with Enhanced Tracking Protection disabled`
     - Suggest: `将禁用增强型跟踪保护功能`
     - The same term is rendered 增强型跟踪保护 in enhanced_tracking_protection; here "Enhanced" is dropped.
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — Uses informal "你" while the locale convention is the formal "您".
-    - Current: `用你的方式搜你所寻`
-    - Source: `Your search, your way`
-    - Suggest: `用您的方式搜您所寻`
-    - The zh-CN tree is established as formal register (您); neighboring first-run strings such as firstrun_privacy_text and firstrun_shortcut_text use 您.
 - `preference_performance_block_webfonts` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rCN/strings.xml` — "Block" is rendered as "拦截" here but as "阻止" in the neighboring Block JavaScript preference, an inconsistency on the same settings screen.
     - Current: `拦截网络字体`
     - Source: `Block web fonts`

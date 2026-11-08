@@ -24,9 +24,13 @@
    "source": "Drag from top & press back to exit",
    "original": "Sleep fan de boppekant ôf & druk it gebear werom om ôf te sluten",
    "text": "Sleep fan de boppekant ôf & druk op de weromknop om ôf te sluten",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388648,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=310533",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -50,9 +54,13 @@
    "source": "Tab’s browsing history has been erased.",
    "original": "Jo sneupskiednis fan de ljepblêden is wiske.",
    "text": "Jo sneupskiednis fan it ljepblêd is wiske.",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388644,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224075",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -76,9 +84,13 @@
    "source": "Add shortcuts to your home screen",
    "original": "Foegje keppelingen ta oan jo startskerm",
    "text": "Foegje fluchkeppelingen ta oan jo startskerm",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388647,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224026",
+   "outcome": "obsolete",
+   "note": "rejected; the string is no longer in the repository"
   },
   {
    "date": "2026-11-05",
@@ -102,9 +114,13 @@
    "source": "Block 3rd-party cookies only",
    "original": "Allinnich cookies fan tredden",
    "text": "Allinnich cookies fan tredden blokkearje",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388645,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223987",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -128,9 +144,13 @@
    "source": "Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.",
    "original": "Untskoattelje mei fingerôfdruk as jo fluchtoetsen tafoege hawwe of as in website al iepen is yn %s.",
    "text": "Untskoattelje mei fingerôfdruk as jo fluchkeppelingen tafoege hawwe of as in website al iepen is yn %s.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388646,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=245047",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -154,9 +174,13 @@
    "source": "Welcome to %1$s",
    "original": "Wolkom bij %1$s",
    "text": "Wolkom by %1$s",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391724,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=261490",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -180,9 +204,13 @@
    "source": "Example: example.com/search/?q=%s",
    "original": "Bygelyls: example.com/search/?q=%s",
    "text": "Bygelyks: example.com/search/?q=%s",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391723,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223885",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -206,9 +234,13 @@
    "source": "Add new tab",
    "original": "Nije ljepblêd tafoegje",
    "text": "Nij ljepblêd tafoegje",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391725,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=330733",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
