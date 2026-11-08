@@ -324,9 +324,13 @@
    "source": "{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> }\n{ <ul> }\n{ <li> }Could the server be experiencing high demand or a temporary outage? Try again later.{ </li> }\n{ <li> }Are you unable to browse other sites? Check the device’s network connection.{ </li> }\n{ <li> }Is your device or network protected by a firewall or proxy? Incorrect settings can interfere with Web browsing.{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
    "original": "<p>De opfrege website hat net op in ferbiningsfersyk antwurde en de browser wachtet net mear op in antwurd.</p>\n<ul>\n<li>Miskien ûnderfynt de server in hege fraach of in tydlike stroomûnderbrekking? Probearje it letter opnij.</li>\n<li>Kinne jo gjin oare websites besykje? Kontrolearje de netwurkferbining fan it apparaat.</li>\n<li>Wurdt jo apparaat of netwurk beskerme troch in firewall of proxy? Ferkearde ynstellingen kinne in goede wurking wylst it webbrowsen tsjin gean.</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
    "text": "<p>De opfrege website hat net op in ferbiningsfersyk antwurde en de browser wachtet net mear op in antwurd.</p>\n<ul>\n<li>Miskien ûnderfynt de server in hege fraach of in tydlike ûnderbrekking? Probearje it letter opnij.</li>\n<li>Kinne jo gjin oare websites besykje? Kontrolearje de netwurkferbining fan it apparaat.</li>\n<li>Wurdt jo apparaat of netwurk beskerme troch in firewall of proxy? Ferkearde ynstellingen kinne in goede wurking wylst it webbrowsen tsjin gean.</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388611,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196917",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -350,9 +354,13 @@
    "source": "{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }",
    "original": "<p>De website op %1$s is rapportearre as in fertochte side en is blokkearre op basis fan jo befeiligingsfoarkarren.</p>",
    "text": "<p>De website op %1$s is rapportearre as in mooglik skealike side en is blokkearre op basis fan jo befeiligingsfoarkarren.</p>",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388612,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196853",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -468,9 +476,13 @@
    "source": "Upload files?",
    "original": "Bestân oplade?",
    "text": "Bestannen oplade?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388613,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=320886",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -494,9 +506,13 @@
    "source": "Font size increase",
    "original": "Lettertype fergrutsje",
    "text": "Lettergrutte fergrutsje",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388614,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/readerview/src/main/res/values/strings.xml/?string=198457",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -550,9 +566,13 @@
    "source": "Eircode",
    "original": "Eirkoade",
    "text": "Eircode",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388630,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=325053",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -576,9 +596,13 @@
    "source": "%1$s will never offer to translate sites in this language.",
    "original": "%1$s sil oanbiede om websites yn dizze taal oer te setten.",
    "text": "%1$s sil nea oanbiede om websites yn dizze taal oer te setten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388635,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292121",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -602,9 +626,13 @@
    "source": "Save in",
    "original": "Besparje yn",
    "text": "Bewarje yn",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388627,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309784",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -628,9 +656,13 @@
    "source": "Close tab %s",
    "original": "Ljepblêden %s slute",
    "text": "Ljepblêd %s slute",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388624,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=204937",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -654,9 +686,13 @@
    "source": "Are you sure that you want to clear this permission for this site?",
    "original": "Binne jo wis dat jo alle tastimmingen foar dizze website wiskje wolle?",
    "text": "Binne jo wis dat jo dizze tastimming foar dizze website wiskje wolle?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388631,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=207682",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -680,9 +716,13 @@
    "source": "Collection %d",
    "original": "Kolleksjes %d",
    "text": "Kolleksje %d",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388628,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=198480",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -766,9 +806,13 @@
    "source": "If you delete all languages, %1$s will download partial languages to your cache as you translate.",
    "original": "As jo dizze talen fuortsmite, sil %1$s in part fan de talen nei jo buffer downloade wylst jo oersette.",
    "text": "As jo alle talen fuortsmite, sil %1$s in part fan de talen nei jo buffer downloade wylst jo oersette.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388636,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292312",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -792,9 +836,13 @@
    "source": "Drag from top & press back to exit",
    "original": "Sleep fan de boppekant & druk it gebear werom om ôf te sluten",
    "text": "Sleep fan de boppekant & druk op werom om ôf te sluten",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388641,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309706",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -848,9 +896,14 @@
    "source": "Firefox Suggest",
    "original": "Firefox Suggestjes",
    "text": "Firefox Suggest",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "firefox_suggest_header @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 2, and both strings use \"Firefox Suggestjes\", so this looks like a deliberate local rendering of the feature name, not a mistake.",
+   "pontoon_pk": 12388633,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=246452",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-05",
@@ -874,9 +927,14 @@
    "source": "Show all shortcuts",
    "original": "Alle fluchtoetsen toane",
    "text": "Alle fluchkeppelingen toane",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "homepage_shortcuts_show_all_content_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12388632,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=322449",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-05",
@@ -930,9 +988,13 @@
    "source": "Neutral",
    "original": "Gemiddeld",
    "text": "Neutraal",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388637,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=304235",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -956,9 +1018,13 @@
    "source": "How satisfied are you with your Firefox homepage?",
    "original": "Hoe tefreden binne jo mei jo ûnderfining fan de Firefox-Startside?",
    "text": "Hoe tefreden binne jo mei jo Firefox-Startside?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388639,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309153",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -982,9 +1048,13 @@
    "source": "Help make search in Firefox better. It only takes a minute",
    "original": "Help Firefox te ferbetterjen. It duorret mar in minút",
    "text": "Help it sykjen yn Firefox te ferbetterjen. It duorret mar in minút",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388638,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=310407",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1008,9 +1078,13 @@
    "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
    "original": "Diel mei Mozilla’s marketingtechnologypartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht. %1$s",
    "text": "Diel mei Mozilla’s marketingpartners hoe’t jo Firefox ûntdutsen hawwe en dat jo it brûke. Dizze gegevens wurde nea ferkocht. %1$s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388619,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327912",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1034,9 +1108,13 @@
    "source": "One tap helps stop companies spying on your clicks.",
    "original": "Mei ien tik foarkomme dat bedriuwen jo tikken bespionearje.",
    "text": "Ien tik helpt foar te kommen dat bedriuwen jo klikken bespionearje.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388618,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323490",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1060,9 +1138,13 @@
    "source": "Swipe address bar sideways to switch tabs",
    "original": "De arkbalke op side feie om fan ljepblêd te wikseljen",
    "text": "De adresbalke op side feie om fan ljepblêd te wikseljen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388622,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=306809",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1086,9 +1168,14 @@
    "source": "Address bar - Firefox Suggest",
    "original": "Adresbalke – Firefox Suggestjes",
    "text": "Adresbalke – Firefox Suggest",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "preference_search_address_bar_fx_suggest @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 0, and both strings use \"Firefox Suggestjes\", so this looks like a deliberate local rendering of the feature name, not a mistake.",
+   "pontoon_pk": 12388620,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=286222",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-05",
@@ -1112,9 +1199,13 @@
    "source": "Learn more about Firefox Suggest",
    "original": "Mear ynfo oer Firefox Suggestes",
    "text": "Mear ynfo oer Firefox Suggest",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388621,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=286228",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -1168,9 +1259,13 @@
    "source": "Allow search suggestions in private sessions?",
    "original": "Syksuggestjes tastean yn priveefinsters?",
    "text": "Syksuggestjes tastean yn priveesesjes?",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388617,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=205937",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -1194,9 +1289,13 @@
    "source": "This will close all open tabs.",
    "original": "Dit slút alle ljepblêden.",
    "text": "Dit slút alle iepen ljepblêden.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388623,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327266",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1220,9 +1319,13 @@
    "source": "View options",
    "original": "Byldopsjes",
    "text": "Opsjes besjen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388616,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=214861",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1246,9 +1349,13 @@
    "source": "Overrides offers to translate",
    "original": "Negearret oersetoanbiedingen",
    "text": "Oerskriuwt oersetoanbiedingen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388634,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=300051",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1272,9 +1379,13 @@
    "source": "Failed to open the system uninstall prompt, please use the system uninstall action directly.",
    "original": "It iepenjen fan de prompt foar it de-ynstallearjen fan it systeem is mislearre; brûk streekrjocht de aksje foar de-ynstallaasje fan it systeem.",
    "text": "It iepenjen fan de systeemprompt foar de-ynstallaasje is mislearre; brûk streekrjocht de aksje foar de-ynstallaasje fan it systeem.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388629,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336184",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1298,9 +1409,13 @@
    "source": "It’s slow or unreliable",
    "original": "De browser is stadich en ûnbetrouber",
    "text": "De browser is stadich of ûnbetrouber",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388640,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336840",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1324,9 +1439,13 @@
    "source": "You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.",
    "original": "Jo hawwe net-ferstjoerde ûngelokrapporten (%1$d) relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe %2$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
    "text": "Jo hawwe net-ferstjoerde ûngelokrapporten (%1$d) relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe %2$s te ferbetterjen. As jo dizze notifikaasje slute, wurde dizze rapporten negearre.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12388626,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=320898",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-05",
@@ -1350,9 +1469,14 @@
    "source": "Describe the problem in detail to help us investigate the issue",
    "original": "Beskriuw it probleem yn detail, sadat wy it ûndersykje kinne",
    "text": "Beskriuw it probleem yn detail om ús te helpen it te ûndersykjen",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "dismissal": "webcompat_reporter_label_mandatory_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The original (\"so that we can investigate it\") already gets the meaning across correctly, so the more literal rewording was probably seen as an unnecessary style change.",
+   "pontoon_pk": 12388625,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336838",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-06",
@@ -1376,9 +1500,13 @@
    "source": "%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.",
    "original": "%1$s kin in eardere ferzje fan dizze side sykje fan %2$s út fan the Internet Archive.",
    "text": "%1$s kin in eardere ferzje fan dizze side sykje fan %2$s út fan it Internet Archive.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391695,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=340611",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-06",
@@ -1402,9 +1530,13 @@
    "source": "{ <ul> }\n{ <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
    "original": "<ul>\n<li>Miskien is de website tydlik net beskikber of oerbelêste. Probearje it oer inkelde mominten opnij.</li>\n<li>As jo gjin inkelde side lade kinne, kontrolearje dan de gegevens- of wifi-ferbining fan jo apparaat.</li>\n</ul>",
    "text": "<ul>\n<li>Miskien is de website tydlik net beskikber of oerbelêst. Probearje it oer inkelde mominten opnij.</li>\n<li>As jo gjin inkelde side lade kinne, kontrolearje dan de gegevens- of wifi-ferbining fan jo apparaat.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391696,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196870",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1428,9 +1560,13 @@
    "source": "{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> }\n{ <ul> }\n{ <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> }\n{ <li> }Does the proxy service allow connections from this network?{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
    "original": "<p>De browser is konfigurearre om in proxyserver te brûken, mar de proxy wegere in ferbining.</p>\n<ul>\n<li>Is de proxykonfiguraasje fan de browser in oarder? Kontrolearje de ynstellingen en probearje it opnij.</li>\n<li>Stiet de proxyservice ferbiningen fan dit netwurk ta?</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
    "text": "<p>De browser is konfigurearre om in proxyserver te brûken, mar de proxy wegere in ferbining.</p>\n<ul>\n<li>Is de proxykonfiguraasje fan de browser yn oarder? Kontrolearje de ynstellingen en probearje it opnij.</li>\n<li>Stiet de proxyservice ferbiningen fan dit netwurk ta?</li>\n<li>Hawwe jo noch hieltyd problemen? Freegje jo netwurkbehearder of ynternetprovider foar assistinsje.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391699,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196871",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1454,9 +1590,13 @@
    "source": "{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> }\n{ <ul> }\n{ <li> }Have you disabled or blocked cookies required by this site?{ </li> }\n{ <li> }If accepting the site’s cookies does not resolve the problem, it is likely a server configuration issue and not your device.{ </li> }\n{ </ul> }",
    "original": "<p>De browser is stoppe mei te probearjen it opfrege item op te heljen. It website ferwiist de oanfraach troch op in manier dy’t nea dien wêze sil.</p>\n<ul>\n<li>Hawwe jo cookies dy’t nedich binne foar dizze website útskeakele of blokkearre?</li>\n<li>As it akseptearjen fan cookies fan dizze website it probleem net oplost is it wierskynlik in serverkonfiguraasjeprobleem en net jo apparaat.</li>\n</ul>",
    "text": "<p>De browser is stoppe mei te probearjen it opfrege item op te heljen. De website ferwiist de oanfraach troch op in manier dy’t nea dien wêze sil.</p>\n<ul>\n<li>Hawwe jo cookies dy’t nedich binne foar dizze website útskeakele of blokkearre?</li>\n<li>As it akseptearjen fan cookies fan dizze website it probleem net oplost is it wierskynlik in serverkonfiguraasjeprobleem en net jo apparaat.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391697,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196837",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1480,9 +1620,13 @@
    "source": "{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> }\n{ <ul> }\n{ <li> }Are you trying to access multimedia or other non-text services? Check the site for extra requirements.{ </li> }\n{ <li> }Some protocols may require third-party software or plugins before the browser can recognize them.{ </li> }\n{ </ul> }",
    "original": "<p>It adres spesifisearret in protokol (byg. <q>wxyz://</q>) dat de browser net werkend, wêrtroch de browser net op in krekte manier mei de website ferbine kin.</p>\n<ul>\n<li>Probearje jo tagong te krijen ta multimedia- of oare net-tekstservices? Kontrolearje de website op ekstra nedichheden.</li>\n<li>Guon protokollen kinne programmatuer of ynstekkers fan tredden fereaskje foardat de browser se werkenne kin.</li>\n</ul>",
    "text": "<p>It adres spesifisearret in protokol (byg. <q>wxyz://</q>) dat de browser net werkent, wêrtroch de browser net op in krekte manier mei de website ferbine kin.</p>\n<ul>\n<li>Probearje jo tagong te krijen ta multimedia- of oare net-tekstservices? Kontrolearje de website op ekstra nedichheden.</li>\n<li>Guon protokollen kinne programmatuer of ynstekkers fan tredden fereaskje foardat de browser se werkenne kin.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391698,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196902",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1506,9 +1650,13 @@
    "source": "Failed to disable %1$s",
    "original": "Utskeakeljen %1$s mislearre",
    "text": "Utskeakeljen fan %1$s mislearre",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391704,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=207400",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1532,9 +1680,13 @@
    "source": "Share technical and interaction data with extension developer",
    "original": "Technyske en ynteraksjegegevens diele mei útwreidingûntwikkeler",
    "text": "Technyske en ynteraksjegegevens diele mei útwreidingsûntwikkeler",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391702,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=320815",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1558,9 +1710,13 @@
    "source": "Share technical and interaction data with extension developer",
    "original": "Technyske en ynteraksjegegevens mei útwreidingûntwikkeler diele",
    "text": "Technyske en ynteraksjegegevens mei útwreidingsûntwikkeler diele",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391703,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=320732",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1584,9 +1740,13 @@
    "source": "Monitor extension usage and manage themes",
    "original": "Utwreidigsgebrûk kontrolearje en tema’s beheare",
    "text": "Utwreidingsgebrûk kontrolearje en tema’s beheare",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391700,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206756",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1610,9 +1770,13 @@
    "source": "Monitor extension usage and manage themes.",
    "original": "Utwreidigsgebrûk kontrolearje en tema’s beheare.",
    "text": "Utwreidingsgebrûk kontrolearje en tema’s beheare.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391701,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321378",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1636,9 +1800,13 @@
    "source": "Open existing file",
    "original": "Besteande bestân iepenje",
    "text": "Besteand bestân iepenje",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391705,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/downloads/src/main/res/values/strings.xml/?string=325032",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1662,9 +1830,13 @@
    "source": "New and current AI enhancements are blocked by default. Unblock specific features below.",
    "original": "Nije en aktuele AI-ferbetteringen wurde standert blokkearre. Deblokkearje hjirûnder spesifike funksje.",
    "text": "Nije en aktuele AI-ferbetteringen wurde standert blokkearre. Deblokkearje hjirûnder spesifike funksjes.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391706,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=332708",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1688,9 +1860,13 @@
    "source": "Open all in private tabs",
    "original": "Alles yn proveeljepblêden iepenje",
    "text": "Alles yn priveeljepblêden iepenje",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391714,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=263331",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1714,9 +1890,13 @@
    "source": "Deselect all",
    "original": "Alle deselektearje",
    "text": "Alles deselektearje",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391715,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=199633",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1740,9 +1920,13 @@
    "source": "This setting helps fix the most common site problems. If you turn it off, some sites may not work, and %1$s won’t be able to help troubleshoot those issues.",
    "original": "Dizze ynstelling helpt de meast foarkommende websiteproblemen op te lossen. As jo de funskje útskeakelje, wurkje guon siden miskien net, en kin %1$s net helpe by it oplossen fan dy problemen.",
    "text": "Dizze ynstelling helpt de meast foarkommende websiteproblemen op te lossen. As jo de funksje útskeakelje, wurkje guon siden miskien net, en kin %1$s net helpe by it oplossen fan dy problemen.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391716,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323418",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1766,9 +1950,13 @@
    "source": "File is removed from your download history, but is still saved on your device",
    "original": "Bestân is fuortsmiten út jo downloadskeiednis, mar noch hieltyd bewarre op jo apparaat",
    "text": "Bestân is fuortsmiten út jo downloadskiednis, mar noch hieltyd bewarre op jo apparaat",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391710,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=332062",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1792,9 +1980,14 @@
    "source": "Exceptions",
    "original": "Utsûnderingen",
    "text": "Útsûnderingen",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "dismissal": "preferences_passwords_exceptions @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The finding contradicts itself: the spelling it says is correct is the original exactly, so the reviewer probably didn't accept that there was an error.",
+   "pontoon_pk": 12391717,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=203936",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-06",
@@ -1818,9 +2011,13 @@
    "source": "Show search suggestions",
    "original": "Syksuggesjes toane",
    "text": "Syksuggestjes toane",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391709,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=197468",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1844,9 +2041,13 @@
    "source": "Open tabs",
    "original": "Iepen ljeplêden",
    "text": "Iepen ljepblêden",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391711,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=212508",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1870,9 +2071,13 @@
    "source": "We’ve updated our %1$s to reflect the latest features in Firefox. %2$s",
    "original": "Wy hawwe ús %1$s bywurke om de nijste funksjes yn Firefox te wer te jaan. %2$s",
    "text": "Wy hawwe ús %1$s bywurke om de nijste funksjes yn Firefox wer te jaan. %2$s",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391722,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=327395",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1896,9 +2101,13 @@
    "source": "Trackers aren’t blocked",
    "original": "Trackers wirde net blokkearre",
    "text": "Trackers wurde net blokkearre",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391718,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=322787",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1922,9 +2131,13 @@
    "source": "Deleted %1$s from history",
    "original": "%1$s út skiednis fuortsmite",
    "text": "%1$s út skiednis fuortsmiten",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391707,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=328551",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1948,9 +2161,13 @@
    "source": "Great start! You’ve completed 1 out of 3 steps.",
    "original": "Goed j! Jo hawwe 1 fan de 3 stappen foltôge.",
    "text": "Goed begjin! Jo hawwe 1 fan de 3 stappen foltôge.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391719,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317212",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -1974,9 +2191,13 @@
    "source": "Great start! You’ve completed 1 out of 5 steps.",
    "original": "Goed j! Jo hawwe 1 fan de 5 stappen foltôge.",
    "text": "Goed begjin! Jo hawwe 1 fan de 5 stappen foltôge.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391721,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317587",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -2000,9 +2221,13 @@
    "source": "Great start! You’ve completed 1 out of 6 steps.",
    "original": "Goed j! Jo hawwe 1 fan de 6 stappen foltôge.",
    "text": "Goed begjin! Jo hawwe 1 fan de 6 stappen foltôge.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391720,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317216",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -2026,9 +2251,13 @@
    "source": "There was a problem opening %s.\n\nSending a crash report helps us diagnose and fix problems with the browser. Reports may include personal or sensitive data.",
    "original": "Der is in probleem bard by it iepenjen fan %s.\n\nIt ferstjoeren fan in ûngelokrapport helpe ús problemen mei de browser te analysearjen en op te lossen. Rapporten kinne persoanlike of gefoelige gegevens befetsje.",
    "text": "Der is in probleem bard by it iepenjen fan %s.\n\nIt ferstjoeren fan in ûngelokrapport helpt ús problemen mei de browser te analysearjen en op te lossen. Rapporten kinne persoanlike of gefoelige gegevens befetsje.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391708,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=323039",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -2052,9 +2281,13 @@
    "source": "View tab group, collapse drag handle",
    "original": "Ljepbêdgroep besjen, sleepgreep ynklappe",
    "text": "Ljepblêdgroep besjen, sleepgreep ynklappe",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391712,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=332868",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-06",
@@ -2078,9 +2311,13 @@
    "source": "You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.",
    "original": "Jo hawwe in net-ferstjoerde ûngelokrapport relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe om %1$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
    "text": "Jo hawwe in net-ferstjoerd ûngelokrapport relatearre oan ûngelokken dy’t ûndersocht wurde. It ferstjoeren dêrfan sil ús helpe om %1$s te ferbetterjen. As jo dizze notifikaasje slute, wurdt dit rapport negearre.",
-   "status": "pending",
-   "status_date": "2026-11-06",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-08",
+   "comment": "",
+   "pontoon_pk": 12391713,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=320897",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

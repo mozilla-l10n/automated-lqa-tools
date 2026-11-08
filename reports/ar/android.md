@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `f8e5f3a985cd` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,391 |
+| **Strings reviewed this run** | 0 of 2,366 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — Brand name Firefox transliterated into Arabic script although the comment says it is intentionally hardcoded.
+    - Current: `فايرفوكس`
+    - Suggest: `Firefox`
+    - Developer comment: 'Firefox' is intentionally hardcoded; brand names must stay untranslated and all other strings keep 'Firefox' in Latin script.
+- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "Light" theme option is translated as "إضاءة" (lighting/illumination) instead of the light-theme adjective.
+    - Current: `إضاءة`
+    - Suggest: `فاتحة`
+    - The option is the light theme, the opposite of "داكنة" (dark). "إضاءة" is a noun meaning lighting, so the two options don't match.
 
 ---
 
@@ -45,7 +52,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 42 |
-| Strings | 2,391 |
+| Strings | 2,366 |
 | Missing strings | 235 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
@@ -67,13 +74,13 @@ _Nothing retired._
 
 - `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 165
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
-- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
+- `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
-- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
+- `mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values-ar/strings.xml` — 1
 
 **Files absent from the locale:**
 
@@ -103,7 +110,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (123)
+## 3. Open findings (121)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -128,7 +135,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 51 |
+| 2 | Wrong content (says something other than the English) | 49 |
 | 3 | Degraded language (grammar, spelling, terminology) | 67 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -288,11 +295,6 @@ _Nothing in this category._
     - Source: `Resets to %1$.0f GB on the first of every month.`
     - Suggest: `يُعاد ضبطه إلى`
     - The source 'Resets to X GB' means the allowance goes back to the full X GB. تصفير means setting something to zero, which conflicts with 'to X GB'.
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — Brand name Firefox transliterated into Arabic script although the comment says it is intentionally hardcoded.
-    - Current: `فايرفوكس`
-    - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
-    - Suggest: `Firefox`
-    - Developer comment: 'Firefox' is intentionally hardcoded; brand names must stay untranslated and all other strings keep 'Firefox' in Latin script.
 - `nova_onboarding_app_icon_prompt_body` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 'Home screen' rendered as 'home page' (browser start page) instead of the device home screen.
     - Current: `الصفحة الرئيسية`
     - Source: `Give your home screen a personal touch.`
@@ -303,11 +305,6 @@ _Nothing in this category._
     - Source: `Discover the latest privacy features in Firefox so you’re always up to date on how to stay protected.`
     - Suggest: `لتبقى على اطلاع دائم بكيفية الحفاظ على حمايتك`
     - The source is about staying informed on how to stay protected. The Arabic says notifications keep the user protected at all times, which is a guarantee the product never made.
-- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "Light" theme option is translated as "إضاءة" (lighting/illumination) instead of the light-theme adjective.
-    - Current: `إضاءة`
-    - Source: `Light`
-    - Suggest: `فاتحة`
-    - The option is the light theme, the opposite of "داكنة" (dark). "إضاءة" is a noun meaning lighting, so the two options don't match.
 - `nova_onboarding_tou_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "won't sell you out" is rendered as "will never let you down", which loses the point about not betraying the user or selling their data.
     - Current: `لن يخذلك أبداً`
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,626 |
+| **Strings reviewed this run** | 1 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The deletion prompt calls the tab collection a "file" (파일), which the source never says.
+    - Current: `%1$s 파일을 삭제하시겠습니까?`
+    - Suggest: `%1$s 컬렉션을 삭제하시겠습니까?`
+    - The developer comment says %1$s is the collection name, and the source simply asks "Are you sure you want to delete %1$s?". A tab collection is not a file, so adding 파일 misdescribes what the user is about to delete.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,626 |
+| Strings | 2,601 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,7 +88,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (82)
+## 3. Open findings (81)
 
 > **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -125,7 +128,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 40 |
+| 2 | Wrong content (says something other than the English) | 39 |
 | 3 | Degraded language (grammar, spelling, terminology) | 34 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
@@ -320,11 +323,6 @@ _Nothing in this category._
     - Source: `Search settings`
     - Suggest: `설정 검색`
     - The developer comment says "Search" is a verb here, so the title should mean searching the settings. In Korean, "검색 설정" reads as the settings for the search feature, which names a different screen.
-- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The deletion prompt calls the tab collection a "file" (파일), which the source never says.
-    - Current: `%1$s 파일을 삭제하시겠습니까?`
-    - Source: `Are you sure you want to delete %1$s?`
-    - Suggest: `%1$s 컬렉션을 삭제하시겠습니까?`
-    - The developer comment says %1$s is the collection name, and the source simply asks "Are you sure you want to delete %1$s?". A tab collection is not a file, so adding 파일 misdescribes what the user is about to delete.
 - `terms_of_use_prompt_body_line_two_alternative` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Combined with the link text "자세히", the sentence reads "자세히에 대해 더 알아볼 수 있습니다" (learn more about 'details'), which is ungrammatical and loses the meaning "learn more here".
     - Current: `%1$s에 대해 더 알아볼 수 있습니다.`
     - Source: `You can learn more %1$s.`

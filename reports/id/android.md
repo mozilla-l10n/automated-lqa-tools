@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,581 |
+| **Strings reviewed this run** | 8 of 2,563 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `nova_onboarding_toolbar_selection_bottom_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" for toolbar position is translated as "Dasar" (basic/base) instead of "Bawah".
+    - Current: `Dasar`
+    - Suggest: `Bawah`
+    - The option refers to placing the address bar at the bottom of the screen; Indonesian uses "Bawah". "Dasar" reads as "basic/foundation" and conflicts with "baku" usage elsewhere.
+- `nova_onboarding_toolbar_selection_top_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" for toolbar position is translated as "Puncak" (summit/peak) instead of "Atas".
+    - Current: `Puncak`
+    - Suggest: `Atas`
+    - The option refers to placing the address bar at the top of the screen; Indonesian UI uses "Atas". "Puncak" means peak/summit and is wrong here.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,581 |
-| Missing strings | 45 |
+| Strings | 2,563 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,10 +70,9 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
+**38 strings** are not translated yet, concentrated in:
 
 - `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 38
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,14 +96,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (151)
+## 3. Open findings (149)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 85 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
+| 3 | Degraded language (grammar, spelling, terminology) | 60 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -613,16 +619,6 @@ _Nothing in this category._
     - Source: `Close private tabs`
     - Suggest: `Tutup tab pribadi`
     - notification_erase_text_android_14 and notification_erase_title_android_14 use "tab pribadi" for the same term on the same surface; inconsistent terminology.
-- `nova_onboarding_toolbar_selection_bottom_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" for toolbar position is translated as "Dasar" (basic/base) instead of "Bawah".
-    - Current: `Dasar`
-    - Source: `Bottom`
-    - Suggest: `Bawah`
-    - The option refers to placing the address bar at the bottom of the screen; Indonesian uses "Bawah". "Dasar" reads as "basic/foundation" and conflicts with "baku" usage elsewhere.
-- `nova_onboarding_toolbar_selection_top_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" for toolbar position is translated as "Puncak" (summit/peak) instead of "Atas".
-    - Current: `Puncak`
-    - Source: `Top`
-    - Suggest: `Atas`
-    - The option refers to placing the address bar at the top of the screen; Indonesian UI uses "Atas". "Puncak" means peak/summit and is wrong here.
 - `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "font" left untranslated here while the related titles use "fon", creating inconsistent terminology on the same settings screen.
     - Current: `Ukuran font akan sesuai dengan pengaturan Android Anda. Nonaktifkan untuk mengelola ukuran font di sini.`
     - Source: `Font size will match your Android settings. Disable to manage font size here.`

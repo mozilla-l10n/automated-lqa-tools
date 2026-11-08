@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,512 |
+| **Strings reviewed this run** | 0 of 2,486 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,512 |
-| Missing strings | 114 |
+| Strings | 2,486 |
+| Missing strings | 115 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**114 strings** are not translated yet, concentrated in:
+**115 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 77
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 78
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 25
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rMX/strings.xml` — 5
@@ -83,8 +83,8 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `curly-double` 15 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| inverted marks | `open-question` 105, `open-exclamation` 29 | **open-question** |
-| register | `informal` 195, `formal` 12 | **informal** |
+| inverted marks | `open-question` 104, `open-exclamation` 29 | **open-question** |
+| register | `informal` 188, `formal` 12 | **informal** |
 
 ---
 

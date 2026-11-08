@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,626 |
+| **Strings reviewed this run** | 10 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `wrex_widget_match_extra_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "ET" (extra time) is translated as "Tilläggstid", which means stoppage time, not extra time.
+    - Current: `Tilläggstid`
+    - Source: `ET`
+    - Suggest: `Förlängning`
+    - The developer comment says this label is shown during extra time. In Swedish football, extra time is "förlängning" and "tilläggstid" is stoppage (added) time, so the label shows the wrong match status.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
+    - Current: `matchningsinformation`
+    - Source: `Can’t show match info right now`
+    - Suggest: `matchinformation`
+    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +42,28 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (5)
 
-_Nothing retired._
+- `nova_onboarding_add_search_widget_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Split compound: "Firefox widget" should be hyphenated as a compound.
+    - Current: `Lägg till Firefox widget`
+    - Suggest: `Lägg till Firefox-widget`
+    - Swedish compounds with a proper name need a hyphen; writing it as two words is a spelling error.
+- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The clause 'känn att Firefox automatiska skydd dig' has no verb, so the sentence is ungrammatical and doesn't render 'have your back'.
+    - Current: `känn att Firefox automatiska skydd dig`
+    - Suggest: `vet att Firefox automatiska skydd har din rygg`
+    - The source says Firefox's automatic protections 'have your back'. The Swedish leaves out the verb, so the sentence doesn't parse and that meaning is lost.
+- `nova_onboarding_theme_selection_automatic_label` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The theme option 'Automatisk' uses the common-gender form, while its sibling options 'Mörkt' and 'Ljust' use the neuter form that agrees with 'tema'.
+    - Current: `Automatisk`
+    - Suggest: `Automatiskt`
+    - All three labels describe a theme ('tema', a neuter noun). The dark and light options are neuter, so the automatic option should be 'Automatiskt' to agree with them.
+- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Plural possessive "våra" does not agree with the singular common-gender link text "Sekretesspolicy".
+    - Current: `Läs mer i våra %1$s.`
+    - Suggest: `Läs mer i vår %1$s.`
+    - The placeholder is replaced by "Sekretesspolicy" (singular, common gender), so the possessive must be "vår"; "våra" is plural and ungrammatical here.
+- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The preposition "på" is missing from "säker att"; standard Swedish is "säker på att".
+    - Current: `Är du säker att du vill`
+    - Suggest: `Är du säker på att du vill`
+    - In standard Swedish, the adjective "säker" (sure) takes the preposition "på" before an att-clause. Without it, the confirmation dialog reads as colloquial or ungrammatical.
 
 ---
 
@@ -45,7 +72,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,626 |
+| Strings | 2,601 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,14 +112,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (75)
+## 3. Open findings (70)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 30 |
-| 3 | Degraded language (grammar, spelling, terminology) | 45 |
+| 2 | Wrong content (says something other than the English) | 29 |
+| 3 | Degraded language (grammar, spelling, terminology) | 41 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -246,11 +273,11 @@ _Nothing in this category._
     - Source: `Site asked to turn off ad blocker`
     - Suggest: `Webbplatsen bad mig stänga av annonsblockeraren`
     - Source: 'Site asked to turn off ad blocker' means the site made the request. 'ombeds' is passive ('is asked'), so it reverses who is asking whom.
-- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
-    - Current: `matchningsinformation`
-    - Source: `Can’t show match info right now`
-    - Suggest: `matchinformation`
-    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
+- `wrex_widget_match_extra_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "ET" (extra time) is translated as "Tilläggstid", which means stoppage time, not extra time.
+    - Current: `Tilläggstid`
+    - Source: `ET`
+    - Suggest: `Förlängning`
+    - The developer comment says this label is shown during extra time. In Swedish football, extra time is "förlängning" and "tilläggstid" is stoppage (added) time, so the label shows the wrong match status.
 
 ### C. Grammar, agreement & spelling
 
@@ -374,26 +401,6 @@ _Nothing in this category._
     - Source: `Allowed`
     - Suggest: `Tillåtet`
     - The two summaries describe the same preference state and should agree in form; the not-allowed variant uses neuter "tillåtet".
-- `nova_onboarding_add_search_widget_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Split compound: "Firefox widget" should be hyphenated as a compound.
-    - Current: `Lägg till Firefox widget`
-    - Source: `Add Firefox widget`
-    - Suggest: `Lägg till Firefox-widget`
-    - Swedish compounds with a proper name need a hyphen; writing it as two words is a spelling error.
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The clause 'känn att Firefox automatiska skydd dig' has no verb, so the sentence is ungrammatical and doesn't render 'have your back'.
-    - Current: `känn att Firefox automatiska skydd dig`
-    - Source: `Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.`
-    - Suggest: `vet att Firefox automatiska skydd har din rygg`
-    - The source says Firefox's automatic protections 'have your back'. The Swedish leaves out the verb, so the sentence doesn't parse and that meaning is lost.
-- `nova_onboarding_theme_selection_automatic_label` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The theme option 'Automatisk' uses the common-gender form, while its sibling options 'Mörkt' and 'Ljust' use the neuter form that agrees with 'tema'.
-    - Current: `Automatisk`
-    - Source: `Automatic`
-    - Suggest: `Automatiskt`
-    - All three labels describe a theme ('tema', a neuter noun). The dark and light options are neuter, so the automatic option should be 'Automatiskt' to agree with them.
-- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Plural possessive "våra" does not agree with the singular common-gender link text "Sekretesspolicy".
-    - Current: `Läs mer i våra %1$s.`
-    - Source: `Firefox cares about your privacy. Learn more in our %1$s.`
-    - Suggest: `Läs mer i vår %1$s.`
-    - The placeholder is replaced by "Sekretesspolicy" (singular, common gender), so the possessive must be "vår"; "våra" is plural and ungrammatical here.
 - `open_source_licenses_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Split compound "OSS bibliotek" should be hyphenated as "OSS-bibliotek".
     - Current: `OSS bibliotek`
     - Source: `%s \| OSS Libraries`
@@ -449,11 +456,6 @@ _Nothing in this category._
     - Source: `Last synced: %s`
     - Suggest: `Senast synkroniserad`
     - "Last synced" calls for the adverb "Senast" in Swedish. The sibling string sync_never_synced_summary correctly uses "Senast synkroniserad".
-- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The preposition "på" is missing from "säker att"; standard Swedish is "säker på att".
-    - Current: `Är du säker att du vill`
-    - Source: `Are you sure you want to delete %1$s?`
-    - Suggest: `Är du säker på att du vill`
-    - In standard Swedish, the adjective "säker" (sure) takes the preposition "på" before an att-clause. Without it, the confirmation dialog reads as colloquial or ungrammatical.
 - `uninstall_survey_option_6_v2` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Missing hyphen after "Sekretess" in a coordinated compound, so the phrase reads as "Privacy or security problems" rather than "privacy or security concerns".
     - Current: `Sekretess eller säkerhetsproblem`
     - Source: `Privacy or security concerns`
@@ -507,6 +509,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (1)
+### Fixed to date (2)
 
+- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — fixed 2026-11-08
 - `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — fixed 2026-11-03

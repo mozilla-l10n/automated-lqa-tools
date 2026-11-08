@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 26 of 2,621 |
+| **Strings reviewed this run** | 60 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,52 +18,301 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `wrex_widget_error_try_refreshing` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Typo: 'Probeaje' should be 'Probearje'.
+    - Current: `Probeaje`
+    - Source: `Try refreshing or check back later.`
+    - Suggest: `Probearje`
+    - The Frisian verb is 'probearje', as used correctly in other strings in this batch.
+- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter, as in 'útwreidingsûntwikkeler' elsewhere.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes.`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter.
 
-### ✅ Fixed since the last run (8)
+### ✅ Fixed since the last run (55)
 
-- `mozac_feature_contextmenu_snackbar_link_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fy-rNL/strings.xml` — "Link" is rendered as "Koppeling" (Dutch) here while the rest of the file consistently uses the Frisian "Keppeling".
-    - Current: `Koppeling nei klamboerd kopiearre`
-    - Source: `Link copied to clipboard`
-    - Suggest: `Keppeling nei klamboerd kopiearre`
-    - Sibling strings (mozac_feature_contextmenu_share_link, mozac_feature_contextmenu_snackbar_link_text_copied) use "Keppeling"; "Koppeling" is the Dutch spelling and is inconsistent on the same surface.
-- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fy-rNL/strings.xml` — "notifications" is rendered as "meldingen" here but as "notifikaasjes" in the sibling notification-permission string on the same surface.
-    - Current: `%1$s tastean om meldingen te ferstjoeren?`
-    - Source: `Allow %1$s to send notifications?`
-    - Suggest: `%1$s tastean om notifikaasjes te ferstjoeren?`
-    - mozac_feature_sitepermissions_notification_permission_rationale_dialog_message translates "notifications" as "notifikaasjes"; the same term in the same notification-permission dialog flow should be consistent.
-- `credit_cards_warning_dialog_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "payment methods" is rendered "betelmetoaden" here but "betellingsmetoaden" in the neighbouring credit card strings.
-    - Current: `betelmetoaden`
-    - Source: `Secure your saved payment methods`
-    - Suggest: `betellingsmetoaden`
-    - Inconsistent terminology for the same source term on the same surface (see credit_cards_warning_dialog_message_3 and credit_cards_biometric_prompt_unlock_message_2).
-- `debug_drawer_region_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Tools" rendered as "helpmiddelen" here while the same debug-drawer surface uses "ark" elsewhere (CFR-ark, Add-ons-ark, Ark foar automatysk ynfoljen).
-    - Current: `Regiohelpmiddelen`
-    - Source: `Region Tools`
-    - Suggest: `Regio-ark`
-    - Terminology inconsistency for "Tools" on the same Debug Drawer surface, where "ark" is the established rendering.
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "extension(s)" rendered as "add-on(s)" while the rest of the string uses "útwreidingen" for extensions.
-    - Current: `de add-on(s) opnij te starten`
-    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
-    - Suggest: `de útwreiding(en) opnij te starten`
-    - Source consistently says "extension(s)"; the surrounding sentences use útwreidingen, so add-on is an inconsistent term for the same source word.
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "more private" rendered as "persoanliker" (more personal) instead of the privacy term used in the parallel string.
-    - Current: `persoanliker`
-    - Source: `Turn VPN on to make your browsing more private and harder to trace.`
-    - Suggest: `mear privee`
-    - The source says "more private"; the parallel string ip_protection_onboarding_body_promo translates the same phrase as "mear privee", so "persoanliker" (more personal) is both a mistranslation and inconsistent.
-- `search_engine_selector_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Search engine" is rendered as "sykmasjine" here but "sykmasine" everywhere else in the same surface.
-    - Current: `%s: sykmasjineselektor`
-    - Source: `%s: search engine selector`
-    - Suggest: `%s: sykmasineselektor`
-    - Neighbouring strings (search_engine_edit_custom_search_engine_title, search_engine_icon_content_description_1, search_engine_use_default) all use "sykmasine"; this spelling is inconsistent.
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical verb form and incomplete clause in the second paragraph.
-    - Current: `Utwreidingen sille net opnij starte wurden wylst jo aktuele sesje.`
-    - Source: `One or more extensions stopped working, making your system unstable. %1$s unsuccessfully tried to restart the extension(s).  Extensions won’t be restarted during your current session.  Removing or disabling extensions m…`
-    - Suggest: `Utwreidingen wurde net opnij start yn jo aktuele sesje.`
-    - "starte wurden" is not a valid passive construction and "wylst jo aktuele sesje" misuses "wylst" (a conjunction) as a preposition.
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — English word "the" left in the Frisian sentence and the phrasing duplicates "fan" awkwardly.
+    - Current: `fan %2$s út fan the Internet Archive`
+    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
+    - Suggest: `fan %2$s fan it Internet Archive`
+    - The source reads "from the Internet Archive’s %2$s"; the target contains the untranslated English article "the" and a redundant "út fan" construction.
+- `mozac_browser_errorpages_connection_failure_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Predicative adjective wrongly inflected: "oerbelêste" should be "oerbelêst".
+    - Current: `of oerbelêste`
+    - Source: `{ <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> } { </ul> }`
+    - Suggest: `of oerbelêst`
+    - In predicative position after "is ... net beskikber of" the adjective takes no -e ending.
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "temporary outage" is rendered as "stroomûnderbrekking" (power cut), changing the meaning.
+    - Current: `in tydlike stroomûnderbrekking`
+    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
+    - Suggest: `in tydlike steuring`
+    - The source refers to a temporary service outage of the server, not an electrical power interruption.
+- `mozac_browser_errorpages_proxy_connection_refused_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "in oarder" should be "yn oarder" (typo for the preposition).
+    - Current: `Is de proxykonfiguraasje fan de browser in oarder?`
+    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Does…`
+    - Suggest: `Is de proxykonfiguraasje fan de browser yn oarder?`
+    - Spelling error: the preposition is "yn", as correctly used in the parallel string mozac_browser_errorpages_unknown_proxy_host_message.
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Wrong article gender: "It website" should be "De website".
+    - Current: `It website ferwiist de oanfraach troch`
+    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
+    - Suggest: `De website ferwiist de oanfraach troch`
+    - "website" takes the common-gender article "de" in Frisian, as used elsewhere in this same file ("De website op %1$s …").
+- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "potentially harmful site" is rendered as "fertochte side" (suspicious site), duplicating the malware string instead of translating "potentially harmful".
+    - Current: `is rapportearre as in fertochte side`
+    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
+    - Suggest: `is rapportearre as in mooglik skealike website`
+    - The source says the site has been reported as a potentially harmful site; the target says "suspicious site", the same wording used for the malware/attack-site string, losing the source meaning. The corresponding title correctly uses "skealike website".
+- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "net werkend" is a misspelling of "net werkent" (does not recognize).
+    - Current: `dat de browser net werkend`
+    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
+    - Suggest: `dat de browser net werkent`
+    - The verb form for "the browser does not recognize" is "werkent"; "werkend" is a participle/adjective form and is ungrammatical here.
+- `mozac_feature_addons_failed_to_disable` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Missing preposition "fan" before the placeholder, unlike the parallel enable/remove/uninstall strings.
+    - Current: `Utskeakeljen %1$s mislearre`
+    - Source: `Failed to disable %1$s`
+    - Suggest: `Utskeakeljen fan %1$s mislearre`
+    - The corresponding strings use 'Ynskeakeljen fan %1$s mislearre', 'Fuortsmiten fan %1$s mislearre'; omitting 'fan' is ungrammatical.
+- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Compound noun misspelled: "útwreidingûntwikkeler" is missing the linking -s- used in all sibling strings ("útwreidingsûntwikkeler").
+    - Current: `útwreidingûntwikkeler`
+    - Source: `Share technical and interaction data with extension developer`
+    - Suggest: `útwreidingsûntwikkeler`
+    - All other data-collection long descriptions in the same file render "extension developer" as "útwreidingsûntwikkeler"; this one drops the linking s, which is a spelling/consistency error.
+- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Compound ‘útwreidingûntwikkeler’ is missing the linking -s- used elsewhere (‘útwreidingsûntwikkeler’).
+    - Current: `útwreidingûntwikkeler`
+    - Source: `Share technical and interaction data with extension developer`
+    - Suggest: `útwreidingsûntwikkeler`
+    - The parallel string mozac_feature_addons_permissions_data_collection_websiteContent_long_description uses ‘útwreidingsûntwikkeler’ for the same source term ‘extension developer’.
+- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter, as in 'útwreidingsûntwikkeler' elsewhere.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes.`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter.
+- `mozac_feature_downloads_open_existing_file` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — Adjective inflection missing before neuter noun 'bestân'.
+    - Current: `Besteande bestân iepenje`
+    - Source: `Open existing file`
+    - Suggest: `Besteand bestân iepenje`
+    - 'bestân' is a neuter noun; in an indefinite neuter noun phrase the attributive adjective takes the uninflected form ('besteand bestân').
+- `mozac_feature_prompt_folder_upload_confirm_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — Plural "files" rendered as singular "Bestân".
+    - Current: `Bestân oplade?`
+    - Source: `Upload files?`
+    - Suggest: `Bestannen oplade?`
+    - Source is "Upload files?" (plural); the Frisian says "Upload file?" (singular).
+- `mozac_feature_readerview_font_size_increase_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fy-rNL/strings.xml` — "Font size increase" is rendered as "Lettertype fergrutsje" (enlarge font/typeface) instead of font size, inconsistent with the decrease counterpart.
+    - Current: `Lettertype fergrutsje`
+    - Source: `Font size increase`
+    - Suggest: `Lettergrutte fergrutsje`
+    - Source is "Font size increase"; the parallel string mozac_feature_readerview_font_size_decrease_desc correctly uses "Lettergrutte ferlytsje". "Lettertype" means typeface, not font size.
+- `addresses_eircode` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Eircode" is a proper Irish postal-code system name and should not be translated as "Eirkoade".
+    - Current: `Eirkoade`
+    - Source: `Eircode`
+    - Suggest: `Eircode`
+    - The developer comment states this is the Eircode field, a specific Irish postal code system name; it is a proper name and stays untranslated.
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Plural "specific features" rendered as singular "spesifike funksje".
+    - Current: `Deblokkearje hjirûnder spesifike funksje.`
+    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
+    - Suggest: `Deblokkearje hjirûnder spesifike funksjes.`
+    - The source says "Unblock specific features below" (plural); the Frisian noun is singular, a grammatical/number error.
+- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The "never translate" summary omits the negation and duplicates the "offer to translate" text.
+    - Current: `%1$s sil oanbiede om websites yn dizze taal oer te setten.`
+    - Source: `%1$s will never offer to translate sites in this language.`
+    - Suggest: `%1$s sil nea oanbiede om websites yn dizze taal oer te setten.`
+    - Source reads "%1$s will never offer to translate sites in this language." The translation drops "never", reversing the meaning and making it identical to the offer-to-translate option.
+- `bookmark_menu_open_all_in_private_tabs_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "priveeljepblêden" as "proveeljepblêden".
+    - Current: `Alles yn proveeljepblêden iepenje`
+    - Source: `Open all in private tabs`
+    - Suggest: `Alles yn priveeljepblêden iepenje`
+    - "private tabs" is rendered elsewhere as "priveeljepblêd"; "proveeljepblêden" is a typo.
+- `bookmark_save_in_label` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Save in" translated as "Besparje yn" (to economize/save money) instead of the storage sense used elsewhere.
+    - Current: `Besparje yn`
+    - Source: `Save in`
+    - Suggest: `Bewarje yn`
+    - The source refers to saving a bookmark in a folder; the related snackbar uses "Bewarre yn". "Besparje" means to economize, not to store.
+- `close_tab_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Close tab %s" is rendered as plural "Ljepblêden" (tabs).
+    - Current: `Ljepblêden %s slute`
+    - Source: `Close tab %s`
+    - Suggest: `Ljepblêd %s slute`
+    - The source refers to closing one tab whose title is %s; the Frisian uses the plural form.
+- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Singular "this permission" is rendered as "alle tastimmingen" (all permissions), duplicating the other, plural dialog.
+    - Current: `Binne jo wis dat jo alle tastimmingen foar dizze website wiskje wolle?`
+    - Source: `Are you sure that you want to clear this permission for this site?`
+    - Suggest: `Binne jo wis dat jo dizze tastimming foar dizze website wiskje wolle?`
+    - The source asks about clearing one specific permission for a site; the developer comment says it sets a default value for a single permission. The translation says all permissions.
+- `create_collection_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Default collection name is pluralized: "Kolleksjes %d" instead of singular "Kolleksje %d".
+    - Current: `Kolleksjes %d`
+    - Source: `Collection %d`
+    - Suggest: `Kolleksje %d`
+    - Source "Collection %d" is the name of one new collection, not a plural.
+- `create_collection_deselect_all` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Alle deselektearje" is inconsistent with the parallel "Alles selektearje".
+    - Current: `Alle deselektearje`
+    - Source: `Deselect all`
+    - Suggest: `Alles deselektearje`
+    - Source pair "Select all"/"Deselect all" should use the same pronoun form; "Alles selektearje" is used for the counterpart.
+- `delete_language_all_languages_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "If you delete all languages" rendered as "As jo dizze talen fuortsmite" (if you delete these languages).
+    - Current: `As jo dizze talen fuortsmite`
+    - Source: `If you delete all languages, %1$s will download partial languages to your cache as you translate.`
+    - Suggest: `As jo alle talen fuortsmite`
+    - Source says "all languages", not "these languages"; the demonstrative changes the meaning.
+- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The back-button variant was translated as if it were the gesture variant ("press back" rendered as "press the back gesture").
+    - Current: `druk it gebear werom`
+    - Source: `Drag from top & press back to exit`
+    - Suggest: `druk op werom`
+    - Source says "press back" (hardware/software back button); the gesture wording belongs to exit_fullscreen_with_gesture_short. As translated both strings say essentially the same thing.
+- `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Neutral" is rendered as "Gemiddeld" (average), not the neutral midpoint label.
+    - Current: `Gemiddeld`
+    - Source: `Neutral`
+    - Suggest: `Neutraal`
+    - Source "Neutral" is the middle likert option; "Gemiddeld" means "average", a different concept.
+- `microsurvey_homepage_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation adds "ûnderfining fan" (experience of), which is not in the source.
+    - Current: `mei jo ûnderfining fan de Firefox-Startside?`
+    - Source: `How satisfied are you with your Firefox homepage?`
+    - Suggest: `mei jo Firefox-startside?`
+    - Source is "How satisfied are you with your Firefox homepage?" with no mention of experience; also "Startside" is capitalized mid-compound without reason.
+- `microsurvey_prompt_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation drops "search", making the prompt about Firefox in general instead of search in Firefox.
+    - Current: `Help Firefox te ferbetterjen. It duorret mar in minút`
+    - Source: `Help make search in Firefox better. It only takes a minute`
+    - Suggest: `Help it sykjen yn Firefox better te meitsjen. It duorret mar in minút`
+    - Source is "Help make search in Firefox better"; the sibling strings for printing and sync keep the feature name, but here it is omitted.
+- `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "marketing partners" is rendered as "marketingtechnologypartners", adding a word not in the source.
+    - Current: `Mozilla’s marketingtechnologypartners`
+    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s`
+    - Suggest: `Mozilla’s marketingpartners`
+    - The source says "Mozilla’s marketing partners"; "technology" is not present and the compound is also an untranslated English string.
+- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation drops "helps", turning "One tap helps stop…" into "With one tap you prevent…" and losing the subject.
+    - Current: `Mei ien tik foarkomme dat bedriuwen jo tikken bespionearje.`
+    - Source: `One tap helps stop companies spying on your clicks.`
+    - Suggest: `Ien tik helpt foar te kommen dat bedriuwen jo klikken bespionearje.`
+    - The source is "One tap helps stop companies spying on your clicks"; the Frisian sentence lacks a subject and omits "helps", and "clicks" is rendered as "tikken" (taps), duplicating "tik".
+- `preference_enhanced_tracking_protection_allow_list_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "funksje" as "funskje".
+    - Current: `As jo de funskje útskeakelje`
+    - Source: `This setting helps fix the most common site problems. If you turn it off, some sites may not work, and %1$s won’t be able to help troubleshoot those issues.`
+    - Suggest: `As jo de funksje útskeakelje`
+    - "funskje" is a typo; the correct Frisian word is "funksje".
+- `preference_gestures_swipe_toolbar_switch_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "address bar" translated as "arkbalke" (toolbar) instead of "adresbalke".
+    - Current: `De arkbalke op side feie om fan ljepblêd te wikseljen`
+    - Source: `Swipe address bar sideways to switch tabs`
+    - Suggest: `De adresbalke op side feie om fan ljepblêd te wikseljen`
+    - The source and developer comment refer to the address bar, not the toolbar; the neighbouring string uses "wurkbalke" for toolbar, so this is also inconsistent.
+- `preference_search_learn_about_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Firefox Suggest" brand name is translated and inconsistently rendered.
+    - Current: `Firefox Suggestes`
+    - Source: `Learn more about Firefox Suggest`
+    - Suggest: `Firefox Suggest`
+    - "Firefox Suggest" is a product/feature brand name and should not be translated; it is also rendered differently ("Firefox Suggestjes") in preference_search_address_bar_fx_suggest.
+- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "downloadskiednis" as "downloadskeiednis".
+    - Current: `downloadskeiednis`
+    - Source: `File is removed from your download history, but is still saved on your device`
+    - Suggest: `downloadskiednis`
+    - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
+- `preferences_show_search_suggestions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "suggestjes" as "suggesjes".
+    - Current: `Syksuggesjes toane`
+    - Source: `Show search suggestions`
+    - Suggest: `Syksuggestjes toane`
+    - Elsewhere the term is spelled "suggestjes" (e.g. "Klamboerdsuggestjes toane"); "suggesjes" drops the t.
+- `preferences_sync_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "ljepblêden" as "ljeplêden".
+    - Current: `Iepen ljeplêden`
+    - Source: `Open tabs`
+    - Suggest: `Iepen ljepblêden`
+    - The Frisian word for tabs is "ljepblêden" (used consistently elsewhere in this batch); "ljeplêden" is missing the b.
+- `privacy_notice_updated_homepage_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Duplicated/garbled verb phrase "yn Firefox te wer te jaan".
+    - Current: `om de nijste funksjes yn Firefox te wer te jaan`
+    - Source: `We’ve updated our %1$s to reflect the latest features in Firefox. %2$s`
+    - Suggest: `om de nijste funksjes yn Firefox wer te jaan`
+    - The infinitive marker "te" is duplicated, producing ungrammatical Frisian; source is "to reflect the latest features in Firefox".
+- `protection_panel_etp_disabled_no_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelled verb "wirde" instead of "wurde".
+    - Current: `Trackers wirde net blokkearre`
+    - Source: `Trackers aren’t blocked`
+    - Suggest: `Trackers wurde net blokkearre`
+    - The Frisian plural present of "wurde" is "wurde"; "wirde" is a spelling error.
+- `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "private sessions" is translated as "priveefinsters" (private windows).
+    - Current: `priveefinsters`
+    - Source: `Allow search suggestions in private sessions?`
+    - Suggest: `priveesesjes`
+    - The source says "private sessions", not private windows.
+- `setup_checklist_subtitle_3_steps_first_step` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Goed j!" is a garbled/incomplete rendering of "Great start!".
+    - Current: `Goed j!`
+    - Source: `Great start! You’ve completed 1 out of 3 steps.`
+    - Suggest: `Goed begjin!`
+    - The source "Great start!" should read "Goed begjin!"; "Goed j" is not a Frisian word/phrase and appears to be a truncation.
+- `setup_checklist_subtitle_5_steps_first_step` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Goed j!" is a garbled/incomplete rendering of "Great start!".
+    - Current: `Goed j!`
+    - Source: `Great start! You’ve completed 1 out of 5 steps.`
+    - Suggest: `Goed begjin!`
+    - The source "Great start!" should read "Goed begjin!"; "Goed j" is not valid Frisian.
+- `setup_checklist_subtitle_6_steps_first_step` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Goed j!" is a garbled/incomplete rendering of "Great start!".
+    - Current: `Goed j!`
+    - Source: `Great start! You’ve completed 1 out of 6 steps.`
+    - Suggest: `Goed begjin!`
+    - The source "Great start!" should read "Goed begjin!"; "Goed j" is not valid Frisian.
+- `startup_crash_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Verb agreement error: "helpe" should be "helpt" with the singular subject "It ferstjoeren fan in ûngelokrapport".
+    - Current: `It ferstjoeren fan in ûngelokrapport helpe ús`
+    - Source: `There was a problem opening %s.  Sending a crash report helps us diagnose and fix problems with the browser. Reports may include personal or sensitive data.`
+    - Suggest: `It ferstjoeren fan in ûngelokrapport helpt ús`
+    - The subject is singular, so the verb must be third person singular.
+- `tab_group_sheet_dismiss_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "ljepblêdgroep" as "Ljepbêdgroep".
+    - Current: `Ljepbêdgroep besjen`
+    - Source: `View tab group, collapse drag handle`
+    - Suggest: `Ljepblêdgroep besjen`
+    - The Frisian term for tab is "ljepblêd"; the "l" is missing here, unlike all other strings in this batch.
+- `tab_manager_close_all_tabs_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Dropped "open" from "all open tabs".
+    - Current: `Dit slút alle ljepblêden.`
+    - Source: `This will close all open tabs.`
+    - Suggest: `Dit slút alle iepen ljepblêden.`
+    - Source says "This will close all open tabs."; the translation omits "open".
+- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "View options" is rendered as "Byldopsjes" (display/image options), not "view the options".
+    - Current: `Byldopsjes`
+    - Source: `View options`
+    - Suggest: `Opsjes besjen`
+    - Per the developer comment the button opens Settings for auto-close tabs; "View" is a verb here, not "display". "Byldopsjes" means "image/display options".
+- `translation_option_bottom_sheet_switch_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Overrides offers to translate" is rendered as "Ignores translation offers" instead of "overrides".
+    - Current: `Negearret oersetoanbiedingen`
+    - Source: `Overrides offers to translate`
+    - Suggest: `Oerskriuwt oersetoanbiedingen`
+    - The source says the setting overrides (takes precedence over) offers to translate; "negearret" means "ignores". The parallel string translation_option_bottom_sheet_switch_never_translate_site_description correctly uses "Oerskriuwt" for "Overrides".
+- `uninstall_survey_error_failed` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "system uninstall prompt" mistranslated as "prompt for uninstalling the system".
+    - Current: `It iepenjen fan de prompt foar it de-ynstallearjen fan it systeem is mislearre`
+    - Source: `Failed to open the system uninstall prompt, please use the system uninstall action directly.`
+    - Suggest: `It iepenjen fan de systeemprompt foar de-ynstallaasje is mislearre`
+    - The source means the prompt provided by the system to uninstall the app, not a prompt to uninstall the system.
+- `uninstall_survey_option_1_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Disjunction "or" translated as conjunction "en".
+    - Current: `De browser is stadich en ûnbetrouber`
+    - Source: `It’s slow or unreliable`
+    - Suggest: `De browser is stadich of ûnbetrouber`
+    - Source is "It’s slow or unreliable" — an either/or option, not both.
+- `unsubmitted_crash_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Wrong article gender: "in net-ferstjoerde ûngelokrapport" uses inflected adjective form with a neuter noun.
+    - Current: `Jo hawwe in net-ferstjoerde ûngelokrapport`
+    - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
+    - Suggest: `Jo hawwe in net-ferstjoerd ûngelokrapport`
+    - "rapport" is a neuter noun ('it rapport'), so the attributive adjective after 'in' takes the uninflected form.
+- `unsubmitted_crashes_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Plural "these reports" rendered as singular "dit rapport".
+    - Current: `wurdt dit rapport negearre`
+    - Source: `You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.`
+    - Suggest: `wurde dizze rapporten negearre`
+    - Source says "Closing this notification will ignore these reports" (plural), matching the multiple-crash-reports context of this string.
+- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter, as in 'útwreidingsûntwikkeler' elsewhere.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — The capitalized 'útwreiding' is missing its accent: 'Utwreidingsgebrûk' should be 'Útwreidingsgebrûk'.
+    - Current: `Utwreidingsgebrûk`
+    - Source: `Monitor extension usage and manage themes.`
+    - Suggest: `Útwreidingsgebrûk`
+    - Frisian spells it 'út', and the accent stays on a capital letter.
+- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Confirmation of a completed deletion is rendered as an infinitive/imperative instead of a past participle.
+    - Current: `%1$s út skiednis fuortsmite`
+    - Source: `Deleted %1$s from history`
+    - Suggest: `%1$s út skiednis fuortsmiten`
+    - Source "Deleted %1$s from history" is a snackbar confirming that the item has been deleted, not an action label.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -84,8 +333,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,621 |
-| Missing strings | 5 |
+| Strings | 2,601 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -102,11 +351,7 @@ _Nothing retired._
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 5
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -129,14 +374,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (134)
+## 3. Open findings (58)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 42 |
-| 3 | Degraded language (grammar, spelling, terminology) | 91 |
+| 2 | Wrong content (says something other than the English) | 12 |
+| 3 | Degraded language (grammar, spelling, terminology) | 45 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -145,36 +390,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "temporary outage" is rendered as "stroomûnderbrekking" (power cut), changing the meaning.
-    - Current: `in tydlike stroomûnderbrekking`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `in tydlike steuring`
-    - The source refers to a temporary service outage of the server, not an electrical power interruption.
-- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "potentially harmful site" is rendered as "fertochte side" (suspicious site), duplicating the malware string instead of translating "potentially harmful".
-    - Current: `is rapportearre as in fertochte side`
-    - Source: `{ <p> }The site at %1$s has been reported as a potentially harmful site and has been blocked based on your security preferences.{ </p> }`
-    - Suggest: `is rapportearre as in mooglik skealike website`
-    - The source says the site has been reported as a potentially harmful site; the target says "suspicious site", the same wording used for the malware/attack-site string, losing the source meaning. The corresponding title correctly uses "skealike website".
-- `mozac_feature_prompt_folder_upload_confirm_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — Plural "files" rendered as singular "Bestân".
-    - Current: `Bestân oplade?`
-    - Source: `Upload files?`
-    - Suggest: `Bestannen oplade?`
-    - Source is "Upload files?" (plural); the Frisian says "Upload file?" (singular).
-- `mozac_feature_readerview_font_size_increase_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fy-rNL/strings.xml` — "Font size increase" is rendered as "Lettertype fergrutsje" (enlarge font/typeface) instead of font size, inconsistent with the decrease counterpart.
-    - Current: `Lettertype fergrutsje`
-    - Source: `Font size increase`
-    - Suggest: `Lettergrutte fergrutsje`
-    - Source is "Font size increase"; the parallel string mozac_feature_readerview_font_size_decrease_desc correctly uses "Lettergrutte ferlytsje". "Lettertype" means typeface, not font size.
 - `about_crashes` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Crashes" (browser crashes, about:crashes) is rendered as "Ungelokken" (accidents), the wrong term, and it is also missing its diacritic.
     - Current: `Ungelokken`
     - Source: `Crashes`
     - Suggest: `Ûnderbrekkingen`
     - The developer comment says this links to a list of past crashes (about:crashes). "Ungelokken" means "accidents"; also the initial U should be Û ("Ûngelokken") in Frisian.
-- `addresses_eircode` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Eircode" is a proper Irish postal-code system name and should not be translated as "Eirkoade".
-    - Current: `Eirkoade`
-    - Source: `Eircode`
-    - Suggest: `Eircode`
-    - The developer comment states this is the Eircode field, a specific Irish postal code system name; it is a proper name and stays untranslated.
 - `addresses_street_address` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Street Address" is translated as just "Adres", losing the street distinction and colliding with the generic address label.
     - Current: `Adres`
     - Source: `Street Address`
@@ -185,81 +405,16 @@ _Nothing in this category._
     - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
     - Suggest: `útwreidingen dy’t troch %1$s levere AI brûke`
     - The source means extensions using AI that Firefox provides; the current word order reads as "extensions that use AI by means of Firefox", changing the meaning.
-- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The "never translate" summary omits the negation and duplicates the "offer to translate" text.
-    - Current: `%1$s sil oanbiede om websites yn dizze taal oer te setten.`
-    - Source: `%1$s will never offer to translate sites in this language.`
-    - Suggest: `%1$s sil nea oanbiede om websites yn dizze taal oer te setten.`
-    - Source reads "%1$s will never offer to translate sites in this language." The translation drops "never", reversing the meaning and making it identical to the offer-to-translate option.
-- `bookmark_save_in_label` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Save in" translated as "Besparje yn" (to economize/save money) instead of the storage sense used elsewhere.
-    - Current: `Besparje yn`
-    - Source: `Save in`
-    - Suggest: `Bewarje yn`
-    - The source refers to saving a bookmark in a folder; the related snackbar uses "Bewarre yn". "Besparje" means to economize, not to store.
 - `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Custom tab menu sheet" rendered as "Menublêd Ljepblêd oanpasse", turning the noun phrase into an imperative "customize tab".
     - Current: `Menublêd Ljepblêd oanpasse slute`
     - Source: `Close custom tab menu sheet`
     - Suggest: `Menublêd fan oanpast ljepblêd slute`
     - The source describes closing the menu sheet of a custom tab; the translation reads as "Customize tab menu sheet close", changing the meaning.
-- `close_tab_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Close tab %s" is rendered as plural "Ljepblêden" (tabs).
-    - Current: `Ljepblêden %s slute`
-    - Source: `Close tab %s`
-    - Suggest: `Ljepblêd %s slute`
-    - The source refers to closing one tab whose title is %s; the Frisian uses the plural form.
-- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Singular "this permission" is rendered as "alle tastimmingen" (all permissions), duplicating the other, plural dialog.
-    - Current: `Binne jo wis dat jo alle tastimmingen foar dizze website wiskje wolle?`
-    - Source: `Are you sure that you want to clear this permission for this site?`
-    - Suggest: `Binne jo wis dat jo dizze tastimming foar dizze website wiskje wolle?`
-    - The source asks about clearing one specific permission for a site; the developer comment says it sets a default value for a single permission. The translation says all permissions.
-- `create_collection_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Default collection name is pluralized: "Kolleksjes %d" instead of singular "Kolleksje %d".
-    - Current: `Kolleksjes %d`
-    - Source: `Collection %d`
-    - Suggest: `Kolleksje %d`
-    - Source "Collection %d" is the name of one new collection, not a plural.
 - `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Navigate back" translated as "Tebek blêdzje" (browse back) rather than navigating back within the drawer.
     - Current: `Tebek blêdzje`
     - Source: `Navigate back`
     - Suggest: `Tebek navigearje`
     - The developer comment says the control navigates back within the debug drawer, not page browsing; "blêdzje" implies web page navigation.
-- `delete_language_all_languages_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "If you delete all languages" rendered as "As jo dizze talen fuortsmite" (if you delete these languages).
-    - Current: `As jo dizze talen fuortsmite`
-    - Source: `If you delete all languages, %1$s will download partial languages to your cache as you translate.`
-    - Suggest: `As jo alle talen fuortsmite`
-    - Source says "all languages", not "these languages"; the demonstrative changes the meaning.
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The back-button variant was translated as if it were the gesture variant ("press back" rendered as "press the back gesture").
-    - Current: `druk it gebear werom`
-    - Source: `Drag from top & press back to exit`
-    - Suggest: `druk op werom`
-    - Source says "press back" (hardware/software back button); the gesture wording belongs to exit_fullscreen_with_gesture_short. As translated both strings say essentially the same thing.
-- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The brand name "Firefox Suggest" has been altered with a Frisian plural suffix.
-    - Current: `Firefox Suggestjes`
-    - Source: `Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - "Firefox Suggest" is a product/feature brand name and must remain unchanged; adding "-jes" turns it into a non-brand plural word.
-- `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "shortcuts" (fluchkeppelingen) rendered as "fluchtoetsen" (keyboard shortcuts).
-    - Current: `Alle fluchtoetsen toane`
-    - Source: `Show all shortcuts`
-    - Suggest: `Alle fluchkeppelingen toane`
-    - The source refers to home screen shortcuts, translated elsewhere in this batch as "Fluchkeppeling"; "fluchtoetsen" means keyboard shortcut keys.
-- `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Neutral" is rendered as "Gemiddeld" (average), not the neutral midpoint label.
-    - Current: `Gemiddeld`
-    - Source: `Neutral`
-    - Suggest: `Neutraal`
-    - Source "Neutral" is the middle likert option; "Gemiddeld" means "average", a different concept.
-- `microsurvey_homepage_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation adds "ûnderfining fan" (experience of), which is not in the source.
-    - Current: `mei jo ûnderfining fan de Firefox-Startside?`
-    - Source: `How satisfied are you with your Firefox homepage?`
-    - Suggest: `mei jo Firefox-startside?`
-    - Source is "How satisfied are you with your Firefox homepage?" with no mention of experience; also "Startside" is capitalized mid-compound without reason.
-- `microsurvey_prompt_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation drops "search", making the prompt about Firefox in general instead of search in Firefox.
-    - Current: `Help Firefox te ferbetterjen. It duorret mar in minút`
-    - Source: `Help make search in Firefox better. It only takes a minute`
-    - Suggest: `Help it sykjen yn Firefox better te meitsjen. It duorret mar in minút`
-    - Source is "Help make search in Firefox better"; the sibling strings for printing and sync keep the feature name, but here it is omitted.
-- `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "marketing partners" is rendered as "marketingtechnologypartners", adding a word not in the source.
-    - Current: `Mozilla’s marketingtechnologypartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "technology" is not present and the compound is also an untranslated English string.
 - `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Please consider allowing" is rendered as "think about permission", losing the request to grant permission.
     - Current: `Tink asjebleaft oer tastimming om Firefox te helpen winnen.`
     - Source: `Please consider allowing to help Firefox win.`
@@ -270,86 +425,26 @@ _Nothing in this category._
     - Source: `We protect your data and automatically block companies from spying on your clicks.`
     - Suggest: `foarkomme automatysk dat bedriuwen jo klikken bespionearje`
     - The source is "automatically block companies from spying on your clicks"; the relative clause presupposes the spying instead of preventing it.
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The translation drops "helps", turning "One tap helps stop…" into "With one tap you prevent…" and losing the subject.
-    - Current: `Mei ien tik foarkomme dat bedriuwen jo tikken bespionearje.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Ien tik helpt foar te kommen dat bedriuwen jo klikken bespionearje.`
-    - The source is "One tap helps stop companies spying on your clicks"; the Frisian sentence lacks a subject and omits "helps", and "clicks" is rendered as "tikken" (taps), duplicating "tik".
 - `phone_feature_blocked_intro` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "To allow it:" is rendered as the bare verb "Tastean:" losing the introductory meaning.
     - Current: `Tastean:`
     - Source: `To allow it:`
     - Suggest: `Om dit ta te stean:`
     - The source is a heading introducing the steps to allow the permission ("To allow it:"), not a command "Allow:".
-- `preference_gestures_swipe_toolbar_switch_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "address bar" translated as "arkbalke" (toolbar) instead of "adresbalke".
-    - Current: `De arkbalke op side feie om fan ljepblêd te wikseljen`
-    - Source: `Swipe address bar sideways to switch tabs`
-    - Suggest: `De adresbalke op side feie om fan ljepblêd te wikseljen`
-    - The source and developer comment refer to the address bar, not the toolbar; the neighbouring string uses "wurkbalke" for toolbar, so this is also inconsistent.
-- `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Firefox Suggest" brand name is translated as "Firefox Suggestjes".
-    - Current: `Firefox Suggestjes`
-    - Source: `Address bar - Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - "Firefox Suggest" is a product feature brand name that must remain untranslated; the neighbouring string uses yet another form.
-- `preference_search_learn_about_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Firefox Suggest" brand name is translated and inconsistently rendered.
-    - Current: `Firefox Suggestes`
-    - Source: `Learn more about Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - "Firefox Suggest" is a product/feature brand name and should not be translated; it is also rendered differently ("Firefox Suggestjes") in preference_search_address_bar_fx_suggest.
 - `saved_logins_menu_dropdown_chevron_icon_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Sort passwords menu" (a menu for sorting passwords) is rendered as an imperative "sort the password menu".
     - Current: `Wachtwurdmenu sortearje`
     - Source: `Sort passwords menu`
     - Suggest: `Menu Wachtwurden sortearje`
     - The source is a noun phrase naming the menu used to sort passwords, not an instruction to sort a 'password menu'.
-- `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "private sessions" is translated as "priveefinsters" (private windows).
-    - Current: `priveefinsters`
-    - Source: `Allow search suggestions in private sessions?`
-    - Suggest: `priveesesjes`
-    - The source says "private sessions", not private windows.
 - `setup_checklist_group_essentials` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "essentials" is left untranslated in the compound "%1$s-essentials".
     - Current: `%1$s-essentials`
     - Source: `%1$s essentials`
     - Suggest: `%1$s-essinsjes`
     - "essentials" is an ordinary English noun, not a brand name, and should be rendered in Frisian (e.g. "basisynstellingen" / "essinsjes").
-- `tab_manager_close_all_tabs_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Dropped "open" from "all open tabs".
-    - Current: `Dit slút alle ljepblêden.`
-    - Source: `This will close all open tabs.`
-    - Suggest: `Dit slút alle iepen ljepblêden.`
-    - Source says "This will close all open tabs."; the translation omits "open".
-- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "View options" is rendered as "Byldopsjes" (display/image options), not "view the options".
-    - Current: `Byldopsjes`
-    - Source: `View options`
-    - Suggest: `Opsjes besjen`
-    - Per the developer comment the button opens Settings for auto-close tabs; "View" is a verb here, not "display". "Byldopsjes" means "image/display options".
-- `translation_option_bottom_sheet_switch_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Overrides offers to translate" is rendered as "Ignores translation offers" instead of "overrides".
-    - Current: `Negearret oersetoanbiedingen`
-    - Source: `Overrides offers to translate`
-    - Suggest: `Oerskriuwt oersetoanbiedingen`
-    - The source says the setting overrides (takes precedence over) offers to translate; "negearret" means "ignores". The parallel string translation_option_bottom_sheet_switch_never_translate_site_description correctly uses "Oerskriuwt" for "Overrides".
 - `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Translating" (in-progress state) is translated as the infinitive "Oersette", identical to the "Translate" button, losing the progress meaning.
     - Current: `Oersette`
     - Source: `Translating`
     - Suggest: `Oersette…`
     - The developer comment states this is the inactive button text indicating a translation is currently in progress; rendering it identically to translations_bottom_sheet_positive_button ("Translate" = "Oersette") removes the distinction between the two states.
-- `uninstall_survey_error_failed` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "system uninstall prompt" mistranslated as "prompt for uninstalling the system".
-    - Current: `It iepenjen fan de prompt foar it de-ynstallearjen fan it systeem is mislearre`
-    - Source: `Failed to open the system uninstall prompt, please use the system uninstall action directly.`
-    - Suggest: `It iepenjen fan de systeemprompt foar de-ynstallaasje is mislearre`
-    - The source means the prompt provided by the system to uninstall the app, not a prompt to uninstall the system.
-- `uninstall_survey_option_1_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Disjunction "or" translated as conjunction "en".
-    - Current: `De browser is stadich en ûnbetrouber`
-    - Source: `It’s slow or unreliable`
-    - Suggest: `De browser is stadich of ûnbetrouber`
-    - Source is "It’s slow or unreliable" — an either/or option, not both.
-- `unsubmitted_crashes_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Plural "these reports" rendered as singular "dit rapport".
-    - Current: `wurdt dit rapport negearre`
-    - Source: `You have unsent crash reports (%1$d) related to crashes being investigated. Sending them will help us improve %2$s. Closing this notification will ignore these reports.`
-    - Suggest: `wurde dizze rapporten negearre`
-    - Source says "Closing this notification will ignore these reports" (plural), matching the multiple-crash-reports context of this string.
-- `webcompat_reporter_label_mandatory_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — “to help us investigate the issue” rendered as “so that we can investigate it”, dropping the help sense; inconsistent with the optional variant.
-    - Current: `Beskriuw it probleem yn detail, sadat wy it ûndersykje kinne`
-    - Source: `Describe the problem in detail to help us investigate the issue`
-    - Suggest: `Beskriuw it probleem yn detail om ús te helpen it te ûndersykjen`
-    - The identical source phrase is translated as “om ús te helpen it te ûndersykjen” in webcompat_reporter_label_optional_description; the mandatory variant changes the meaning and breaks consistency on the same screen.
 - `webcompat_reporter_reason_notsupported_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The order of the two conditions is swapped relative to the source.
     - Current: `Browser wurdt net stipe of blokkearre`
     - Source: `Browser is blocked or unsupported`
@@ -358,106 +453,16 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `mozac_browser_errorpages_archive_check_button` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "argivearre" — Frisian for archived is "argivearre"? actually the root is "argyf", so the participle should be "argivearre" spelled consistently with the noun.
-    - Current: `Argivearre ferzje kontrolearje`
-    - Source: `Check Archived Version`
-    - Suggest: `Argyfferzje kontrolearje`
-    - Elsewhere in the same file the archive is rendered "argyf"/"argyftsjinst"; "Argivearre" is an inconsistent, non-standard derivation.
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — English word "the" left in the Frisian sentence and the phrasing duplicates "fan" awkwardly.
-    - Current: `fan %2$s út fan the Internet Archive`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `fan %2$s fan it Internet Archive`
-    - The source reads "from the Internet Archive’s %2$s"; the target contains the untranslated English article "the" and a redundant "út fan" construction.
-- `mozac_browser_errorpages_connection_failure_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Predicative adjective wrongly inflected: "oerbelêste" should be "oerbelêst".
-    - Current: `of oerbelêste`
-    - Source: `{ <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> } { <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> } { </ul> }`
-    - Suggest: `of oerbelêst`
-    - In predicative position after "is ... net beskikber of" the adjective takes no -e ending.
 - `mozac_browser_errorpages_malformed_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Unjildich".
     - Current: `Unjildich adres`
     - Source: `Invalid Address`
     - Suggest: `Ûnjildich adres`
     - The Frisian word is "ûnjildich" with a circumflex; the same prefix is written "ûnjildige" in mozac_browser_errorpages_invalid_content_encoding_message.
-- `mozac_browser_errorpages_proxy_connection_refused_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "in oarder" should be "yn oarder" (typo for the preposition).
-    - Current: `Is de proxykonfiguraasje fan de browser in oarder?`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy refused a connection.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Does…`
-    - Suggest: `Is de proxykonfiguraasje fan de browser yn oarder?`
-    - Spelling error: the preposition is "yn", as correctly used in the parallel string mozac_browser_errorpages_unknown_proxy_host_message.
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — Wrong article gender: "It website" should be "De website".
-    - Current: `It website ferwiist de oanfraach troch`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `De website ferwiist de oanfraach troch`
-    - "website" takes the common-gender article "de" in Frisian, as used elsewhere in this same file ("De website op %1$s …").
-- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — "net werkend" is a misspelling of "net werkent" (does not recognize).
-    - Current: `dat de browser net werkend`
-    - Source: `{ <p> }The address specifies a protocol (e.g., { <q> }wxyz://{ </q> }) the browser does not recognize, so the browser cannot properly connect to the site.{ </p> } { <ul> } { <li> }Are you trying to access multimedia or…`
-    - Suggest: `dat de browser net werkent`
-    - The verb form for "the browser does not recognize" is "werkent"; "werkend" is a participle/adjective form and is ungrammatical here.
-- `mozac_cfr_dismiss_button_content_description` — `mozilla-mobile/android-components/components/compose/cfr/src/main/res/values-fy-rNL/strings.xml` — "Slute" is a misspelling of the Frisian verb "Slute" → correct form is "Slúte".
-    - Current: `Slute`
-    - Source: `Dismiss`
-    - Suggest: `Slúte`
-    - Frisian for 'close' is 'slúte' (with ú); the same string elsewhere in the tree uses 'Slúte'.
-- `mozac_feature_addons_failed_to_disable` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Missing preposition "fan" before the placeholder, unlike the parallel enable/remove/uninstall strings.
-    - Current: `Utskeakeljen %1$s mislearre`
-    - Source: `Failed to disable %1$s`
-    - Suggest: `Utskeakeljen fan %1$s mislearre`
-    - The corresponding strings use 'Ynskeakeljen fan %1$s mislearre', 'Fuortsmiten fan %1$s mislearre'; omitting 'fan' is ungrammatical.
-- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Compound noun misspelled: "útwreidingûntwikkeler" is missing the linking -s- used in all sibling strings ("útwreidingsûntwikkeler").
-    - Current: `útwreidingûntwikkeler`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `útwreidingsûntwikkeler`
-    - All other data-collection long descriptions in the same file render "extension developer" as "útwreidingsûntwikkeler"; this one drops the linking s, which is a spelling/consistency error.
-- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Compound ‘útwreidingûntwikkeler’ is missing the linking -s- used elsewhere (‘útwreidingsûntwikkeler’).
-    - Current: `útwreidingûntwikkeler`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `útwreidingsûntwikkeler`
-    - The parallel string mozac_feature_addons_permissions_data_collection_websiteContent_long_description uses ‘útwreidingsûntwikkeler’ for the same source term ‘extension developer’.
-- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Misspelling of ‘útwreidingsgebrûk’ and missing diacritic on the initial U.
-    - Current: `Utwreidigsgebrûk kontrolearje en tema’s beheare`
-    - Source: `Monitor extension usage and manage themes`
-    - Suggest: `Utwreidingsgebrûk kontrolearje en tema’s beheare`
-    - ‘Utwreidigsgebrûk’ drops the ‘n’ from ‘útwreiding’ (extension); the compound should be ‘útwreidingsgebrûk’.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — Misspelling of ‘útwreidingsgebrûk’.
-    - Current: `Utwreidigsgebrûk kontrolearje en tema’s beheare.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Utwreidingsgebrûk kontrolearje en tema’s beheare.`
-    - ‘Utwreidigs-’ drops the ‘n’ from ‘útwreiding’ (extension); the compound should be ‘útwreidingsgebrûk’.
 - `mozac_feature_downloads_file_failure_no_connection` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — The Frisian says the file "is not downloading" instead of the past "wasn’t downloaded".
     - Current: `%1$s is net downloaden.`
     - Source: `%1$s wasn’t downloaded.`
     - Suggest: `%1$s is net download.`
     - Source is past tense/perfect: the download failed. "is net downloaden" reads as an infinitive construction, not the completed-action past participle.
-- `mozac_feature_downloads_open_existing_file` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — Adjective inflection missing before neuter noun 'bestân'.
-    - Current: `Besteande bestân iepenje`
-    - Source: `Open existing file`
-    - Suggest: `Besteand bestân iepenje`
-    - 'bestân' is a neuter noun; in an indefinite neuter noun phrase the attributive adjective takes the uninflected form ('besteand bestân').
-- `mozac_feature_downloads_open_not_supported1` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — Superfluous preposition 'mei' inserted, changing 'to open %1$s files' into 'to open with %1$s files'.
-    - Current: `Gjin app fûn om %1$s-bestannen mei te iepenjen`
-    - Source: `No app found to open %1$s files`
-    - Suggest: `Gjin app fûn om %1$s-bestannen te iepenjen`
-    - The source says no app was found to open the files; 'mei' adds an instrumental sense that is not in the source and is ungrammatical here.
-- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — "Utklapt" is missing the accent on the capital Ú.
-    - Current: `Utklapt`
-    - Source: `Expanded`
-    - Suggest: `Útklapt`
-    - Frisian spells the prefix 'út-' with an acute accent, as in 'spiler útklappe' in the same batch. 'Utklapt' is a spelling error.
-- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
-    - Current: `Ofspylsnelheid 75 prosint stadiger`
-    - Source: `Playback rate 75 percent slower`
-    - Suggest: `Ôfspylsnelheid 75 prosint stadiger`
-    - Frisian "ôf" carries a circumflex; the same string uses "ôfspylsnelheid" correctly elsewhere (mozac_feature_listentopage_change_speed, _playback_speed_1).
-- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspyljen"; should be "Ôfspyljen".
-    - Current: `Ofspyljen ynsteld op heale snelheid`
-    - Source: `Playback set to half speed`
-    - Suggest: `Ôfspyljen ynsteld op heale snelheid`
-    - Frisian "ôf-" requires the circumflex, as used in other strings of this file.
-- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
-    - Current: `Ofspylsnelheid 25 prosint stadiger`
-    - Source: `Playback rate 25 percent slower`
-    - Suggest: `Ôfspylsnelheid 25 prosint stadiger`
-    - Frisian "ôf" carries a circumflex; inconsistent with "ôfspylsnelheid" used elsewhere in the same file.
 - `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofspylsnelheid"; should be "Ôfspylsnelheid".
     - Current: `Ofspylsnelheid 25 prosint flugger`
     - Source: `Playback rate 25 percent faster`
@@ -518,11 +523,6 @@ _Nothing in this category._
     - Source: `Department`
     - Suggest: `Ôfdieling`
     - In Frisian the word is spelled "ôfdieling"; capitalised it keeps the circumflex: "Ôfdieling". The current form drops the required diacritic.
-- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Plural "specific features" rendered as singular "spesifike funksje".
-    - Current: `Deblokkearje hjirûnder spesifike funksje.`
-    - Source: `New and current AI enhancements are blocked by default. Unblock specific features below.`
-    - Suggest: `Deblokkearje hjirûnder spesifike funksjes.`
-    - The source says "Unblock specific features below" (plural); the Frisian noun is singular, a grammatical/number error.
 - `bookmark_import_bookmarks_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Út" in "Ut bestân ymportearje".
     - Current: `Ut bestân ymportearje`
     - Source: `Import from file`
@@ -538,21 +538,11 @@ _Nothing in this category._
     - Source: `Invalid URL`
     - Suggest: `Ûnjildige URL`
     - The Frisian word is "ûnjildich"; capitalized it is "Ûnjildige".
-- `bookmark_menu_open_all_in_private_tabs_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "priveeljepblêden" as "proveeljepblêden".
-    - Current: `Alles yn proveeljepblêden iepenje`
-    - Source: `Open all in private tabs`
-    - Suggest: `Alles yn priveeljepblêden iepenje`
-    - "private tabs" is rendered elsewhere as "priveeljepblêd"; "proveeljepblêden" is a typo.
 - `browser_feature_desktop_site_off` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ut"; Frisian for "Off" is "Ût".
     - Current: `Ut`
     - Source: `Off`
     - Suggest: `Ût`
     - The Frisian word for "off" is spelled "út/Ût" with a circumflex/accent; the toggle label drops the diacritic.
-- `create_collection_deselect_all` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Alle deselektearje" is inconsistent with the parallel "Alles selektearje".
-    - Current: `Alle deselektearje`
-    - Source: `Deselect all`
-    - Suggest: `Alles deselektearje`
-    - Source pair "Select all"/"Deselect all" should use the same pronoun form; "Alles selektearje" is used for the counterpart.
 - `credit_cards_biometric_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex on the initial capital of "Ûntskoattelje".
     - Current: `Untskoattelje om jo bewarre kaarten te besjen`
     - Source: `Unlock to view your saved cards`
@@ -623,42 +613,51 @@ _Nothing in this category._
     - Source: `Get bookmarks, tabs, and passwords on any device. All protected with encryption.`
     - Suggest: `Ûntfang blêdwizers, ljepblêden en wachtwurden op elk apparaat.`
     - Frisian "ûntfange" requires the circumflex on the initial u; the capitalised form is "Û".
-- `phone_feature_blocked_step_permissions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Machtigingen" is Dutch spelling; Frisian uses "Machtigingen"→"Tastimmingen"/"Machtigings".
-    - Current: `Machtigingen`
-    - Source: `2. Tap { <b> }Permissions{ </b> }`
-    - Suggest: `Machtigings`
-    - Frisian plural of "machtiging" is "machtigings"; "machtigingen" is the Dutch form.
-- `preference_doh_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Word order error in "hokker website jo besykje gean".
-    - Current: `hokker website jo besykje gean`
-    - Source: `Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which website you’re about to access. %1$s`
-    - Suggest: `hokker website jo besykje sille`
-    - The source says "which website you're about to access"; the Frisian clause is ungrammatical/garbled word order.
-- `preference_enhanced_tracking_protection_allow_list_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "funksje" as "funskje".
-    - Current: `As jo de funskje útskeakelje`
-    - Source: `This setting helps fix the most common site problems. If you turn it off, some sites may not work, and %1$s won’t be able to help troubleshoot those issues.`
-    - Suggest: `As jo de funksje útskeakelje`
-    - "funskje" is a typo; the correct Frisian word is "funksje".
-- `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing space between words in "Cross-sitecookies".
-    - Current: `Cross-sitecookies`
-    - Source: `Cross-site cookies`
-    - Suggest: `Cross-site-cookies`
-    - The source is "Cross-site cookies"; the target has the two words run together without a space or hyphen.
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Ofslute" is missing the accent on the initial O.
     - Current: `‘Ofslute’`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `‘Ôfslute’`
     - Frisian spelling requires "Ôfslute" with a circumflex on the initial vowel.
-- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling "Syngronisaasje" instead of "Synchronisaasje".
-    - Current: `Syngronisaasje`
-    - Source: `Sync`
-    - Suggest: `Synchronisaasje`
-    - The Frisian word is "synchronisaasje" (cf. the related forms used in other strings); "syngronisaasje" is a misspelling.
-- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "downloadskiednis" as "downloadskeiednis".
-    - Current: `downloadskeiednis`
-    - Source: `File is removed from your download history, but is still saved on your device`
-    - Suggest: `downloadskiednis`
-    - The word for history is "skiednis"; other strings in the same group use "downloadskiednis".
-- _…and 27 more; see `state/` for the full list._
+- `preferences_show_search_optimization_cards` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Verb form "type" should be the plural/polite form "type" → "typt" agreeing with "jo".
+    - Current: `wylst jo type`
+    - Source: `Retrieve suggestions from Mozilla as you type`
+    - Suggest: `wylst jo type `
+    - In Frisian the polite pronoun "jo" takes the -e/-je form depending on verb class; "typen" is a weak verb class II, so the correct form is "jo type" — however the standard form after "jo" for this verb is "typje".
+- `sign_out_dialog_confirm_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofmelde"; should be "Ôfmelde".
+    - Current: `Ofmelde`
+    - Source: `Sign out`
+    - Suggest: `Ôfmelde`
+    - Frisian "ôfmelde" is spelled with a circumflex on the ô.
+- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing circumflex in "Ofmelde"; should be "Ôfmelde".
+    - Current: `Ofmelde by jo account?`
+    - Source: `Sign out of your account?`
+    - Suggest: `Ôfmelde by jo account?`
+    - Frisian "ôfmelde" is spelled with a circumflex on the ô.
+- `startup_crash_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Ungrammatical passive/verb construction "moat opnij opstarte wurde" for "needs to restart".
+    - Current: `%s moat opnij opstarte wurde`
+    - Source: `%s needs to restart`
+    - Suggest: `%s moat opnij starte wurde`
+    - "opnij opstarte wurde" doubles the restart notion and mixes active/passive; the source simply says the app needs to restart.
+- `sync_send_tab_empty_state_link` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Untdek" is missing the circumflex; the correct Frisian spelling is "Ûntdek".
+    - Current: `Untdek`
+    - Source: `Learn how to connect a device`
+    - Suggest: `Ûntdek`
+    - The Frisian verb ûntdekke is written with û, as in "ûntdutsen" elsewhere in this batch; "Untdek" is a misspelling.
+- `tab_crash_send_report` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic on "Ûngelokrapport".
+    - Current: `Ungelokrapport nei Mozilla ferstjoere`
+    - Source: `Send crash report to Mozilla`
+    - Suggest: `Ûngelokrapport nei Mozilla ferstjoere`
+    - Frisian spelling requires the circumflex: "ûngelok", so the sentence-initial capital must be Û.
+- `tab_indicator_media_playing` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Playing media" is rendered as an infinitive phrase ("to play media") instead of a descriptive state.
+    - Current: `Media ôfspylje`
+    - Source: `Playing media`
+    - Suggest: `Media wurdt ôfspile`
+    - The source is a content description for an indicator showing that media is currently playing; "Media ôfspylje" reads as the command/infinitive "play media", not the state.
+- `wrex_widget_error_try_refreshing` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — Typo: 'Probeaje' should be 'Probearje'.
+    - Current: `Probeaje`
+    - Source: `Try refreshing or check back later.`
+    - Suggest: `Probearje`
+    - The Frisian verb is 'probearje', as used correctly in other strings in this batch.
 
 ### D. Terminology, register & consistency
 
@@ -696,15 +695,39 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (7)
+### Dismissed by hand (31)
 
+- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 2, and both strings use "Firefox Suggestjes", so this looks like a deliberate local rendering of the feature name, not a mistake.
+- `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
+- `mozac_browser_errorpages_archive_check_button` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): "argivearre" is the regular past participle of the Frisian verb "argivearje" (to archive); the finding itself proposes the identical spelling.
+- `mozac_cfr_dismiss_button_content_description` — `mozilla-mobile/android-components/components/compose/cfr/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): The Frisian verb "slute" (to close) is spelled without an accent; "slúte" is not the standard form.
 - `mozac_feature_addons_permissions_dialog_heading_required_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
 - `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
+- `mozac_feature_downloads_open_not_supported1` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): 'om … mei te iepenjen' refers back to the app (an app to open the files with), a normal grammatical Frisian construction, like Dutch 'mee te openen'.
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the accent on a capitalised sentence-initial 'út', giving 'Ut'.
+- `mozac_feature_listentopage_notification_playback_speed_0_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the circumflex on a capitalised sentence-initial 'ôf', giving 'Of'; lowercase 'ôf' elsewhere is consistent.
+- `mozac_feature_listentopage_notification_playback_speed_0_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the circumflex on a capitalised sentence-initial 'ôf', giving 'Of'.
+- `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the circumflex on a capitalised sentence-initial 'ôf', giving 'Of'.
+- `phone_feature_blocked_step_permissions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian nouns in -ing form their plural in -ingen (cf. ynstellingen), so 'Machtigingen' is correct Frisian.
+- `preference_doh_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): In Frisian subordinate clauses the infinitive precedes the finite verb, so 'hokker website jo besykje gean' is grammatical.
 - `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Swapping the order of the two joined verbs does not change the meaning; both share and sell are translated.
+- `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian (like Dutch) writes compounds closed; 'Cross-sitecookies' is the regular compound form.
+- `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 0, and both strings use "Firefox Suggestjes", so this looks like a deliberate local rendering of the feature name, not a mistake.
+- `preferences_category_sync_controls` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian spells this word with g (syngronisaasje, syngronisearje); 'ch' is the Dutch spelling.
+- `preferences_passwords_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The finding contradicts itself: the spelling it says is correct is the original exactly, so the reviewer probably didn't accept that there was an error.
+- `review_prompt_feedback_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): 'efterlitte' is the standard Frisian verb; 'achterlitte' is Dutch.
 - `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "%s trochsykje" follows the standard Dutch/Frisian Mozilla pattern (cf. nl "%s doorzoeken") for searching with a named engine.
+- `setup_checklist_group_helpful_tools` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): 'ark' is a neuter mass noun; without an article the adjective stays uninflected ('nuttich ark'), like Dutch 'nuttig gereedschap'.
 - `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "Slute" (close) is an accepted rendering of "Dismiss" for a banner button, as in Dutch "Sluiten".
 - `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): "Syngronisearre iepen ljepblêden" correctly means synced open tabs; word order is only a stylistic difference.
+- `tracking_protection_off` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography omits the accent on capital U (Út → Ut, cf. 'Utein', 'Ut' used throughout fy-NL Firefox); 'Ut' is the standard capitalized form.
+- `translation_error_language_not_supported_warning_text_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): 'fan it [taal] út' is the idiomatic Frisian circumposition for 'from (a language)' (like Dutch 'vanuit het Engels'); language names take the article 'it' in Frisian.
 - `translation_in_progress_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Infinitive plus ellipsis ("Oersette…") is the standard Dutch/Frisian way to express an in-progress action.
+- `ungroup_tab_group_confirmation_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): 'degroepearje' follows the regular Frisian -earje verb form (groepearje); it is the other string ('Degroeperje') that deviates, so this one is correct.
+- `webcompat_reporter_label_mandatory_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The original ("so that we can investigate it") already gets the meaning across correctly, so the more literal rewording was probably seen as an unnecessary style change.
+- `webcompat_reporter_reason_content2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the circumflex on capital U (û → U), so 'Untbrekkende' is the standard capitalized spelling.
+- `wrex_widget_match_postponed` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops accents on capital U, so 'Utsteld' is the correct capitalized form of 'útsteld'.
+- `wrex_widget_match_suspended` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography drops the circumflex on capital U, so 'Underbrutsen' is the correct capitalized form of 'ûnderbrutsen'.
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
 
@@ -718,26 +741,45 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (21)
+### Fixed to date (74)
 
-- `mozac_feature_contextmenu_snackbar_link_copied` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `mozac_feature_sitepermissions_notification_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `credit_cards_warning_dialog_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `debug_drawer_region_tools_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `extension_process_crash_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `search_engine_selector_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-05
-- `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `connection_security_panel_verified_by` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `download_content_type_filter_video` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `tab_tray_inactive_auto_close_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
-- `uninstall_survey_option_4_v2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-10-18
+- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_connection_failure_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_proxy_connection_refused_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_safe_harmful_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_browser_errorpages_unknown_protocol_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_addons_failed_to_disable` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_downloads_open_existing_file` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_prompt_folder_upload_confirm_title` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `mozac_feature_readerview_font_size_increase_desc` — `mozilla-mobile/android-components/components/feature/readerview/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `addresses_eircode` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `ai_controls_blocked_info_banner` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `automatic_translation_option_never_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `bookmark_menu_open_all_in_private_tabs_button` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `bookmark_save_in_label` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `close_tab_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `create_collection_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `create_collection_deselect_all` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `delete_language_all_languages_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `microsurvey_homepage_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `microsurvey_prompt_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_enhanced_tracking_protection_allow_list_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_gestures_swipe_toolbar_switch_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preference_search_learn_about_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preferences_show_search_suggestions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `preferences_sync_tabs_2` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `privacy_notice_updated_homepage_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `protection_panel_etp_disabled_no_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
+- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08

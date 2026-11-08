@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,626 |
+| **Strings reviewed this run** | 1 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "match info" (a sports match) is translated as "informações da correspondência", which is the matching sense of the word.
-    - Current: `informações da correspondência`
-    - Source: `Can’t show match info right now`
-    - Suggest: `informações do jogo`
-    - The comment says this is the sports widget and the data is about a match, so a game. In pt-PT that is "jogo" (or "partida"). "Correspondência" means a match in the sense of matching, or mail.
-- `wrex_widget_live_score_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — "live" (a match in progress) is rendered as "ativos" ("active", plural), which is the wrong sense.
-    - Current: `ativos`
-    - Source: `%1$s %2$d, %3$s %4$d, %5$s, live`
-    - Suggest: `em direto`
-    - Here "live" means the match is being played right now. In pt-PT that is "em direto". "ativos" means "active", and its plural form doesn't agree with anything in the announcement.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -43,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The masculine "no nosso" does not agree with the feminine link text "Informação de privacidade" that replaces %1$s.
+    - Current: `Saiba mais no nosso %1$s.`
+    - Suggest: `Saiba mais na nossa %1$s.`
+    - %1$s is replaced by onboarding_term_of_service_line_two_link_text, "Informação de privacidade", which is feminine. The parallel string onboarding_redesign_tou_body_two correctly uses "na nossa".
 
 ---
 
@@ -54,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,626 |
+| Strings | 2,601 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -94,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (73)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 24 |
-| 3 | Degraded language (grammar, spelling, terminology) | 40 |
+| 3 | Degraded language (grammar, spelling, terminology) | 39 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -333,11 +327,6 @@ _Nothing in this category._
     - Source: `Make Firefox your default browser`
     - Suggest: `Torne o Firefox o seu navegador predefinido`
     - "Tornar X Y" (make X your default) takes a direct predicative in Portuguese. "Torne … no seu navegador" is not correct standard pt-PT.
-- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The masculine "no nosso" does not agree with the feminine link text "Informação de privacidade" that replaces %1$s.
-    - Current: `Saiba mais no nosso %1$s.`
-    - Source: `Firefox cares about your privacy. Learn more in our %1$s.`
-    - Suggest: `Saiba mais na nossa %1$s.`
-    - %1$s is replaced by onboarding_term_of_service_line_two_link_text, "Informação de privacidade", which is feminine. The parallel string onboarding_redesign_tou_body_two correctly uses "na nossa".
 - `preference_doh_summary` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The phrase is missing the preposition that "aceder" requires, so the relative clause is ungrammatical.
     - Current: `qual o site que está prestes a aceder`
     - Source: `Domain Name System (DNS) over HTTPS sends your request for a domain name through an encrypted connection, providing a secure DNS and making it harder for others to see which website you’re about to access. %1$s`

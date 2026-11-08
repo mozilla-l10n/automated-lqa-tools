@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,547 |
+| **Strings reviewed this run** | 0 of 2,521 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `nova_onboarding_theme_selection_dark_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Dark" rendered as "深邃" instead of the standard Firefox term "深色".
+    - Current: `深邃`
+    - Suggest: `深色`
+    - Firefox zh-CN consistently uses 深色/浅色 for dark/light theme options; "深邃" (profound) is not the established term.
+- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Light" rendered as "明亮" instead of the standard Firefox term "浅色".
+    - Current: `明亮`
+    - Suggest: `浅色`
+    - Firefox zh-CN consistently uses 浅色 for the light theme; "明亮" is inconsistent with the paired dark option and product terminology.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,547 |
-| Missing strings | 79 |
+| Strings | 2,521 |
+| Missing strings | 80 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +70,9 @@ _Nothing retired._
 
 ### Completeness
 
-**79 strings** are not translated yet, concentrated in:
+**80 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 58
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 59
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rCN/strings.xml` — 5
@@ -80,10 +87,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 75 | **curly-double** |
+| quotes | `curly-double` 74 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1027 | **punctuation** |
-| register | `informal` 3, `formal` 262 | **formal** |
+| fullwidth | `punctuation` 1019 | **punctuation** |
+| register | `informal` 1, `formal` 257 | **formal** |
 
 ---
 
@@ -93,14 +100,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (129)
+## 3. Open findings (127)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 87 |
-| 3 | Degraded language (grammar, spelling, terminology) | 34 |
+| 3 | Degraded language (grammar, spelling, terminology) | 32 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -511,16 +518,6 @@ _Nothing in this category._
     - Source: `QR scanner`
     - Suggest: `二维码扫描器`
     - Other strings in the same feature use "二维码" for QR (e.g. lens_camera_qr_no_code_found); "扫码器" is inconsistent and vaguer than the source.
-- `nova_onboarding_theme_selection_dark_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Dark" rendered as "深邃" instead of the standard Firefox term "深色".
-    - Current: `深邃`
-    - Source: `Dark`
-    - Suggest: `深色`
-    - Firefox zh-CN consistently uses 深色/浅色 for dark/light theme options; "深邃" (profound) is not the established term.
-- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Light" rendered as "明亮" instead of the standard Firefox term "浅色".
-    - Current: `明亮`
-    - Source: `Light`
-    - Suggest: `浅色`
-    - Firefox zh-CN consistently uses 浅色 for the light theme; "明亮" is inconsistent with the paired dark option and product terminology.
 - `preferences_credit_cards_manage_saved_cards_2` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Manage cards" is rendered as "管理信用卡" (manage credit cards), inconsistent with the surrounding "卡片" terminology used for the same source term.
     - Current: `管理信用卡`
     - Source: `Manage cards`
