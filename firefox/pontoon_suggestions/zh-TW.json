@@ -1,0 +1,5158 @@
+{
+ "project": "firefox",
+ "locale": "zh-TW",
+ "suggestions": [
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aboutLogins.ftl",
+   "string_id": "about-logins-add-password-tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutLogins.ftl",
+    "key": [
+     "about-logins-add-password-tooltip"
+    ]
+   },
+   "fids": [
+    "bc5620177506"
+   ],
+   "findings": [
+    "The Add-password tooltip says 'make sure you've changed this site's password, then modify it here'. The en-US says to make sure you are saving your current password."
+   ],
+   "source": "Make sure you’re saving your current password for this site.",
+   "original": "請確認您更改過此網站的密碼，再於此處修改。",
+   "text": "請確認您儲存的是此網站目前使用的密碼。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aboutLogins.ftl",
+   "string_id": "about-logins-confirm-export-dialog-message2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutLogins.ftl",
+    "key": [
+     "about-logins-confirm-export-dialog-message2"
+    ]
+   },
+   "fids": [
+    "a3a5fea71bb7"
+   ],
+   "findings": [
+    "The translation tells the user to delete their passwords after export. The en-US says to delete the exported file."
+   ],
+   "source": "When you export, your passwords are saved to a file with readable text.\nWhen you’re done using the file, we recommend deleting it so others who use this device can’t see your passwords.",
+   "original": "密碼匯出後，會以明碼的方式記錄在檔案中，建議您在使用完檔案後立即刪除密碼，避免其他有機會接觸到此裝置的人能夠看到您的密碼。",
+   "text": "密碼匯出後，會以明碼的方式記錄在檔案中，建議您在使用完檔案後立即刪除檔案，避免其他有機會接觸到此裝置的人能夠看到您的密碼。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aboutLogins.ftl",
+   "string_id": "about-logins-login-list-empty-search-title2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutLogins.ftl",
+    "key": [
+     "about-logins-login-list-empty-search-title2"
+    ]
+   },
+   "fids": [
+    "90f4342244ce"
+   ],
+   "findings": [
+    "The empty-search title says 'No passwords saved' instead of 'No passwords found'."
+   ],
+   "source": "No passwords found",
+   "original": "未儲存密碼",
+   "text": "找不到密碼",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aiFeatures.ftl",
+   "string_id": "ai-window-learn-from-browsing-activity",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiFeatures.ftl",
+    "key": [
+     "ai-window-learn-from-browsing-activity"
+    ]
+   },
+   "fids": [
+    "646b32f0d766"
+   ],
+   "findings": [
+    "The memory-learning checkbox is rendered as 'Learn the differences between classic browsing and Smart Windows'."
+   ],
+   "source": "label: Learn from browsing in Classic and { -smart-window-brand-name }",
+   "original": "了解傳統上網方式與{ -smart-window-brand-name(plural-form: \"true\") }的差異",
+   "text": "從傳統視窗與{ -smart-window-brand-name(plural-form: \"true\") }的上網活動學習",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aiFeatures.ftl",
+   "string_id": "smart-window-model-custom-info",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiFeatures.ftl",
+    "key": [
+     "smart-window-model-custom-info"
+    ]
+   },
+   "fids": [
+    "9d4f99f1eb3f"
+   ],
+   "findings": [
+    "'Custom model' is rendered as 'custom mode' (模式 instead of 模型)."
+   ],
+   "source": "message: When you use a custom model, { -smart-window-brand-name } may not work as expected.",
+   "original": "使用自訂模式時，{ -smart-window-brand-name }可能無法如預期運作。",
+   "text": "使用自訂模型時，{ -smart-window-brand-name }可能無法如預期運作。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/aiWindow.ftl",
+   "string_id": "aiwindow-firstrun-memories-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindow.ftl",
+    "key": [
+     "aiwindow-firstrun-memories-subtitle"
+    ]
+   },
+   "fids": [
+    "68906ee29a98"
+   ],
+   "findings": [
+    "The pronoun 他們 (used for people) refers to the memories."
+   ],
+   "source": "{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.",
+   "original": "{ -smart-window-brand-name }可從您的聊天內容、上網紀錄或兩者來建立記憶。久而久之，他們可讓回覆結果對您更有幫助。",
+   "text": "{ -smart-window-brand-name }可從您的聊天內容、上網紀錄或兩者來建立記憶。久而久之，它們可讓回覆結果對您更有幫助。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/aiWindow.ftl",
+   "string_id": "aiwindow-firstrun-model-subtitle-v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindow.ftl",
+    "key": [
+     "aiwindow-firstrun-model-subtitle-v2"
+    ]
+   },
+   "fids": [
+    "f293cdb1aa6d"
+   ],
+   "findings": [
+    "'Across your tabs' is rendered as 'across different devices'."
+   ],
+   "source": "Each model can help you to summarize, compare, and explore across your tabs. Switch anytime.",
+   "original": "每套模型都可以幫助您在不同裝置間進行摘要、比對、探索。可隨時切換。",
+   "text": "每套模型都可以幫助您在您的分頁間進行摘要、比對、探索。可隨時切換。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/contextual-manager.ftl",
+   "string_id": "contextual-manager-passwords-update-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/contextual-manager.ftl",
+    "key": [
+     "contextual-manager-passwords-update-label"
+    ]
+   },
+   "fids": [
+    "b5b2585f7a82"
+   ],
+   "findings": [
+    "The edit-form label 'Update password' is rendered as the past-tense confirmation 'Password updated'."
+   ],
+   "source": "label: Update password",
+   "original": "已更新密碼",
+   "text": "更新密碼",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/customizeMode.ftl",
+   "string_id": "customize-mode-toolbarspring",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/customizeMode.ftl",
+    "key": [
+     "customize-mode-toolbarspring"
+    ]
+   },
+   "fids": [
+    "74a90e48f5a1"
+   ],
+   "findings": [
+    "Flexible Space is rendered as 靈活空間, which doesn't match the 空白 used for the Space item."
+   ],
+   "source": "title: Flexible Space",
+   "original": "靈活空間",
+   "text": "彈性空白",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/customkeys.ftl",
+   "string_id": "customkeys-dev-profiler-capture",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/customkeys.ftl",
+    "key": [
+     "customkeys-dev-profiler-capture"
+    ]
+   },
+   "fids": [
+    "b24246a6b99d"
+   ],
+   "findings": [
+    "Typo: 補捉 should be 捕捉."
+   ],
+   "source": "Capture a Performance Profile",
+   "original": "補捉效能檢測檔",
+   "text": "捕捉效能檢測檔",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/downloads.ftl",
+   "string_id": "downloads-blocked-download-detailed-info",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/downloads.ftl",
+    "key": [
+     "downloads-blocked-download-detailed-info"
+    ]
+   },
+   "fids": [
+    "d3046c85ee74"
+   ],
+   "findings": [
+    "Typo: 擋案 should be 檔案."
+   ],
+   "source": "{ $url } attempted to automatically download multiple files. The site could be broken or trying to store spam files on your device.",
+   "original": "{ $url } 嘗試自動下載多個檔案，可能是這個網站發生問題，或是嘗試在您的電腦上亂儲存無用擋案。",
+   "text": "{ $url } 嘗試自動下載多個檔案，可能是這個網站發生問題，或是嘗試在您的電腦上亂儲存無用檔案。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/downloads.ftl",
+   "string_id": "downloads-blocked-potentially-insecure",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/downloads.ftl",
+    "key": [
+     "downloads-blocked-potentially-insecure"
+    ]
+   },
+   "fids": [
+    "ee2fd1336ef9"
+   ],
+   "findings": [
+    "Half-width colon followed by a space is used instead of the locale's full-width colon."
+   ],
+   "source": "File not downloaded: Potential security risk.",
+   "original": "未下載檔案: 有潛在的安全性風險。",
+   "text": "未下載檔案：有潛在的安全性風險。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "browser/browser/editBookmarkOverlay.ftl",
+   "string_id": "bookmark-properties-title-add-folder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/editBookmarkOverlay.ftl",
+    "key": [
+     "bookmark-properties-title-add-folder"
+    ]
+   },
+   "fids": [
+    "5672515930ac"
+   ],
+   "findings": [
+    "\"Add bookmark folder\" is translated as \"Add bookmarks toolbar\"."
+   ],
+   "source": "Add bookmark folder",
+   "original": "新增書籤工具列",
+   "text": "新增書籤資料夾",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "browser/browser/editBookmarkOverlay.ftl",
+   "string_id": "bookmark-properties-title-edit-folder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/editBookmarkOverlay.ftl",
+    "key": [
+     "bookmark-properties-title-edit-folder"
+    ]
+   },
+   "fids": [
+    "d34cc229751b"
+   ],
+   "findings": [
+    "\"Edit bookmark folder\" is translated as \"Edit bookmarks toolbar\"."
+   ],
+   "source": "Edit bookmark folder",
+   "original": "編輯書籤工具列",
+   "text": "編輯書籤資料夾",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-chat-callout-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-chat-callout-title"
+    ]
+   },
+   "fids": [
+    "0ab407937a51"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Chat from your taskbar",
+   "original": "從工具列直接聊天",
+   "text": "從工作列直接聊天",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-chat-callout-title-v3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-chat-callout-title-v3"
+    ]
+   },
+   "fids": [
+    "f46548d401c3"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Stay connected from your taskbar",
+   "original": "從工具列保持連線",
+   "text": "從工作列保持連線",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-email-callout-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-email-callout-title"
+    ]
+   },
+   "fids": [
+    "387633426196"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Keep your email in your taskbar",
+   "original": "在工具列收發信件",
+   "text": "在工作列收發信件",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-email-callout-title-v3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-email-callout-title-v3"
+    ]
+   },
+   "fids": [
+    "c9e5a4cc77b5"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Keep your inbox in your taskbar",
+   "original": "從工具列直接開啟收件匣",
+   "text": "從工作列直接開啟收件匣",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-media-callout-title-v3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-media-callout-title-v3"
+    ]
+   },
+   "fids": [
+    "b632e7c633b7"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Keep your streaming in your taskbar",
+   "original": "將您的影片網站放在工具列",
+   "text": "將您的影片網站放在工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-social-callout-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-social-callout-title"
+    ]
+   },
+   "fids": [
+    "97a2b675da17"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar)."
+   ],
+   "source": "Keep your favorite feeds in your taskbar",
+   "original": "將您最愛的資訊來源放置於工具列",
+   "text": "將您最愛的資訊來源放置於工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-value-prop-callout-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-value-prop-callout-title"
+    ]
+   },
+   "fids": [
+    "78bc04ee5126"
+   ],
+   "findings": [
+    "The Windows taskbar is rendered as 工具列 (toolbar) instead of 工作列."
+   ],
+   "source": "Add this site to your taskbar",
+   "original": "將此網站新增至工具列",
+   "text": "將此網站新增至工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/featureCallout.ftl",
+   "string_id": "taskbar-tabs-value-prop-callout-title-v3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/featureCallout.ftl",
+    "key": [
+     "taskbar-tabs-value-prop-callout-title-v3"
+    ]
+   },
+   "fids": [
+    "9d808d45105c"
+   ],
+   "findings": [
+    "'Taskbar' is rendered as 工具列 (toolbar), right next to a button that says 釘選到工作列."
+   ],
+   "source": "Pin your favorite sites to your taskbar",
+   "original": "將您最愛的網站釘選至工具列",
+   "text": "將您最愛的網站釘選至工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/genai.ftl",
+   "string_id": "genai-menu-new-badge",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/genai.ftl",
+    "key": [
+     "genai-menu-new-badge"
+    ]
+   },
+   "fids": [
+    "fd47f5e9117f"
+   ],
+   "findings": [
+    "The 'New' feature badge is rendered as 新增 ('Add')."
+   ],
+   "source": "New",
+   "original": "新增",
+   "text": "新功能",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "browser/browser/genai.ftl",
+   "string_id": "genai-more-actions-all-off-notice",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/genai.ftl",
+    "key": [
+     "genai-more-actions-all-off-notice"
+    ]
+   },
+   "fids": [
+    "33f823e2e20c"
+   ],
+   "findings": [
+    "The settings section name \"Tabs and browsing\" is translated as an action phrase (\"tabs, and browse\"), so the path to the setting is wrong."
+   ],
+   "source": "You won’t see this menu when you select text. Visit Settings <span data-l10n-name=\"chevron\"></span> Tabs and browsing to show it again.",
+   "original": "選擇文字時不會看到此選單。前往設定 <span data-l10n-name=\"chevron\"></span> 分頁並瀏覽，即可再次顯示。",
+   "text": "選擇文字時不會看到此選單。前往設定 <span data-l10n-name=\"chevron\"></span> 分頁與瀏覽，即可再次顯示。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/genai.ftl",
+   "string_id": "genai-selection-callout-text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/genai.ftl",
+    "key": [
+     "genai-selection-callout-text"
+    ]
+   },
+   "fids": [
+    "ad421fb21685"
+   ],
+   "findings": [
+    "This string uses the informal 你, while the surrounding strings use 您."
+   ],
+   "source": "Search or copy when you select text. Choose which actions appear with the <span data-l10n-name=\"more-actions\">•••</span> menu.",
+   "original": "選擇文字後即可搜尋或複製。你可以透過 <span data-l10n-name=\"more-actions\">•••</span> 選單選擇要顯示哪些操作。",
+   "text": "選擇文字後即可搜尋或複製。您可以透過 <span data-l10n-name=\"more-actions\">•••</span> 選單選擇要顯示哪些操作。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/menubar.ftl",
+   "string_id": "menu-application-settings",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/menubar.ftl",
+    "key": [
+     "menu-application-settings"
+    ]
+   },
+   "fids": [
+    "02c5851d4b41"
+   ],
+   "findings": [
+    "The macOS 'Settings…' item is rendered as 選項 ('Options')."
+   ],
+   "source": "label: Settings…",
+   "original": "選項…",
+   "text": "設定…",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "fxa-adoption-addresses-backup-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "fxa-adoption-addresses-backup-title"
+    ]
+   },
+   "fids": [
+    "1895392f8dd3"
+   ],
+   "findings": [
+    "Saved (postal) addresses are rendered as 網址 (web addresses/URLs)"
+   ],
+   "source": "Let’s back up your saved addresses",
+   "original": "一起備份儲存的網址吧！",
+   "text": "一起備份儲存的地址吧！",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "multi-cta-fox-doodle-msix-privacy-focused-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "multi-cta-fox-doodle-msix-privacy-focused-subtitle"
+    ]
+   },
+   "fids": [
+    "a8c80f4c134f"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar and Start menu.",
+   "original": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工具列與開始選單。",
+   "text": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工作列與開始選單。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "multi-cta-fox-doodle-pin-checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "multi-cta-fox-doodle-pin-checkbox"
+    ]
+   },
+   "fids": [
+    "bc4b1d7e6eb2"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
+   "original": "將 { -brand-short-name } 釘選到工具列",
+   "text": "將 { -brand-short-name } 釘選到工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "multi-cta-fox-doodle-privacy-focused-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "multi-cta-fox-doodle-privacy-focused-subtitle"
+    ]
+   },
+   "fids": [
+    "cd1fd3662a9f"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and keep it in your Dock. [other] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar.",
+   "original": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工具列。",
+   "text": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工作列。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "root-certificate-succession-infobar-january-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "root-certificate-succession-infobar-january-message"
+    ]
+   },
+   "fids": [
+    "3024bd308fac"
+   ],
+   "findings": [
+    "'Problems' is narrowed to 'startup problems', and the date is missing 日"
+   ],
+   "source": "<strong>Older versions of { -brand-short-name } may start to have problems on January 14, 2025.</strong>",
+   "original": "<strong>舊版的 { -brand-short-name } 可能會在 2025 年 1 月 14 起遇到啟動問題。</strong>",
+   "text": "<strong>舊版的 { -brand-short-name } 可能會在 2025 年 1 月 14 日起開始遇到問題。</strong>",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "set-default-menu-message-row-layout-subtitle-variant",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "set-default-menu-message-row-layout-subtitle-variant"
+    ]
+   },
+   "fids": [
+    "80b0d840f2fb"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your Dock. [other] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your taskbar.",
+   "original": "將 { -brand-short-name } 設為預設瀏覽器並保留在您的工具列，方便隨手開啟。",
+   "text": "將 { -brand-short-name } 設為預設瀏覽器並保留在您的工作列，方便隨手開啟。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/asrouter.ftl",
+   "string_id": "windows-10-eos-challenger-pin-callout-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/asrouter.ftl",
+    "key": [
+     "windows-10-eos-challenger-pin-callout-subtitle"
+    ]
+   },
+   "fids": [
+    "462f22efae71"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.",
+   "original": "將 { -brand-shorter-name } 釘選到工具列，這樣有需要的時候，就可以隨時使用您選擇的這套瀏覽器。",
+   "text": "將 { -brand-shorter-name } 釘選到工作列，這樣有需要的時候，就可以隨時使用您選擇的這套瀏覽器。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "home-custom-homepage-delete-address-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "home-custom-homepage-delete-address-button"
+    ]
+   },
+   "fids": [
+    "61b1b8e9f980"
+   ],
+   "findings": [
+    "A website address is called 地址 (postal address), while the neighbouring strings use 網址"
+   ],
+   "source": "aria-label: Delete address\ntitle: Delete address",
+   "original": "刪除地址",
+   "text": "刪除網址",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-privacy-message-info-10",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-privacy-message-info-10"
+    ]
+   },
+   "fids": [
+    "d500c120c6ea"
+   ],
+   "findings": [
+    "A preposition is missing before 任何網站"
+   ],
+   "source": "Save passwords in { -brand-short-name } to use strong, unique logins everywhere.",
+   "original": "將密碼儲存在 { -brand-short-name } 即可任何網站都使用強大、不重複的登入資訊。",
+   "text": "將密碼儲存在 { -brand-short-name } 即可在任何網站都使用強大、不重複的登入資訊。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-wallpaper-error-upload-file-type",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-wallpaper-error-upload-file-type"
+    ]
+   },
+   "fids": [
+    "3fee09843356"
+   ],
+   "findings": [
+    "This file-type error tells the user to retry later instead of telling them to use an image file"
+   ],
+   "source": "We couldn’t upload your file. Please try again with an image file.",
+   "original": "無法上傳您的檔案，請稍後再重新上傳圖片。",
+   "text": "無法上傳您的檔案，請改用圖片檔案再試一次。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "fx100-thank-you-pin-primary-button-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "fx100-thank-you-pin-primary-button-label"
+    ]
+   },
+   "fids": [
+    "a1d00061b612"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
+   "original": "將 { -brand-short-name } 釘選到工具列",
+   "text": "將 { -brand-short-name } 釘選到工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "hnt-card-taskbar-tabs-primary-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "hnt-card-taskbar-tabs-primary-button"
+    ]
+   },
+   "fids": [
+    "1e61c9c68650"
+   ],
+   "findings": [
+    "The button translates \"taskbar\" as 工具列 (\"toolbar\") instead of 工作列."
+   ],
+   "source": "Add sites to taskbar",
+   "original": "將網站新增至工具列",
+   "text": "將網站新增至工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr1-return-to-amo-addon-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr1-return-to-amo-addon-title"
+    ]
+   },
+   "fids": [
+    "976404637b51"
+   ],
+   "findings": [
+    "Typo: a stray 斯 after 隱私"
+   ],
+   "source": "You’ve got a fast, private browser at your fingertips. Now you can add <b>{ $addon-name }</b> and do even more with { -brand-short-name }.",
+   "original": "您有了一套觸手可及，又快又有隱私斯的瀏覽器。現在您還可以新增 <b>{ $addon-name }</b>，讓 { -brand-short-name } 能做更多事。",
+   "text": "您有了一套觸手可及，又快又有隱私的瀏覽器。現在您還可以新增 <b>{ $addon-name }</b>，讓 { -brand-short-name } 能做更多事。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr2022-onboarding-gratitude-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr2022-onboarding-gratitude-subtitle"
+    ]
+   },
+   "fids": [
+    "4bed199f7c45"
+   ],
+   "findings": [
+    "'Backed by the Mozilla Foundation' becomes 'developed by the Mozilla Foundation'"
+   ],
+   "source": "Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.",
+   "original": "感謝您使用由 Mozilla 基金會開發的 { -brand-short-name }。透過您的支援，我們努力讓網路環境變得更好、更開放、更可被所有人使用。",
+   "text": "感謝您使用由 Mozilla 基金會支持的 { -brand-short-name }。透過您的支援，我們努力讓網路環境變得更好、更開放、更可被所有人使用。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr2022-onboarding-pin-primary-button-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr2022-onboarding-pin-primary-button-label"
+    ]
+   },
+   "fids": [
+    "a6e715d8d07e"
+   ],
+   "findings": [
+    "'Pin to taskbar' is rendered with 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
+   "original": "將 { -brand-short-name } 釘選到工具列",
+   "text": "將 { -brand-short-name } 釘選到工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "mr2022-onboarding-pin-primary-button-label-msix",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "mr2022-onboarding-pin-primary-button-label-msix"
+    ]
+   },
+   "fids": [
+    "b30c0e4e1292"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "Pin { -brand-short-name } to taskbar and start menu",
+   "original": "將 { -brand-short-name } 釘選到工具列與開始選單",
+   "text": "將 { -brand-short-name } 釘選到工作列與開始選單",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-checklist-pin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-checklist-pin"
+    ]
+   },
+   "fids": [
+    "d524fdf92196"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar) instead of 工作列"
+   ],
+   "source": "Pin { -brand-short-name } to taskbar",
+   "original": "將 { -brand-short-name } 釘選到工具列",
+   "text": "將 { -brand-short-name } 釘選到工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-checklist-subtitle",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-checklist-subtitle"
+    ]
+   },
+   "fids": [
+    "4d34427eef9f"
+   ],
+   "findings": [
+    "The particle 的 is duplicated"
+   ],
+   "source": "Complete these steps to get the most out of your browsing experience.",
+   "original": "完成下列步驟，讓您獲得最完整的的上網體驗。",
+   "text": "完成下列步驟，讓您獲得最完整的上網體驗。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "onboarding-refresh-tou-pin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "onboarding-refresh-tou-pin"
+    ]
+   },
+   "fids": [
+    "2fbc8c76bf2f"
+   ],
+   "findings": [
+    "'Taskbar' is rendered 工具列 (toolbar)"
+   ],
+   "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar",
+   "original": "將 { -brand-short-name } 新增到您的工具列",
+   "text": "將 { -brand-short-name } 新增到您的工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/preferences/browserIcon.ftl",
+   "string_id": "appearance-browser-icon-entry-group",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/browserIcon.ftl",
+    "key": [
+     "appearance-browser-icon-entry-group"
+    ]
+   },
+   "fids": [
+    "75eb17932494"
+   ],
+   "findings": [
+    "The en-US says \"taskbar\", but the translation says 工具列, which means \"toolbar\"."
+   ],
+   "source": "description: Choose a custom icon for your taskbar, desktop and start menu.\nlabel: Browser icon",
+   "original": "選擇要在工具列、桌面與開始選單顯示的自訂圖示。",
+   "text": "選擇要在工作列、桌面與開始選單顯示的自訂圖示。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "browser/browser/preferences/moreFromMozilla.ftl",
+   "string_id": "more-from-moz-firefox-enterprise-card",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/moreFromMozilla.ftl",
+    "key": [
+     "more-from-moz-firefox-enterprise-card"
+    ]
+   },
+   "fids": [
+    "2bcdddff47a3"
+   ],
+   "findings": [
+    "\"regulated\" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical."
+   ],
+   "source": "description: Browser governance for regulated and security-sensitive organizations.\nlabel: { -firefox-enterprise-brand-name }",
+   "original": "為受管理或對注重安全性的組織進行瀏覽器治理。",
+   "text": "為受法規監管或注重安全性的組織進行瀏覽器治理。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/preferences/permissions.ftl",
+   "string_id": "permissions-site-speaker-desc",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/permissions.ftl",
+    "key": [
+     "permissions-site-speaker-desc"
+    ]
+   },
+   "fids": [
+    "02df6186938d"
+   ],
+   "findings": [
+    "允許 (\"allow\") appears twice, which makes the sentence ungrammatical."
+   ],
+   "source": "The following websites have requested to select an audio output device. You can specify which websites are allowed to select an audio output device.",
+   "original": "下列網站曾要求存取您的音訊輸出裝置。您可指定要允許哪些網站允許選擇音訊輸出裝置。",
+   "text": "下列網站曾要求存取您的音訊輸出裝置。您可指定要允許哪些網站選擇音訊輸出裝置。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-ai-controls-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-ai-controls-description"
+    ]
+   },
+   "fids": [
+    "1a0753016fbf"
+   ],
+   "findings": [
+    "\"Features enhanced with AI\" is rendered as AI 擴充功能 (\"AI extension features\"), while the rest of the page uses AI 強化功能."
+   ],
+   "source": "You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.",
+   "original": "您可隨時在 { -brand-short-name } 決定是否使用 AI 擴充功能。即將推出更多控制設定。",
+   "text": "您可隨時在 { -brand-short-name } 決定是否使用 AI 強化功能。即將推出更多控制設定。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-ai-controls-tab-group-suggestions-control",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-ai-controls-tab-group-suggestions-control"
+    ]
+   },
+   "fids": [
+    "8d07a6747680"
+   ],
+   "findings": [
+    "The translation says the feature manages the user's tabs, but the source only says it suggests names and organization."
+   ],
+   "source": "description: Get suggestions to name and organize your tabs.\nlabel: Tab group suggestions",
+   "original": "管理您的分頁，並提供名稱建議。",
+   "text": "取得為分頁命名與整理分頁的建議。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "space-alert-over-5gb-message2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "space-alert-over-5gb-message2"
+    ]
+   },
+   "fids": [
+    "f3a60712f4cd"
+   ],
+   "findings": [
+    "The menu path starts with the old name 選項 (\"Options\"), but the page is now called 設定 (\"Settings\")."
+   ],
+   "source": "<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.",
+   "original": "<strong>{ -brand-short-name } 的磁碟空間不足。</strong>網站內容可能無法正確顯示。您可以到「選項 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。",
+   "text": "<strong>{ -brand-short-name } 的磁碟空間不足。</strong>網站內容可能無法正確顯示。您可以到「設定 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/profiles.ftl",
+   "string_id": "delete-profile-page-title-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/profiles.ftl",
+    "key": [
+     "delete-profile-page-title-2"
+    ]
+   },
+   "fids": [
+    "99f3075a2e39"
+   ],
+   "findings": [
+    "'Profile' is rendered as 原則 ('policy') in the delete page title."
+   ],
+   "source": "Delete “{ $profilename }” profile",
+   "original": "刪除「{ $profilename }」原則",
+   "text": "刪除「{ $profilename }」設定檔",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/profiles.ftl",
+   "string_id": "new-profile-page-header-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/profiles.ftl",
+    "key": [
+     "new-profile-page-header-description"
+    ]
+   },
+   "fids": [
+    "a8ff4641af49"
+   ],
+   "findings": [
+    "'Privacy protections' is rendered as 'security protections' (安全性保護)."
+   ],
+   "source": "Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.",
+   "original": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的安全性保護設定都會預設開啟。",
+   "text": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的隱私保護設定都會預設開啟。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/profiles.ftl",
+   "string_id": "restored-profile-page-header-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/profiles.ftl",
+    "key": [
+     "restored-profile-page-header-description"
+    ]
+   },
+   "fids": [
+    "166d4d94ccf0"
+   ],
+   "findings": [
+    "'Privacy protections' is rendered as 'security protections' (安全性保護)."
+   ],
+   "source": "Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.",
+   "original": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的安全性保護設定都會預設開啟。",
+   "text": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的隱私保護設定都會預設開啟。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "protection-report-page-summary-default",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "protection-report-page-summary-default"
+    ]
+   },
+   "fids": [
+    "29883573dbc7"
+   ],
+   "findings": [
+    "The assertive 'protects' variant keeps the hedged 'can protect' (可)."
+   ],
+   "source": "{ -brand-short-name } protects your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.",
+   "original": "當您上網時，{ -brand-short-name } 可在背景保護您的隱私。以下是這些保護的個人摘要，以及能夠用來保護線上安全性的各種工具。",
+   "text": "當您上網時，{ -brand-short-name } 會在背景保護您的隱私。以下是這些保護的個人摘要，以及能夠用來保護線上安全性的各種工具。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "AD",
+   "file": "browser/browser/protections.ftl",
+   "string_id": "protections-vpn-banner-content",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protections.ftl",
+    "key": [
+     "protections-vpn-banner-content"
+    ]
+   },
+   "fids": [
+    "fc9cc8c0a1cd",
+    "66b8975cdb27"
+   ],
+   "findings": [
+    "'Try risk-free' is rendered as 'try for free' (免費試用).",
+    "The personal pronoun 他 is used for a product."
+   ],
+   "source": "Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”",
+   "original": "免費試用 { -mozilla-vpn-brand-name }，看看為什麼 TechRadar 說「他的速度、簡潔程度、每月低價格使其值得一試」。",
+   "text": "無風險試用 { -mozilla-vpn-brand-name }，看看為什麼 TechRadar 說「它的速度、簡潔程度、每月低價格使其值得一試」。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/protectionsPanel.ftl",
+   "string_id": "cfr-protections-panel-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protectionsPanel.ftl",
+    "key": [
+     "cfr-protections-panel-body"
+    ]
+   },
+   "fids": [
+    "d558744243f9"
+   ],
+   "findings": [
+    "'Protects you from many of the most common trackers' became a flat promise that common trackers can't record you."
+   ],
+   "source": "Keep your data to yourself. { -brand-short-name } protects you from many of the most common trackers that follow what you do online.",
+   "original": "保留自己的資料。{ -brand-short-name } 不讓常見的追蹤器記錄您的上網行為。",
+   "text": "保留自己的資料。{ -brand-short-name } 不讓許多常見的追蹤器記錄您的上網行為。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/protectionsPanel.ftl",
+   "string_id": "protections-panel-description-shim-allowed",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protectionsPanel.ftl",
+    "key": [
+     "protections-panel-description-shim-allowed"
+    ]
+   },
+   "fids": [
+    "c966a39125c3"
+   ],
+   "findings": [
+    "'Partially unblocked' is rendered as plainly 'unblocked'."
+   ],
+   "source": "Some trackers marked below have been partially unblocked on this page because you interacted with them.",
+   "original": "由於您已與此頁面中的部分追蹤器互動過，已解除封鎖下列標示的追蹤器。",
+   "text": "由於您已與此頁面中的部分追蹤器互動過，已部分解除封鎖下列標示的追蹤器。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/protectionsPanel.ftl",
+   "string_id": "protections-panel-shim-allowed-indicator",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/protectionsPanel.ftl",
+    "key": [
+     "protections-panel-shim-allowed-indicator"
+    ]
+   },
+   "fids": [
+    "e2ca977c8630"
+   ],
+   "findings": [
+    "'Tracker partially unblocked' became 'some trackers have been unblocked'."
+   ],
+   "source": "tooltiptext: Tracker partially unblocked",
+   "original": "部分追蹤器已解除封鎖",
+   "text": "追蹤器已部分解除封鎖",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/reportBrokenSite.ftl",
+   "string_id": "report-broken-site-panel-reason-adblocker-moz-box-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/reportBrokenSite.ftl",
+    "key": [
+     "report-broken-site-panel-reason-adblocker-moz-box-button"
+    ]
+   },
+   "fids": [
+    "035e815361b8"
+   ],
+   "findings": [
+    "'Ad blocker' is translated as 'ad trackers' (廣告追蹤器)."
+   ],
+   "source": "label: Site asked to turn off ad blocker",
+   "original": "網站要求關閉廣告追蹤器",
+   "text": "網站要求關閉廣告封鎖器",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "browser/browser/safebrowsing/blockedSite.ftl",
+   "string_id": "safeb-blocked-unwanted-page-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/safebrowsing/blockedSite.ftl",
+    "key": [
+     "safeb-blocked-unwanted-page-title"
+    ]
+   },
+   "fids": [
+    "29da4adaa8ec"
+   ],
+   "findings": [
+    "'Harmful programs' in the unwanted-software title is translated as 惡意軟體 ('malware'), so it reads the same as the malware title."
+   ],
+   "source": "The site ahead may contain harmful programs",
+   "original": "此網站可能含有惡意軟體",
+   "text": "此網站可能含有有害軟體",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "menu-view-open-tabs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "menu-view-open-tabs"
+    ]
+   },
+   "fids": [
+    "405f918a01a9"
+   ],
+   "findings": [
+    "The noun phrase 'Open Tabs' reads as the command 'open a tab'."
+   ],
+   "source": "label: Open Tabs",
+   "original": "開啟分頁",
+   "text": "已開啟的分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/sidebar.ftl",
+   "string_id": "sidebar-menu-open-tabs-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/sidebar.ftl",
+    "key": [
+     "sidebar-menu-open-tabs-label"
+    ]
+   },
+   "fids": [
+    "83d7b2128053"
+   ],
+   "findings": [
+    "The noun phrase 'Open tabs' reads as the command 'open a tab'."
+   ],
+   "source": "label: Open tabs",
+   "original": "開啟分頁",
+   "text": "已開啟的分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/speechDispatcher.ftl",
+   "string_id": "speech-dispatcher-lib-missing",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/speechDispatcher.ftl",
+    "key": [
+     "speech-dispatcher-lib-missing"
+    ]
+   },
+   "fids": [
+    "7645b8a08344"
+   ],
+   "findings": [
+    "The product name Speech Dispatcher is translated."
+   ],
+   "source": "You can’t use speech synthesis because the Speech Dispatcher library is missing.",
+   "original": "由於找不到語音分配器程式庫，無法使用語音合成功能。",
+   "text": "由於找不到 Speech Dispatcher 程式庫，無法使用語音合成功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/speechDispatcher.ftl",
+   "string_id": "speech-dispatcher-lib-too-old",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/speechDispatcher.ftl",
+    "key": [
+     "speech-dispatcher-lib-too-old"
+    ]
+   },
+   "fids": [
+    "cee8f0cfdd6b"
+   ],
+   "findings": [
+    "The product name Speech Dispatcher is translated."
+   ],
+   "source": "You can’t use speech synthesis because Speech Dispatcher needs to be updated.",
+   "original": "需要更新語音分配器程式庫，才能使用語音合成功能。",
+   "text": "需要更新 Speech Dispatcher 程式庫，才能使用語音合成功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/speechDispatcher.ftl",
+   "string_id": "speech-dispatcher-missing-symbol",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/speechDispatcher.ftl",
+    "key": [
+     "speech-dispatcher-missing-symbol"
+    ]
+   },
+   "fids": [
+    "07baa6888005"
+   ],
+   "findings": [
+    "The product name Speech Dispatcher is translated."
+   ],
+   "source": "You can’t use speech synthesis because the Speech Dispatcher library is broken.",
+   "original": "由於語音分配器程式庫已毀損，無法使用語音合成功能。",
+   "text": "由於 Speech Dispatcher 程式庫已毀損，無法使用語音合成功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/speechDispatcher.ftl",
+   "string_id": "speech-dispatcher-no-voices",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/speechDispatcher.ftl",
+    "key": [
+     "speech-dispatcher-no-voices"
+    ]
+   },
+   "fids": [
+    "0fd758a2a3d9"
+   ],
+   "findings": [
+    "The product name Speech Dispatcher is translated."
+   ],
+   "source": "You can’t use speech synthesis because voices aren’t available in Speech Dispatcher.",
+   "original": "由於語音分配器程式庫當中的語音無法使用，無法使用語音合成功能。",
+   "text": "由於 Speech Dispatcher 程式庫當中的語音無法使用，無法使用語音合成功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/browser/speechDispatcher.ftl",
+   "string_id": "speech-dispatcher-open-fail",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/speechDispatcher.ftl",
+    "key": [
+     "speech-dispatcher-open-fail"
+    ]
+   },
+   "fids": [
+    "7d9f95517d69"
+   ],
+   "findings": [
+    "The product name Speech Dispatcher is translated."
+   ],
+   "source": "You can’t use speech synthesis because Speech Dispatcher won’t open.",
+   "original": "由於無法開啟語音分配器程式庫，無法使用語音合成功能。",
+   "text": "由於無法開啟 Speech Dispatcher 程式庫，無法使用語音合成功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "browser/browser/tabbrowser.ftl",
+   "string_id": "tab-group-editor-action-copy-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabbrowser.ftl",
+    "key": [
+     "tab-group-editor-action-copy-links"
+    ]
+   },
+   "fids": [
+    "0d739ccbeed5"
+   ],
+   "findings": [
+    "The possessive 的 is used where the measure word 個 belongs."
+   ],
+   "source": "label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group",
+   "original": "複製群組中的 { $linkCount } 的鏈結",
+   "text": "複製群組中的 { $linkCount } 個鏈結",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/tabbrowser.ftl",
+   "string_id": "tabbrowser-confirm-close-all-duplicate-tabs-text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabbrowser.ftl",
+    "key": [
+     "tabbrowser-confirm-close-all-duplicate-tabs-text"
+    ]
+   },
+   "fids": [
+    "db8a84708a91"
+   ],
+   "findings": [
+    "'Last active tab' is rendered as 'last opened tab'."
+   ],
+   "source": "We’ll close duplicate tabs in this window. The last active\ntab will stay open.",
+   "original": "將關閉此視窗中重複的分頁，只保留最後一個開啟的分頁。",
+   "text": "將關閉此視窗中重複的分頁，只保留最後使用的分頁。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/tabbrowser.ftl",
+   "string_id": "tabbrowser-empty-private-tab-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabbrowser.ftl",
+    "key": [
+     "tabbrowser-empty-private-tab-title"
+    ]
+   },
+   "fids": [
+    "3d18b6602f5a"
+   ],
+   "findings": [
+    "The tab title 'New Private Tab' reads as the command 'Open new private tab'."
+   ],
+   "source": "New Private Tab",
+   "original": "開新隱私分頁",
+   "text": "新隱私分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/taskbartabs.ftl",
+   "string_id": "taskbar-tab-urlbar-button-close",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/taskbartabs.ftl",
+    "key": [
+     "taskbar-tab-urlbar-button-close"
+    ]
+   },
+   "fids": [
+    "fc0efb70b00c"
+   ],
+   "findings": [
+    "'Taskbar' is translated as 'sidebar' (側邊欄)."
+   ],
+   "source": "tooltiptext: Remove tab from taskbar",
+   "original": "從側邊欄移除分頁",
+   "text": "從工作列移除分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/taskbartabs.ftl",
+   "string_id": "taskbar-tab-urlbar-button-open",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/taskbartabs.ftl",
+    "key": [
+     "taskbar-tab-urlbar-button-open"
+    ]
+   },
+   "fids": [
+    "7a9de863186a"
+   ],
+   "findings": [
+    "'Taskbar' is translated as 'toolbar' (工具列)."
+   ],
+   "source": "tooltiptext: Add tab to taskbar",
+   "original": "將分頁新增到工具列",
+   "text": "將分頁新增到工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/browser/webrtcIndicator.ftl",
+   "string_id": "webrtc-allow-share-camera-unsafe-delegation",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/webrtcIndicator.ftl",
+    "key": [
+     "webrtc-allow-share-camera-unsafe-delegation"
+    ]
+   },
+   "fids": [
+    "b81228ec1e85"
+   ],
+   "findings": [
+    "The camera-only delegation prompt also asks about the microphone."
+   ],
+   "source": "Allow { $origin } to give { $thirdParty } access to your camera?",
+   "original": "要允許 { $origin } 授權 { $thirdParty } 使用您的攝影機與麥克風嗎？",
+   "text": "要允許 { $origin } 授權 { $thirdParty } 使用您的攝影機嗎？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/chrome/browser/browser.properties",
+   "string_id": "safebrowsing.reportedAttackSite",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/chrome/browser/browser.properties",
+    "key": [
+     "safebrowsing.reportedAttackSite"
+    ]
+   },
+   "fids": [
+    "26f71dfb47a5"
+   ],
+   "findings": [
+    "'Reported Attack Site!' is translated as 'Known harmful site!', which turns a report into a confirmed fact."
+   ],
+   "source": "Reported Attack Site!",
+   "original": "已知的有害網站！",
+   "text": "已檢舉為攻擊網站！",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "browser/chrome/browser/feeds/subscribe.properties",
+   "string_id": "addProtocolHandlerMessage",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/chrome/browser/feeds/subscribe.properties",
+    "key": [
+     "addProtocolHandlerMessage"
+    ]
+   },
+   "fids": [
+    "d3fc9969c63b"
+   ],
+   "findings": [
+    "Typo: 鍵結 should be 鏈結 ('link')."
+   ],
+   "source": "Add “%1$S” as an application for %2$S links?",
+   "original": "要新增「%1$S」為處理 %2$S 鍵結的應用程式嗎？",
+   "text": "要新增「%1$S」為處理 %2$S 鏈結的應用程式嗎？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/chrome/browser/places/bookmarkProperties.properties",
+   "string_id": "dialogTitleAddBookmarkFolder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/chrome/browser/places/bookmarkProperties.properties",
+    "key": [
+     "dialogTitleAddBookmarkFolder"
+    ]
+   },
+   "fids": [
+    "3b9259ef9f38"
+   ],
+   "findings": [
+    "'Add bookmark folder' is translated as 'Add bookmarks toolbar'."
+   ],
+   "source": "Add bookmark folder",
+   "original": "新增書籤工具列",
+   "text": "新增書籤資料夾",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/chrome/browser/places/bookmarkProperties.properties",
+   "string_id": "dialogTitleEditBookmarkFolder",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/chrome/browser/places/bookmarkProperties.properties",
+    "key": [
+     "dialogTitleEditBookmarkFolder"
+    ]
+   },
+   "fids": [
+    "f3e82c95353b"
+   ],
+   "findings": [
+    "'Edit bookmark folder' is translated as 'Edit bookmarks toolbar'."
+   ],
+   "source": "Edit bookmark folder",
+   "original": "編輯書籤工具列",
+   "text": "編輯書籤資料夾",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/chrome/browser/sitePermissions.properties",
+   "string_id": "permission.shortcuts.label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/chrome/browser/sitePermissions.properties",
+    "key": [
+     "permission.shortcuts.label"
+    ]
+   },
+   "fids": [
+    "2bc792ba2ea0"
+   ],
+   "findings": [
+    "'Override keyboard shortcuts' is translated as 'Ignore keyboard shortcuts'."
+   ],
+   "source": "Override keyboard shortcuts",
+   "original": "忽略快速鍵",
+   "text": "蓋過快速鍵",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/installer/custom.properties",
+   "string_id": "REG_APP_DESC",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/installer/custom.properties",
+    "key": [
+     "REG_APP_DESC"
+    ]
+   },
+   "fids": [
+    "ca7f7bb4195c"
+   ],
+   "findings": [
+    "'Protection from online identity theft' becomes a 'new online scam-site detection feature'"
+   ],
+   "source": "$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.",
+   "original": "$BrandShortName 帶來您渴望的安全、簡單、輕鬆的瀏覽體驗。友善的操作介面、強化的安全性（包含新的線上辨識詐騙網站功能）和智慧搜尋功能讓您將網際網路發揮到極致。",
+   "text": "$BrandShortName 帶來您渴望的安全、簡單、輕鬆的瀏覽體驗。友善的操作介面、強化的安全性（包含線上身分盜用防護）和智慧搜尋功能讓您將網際網路發揮到極致。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/installer/custom.properties",
+   "string_id": "WARN_RESTART_REQUIRED_UNINSTALL",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/installer/custom.properties",
+    "key": [
+     "WARN_RESTART_REQUIRED_UNINSTALL"
+    ]
+   },
+   "fids": [
+    "ecdb54a1efb8"
+   ],
+   "findings": [
+    "'A previous uninstall' is dropped, so it sounds like the current operation needs a reboot"
+   ],
+   "source": "Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?",
+   "original": "必須重新啟動電腦才能完成 $BrandShortName 的解除安裝程序。您要現在重開嗎？",
+   "text": "必須重新啟動電腦才能完成先前的 $BrandShortName 的解除安裝程序。您要現在重開嗎？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "browser/installer/custom.properties",
+   "string_id": "WARN_RESTART_REQUIRED_UPGRADE",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/installer/custom.properties",
+    "key": [
+     "WARN_RESTART_REQUIRED_UPGRADE"
+    ]
+   },
+   "fids": [
+    "032eb9839be2"
+   ],
+   "findings": [
+    "'A previous upgrade' is dropped"
+   ],
+   "source": "Your computer must be restarted to complete a previous upgrade of $BrandShortName. Do you want to reboot now?",
+   "original": "您的電腦必須重新啟動以完成升級 $BrandShortName。您想要立刻重新啟動電腦嗎？",
+   "text": "您的電腦必須重新啟動以完成先前的 $BrandShortName 升級。您想要立刻重新啟動電腦嗎？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/accessibility.properties",
+   "string_id": "accessibility.checks.empty2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/accessibility.properties",
+    "key": [
+     "accessibility.checks.empty2"
+    ]
+   },
+   "fids": [
+    "91f25e65e156"
+   ],
+   "findings": [
+    "'No checks for this node.' is rendered as the command 'Do not check this node.'"
+   ],
+   "source": "No checks for this node.",
+   "original": "不檢查此節點。",
+   "text": "此節點沒有檢查結果。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/debugger.properties",
+   "string_id": "settings.toggleSourceMaps.tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/debugger.properties",
+    "key": [
+     "settings.toggleSourceMaps.tooltip"
+    ]
+   },
+   "fids": [
+    "ff15e34b6597"
+   ],
+   "findings": [
+    "The source maps tooltip has the relationship backwards: it says DevTools loads generated sources in addition to unprocessed ones."
+   ],
+   "source": "Enable Source Maps to let DevTools load your original sources in addition to your generated ones",
+   "original": "開啟原始碼對應表後，即可讓開發者工具除了載入未經處理的原始碼外，也載入由程式產生的原始碼。",
+   "text": "開啟原始碼對應表後，即可讓開發者工具除了載入由程式產生的原始碼外，也載入未經處理的原始碼。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "devtools/client/debugger.properties",
+   "string_id": "sourceTabs.closeTabsToEnd",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/debugger.properties",
+    "key": [
+     "sourceTabs.closeTabsToEnd"
+    ]
+   },
+   "fids": [
+    "125453833b83"
+   ],
+   "findings": [
+    "'Tabs' is translated 標籤 here, while every neighboring source-tab menu item uses 分頁."
+   ],
+   "source": "Close tabs to the right",
+   "original": "關閉右方標籤",
+   "text": "關閉右方分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "devtools/client/inspector.ftl",
+   "string_id": "colorpicker-tooltip-alpha-slider-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/inspector.ftl",
+    "key": [
+     "colorpicker-tooltip-alpha-slider-title"
+    ]
+   },
+   "fids": [
+    "3247e21cd343"
+   ],
+   "findings": [
+    "An invisible zero-width space (U+200B) sits between 透 and 明 in 透明度."
+   ],
+   "source": "Opacity",
+   "original": "透​明度",
+   "text": "透明度",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/memory.properties",
+   "string_id": "heapview.field.totalbytes.tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/memory.properties",
+    "key": [
+     "heapview.field.totalbytes.tooltip"
+    ]
+   },
+   "fids": [
+    "455944ca5ac9"
+   ],
+   "findings": [
+    "The Total Bytes tooltip says 'excluding subgroups' where the en-US says 'including subgroups'."
+   ],
+   "source": "The number of bytes taken up by this group, including subgroups",
+   "original": "此群組消耗的位元組數量，排除子群組",
+   "text": "此群組消耗的位元組數量，包含子群組",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "devtools/client/netmonitor.properties",
+   "string_id": "netmonitor.emptyBrowserToolbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/netmonitor.properties",
+    "key": [
+     "netmonitor.emptyBrowserToolbox"
+    ]
+   },
+   "fids": [
+    "001b498714af"
+   ],
+   "findings": [
+    "Typo: 請出請求 should be 送出請求."
+   ],
+   "source": "Perform a request to see detailed information about network activity.",
+   "original": "請出請求，即可檢視網路活動的詳細資訊。",
+   "text": "送出請求，即可檢視網路活動的詳細資訊。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/netmonitor.properties",
+   "string_id": "networkMenu.ws.summary.tooltip.framesTotalTime",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/netmonitor.properties",
+    "key": [
+     "networkMenu.ws.summary.tooltip.framesTotalTime"
+    ]
+   },
+   "fids": [
+    "42e5930864b4"
+   ],
+   "findings": [
+    "'last displayed message' is translated as 上一筆 ('the previous one') instead of 'the last one'."
+   ],
+   "source": "Total elapsed time between the first and last displayed messages",
+   "original": "第一筆與上一筆顯示的訊息中間間隔的時間",
+   "text": "第一筆與最後一筆顯示的訊息中間間隔的時間",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/storage.ftl",
+   "string_id": "storage-table-type-extensionstorage-hint",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/storage.ftl",
+    "key": [
+     "storage-table-type-extensionstorage-hint"
+    ]
+   },
+   "fids": [
+    "641cb1835a13"
+   ],
+   "findings": [
+    "The hint says to view or edit 'extensions' rather than the extension storage."
+   ],
+   "source": "View and edit the extension storage by selecting a host. <a data-l10n-name=\"learn-more-link\">Learn more</a>",
+   "original": "選擇主機來檢視或編輯擴充套件。<a data-l10n-name=\"learn-more-link\">了解更多</a>",
+   "text": "選擇主機來檢視或編輯擴充套件儲存空間。<a data-l10n-name=\"learn-more-link\">了解更多</a>",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "devtools/client/toolbox.ftl",
+   "string_id": "toolbox-mode-parent-process-container",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox.ftl",
+    "key": [
+     "toolbox-mode-parent-process-container"
+    ]
+   },
+   "fids": [
+    "4c840fdd6877"
+   ],
+   "findings": [
+    "Typo: 謹 ('careful') is used instead of 僅 ('only')."
+   ],
+   "source": "title: Only focus on resources from the parent process.",
+   "original": "謹聚焦於來自父處理程序的資源。",
+   "text": "僅聚焦於來自父處理程序的資源。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "devtools/client/toolbox.properties",
+   "string_id": "toolbox.meatballMenu.button.tooltip",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/toolbox.properties",
+    "key": [
+     "toolbox.meatballMenu.button.tooltip"
+    ]
+   },
+   "fids": [
+    "7db1033de31c"
+   ],
+   "findings": [
+    "Uses the variant character 説 instead of the standard Traditional Chinese 說."
+   ],
+   "source": "Customize Developer Tools and Get Help",
+   "original": "自訂開發者工具並取得説明",
+   "text": "自訂開發者工具並取得說明",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "devtools/client/tooltips.ftl",
+   "string_id": "inactive-css-position-property-on-unpositioned-box",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/tooltips.ftl",
+    "key": [
+     "inactive-css-position-property-on-unpositioned-box"
+    ]
+   },
+   "fids": [
+    "3172b8e653ca"
+   ],
+   "findings": [
+    "'not a positioned element' is translated as 未置入 ('not inserted') instead of 'not positioned'."
+   ],
+   "source": "<strong>{ $property }</strong> has no effect on this element since it’s not a positioned element.",
+   "original": "由於元素未置入，<strong>{ $property }</strong> 對此元素沒有影響。",
+   "text": "由於元素未定位，<strong>{ $property }</strong> 對此元素沒有影響。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "devtools/shared/webconsole.properties",
+   "string_id": "preventedConsoleClear",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/shared/webconsole.properties",
+    "key": [
+     "preventedConsoleClear"
+    ]
+   },
+   "fids": [
+    "361fc05f0813",
+    "495976c68afd"
+   ],
+   "findings": [
+    "`preventedConsoleClear` quotes “保存紀錄” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “保留紀錄”",
+    "The quoted option name 保存紀錄 does not match the actual setting label 保留紀錄."
+   ],
+   "source": "console.clear() was prevented due to “Persist Logs”",
+   "original": "由於開啟「保存紀錄」功能，已防止執行 console.clear()",
+   "text": "由於開啟「保留紀錄」功能，已防止執行 console.clear()",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/accessibility/AccessFu.properties",
+   "string_id": "slider",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/accessibility/AccessFu.properties",
+    "key": [
+     "slider"
+    ]
+   },
+   "fids": [
+    "4ff842e83ff8"
+   ],
+   "findings": [
+    "'slider' is translated as 滾動條 (scroll bar)."
+   ],
+   "source": "slider",
+   "original": "滾動條",
+   "text": "滑桿",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/accessibility/mac/accessible.properties",
+   "string_id": "tab",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/accessibility/mac/accessible.properties",
+    "key": [
+     "tab"
+    ]
+   },
+   "fids": [
+    "288e341acac9"
+   ],
+   "findings": [
+    "The role description for a tab widget is translated as 'Tab key' (Tab 鍵)."
+   ],
+   "source": "tab",
+   "original": "Tab 鍵",
+   "text": "分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "BlockAutoplayError",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "BlockAutoplayError"
+    ]
+   },
+   "fids": [
+    "dcaab9266517"
+   ],
+   "findings": [
+    "The three alternative conditions are split by a semicolon, so the last two read as statements of fact."
+   ],
+   "source": "Autoplay is only allowed when approved by the user, the site is activated by the user, or media is muted.",
+   "original": "僅在使用者同意時才允許自動播放；使用者開啟了本網站，或媒體已被靜音。",
+   "text": "僅在使用者同意、使用者已啟用本網站，或媒體已被靜音時才允許自動播放。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "DocumentWriteIgnored",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "DocumentWriteIgnored"
+    ]
+   },
+   "fids": [
+    "b7c765319279"
+   ],
+   "findings": [
+    "'asynchronously-loaded' is translated as 'synchronously loaded' (同步讀取), which reverses the meaning."
+   ],
+   "source": "A call to document.write() from an asynchronously-loaded external script was ignored.",
+   "original": "一個同步讀取的外部程式碼（Script）所呼叫的 document.write() 被忽略。",
+   "text": "一個非同步讀取的外部程式碼（Script）所呼叫的 document.write() 被忽略。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "ImportMapIntegrityValuesNotStrings",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "ImportMapIntegrityValuesNotStrings"
+    ]
+   },
+   "fids": [
+    "2e6b031d47cf"
+   ],
+   "findings": [
+    "'Integrity values' is translated as 'integer values' (整數值)."
+   ],
+   "source": "Integrity values need to be strings.",
+   "original": "整數值必須是字串。",
+   "text": "完整性（integrity）值必須是字串。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "PostMessageSharedMemoryObjectToCrossOriginWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "PostMessageSharedMemoryObjectToCrossOriginWarning"
+    ]
+   },
+   "fids": [
+    "04f9a0958565"
+   ],
+   "findings": [
+    "'post message' (postMessage) is translated as sending by the HTTP POST method."
+   ],
+   "source": "Cannot post message containing a shared memory object to a cross-origin window.",
+   "original": "無法將包含共享記憶體物件的訊息用 POST 方式傳送到跨來源視窗。",
+   "text": "無法將包含共享記憶體物件的訊息透過 postMessage 傳送到跨來源視窗。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "RewriteYouTubeEmbedPathParams",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "RewriteYouTubeEmbedPathParams"
+    ]
+   },
+   "fids": [
+    "643891ffa0da"
+   ],
+   "findings": [
+    "'Params were unsupported by iframe embeds and converted' becomes 'Query is invalid and was removed from the URL'. 'YouTube' (do-not-translate) is also written 'Youtube'."
+   ],
+   "source": "Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.",
+   "original": "將舊版 Youtube Flash embed（%S）重寫為 iframe embed（%S）。Query 無效，已自網址移除。若可行的話，請更新頁面改用 iframe。",
+   "text": "將舊版 YouTube Flash embed（%S）重寫為 iframe embed（%S）。iframe embed 不支援這些參數，已進行轉換。若可行的話，請更新頁面改用 iframe。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "SelectOptionsLengthAssignmentWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "SelectOptionsLengthAssignmentWarning"
+    ]
+   },
+   "fids": [
+    "95d827b562bc"
+   ],
+   "findings": [
+    "The API name HTMLOptionsCollection.length, marked do-not-translate, is truncated to 'HTMLOptionsCollection.lengt'."
+   ],
+   "source": "Refused to expand <select> option list via assignment to HTMLOptionsCollection.length (value %1$S). The maximum supported size is %2$S.",
+   "original": "拒絕透過指派 HTMLOptionsCollection.lengt（值為 %1$S）來展開 <select> 選項。最大支援的值為 %2$S。",
+   "text": "拒絕透過指派 HTMLOptionsCollection.length（值為 %1$S）來展開 <select> 選項。最大支援的值為 %2$S。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/css.properties",
+   "string_id": "PEMQExpectedFeatureValue",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/css.properties",
+    "key": [
+     "PEMQExpectedFeatureValue"
+    ]
+   },
+   "fids": [
+    "fb12361b643b"
+   ],
+   "findings": [
+    "'invalid value for media feature' is translated as 'invalid media feature name'."
+   ],
+   "source": "Found invalid value for media feature.",
+   "original": "找到無效的媒體功能名稱。",
+   "text": "找到無效的媒體功能值。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/css.properties",
+   "string_id": "PENeverMatchingHostSelector",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/css.properties",
+    "key": [
+     "PENeverMatchingHostSelector"
+    ]
+   },
+   "fids": [
+    "03c6ba68e9ab"
+   ],
+   "findings": [
+    "'is not featureless and will never match' becomes 'will take effect, and won't match anything'."
+   ],
+   "source": ":host selector in ‘%S’ is not featureless and will never match. Maybe you intended to use :host()?",
+   "original": "「%S」當中的 :host 選擇器會有作用，不會符合任何項目。也許您要用的是 :host()？",
+   "text": "「%S」當中的 :host 選擇器並非 featureless，永遠不會符合任何項目。也許您要用的是 :host()？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/css.properties",
+   "string_id": "PESelectorGroupExtraCombinator",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/css.properties",
+    "key": [
+     "PESelectorGroupExtraCombinator"
+    ]
+   },
+   "fids": [
+    "52a32113b110"
+   ],
+   "findings": [
+    "'Dangling combinator' is translated as 'confusing combination'."
+   ],
+   "source": "Dangling combinator.",
+   "original": "令人混淆的組合。",
+   "text": "多餘的組合子（combinator）。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "dom/chrome/layout/htmlparser.properties",
+   "string_id": "EncMetaUserDefined",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/htmlparser.properties",
+    "key": [
+     "EncMetaUserDefined"
+    ]
+   },
+   "fids": [
+    "807f47976599"
+   ],
+   "findings": [
+    "The encoding identifier windows-1252 is misspelled as 'windown-1252'."
+   ],
+   "source": "A meta tag was used to declare the character encoding as x-user-defined. This was interpreted as a windows-1252 declaration instead for compatibility with intentionally mis-encoded legacy fonts. This site should migrate to Unicode.",
+   "original": "網頁的 meta 標籤宣告使用 x-user-defined 作為字元編碼格式。為了保持與刻意編碼錯誤的傳統字體相容性，將會解譯為宣告使用 windown-1252 編碼。此網站應該轉移為使用 Unicode。",
+   "text": "網頁的 meta 標籤宣告使用 x-user-defined 作為字元編碼格式。為了保持與刻意編碼錯誤的傳統字體相容性，將會解譯為宣告使用 windows-1252 編碼。此網站應該轉移為使用 Unicode。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/htmlparser.properties",
+   "string_id": "errPrematureEndOfComment",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/htmlparser.properties",
+    "key": [
+     "errPrematureEndOfComment"
+    ]
+   },
+   "fids": [
+    "552b3a607c76"
+   ],
+   "findings": [
+    "'Premature end of comment' is translated as 'the document ended normally'."
+   ],
+   "source": "Premature end of comment. Use “-->” to end a comment properly.",
+   "original": "文件為正常結束。請使用「-->」正確地結束註解。",
+   "text": "註解過早結束。請使用「-->」正確地結束註解。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/htmlparser.properties",
+   "string_id": "errProcessingInstruction",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/htmlparser.properties",
+    "key": [
+     "errProcessingInstruction"
+    ]
+   },
+   "fids": [
+    "e9ade4622fce"
+   ],
+   "findings": [
+    "The quoted token '<?' is shortened to '?'."
+   ],
+   "source": "Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)",
+   "original": "發現了「?」。可能造成的原因: 嘗試在 HTML 當中使用 XML 處理指令。（HTML 當中並不支援 XML 處理指令）",
+   "text": "發現了「<?」。可能造成的原因: 嘗試在 HTML 當中使用 XML 處理指令。（HTML 當中並不支援 XML 處理指令）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/htmlparser.properties",
+   "string_id": "errUnclosedElements",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/htmlparser.properties",
+    "key": [
+     "errUnclosedElements"
+    ]
+   },
+   "fids": [
+    "290d761aaea6"
+   ],
+   "findings": [
+    "'but there were open elements' becomes 'but that is an open element'."
+   ],
+   "source": "End tag “%1$S” seen, but there were open elements.",
+   "original": "發現了結束標籤「%1$S」，但那是開放元素。",
+   "text": "發現了結束標籤「%1$S」，但仍有未關閉的元素。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ImageMapCircleNegativeRadius",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ImageMapCircleNegativeRadius"
+    ]
+   },
+   "fids": [
+    "2db438781e44"
+   ],
+   "findings": [
+    "`ImageMapCircleNegativeRadius` uses straight double quotes"
+   ],
+   "source": "The “coords” attribute of the <area shape=\"circle\"> tag has a negative radius.",
+   "original": "<area shape=\"circle\"> 標籤中的 \"coords\" 屬性不能有負的半徑。",
+   "text": "<area shape=\"circle\"> 標籤中的 「coords」 屬性不能有負的半徑。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ImageMapCircleWrongNumberOfCoords",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ImageMapCircleWrongNumberOfCoords"
+    ]
+   },
+   "fids": [
+    "7752850a26cb"
+   ],
+   "findings": [
+    "`ImageMapCircleWrongNumberOfCoords` uses straight double quotes"
+   ],
+   "source": "The “coords” attribute of the <area shape=\"circle\"> tag is not in the “center-x,center-y,radius” format.",
+   "original": "<area shape=\"circle\"> 標籤中的 \"coords\" 屬性並不是 \"center-x,center-y,radius\" 的格式。",
+   "text": "<area shape=\"circle\"> 標籤中的 「coords」 屬性並不是 「center-x,center-y,radius」 的格式。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ImageMapPolyOddNumberOfCoords",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ImageMapPolyOddNumberOfCoords"
+    ]
+   },
+   "fids": [
+    "0a6c1dd3fde7"
+   ],
+   "findings": [
+    "`ImageMapPolyOddNumberOfCoords` uses straight double quotes"
+   ],
+   "source": "The “coords” attribute of the <area shape=\"poly\"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).",
+   "original": "<area shape=\"poly\"> 標籤中的 \"coords\" 屬性少了最後的 y 座標 (正確格式是 \"x1,y1,x2,y2,…\")。",
+   "text": "<area shape=\"poly\"> 標籤中的 「coords」 屬性少了最後的 y 座標 (正確格式是 「x1,y1,x2,y2,…」)。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ImageMapPolyWrongNumberOfCoords",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ImageMapPolyWrongNumberOfCoords"
+    ]
+   },
+   "fids": [
+    "728c32593cc4"
+   ],
+   "findings": [
+    "`ImageMapPolyWrongNumberOfCoords` uses straight double quotes"
+   ],
+   "source": "The “coords” attribute of the <area shape=\"poly\"> tag is not in the “x1,y1,x2,y2 …” format.",
+   "original": "<area shape=\"poly\"> 標籤中的 \"coords\" 屬性並不是 \"x1,y1,x2,y2,…\" 的格式。",
+   "text": "<area shape=\"poly\"> 標籤中的 「coords」 屬性並不是 「x1,y1,x2,y2,…」 的格式。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ImageMapRectBoundsError",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ImageMapRectBoundsError"
+    ]
+   },
+   "fids": [
+    "d9e52abef6a7"
+   ],
+   "findings": [
+    "`ImageMapRectBoundsError` uses straight double quotes"
+   ],
+   "source": "The “coords” attribute of the <area shape=\"rect\"> tag is not in the “left,top,right,bottom” format.",
+   "original": "<area shape=\"rect\">的\"coords\" 屬性不是 \"left,top,right,bottom\" 格式。",
+   "text": "<area shape=\"rect\">的「coords」 屬性不是 「left,top,right,bottom」 格式。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/layout_errors.properties",
+   "string_id": "ScrollLinkedEffectFound3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/layout_errors.properties",
+    "key": [
+     "ScrollLinkedEffectFound3"
+    ]
+   },
+   "fids": [
+    "3d1e72f476a7"
+   ],
+   "findings": [
+    "'asynchronous panning' is translated as 'synchronous panning' (同步平移)."
+   ],
+   "source": "This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and features!",
+   "original": "此網站使用與滾動列連結的定位效果，可能無法與同步平移效果一同使用，請參考 https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html 當中的詳細資訊，並與我們一起討論相關的工具與功能！",
+   "text": "此網站使用與滾動列連結的定位效果，可能無法與非同步平移效果一同使用，請參考 https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html 當中的詳細資訊，並與我們一起討論相關的工具與功能！",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/xmlparser.properties",
+   "string_id": "28",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/xmlparser.properties",
+    "key": [
+     "28"
+    ]
+   },
+   "fids": [
+    "105f088ecd5b"
+   ],
+   "findings": [
+    "'must not undeclare prefix' is translated as 'must be an undeclared prefix', which drops the negation."
+   ],
+   "source": "must not undeclare prefix",
+   "original": "必須為未定義的前置詞 (Prefix)",
+   "text": "不可取消定義前置詞 (Prefix)",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/layout/xmlparser.properties",
+   "string_id": "38",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/layout/xmlparser.properties",
+    "key": [
+     "38"
+    ]
+   },
+   "fids": [
+    "20d74f4b90e4"
+   ],
+   "findings": [
+    "The negation is dropped: 'must not be undeclared or bound to another namespace' becomes 'must be undeclared or bound to another namespace'."
+   ],
+   "source": "reserved prefix (xml) must not be undeclared or bound to another namespace name",
+   "original": "保留的前置詞 (Prefix) (xml) 必須為未定義或繫結到另一個 namespace 名稱",
+   "text": "保留的前置詞 (Prefix) (xml) 不可取消定義或繫結到另一個 namespace 名稱",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/csp.properties",
+   "string_id": "CSPROInlineScriptViolation2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/csp.properties",
+    "key": [
+     "CSPROInlineScriptViolation2"
+    ]
+   },
+   "fids": [
+    "5d4697ca0408"
+   ],
+   "findings": [
+    "The Report-Only message says the inline script was not run, but report-only policies do not block anything."
+   ],
+   "source": "(Report-Only policy) The page’s settings would block an inline script (%2$S) from being executed because it violates the following directive: “%1$S”. Consider using a hash ('sha256-%3$S') or a nonce.",
+   "original": "（Report-Only 政策）由於違反了下列指示：「%1$S」，未讓頁面中的行內指令碼（%2$S）生效。請考慮使用 Hash（「sha256-%3$S」）或 nonce。",
+   "text": "（Report-Only 政策）由於會違反下列指示：「%1$S」，將不會讓頁面中的行內指令碼（%2$S）生效。請考慮使用 Hash（「sha256-%3$S」）或 nonce。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/csp.properties",
+   "string_id": "CSPScriptViolation",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/csp.properties",
+    "key": [
+     "CSPScriptViolation"
+    ]
+   },
+   "fids": [
+    "d51ec13ae0a9"
+   ],
+   "findings": [
+    "A script loaded from a URL is described as an 'inline script' (行內指令碼)."
+   ],
+   "source": "The page’s settings blocked a script (%3$S) at %2$S from being executed because it violates the following directive: “%1$S”",
+   "original": "由於違反了下列指示：「%1$S」，位於 %2$S 的行內指令碼（%3$S）無法執行",
+   "text": "由於違反了下列指示：「%1$S」，位於 %2$S 的指令碼（%3$S）無法執行",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/csp.properties",
+   "string_id": "CSPStyleViolation",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/csp.properties",
+    "key": [
+     "CSPStyleViolation"
+    ]
+   },
+   "fids": [
+    "ed1a599e1270"
+   ],
+   "findings": [
+    "A style loaded from a URL is described as an 'inline style' (行內樣式)."
+   ],
+   "source": "The page’s settings blocked a style (%3$S) at %2$S from being applied because it violates the following directive: “%1$S”",
+   "original": "由於違反了下列指示：「%1$S」，位於 %2$S 的行內樣式（%3$S）無法套用",
+   "text": "由於違反了下列指示：「%1$S」，位於 %2$S 的樣式（%3$S）無法套用",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/csp.properties",
+   "string_id": "ignoringReportOnlyDirective",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/csp.properties",
+    "key": [
+     "ignoringReportOnlyDirective"
+    ]
+   },
+   "fids": [
+    "13f8b4d000c9"
+   ],
+   "findings": [
+    "'report-only policy' is translated as 'read-only policy' (唯讀政策)."
+   ],
+   "source": "Ignoring sandbox directive when delivered in a report-only policy ‘%1$S’",
+   "original": "在以唯讀政策「%1$S」傳遞時，忽略沙盒指示",
+   "text": "在以 Report-Only 政策「%1$S」傳遞時，忽略沙盒指示",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/csp.properties",
+   "string_id": "reportURINorReportToNotInReportOnlyHeader",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/csp.properties",
+    "key": [
+     "reportURINorReportToNotInReportOnlyHeader"
+    ]
+   },
+   "fids": [
+    "8b32259ccc29"
+   ],
+   "findings": [
+    "The 'nor a report-to directive' part is dropped."
+   ],
+   "source": "This site (%1$S) has a Report-Only policy without a report-uri directive nor a report-to directive. CSP will not block and cannot report violations of this policy.",
+   "original": "此網站（%1$S）含有 Report-Only 政策卻未指定 report-uri。CSP 將不會封鎖，且無法回報此政策違反情形。",
+   "text": "此網站（%1$S）含有 Report-Only 政策卻未指定 report-uri 或 report-to 指示。CSP 將不會封鎖，且無法回報此政策違反情形。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/chrome/security/security.properties",
+   "string_id": "BlockMixedDisplayContent",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/security.properties",
+    "key": [
+     "BlockMixedDisplayContent"
+    ]
+   },
+   "fids": [
+    "49456793222c"
+   ],
+   "findings": [
+    "'mixed content' is written 混和 here but 混合 elsewhere in the same file."
+   ],
+   "source": "Blocked loading mixed display content “%1$S”",
+   "original": "已封鎖載入混和的顯示內容「%1$S」",
+   "text": "已封鎖載入混合的顯示內容「%1$S」",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "dom/chrome/security/security.properties",
+   "string_id": "BlockTopLevelDataURINavigation",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/security.properties",
+    "key": [
+     "BlockTopLevelDataURINavigation"
+    ]
+   },
+   "fids": [
+    "dd101e98ed27"
+   ],
+   "findings": [
+    "'data: URI', marked do-not-translate, is split and translated as '資料: … URI', which breaks the meaning."
+   ],
+   "source": "Navigation to toplevel data: URI not allowed (Blocked loading of: “%1$S”)",
+   "original": "不允許瀏覽頂層資料: 不允許的 URI（「%1$S」載入被封鎖）",
+   "text": "不允許瀏覽頂層 data: URI（「%1$S」載入被封鎖）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/chrome/security/security.properties",
+   "string_id": "BothAllowScriptsAndSameOriginPresent",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/security/security.properties",
+    "key": [
+     "BothAllowScriptsAndSameOriginPresent"
+    ]
+   },
+   "fids": [
+    "0820384f44f4"
+   ],
+   "findings": [
+    "'An iframe ... can remove its sandboxing' becomes 'the iframe's sandbox will be removed'."
+   ],
+   "source": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.",
+   "original": "同時包含 allow-scripts 與 allow-same-origin 兩個 sandbox 屬性的 iframe 的 sandbox 功能會被移除。",
+   "text": "同時包含 allow-scripts 與 allow-same-origin 兩個 sandbox 屬性的 iframe 可以移除自身的 sandbox 功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-image-repeated-purposes",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-image-repeated-purposes"
+    ]
+   },
+   "fids": [
+    "5cdf6761f0cf"
+   ],
+   "findings": [
+    "There is a half-width colon where zh-TW convention calls for a full-width colon."
+   ],
+   "source": "{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.",
+   "original": "Index { $index } 的 { $memberName } 有重複的用途: { $purposes }。",
+   "text": "Index { $index } 的 { $memberName } 有重複的用途：{ $purposes }。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "dom/dom/xslt.ftl",
+   "string_id": "xpath-bad-colon",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/xslt.ftl",
+    "key": [
+     "xpath-bad-colon"
+    ]
+   },
+   "fids": [
+    "341bb249208b"
+   ],
+   "findings": [
+    "''':' unexpected' is translated as '':' missing'."
+   ],
+   "source": "XPath parse failure: ‘:’ unexpected:",
+   "original": "分析 XPath 錯誤: 缺少「:」:",
+   "text": "分析 XPath 錯誤: 不應出現「:」:",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "dom/dom/xslt.ftl",
+   "string_id": "xpath-bad-extension-function",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/xslt.ftl",
+    "key": [
+     "xpath-bad-extension-function"
+    ]
+   },
+   "fids": [
+    "1f8f95d1824b"
+   ],
+   "findings": [
+    "The sentence ends with a full-width comma instead of a full stop."
+   ],
+   "source": "An unknown XPath extension function was called.",
+   "original": "呼叫了未知的 XPath 擴充功能，",
+   "text": "呼叫了未知的 XPath 擴充功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "netwerk/necko.properties",
+   "string_id": "CookieAttributeIgnored",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "netwerk/necko.properties",
+    "key": [
+     "CookieAttributeIgnored"
+    ]
+   },
+   "fids": [
+    "4d48520eea28"
+   ],
+   "findings": [
+    "The text says the cookie is too big, but en-US says the attribute value is too big."
+   ],
+   "source": "The value of the attribute “%2$S” for the cookie “%1$S” has been rejected because its size is too big. Max size is %3$S B.",
+   "original": "由於 Cookie「%1$S」太大，已拒絕屬性「%2$S」。最大大小為 %3$S B。",
+   "text": "由於 Cookie「%1$S」的屬性「%2$S」值太大，已拒絕該值。最大大小為 %3$S B。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "netwerk/necko.properties",
+   "string_id": "CookieBlockedForeignByETP",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "netwerk/necko.properties",
+    "key": [
+     "CookieBlockedForeignByETP"
+    ]
+   },
+   "fids": [
+    "c9f485554726"
+   ],
+   "findings": [
+    "開啟 is duplicated: 'turned on Enhanced Tracking Protection turn-on feature'."
+   ],
+   "source": "Request to access cookie or storage on “%1$S” was blocked because we are blocking all third-party storage access requests and Enhanced Tracking Protection is enabled.",
+   "original": "由於我們封鎖所有第三方儲存空間存取請求，且開啟加強型追蹤保護開啟功能，已封鎖對「%1$S」存取 Cookie 或儲存空間的請求。",
+   "text": "由於我們封鎖所有第三方儲存空間存取請求，且已開啟加強型追蹤保護功能，已封鎖對「%1$S」存取 Cookie 或儲存空間的請求。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "netwerk/necko.properties",
+   "string_id": "TrackerUriBlockedByETP",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "netwerk/necko.properties",
+    "key": [
+     "TrackerUriBlockedByETP"
+    ]
+   },
+   "fids": [
+    "8b545c129543"
+   ],
+   "findings": [
+    "Typo: 開用了 is not a word; it should be 開啟了 or 啟用了."
+   ],
+   "source": "The resource at “%1$S” was blocked because Enhanced Tracking Protection is enabled.",
+   "original": "因為開用了加強型追蹤保護，已封鎖位於「%1$S」的資源。",
+   "text": "因為開啟了加強型追蹤保護，已封鎖位於「%1$S」的資源。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_CRL_EXPIRED",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_CRL_EXPIRED"
+    ]
+   },
+   "fids": [
+    "bc54c426febf"
+   ],
+   "findings": [
+    "The subject 'CRL' is missing, so the sentence says the issuer's [nothing] has expired."
+   ],
+   "source": "The CRL for the certificate’s issuer has expired. Update it or check your system date and time.",
+   "original": "憑證簽發者的已過期，請更新廢止清冊或檢查您的系統日期及時間。",
+   "text": "憑證簽發者的憑證廢止清冊已過期，請更新廢止清冊或檢查您的系統日期及時間。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_CRL_NOT_YET_VALID",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_CRL_NOT_YET_VALID"
+    ]
+   },
+   "fids": [
+    "bad24ebc50ad"
+   ],
+   "findings": [
+    "'not yet valid' is translated as 'not yet verified' (尚未驗證)."
+   ],
+   "source": "The certificate revocation list for this certificate is not yet valid.",
+   "original": "此憑證的憑證廢止清冊尚未驗證。",
+   "text": "此憑證的憑證廢止清冊尚未生效。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_KRL_NOT_YET_VALID",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_KRL_NOT_YET_VALID"
+    ]
+   },
+   "fids": [
+    "2e0585346e0b"
+   ],
+   "findings": [
+    "'not yet valid' is translated as 'not yet verified' (尚未驗證)."
+   ],
+   "source": "The key revocation list for this certificate is not yet valid.",
+   "original": "此憑證的金鑰廢止清冊尚未驗證。",
+   "text": "此憑證的金鑰廢止清冊尚未生效。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_NO_MEMORY",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_NO_MEMORY"
+    ]
+   },
+   "fids": [
+    "e0d5b764fc11"
+   ],
+   "findings": [
+    "'memory allocation failure' is translated as 'memory addressing failure' (記憶體定址失敗)."
+   ],
+   "source": "security library: memory allocation failure.",
+   "original": "安全函式庫: 記憶體定址失敗。",
+   "text": "安全函式庫: 記憶體配置失敗。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_OLD_CRL",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_OLD_CRL"
+    ]
+   },
+   "fids": [
+    "47c9db425b14"
+   ],
+   "findings": [
+    "'New CRL is not later than the current one' is translated as 'New CRL cannot be later than the current one', which reverses the meaning."
+   ],
+   "source": "New CRL is not later than the current one.",
+   "original": "新憑證廢止清冊不能比目前的清冊還晚。",
+   "text": "新憑證廢止清冊並未比目前的清冊還晚。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/nsserrors.properties",
+   "string_id": "SEC_ERROR_OLD_KRL",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/nsserrors.properties",
+    "key": [
+     "SEC_ERROR_OLD_KRL"
+    ]
+   },
+   "fids": [
+    "bb5c2c8f077a"
+   ],
+   "findings": [
+    "'New KRL is not later than the current one' is translated as 'cannot be later than the current one', which reverses the meaning."
+   ],
+   "source": "New KRL is not later than the current one.",
+   "original": "新金鑰廢止清冊不能比目前的清冊還晚。",
+   "text": "新金鑰廢止清冊並未比目前的清冊還晚。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/chrome/pipnss/pipnss.properties",
+   "string_id": "CertDumpKUKA",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/chrome/pipnss/pipnss.properties",
+    "key": [
+     "CertDumpKUKA"
+    ]
+   },
+   "fids": [
+    "75c1f0580f64"
+   ],
+   "findings": [
+    "The key usage 'Key Agreement' is translated as 'agree key' (同意金鑰)."
+   ],
+   "source": "Key Agreement",
+   "original": "同意金鑰",
+   "text": "金鑰協議",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "security/manager/security/certificates/deviceManager.ftl",
+   "string_id": "devinfo-status-ready",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/certificates/deviceManager.ftl",
+    "key": [
+     "devinfo-status-ready"
+    ]
+   },
+   "fids": [
+    "ebc731970bd6"
+   ],
+   "findings": [
+    "The device status 'Ready' is translated as 使用 ('use / in use')."
+   ],
+   "source": "label: Ready",
+   "original": "使用",
+   "text": "就緒",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "security/manager/security/pippki/pippki.ftl",
+   "string_id": "change-password-not-set",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "security/manager/security/pippki/pippki.ftl",
+    "key": [
+     "change-password-not-set"
+    ]
+   },
+   "fids": [
+    "fea37b80c5fa"
+   ],
+   "findings": [
+    "Half-width parentheses are used where the locale uses full-width punctuation."
+   ],
+   "source": "value: (not set)",
+   "original": "(未設定)",
+   "text": "（未設定）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/chrome/global/commonDialogs.properties",
+   "string_id": "Revert",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/chrome/global/commonDialogs.properties",
+    "key": [
+     "Revert"
+    ]
+   },
+   "fids": [
+    "187603800f3e"
+   ],
+   "findings": [
+    "The 'Revert' dialog button is translated as 'invert selection'"
+   ],
+   "source": "&Revert",
+   "original": "反向選擇(&R)",
+   "text": "還原(&R)",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/chrome/global/extensions.properties",
+   "string_id": "homepageControlled.message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/chrome/global/extensions.properties",
+    "key": [
+     "homepageControlled.message"
+    ]
+   },
+   "fids": [
+    "86ef5edd7351"
+   ],
+   "findings": [
+    "The message says the extension changed new tabs, but en-US says it changed the homepage"
+   ],
+   "source": "An extension, %S, changed what you see when you open your homepage and new windows.",
+   "original": "有一套擴充套件 %S 修改了您在開啟新分頁與新視窗時會看到的頁面。",
+   "text": "有一套擴充套件 %S 修改了您在開啟首頁與新視窗時會看到的頁面。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/chrome/global/narrate.properties",
+   "string_id": "next-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/chrome/global/narrate.properties",
+    "key": [
+     "next-label"
+    ]
+   },
+   "fids": [
+    "4421c4ff2c2a"
+   ],
+   "findings": [
+    "Narrate 'Forward' (skip forward) is rendered as 'next page'"
+   ],
+   "source": "Forward (%S)",
+   "original": "下一頁（%S）",
+   "text": "下一段（%S）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/chrome/global/narrate.properties",
+   "string_id": "previous-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/chrome/global/narrate.properties",
+    "key": [
+     "previous-label"
+    ]
+   },
+   "fids": [
+    "5370e7362a91"
+   ],
+   "findings": [
+    "Narrate 'Back' (skip back) is rendered as 'previous page'"
+   ],
+   "source": "Back (%S)",
+   "original": "上一頁（%S）",
+   "text": "上一段（%S）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/chrome/places/places.properties",
+   "string_id": "finduri-AgeInMonths-isgreater",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/chrome/places/places.properties",
+    "key": [
+     "finduri-AgeInMonths-isgreater"
+    ]
+   },
+   "fids": [
+    "065678b3b084"
+   ],
+   "findings": [
+    "'Older than %S months' is rendered as '%S months ago'"
+   ],
+   "source": "Older than %S months",
+   "original": "%S 個月前",
+   "text": "%S 個月以前",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutAbout.ftl",
+   "string_id": "about-about-note",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAbout.ftl",
+    "key": [
+     "about-about-note"
+    ]
+   },
+   "fids": [
+    "de1946df920d"
+   ],
+   "findings": [
+    "'Some are omitted' (from the list) is rendered as 'some can be ignored'"
+   ],
+   "source": "This is a list of “about” pages for your convenience.<br/>\nSome of them might be confusing. Some are for diagnostic purposes only.<br/>\nAnd some are omitted because they require query strings.",
+   "original": "為了您的方便，這是「about:」頁面的列表。<br/>\n有些頁面可能很難懂，有些頁面只是拿來做為問題診斷使用。<br/>\n而有一些是可以被忽略的，因為它們需要一些參數才能正確工作。",
+   "text": "為了您的方便，這是「about:」頁面的列表。<br/>\n有些頁面可能很難懂，有些頁面只是拿來做為問題診斷使用。<br/>\n而有一些頁面沒有列出，因為它們需要一些參數才能正確工作。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "addon-badge-verified4",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "addon-badge-verified4"
+    ]
+   },
+   "fids": [
+    "393efb818fbd"
+   ],
+   "findings": [
+    "Adds 'we' to the badge tooltip, which the developer comment explicitly forbids"
+   ],
+   "source": "title: This extension has been reviewed to meet standards for security and performance",
+   "original": "我們審查過此擴充套件，確認符合安全性與運作效能標準",
+   "text": "此擴充套件已經過審查，確認符合安全性與運作效能標準",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "addon-updates-reset-updates-to-automatic",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "addon-updates-reset-updates-to-automatic"
+    ]
+   },
+   "fids": [
+    "8fa3d2b8650f"
+   ],
+   "findings": [
+    "'Reset all add-ons to update automatically' is rendered as 'reset the auto-update settings of all add-ons'"
+   ],
+   "source": "(value): Reset All Add-ons to Update Automatically\naccesskey: R",
+   "original": "重設所有附加元件的自動更新設定",
+   "text": "將所有附加元件重設為自動更新",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "disabled-unsigned-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "disabled-unsigned-description"
+    ]
+   },
+   "fids": [
+    "89a8d3e2681d"
+   ],
+   "findings": [
+    "Typo: 原件 should be 元件"
+   ],
+   "source": "The following add-ons have not been verified for use in { -brand-short-name }. You can\n<label data-l10n-name=\"find-addons\">find replacements</label> or ask the developer to get them verified.",
+   "original": "以下原件尚未經過驗證，無法在 { -brand-short-name } 使用。您可以<label data-l10n-name=\"find-addons\">看看有沒有其他的替代方案</label>或是請開發者申請驗證。",
+   "text": "以下元件尚未經過驗證，無法在 { -brand-short-name } 使用。您可以<label data-l10n-name=\"find-addons\">看看有沒有其他的替代方案</label>或是請開發者申請驗證。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "shortcuts-remove-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "shortcuts-remove-button"
+    ]
+   },
+   "fids": [
+    "ce263bf51b8d"
+   ],
+   "findings": [
+    "Keyboard 'shortcut' is rendered as 捷徑 (file/desktop shortcut) instead of 快速鍵"
+   ],
+   "source": "aria-label: Remove shortcut",
+   "original": "移除捷徑",
+   "text": "移除快速鍵",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/about/aboutHttpsOnlyError.ftl",
+   "string_id": "about-httpsonly-suggestion-box-www-text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutHttpsOnlyError.ftl",
+    "key": [
+     "about-httpsonly-suggestion-box-www-text"
+    ]
+   },
+   "fids": [
+    "4ef61d22784b"
+   ],
+   "findings": [
+    "Grammar: extra 的 in 目前的開啟的"
+   ],
+   "source": "There is a secure version of <em>www.{ $websiteUrl }</em>. You can visit this page instead of <em>{ $websiteUrl }</em>.",
+   "original": "此網站有個安全加密版本位於 <em>www.{ $websiteUrl }</em>，您可以改造訪此網頁，而不是目前的開啟的 <em>{ $websiteUrl }</em>。",
+   "text": "此網站有個安全加密版本位於 <em>www.{ $websiteUrl }</em>，您可以改造訪此網頁，而不是目前開啟的 <em>{ $websiteUrl }</em>。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutReader.ftl",
+   "string_id": "about-reader-custom-colors-selection-highlight2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutReader.ftl",
+    "key": [
+     "about-reader-custom-colors-selection-highlight2"
+    ]
+   },
+   "fids": [
+    "548aee3f5d95"
+   ],
+   "findings": [
+    "The 'Highlighter for read aloud' label lost 'read aloud' and reads as an action"
+   ],
+   "source": "label: Highlighter for read aloud\ntitle: Edit color",
+   "original": "為閱讀功能加上強調效果",
+   "text": "朗讀強調色",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutReader.ftl",
+   "string_id": "about-reader-text-alignment-justify",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutReader.ftl",
+    "key": [
+     "about-reader-text-alignment-justify"
+    ]
+   },
+   "fids": [
+    "872769fa04e8"
+   ],
+   "findings": [
+    "'Justify text' is rendered as generic 'align text'"
+   ],
+   "source": "title: Justify text",
+   "original": "文字對齊",
+   "text": "文字左右對齊",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "place-database-last-integrity-corruption-date",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "place-database-last-integrity-corruption-date"
+    ]
+   },
+   "fids": [
+    "661391bcae11"
+   ],
+   "findings": [
+    "'Last Integrity Corruption Date' is rendered as 'last integrity check date'"
+   ],
+   "source": "Last Integrity Corruption Date",
+   "original": "最後一次完整性檢查日期",
+   "text": "最後一次完整性損毀日期",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "support-remote-settings-status-broken",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "support-remote-settings-status-broken"
+    ]
+   },
+   "fids": [
+    "39963117ee05"
+   ],
+   "findings": [
+    "'Not working' is rendered as 'not in use'"
+   ],
+   "source": "Not working",
+   "original": "未使用中",
+   "text": "無法運作",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "webgl2-version",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "webgl2-version"
+    ]
+   },
+   "fids": [
+    "5ef5b3a8a4dc"
+   ],
+   "findings": [
+    "The 'WebGL 2 Driver Version' label says 'Renderer'"
+   ],
+   "source": "WebGL 2 Driver Version",
+   "original": "WebGL 2 驅動程式 Renderer",
+   "text": "WebGL 2 驅動程式版本",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
+   "string_id": "about-webauthn-auth-info-certifications",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebauthn.ftl",
+    "key": [
+     "about-webauthn-auth-info-certifications"
+    ]
+   },
+   "fids": [
+    "a60780b9556a"
+   ],
+   "findings": [
+    "'Certifications' is rendered as 'certificates'"
+   ],
+   "source": "Certifications",
+   "original": "憑證",
+   "text": "認證",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
+   "string_id": "about-webauthn-auth-info-preferred-platform-uv-attempts",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebauthn.ftl",
+    "key": [
+     "about-webauthn-auth-info-preferred-platform-uv-attempts"
+    ]
+   },
+   "fids": [
+    "fe41907fb103"
+   ],
+   "findings": [
+    "'Attempts' (a count) is rendered as 'method'"
+   ],
+   "source": "Preferred platform user verification attempts",
+   "original": "偏好的平台使用者驗證方式",
+   "text": "偏好的平台使用者驗證嘗試次數",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/about/aboutWebauthn.ftl",
+   "string_id": "about-webauthn-credential-list-subsection-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebauthn.ftl",
+    "key": [
+     "about-webauthn-credential-list-subsection-title"
+    ]
+   },
+   "fids": [
+    "a86c49f115c0"
+   ],
+   "findings": [
+    "'Credentials' is rendered as 'account and password', unlike every other string in the file"
+   ],
+   "source": "Credentials:",
+   "original": "帳號密碼：",
+   "text": "登入資訊：",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutWebrtc.ftl",
+   "string_id": "about-webrtc-lost-label",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebrtc.ftl",
+    "key": [
+     "about-webrtc-lost-label"
+    ]
+   },
+   "fids": [
+    "11ccc87cab72"
+   ],
+   "findings": [
+    "'Lost packets' is rendered as 'discarded packets', the same wording as the separate 'Discarded packets' stat"
+   ],
+   "source": "{$packets ->} [one] Lost { $packets } packet [other] Lost { $packets } packets",
+   "original": "已捨棄 { $packets } 個封包",
+   "text": "已遺失 { $packets } 個封包",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/aboutWebrtc.ftl",
+   "string_id": "about-webrtc-sdp-set-at-timestamp-local",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutWebrtc.ftl",
+    "key": [
+     "about-webrtc-sdp-set-at-timestamp-local"
+    ]
+   },
+   "fids": [
+    "11911f1dcad0"
+   ],
+   "findings": [
+    "The header reads as 'set the local SDP timestamp to X' instead of 'local SDP set at timestamp X'"
+   ],
+   "source": "Set Local SDP at timestamp { $timestamp }",
+   "original": "已將本地 SDP 時間戳記設為 { NUMBER($timestamp, useGrouping: \"false\") }",
+   "text": "本地 SDP 設定於時間戳記 { NUMBER($timestamp, useGrouping: \"false\") }",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/certviewer.ftl",
+   "string_id": "certificate-viewer-download-pem-chain",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/certviewer.ftl",
+    "key": [
+     "certificate-viewer-download-pem-chain"
+    ]
+   },
+   "fids": [
+    "97a07d25c12b"
+   ],
+   "findings": [
+    "'PEM (chain)' is rendered as 'key chain'"
+   ],
+   "source": "(value): PEM (chain)\ndownload: { $fileName }-chain.pem",
+   "original": "PEM（金鑰鏈）",
+   "text": "PEM（憑證鏈）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/about/config.ftl",
+   "string_id": "about-config-intro-warning-checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/config.ftl",
+    "key": [
+     "about-config-intro-warning-checkbox"
+    ]
+   },
+   "fids": [
+    "c2465f68b770"
+   ],
+   "findings": [
+    "'Warn me when I attempt to access these preferences' is rendered as 'when I attempt to modify preferences'"
+   ],
+   "source": "Warn me when I attempt to access these preferences",
+   "original": "當我嘗試修改偏好設定時警告我",
+   "text": "當我嘗試存取這些偏好設定時警告我",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/contentanalysis/contentanalysis.ftl",
+   "string_id": "contentanalysis-error-message-dropped-text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/contentanalysis/contentanalysis.ftl",
+    "key": [
+     "contentanalysis-error-message-dropped-text"
+    ]
+   },
+   "fids": [
+    "9f7c748d8c3e"
+   ],
+   "findings": [
+    "'Drag and drop denied' is rendered as 'drag-and-drop of file denied'"
+   ],
+   "source": "Drag and drop denied.",
+   "original": "被拒絕拖放檔案。",
+   "text": "被拒絕拖放。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-fx-web-apps",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-fx-web-apps"
+    ]
+   },
+   "fids": [
+    "44c537cd512d"
+   ],
+   "findings": [
+    "'taskbar' is translated as 工具列 (toolbar) instead of 工作列"
+   ],
+   "source": "label: Add sites to your taskbar",
+   "original": "將網站新增至工具列",
+   "text": "將網站新增至工作列",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-fx-web-apps-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-fx-web-apps-description"
+    ]
+   },
+   "fids": [
+    "03d64e3a8cda"
+   ],
+   "findings": [
+    "'taskbar' is rendered as 工具列 (toolbar) throughout the description"
+   ],
+   "source": "Open sites you frequently visit as a web app from your taskbar. Look for the “Add tab to taskbar” icon to the right the address bar to launch that site in a streamlined window with all of { -brand-product-name }’s protections. <a data-l10n-name=\"connect\">Share feedback</a>",
+   "original": "將您常造訪的網站放置於工具列，以網頁應用程式方式開啟。可尋找網址列右方的「將分頁新增至工具列」圖示，即可以流線化的視窗開啟該網站，並依然獲得 { -brand-product-name } 的所有保護機制。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "text": "將您常造訪的網站放置於工作列，以網頁應用程式方式開啟。可尋找網址列右方的「將分頁新增至工作列」圖示，即可以流線化的視窗開啟該網站，並依然獲得 { -brand-product-name } 的所有保護機制。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-link-previews-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-link-previews-description"
+    ]
+   },
+   "fids": [
+    "099a3561c19f"
+   ],
+   "findings": [
+    "Typo: 可會 should be 可能會 ('may')"
+   ],
+   "source": "{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. For some webpages, AI can also read the page text and generate key points. The AI is optimized to read and generate English text. To prioritize your privacy, the AI runs locally on your computer. <a data-l10n-name=\"connect\">Share feedback</a> [other] To learn more about a webpage before you click, hover over a link and press Shift + Alt. Previews can include details like title and reading time. For some webpages, AI can also read the page text and generate key points. The AI is optimized to read and generate English text. To prioritize your privacy, the AI runs locally on your computer. <a data-l10n-name=\"connect\">Share feedback</a>",
+   "original": "若要在點擊鏈結前先了解網頁內容，請將滑鼠停留在鏈結上，然後按下 Shift+Alt 鍵。預覽內容可會包含網頁標題、閱讀時間等詳細資訊。AI 還可以針對部分頁面閱讀網頁內容、整理重點資訊。AI 是針對閱讀與產生英文內容進行最佳化，而為了保護隱私，此 AI 是在您的電腦本機內運作，<a data-l10n-name=\"connect\">歡迎提供意見回饋</a>。",
+   "text": "若要在點擊鏈結前先了解網頁內容，請將滑鼠停留在鏈結上，然後按下 Shift+Alt 鍵。預覽內容可能會包含網頁標題、閱讀時間等詳細資訊。AI 還可以針對部分頁面閱讀網頁內容、整理重點資訊。AI 是針對閱讀與產生英文內容進行最佳化，而為了保護隱私，此 AI 是在您的電腦本機內運作，<a data-l10n-name=\"connect\">歡迎提供意見回饋</a>。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-newtab-widget-lists-and-timer-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-newtab-widget-lists-and-timer-description"
+    ]
+   },
+   "fids": [
+    "988b9c936b27"
+   ],
+   "findings": [
+    "Same literal 'shake the window' rendering of 'nudge you'"
+   ],
+   "source": "Keep your to-do list top-of-mind when you open a new tab. From packing lists to shopping lists, make your plans in { -brand-product-name }. Set a timer to keep you focused, nudge you to stay on track, or remind you to recharge. <a data-l10n-name=\"connect\">Share feedback</a>",
+   "original": "開啟新分頁時自動列出待辦清單，不論是要打包的項目，還是購物清單都可以在 { -brand-product-name } 當中安排。設定計時器讓您保持專心，並且搖晃視窗請您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "text": "開啟新分頁時自動列出待辦清單，不論是要打包的項目，還是購物清單都可以在 { -brand-product-name } 當中安排。設定計時器讓您保持專心，並且提醒您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-newtab-widget-timer-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-newtab-widget-timer-description"
+    ]
+   },
+   "fids": [
+    "43461cc3dba3"
+   ],
+   "findings": [
+    "'nudge you to stay on track' is rendered as 'shake the window to ask you to keep progress'"
+   ],
+   "source": "Set a timer to keep you focused, nudge you to stay on track, or remind you to recharge. <a data-l10n-name=\"connect\">Share feedback</a>",
+   "original": "設定計時器讓您保持專心，並且搖晃視窗請您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "text": "設定計時器讓您保持專心，並且提醒您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/global/cookieBannerHandling.ftl",
+   "string_id": "cookie-banner-handled-webconsole",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/cookieBannerHandling.ftl",
+    "key": [
+     "cookie-banner-handled-webconsole"
+    ]
+   },
+   "fids": [
+    "9907a6edea70"
+   ],
+   "findings": [
+    "Garbled sentence: 'on behalf of' is missing, so it reads as '…has user replied to the cookie banner'"
+   ],
+   "source": "{ -brand-shorter-name } handled a cookie banner on behalf of the user.",
+   "original": "{ -brand-shorter-name } 已使用者回覆了 Cookie 橫幅。",
+   "text": "{ -brand-shorter-name } 已代替使用者回覆了 Cookie 橫幅。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/global/extensions.ftl",
+   "string_id": "webext-site-perms-description-gated-perms-webserial",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/extensions.ftl",
+    "key": [
+     "webext-site-perms-description-gated-perms-webserial"
+    ]
+   },
+   "fids": [
+    "fa81a41fb3a3"
+   ],
+   "findings": [
+    "Typo: 損畫 should be 損壞 ('damage')"
+   ],
+   "source": "These are devices like microcontrollers, 3D printers, and other devices that connect via USB, serial ports, or Bluetooth.\n\nYou will be able to choose which devices the website can access.\n\nWebsites are normally not allowed to access serial devices. Improper usage could cause damage or compromise security.",
+   "original": "這是指諸如微控制器、3D 印表機，或其他透過 USB、序列埠或藍牙連接的裝置。\n\n您將可以選擇網站可以存取哪些裝置。\n\n一般來說，不應允許網站存取序列埠裝置。不正確使用可能會造成損畫，或影響安全性。",
+   "text": "這是指諸如微控制器、3D 印表機，或其他透過 USB、序列埠或藍牙連接的裝置。\n\n您將可以選擇網站可以存取哪些裝置。\n\n一般來說，不應允許網站存取序列埠裝置。不正確使用可能會造成損壞，或影響安全性。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "permission-dialog-remember-file",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "permission-dialog-remember-file"
+    ]
+   },
+   "fids": [
+    "0a12a3ea9c37"
+   ],
+   "findings": [
+    "'Always allow this file to open links' is rendered as 'Always use this file to open links'"
+   ],
+   "source": "Always allow this file to open <strong>{ $scheme }</strong> links",
+   "original": "總是使用這個檔案來開啟 <strong>{ $scheme }</strong> 鏈結",
+   "text": "總是允許這個檔案開啟 <strong>{ $scheme }</strong> 鏈結",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "wallet-custom-scheme-warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "wallet-custom-scheme-warning"
+    ]
+   },
+   "fids": [
+    "9fe129ae902e"
+   ],
+   "findings": [
+    "'request your real identity' is rendered as 'obtain your real identity'"
+   ],
+   "source": "Opening a <strong>{ $scheme }</strong> link allows this site to request your real identity from your digital wallet. Only continue if you trust this site.",
+   "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過您的數位錢包獲得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過您的數位錢包要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "wallet-custom-scheme-warning-app",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "wallet-custom-scheme-warning-app"
+    ]
+   },
+   "fids": [
+    "d9922378ff55"
+   ],
+   "findings": [
+    "'request your real identity' is rendered as 'obtain your real identity'"
+   ],
+   "source": "Opening a <strong>{ $scheme }</strong> link allows this site to request your real identity with <strong>{ $appName }</strong>. Only continue if you trust this site.",
+   "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過 <strong>{ $appName }</strong> 獲得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過 <strong>{ $appName }</strong> 要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "wallet-custom-scheme-warning-heading",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "wallet-custom-scheme-warning-heading"
+    ]
+   },
+   "fids": [
+    "b294e886a67b"
+   ],
+   "findings": [
+    "The question particle is duplicated (嗎嗎)"
+   ],
+   "source": "heading: Allow this site to open your digital wallet?",
+   "original": "要允許這個網站開啟您的數位錢包嗎嗎？",
+   "text": "要允許這個網站開啟您的數位錢包嗎？",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "wallet-custom-scheme-warning-host",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "wallet-custom-scheme-warning-host"
+    ]
+   },
+   "fids": [
+    "070fc14de934"
+   ],
+   "findings": [
+    "'request your real identity' is rendered as 'obtain your real identity'"
+   ],
+   "source": "Opening a <strong>{ $scheme }</strong> link allows <strong>{ $host }</strong> to request your real identity from your digital wallet. Only continue if you trust this site.",
+   "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過您的數位錢包獲得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過您的數位錢包要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/global/handlerDialog.ftl",
+   "string_id": "wallet-custom-scheme-warning-host-app",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/handlerDialog.ftl",
+    "key": [
+     "wallet-custom-scheme-warning-host-app"
+    ]
+   },
+   "fids": [
+    "edf876e46f96"
+   ],
+   "findings": [
+    "'request your real identity' is rendered as 'obtain your real identity'"
+   ],
+   "source": "Opening a <strong>{ $scheme }</strong> link allows <strong>{ $host }</strong> to request your real identity with <strong>{ $appName }</strong>. Only continue if you trust this site.",
+   "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過 <strong>{ $appName }</strong> 獲得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過 <strong>{ $appName }</strong> 要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "toolkit/toolkit/global/narrate.ftl",
+   "string_id": "narrate-skip-next",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/narrate.ftl",
+    "key": [
+     "narrate-skip-next"
+    ]
+   },
+   "fids": [
+    "a77c00379540"
+   ],
+   "findings": [
+    "\"Forward\" in the narration controls is translated as \"next page\", but narration skips by paragraph, not by page."
+   ],
+   "source": "title: Forward ({ $shortcut })",
+   "original": "下一頁（{ $shortcut }）",
+   "text": "下一段（{ $shortcut }）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "toolkit/toolkit/global/narrate.ftl",
+   "string_id": "narrate-skip-previous",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/narrate.ftl",
+    "key": [
+     "narrate-skip-previous"
+    ]
+   },
+   "fids": [
+    "e75b6e1bc882"
+   ],
+   "findings": [
+    "\"Back\" in the narration controls is translated as \"previous page\", but narration skips by paragraph, not by page."
+   ],
+   "source": "title: Back ({ $shortcut })",
+   "original": "上一頁（{ $shortcut }）",
+   "text": "上一段（{ $shortcut }）",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-ch",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-ch"
+    ]
+   },
+   "fids": [
+    "721af56317a8"
+   ],
+   "findings": [
+    "Chamorro is glossed as a 'Canadian Indian language'"
+   ],
+   "source": "Chamorro",
+   "original": "查莫洛語 (加拿大印第安語)",
+   "text": "查莫洛語",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-gn",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-gn"
+    ]
+   },
+   "fids": [
+    "f19a0591cc8a"
+   ],
+   "findings": [
+    "Guarani is named after the country ('Paraguayan language') instead of by its own name"
+   ],
+   "source": "Guarani",
+   "original": "巴拉圭語",
+   "text": "瓜拉尼語",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-lu",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-lu"
+    ]
+   },
+   "fids": [
+    "7f6c166b08d6"
+   ],
+   "findings": [
+    "Luba-Katanga is glossed as West African"
+   ],
+   "source": "Luba-Katanga",
+   "original": "盧巴卡丹加語 (西非)",
+   "text": "盧巴卡丹加語 (剛果民主共和國)",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-os",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-os"
+    ]
+   },
+   "fids": [
+    "c569ce2e7007"
+   ],
+   "findings": [
+    "Ossetian is glossed as 'Old Persian'"
+   ],
+   "source": "Ossetian",
+   "original": "奧賽提語 (古波斯語)",
+   "text": "奧賽提語 (高加索地區)",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/intl/languageNames.ftl",
+   "string_id": "language-name-ps",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/intl/languageNames.ftl",
+    "key": [
+     "language-name-ps"
+    ]
+   },
+   "fids": [
+    "50c1086c6815"
+   ],
+   "findings": [
+    "Pashto is glossed as spoken in Iran and Afghanistan"
+   ],
+   "source": "Pashto",
+   "original": "帕圖語 (伊朗．阿富汗)",
+   "text": "帕圖語 (阿富汗．巴基斯坦)",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/neterror/certError.ftl",
+   "string_id": "fp-certerror-bad-domain-what-can-you-do-body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/certError.ftl",
+    "key": [
+     "fp-certerror-bad-domain-what-can-you-do-body"
+    ]
+   },
+   "fids": [
+    "a33d2a12dd20"
+   ],
+   "findings": [
+    "Typo: 已支 should be 已知 ('known issues')"
+   ],
+   "source": "Probably nothing, since it’s likely there’s a problem with the site itself. Sites use certificates issued by a certificate authority to prove they’re really who they say they are. But if you’re on a corporate network, your support team may have more info. If you’re using antivirus software, try searching for potential conflicts or known issues.",
+   "original": "由於這通常是網站的設定問題，可能沒什麼能做的。網站會透過憑證機構簽發的憑證來證明自己的身分，但您如果使用的是企業網路，貴公司的技術支援單位可能有更多資訊；若您有使用防毒軟體，也可以搜尋看看該軟體是否會造成衝突或有已支的問題。",
+   "text": "由於這通常是網站的設定問題，可能沒什麼能做的。網站會透過憑證機構簽發的憑證來證明自己的身分，但您如果使用的是企業網路，貴公司的技術支援單位可能有更多資訊；若您有使用防毒軟體，也可以搜尋看看該軟體是否會造成衝突或有已知的問題。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "certerror-expired-cert-intro",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "certerror-expired-cert-intro"
+    ]
+   },
+   "fids": [
+    "2020a5d2f20a"
+   ],
+   "findings": [
+    "en-US 'detected an issue' is rendered as 'detected a potential security threat'"
+   ],
+   "source": "{ -brand-short-name } detected an issue and did not continue to <b>{ $hostname }</b>. The website is either misconfigured or your computer clock is set to the wrong time.",
+   "original": "{ -brand-short-name } 偵測到潛在的安全性威脅，並未連線到 <b>{ $hostname }</b>。此網站可能有設定問題，或您的電腦上的時間不正確。",
+   "text": "{ -brand-short-name } 偵測到問題，並未連線到 <b>{ $hostname }</b>。此網站可能有設定問題，或您的電腦上的時間不正確。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-load-osx-permission",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-load-osx-permission"
+    ]
+   },
+   "fids": [
+    "b54264711183"
+   ],
+   "findings": [
+    "Ungrammatical conditional clause: 是 is missing"
+   ],
+   "source": "If you are trying to load a local network page, please check that { -brand-short-name } has been granted Local Network permissions in the macOS Privacy & Security settings.",
+   "original": "若您要開啟的本地區域網路頁面，請確認已經在 macOS 的「隱私權與安全性」選項當中，授權 { -brand-short-name } 存取本地網路權限。",
+   "text": "若您要開啟的是本地區域網路頁面，請確認已經在 macOS 的「隱私權與安全性」選項當中，授權 { -brand-short-name } 存取本地網路權限。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-loopback-refused-address",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-loopback-refused-address"
+    ]
+   },
+   "fids": [
+    "337b41e14a3d"
+   ],
+   "findings": [
+    "'This address' became the vague 位置 (location), and 'this' was dropped."
+   ],
+   "source": "Check that the server accepts connections on this address. Some servers listen only on [::1] or only on 127.0.0.1.",
+   "original": "請確認伺服器是否接受對位置的連線。部分伺服器僅監聽 [::1] 或 127.0.0.1。",
+   "text": "請確認伺服器是否接受對此位址的連線。部分伺服器僅監聽 [::1] 或 127.0.0.1。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "toolkit/toolkit/neterror/netError.ftl",
+   "string_id": "neterror-loopback-refused-wrong-port",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/netError.ftl",
+    "key": [
+     "neterror-loopback-refused-wrong-port"
+    ]
+   },
+   "fids": [
+    "43107f50bd34"
+   ],
+   "findings": [
+    "The word 'port' is missing before the port number."
+   ],
+   "source": "If it is running, check that it is using port { $port }.",
+   "original": "若正在執行中，請確認該伺服器是否使用 { $port }。",
+   "text": "若正在執行中，請確認該伺服器是否使用通訊埠 { $port }。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-crl-expired",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-crl-expired"
+    ]
+   },
+   "fids": [
+    "5ba8ee4f2d1a"
+   ],
+   "findings": [
+    "The subject noun (CRL) is missing: 'the certificate issuer's ___ has expired'"
+   ],
+   "source": "The CRL for the certificate’s issuer has expired. Update it or check your system date and time.",
+   "original": "憑證簽發者的已過期，請更新廢止清冊或檢查您的系統日期及時間。",
+   "text": "憑證簽發者的憑證廢止清冊已過期，請更新廢止清冊或檢查您的系統日期及時間。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-crl-not-yet-valid",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-crl-not-yet-valid"
+    ]
+   },
+   "fids": [
+    "b432e3d175f2"
+   ],
+   "findings": [
+    "'not yet valid' is rendered as 'not yet verified'"
+   ],
+   "source": "The certificate revocation list for this certificate is not yet valid.",
+   "original": "此憑證的憑證廢止清冊尚未驗證。",
+   "text": "此憑證的憑證廢止清冊尚未生效。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-krl-not-yet-valid",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-krl-not-yet-valid"
+    ]
+   },
+   "fids": [
+    "1da82175ae41"
+   ],
+   "findings": [
+    "'not yet valid' is rendered as 'not yet verified'"
+   ],
+   "source": "The key revocation list for this certificate is not yet valid.",
+   "original": "此憑證的金鑰廢止清冊尚未驗證。",
+   "text": "此憑證的金鑰廢止清冊尚未生效。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-old-crl",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-old-crl"
+    ]
+   },
+   "fids": [
+    "2b106408a323"
+   ],
+   "findings": [
+    "The meaning is reversed: 'is not later than' became 'cannot be later than'"
+   ],
+   "source": "New CRL is not later than the current one.",
+   "original": "新憑證廢止清冊不能比目前的清冊還晚。",
+   "text": "新憑證廢止清冊並未比目前的清冊還新。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/neterror/nsserrors.ftl",
+   "string_id": "sec-error-old-krl",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/neterror/nsserrors.ftl",
+    "key": [
+     "sec-error-old-krl"
+    ]
+   },
+   "fids": [
+    "1246361aff0b"
+   ],
+   "findings": [
+    "The meaning is reversed: 'is not later than' became 'cannot be later than'"
+   ],
+   "source": "New KRL is not later than the current one.",
+   "original": "新金鑰廢止清冊不能比目前的清冊還晚。",
+   "text": "新金鑰廢止清冊並未比目前的清冊還新。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-digital-signature-properties-banner-expired",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-digital-signature-properties-banner-expired"
+    ]
+   },
+   "fids": [
+    "342c0ac4fec8"
+   ],
+   "findings": [
+    "'expired certificates' is rendered as 'expired digital signatures'"
+   ],
+   "source": "{$count ->} [one] Document signed with { $count } expired certificate [other] Document signed with { $count } expired certificates",
+   "original": "文件已進行簽署，但當中的 { $count } 筆數位簽章已過期",
+   "text": "文件已進行簽署，但當中的 { $count } 張憑證已過期",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/pdfviewer/viewer.ftl",
+   "string_id": "pdfjs-digital-signature-properties-banner-revoked",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/pdfviewer/viewer.ftl",
+    "key": [
+     "pdfjs-digital-signature-properties-banner-revoked"
+    ]
+   },
+   "fids": [
+    "a8025ccca938"
+   ],
+   "findings": [
+    "'revoked certificates' is rendered as 'revoked digital signatures'"
+   ],
+   "source": "{$count ->} [one] Document signed with { $count } revoked certificate [other] Document signed with { $count } revoked certificates",
+   "original": "文件已進行簽署，但當中的 { $count } 筆數位簽章已廢止",
+   "text": "文件已進行簽署，但當中的 { $count } 張憑證已廢止",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "toolkit/toolkit/webauthnDialog.ftl",
+   "string_id": "webauthn-related-origin-create-header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/webauthnDialog.ftl",
+    "key": [
+     "webauthn-related-origin-create-header"
+    ]
+   },
+   "fids": [
+    "f6047c7335db"
+   ],
+   "findings": [
+    "'passkey' is left in English here, but the same dialog translates it as 密碼金鑰"
+   ],
+   "source": "{ $origin } wants to create a passkey for { $rpId }.",
+   "original": "{ $origin } 想要為 { $rpId } 建立一把 Passkey。",
+   "text": "{ $origin } 想要為 { $rpId } 建立一把密碼金鑰。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "A",
+   "file": "toolkit/toolkit/webauthnDialog.ftl",
+   "string_id": "webauthn-select-device-prompt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/webauthnDialog.ftl",
+    "key": [
+     "webauthn-select-device-prompt"
+    ]
+   },
+   "fids": [
+    "3698ab9f4583"
+   ],
+   "findings": [
+    "'Multiple devices found' is translated as 'multiple accounts found'"
+   ],
+   "source": "Multiple devices found for { $hostname }. Please select one.",
+   "original": "找到 { $hostname } 的多組帳號。請選擇要使用哪一組。",
+   "text": "找到 { $hostname } 的多個裝置。請選擇要使用哪一個。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  }
+ ]
+}
