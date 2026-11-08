@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
-| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **Previous run** | 2026-11-05 @ `df599b08d244` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,983 |
+| **Strings reviewed this run** | 1 of 1,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,11 @@ Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (2)
 
 - `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — `QuickAnswers.ContentView.NewQuestionButton.v161` uses a straight apostrophe
     - Current: `Fai un'altra domanda`
@@ -29,10 +33,6 @@ Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
     - Source: `Ask a New Question`
     - Suggest: `un’altra`
     - The Italian convention for this locale is the typographic apostrophe, and other strings in the batch already use it (e.g. dell’informativa).
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -63,7 +63,7 @@ _Nothing retired._
 | printf placeholder mismatches | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
-| Typography deviations from this locale's own norm | 1 |
+| Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
 
@@ -76,7 +76,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 15 | **curly-double** |
-| apostrophe | `typographic` 76, `straight` 1 | **typographic** |
+| apostrophe | `typographic` 77 | **typographic** |
 | ellipsis | `char` 32 | **char** |
 | dash | `em` 1 | **em** |
 | register | `informal` 86, `formal` 4 | **informal** |
@@ -89,7 +89,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
@@ -97,7 +97,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -117,15 +117,7 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — `QuickAnswers.ContentView.NewQuestionButton.v161` uses a straight apostrophe
-    - Current: `Fai un'altra domanda`
-    - Source: `Ask a New Question`
-    - The tree uses ’ 76 times against 1 straight.
-- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — This string uses a straight apostrophe, but the locale convention is the typographic one (’).
-    - Current: `un'altra`
-    - Source: `Ask a New Question`
-    - Suggest: `un’altra`
-    - The Italian convention for this locale is the typographic apostrophe, and other strings in the batch already use it (e.g. dell’informativa).
+_Nothing in this category._
 
 ---
 
@@ -173,8 +165,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (21)
+### Fixed to date (23)
 
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — fixed 2026-11-08
+- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — fixed 2026-11-08
 - `VPN.Settings.DataLimit.AccessibilityValue.v161` — `it/firefox-ios.xliff` — fixed 2026-11-05
 - `Menu.TrackingProtectionCrossSiteTrackers.Title` — `it/firefox-ios.xliff` — fixed 2026-10-19
 - `ActivityStream.Library.Title` — `it/firefox-ios.xliff` — fixed 2026-10-17

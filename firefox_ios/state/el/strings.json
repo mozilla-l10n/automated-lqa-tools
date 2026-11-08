@@ -40,6 +40,9 @@
   "Alerts.AddToCalendar.BodyDefault.v134": "0c8d553a 70fe87b8 8dbcd3a5",
   "Alerts.AddToCalendar.Button.Add.v134": "b82aff8c 01172d28 8f018583",
   "Alerts.AddToCalendar.Title.v134": "5d07b357 08d8ff50 ea781d29",
+  "Alerts.ConfigurationProfile.Button.Cancel.v160.1": "f29fc6f9 871d661d 9f7d31af",
+  "Alerts.ConfigurationProfile.Button.Continue.v160.1": "489afd4f 5009bc49 248707f1",
+  "Alerts.ConfigurationProfile.Title.v160.1": "65144661 7ed5ad40 983f661d",
   "Alerts.FeltDeletion.Body.v122": "81b904a0 7183e636 a55c275d",
   "Alerts.FeltDeletion.Button.Cancel.v122": "f29fc6f9 871d661d 3e734601",
   "Alerts.FeltDeletion.Button.Cancel.v134": "f29fc6f9 871d661d 1bfe1810",
@@ -329,6 +332,7 @@
   "ExternalLink.ExternalSmsLinkConfirmation.v136": "3a83fbef bc105275 2d0a7110"
  },
  "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings": {
+  "FirefoxHome.PrivacyNotice.Body.Markdown.v160": "a1796f5d 291c8443 5ce7ea0c",
   "FirefoxHome.PrivacyNotice.Body.v148": "e84e5ec3 e9082260 fade0257",
   "FirefoxHome.PrivacyNotice.LearnMoreLink.v148": "c5597dcd 8ed49578 79d95a90",
   "FirefoxHome.PrivacyNotice.PrivacyNoticeLink.v148": "b4215025 f90e5f8c 260331a6",
@@ -1089,6 +1093,7 @@
   "VPN.LocationPicker.FindingLocationsText.v160": "e0fa1db4 43b0b6a7 ae6285e2",
   "VPN.LocationPicker.RecommendedMainText.v160": "f11d0154 40b5cb8f 1eb33093",
   "VPN.LocationPicker.RecommendedSubText.v160": "97f1011f cce40e95 4da8d9f0",
+  "VPN.Settings.Connected.v161": "40e5e208 34f0ad6f ae1c1244",
   "VPN.Settings.Connecting.v160": "7225853e 49447206 8b0ee67e",
   "VPN.Settings.DataLimitResetFooter.v160": "36319300 fbbabbae 1ed1a1cc",
   "VPN.Settings.DataLimitTitle.v160": "424413a3 4c6e9549 a6cf0d3d",

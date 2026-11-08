@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a1c273f4bf5e` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a1c273f4bf5e` |
-| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **Previous run** | 2026-11-05 @ `a1c273f4bf5e` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,909 |
 

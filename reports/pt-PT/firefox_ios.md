@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `df599b08d244` |
-| **Previous run** | 2026-11-05 @ `101a216ab7b8` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
+| **Previous run** | 2026-11-05 @ `df599b08d244` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 3 of 1,983 |
 
@@ -18,7 +18,11 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox](firefox.md)
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (3)
 
 - `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — The URL placeholder PRIVACY_NOTICE_URL has been changed to privacy_NOTICE_URL, so the link will not be substituted.
     - Current: `(privacy_NOTICE_URL)`
@@ -35,10 +39,6 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox](firefox.md)
     - Source: `Privacy Notice updated`
     - Suggest: `Aviso de privacidade atualizado`
     - Both strings refer to the same document on the same card. The card announces an update to a named document, so the headline should use the same term as the body.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -94,7 +94,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (69)
+## 3. Open findings (66)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -108,18 +108,14 @@ _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 1 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 17 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 36 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
 
-- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — The URL placeholder PRIVACY_NOTICE_URL has been changed to privacy_NOTICE_URL, so the link will not be substituted.
-    - Current: `(privacy_NOTICE_URL)`
-    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
-    - Suggest: `(PRIVACY_NOTICE_URL)`
-    - The developer comment says to translate only the text inside the square brackets. The URL placeholder must stay exactly as it is or the link breaks.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -236,11 +232,6 @@ _Also listed under their own category below._
     - Source: `Find something nearby. Or discover something fun.`
     - Suggest: `Ou descubra algo divertido.`
     - The en-US says "discover something fun". "qualquer divertida" is not valid Portuguese. It should be "algo divertido", which also matches the "algo próximo" in the first sentence.
-- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — Gender agreement error: the feminine 'a nossa' is used with the masculine noun 'Aviso'.
-    - Current: `a nossa [Aviso de privacidade]`
-    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
-    - Suggest: `o nosso [Aviso de privacidade]`
-    - 'Aviso' is masculine in Portuguese, so the article and possessive have to be 'o nosso'.
 - `FirefoxHomepage.TrackerBlocker.TrackersBlocked.v153b` — `pt-PT/firefox-ios.xliff` — 'Bloqueados' is capitalized because the string copies English title case.
     - Current: `Rastreadores Bloqueados: %@`
     - Source: `Trackers Blocked: %@`
@@ -329,11 +320,6 @@ _Also listed under their own category below._
     - Source: `Autofill Error`
     - Suggest: `Erro de preenchimento automático`
     - The same term appears twice on one alert and should match. The message's "preenchimento automático" is the standard form.
-- `FirefoxHome.PrivacyNotice.Headline.v160` — `pt-PT/firefox-ios.xliff` — The headline calls the Privacy Notice 'Informação de privacidade', but the body text on the same card calls it 'Aviso de privacidade'.
-    - Current: `Informação de privacidade atualizada`
-    - Source: `Privacy Notice updated`
-    - Suggest: `Aviso de privacidade atualizado`
-    - Both strings refer to the same document on the same card. The card announces an update to a named document, so the headline should use the same term as the body.
 - `NativeErrorPage.Wayback.Error.Title.v154` — `pt-PT/firefox-ios.xliff` — Title uses the Brazilian verb "conectar" and a calqued "Incapaz de" instead of the pt-PT "ligar" used throughout this screen.
     - Current: `Incapaz de conectar`
     - Source: `Unable to connect`
@@ -493,6 +479,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (3)
 
-_Nothing fixed yet._
+- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — fixed 2026-11-08
+- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — fixed 2026-11-08
+- `FirefoxHome.PrivacyNotice.Headline.v160` — `pt-PT/firefox-ios.xliff` — fixed 2026-11-08
