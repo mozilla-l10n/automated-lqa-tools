@@ -1,0 +1,924 @@
+{
+ "project": "firefox_ios",
+ "locale": "zh-TW",
+ "suggestions": [
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+   "string_id": "Menu.EnhancedTrackingProtection.Details.TrackersStrictModeFooterText.v150",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+     "Menu.EnhancedTrackingProtection.Details.TrackersStrictModeFooterText.v150"
+    ]
+   },
+   "fids": [
+    "274c69f7b424"
+   ],
+   "findings": [
+    "The translation drops \"blocks more trackers\", so the verb 封鎖 has no object."
+   ],
+   "source": "Strict blocks more trackers by stopping them before a page loads, so you may see a lower tracker count. %@",
+   "original": "嚴格模式會在頁面開始載入前就自動封鎖，所以您看到的追蹤器數量可能較少。%@",
+   "text": "嚴格模式會在頁面開始載入前就封鎖更多追蹤器，所以您看到的追蹤器數量可能較少。%@",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/ErrorState.strings",
+   "string_id": "CreditCard.ErrorState.CardExpirationDateSublabel.v112",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/ErrorState.strings",
+     "CreditCard.ErrorState.CardExpirationDateSublabel.v112"
+    ]
+   },
+   "fids": [
+    "b4c777be9f2c"
+   ],
+   "findings": [
+    "\"Expiration date\" is rendered as \"expiration year\" (到期年分)."
+   ],
+   "source": "Enter a valid expiration date",
+   "original": "請輸入有效的到期年分",
+   "text": "請輸入有效的到期日",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+   "string_id": "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+     "FirefoxHomepage.TrackerBlocker.NoTrackersBlocked.v153"
+    ]
+   },
+   "fids": [
+    "cb9f45b6d75f"
+   ],
+   "findings": [
+    "\"You’re Protected\" is rendered as \"Let us protect you\" instead of a status saying the user is protected."
+   ],
+   "source": "You’re Protected",
+   "original": "讓我們保護您",
+   "text": "您已受到保護",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/FirefoxSync.strings",
+   "string_id": "FirefoxSync.AddressAutofillEngine.v124",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/FirefoxSync.strings",
+     "FirefoxSync.AddressAutofillEngine.v124"
+    ]
+   },
+   "fids": [
+    "a6285355ffdc"
+   ],
+   "findings": [
+    "\"Addresses\" (postal addresses for autofill) is translated as \"網址\", which means web address/URL."
+   ],
+   "source": "Addresses",
+   "original": "網址",
+   "text": "地址",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.NoInternetConnection.Description.v131",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.NoInternetConnection.Description.v131"
+    ]
+   },
+   "fids": [
+    "3f991fed234d"
+   ],
+   "findings": [
+    "\"Try connecting on a different device\" is rendered as connecting *to* another device."
+   ],
+   "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
+   "original": "您可以試著連線到其他裝置、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
+   "text": "您可以試著使用其他裝置連線、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148"
+    ]
+   },
+   "fids": [
+    "ac433405944d"
+   ],
+   "findings": [
+    "The description calls the address bar 網址框, but the title of the same card calls it 網址列."
+   ],
+   "source": "Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.",
+   "original": "在網址框輸入，就可以直接獲得搜尋建議、您最常造訪的網站、書籤、瀏覽紀錄與搜尋引擎。",
+   "text": "在網址列輸入，就可以直接獲得搜尋建議、您最常造訪的網站、書籤、瀏覽紀錄與搜尋引擎。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.BrandRefresh.Marketing.Description.v148",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.BrandRefresh.Marketing.Description.v148"
+    ]
+   },
+   "fids": [
+    "3d948858b0b9"
+   ],
+   "findings": [
+    "\"and that you use it\" is rendered as \"and how you use it\", so the text describes more data being shared than the source says."
+   ],
+   "source": "Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.",
+   "original": "與 %2$@ 的行銷夥伴分享您如何發現 %1$@ 以及是如何使用的，我們絕不會販售此資料。",
+   "text": "與 %2$@ 的行銷夥伴分享您如何發現 %1$@ 以及您正在使用它，我們絕不會販售此資料。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.TermsOfService.PrivacyNoticeLink.v140",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.TermsOfService.PrivacyNoticeLink.v140"
+    ]
+   },
+   "fids": [
+    "495813406ae4"
+   ],
+   "findings": [
+    "The link text ends with a full stop but sits mid-sentence in zh-TW, so the sentence on screen reads '到我們的隱私權公告。閱讀更多資訊。'"
+   ],
+   "source": "Privacy Notice.",
+   "original": "隱私權公告。",
+   "text": "隱私權公告",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Modern.TermsOfService.PrivacyNoticeLink.v145",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Modern.TermsOfService.PrivacyNoticeLink.v145"
+    ]
+   },
+   "fids": [
+    "83b34e8952cb"
+   ],
+   "findings": [
+    "The link text ends with a full stop but sits mid-sentence in zh-TW, so the sentence on screen reads '到我們的隱私權公告。閱讀更多資訊。'"
+   ],
+   "source": "Privacy Notice.",
+   "original": "隱私權公告。",
+   "text": "隱私權公告",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+   "string_id": "QuickAnswers.Errors.OpenSettings.v158",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings",
+     "QuickAnswers.Errors.OpenSettings.v158"
+    ]
+   },
+   "fids": [
+    "ac2b9c6fb087"
+   ],
+   "findings": [
+    "\"Open Settings\" is rendered as 開啟選項, which names Firefox's preferences rather than the iOS Settings app that this button opens."
+   ],
+   "source": "Open Settings",
+   "original": "開啟選項",
+   "text": "開啟設定",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/RelayMask.strings",
+   "string_id": "RelayMask.RelayEmailMaskAvailableCFR.v146",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/RelayMask.strings",
+     "RelayMask.RelayEmailMaskAvailableCFR.v146"
+    ]
+   },
+   "fids": [
+    "e04290b96195"
+   ],
+   "findings": [
+    "\"行動板\" uses the wrong character; it should be \"行動版\" (mobile version)."
+   ],
+   "source": "New! %@ Relay email masks are now available on mobile.",
+   "original": "新功能！現在起行動板也提供 %@ Relay 轉寄信箱功能。",
+   "text": "新功能！現在起行動版也提供 %@ Relay 轉寄信箱功能。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.Search.Suggest.SearchBrowsingHistory.Title.v124"
+    ]
+   },
+   "fids": [
+    "196edd50abf9"
+   ],
+   "findings": [
+    "\"Search Browsing History\" is rendered as \"Show Browsing History\", inconsistent with the sibling toggles that use 搜尋."
+   ],
+   "source": "Search Browsing History",
+   "original": "顯示瀏覽紀錄",
+   "text": "搜尋瀏覽紀錄",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/Settings.strings",
+   "string_id": "Settings.TechnicalData.Message.v136",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Settings.strings",
+     "Settings.TechnicalData.Message.v136"
+    ]
+   },
+   "fids": [
+    "ae9ac404485b"
+   ],
+   "findings": [
+    "The head noun \"data\" (資料) is missing, so the subject 關於… has no noun and the sentence is incomplete."
+   ],
+   "source": "Data about your device, hardware configuration, and usage helps us improve %@ features, performance and stability.",
+   "original": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們改善 %@ 的功能、效能與穩定度。",
+   "text": "關於您的裝置、硬體設定，以及您的使用方式的資料，可幫助我們改善 %@ 的功能、效能與穩定度。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/TabLocation.strings",
+   "string_id": "Address.Bar.Reload.A11y.Hint.v124",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/TabLocation.strings",
+     "Address.Bar.Reload.A11y.Hint.v124"
+    ]
+   },
+   "fids": [
+    "031cd6b49a8c"
+   ],
+   "findings": [
+    "\"more options\" is translated as \"more information\" (更多資訊)."
+   ],
+   "source": "Double tap and hold for more options",
+   "original": "雙擊後按住即可取得更多資訊",
+   "text": "雙擊後按住即可取得更多選項",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+   "string_id": "VPN.ErrorBrowsingPopup.Body.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/VPN.strings",
+     "VPN.ErrorBrowsingPopup.Body.v160"
+    ]
+   },
+   "fids": [
+    "7db9abb3a620"
+   ],
+   "findings": [
+    "\"VPN isn't working right now\" is rendered as \"VPN is not turned on\"."
+   ],
+   "source": "VPN isn’t working right now. If you continue browsing, your location may be visible.",
+   "original": "目前未開啟 VPN。如果繼續上網，網站可能會得知您的所在位置。",
+   "text": "VPN 目前無法正常運作。如果繼續上網，網站可能會得知您的所在位置。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+   "string_id": "VPN.ErrorBrowsingPopup.ClosedOneTab.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/VPN.strings",
+     "VPN.ErrorBrowsingPopup.ClosedOneTab.v160"
+    ]
+   },
+   "fids": [
+    "29577bf0bbb5"
+   ],
+   "findings": [
+    "Confirmation \"Closed 1 Tab\" reads as the imperative \"Close 1 tab\"."
+   ],
+   "source": "Closed 1 Tab",
+   "original": "關閉 1 個分頁",
+   "text": "已關閉 1 個分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+   "string_id": "VPN.ErrorBrowsingPopup.ClosedXTabs.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/VPN.strings",
+     "VPN.ErrorBrowsingPopup.ClosedXTabs.v160"
+    ]
+   },
+   "fids": [
+    "f7ebaef3e2ab"
+   ],
+   "findings": [
+    "Confirmation \"Closed %1$@ Tabs\" reads as the imperative \"Close %1$@ tabs\"."
+   ],
+   "source": "Closed %1$@ Tabs",
+   "original": "關閉 %1$@ 個分頁",
+   "text": "已關閉 %1$@ 個分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+   "string_id": "VPN.ReachedDataLimitPopup.ClosedOneTab.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/VPN.strings",
+     "VPN.ReachedDataLimitPopup.ClosedOneTab.v160"
+    ]
+   },
+   "fids": [
+    "9c4295a8e1f1"
+   ],
+   "findings": [
+    "This confirmation reads as a command (\"Close 1 tab\") instead of saying the tab was closed."
+   ],
+   "source": "Closed 1 Tab",
+   "original": "關閉 1 個分頁",
+   "text": "已關閉 1 個分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+   "string_id": "VPN.ReachedDataLimitPopup.ClosedXTabs.v160",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/VPN.strings",
+     "VPN.ReachedDataLimitPopup.ClosedXTabs.v160"
+    ]
+   },
+   "fids": [
+    "c1455beaacd7"
+   ],
+   "findings": [
+    "This confirmation reads as a command (\"Close N tabs\") instead of saying the tabs were closed."
+   ],
+   "source": "Closed %1$@ Tabs",
+   "original": "關閉 %1$@ 個分頁",
+   "text": "已關閉 %1$@ 個分頁",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "A username and password are being requested by %@. The site says: %@",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "A username and password are being requested by %@. The site says: %@"
+    ]
+   },
+   "fids": [
+    "9426e021c3ae"
+   ],
+   "findings": [
+    "Halfwidth colon plus space used after Chinese text instead of the fullwidth colon."
+   ],
+   "source": "A username and password are being requested by %1$@. The site says: %2$@",
+   "original": "%1$@ 請您輸入使用者名稱與密碼。此網站說: %2$@",
+   "text": "%1$@ 請您輸入使用者名稱與密碼。此網站說：%2$@",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "ActivityStream.JumpBackIn.TabGroup.SiteCount",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "ActivityStream.JumpBackIn.TabGroup.SiteCount"
+    ]
+   },
+   "fids": [
+    "61129b176aa6"
+   ],
+   "findings": [
+    "Halfwidth colon used after Chinese text instead of the fullwidth colon."
+   ],
+   "source": "Tabs: %d",
+   "original": "分頁: %d",
+   "text": "分頁：%d",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "ErrorPages.AdvancedWarning1.Text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "ErrorPages.AdvancedWarning1.Text"
+    ]
+   },
+   "fids": [
+    "21456f122e13"
+   ],
+   "findings": [
+    "Half-width colon followed by a space is used instead of the locale's full-width colon."
+   ],
+   "source": "Warning: we can’t confirm your connection to this website is secure.",
+   "original": "警告: 無法確認您與此網站間的連線是否安全。",
+   "text": "警告：無法確認您與此網站間的連線是否安全。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FxAPush_DeviceConnected_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FxAPush_DeviceConnected_body"
+    ]
+   },
+   "fids": [
+    "b73a5eefce1d"
+   ],
+   "findings": [
+    "\"Firefox Sync\" is translated as 「Firefox 同步」, while the other notifications in this group keep 「Firefox Sync」."
+   ],
+   "source": "Firefox Sync has connected to %@",
+   "original": "Firefox 同步已連結到 %@",
+   "text": "Firefox Sync已連結到 %@",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FxAPush_DeviceDisconnected_UnknownDevice_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FxAPush_DeviceDisconnected_UnknownDevice_body"
+    ]
+   },
+   "fids": [
+    "1a4ad6c1342c"
+   ],
+   "findings": [
+    "The product name \"Firefox Sync\" was cut to \"Firefox\", so the notice says the device disconnected from Firefox."
+   ],
+   "source": "A device has disconnected from Firefox Sync",
+   "original": "有一台裝置已與 Firefox 取消連線",
+   "text": "有一台裝置已與 Firefox Sync 取消連線",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Keyboard.Shortcuts.ClearRecentHistory",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Keyboard.Shortcuts.ClearRecentHistory"
+    ]
+   },
+   "fids": [
+    "48f6f2e8f8a7"
+   ],
+   "findings": [
+    "The \"Clear Recent History\" shortcut uses 歷史記錄, while the History section heading on the same overlay uses 瀏覽紀錄."
+   ],
+   "source": "Clear Recent History",
+   "original": "清除最近的歷史記錄",
+   "text": "清除最近的瀏覽紀錄",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "LibraryPanel.History.SyncedHistory.v100",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "LibraryPanel.History.SyncedHistory.v100"
+    ]
+   },
+   "fids": [
+    "b0e64a7a0896"
+   ],
+   "findings": [
+    "Uses 瀏覽記錄 while the rest of the History panel uses 瀏覽紀錄 for \"history\"."
+   ],
+   "source": "Synced History",
+   "original": "同步自其他裝置的瀏覽記錄",
+   "text": "同步自其他裝置的瀏覽紀錄",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "PhotoLibrary.FirefoxWouldLikeAccessMessage",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "PhotoLibrary.FirefoxWouldLikeAccessMessage"
+    ]
+   },
+   "fids": [
+    "736e39ce59ef"
+   ],
+   "findings": [
+    "\"Camera Roll\" is rendered as 照片串流 (Photo Stream), which names a different iOS feature."
+   ],
+   "source": "This allows you to save the image to your Camera Roll.",
+   "original": "讓您可儲存照片到「照片串流」。",
+   "text": "讓您可儲存照片到「相機膠卷」。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "SendTo.DeviceList.Text",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "SendTo.DeviceList.Text"
+    ]
+   },
+   "fids": [
+    "98e28b77a425"
+   ],
+   "findings": [
+    "The header uses a half-width colon, but the locale convention is full-width punctuation."
+   ],
+   "source": "Available devices:",
+   "original": "可用裝置:",
+   "text": "可用裝置：",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.DisplayTheme.SectionFooter",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.DisplayTheme.SectionFooter"
+    ]
+   },
+   "fids": [
+    "ffda61fbc013"
+   ],
+   "findings": [
+    "The adverb 自動 is duplicated in the same clause."
+   ],
+   "source": "The theme will automatically change based on your display brightness. You can set the threshold where the theme changes. The circle indicates your display’s current brightness.",
+   "original": "佈景主題將自動根據螢幕顯示亮度自動切換。您可以設定要切換的門檻，而圈圈是目前的亮度。",
+   "text": "佈景主題將根據螢幕顯示亮度自動切換。您可以設定要切換的門檻，而圈圈是目前的亮度。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.Home.Option.Wallpaper.Accessibility.DefaultWallpaper.v99",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.Home.Option.Wallpaper.Accessibility.DefaultWallpaper.v99"
+    ]
+   },
+   "fids": [
+    "f6b811762bfb"
+   ],
+   "findings": [
+    "\"Clear\" (plain/no-image wallpaper) is rendered as 明亮 (\"bright\"), describing a different wallpaper."
+   ],
+   "source": "Default clear wallpaper.",
+   "original": "預設的明亮 Firefox 背景圖",
+   "text": "預設的無圖案背景圖",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "TopSites.RemovePage.Button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "TopSites.RemovePage.Button"
+    ]
+   },
+   "fids": [
+    "0ffb9a51a1d4"
+   ],
+   "findings": [
+    "The em dash separator from the source is rendered as a spaced ASCII hyphen."
+   ],
+   "source": "Remove page — %@",
+   "original": "移除頁面 - %@",
+   "text": "移除頁面 — %@",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Today.strings",
+   "string_id": "TodayWidget.NewTabButtonLabelV1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Today.strings",
+     "TodayWidget.NewTabButtonLabelV1"
+    ]
+   },
+   "fids": [
+    "0fa7268ea25c"
+   ],
+   "findings": [
+    "\"New Search\" button label is rendered as \"new search results\" instead of the action \"new search\"."
+   ],
+   "source": "New Search",
+   "original": "新搜尋結果",
+   "text": "新搜尋",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "fi3W24-scEmjs",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "fi3W24-scEmjs"
+    ]
+   },
+   "fids": [
+    "9a56297c678a"
+   ],
+   "findings": [
+    "The option name in quotes (進行新隱私搜尋) doesn't match the menu item it refers to, which this file translates as 新隱私搜尋."
+   ],
+   "source": "There are ${count} options matching ‘New Private Search’.",
+   "original": "有 ${count} 個符合「進行新隱私搜尋」的選項。",
+   "text": "有 ${count} 個符合「新隱私搜尋」的選項。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-08",
+   "group": "D",
+   "file": "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+   "string_id": "fi3W24-xRJbBP",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "WidgetKit/Base.lproj/WidgetIntents.intentdefinition",
+     "fi3W24-xRJbBP"
+    ]
+   },
+   "fids": [
+    "4772df9a5a09"
+   ],
+   "findings": [
+    "The option name in quotes (進行新搜尋) doesn't match the menu item it refers to, which this file translates as 新搜尋."
+   ],
+   "source": "There are ${count} options matching ‘New Search’.",
+   "original": "有 ${count} 個符合「進行新搜尋」的選項。",
+   "text": "有 ${count} 個符合「新搜尋」的選項。",
+   "status": "pending",
+   "status_date": "2026-11-08",
+   "comment": ""
+  }
+ ]
+}
