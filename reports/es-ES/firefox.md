@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,371 |
+| **Strings reviewed this run** | 2 of 15,371 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
+    - Current: `visite  https`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.addEventListener`
+    - Suggest: `visite https`
+    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
+    - Current: `visite  https`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Suggest: `visite https`
+    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +55,7 @@ _Nothing retired._
 |---|---|
 | Files | 321 |
 | Strings | 15,371 |
-| Missing strings | 1,489 |
+| Missing strings | 1,504 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 10 |
 | Files with no en-US counterpart | 0 |
@@ -63,19 +72,19 @@ _Nothing retired._
 
 ### Completeness
 
-**1,489 strings** are not translated yet, concentrated in:
+**1,504 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 219
+- `browser/browser/newtab/newtab.ftl` — 226
 - `browser/browser/aiWindow.ftl` — 135
 - `browser/browser/newtab/onboarding.ftl` — 80
 - `browser/browser/appmenu.ftl` — 63
+- `browser/browser/browser.ftl` — 53
 - `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/browser.ftl` — 49
 - `browser/browser/ipProtection.ftl` — 48
 - `browser/browser/preferences/preferences.ftl` — 47
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 33
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
-- `devtools/client/toolbox-options.ftl` — 28
+- `browser/browser/tabContextMenu.ftl` — 28
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 28
 
 **Files absent from the locale:**
@@ -116,7 +125,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (44)
+## 3. Open findings (46)
 
 
 | Impact | Meaning | Count |
@@ -124,7 +133,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 24 |
 | 3 | Degraded language (grammar, spelling, terminology) | 19 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -324,6 +333,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
     - Suggest: `“Limpiar ahora”`
     - The en-US uses typographic quotes and es-ES convention is curly double quotes; straight ASCII apostrophes deviate from it.
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
+    - Current: `visite  https`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.addEventListener`
+    - Suggest: `visite https`
+    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
+    - Current: `visite  https`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Suggest: `visite https`
+    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
 
 ---
 

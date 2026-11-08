@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 2 of 16,435 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 330 |
 | Strings | 16,435 |
-| Missing strings | 425 |
+| Missing strings | 440 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,15 +63,15 @@ _Nothing retired._
 
 ### Completeness
 
-**425 strings** are not translated yet, concentrated in:
+**440 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
+- `browser/browser/newtab/newtab.ftl` — 49
 - `browser/browser/newtab/onboarding.ftl` — 45
-- `browser/browser/newtab/newtab.ftl` — 42
 - `browser/browser/preferences/preferences.ftl` — 38
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 28
+- `dom/chrome/dom/dom.properties` — 19
 - `devtools/client/toolbox-options.ftl` — 18
-- `dom/chrome/dom/dom.properties` — 16
 - `browser/browser/autoTabGrouping.ftl` — 15
 - `browser/browser/tabContextMenu.ftl` — 14
 - `toolkit/toolkit/neterror/netError.ftl` — 13

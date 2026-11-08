@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "nl",
-  "prose_chunks": 17629,
-  "strings": 16815
+  "prose_chunks": 17698,
+  "strings": 16875
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 1046
+  "typographic": 1048
  },
  "dash": {
   "em": 0,
@@ -31,11 +31,11 @@
  },
  "quotes": {
   "curly-double": 9,
-  "curly-single": 824,
+  "curly-single": 825,
   "straight-double": 25
  },
  "register": {
-  "formal": 2788,
+  "formal": 2812,
   "informal": 0
  }
 }

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 105 of 16,860 |
+| **Strings reviewed this run** | 18 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,13 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (1)
 
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The few/many variants use the singular "an unsupported purpose" when the source's plural form means several purposes.
-    - Current: `[few] Элемент { $memberName } по индексу { $index } имеет неподдерживаемое назначение: { $purposes }.`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - Suggest: `[few] Элемент { $memberName } по индексу { $index } имеет неподдерживаемые назначения: { $purposes }.`
-    - $count is the number of unknown purposes. The en-US [other] says "unsupported purposes", but the Russian few/many variants repeat the singular form from [one]. The many variant has the same problem.
-- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — In the [one] variant, the participle does not agree with the feminine noun.
-    - Current: `[one] Выбрано { $count } вкладка`
-    - Source: `{$count ->} [one] { $count } tab selected [other] { $count } tabs selected`
-    - Suggest: `[one] Выбрана { $count } вкладка`
-    - With "1/21 вкладка" the predicate must agree in gender, so it should be «Выбрана». «Выбрано … вкладка» is ungrammatical.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" for a report-only policy is rendered as a plain future tense, "will block".
-    - Current: `Настройки страницы будут блокировать перенаправление`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `Настройки страницы заблокировали бы перенаправление`
-    - A Report-Only policy does not block anything; it only reports what would be blocked. «будут блокировать» says the redirect will be blocked.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (the duplicate tabs to close) is translated as the verb "duplicate the tabs".
-    - Current: `Дублировать вкладки`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Дубликаты вкладок`
-    - The developer comment says this item is in the "Close Multiple" submenu and closes the duplicates of the selected tab. «Дублировать вкладки» is a command to duplicate tabs, which is the wrong action.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip treats "Open" as a command ("Open tabs!") instead of describing tabs that are open.
-    - Current: `Открывайте вкладки с других ваших устройств`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Открытые вкладки с других ваших устройств`
-    - The developer comment says "Open" here describes tabs that are open. The label gets this right («Открытые вкладки»), but the tooltip uses an imperative verb.
+- `GamepadHapticActuatorsWarning` — `dom/chrome/dom/dom.properties` — The identifier that must not be translated is misspelled as "rapticActuators".
+    - Current: `Gamepad.rapticActuators`
+    - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
+    - Suggest: `Gamepad.hapticActuators`
+    - The developer comment says not to translate "Gamepad.hapticActuators". It is an API name and must match the source exactly. The Russian has a typo (h→r), so the warning names an API that doesn't exist.
 
 ### ✅ Fixed since the last run (0)
 
@@ -69,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,860 |
+| Strings | 16,875 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -81,7 +61,7 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 159 |
+| Access keys not in their label | 162 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 4 |
 
@@ -106,12 +86,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 159 strings** — 159 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-payment-methods-require-device-sign-in-checkbox`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2` …and 147 more
+- **accesskey — 162 strings** — 162 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-or-update-from-file`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-showrecentsearches-option-2`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2`, `autofill-addresses-checkbox-message`, `autofill-addresses-manage-addresses-button`, `autofill-payment-methods-manage-payments-button`, `autofill-payment-methods-require-device-sign-in-checkbox`, `autofill-reauth-payment-methods-checkbox-2`, `bookmark-panel-save-button2` …and 150 more
 
 ---
 
-## 3. Open findings (610)
+## 3. Open findings (611)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -126,7 +106,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 275 |
+| 2 | Wrong content (says something other than the English) | 276 |
 | 3 | Degraded language (grammar, spelling, terminology) | 230 |
 | 4 | Cosmetic (typography, spacing) | 61 |
 
@@ -460,7 +440,7 @@ _Also listed under their own category below._
     - Current: `Добавить все вкладки…`
     - Source: `label: Bookmark All Tabs…`
     - Suggest: `Добавить все вкладки в закладки…`
-- _…and 219 more; see `state/` for the full list._
+- _…and 220 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

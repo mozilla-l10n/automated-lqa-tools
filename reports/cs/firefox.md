@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 53 of 16,805 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplikovat panely" means "duplicate the tabs" (verb), but the item closes duplicate tabs.
+    - Current: `Duplikovat panely`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Duplicitní panely`
+    - The comment says this item sits in the "Close Multiple" submenu and closes the selected tab's duplicates. "Duplicate" here is an adjective. The Czech verb tells the user it will duplicate tabs.
+- `extension-classic-purple-name` — `browser/browser/appExtensionFields.ftl` — Purple is translated "Fialový", the same word used for Violet, so two themes share one name.
+    - Current: `Fialový`
+    - Source: `Purple`
+    - Suggest: `Purpurový`
+    - Violet and Purple are separate themes. Both are rendered "Fialový", so users can't tell them apart. Purple is normally "Purpurový" in Czech.
+- `experimental-features-resource-monitor` — `toolkit/toolkit/firefoxlabs/features.ftl` — "Správce procesů" (process manager) does not match "Resource monitor".
+    - Current: `Správce procesů`
+    - Source: `label: Resource monitor`
+    - Suggest: `Monitor prostředků`
+    - The source names a resource monitor feature. "Správce procesů" means process manager, which is also the name of a different tool (about:processes), so the two get confused.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,805 |
+| Missing strings | 70 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -54,7 +68,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 73 |
+| Plural variants (dead or missing forms) | 75 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
@@ -63,20 +77,20 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
+**70 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
+- `browser/browser/newtab/onboarding.ftl` — 21
+- `browser/browser/newtab/newtab.ftl` — 10
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 8
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
 - `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
+- `browser/browser/browser.ftl` — 4
+- `browser/browser/tabContextMenu.ftl` — 3
+- `dom/chrome/dom/dom.properties` — 3
+- `browser/browser/tabbrowser.ftl` — 2
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
+- `browser/browser/contextual-manager.ftl` — 1
+- `browser/browser/customkeys.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +102,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `german-double` 476, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 392, `ascii` 3 | **char** |
+| ellipsis | `char` 393, `ascii` 3 | **char** |
 | dash | `em` 67, `en` 30 | _mixed_ |
 | nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
 
@@ -96,18 +110,18 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 73 strings** — 73 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label`, `accessibility-progress-progressbar` …and 61 more
+- **plurals — 75 strings** — 75 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 63 more
 
 ---
 
-## 3. Open findings (255)
+## 3. Open findings (258)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 126 |
+| 2 | Wrong content (says something other than the English) | 129 |
 | 3 | Degraded language (grammar, spelling, terminology) | 64 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -417,6 +431,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Dismiss { $text } title: Dismiss { $text }`
     - Suggest: `Skrýt { $text }`
     - Per the developer comment the control dismisses a suggestion pill; "Zrušit" means cancelling an action, not dismissing a suggestion.
+- `extension-classic-purple-name` — `browser/browser/appExtensionFields.ftl` — Purple is translated "Fialový", the same word used for Violet, so two themes share one name.
+    - Current: `Fialový`
+    - Source: `Purple`
+    - Suggest: `Purpurový`
+    - Violet and Purple are separate themes. Both are rendered "Fialový", so users can't tell them apart. Purple is normally "Purpurový" in Czech.
 - `decoder-doctor-no-pulse-audio-message` — `browser/browser/browser.ftl` — "To play audio" is translated as "to play music" (hudby).
     - Current: `Pro přehrávání hudby`
     - Source: `To play audio, you may need to install the required PulseAudio software.`
@@ -487,6 +506,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Resource monitor`
     - Suggest: `Monitor prostředků`
     - en-US says "Resource monitor"; "Správce procesů" corresponds to Process Manager, not resource monitoring.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplikovat panely" means "duplicate the tabs" (verb), but the item closes duplicate tabs.
+    - Current: `Duplikovat panely`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Duplicitní panely`
+    - The comment says this item sits in the "Close Multiple" submenu and closes the selected tab's duplicates. "Duplicate" here is an adjective. The Czech verb tells the user it will duplicate tabs.
 - `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
     - Current: `Začátek adresy URL je neplatný.`
     - Source: `The start URL is invalid.`
@@ -512,6 +536,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Log modules to diagnose IP Protection (VPN) issues`
     - Suggest: `Protokolovat moduly pro diagnostiku problémů s IP Protection (VPN)`
     - The en-US means logging the modules needed to diagnose IP Protection issues; "Moduly protokolů" means "modules of logs". Other preset descriptions in this file use the verb form.
+- `experimental-features-resource-monitor` — `toolkit/toolkit/firefoxlabs/features.ftl` — "Správce procesů" (process manager) does not match "Resource monitor".
+    - Current: `Správce procesů`
+    - Source: `label: Resource monitor`
+    - Suggest: `Monitor prostředků`
+    - The source names a resource monitor feature. "Správce procesů" means process manager, which is also the name of a different tool (about:processes), so the two get confused.
 - `btp-warning-tracker-purged` — `toolkit/toolkit/global/antiTracking.ftl` — "bounce tracker" translated as "sledovač" despite the do-not-translate note.
     - Current: `protože byl rozpoznán jako sledovač`
     - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
@@ -1130,7 +1159,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 392 times against 3 ASCII runs.
+    - The tree uses … 393 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1139,7 +1168,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 392 times against 3 ASCII runs.
+    - The tree uses … 393 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1178,7 +1207,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 392 times against 3 ASCII runs.
+    - The tree uses … 393 times against 3 ASCII runs.
 
 ---
 

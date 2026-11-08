@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,860 |
+| **Strings reviewed this run** | 67 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,61 @@ Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — “View” is translated as the verb “Visa” (show), but the developer comment says it is a noun.
+    - Current: `Visa`
+    - Source: `View`
+    - Suggest: `Vy`
+    - The developer comment says “View” is a noun here, meaning the view the widget shows, and the item opens a submenu of views. “Visa” is the imperative verb “show”, so the label reads as an action instead of naming the submenu.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (9)
 
-_Nothing was fixed._
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The name is split into two words and capitalised instead of being written as a hyphenated compound.
+    - Current: `OLED Svart`
+    - Source: `OLED Black`
+    - Suggest: `OLED-svart`
+    - In Swedish, a compound that starts with an abbreviation takes a hyphen and a lowercase second part ("OLED-svart"). "OLED Svart" is särskrivning, an incorrectly split compound, and uses English-style title case.
+- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — "Öka" (increase) does not work with the browser as object; "boost" here means enhance/improve.
+    - Current: `Öka { -brand-short-name } med tillägg`
+    - Source: `Boost { -brand-short-name } with extensions`
+    - Suggest: `Förbättra { -brand-short-name } med tillägg`
+    - en-US "Boost Firefox with extensions" means enhance it. Swedish "öka" means to increase a quantity, so "Öka Firefox" is unidiomatic and close to meaningless.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (beginning of tab strip) translated as the verb "Starta".
+    - Current: `Starta`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Början`
+    - Developer comment says this moves the tab to the start of the tab strip; "Starta" is the imperative verb "to start", not the position.
+- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — Typo "flikat" for "flikar".
+    - Current: `Flytta { $tabCount } flikat till`
+    - Source: `accesskey: v label: {$tabCount ->} [1] Move to [other] Move { $tabCount } Tabs to`
+    - Suggest: `Flytta { $tabCount } flikar till`
+    - The plural of "flik" is "flikar"; "flikat" is a misspelling.
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — Verb "Separate" translated as the adjective "Separata".
+    - Current: `Separata flikar`
+    - Source: `accesskey: t label: Separate Tabs`
+    - Suggest: `Separera flikar`
+    - Developer comment says the action separates the two split-view tabs; "Separata flikar" means "separate (distinct) tabs" rather than the command.
+- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular uses "vald" but plural uses "markerade" for the same "selected".
+    - Current: `{ $count } flik vald`
+    - Source: `{$count ->} [one] { $count } tab selected [other] { $count } tabs selected`
+    - Suggest: `{ $count } flik markerad`
+    - The same term is rendered two ways in one message. The rest of this surface uses "markera" ("Markera alla flikar", "Avbryt markering").
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular variant reads "(flik 1)" ("tab 1") instead of "(1 flik)".
+    - Current: `(flik { $count })`
+    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
+    - Suggest: `({ $count } flik)`
+    - en-US "(1 tab)" is a count. Putting the number after the noun turns it into an ordinal label ("tab number 1"), and it no longer matches the plural variant.
+- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The numeral 1 is followed by the definite form "nedladdningen", which is ungrammatical in Swedish.
+    - Current: `stoppa 1 nedladdningen`
+    - Source: `{$downloadsCount ->} [1] Stop 1 download and close this Private Window? [other] Stop { $downloadsCount } downloads and close this Private Window?`
+    - Suggest: `stoppa 1 nedladdning`
+    - In Swedish a numeral takes the indefinite noun form ("1 nedladdning"). "1 nedladdningen" is a grammar error.
+- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Leaves out "unload tabs you’re not using".
+    - Current: `och frigör resurser.`
+    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
+    - Suggest: `och inaktivera flikar du inte använder för att frigöra resurser.`
+    - en-US says you can unload unused tabs to free up resources. The Swedish only says "free up resources", so the feature's main action is missing.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +93,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,860 |
+| Strings | 16,875 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,14 +133,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (352)
+## 3. Open findings (344)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 104 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
+| 2 | Wrong content (says something other than the English) | 101 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -413,6 +461,11 @@ _Nothing reported._
     - Source: `By choosing Anthropic Claude, you agree to the Anthropic <a data-l10n-name="link1">Consumer Terms of Service</a>, <a data-l10n-name="link2">Usage Policy</a>, and <a data-l10n-name="link3">Privacy Policy</a>.`
     - Suggest: `Genom att välja Anthropic Claude godkänner du`
     - The same brand is spelled correctly in genai-onboarding-claude-tooltip ("Anthropic Claude"); brand names must not be altered.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — “View” is translated as the verb “Visa” (show), but the developer comment says it is a noun.
+    - Current: `Visa`
+    - Source: `View`
+    - Suggest: `Vy`
+    - The developer comment says “View” is a noun here, meaning the view the widget shows, and the item opens a submenu of views. “Visa” is the imperative verb “show”, so the label reads as an action instead of naming the submenu.
 - `autofill-address-department` — `browser/browser/preferences/formAutofill.ftl` — Administrative "Department" rendered as an organizational division
     - Current: `Avdelning`
     - Source: `Department`
@@ -423,11 +476,6 @@ _Nothing reported._
     - Source: `Desktop Background`
     - Suggest: `Skrivbordsbakgrund`
     - The en-US and the developer comment both describe the file used as the desktop background. "Firefox-bakgrund" names a different thing, so the saved file gets the wrong name.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (beginning of tab strip) translated as the verb "Starta".
-    - Current: `Starta`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Början`
-    - Developer comment says this moves the tab to the start of the tab strip; "Starta" is the imperative verb "to start", not the position.
 - `tab-context-add-tab-to-group-closed-groups` — `browser/browser/tabContextMenu.ftl` — "Closed Groups" rendered as "Slutna grupper" (exclusive/sealed groups) instead of groups that have been closed.
     - Current: `Slutna grupper`
     - Source: `label: Closed Groups`
@@ -438,26 +486,11 @@ _Nothing reported._
     - Source: `accesskey: x label: Duplicate Tabs`
     - Suggest: `Dubblettflikar`
     - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
-- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — Verb "Separate" translated as the adjective "Separata".
-    - Current: `Separata flikar`
-    - Source: `accesskey: t label: Separate Tabs`
-    - Suggest: `Separera flikar`
-    - Developer comment says the action separates the two split-view tabs; "Separata flikar" means "separate (distinct) tabs" rather than the command.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
     - Current: `Fråga för att öppna applänkar`
     - Source: `Ask to open app links`
     - Suggest: `Fråga om att öppna applänkar`
     - The comment says this permission controls whether the site may ask to open app links. "för att" expresses purpose, which changes the meaning. It is also inconsistent with "fråga om att öppna applänkar" in preferences.ftl.
-- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — Singular variant reads "(flik 1)" ("tab 1") instead of "(1 flik)".
-    - Current: `(flik { $count })`
-    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
-    - Suggest: `({ $count } flik)`
-    - en-US "(1 tab)" is a count. Putting the number after the noun turns it into an ordinal label ("tab number 1"), and it no longer matches the plural variant.
-- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — Leaves out "unload tabs you’re not using".
-    - Current: `och frigör resurser.`
-    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
-    - Suggest: `och inaktivera flikar du inte använder för att frigöra resurser.`
-    - en-US says you can unload unused tabs to free up resources. The Swedish only says "free up resources", so the feature's main action is missing.
 - `language-name-se` — `toolkit/toolkit/intl/languageNames.ftl` — "Northern Sami" rendered as the name of the whole Sami language group.
     - Current: `Samiska`
     - Source: `Northern Sami`
@@ -496,11 +529,6 @@ _Nothing reported._
     - Source: `Share the pages referenced in this chat`
     - Suggest: `i den här chatten`
     - The rest of the file consistently uses "chatt"/"chattar"; "chat" is a misspelling in Swedish.
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The name is split into two words and capitalised instead of being written as a hyphenated compound.
-    - Current: `OLED Svart`
-    - Source: `OLED Black`
-    - Suggest: `OLED-svart`
-    - In Swedish, a compound that starts with an abbreviation takes a hyphen and a lowercase second part ("OLED-svart"). "OLED Svart" is särskrivning, an incorrectly split compound, and uses English-style title case.
 - `appmenuitem-fxa-sync-off-description` — `browser/browser/appmenu.ftl` — Mixed verb forms: imperative "Skydda" coordinated with the infinitive "komma åt".
     - Current: `Skydda och komma åt dina bokmärken`
     - Source: `Protect and access your bookmarks, passwords, and more anywhere.`
@@ -566,11 +594,6 @@ _Nothing reported._
     - Source: `Choose where you use VPN`
     - Suggest: `Välj var du använder VPN`
     - No motion is involved; the equivalent settings strings use "var" (e.g. "dölja var du surfar").
-- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — "Öka" (increase) does not work with the browser as object; "boost" here means enhance/improve.
-    - Current: `Öka { -brand-short-name } med tillägg`
-    - Source: `Boost { -brand-short-name } with extensions`
-    - Suggest: `Förbättra { -brand-short-name } med tillägg`
-    - en-US "Boost Firefox with extensions" means enhance it. Swedish "öka" means to increase a quantity, so "Öka Firefox" is unidiomatic and close to meaningless.
 - `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — Missing "att" after "så", giving subordinate word order in a main clause.
     - Current: `så ljudet aldrig lämnar din enhet`
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
@@ -616,11 +639,6 @@ _Nothing reported._
     - Source: `accesskey: v label: {$tabCount ->} [1] Move Tab to [other] Move { $tabCount } Tabs to`
     - Suggest: `Flytta { $tabCount } flikar till`
     - "flikat" is not a word; the plural of "flik" is "flikar", as used in every other plural variant in this file.
-- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — Typo "flikat" for "flikar".
-    - Current: `Flytta { $tabCount } flikat till`
-    - Source: `accesskey: v label: {$tabCount ->} [1] Move to [other] Move { $tabCount } Tabs to`
-    - Suggest: `Flytta { $tabCount } flikar till`
-    - The plural of "flik" is "flikar"; "flikat" is a misspelling.
 - `tabbrowser-allow-dialogs-to-get-focus` — `browser/browser/tabbrowser.ftl` — Ungrammatical sentence; the infinitive clause "to take you to their tab" is rendered as a finite verb.
     - Current: `Tillåt liknande meddelanden från { $domain } leder dig till deras flik`
     - Source: `label: Allow notifications like this from { $domain } to take you to their tab`
@@ -741,11 +759,6 @@ _Nothing reported._
     - Source: `MDN Web Docs`
     - Suggest: `MDN Web Docs`
     - The file header states these feature names must be treated as brands and neither transliterated nor translated; sibling entries keep their English names.
-- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The numeral 1 is followed by the definite form "nedladdningen", which is ungrammatical in Swedish.
-    - Current: `stoppa 1 nedladdningen`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and close this Private Window? [other] Stop { $downloadsCount } downloads and close this Private Window?`
-    - Suggest: `stoppa 1 nedladdning`
-    - In Swedish a numeral takes the indefinite noun form ("1 nedladdning"). "1 nedladdningen" is a grammar error.
 - `experimental-features-link-previews-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — The macOS key name Option is translated as "Alternativ" in one variant and kept as "Option" in the parallel string.
     - Current: `tryck på Shift (⇧) plus Alternativ (⌥) eller Alt`
     - Source: `{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. For some webpages, AI can also…`
@@ -1063,7 +1076,7 @@ _Nothing reported._
     - Source: `Animation cannot be run on the compositor because the area of the frame (%1$S) is too large relative to the viewport (larger than %2$S)`
     - Suggest: `eftersom området för ramen (%1$S) är för stort`
     - “område” is neuter and requires “stort”.
-- _…and 46 more; see `state/` for the full list._
+- _…and 45 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1300,6 +1313,14 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (9)
 
-_Nothing fixed yet._
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — fixed 2026-11-08
+- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-11-08
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
+- `tab-context-move-tabs3` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — fixed 2026-11-08
+- `about-processes-bulk-selected-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — fixed 2026-11-08
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — fixed 2026-11-08
+- `download-ui-confirm-private-browsing-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-08
+- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — fixed 2026-11-08

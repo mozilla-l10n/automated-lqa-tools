@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 17,089 |
+| **Strings reviewed this run** | 41 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,76 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
+    - Current: `Correspondances`
+    - Source: `Matches`
+    - Suggest: `Matchs`
+    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
+- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
+    - Current: `Tableau`
+    - Source: `Table`
+    - Suggest: `Classement`
+    - The view options Matches/Table/Fixtures are football terms. Here “Table” is the league standings, and French says “classement” for that. “Tableau” reads as a generic table or chart.
+- `contextual-manager-passwords-delete-all-confirm-button` — `browser/browser/contextual-manager.ftl` — The singular variant says “Tout supprimer” (Delete all), but the source says just “Delete” when there is one password.
+    - Current: `[one] Tout supprimer`
+    - Source: `{$total ->} [1] Delete [other] Delete all`
+    - Suggest: `[one] Supprimer`
+    - The en-US deliberately uses “Delete” for one password and “Delete all” for several. The French uses “Delete all” in both cases.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (10)
 
-_Nothing was fixed._
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The acronym OLED is written in lowercase and in an unnatural word order.
+    - Current: `Oled noir`
+    - Source: `OLED Black`
+    - Suggest: `Noir OLED`
+    - OLED is an acronym and stays uppercase. The theme is a black theme for OLED screens, so French says "Noir OLED".
+- `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — The singular variant reads as "delete password number 1?" instead of "delete 1 password?".
+    - Current: `Supprimer le mot de passe { $total } ?`
+    - Source: `{$total ->} [one] Delete { $total } password? [other] Delete { $total } passwords?`
+    - Suggest: `Supprimer { $total } mot de passe ?`
+    - The source says "Delete { $total } password?". Placing the number after "le mot de passe" turns the count into an identifier.
+- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — The tooltip starts with a lowercase letter.
+    - Current: `moyens de paiement enregistrés`
+    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
+    - Suggest: `Moyens de paiement enregistrés`
+    - The source and the sibling tooltips start with a capital letter.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip uses "Open" as a verb, but the source means tabs that are open.
+    - Current: `Ouvrir des onglets depuis vos autres appareils`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Onglets ouverts sur vos autres appareils`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open).
+- `close-tabs-to-the-start-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs" is translated as "Tabulations" instead of "Onglets".
+    - Current: `Tabulations à gauche`
+    - Source: `accesskey: l label: Tabs to Left`
+    - Suggest: `Onglets à gauche`
+    - Browser tabs are "onglets" in fr, and the sibling labels use "Onglets". "Tabulations" means tab characters.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (a position in the tab strip) is translated as the verb "Démarrer".
+    - Current: `Démarrer`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Début`
+    - The developer comment says this moves the tab to the start of the tab strip. It is a position, and it pairs with "Fin".
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — The label reads as "Duplicate the tabs" (a command) instead of naming the duplicate tabs to close.
+    - Current: `Dupliquer les onglets`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Onglets en double`
+    - The comment says the item, under "Close Multiple", closes duplicates of the selected tab. "Dupliquer" tells the user it copies tabs.
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
+    - Current: `la langue préférée utilisée`
+    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
+    - Suggest: `la langue préférée de l’utilisateur`
+    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
+- `about-processes-reload-site` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Reload" is « Recharger » here but « Actualiser » in the other reload strings, and « depuis » wrongly suggests the reload comes from the site.
+    - Current: `Recharger les onglets depuis { $site }`
+    - Source: `title: Reload tabs from { $site }`
+    - Suggest: `Actualiser les onglets de { $site }`
+    - about-processes-reload-tab and bulk-reload-tabs use « Actualiser ». "Tabs from site" means the tabs belonging to the site, as the unload string's « de » shows.
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — The singular variant puts the noun before the number and keeps it plural: « (onglets 1) ».
+    - Current: `(onglets { $count })`
+    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
+    - Suggest: `({ $count } onglet)`
+    - The en-US is "(1 tab)". The French needs the number first and the singular noun, matching the other variant.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +108,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 341 |
-| Strings | 17,089 |
+| Strings | 17,104 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -87,10 +150,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1053, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5191, `straight` 10 | **typographic** |
+| apostrophe | `typographic` 5193, `straight` 10 | **typographic** |
 | ellipsis | `char` 411 | **char** |
 | dash | `em` 45, `en` 9 | **em** |
-| nbsp | `total` 4078, `before-punctuation` 1789 | _mixed_ |
+| nbsp | `total` 4079, `before-punctuation` 1789 | _mixed_ |
 | register | `formal` 2930 | **formal** |
 
 ---
@@ -101,15 +164,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (42)
+## 3. Open findings (35)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 19 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
-| 4 | Cosmetic (typography, spacing) | 5 |
+| 2 | Wrong content (says something other than the English) | 18 |
+| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -122,11 +185,11 @@ _Nothing in this category._
     - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
     - Suggest: `Basculer entre les fenêtres { -smart-window-brand-name } et classiques`
     - en-US says "Switch between Smart and Classic Windows"; the French drops the noun for the second item, leaving "et classique" dangling without a noun.
-- `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — The singular variant reads as "delete password number 1?" instead of "delete 1 password?".
-    - Current: `Supprimer le mot de passe { $total } ?`
-    - Source: `{$total ->} [one] Delete { $total } password? [other] Delete { $total } passwords?`
-    - Suggest: `Supprimer { $total } mot de passe ?`
-    - The source says "Delete { $total } password?". Placing the number after "le mot de passe" turns the count into an identifier.
+- `contextual-manager-passwords-delete-all-confirm-button` — `browser/browser/contextual-manager.ftl` — The singular variant says “Tout supprimer” (Delete all), but the source says just “Delete” when there is one password.
+    - Current: `[one] Tout supprimer`
+    - Source: `{$total ->} [1] Delete [other] Delete all`
+    - Suggest: `[one] Supprimer`
+    - The en-US deliberately uses “Delete” for one password and “Delete all” for several. The French uses “Delete all” in both cases.
 - `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Règle personnalisée" ("Custom rule") instead of a possessive referring to the user's rule.
     - Current: `Règle personnalisée`
     - Source: `Your rule`
@@ -137,6 +200,16 @@ _Nothing in this category._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `pour retrouver une expérience comme neuve ?`
     - The en-US promises a fresh, like-new state after cleanup, not improved browsing performance; the French makes a claim the source does not.
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
+    - Current: `Correspondances`
+    - Source: `Matches`
+    - Suggest: `Matchs`
+    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
+- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
+    - Current: `Tableau`
+    - Source: `Table`
+    - Suggest: `Classement`
+    - The view options Matches/Table/Fixtures are football terms. Here “Table” is the league standings, and French says “classement” for that. “Tableau” reads as a generic table or chart.
 - `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — The header is garbled and ungrammatical, and does not say "Boost Firefox with extensions".
     - Current: `Plus de { -brand-short-name } d’extensions`
     - Source: `Boost { -brand-short-name } with extensions`
@@ -147,31 +220,11 @@ _Nothing in this category._
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
     - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
     - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip uses "Open" as a verb, but the source means tabs that are open.
-    - Current: `Ouvrir des onglets depuis vos autres appareils`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Onglets ouverts sur vos autres appareils`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open).
 - `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
     - Current: `pourrait accéder à votre trafic chiffré`
     - Source: `label: An app or service may see your encrypted traffic.`
     - Suggest: `pourrait voir votre trafic chiffré`
     - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (a position in the tab strip) is translated as the verb "Démarrer".
-    - Current: `Démarrer`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Début`
-    - The developer comment says this moves the tab to the start of the tab strip. It is a position, and it pairs with "Fin".
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — The label reads as "Duplicate the tabs" (a command) instead of naming the duplicate tabs to close.
-    - Current: `Dupliquer les onglets`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Onglets en double`
-    - The comment says the item, under "Close Multiple", closes duplicates of the selected tab. "Dupliquer" tells the user it copies tabs.
-- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
-    - Current: `la langue préférée utilisée`
-    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
-    - Suggest: `la langue préférée de l’utilisateur`
-    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
 - `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier Connection-Allowlist was translated as « Connexion-Allowlist ».
     - Current: `Connexion-Allowlist`
     - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
@@ -225,11 +278,6 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The acronym OLED is written in lowercase and in an unnatural word order.
-    - Current: `Oled noir`
-    - Source: `OLED Black`
-    - Suggest: `Noir OLED`
-    - OLED is an acronym and stays uppercase. The theme is a black theme for OLED screens, so French says "Noir OLED".
 - `tab-groups-onboarding-session-restore-title-3` — `browser/browser/newtab/onboarding.ftl` — The phrase « à tout moment » appears twice in the same sentence.
     - Current: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.`
     - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
@@ -240,11 +288,6 @@ _Nothing in this category._
     - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
     - Suggest: `Paramètres de { -brand-short-name }, le cas échéant`
     - French needs "Paramètres de X". A brand name placed before the noun is not grammatical.
-- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — The singular variant puts the noun before the number and keeps it plural: « (onglets 1) ».
-    - Current: `(onglets { $count })`
-    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
-    - Suggest: `({ $count } onglet)`
-    - The en-US is "(1 tab)". The French needs the number first and the singular noun, matching the other variant.
 - `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The [1] variant adds a spurious pronoun, giving the ungrammatical "et le passer hors connexion".
     - Current: `et le passer hors connexion`
     - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
@@ -269,11 +312,6 @@ _Nothing in this category._
     - Source: `(value): Sans-serif accesskey: n`
 - `fonts-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
     - Source: `(value): Serif accesskey: S`
-- `close-tabs-to-the-start-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs" is translated as "Tabulations" instead of "Onglets".
-    - Current: `Tabulations à gauche`
-    - Source: `accesskey: l label: Tabs to Left`
-    - Suggest: `Onglets à gauche`
-    - Browser tabs are "onglets" in fr, and the sibling labels use "Onglets". "Tabulations" means tab characters.
 - `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
     - Source: `Running`
 - `serviceworker-worker-status-running` — `devtools/client/application.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
@@ -286,22 +324,12 @@ _Nothing in this category._
 - `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — about-processes-cpu-almost-idle (.title) — toolkit/toolkit/about/aboutProcesses.ftl:167 — "Temps CPU total" vs "Temps total de CPU" (lines 161/170); align.
     - Source: `(value): < 0.1% title: Total CPU time: { $total }{ $unit }`
     - Suggest: `.title`
-- `about-processes-reload-site` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Reload" is « Recharger » here but « Actualiser » in the other reload strings, and « depuis » wrongly suggests the reload comes from the site.
-    - Current: `Recharger les onglets depuis { $site }`
-    - Source: `title: Reload tabs from { $site }`
-    - Suggest: `Actualiser les onglets de { $site }`
-    - about-processes-reload-tab and bulk-reload-tabs use « Actualiser ». "Tabs from site" means the tabs belonging to the site, as the unload string's « de » shows.
 
 ### E. Typography, punctuation & spacing
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5191 times against 10 straight.
-- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — The tooltip starts with a lowercase letter.
-    - Current: `moyens de paiement enregistrés`
-    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
-    - Suggest: `Moyens de paiement enregistrés`
-    - The source and the sibling tooltips start with a capital letter.
+    - The tree uses ’ 5193 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -312,7 +340,7 @@ _Nothing in this category._
     - The locale's quote convention is `guillemet` (1053 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5191 times against 10 straight.
+    - The tree uses ’ 5193 times against 10 straight.
 
 ---
 
@@ -335,8 +363,18 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (80)
+### Fixed to date (90)
 
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — fixed 2026-11-08
+- `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-11-08
+- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-08
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-08
+- `close-tabs-to-the-start-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
+- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-08
+- `about-processes-reload-site` — `toolkit/toolkit/about/aboutProcesses.ftl` — fixed 2026-11-08
+- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — fixed 2026-11-08
 - `newtab-custom-widget-crossword-toggle` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-02
 - `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — fixed 2026-11-02
 - `PermissionsPolicyInvalidAllowValue` — `dom/chrome/security/security.properties` — fixed 2026-11-02
@@ -367,13 +405,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
 - `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — fixed 2026-08-24
 - `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
-- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
-- `sidebar-genai-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24
-- `newtab-clock-widget-edit-item-with-nickname` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `newtab-stocks-watchlist-full` — `browser/browser/newtab/newtab.ftl` — fixed 2026-08-24
-- `multi-profile-spotlight-title` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-08-24
-- `places-delete-bookmark` — `browser/browser/places.ftl` — fixed 2026-08-24
-- `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
-- `policy-PictureInPicture` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-08-24
-- `app-manager-handle-file` — `browser/browser/preferences/applicationManager.ftl` — fixed 2026-08-24

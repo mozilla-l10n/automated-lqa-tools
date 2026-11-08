@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 80 of 17,089 |
+| **Strings reviewed this run** | 45 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,13 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (1)
 
-- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
-    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
-    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
-    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
-    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
-    - Current: `Tabs duplizieren`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Doppelte Tabs`
-    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
-    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Offene Tabs von Ihren anderen Geräten`
-    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
-    - Current: `{ -brand-short-name } Einstellungen`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `{ -brand-short-name }-Einstellungen`
-    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
-- `close-tabs-to-the-end-alt` — `browser/browser/tabContextMenu.ftl` — The label adds a redundant "schließen" inside the "Close Multiple" submenu and doesn't match its sibling "Tabs links davon".
-    - Current: `Tabs rechts schließen`
-    - Source: `accesskey: i label: Tabs to Right`
-    - Suggest: `Tabs rechts davon`
-    - The source is "Tabs to Right", parallel to "Tabs to Left" ("Tabs links davon"). The verb is already in the parent menu.
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name "characterboundsupdate" is misspelled as "charactersboundsupdate".
+    - Current: `charactersboundsupdate-Ereignis-Listener`
+    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
+    - Suggest: `characterboundsupdate-Ereignis-Listener`
+    - The developer comment says not to translate "characterboundsupdate". It is a DOM event name, and the extra "s" turns it into an event that does not exist, which misleads developers reading the console warning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -69,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 341 |
-| Strings | 17,089 |
+| Strings | 17,104 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -119,7 +99,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 416 | **char** |
 | dash | `em` 19, `en` 70 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4055 | **formal** |
+| register | `informal` 12, `formal` 4056 | **formal** |
 
 ---
 
@@ -129,13 +109,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (27)
+## 3. Open findings (28)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 15 |
+| 2 | Wrong content (says something other than the English) | 16 |
 | 3 | Degraded language (grammar, spelling, terminology) | 10 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -213,6 +193,11 @@ _Nothing reported._
     - Source: `partially checked`
     - Suggest: `teilweise aktiviert`
     - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name "characterboundsupdate" is misspelled as "charactersboundsupdate".
+    - Current: `charactersboundsupdate-Ereignis-Listener`
+    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
+    - Suggest: `characterboundsupdate-Ereignis-Listener`
+    - The developer comment says not to translate "characterboundsupdate". It is a DOM event name, and the extra "s" turns it into an event that does not exist, which misleads developers reading the console warning.
 - `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
     - Current: `Die nicht verschlüsselte Anfrage`
     - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`

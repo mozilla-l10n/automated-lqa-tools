@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,393 |
+| **Strings reviewed this run** | 2 of 15,393 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 328 |
 | Strings | 15,393 |
-| Missing strings | 1,467 |
+| Missing strings | 1,482 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**1,467 strings** are not translated yet, concentrated in:
+**1,482 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 367
+- `browser/browser/newtab/newtab.ftl` — 374
 - `browser/browser/newtab/onboarding.ftl` — 80
 - `browser/browser/ipProtection.ftl` — 67
 - `browser/browser/preferences/preferences.ftl` — 66
@@ -73,10 +73,10 @@ _Nothing retired._
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 36
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
+- `browser/browser/browser.ftl` — 29
 - `browser/browser/genai.ftl` — 28
-- `toolkit/toolkit/about/aboutAddons.ftl` — 26
-- `toolkit/toolkit/about/url-classifier.ftl` — 26
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
+- `browser/browser/firefoxView.ftl` — 26
 
 **Files absent from the locale:**
 

@@ -396,7 +396,7 @@
   "file": "browser/browser/addonNotifications.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-11-05",
+  "last_seen": "2026-11-08",
   "locale": "nl",
   "origin": {},
   "rationale": "The label is “Verdachte website rapporteren”. An access key not in the label cannot be underlined and is unreachable by keyboard.",
@@ -3653,6 +3653,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Weergeven",
+  "dismissed_because": "",
+  "fid": "c003299a0aaf",
+  "file": "browser/browser/newtab/newtab.ftl",
+  "first_seen": "2026-11-08",
+  "impact": 3,
+  "last_seen": "2026-11-08",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says “View” is a noun meaning the view the widget shows; “Weergeven” is the infinitive “to show”, so the noun “Weergave” is required.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "2c0c9eed",
+  "string_id": "newtab-widget-wrexhamafc-menu-view",
+  "suggest": "Weergave",
+  "summary": "“View” is a noun per the developer comment but was translated as the verb “Weergeven”.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "legacy",
   "current": "separable verb split around the object. \"Slaat naar uw apparaat of OneDrive op\"",
@@ -6451,6 +6475,30 @@
   "string_id": "space-alert-under-5gb-message2",
   "suggest": "\"…voor een betere surfervaring.\"",
   "summary": "\"browsing experience\" became \"performance\". Current: \"…voor betere prestaties.\" → Suggest: \"…voor een betere surfervaring.\"",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "die u in de { -brand-short-name } hebt opgeslagen",
+  "dismissed_because": "",
+  "fid": "3b9958f5d0c0",
+  "file": "browser/browser/preferences/preferences.ftl",
+  "first_seen": "2026-11-08",
+  "impact": 3,
+  "last_seen": "2026-11-08",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Dutch does not use an article before the product name; the sibling tooltips use the brand without one, so “in de Firefox” is ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d14db79d",
+  "string_id": "sync-engine-addresses2",
+  "suggest": "die u in { -brand-short-name } hebt opgeslagen",
+  "summary": "Superfluous article “de” before the brand name.",
   "suppressed_by": ""
  },
  {
@@ -11627,6 +11675,30 @@
   "string_id": "-firefox-enterprise-brand-name",
   "suggest": "Firefox Enterprise",
   "summary": "The product brand name \"Firefox Enterprise\" has been translated into Dutch.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "1 download stoppen en  { -brand-short-name } afsluiten?",
+  "dismissed_because": "",
+  "fid": "2f9cbf3cfb2a",
+  "file": "toolkit/toolkit/downloads/downloadUI.ftl",
+  "first_seen": "2026-11-08",
+  "impact": 4,
+  "last_seen": "2026-11-08",
+  "locale": "nl",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Users will see two spaces in the dialog title. The other variants use a single space.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "20c92f2f",
+  "string_id": "download-ui-confirm-quit-title",
+  "suggest": "1 download stoppen en { -brand-short-name } afsluiten?",
+  "summary": "There is a double space between 'en' and the brand name in the [other 1] variant.",
   "suppressed_by": ""
  },
  {

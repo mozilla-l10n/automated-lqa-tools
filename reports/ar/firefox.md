@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,554 |
+| **Strings reviewed this run** | 15 of 13,569 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — Theme name uses feminine adjective سوداء after OLED, inconsistent with the masculine colour names used for all other themes and reading as 'a black OLED'.
+    - Current: `OLED سوداء`
+    - Source: `OLED Black`
+    - Suggest: `أسود OLED`
+    - Other theme names are masculine colour nouns (أحمر، أزرق، رمادي); 'OLED Black' names the black colour/theme, so the colour noun أسود should head it, matching the sibling names.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 326 |
-| Strings | 13,554 |
+| Strings | 13,569 |
 | Missing strings | 3,306 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
@@ -65,8 +69,8 @@ _Nothing retired._
 
 **3,306 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 350
-- `dom/chrome/dom/dom.properties` — 215
+- `browser/browser/newtab/newtab.ftl` — 357
+- `dom/chrome/dom/dom.properties` — 218
 - `browser/browser/aiWindow.ftl` — 160
 - `devtools/client/tooltips.ftl` — 98
 - `dom/chrome/layout/htmlparser.properties` — 94
@@ -108,14 +112,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (362)
+## 3. Open findings (363)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 200 |
 | 2 | Wrong content (says something other than the English) | 121 |
-| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
@@ -459,6 +463,11 @@ _Nothing reported._
     - Source: `We’ll erase every search and sign-in when you close all your Private Windows. { -brand-short-name }’s built-in protections are on here too, like blocking trackers.`
     - Suggest: `المتعقِّبات`
     - The shadda belongs on the قاف (متعقِّب), not on the باء.
+- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — Theme name uses feminine adjective سوداء after OLED, inconsistent with the masculine colour names used for all other themes and reading as 'a black OLED'.
+    - Current: `OLED سوداء`
+    - Source: `OLED Black`
+    - Suggest: `أسود OLED`
+    - Other theme names are masculine colour nouns (أحمر، أزرق، رمادي); 'OLED Black' names the black colour/theme, so the colour noun أسود should head it, matching the sibling names.
 - `appmenu-nova-update-description` — `browser/browser/appmenu.ftl` — The passive verb is feminine, but its subject فتح is masculine.
     - Current: `ستُعاد فتح ألسنتك.`
     - Source: `Your tabs will reopen.`

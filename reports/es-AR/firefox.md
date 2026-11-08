@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,796 |
+| **Strings reviewed this run** | 46 of 16,837 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,26 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip renders "Open tabs" as the verb "Abrir" instead of the noun phrase "tabs that are open".
+    - Current: `Abrir pestañas de los otros dispositivos`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Pestañas abiertas en los otros dispositivos`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The translation turns it into an instruction to open tabs.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as the verb "Ver", but the comment says it is a noun.
+    - Current: `Ver`
+    - Source: `View`
+    - Suggest: `Vista`
+    - The developer comment says "View" is a noun, as in the view the widget shows, and it opens a submenu for switching views. "Ver" is the verb "to see".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `tab-context-move-tab-to-group` — `browser/browser/tabbrowser.ftl` — Missing space in "ungrupo" in the plural variant.
+    - Current: `Agregar pestañas a ungrupo`
+    - Source: `accesskey: G label: {$tabCount ->} [1] Add Tab to Group [other] Add Tabs to Group`
+    - Suggest: `Agregar pestañas a un grupo`
+    - The article and noun were run together.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +58,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,796 |
-| Missing strings | 64 |
+| Strings | 16,837 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +76,20 @@ _Nothing retired._
 
 ### Completeness
 
-**64 strings** are not translated yet, concentrated in:
+**38 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 17
 - `browser/browser/newtab/newtab.ftl` — 11
-- `browser/browser/preferences/preferences.ftl` — 8
+- `browser/browser/newtab/onboarding.ftl` — 7
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 3
-- `browser/browser/tabbrowser.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 3
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/tabContextMenu.ftl` — 2
-- `devtools/client/debugger.properties` — 1
+- `browser/browser/newtab/asrouter.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 - `dom/chrome/dom/dom.properties` — 1
+- `devtools/client/debugger.properties` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,7 +104,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 401, `ascii` 1 | **char** |
 | dash | `em` 63, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 352, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 355, `open-exclamation` 69 | **open-question** |
 
 ---
 
@@ -102,14 +115,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (297)
+## 3. Open findings (298)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 111 |
-| 3 | Degraded language (grammar, spelling, terminology) | 102 |
+| 2 | Wrong content (says something other than the English) | 113 |
+| 3 | Degraded language (grammar, spelling, terminology) | 101 |
 | 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
@@ -486,6 +499,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Your images, wallpapers that you have saved`
     - Suggest: `Tus imágenes, fondos de pantalla que guardaste`
     - en-US addresses the user in second person; the target uses "Mis" (my), inconsistent with the source and with the rest of the picker.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as the verb "Ver", but the comment says it is a noun.
+    - Current: `Ver`
+    - Source: `View`
+    - Suggest: `Vista`
+    - The developer comment says "View" is a noun, as in the view the widget shows, and it opens a submenu for switching views. "Ver" is the verb "to see".
 - `mr2022-onboarding-gratitude-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — Button label changed from an imperative addressed to the user to a first-person plural exhortation.
     - Current: `Veamos qué hay de nuevo`
     - Source: `See what’s new`
@@ -501,6 +519,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Oblast`
     - Suggest: `Óblast`
     - The developer comment identifies this as the primary administrative division used in Russia and Ukraine; an óblast is not an autonomous province, and neighbouring entries (Do/Si, Eircode, Townland) keep the local term.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip renders "Open tabs" as the verb "Abrir" instead of the noun phrase "tabs that are open".
+    - Current: `Abrir pestañas de los otros dispositivos`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Pestañas abiertas en los otros dispositivos`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The translation turns it into an instruction to open tabs.
 - `DrawWindowCanvasRenderingContext2DWarning` — `dom/chrome/dom/dom.properties` — The API name tabs.captureTab was translated to “pestañas.captureTab”.
     - Current: `Usar las pestañas.captureTab extensions API en lugar de`
     - Source: `Use of drawWindow method from CanvasRenderingContext2D is deprecated. Use tabs.captureTab extensions API instead https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab`
@@ -794,11 +817,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: B label: Bookmark`
     - Suggest: `Agregar a marcadores`
     - The correct spelling is "marcadores", used everywhere else in the same file.
-- `tab-context-move-tab-to-group` — `browser/browser/tabbrowser.ftl` — Missing space in "ungrupo" in the plural variant.
-    - Current: `Agregar pestañas a ungrupo`
-    - Source: `accesskey: G label: {$tabCount ->} [1] Add Tab to Group [other] Add Tabs to Group`
-    - Suggest: `Agregar pestañas a un grupo`
-    - The article and noun were run together.
 - `tabbrowser-confirm-open-multiple-tabs-message` — `browser/browser/tabbrowser.ftl` — Demonstrative pronoun "esto" incorrectly accented.
     - Current: `Ésto puede hacer que`
     - Source: `{$tabCount ->} [other] You are about to open { $tabCount } tabs. This might slow down { -brand-short-name } while the pages are loading. Are you sure you want to continue?`
@@ -944,7 +962,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
     - Suggest: `para JSON recuperada usando XMLHttpRequest`
     - Misspelling of “recuperada”.
-- _…and 31 more; see `state/` for the full list._
+- `KillScriptWithDebugMessage` — `dom/chrome/dom/dom.properties` — Typo “el el debugger”.
+    - Current: `abrir el script el el debugger`
+    - Source: `A script on this page may be busy, or it may have stopped responding. You can stop the script now, open the script in the debugger, or let the script continue.`
+    - Suggest: `abrir el script en el depurador`
+    - Duplicated article instead of the preposition “en”; appears in a user-facing dialog.
+- _…and 30 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1272,8 +1295,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (143)
+### Fixed to date (144)
 
+- `tab-context-move-tab-to-group` — `browser/browser/tabbrowser.ftl` — fixed 2026-11-08
 - `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-09-28
 - `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
 - `inactive-css-not-grid-or-flex-or-absolutely-positioned-item-fix` — `devtools/client/tooltips.ftl` — fixed 2026-09-01
@@ -1313,4 +1337,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-25
 - `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
 - `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
-- `unauthenticated-private-location-message` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25

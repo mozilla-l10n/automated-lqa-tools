@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,751 |
+| **Strings reviewed this run** | 78 of 16,822 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `PushMessageBadSenderKey` — `dom/chrome/dom/dom.properties` — The suffix apostrophe in “ServiceWorker‘ı” is a left single quote (U+2018) instead of the typographic apostrophe ’ (U+2019).
+    - Current: `ServiceWorker‘ı`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘dh‘ parameter in the ‘Crypto-Key‘ header must be the app server’s Diffie-Hellman public key, base64url-encoded (https://tools.ietf.org/html/rfc75…`
+    - Suggest: `ServiceWorker’ı`
+    - The locale convention is ’ (U+2019) for the apostrophe before a suffix on a proper noun. The same string already uses ’ correctly in ‘dh’, so the U+2018 here is a slip.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,751 |
-| Missing strings | 109 |
+| Strings | 16,822 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**109 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/genai.ftl` — 4
-- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/tabContextMenu.ftl` — 11
+- `browser/browser/newtab/onboarding.ftl` — 10
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 5
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 5
+- `browser/browser/browser.ftl` — 4
 - `browser/browser/tabbrowser.ftl` — 3
+- `browser/browser/genai.ftl` — 2
 - `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
+- `browser/browser/newtab/asrouter.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,9 +90,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 622, `curly-single` 157, `straight-double` 29 | **curly-double** |
+| quotes | `curly-double` 623, `curly-single` 157, `straight-double` 29 | **curly-double** |
 | apostrophe | `typographic` 903, `straight` 47 | **typographic** |
-| ellipsis | `char` 398 | **char** |
+| ellipsis | `char` 399 | **char** |
 | dash | `em` 46, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
 | register | `informal` 2, `formal` 48 | **formal** |
@@ -102,7 +106,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (167)
+## 3. Open findings (168)
 
 
 | Impact | Meaning | Count |
@@ -110,7 +114,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
 | 2 | Wrong content (says something other than the English) | 59 |
 | 3 | Degraded language (grammar, spelling, terminology) | 69 |
-| 4 | Cosmetic (typography, spacing) | 36 |
+| 4 | Cosmetic (typography, spacing) | 37 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -649,6 +653,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Current: `‘%1$S’ kapsamı için ServiceWorker bir push iletisini çözmeyi başaramadı. ‘Encryption‘ üst bilgisinde yer alan ‘salt‘ değişkeni base64url olarak kodlanmış (https://tools.ietf.org/html/rfc7515#appendix-C) ve kodlamadan ön…`
     - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘salt‘ parameter in the ‘Encryption‘ header must be base64url-encoded (https://tools.ietf.org/html/rfc7515#appendix-C), and be at least 16 bytes b…`
     - The locale's quote convention is `curly-double` (621 occurrences).
+- `PushMessageBadSenderKey` — `dom/chrome/dom/dom.properties` — The suffix apostrophe in “ServiceWorker‘ı” is a left single quote (U+2018) instead of the typographic apostrophe ’ (U+2019).
+    - Current: `ServiceWorker‘ı`
+    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘dh‘ parameter in the ‘Crypto-Key‘ header must be the app server’s Diffie-Hellman public key, base64url-encoded (https://tools.ietf.org/html/rfc75…`
+    - Suggest: `ServiceWorker’ı`
+    - The locale convention is ’ (U+2019) for the apostrophe before a suffix on a proper noun. The same string already uses ’ correctly in ‘dh’, so the U+2018 here is a slip.
 - `RewriteYouTubeEmbedPathParams` — `dom/chrome/dom/dom.properties` — `RewriteYouTubeEmbedPathParams` uses a straight apostrophe
     - Current: `Eski tarz YouTube Flash embed (%S) yerine iframe embed (%S) yazılıyor. iframe embed'lerindeki parametreler desteklenmediği için dönüştürüldüler. Mümkünse lütfen sayfayı güncelleyerek embed/object yerine iframe kullanın.`
     - Source: `Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.`

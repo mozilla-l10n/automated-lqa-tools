@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 130 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for ko: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, to be closed) is rendered as "탭 복제", meaning the action of duplicating a tab.
+    - Current: `탭 복제`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `중복 탭`
+    - The developer comment says this item sits under "Close Multiple" and closes the duplicate tabs of the selected tab. "탭 복제" reads as the command to duplicate a tab, which is a different action.
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football games) is translated as "일치" (agreement/correspondence).
+    - Current: `일치`
+    - Source: `Matches`
+    - Suggest: `경기`
+    - In the Wrexham AFC widget, "Matches" is a view that lists games, next to Table and Fixtures. "일치" means things matching or corresponding, which is the wrong sense of the word here.
+- `hnt-card-extensions-body` — `browser/browser/newtab/onboarding.ftl` — "인기있는" is missing the required space; standard spelling is "인기 있는".
+    - Current: `가장 인기있는`
+    - Source: `Customize your browsing with our most loved extensions.`
+    - Suggest: `가장 인기 있는`
+    - Under Korean spacing rules, "인기 있다" is written as two words.
+- `hnt-card-wallpaper-header` — `browser/browser/newtab/onboarding.ftl` — "Wallpaper" is written "배경화면" here but "배경 화면" in the card body directly below and in the New Tab menu.
+    - Current: `배경화면`
+    - Source: `Pick a fresh wallpaper`
+    - Suggest: `배경 화면`
+    - The same term in the same card is written two different ways. hnt-card-wallpaper-body and newtab-widget-wrexhamafc-menu-wallpapers both use "배경 화면".
+- `GamepadHapticActuatorsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier Gamepad.hapticActuators is misspelled as Gamepad.haptricActuator.
+    - Current: `Gamepad.haptricActuator는`
+    - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
+    - Suggest: `Gamepad.hapticActuators는`
+    - The comment says not to translate "Gamepad.hapticActuators". The target adds an 'r' and drops the final 's', so it names an API that doesn't exist.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" of a report-only policy is translated as a plain statement that the redirect is blocked.
+    - Current: `페이지 설정에서 %1$S의 리디렉션을 차단합니다.`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `페이지 설정에서 %1$S의 리디렉션을 차단했을 것입니다.`
+    - Under a Report-Only policy nothing is actually blocked. The source says the settings 'would block' the redirect. The Korean says they block it, which misleads developers reading the console.
+- `DocumentReleaseCaptureWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier "Element.releasePointerCapture()" has lost its "Element." prefix.
+    - Current: `대신 releasePointerCapture()를 사용하세요`
+    - Source: `Document.releaseCapture() is deprecated. Use Element.releasePointerCapture() instead. For more help https://developer.mozilla.org/docs/Web/API/Element/releasePointerCapture`
+    - Suggest: `대신 Element.releasePointerCapture()를 사용하세요`
+    - The developer comment says to keep "Element.releasePointerCapture()" exactly as written. The source names Element.releasePointerCapture(), and leaving out the interface name changes the API reference the developer is pointed to.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +79,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 105 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,22 +97,7 @@ _Nothing retired._
 
 ### Completeness
 
-**105 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `browser/browser/genai.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,9 +105,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 405, `straight-double` 207, `curly-single` 89 | _mixed_ |
+| quotes | `curly-double` 406, `straight-double` 207, `curly-single` 89 | _mixed_ |
 | apostrophe | `typographic` 89, `straight` 91 | _mixed_ |
-| ellipsis | `char` 393, `ascii` 5 | **char** |
+| ellipsis | `char` 394, `ascii` 5 | **char** |
 | dash | `em` 44, `en` 1 | **em** |
 | nbsp | `space-before-punctuation` 5 | **space-before-punctuation** |
 
@@ -100,14 +119,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (288)
+## 3. Open findings (295)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 159 |
-| 2 | Wrong content (says something other than the English) | 120 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 124 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
@@ -414,6 +433,31 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football games) is translated as "일치" (agreement/correspondence).
+    - Current: `일치`
+    - Source: `Matches`
+    - Suggest: `경기`
+    - In the Wrexham AFC widget, "Matches" is a view that lists games, next to Table and Fixtures. "일치" means things matching or corresponding, which is the wrong sense of the word here.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, to be closed) is rendered as "탭 복제", meaning the action of duplicating a tab.
+    - Current: `탭 복제`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `중복 탭`
+    - The developer comment says this item sits under "Close Multiple" and closes the duplicate tabs of the selected tab. "탭 복제" reads as the command to duplicate a tab, which is a different action.
+- `DocumentReleaseCaptureWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier "Element.releasePointerCapture()" has lost its "Element." prefix.
+    - Current: `대신 releasePointerCapture()를 사용하세요`
+    - Source: `Document.releaseCapture() is deprecated. Use Element.releasePointerCapture() instead. For more help https://developer.mozilla.org/docs/Web/API/Element/releasePointerCapture`
+    - Suggest: `대신 Element.releasePointerCapture()를 사용하세요`
+    - The developer comment says to keep "Element.releasePointerCapture()" exactly as written. The source names Element.releasePointerCapture(), and leaving out the interface name changes the API reference the developer is pointed to.
+- `GamepadHapticActuatorsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier Gamepad.hapticActuators is misspelled as Gamepad.haptricActuator.
+    - Current: `Gamepad.haptricActuator는`
+    - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
+    - Suggest: `Gamepad.hapticActuators는`
+    - The comment says not to translate "Gamepad.hapticActuators". The target adds an 'r' and drops the final 's', so it names an API that doesn't exist.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" of a report-only policy is translated as a plain statement that the redirect is blocked.
+    - Current: `페이지 설정에서 %1$S의 리디렉션을 차단합니다.`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `페이지 설정에서 %1$S의 리디렉션을 차단했을 것입니다.`
+    - Under a Report-Only policy nothing is actually blocked. The source says the settings 'would block' the redirect. The Korean says they block it, which misleads developers reading the console.
 - `-mdn-brand-name` — `toolkit/toolkit/branding/brandings.ftl` — The brand 'MDN Web Docs' is partly translated as 'MDN 웹 문서'.
     - Current: `MDN 웹 문서`
     - Source: `MDN Web Docs`
@@ -477,6 +521,11 @@ _Nothing reported._
     - Source: `{ $name }, down { $change }, { $price }`
     - Suggest: `당일 { $change } 하락`
     - In Korean, a falling price is 하락, the counterpart of 상승. 하강 means physical descent and is not used for prices.
+- `hnt-card-extensions-body` — `browser/browser/newtab/onboarding.ftl` — "인기있는" is missing the required space; standard spelling is "인기 있는".
+    - Current: `가장 인기있는`
+    - Source: `Customize your browsing with our most loved extensions.`
+    - Suggest: `가장 인기 있는`
+    - Under Korean spacing rules, "인기 있다" is written as two words.
 - `tab-groups-onboarding-session-restore-title-2` — `browser/browser/newtab/onboarding.ftl` — Word-spacing error: 다시열 should be two words.
     - Current: `다시열 수`
     - Source: `Reopen your tab groups from the List All Tabs menu anytime.`
@@ -727,12 +776,7 @@ _Nothing reported._
     - Source: `Burma`
     - Suggest: `미얀마`
     - Spelling error.
-- `mozilla-pkix-error-ca-cert-used-as-end-entity` — `toolkit/toolkit/neterror/nsserrors.ftl` — Typo: 있스니다 should be 있습니다.
-    - Current: `사용하고 있스니다`
-    - Source: `The server uses a certificate with a basic constraints extension identifying it as a certificate authority. For a properly-issued certificate, this should not be the case.`
-    - Suggest: `사용하고 있습니다`
-    - Spelling error.
-- _…and 2 more; see `state/` for the full list._
+- _…and 3 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -761,6 +805,11 @@ _Nothing reported._
     - Source: `Try Startpage. It’s designed to keep your searches more private from the start.`
     - Suggest: `Startpage를 사용해 보세요.`
     - The group comment says Startpage is a brand name and must not be translated or transliterated. 시작 페이지 also reads as the browser's own start page.
+- `hnt-card-wallpaper-header` — `browser/browser/newtab/onboarding.ftl` — "Wallpaper" is written "배경화면" here but "배경 화면" in the card body directly below and in the New Tab menu.
+    - Current: `배경화면`
+    - Source: `Pick a fresh wallpaper`
+    - Suggest: `배경 화면`
+    - The same term in the same card is written two different ways. hnt-card-wallpaper-body and newtab-widget-wrexhamafc-menu-wallpapers both use "배경 화면".
 - `info-exposed-passwords-found` — `browser/browser/protections.ftl` — Spelling error: 걸처 should be 걸쳐.
     - Current: `걸처`
     - Source: `{$count ->} [one] Password exposed across all breaches [other] Passwords exposed across all breaches`
@@ -942,11 +991,11 @@ _Nothing reported._
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — `ai-window-delete-all-memories-message` uses three dots where this locale uses …
     - Current: `기존에 저장된 기억이 모두 삭제됩니다. 새로운 기억이 생성되는 것을 원치 않으시면 { -smart-window-brand-name } 설정에서 '...에서 학습' 옵션을 끄세요.`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
-    - The tree uses … 393 times against 5 ASCII runs.
+    - The tree uses … 394 times against 5 ASCII runs.
 - `aiwindow-input-cta-menu-label-search-with` — `browser/browser/aiWindow.ftl` — `aiwindow-input-cta-menu-label-search-with` uses three dots where this locale uses …
     - Current: `다음으로 검색...`
     - Source: `Search with…`
-    - The tree uses … 393 times against 5 ASCII runs.
+    - The tree uses … 394 times against 5 ASCII runs.
 - `aiwindow-input-model-select-menu-item-description` — `browser/browser/aiWindow.ftl` — The space between the owner name and the model name was dropped.
     - Current: `{ $ownerName }{ $model }`
     - Source: `{ $ownerName } { $model }`
@@ -955,7 +1004,7 @@ _Nothing reported._
 - `smartbar-placeholder-hint-1` — `browser/browser/aiWindow.ftl` — `smartbar-placeholder-hint-1` uses three dots where this locale uses …
     - Current: `@로 최근 탭 지정...`
     - Source: `Use @ to mention recent tabs…`
-    - The tree uses … 393 times against 5 ASCII runs.
+    - The tree uses … 394 times against 5 ASCII runs.
 - `crashed-subframe-title` — `browser/browser/contentCrash.ftl` — A space is missing between the two sentences.
     - Current: `손상되었습니다.{ -brand-product-name }`
     - Source: `title: Part of this page crashed. To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.`
@@ -969,7 +1018,7 @@ _Nothing reported._
 - `genai-input-ask-provider` — `browser/browser/genai.ftl` — `genai-input-ask-provider` uses three dots where this locale uses …
     - Current: `{ $provider }에게 물어보기...`
     - Source: `placeholder: Ask { $provider }…`
-    - The tree uses … 393 times against 5 ASCII runs.
+    - The tree uses … 394 times against 5 ASCII runs.
 - `more-from-moz-firefox-relay-button` — `browser/browser/preferences/moreFromMozilla.ftl` — The space between the brand name and 받기 is missing.
     - Current: `{ -relay-brand-short-name }받기`
     - Source: `Get { -relay-brand-short-name }`
@@ -978,7 +1027,7 @@ _Nothing reported._
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` uses three dots where this locale uses …
     - Current: `검사기에서 요소를 마우스 오른쪽 버튼으로 누르고 "중단..."을 선택하여 중단점 추가`
     - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-    - The tree uses … 393 times against 5 ASCII runs.
+    - The tree uses … 394 times against 5 ASCII runs.
 - `netmonitor.status.tooltip.cached` — `devtools/client/netmonitor.properties` — The space between status code and status text is missing
     - Current: `%1$S%2$S (캐시)`
     - Source: `%1$S %2$S (cached)`

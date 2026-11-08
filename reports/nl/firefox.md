@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `324a294b9f2a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 17 of 16,815 |
+| **Strings reviewed this run** | 66 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,54 +20,25 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ### 🆕 New findings (3)
 
-- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — The preposition 'in' is missing before the @position-try rules.
-    - Current: `wordt niet ondersteund <strong>@position-try</strong>-regels`
-    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
-    - Suggest: `wordt niet ondersteund in <strong>@position-try</strong>-regels`
-    - The en-US says 'is not supported in @position-try rules'. Without 'in', the Dutch sentence is ungrammatical.
-- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — The builder is given as 'Mozilla Firefox' when the source and comment say 'Mozilla'.
-    - Current: `door Mozilla Firefox gebouwde`
-    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
-    - Suggest: `door Mozilla gebouwde`
-    - The source and developer comment say the extension is built by Mozilla, the organization, and 'Mozilla' is hard-coded on purpose. 'Mozilla Firefox' is a product name, so it names the wrong builder.
-- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — The compound is missing the linking 's': it should be 'toepassingshandlers'.
-    - Current: `toepassinghandlers`
-    - Source: `Configure default application handlers.`
-    - Suggest: `toepassingshandlers`
-    - Compounds built on 'toepassing' take the linking s in Dutch, as in 'toepassingsprogramma'.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — “View” is a noun per the developer comment but was translated as the verb “Weergeven”.
+    - Current: `Weergeven`
+    - Source: `View`
+    - Suggest: `Weergave`
+    - The developer comment says “View” is a noun meaning the view the widget shows; “Weergeven” is the infinitive “to show”, so the noun “Weergave” is required.
+- `sync-engine-addresses2` — `browser/browser/preferences/preferences.ftl` — Superfluous article “de” before the brand name.
+    - Current: `die u in de { -brand-short-name } hebt opgeslagen`
+    - Source: `accesskey: e label: Addresses tooltiptext: Addresses you’ve saved in { -brand-short-name }`
+    - Suggest: `die u in { -brand-short-name } hebt opgeslagen`
+    - Dutch does not use an article before the product name; the sibling tooltips use the brand without one, so “in de Firefox” is ungrammatical.
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — There is a double space between 'en' and the brand name in the [other 1] variant.
+    - Current: `1 download stoppen en  { -brand-short-name } afsluiten?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `1 download stoppen en { -brand-short-name } afsluiten?`
+    - Users will see two spaces in the dialog title. The other variants use a single space.
 
-### ✅ Fixed since the last run (11)
+### ✅ Fixed since the last run (0)
 
-- `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Prevent the user from blocking third-party modules that get injected into the { -brand-short-name } process.`
-    - Suggest: `.message`
-- `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Configure default application handlers.`
-    - Suggest: `.message`
-- `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Disable the feature enforcing a separate profile for each installation.`
-    - Suggest: `.message`
-- `home-prefs-weather-description` — `browser/browser/preferences/preferences.ftl` — Superfluous sentence-final period (absent in en-US and in the sibling strings): home-prefs-weather-description (preferences/preferences.ftl; newtab-custom-weather-toggle.description has none), preferences-doh-radio-default (.description), preferences-doh-radio-off (.description), ip-protection-vpn-upgrade-link-1 (.description) vs ipprotection-locations-subview-promo.
-    - Source: `Today’s forecast at a glance`
-- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — missing preposition and wrong final punctuation. Suggest: "… wordt niet ondersteund in <strong>@position-try</strong>-regels."
-    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
-- `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.`
-    - Suggest: `.message`
-- `inactive-css-first-line-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `<strong>{ $property }</strong> is not supported on ::first-line pseudo-elements.`
-    - Suggest: `.message`
-- `pippki-reset-password-confirmation-message` — `security/manager/security/pippki/pippki.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Your Primary Password has been reset.`
-    - Suggest: `.message`
-- `crashreporter-checkbox-send-report` — `toolkit/crashreporter/crashreporter.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `Tell { -vendor-short-name } about this crash so they can fix it.`
-    - Suggest: `.message`
-- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — addon-badge-line3 (.title), addon-badge-line4 (.title) — toolkit/toolkit/about/aboutAddons.ftl — the dev comment states that "Mozilla" is hard-coded on purpose "because … we don't want forks to display 'by Fork'". nl adds "Firefox". Current: "Officiële door Mozilla Firefox gebouwde extensie." → Suggest: "Officiële door Mozilla gebouwde extensie."
-    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
-    - Suggest: `"Officiële door Mozilla gebouwde extensie."`
-- `about-httpsonly-explanation-continue` — `toolkit/toolkit/about/aboutHttpsOnlyError.ftl` — stray space before the final period.
-    - Source: `If you continue, HTTPS-Only Mode will be turned off temporarily for this site.`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -88,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,815 |
-| Missing strings | 45 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -106,21 +77,7 @@ _Nothing retired._
 
 ### Completeness
 
-**45 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 17
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 6
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 5
-- `browser/browser/tabContextMenu.ftl` — 5
-- `browser/browser/preferences/preferences.ftl` — 5
-- `dom/chrome/security/security.properties` — 2
-- `dom/dom/manifest.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `browser/browser/tabbrowser.ftl` — 1
-- `browser/browser/newtab/newtab.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -128,12 +85,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 824, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1046 | **typographic** |
+| quotes | `curly-single` 825, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1048 | **typographic** |
 | ellipsis | `char` 401 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2788 | **formal** |
+| register | `formal` 2812 | **formal** |
 
 ---
 
@@ -143,15 +100,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (339)
+## 3. Open findings (342)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 9 |
 | 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 193 |
-| 4 | Cosmetic (typography, spacing) | 18 |
+| 3 | Degraded language (grammar, spelling, terminology) | 195 |
+| 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -236,6 +193,11 @@ _Nothing reported._
 - `newtab-widget-timer-label-play` — `browser/browser/newtab/newtab.ftl` — timer control, not media playback. Current: "Afspelen" → Suggest: "Starten"
     - Source: `label: Play`
     - Suggest: `"Starten"`
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — “View” is a noun per the developer comment but was translated as the verb “Weergeven”.
+    - Current: `Weergeven`
+    - Source: `View`
+    - Suggest: `Weergave`
+    - The developer comment says “View” is a noun meaning the view the widget shows; “Weergeven” is the infinitive “to show”, so the noun “Weergave” is required.
 - `create-backup-screen-2-easy-label` — `browser/browser/newtab/onboarding.ftl` — create-backup-screen-2-easy-label, mr2022-onboarding-import-header — newtab/onboarding.ftl — "setup" is configuration, not software installation. Current: "Eenvoudige instellingen" / "Razendsnelle installatie" → Suggest: "Eenvoudig instellen" / "Razendsnel instellen"
     - Source: `Easy setup`
 - `onboarding-refresh-tou-default-unchecked` — `browser/browser/newtab/onboarding.ftl` — "every time you browse" is rendered as "tijdens het navigeren", and "Keep" is dropped, turning the line into a claim rather than the retained-protection statement.
@@ -351,9 +313,7 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- _…and 61 more; see `state/` for the full list._
+- _…and 62 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -493,6 +453,11 @@ _Nothing reported._
     - Source: `label: Cross-site trackers`
 - `sitedata-option-block-cross-site-tracking-cookies` — `browser/browser/preferences/preferences.ftl` — sitedata-option-block-cross-site-trackers, sitedata-option-block-cross-site-tracking-cookies, content-blocking-cross-site-cookies-in-all-windows2 vs sitedata-option-block-cross-site-cookies2, content-blocking-isolate-cross-site-cookies, content-blocking-all-cross-site-cookies — preferences/preferences.ftl — the same compound is hyphenated three different ways ("Cross-site-cookies", "Cross-site-tr…
     - Source: `label: Cross-site tracking cookies`
+- `sync-engine-addresses2` — `browser/browser/preferences/preferences.ftl` — Superfluous article “de” before the brand name.
+    - Current: `die u in de { -brand-short-name } hebt opgeslagen`
+    - Source: `accesskey: e label: Addresses tooltiptext: Addresses you’ve saved in { -brand-short-name }`
+    - Suggest: `die u in { -brand-short-name } hebt opgeslagen`
+    - Dutch does not use an article before the product name; the sibling tooltips use the brand without one, so “in de Firefox” is ungrammatical.
 - `preonboarding-manage-and-read-header-v2` — `browser/browser/preonboarding.ftl` — "Gebruiksvoorwaarden en privacyverklaring" — "Privacyverklaring" is capitalised as a document title everywhere else in the file.
     - Source: `Read Terms of Use and Privacy Notice. Manage additional settings.`
 - `present-avatar-alt` — `browser/browser/profiles.ftl` — nonstandard spelling. Current: "Kado" → Suggest: "Cadeau" (also check cadeau-avatar siblings for consistency)
@@ -516,12 +481,7 @@ _Nothing reported._
 - `styleeditor-go-to-line` — `devtools/client/styleeditor.ftl` — imperative among infinitive menu labels. Current: "Spring naar regel…" → Suggest: "Naar regel springen…"
     - Source: `accesskey: J label: Jump to Line…`
     - Suggest: `"Naar regel springen…"`
-- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — The preposition 'in' is missing before the @position-try rules.
-    - Current: `wordt niet ondersteund <strong>@position-try</strong>-regels`
-    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
-    - Suggest: `wordt niet ondersteund in <strong>@position-try</strong>-regels`
-    - The en-US says 'is not supported in @position-try rules'. Without 'in', the Dutch sentence is ungrammatical.
-- _…and 26 more; see `state/` for the full list._
+- _…and 27 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -712,6 +672,11 @@ _Nothing reported._
     - Source: `(value): { $total }{ $totalUnit } title: Evolution: { $deltaSign }{ $delta }{ $deltaUnit }`
 - `about-processes-total-memory-size-no-change` — `toolkit/toolkit/about/aboutProcesses.ftl` — a space between the number and its unit in two of the three, none in the third. (The space is correct Dutch; the third should match.)
     - Source: `{ $total }{ $totalUnit }`
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — There is a double space between 'en' and the brand name in the [other 1] variant.
+    - Current: `1 download stoppen en  { -brand-short-name } afsluiten?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `1 download stoppen en { -brand-short-name } afsluiten?`
+    - Users will see two spaces in the dialog title. The other variants use a single space.
 - `download-utils-time-pair` — `toolkit/toolkit/downloads/downloadUtils.ftl` — a space between the number and its unit in two of the three, none in the third. (The space is correct Dutch; the third should match.)
     - Source: `{ $time }{ $unit }`
 - `fp-certerror-not-yet-valid-why-dangerous-body` — `toolkit/toolkit/neterror/certError.ftl` — stray space before the final period.

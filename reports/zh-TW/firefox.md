@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `cabf9140ad9a` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `9251d435ac24` |
-| **Previous run** | 2026-11-05 @ `181c4859abf3` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
+| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,860 |
+| **Strings reviewed this run** | 19 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — 'Duplicate Tabs' (tabs that are duplicates) is rendered as the action 'copy tabs'.
+    - Current: `複製分頁`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `重複的分頁`
+    - The developer comment says this item sits under 'Close Multiple' and closes the duplicate tabs of the selected tab. 複製分頁 reads as the command 'duplicate/copy tab', which is a different function.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,860 |
+| Strings | 16,875 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -80,7 +84,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 405 | **char** |
 | dash | `em` 54, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8561 | **punctuation** |
+| fullwidth | `punctuation` 8570 | **punctuation** |
 
 ---
 
@@ -90,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (253)
+## 3. Open findings (252)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 140 |
-| 2 | Wrong content (says something other than the English) | 85 |
+| 2 | Wrong content (says something other than the English) | 84 |
 | 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 21 |
 
@@ -429,11 +433,6 @@ _Nothing reported._
     - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
     - Suggest: `您其他裝置上開啟的分頁`
     - The developer comment says 'Open' modifies the noun (tabs that are open). This tooltip describes what gets synced; it is not an action, but the zh-TW text reads as an instruction to open tabs.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — 'Duplicate Tabs' (tabs that are duplicates) is rendered as the action 'copy tabs'.
-    - Current: `複製分頁`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `重複的分頁`
-    - The developer comment says this item sits under 'Close Multiple' and closes the duplicate tabs of the selected tab. 複製分頁 reads as the command 'duplicate/copy tab', which is a different function.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — The permission label says "ask me before opening app links" instead of "may the site ask to open app links".
     - Current: `開啟應用程式鏈結前先問我`
     - Source: `Ask to open app links`
@@ -939,6 +938,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08
