@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "Your search, your way" is rendered as "Ваш поиск, Ваш Интернет" ("your Internet"), which changes the meaning and adds an incorrect capital letter.
+    - Current: `Ваш поиск, Ваш Интернет`
+    - Suggest: `Ваш поиск — по-вашему`
+    - The source says "your way" (how you like it), not "your Internet"; also "Ваш" mid-sentence is wrongly capitalized.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 250 |
+| Strings | 245 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +77,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 149, `formal` 492 | **formal** |
+| register | `informal` 149, `formal` 482 | **formal** |
 
 ---
 
@@ -84,13 +87,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (14)
+## 3. Open findings (13)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 10 |
+| 2 | Wrong content (says something other than the English) | 9 |
 | 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -110,11 +113,6 @@ _Nothing in this category._
     - Source: `Dismiss`
     - Suggest: `Закрыть`
     - Per the developer comment, tapping the overlay dismisses typing mode and returns to the browser; "Пропустить" means "skip", not "dismiss/close".
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "Your search, your way" is rendered as "Ваш поиск, Ваш Интернет" ("your Internet"), which changes the meaning and adds an incorrect capital letter.
-    - Current: `Ваш поиск, Ваш Интернет`
-    - Source: `Your search, your way`
-    - Suggest: `Ваш поиск — по-вашему`
-    - The source says "your way" (how you like it), not "your Internet"; also "Ваш" mid-sentence is wrongly capitalized.
 - `notification_erase_text_android_14_1` — `mozilla-mobile/focus-android/app/src/main/res/values-ru/strings.xml` — "swipe this notification" is rendered as "снимите", which does not convey swiping the notification away.
     - Current: `Нажмите или снимите это уведомление`
     - Source: `Tap or swipe this notification to securely erase your browsing history.`

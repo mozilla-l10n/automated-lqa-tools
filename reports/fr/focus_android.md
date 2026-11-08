@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `firstrun_privacy_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Make privacy a habit" is translated as "Reprenez votre vie privée en main" (take back control of your privacy), a different meaning.
+    - Current: `Reprenez votre vie privée en main`
+    - Suggest: `Faites de la vie privée une habitude`
+    - The source urges making privacy a habit, not regaining control of it.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 250 |
+| Strings | 245 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,11 +75,11 @@ The count includes Firefox for Android's strings for this locale, which the same
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 701 | **typographic** |
+| apostrophe | `typographic` 696 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 215, `before-punctuation` 145, `space-before-punctuation` 63 | _mixed_ |
-| register | `formal` 452 | **formal** |
+| nbsp | `total` 214, `before-punctuation` 144, `space-before-punctuation` 62 | _mixed_ |
+| register | `formal` 443 | **formal** |
 
 ---
 
@@ -86,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 2 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -107,11 +110,6 @@ _Nothing in this category._
     - Source: `Navigate back`
     - Suggest: `Reculer dans l’historique`
     - The source is an action content description read by screen readers; the sibling string content_description_forward is translated as "Avancer dans l’historique", so "Précédent" is both inconsistent and not describing the action.
-- `firstrun_privacy_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Make privacy a habit" is translated as "Reprenez votre vie privée en main" (take back control of your privacy), a different meaning.
-    - Current: `Reprenez votre vie privée en main`
-    - Source: `Make privacy a habit`
-    - Suggest: `Faites de la vie privée une habitude`
-    - The source urges making privacy a habit, not regaining control of it.
 
 ### C. Grammar, agreement & spelling
 

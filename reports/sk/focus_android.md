@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-05 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `66b4c732bf9d` |
-| **Previous run** | 2026-11-05 @ `b66e03acefb4` |
+| **Generated** | 2026-11-08 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
+| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 250 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — "Your search, your way" is translated as "Browsing your way", replacing search with browsing.
+    - Current: `Prehliadanie podľa vás`
+    - Suggest: `Vyhľadávanie podľa vás`
+    - The source title refers to search (this is the Search page of the first-run tour), but "Prehliadanie" means browsing, so the title is about the wrong feature.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 250 |
+| Strings | 245 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -85,13 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (8)
+## 3. Open findings (7)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 3 |
+| 2 | Wrong content (says something other than the English) | 2 |
 | 3 | Degraded language (grammar, spelling, terminology) | 5 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -101,11 +104,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — "Your search, your way" is translated as "Browsing your way", replacing search with browsing.
-    - Current: `Prehliadanie podľa vás`
-    - Source: `Your search, your way`
-    - Suggest: `Vyhľadávanie podľa vás`
-    - The source title refers to search (this is the Search page of the first-run tour), but "Prehliadanie" means browsing, so the title is about the wrong feature.
 - `notification_browsing_session_channel_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The Slovak drops the clause "or see what's running in your browser" and changes "session" to "history".
     - Current: `Nemusíte ani otvárať aplikáciu.`
     - Source: `Notifications let you erase your %1$s session with a tap. You don’t need to open the app or see what’s running in your browser.`
