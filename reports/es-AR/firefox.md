@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 16,837 |
+| **Strings reviewed this run** | 0 of 16,837 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,26 +18,13 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip renders "Open tabs" as the verb "Abrir" instead of the noun phrase "tabs that are open".
-    - Current: `Abrir pestañas de los otros dispositivos`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Pestañas abiertas en los otros dispositivos`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The translation turns it into an instruction to open tabs.
-- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as the verb "Ver", but the comment says it is a noun.
-    - Current: `Ver`
-    - Source: `View`
-    - Suggest: `Vista`
-    - The developer comment says "View" is a noun, as in the view the widget shows, and it opens a submenu for switching views. "Ver" is the verb "to see".
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `tab-context-move-tab-to-group` — `browser/browser/tabbrowser.ftl` — Missing space in "ungrupo" in the plural variant.
-    - Current: `Agregar pestañas a ungrupo`
-    - Source: `accesskey: G label: {$tabCount ->} [1] Add Tab to Group [other] Add Tabs to Group`
-    - Suggest: `Agregar pestañas a un grupo`
-    - The article and noun were run together.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

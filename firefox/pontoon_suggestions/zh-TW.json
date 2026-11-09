@@ -24,9 +24,13 @@
    "source": "Make sure you’re saving your current password for this site.",
    "original": "請確認您更改過此網站的密碼，再於此處修改。",
    "text": "請確認您儲存的是此網站目前使用的密碼。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396324,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aboutLogins.ftl/?string=291533",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -50,9 +54,13 @@
    "source": "When you export, your passwords are saved to a file with readable text.\nWhen you’re done using the file, we recommend deleting it so others who use this device can’t see your passwords.",
    "original": "密碼匯出後，會以明碼的方式記錄在檔案中，建議您在使用完檔案後立即刪除密碼，避免其他有機會接觸到此裝置的人能夠看到您的密碼。",
    "text": "密碼匯出後，會以明碼的方式記錄在檔案中，建議您在使用完檔案後立即刪除檔案，避免其他有機會接觸到此裝置的人能夠看到您的密碼。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396325,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aboutLogins.ftl/?string=292089",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -76,9 +84,13 @@
    "source": "No passwords found",
    "original": "未儲存密碼",
    "text": "找不到密碼",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396323,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aboutLogins.ftl/?string=291813",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -102,9 +114,14 @@
    "source": "label: Learn from browsing in Classic and { -smart-window-brand-name }",
    "original": "了解傳統上網方式與{ -smart-window-brand-name(plural-form: \"true\") }的差異",
    "text": "從傳統視窗與{ -smart-window-brand-name(plural-form: \"true\") }的上網活動學習",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>learn = 了解 is more accurate for this string</p>",
+   "dismissal": "ai-window-learn-from-browsing-activity @ browser/browser/aiFeatures.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>learn = 了解 is more accurate for this string</p>",
+   "pontoon_pk": 12396327,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aiFeatures.ftl/?string=336268",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -128,9 +145,13 @@
    "source": "message: When you use a custom model, { -smart-window-brand-name } may not work as expected.",
    "original": "使用自訂模式時，{ -smart-window-brand-name }可能無法如預期運作。",
    "text": "使用自訂模型時，{ -smart-window-brand-name }可能無法如預期運作。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396326,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aiFeatures.ftl/?string=336262",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -154,9 +175,13 @@
    "source": "{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.",
    "original": "{ -smart-window-brand-name }可從您的聊天內容、上網紀錄或兩者來建立記憶。久而久之，他們可讓回覆結果對您更有幫助。",
    "text": "{ -smart-window-brand-name }可從您的聊天內容、上網紀錄或兩者來建立記憶。久而久之，它們可讓回覆結果對您更有幫助。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396329,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aiWindow.ftl/?string=336342",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -180,9 +205,13 @@
    "source": "Each model can help you to summarize, compare, and explore across your tabs. Switch anytime.",
    "original": "每套模型都可以幫助您在不同裝置間進行摘要、比對、探索。可隨時切換。",
    "text": "每套模型都可以幫助您在您的分頁間進行摘要、比對、探索。可隨時切換。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396328,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/aiWindow.ftl/?string=337025",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -206,9 +235,13 @@
    "source": "label: Update password",
    "original": "已更新密碼",
    "text": "更新密碼",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396330,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/contextual-manager.ftl/?string=321996",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -232,9 +265,14 @@
    "source": "title: Flexible Space",
    "original": "靈活空間",
    "text": "彈性空白",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "customize-mode-toolbarspring @ browser/browser/customizeMode.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396331,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/customizeMode.ftl/?string=342530",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -258,9 +296,13 @@
    "source": "Capture a Performance Profile",
    "original": "補捉效能檢測檔",
    "text": "捕捉效能檢測檔",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396332,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/customkeys.ftl/?string=326456",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -284,9 +326,13 @@
    "source": "{ $url } attempted to automatically download multiple files. The site could be broken or trying to store spam files on your device.",
    "original": "{ $url } 嘗試自動下載多個檔案，可能是這個網站發生問題，或是嘗試在您的電腦上亂儲存無用擋案。",
    "text": "{ $url } 嘗試自動下載多個檔案，可能是這個網站發生問題，或是嘗試在您的電腦上亂儲存無用檔案。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396333,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/downloads.ftl/?string=236120",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -310,9 +356,13 @@
    "source": "File not downloaded: Potential security risk.",
    "original": "未下載檔案: 有潛在的安全性風險。",
    "text": "未下載檔案：有潛在的安全性風險。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396334,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/downloads.ftl/?string=343598",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -336,9 +386,13 @@
    "source": "Add bookmark folder",
    "original": "新增書籤工具列",
    "text": "新增書籤資料夾",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396335,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/editBookmarkOverlay.ftl/?string=341716",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -362,9 +416,13 @@
    "source": "Edit bookmark folder",
    "original": "編輯書籤工具列",
    "text": "編輯書籤資料夾",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396336,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/editBookmarkOverlay.ftl/?string=341718",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -388,9 +446,13 @@
    "source": "Chat from your taskbar",
    "original": "從工具列直接聊天",
    "text": "從工作列直接聊天",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396338,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=323499",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -414,9 +476,13 @@
    "source": "Stay connected from your taskbar",
    "original": "從工具列保持連線",
    "text": "從工作列保持連線",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396341,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=338578",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -440,9 +506,13 @@
    "source": "Keep your email in your taskbar",
    "original": "在工具列收發信件",
    "text": "在工作列收發信件",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396339,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=323501",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -466,9 +536,13 @@
    "source": "Keep your inbox in your taskbar",
    "original": "從工具列直接開啟收件匣",
    "text": "從工作列直接開啟收件匣",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396342,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=338579",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -492,9 +566,13 @@
    "source": "Keep your streaming in your taskbar",
    "original": "將您的影片網站放在工具列",
    "text": "將您的影片網站放在工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396343,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=338581",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -518,9 +596,13 @@
    "source": "Keep your favorite feeds in your taskbar",
    "original": "將您最愛的資訊來源放置於工具列",
    "text": "將您最愛的資訊來源放置於工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396337,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=323497",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -544,9 +626,13 @@
    "source": "Add this site to your taskbar",
    "original": "將此網站新增至工具列",
    "text": "將此網站新增至工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396340,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=323505",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -570,9 +656,13 @@
    "source": "Pin your favorite sites to your taskbar",
    "original": "將您最愛的網站釘選至工具列",
    "text": "將您最愛的網站釘選至工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396344,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/featureCallout.ftl/?string=338583",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -596,9 +686,13 @@
    "source": "New",
    "original": "新增",
    "text": "新功能",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396347,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/genai.ftl/?string=320922",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -622,9 +716,13 @@
    "source": "You won’t see this menu when you select text. Visit Settings <span data-l10n-name=\"chevron\"></span> Tabs and browsing to show it again.",
    "original": "選擇文字時不會看到此選單。前往設定 <span data-l10n-name=\"chevron\"></span> 分頁並瀏覽，即可再次顯示。",
    "text": "選擇文字時不會看到此選單。前往設定 <span data-l10n-name=\"chevron\"></span> 分頁與瀏覽，即可再次顯示。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396345,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/genai.ftl/?string=343484",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -648,9 +746,13 @@
    "source": "Search or copy when you select text. Choose which actions appear with the <span data-l10n-name=\"more-actions\">•••</span> menu.",
    "original": "選擇文字後即可搜尋或複製。你可以透過 <span data-l10n-name=\"more-actions\">•••</span> 選單選擇要顯示哪些操作。",
    "text": "選擇文字後即可搜尋或複製。您可以透過 <span data-l10n-name=\"more-actions\">•••</span> 選單選擇要顯示哪些操作。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396346,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/genai.ftl/?string=343624",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -674,9 +776,14 @@
    "source": "label: Settings…",
    "original": "選項…",
    "text": "設定…",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "menu-application-settings @ browser/browser/menubar.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396348,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/menubar.ftl/?string=330835",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -700,9 +807,13 @@
    "source": "Let’s back up your saved addresses",
    "original": "一起備份儲存的網址吧！",
    "text": "一起備份儲存的地址吧！",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396349,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=322003",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -726,9 +837,13 @@
    "source": "Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar and Start menu.",
    "original": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工具列與開始選單。",
    "text": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工作列與開始選單。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396353,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=311802",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -752,9 +867,13 @@
    "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
    "original": "將 { -brand-short-name } 釘選到工具列",
    "text": "將 { -brand-short-name } 釘選到工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396351,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=311777",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -778,9 +897,13 @@
    "source": "{$sel_1 ->} [macos] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and keep it in your Dock. [other] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar.",
    "original": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工具列。",
    "text": "把您最愛的隱私保護瀏覽器保留起來，點一下即可開啟。將 { -brand-short-name } 設定為您的預設瀏覽器，並釘選至工作列。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396352,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=311804",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -804,9 +927,13 @@
    "source": "<strong>Older versions of { -brand-short-name } may start to have problems on January 14, 2025.</strong>",
    "original": "<strong>舊版的 { -brand-short-name } 可能會在 2025 年 1 月 14 起遇到啟動問題。</strong>",
    "text": "<strong>舊版的 { -brand-short-name } 可能會在 2025 年 1 月 14 日起開始遇到問題。</strong>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396350,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=310519",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -830,9 +957,13 @@
    "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your Dock. [other] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your taskbar.",
    "original": "將 { -brand-short-name } 設為預設瀏覽器並保留在您的工具列，方便隨手開啟。",
    "text": "將 { -brand-short-name } 設為預設瀏覽器並保留在您的工作列，方便隨手開啟。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396355,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=327423",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -856,9 +987,13 @@
    "source": "Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.",
    "original": "將 { -brand-shorter-name } 釘選到工具列，這樣有需要的時候，就可以隨時使用您選擇的這套瀏覽器。",
    "text": "將 { -brand-shorter-name } 釘選到工作列，這樣有需要的時候，就可以隨時使用您選擇的這套瀏覽器。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396354,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/asrouter.ftl/?string=322464",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -882,9 +1017,13 @@
    "source": "aria-label: Delete address\ntitle: Delete address",
    "original": "刪除地址",
    "text": "刪除網址",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396356,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/newtab.ftl/?string=335436",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -908,9 +1047,13 @@
    "source": "Save passwords in { -brand-short-name } to use strong, unique logins everywhere.",
    "original": "將密碼儲存在 { -brand-short-name } 即可任何網站都使用強大、不重複的登入資訊。",
    "text": "將密碼儲存在 { -brand-short-name } 即可在任何網站都使用強大、不重複的登入資訊。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396357,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/newtab.ftl/?string=336787",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -934,9 +1077,13 @@
    "source": "We couldn’t upload your file. Please try again with an image file.",
    "original": "無法上傳您的檔案，請稍後再重新上傳圖片。",
    "text": "無法上傳您的檔案，請改用圖片檔案再試一次。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396358,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/newtab.ftl/?string=323051",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -960,9 +1107,13 @@
    "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
    "original": "將 { -brand-short-name } 釘選到工具列",
    "text": "將 { -brand-short-name } 釘選到工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396360,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=243440",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -986,9 +1137,13 @@
    "source": "Add sites to taskbar",
    "original": "將網站新增至工具列",
    "text": "將網站新增至工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396367,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=344022",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1012,9 +1167,13 @@
    "source": "You’ve got a fast, private browser at your fingertips. Now you can add <b>{ $addon-name }</b> and do even more with { -brand-short-name }.",
    "original": "您有了一套觸手可及，又快又有隱私斯的瀏覽器。現在您還可以新增 <b>{ $addon-name }</b>，讓 { -brand-short-name } 能做更多事。",
    "text": "您有了一套觸手可及，又快又有隱私的瀏覽器。現在您還可以新增 <b>{ $addon-name }</b>，讓 { -brand-short-name } 能做更多事。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396359,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=266232",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1038,9 +1197,14 @@
    "source": "Thank you for using { -brand-short-name }, backed by the Mozilla Foundation. With your support, we’re working to make the internet more open, accessible, and better for everyone.",
    "original": "感謝您使用由 Mozilla 基金會開發的 { -brand-short-name }。透過您的支援，我們努力讓網路環境變得更好、更開放、更可被所有人使用。",
    "text": "感謝您使用由 Mozilla 基金會支持的 { -brand-short-name }。透過您的支援，我們努力讓網路環境變得更好、更開放、更可被所有人使用。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "mr2022-onboarding-gratitude-subtitle @ browser/browser/newtab/onboarding.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396363,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=247446",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -1064,9 +1228,13 @@
    "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar",
    "original": "將 { -brand-short-name } 釘選到工具列",
    "text": "將 { -brand-short-name } 釘選到工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396361,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=247472",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1090,9 +1258,13 @@
    "source": "Pin { -brand-short-name } to taskbar and start menu",
    "original": "將 { -brand-short-name } 釘選到工具列與開始選單",
    "text": "將 { -brand-short-name } 釘選到工作列與開始選單",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396362,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=309234",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1116,9 +1288,13 @@
    "source": "Pin { -brand-short-name } to taskbar",
    "original": "將 { -brand-short-name } 釘選到工具列",
    "text": "將 { -brand-short-name } 釘選到工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396365,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=313301",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1142,9 +1318,13 @@
    "source": "Complete these steps to get the most out of your browsing experience.",
    "original": "完成下列步驟，讓您獲得最完整的的上網體驗。",
    "text": "完成下列步驟，讓您獲得最完整的上網體驗。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396364,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=313319",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1168,9 +1348,13 @@
    "source": "{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar",
    "original": "將 { -brand-short-name } 新增到您的工具列",
    "text": "將 { -brand-short-name } 新增到您的工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396366,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/newtab/onboarding.ftl/?string=339670",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1194,9 +1378,13 @@
    "source": "description: Choose a custom icon for your taskbar, desktop and start menu.\nlabel: Browser icon",
    "original": "選擇要在工具列、桌面與開始選單顯示的自訂圖示。",
    "text": "選擇要在工作列、桌面與開始選單顯示的自訂圖示。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396368,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/browserIcon.ftl/?string=337070",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1220,9 +1408,13 @@
    "source": "description: Browser governance for regulated and security-sensitive organizations.\nlabel: { -firefox-enterprise-brand-name }",
    "original": "為受管理或對注重安全性的組織進行瀏覽器治理。",
    "text": "為受法規監管或注重安全性的組織進行瀏覽器治理。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396369,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/moreFromMozilla.ftl/?string=343632",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -1246,9 +1438,13 @@
    "source": "The following websites have requested to select an audio output device. You can specify which websites are allowed to select an audio output device.",
    "original": "下列網站曾要求存取您的音訊輸出裝置。您可指定要允許哪些網站允許選擇音訊輸出裝置。",
    "text": "下列網站曾要求存取您的音訊輸出裝置。您可指定要允許哪些網站選擇音訊輸出裝置。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396370,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/permissions.ftl/?string=276742",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1272,9 +1468,13 @@
    "source": "You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.",
    "original": "您可隨時在 { -brand-short-name } 決定是否使用 AI 擴充功能。即將推出更多控制設定。",
    "text": "您可隨時在 { -brand-short-name } 決定是否使用 AI 強化功能。即將推出更多控制設定。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396372,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/preferences.ftl/?string=328692",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1298,9 +1498,13 @@
    "source": "description: Get suggestions to name and organize your tabs.\nlabel: Tab group suggestions",
    "original": "管理您的分頁，並提供名稱建議。",
    "text": "取得為分頁命名與整理分頁的建議。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396373,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/preferences.ftl/?string=328701",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1324,9 +1528,13 @@
    "source": "<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.",
    "original": "<strong>{ -brand-short-name } 的磁碟空間不足。</strong>網站內容可能無法正確顯示。您可以到「選項 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。",
    "text": "<strong>{ -brand-short-name } 的磁碟空間不足。</strong>網站內容可能無法正確顯示。您可以到「設定 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396371,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/preferences/preferences.ftl/?string=222626",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1350,9 +1558,13 @@
    "source": "Delete “{ $profilename }” profile",
    "original": "刪除「{ $profilename }」原則",
    "text": "刪除「{ $profilename }」設定檔",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396376,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/profiles.ftl/?string=331232",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1376,9 +1588,13 @@
    "source": "Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.",
    "original": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的安全性保護設定都會預設開啟。",
    "text": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的隱私保護設定都會預設開啟。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396374,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/profiles.ftl/?string=311534",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1402,9 +1618,13 @@
    "source": "Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.",
    "original": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的安全性保護設定都會預設開啟。",
    "text": "每一套設定檔之間的瀏覽紀錄、設定等均彼此獨立。另外，{ -brand-short-name } 強大的隱私保護設定都會預設開啟。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396375,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/profiles.ftl/?string=331173",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1428,9 +1648,13 @@
    "source": "{ -brand-short-name } protects your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.",
    "original": "當您上網時，{ -brand-short-name } 可在背景保護您的隱私。以下是這些保護的個人摘要，以及能夠用來保護線上安全性的各種工具。",
    "text": "當您上網時，{ -brand-short-name } 會在背景保護您的隱私。以下是這些保護的個人摘要，以及能夠用來保護線上安全性的各種工具。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396377,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/protections.ftl/?string=210834",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1456,9 +1680,13 @@
    "source": "Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”",
    "original": "免費試用 { -mozilla-vpn-brand-name }，看看為什麼 TechRadar 說「他的速度、簡潔程度、每月低價格使其值得一試」。",
    "text": "無風險試用 { -mozilla-vpn-brand-name }，看看為什麼 TechRadar 說「它的速度、簡潔程度、每月低價格使其值得一試」。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396378,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/protections.ftl/?string=334671",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -1482,9 +1710,13 @@
    "source": "Keep your data to yourself. { -brand-short-name } protects you from many of the most common trackers that follow what you do online.",
    "original": "保留自己的資料。{ -brand-short-name } 不讓常見的追蹤器記錄您的上網行為。",
    "text": "保留自己的資料。{ -brand-short-name } 不讓許多常見的追蹤器記錄您的上網行為。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396381,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/protectionsPanel.ftl/?string=292871",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1508,9 +1740,13 @@
    "source": "Some trackers marked below have been partially unblocked on this page because you interacted with them.",
    "original": "由於您已與此頁面中的部分追蹤器互動過，已解除封鎖下列標示的追蹤器。",
    "text": "由於您已與此頁面中的部分追蹤器互動過，已部分解除封鎖下列標示的追蹤器。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396379,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/protectionsPanel.ftl/?string=223260",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1534,9 +1770,13 @@
    "source": "tooltiptext: Tracker partially unblocked",
    "original": "部分追蹤器已解除封鎖",
    "text": "追蹤器已部分解除封鎖",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>less preferred sentence order</p>",
+   "pontoon_pk": 12396380,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/protectionsPanel.ftl/?string=223257",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -1560,9 +1800,13 @@
    "source": "label: Site asked to turn off ad blocker",
    "original": "網站要求關閉廣告追蹤器",
    "text": "網站要求關閉廣告封鎖器",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396382,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/reportBrokenSite.ftl/?string=334240",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1586,9 +1830,13 @@
    "source": "The site ahead may contain harmful programs",
    "original": "此網站可能含有惡意軟體",
    "text": "此網站可能含有有害軟體",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396383,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/safebrowsing/blockedSite.ftl/?string=197195",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1612,9 +1860,13 @@
    "source": "label: Open Tabs",
    "original": "開啟分頁",
    "text": "已開啟的分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396384,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/sidebar.ftl/?string=334673",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1638,9 +1890,13 @@
    "source": "label: Open tabs",
    "original": "開啟分頁",
    "text": "已開啟的分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396385,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/sidebar.ftl/?string=334674",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1664,9 +1920,13 @@
    "source": "You can’t use speech synthesis because the Speech Dispatcher library is missing.",
    "original": "由於找不到語音分配器程式庫，無法使用語音合成功能。",
    "text": "由於找不到 Speech Dispatcher 程式庫，無法使用語音合成功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396386,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/speechDispatcher.ftl/?string=281045",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1690,9 +1950,13 @@
    "source": "You can’t use speech synthesis because Speech Dispatcher needs to be updated.",
    "original": "需要更新語音分配器程式庫，才能使用語音合成功能。",
    "text": "需要更新 Speech Dispatcher 程式庫，才能使用語音合成功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396387,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/speechDispatcher.ftl/?string=281051",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1716,9 +1980,13 @@
    "source": "You can’t use speech synthesis because the Speech Dispatcher library is broken.",
    "original": "由於語音分配器程式庫已毀損，無法使用語音合成功能。",
    "text": "由於 Speech Dispatcher 程式庫已毀損，無法使用語音合成功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396388,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/speechDispatcher.ftl/?string=281056",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1742,9 +2010,13 @@
    "source": "You can’t use speech synthesis because voices aren’t available in Speech Dispatcher.",
    "original": "由於語音分配器程式庫當中的語音無法使用，無法使用語音合成功能。",
    "text": "由於 Speech Dispatcher 程式庫當中的語音無法使用，無法使用語音合成功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396390,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/speechDispatcher.ftl/?string=281052",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1768,9 +2040,13 @@
    "source": "You can’t use speech synthesis because Speech Dispatcher won’t open.",
    "original": "由於無法開啟語音分配器程式庫，無法使用語音合成功能。",
    "text": "由於無法開啟 Speech Dispatcher 程式庫，無法使用語音合成功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396389,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/speechDispatcher.ftl/?string=281059",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1794,9 +2070,13 @@
    "source": "label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group",
    "original": "複製群組中的 { $linkCount } 的鏈結",
    "text": "複製群組中的 { $linkCount } 個鏈結",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396393,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/tabbrowser.ftl/?string=333137",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1820,9 +2100,13 @@
    "source": "We’ll close duplicate tabs in this window. The last active\ntab will stay open.",
    "original": "將關閉此視窗中重複的分頁，只保留最後一個開啟的分頁。",
    "text": "將關閉此視窗中重複的分頁，只保留最後使用的分頁。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396392,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/tabbrowser.ftl/?string=307511",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1846,9 +2130,13 @@
    "source": "New Private Tab",
    "original": "開新隱私分頁",
    "text": "新隱私分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396391,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/tabbrowser.ftl/?string=266213",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1872,9 +2160,13 @@
    "source": "tooltiptext: Remove tab from taskbar",
    "original": "從側邊欄移除分頁",
    "text": "從工作列移除分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396395,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/taskbartabs.ftl/?string=322032",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1898,9 +2190,13 @@
    "source": "tooltiptext: Add tab to taskbar",
    "original": "將分頁新增到工具列",
    "text": "將分頁新增到工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396394,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/taskbartabs.ftl/?string=322031",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1924,9 +2220,13 @@
    "source": "Allow { $origin } to give { $thirdParty } access to your camera?",
    "original": "要允許 { $origin } 授權 { $thirdParty } 使用您的攝影機與麥克風嗎？",
    "text": "要允許 { $origin } 授權 { $thirdParty } 使用您的攝影機嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396396,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/browser/webrtcIndicator.ftl/?string=262130",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -1950,9 +2250,13 @@
    "source": "Reported Attack Site!",
    "original": "已知的有害網站！",
    "text": "已檢舉為攻擊網站！",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>this warning shows when user skips warning and enters a attack site; not a status of a site being reported.</p>",
+   "pontoon_pk": 12396397,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/chrome/browser/browser.properties/?string=74642",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -1976,9 +2280,13 @@
    "source": "Add “%1$S” as an application for %2$S links?",
    "original": "要新增「%1$S」為處理 %2$S 鍵結的應用程式嗎？",
    "text": "要新增「%1$S」為處理 %2$S 鏈結的應用程式嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396398,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/chrome/browser/feeds/subscribe.properties/?string=190780",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2002,9 +2310,13 @@
    "source": "Add bookmark folder",
    "original": "新增書籤工具列",
    "text": "新增書籤資料夾",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396399,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/chrome/browser/places/bookmarkProperties.properties/?string=223302",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2028,9 +2340,13 @@
    "source": "Edit bookmark folder",
    "original": "編輯書籤工具列",
    "text": "編輯書籤資料夾",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396400,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/chrome/browser/places/bookmarkProperties.properties/?string=223323",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2054,9 +2370,13 @@
    "source": "Override keyboard shortcuts",
    "original": "忽略快速鍵",
    "text": "蓋過快速鍵",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396401,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/chrome/browser/sitePermissions.properties/?string=174623",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2080,9 +2400,13 @@
    "source": "$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.",
    "original": "$BrandShortName 帶來您渴望的安全、簡單、輕鬆的瀏覽體驗。友善的操作介面、強化的安全性（包含新的線上辨識詐騙網站功能）和智慧搜尋功能讓您將網際網路發揮到極致。",
    "text": "$BrandShortName 帶來您渴望的安全、簡單、輕鬆的瀏覽體驗。友善的操作介面、強化的安全性（包含線上身分盜用防護）和智慧搜尋功能讓您將網際網路發揮到極致。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396402,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/installer/custom.properties/?string=79011",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2106,9 +2430,13 @@
    "source": "Your computer must be restarted to complete a previous uninstall of $BrandShortName. Do you want to reboot now?",
    "original": "必須重新啟動電腦才能完成 $BrandShortName 的解除安裝程序。您要現在重開嗎？",
    "text": "必須重新啟動電腦才能完成先前的 $BrandShortName 的解除安裝程序。您要現在重開嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396403,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/installer/custom.properties/?string=79042",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2132,9 +2460,13 @@
    "source": "Your computer must be restarted to complete a previous upgrade of $BrandShortName. Do you want to reboot now?",
    "original": "您的電腦必須重新啟動以完成升級 $BrandShortName。您想要立刻重新啟動電腦嗎？",
    "text": "您的電腦必須重新啟動以完成先前的 $BrandShortName 升級。您想要立刻重新啟動電腦嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396404,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/installer/custom.properties/?string=79043",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2158,9 +2490,13 @@
    "source": "No checks for this node.",
    "original": "不檢查此節點。",
    "text": "此節點沒有檢查結果。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396405,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/accessibility.properties/?string=199065",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2184,9 +2520,13 @@
    "source": "Enable Source Maps to let DevTools load your original sources in addition to your generated ones",
    "original": "開啟原始碼對應表後，即可讓開發者工具除了載入未經處理的原始碼外，也載入由程式產生的原始碼。",
    "text": "開啟原始碼對應表後，即可讓開發者工具除了載入由程式產生的原始碼外，也載入未經處理的原始碼。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396406,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/debugger.properties/?string=210342",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2210,9 +2550,13 @@
    "source": "Close tabs to the right",
    "original": "關閉右方標籤",
    "text": "關閉右方分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396407,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/debugger.properties/?string=163365",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2236,9 +2580,14 @@
    "source": "Opacity",
    "original": "透​明度",
    "text": "透明度",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no difference from approved string?</p>",
+   "dismissal": "colorpicker-tooltip-alpha-slider-title @ devtools/client/inspector.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no difference from approved string?</p>",
+   "pontoon_pk": 12396408,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/inspector.ftl/?string=322039",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -2262,9 +2611,13 @@
    "source": "The number of bytes taken up by this group, including subgroups",
    "original": "此群組消耗的位元組數量，排除子群組",
    "text": "此群組消耗的位元組數量，包含子群組",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396409,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/memory.properties/?string=149670",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2288,9 +2641,13 @@
    "source": "Perform a request to see detailed information about network activity.",
    "original": "請出請求，即可檢視網路活動的詳細資訊。",
    "text": "送出請求，即可檢視網路活動的詳細資訊。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396411,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/netmonitor.properties/?string=246218",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2314,9 +2671,13 @@
    "source": "Total elapsed time between the first and last displayed messages",
    "original": "第一筆與上一筆顯示的訊息中間間隔的時間",
    "text": "第一筆與最後一筆顯示的訊息中間間隔的時間",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396410,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/netmonitor.properties/?string=200703",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2340,9 +2701,13 @@
    "source": "View and edit the extension storage by selecting a host. <a data-l10n-name=\"learn-more-link\">Learn more</a>",
    "original": "選擇主機來檢視或編輯擴充套件。<a data-l10n-name=\"learn-more-link\">了解更多</a>",
    "text": "選擇主機來檢視或編輯擴充套件儲存空間。<a data-l10n-name=\"learn-more-link\">了解更多</a>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396412,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/storage.ftl/?string=210295",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2366,9 +2731,13 @@
    "source": "title: Only focus on resources from the parent process.",
    "original": "謹聚焦於來自父處理程序的資源。",
    "text": "僅聚焦於來自父處理程序的資源。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396413,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/toolbox.ftl/?string=246954",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2392,9 +2761,13 @@
    "source": "Customize Developer Tools and Get Help",
    "original": "自訂開發者工具並取得説明",
    "text": "自訂開發者工具並取得說明",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396414,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/toolbox.properties/?string=177838",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2418,9 +2791,13 @@
    "source": "<strong>{ $property }</strong> has no effect on this element since it’s not a positioned element.",
    "original": "由於元素未置入，<strong>{ $property }</strong> 對此元素沒有影響。",
    "text": "由於元素未定位，<strong>{ $property }</strong> 對此元素沒有影響。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396415,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/client/tooltips.ftl/?string=207321",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2446,9 +2823,13 @@
    "source": "console.clear() was prevented due to “Persist Logs”",
    "original": "由於開啟「保存紀錄」功能，已防止執行 console.clear()",
    "text": "由於開啟「保留紀錄」功能，已防止執行 console.clear()",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396416,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/devtools/shared/webconsole.properties/?string=332125",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2472,9 +2853,13 @@
    "source": "slider",
    "original": "滾動條",
    "text": "滑桿",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396417,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/accessibility/AccessFu.properties/?string=69330",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2498,9 +2883,14 @@
    "source": "tab",
    "original": "Tab 鍵",
    "text": "分頁",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "tab @ dom/chrome/accessibility/mac/accessible.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396418,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/accessibility/mac/accessible.properties/?string=69544",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -2524,9 +2914,13 @@
    "source": "Autoplay is only allowed when approved by the user, the site is activated by the user, or media is muted.",
    "original": "僅在使用者同意時才允許自動播放；使用者開啟了本網站，或媒體已被靜音。",
    "text": "僅在使用者同意、使用者已啟用本網站，或媒體已被靜音時才允許自動播放。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396420,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=189833",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2550,9 +2944,13 @@
    "source": "A call to document.write() from an asynchronously-loaded external script was ignored.",
    "original": "一個同步讀取的外部程式碼（Script）所呼叫的 document.write() 被忽略。",
    "text": "一個非同步讀取的外部程式碼（Script）所呼叫的 document.write() 被忽略。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396419,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=69612",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2576,9 +2974,13 @@
    "source": "Integrity values need to be strings.",
    "original": "整數值必須是字串。",
    "text": "完整性（integrity）值必須是字串。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396422,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=316193",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2602,9 +3004,14 @@
    "source": "Cannot post message containing a shared memory object to a cross-origin window.",
    "original": "無法將包含共享記憶體物件的訊息用 POST 方式傳送到跨來源視窗。",
    "text": "無法將包含共享記憶體物件的訊息透過 postMessage 傳送到跨來源視窗。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>post is an action verb, not postmessage.</p>",
+   "dismissal": "PostMessageSharedMemoryObjectToCrossOriginWarning @ dom/chrome/dom/dom.properties — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>post is an action verb, not postmessage.</p>",
+   "pontoon_pk": 12396423,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=210349",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -2628,9 +3035,13 @@
    "source": "Rewriting old-style YouTube Flash embed (%S) to iframe embed (%S). Params were unsupported by iframe embeds and converted. Please update page to use iframe instead of embed/object, if possible.",
    "original": "將舊版 Youtube Flash embed（%S）重寫為 iframe embed（%S）。Query 無效，已自網址移除。若可行的話，請更新頁面改用 iframe。",
    "text": "將舊版 YouTube Flash embed（%S）重寫為 iframe embed（%S）。iframe embed 不支援這些參數，已進行轉換。若可行的話，請更新頁面改用 iframe。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396421,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=154015",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2654,9 +3065,13 @@
    "source": "Refused to expand <select> option list via assignment to HTMLOptionsCollection.length (value %1$S). The maximum supported size is %2$S.",
    "original": "拒絕透過指派 HTMLOptionsCollection.lengt（值為 %1$S）來展開 <select> 選項。最大支援的值為 %2$S。",
    "text": "拒絕透過指派 HTMLOptionsCollection.length（值為 %1$S）來展開 <select> 選項。最大支援的值為 %2$S。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396424,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/dom/dom.properties/?string=261562",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2680,9 +3095,13 @@
    "source": "Found invalid value for media feature.",
    "original": "找到無效的媒體功能名稱。",
    "text": "找到無效的媒體功能值。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396426,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/css.properties/?string=69847",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2706,9 +3125,14 @@
    "source": ":host selector in ‘%S’ is not featureless and will never match. Maybe you intended to use :host()?",
    "original": "「%S」當中的 :host 選擇器會有作用，不會符合任何項目。也許您要用的是 :host()？",
    "text": "「%S」當中的 :host 選擇器並非 featureless，永遠不會符合任何項目。也許您要用的是 :host()？",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "PENeverMatchingHostSelector @ dom/chrome/layout/css.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The suggestion left the English word 'featureless' untranslated in the Chinese text, which is a new error.",
+   "pontoon_pk": 12396427,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/css.properties/?string=223307",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -2732,9 +3156,13 @@
    "source": "Dangling combinator.",
    "original": "令人混淆的組合。",
    "text": "多餘的組合子（combinator）。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396425,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/css.properties/?string=69764",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2758,9 +3186,13 @@
    "source": "A meta tag was used to declare the character encoding as x-user-defined. This was interpreted as a windows-1252 declaration instead for compatibility with intentionally mis-encoded legacy fonts. This site should migrate to Unicode.",
    "original": "網頁的 meta 標籤宣告使用 x-user-defined 作為字元編碼格式。為了保持與刻意編碼錯誤的傳統字體相容性，將會解譯為宣告使用 windown-1252 編碼。此網站應該轉移為使用 Unicode。",
    "text": "網頁的 meta 標籤宣告使用 x-user-defined 作為字元編碼格式。為了保持與刻意編碼錯誤的傳統字體相容性，將會解譯為宣告使用 windows-1252 編碼。此網站應該轉移為使用 Unicode。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396428,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/htmlparser.properties/?string=69899",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2784,9 +3216,13 @@
    "source": "Premature end of comment. Use “-->” to end a comment properly.",
    "original": "文件為正常結束。請使用「-->」正確地結束註解。",
    "text": "註解過早結束。請使用「-->」正確地結束註解。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396429,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/htmlparser.properties/?string=69908",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2810,9 +3246,13 @@
    "source": "Saw “<?”. Probable cause: Attempt to use an XML processing instruction in HTML. (XML processing instructions are not supported in HTML.)",
    "original": "發現了「?」。可能造成的原因: 嘗試在 HTML 當中使用 XML 處理指令。（HTML 當中並不支援 XML 處理指令）",
    "text": "發現了「<?」。可能造成的原因: 嘗試在 HTML 當中使用 XML 處理指令。（HTML 當中並不支援 XML 處理指令）",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396430,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/htmlparser.properties/?string=69924",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2836,9 +3276,13 @@
    "source": "End tag “%1$S” seen, but there were open elements.",
    "original": "發現了結束標籤「%1$S」，但那是開放元素。",
    "text": "發現了結束標籤「%1$S」，但仍有未關閉的元素。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396431,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/htmlparser.properties/?string=69962",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -2862,9 +3306,13 @@
    "source": "The “coords” attribute of the <area shape=\"circle\"> tag has a negative radius.",
    "original": "<area shape=\"circle\"> 標籤中的 \"coords\" 屬性不能有負的半徑。",
    "text": "<area shape=\"circle\"> 標籤中的 「coords」 屬性不能有負的半徑。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no need to add space between full width quote mark and Chinese character</p>",
+   "pontoon_pk": 12396434,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=70087",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2888,9 +3336,13 @@
    "source": "The “coords” attribute of the <area shape=\"circle\"> tag is not in the “center-x,center-y,radius” format.",
    "original": "<area shape=\"circle\"> 標籤中的 \"coords\" 屬性並不是 \"center-x,center-y,radius\" 的格式。",
    "text": "<area shape=\"circle\"> 標籤中的 「coords」 屬性並不是 「center-x,center-y,radius」 的格式。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no need to add space between full width quote mark and Chinese character</p>",
+   "pontoon_pk": 12396433,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=70086",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2914,9 +3366,13 @@
    "source": "The “coords” attribute of the <area shape=\"poly\"> tag is missing the last “y” coordinate (the correct format is “x1,y1,x2,y2 …”).",
    "original": "<area shape=\"poly\"> 標籤中的 \"coords\" 屬性少了最後的 y 座標 (正確格式是 \"x1,y1,x2,y2,…\")。",
    "text": "<area shape=\"poly\"> 標籤中的 「coords」 屬性少了最後的 y 座標 (正確格式是 「x1,y1,x2,y2,…」)。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no need to add space between full width quote mark and Chinese character</p>",
+   "pontoon_pk": 12396436,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=70089",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2940,9 +3396,13 @@
    "source": "The “coords” attribute of the <area shape=\"poly\"> tag is not in the “x1,y1,x2,y2 …” format.",
    "original": "<area shape=\"poly\"> 標籤中的 \"coords\" 屬性並不是 \"x1,y1,x2,y2,…\" 的格式。",
    "text": "<area shape=\"poly\"> 標籤中的 「coords」 屬性並不是 「x1,y1,x2,y2,…」 的格式。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no need to add space between full width quote mark and Chinese character</p>",
+   "pontoon_pk": 12396435,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=70088",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2966,9 +3426,13 @@
    "source": "The “coords” attribute of the <area shape=\"rect\"> tag is not in the “left,top,right,bottom” format.",
    "original": "<area shape=\"rect\">的\"coords\" 屬性不是 \"left,top,right,bottom\" 格式。",
    "text": "<area shape=\"rect\">的「coords」 屬性不是 「left,top,right,bottom」 格式。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no need to add space between full width quote mark and Chinese character</p>",
+   "pontoon_pk": 12396432,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=70085",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -2992,9 +3456,13 @@
    "source": "This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and features!",
    "original": "此網站使用與滾動列連結的定位效果，可能無法與同步平移效果一同使用，請參考 https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html 當中的詳細資訊，並與我們一起討論相關的工具與功能！",
    "text": "此網站使用與滾動列連結的定位效果，可能無法與非同步平移效果一同使用，請參考 https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html 當中的詳細資訊，並與我們一起討論相關的工具與功能！",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396437,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/layout_errors.properties/?string=228779",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3018,9 +3486,13 @@
    "source": "must not undeclare prefix",
    "original": "必須為未定義的前置詞 (Prefix)",
    "text": "不可取消定義前置詞 (Prefix)",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396438,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/xmlparser.properties/?string=70032",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3044,9 +3516,13 @@
    "source": "reserved prefix (xml) must not be undeclared or bound to another namespace name",
    "original": "保留的前置詞 (Prefix) (xml) 必須為未定義或繫結到另一個 namespace 名稱",
    "text": "保留的前置詞 (Prefix) (xml) 不可取消定義或繫結到另一個 namespace 名稱",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396439,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/layout/xmlparser.properties/?string=70037",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3070,9 +3546,13 @@
    "source": "(Report-Only policy) The page’s settings would block an inline script (%2$S) from being executed because it violates the following directive: “%1$S”. Consider using a hash ('sha256-%3$S') or a nonce.",
    "original": "（Report-Only 政策）由於違反了下列指示：「%1$S」，未讓頁面中的行內指令碼（%2$S）生效。請考慮使用 Hash（「sha256-%3$S」）或 nonce。",
    "text": "（Report-Only 政策）由於會違反下列指示：「%1$S」，將不會讓頁面中的行內指令碼（%2$S）生效。請考慮使用 Hash（「sha256-%3$S」）或 nonce。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396444,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/csp.properties/?string=317816",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3096,9 +3576,13 @@
    "source": "The page’s settings blocked a script (%3$S) at %2$S from being executed because it violates the following directive: “%1$S”",
    "original": "由於違反了下列指示：「%1$S」，位於 %2$S 的行內指令碼（%3$S）無法執行",
    "text": "由於違反了下列指示：「%1$S」，位於 %2$S 的指令碼（%3$S）無法執行",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396441,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/csp.properties/?string=301716",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3122,9 +3606,13 @@
    "source": "The page’s settings blocked a style (%3$S) at %2$S from being applied because it violates the following directive: “%1$S”",
    "original": "由於違反了下列指示：「%1$S」，位於 %2$S 的行內樣式（%3$S）無法套用",
    "text": "由於違反了下列指示：「%1$S」，位於 %2$S 的樣式（%3$S）無法套用",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396440,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/csp.properties/?string=301707",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3148,9 +3636,13 @@
    "source": "Ignoring sandbox directive when delivered in a report-only policy ‘%1$S’",
    "original": "在以唯讀政策「%1$S」傳遞時，忽略沙盒指示",
    "text": "在以 Report-Only 政策「%1$S」傳遞時，忽略沙盒指示",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396443,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/csp.properties/?string=153930",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3174,9 +3666,13 @@
    "source": "This site (%1$S) has a Report-Only policy without a report-uri directive nor a report-to directive. CSP will not block and cannot report violations of this policy.",
    "original": "此網站（%1$S）含有 Report-Only 政策卻未指定 report-uri。CSP 將不會封鎖，且無法回報此政策違反情形。",
    "text": "此網站（%1$S）含有 Report-Only 政策卻未指定 report-uri 或 report-to 指示。CSP 將不會封鎖，且無法回報此政策違反情形。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396442,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/csp.properties/?string=309255",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3200,9 +3696,13 @@
    "source": "Blocked loading mixed display content “%1$S”",
    "original": "已封鎖載入混和的顯示內容「%1$S」",
    "text": "已封鎖載入混合的顯示內容「%1$S」",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396445,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/security.properties/?string=70178",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3226,9 +3726,13 @@
    "source": "Navigation to toplevel data: URI not allowed (Blocked loading of: “%1$S”)",
    "original": "不允許瀏覽頂層資料: 不允許的 URI（「%1$S」載入被封鎖）",
    "text": "不允許瀏覽頂層 data: URI（「%1$S」載入被封鎖）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396447,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/security.properties/?string=169128",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3252,9 +3756,13 @@
    "source": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can remove its sandboxing.",
    "original": "同時包含 allow-scripts 與 allow-same-origin 兩個 sandbox 屬性的 iframe 的 sandbox 功能會被移除。",
    "text": "同時包含 allow-scripts 與 allow-same-origin 兩個 sandbox 屬性的 iframe 可以移除自身的 sandbox 功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396446,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/chrome/security/security.properties/?string=70199",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3278,9 +3786,13 @@
    "source": "{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.",
    "original": "Index { $index } 的 { $memberName } 有重複的用途: { $purposes }。",
    "text": "Index { $index } 的 { $memberName } 有重複的用途：{ $purposes }。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396448,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/dom/manifest.ftl/?string=344116",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3304,9 +3816,13 @@
    "source": "XPath parse failure: ‘:’ unexpected:",
    "original": "分析 XPath 錯誤: 缺少「:」:",
    "text": "分析 XPath 錯誤: 不應出現「:」:",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396450,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/dom/xslt.ftl/?string=317663",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3330,9 +3846,13 @@
    "source": "An unknown XPath extension function was called.",
    "original": "呼叫了未知的 XPath 擴充功能，",
    "text": "呼叫了未知的 XPath 擴充功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396449,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/dom/dom/xslt.ftl/?string=317654",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3356,9 +3876,13 @@
    "source": "The value of the attribute “%2$S” for the cookie “%1$S” has been rejected because its size is too big. Max size is %3$S B.",
    "original": "由於 Cookie「%1$S」太大，已拒絕屬性「%2$S」。最大大小為 %3$S B。",
    "text": "由於 Cookie「%1$S」的屬性「%2$S」值太大，已拒絕該值。最大大小為 %3$S B。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396453,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/netwerk/necko.properties/?string=307289",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3382,9 +3906,13 @@
    "source": "Request to access cookie or storage on “%1$S” was blocked because we are blocking all third-party storage access requests and Enhanced Tracking Protection is enabled.",
    "original": "由於我們封鎖所有第三方儲存空間存取請求，且開啟加強型追蹤保護開啟功能，已封鎖對「%1$S」存取 Cookie 或儲存空間的請求。",
    "text": "由於我們封鎖所有第三方儲存空間存取請求，且已開啟加強型追蹤保護功能，已封鎖對「%1$S」存取 Cookie 或儲存空間的請求。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396452,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/netwerk/necko.properties/?string=317290",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3408,9 +3936,13 @@
    "source": "The resource at “%1$S” was blocked because Enhanced Tracking Protection is enabled.",
    "original": "因為開用了加強型追蹤保護，已封鎖位於「%1$S」的資源。",
    "text": "因為開啟了加強型追蹤保護，已封鎖位於「%1$S」的資源。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396451,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/netwerk/necko.properties/?string=317288",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3434,9 +3966,13 @@
    "source": "The CRL for the certificate’s issuer has expired. Update it or check your system date and time.",
    "original": "憑證簽發者的已過期，請更新廢止清冊或檢查您的系統日期及時間。",
    "text": "憑證簽發者的憑證廢止清冊已過期，請更新廢止清冊或檢查您的系統日期及時間。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396455,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=70980",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3460,9 +3996,13 @@
    "source": "The certificate revocation list for this certificate is not yet valid.",
    "original": "此憑證的憑證廢止清冊尚未驗證。",
    "text": "此憑證的憑證廢止清冊尚未生效。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396459,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=71063",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3486,9 +4026,13 @@
    "source": "The key revocation list for this certificate is not yet valid.",
    "original": "此憑證的金鑰廢止清冊尚未驗證。",
    "text": "此憑證的金鑰廢止清冊尚未生效。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396458,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=71062",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3512,9 +4056,13 @@
    "source": "security library: memory allocation failure.",
    "original": "安全函式庫: 記憶體定址失敗。",
    "text": "安全函式庫: 記憶體配置失敗。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396454,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=70968",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3538,9 +4086,13 @@
    "source": "New CRL is not later than the current one.",
    "original": "新憑證廢止清冊不能比目前的清冊還晚。",
    "text": "新憑證廢止清冊並未比目前的清冊還晚。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396456,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=70991",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3564,9 +4116,13 @@
    "source": "New KRL is not later than the current one.",
    "original": "新金鑰廢止清冊不能比目前的清冊還晚。",
    "text": "新金鑰廢止清冊並未比目前的清冊還晚。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396457,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=71059",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3590,9 +4146,13 @@
    "source": "Key Agreement",
    "original": "同意金鑰",
    "text": "金鑰協議",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396460,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/chrome/pipnss/pipnss.properties/?string=70618",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3616,9 +4176,13 @@
    "source": "label: Ready",
    "original": "使用",
    "text": "就緒",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396461,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/security/certificates/deviceManager.ftl/?string=192648",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3642,9 +4206,13 @@
    "source": "value: (not set)",
    "original": "(未設定)",
    "text": "（未設定）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396462,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/security/manager/security/pippki/pippki.ftl/?string=344064",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3694,9 +4262,13 @@
    "source": "An extension, %S, changed what you see when you open your homepage and new windows.",
    "original": "有一套擴充套件 %S 修改了您在開啟新分頁與新視窗時會看到的頁面。",
    "text": "有一套擴充套件 %S 修改了您在開啟首頁與新視窗時會看到的頁面。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396464,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/chrome/global/extensions.properties/?string=178275",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3720,9 +4292,13 @@
    "source": "Forward (%S)",
    "original": "下一頁（%S）",
    "text": "下一段（%S）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396466,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/chrome/global/narrate.properties/?string=301321",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3746,9 +4322,13 @@
    "source": "Back (%S)",
    "original": "上一頁（%S）",
    "text": "上一段（%S）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396465,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/chrome/global/narrate.properties/?string=301315",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3772,9 +4352,14 @@
    "source": "Older than %S months",
    "original": "%S 個月前",
    "text": "%S 個月以前",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "finduri-AgeInMonths-isgreater @ toolkit/chrome/places/places.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The suggestion didn't fix the finding: 個月以前 still means '%S months ago', just like the original, so the 'older than' meaning is still missing.",
+   "pontoon_pk": 12396467,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/chrome/places/places.properties/?string=80036",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -3798,9 +4383,13 @@
    "source": "This is a list of “about” pages for your convenience.<br/>\nSome of them might be confusing. Some are for diagnostic purposes only.<br/>\nAnd some are omitted because they require query strings.",
    "original": "為了您的方便，這是「about:」頁面的列表。<br/>\n有些頁面可能很難懂，有些頁面只是拿來做為問題診斷使用。<br/>\n而有一些是可以被忽略的，因為它們需要一些參數才能正確工作。",
    "text": "為了您的方便，這是「about:」頁面的列表。<br/>\n有些頁面可能很難懂，有些頁面只是拿來做為問題診斷使用。<br/>\n而有一些頁面沒有列出，因為它們需要一些參數才能正確工作。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396468,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutAbout.ftl/?string=191388",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -3824,9 +4413,13 @@
    "source": "title: This extension has been reviewed to meet standards for security and performance",
    "original": "我們審查過此擴充套件，確認符合安全性與運作效能標準",
    "text": "此擴充套件已經過審查，確認符合安全性與運作效能標準",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396472,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=317292",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3850,9 +4443,13 @@
    "source": "(value): Reset All Add-ons to Update Automatically\naccesskey: R",
    "original": "重設所有附加元件的自動更新設定",
    "text": "將所有附加元件重設為自動更新",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396470,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=205181",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3876,9 +4473,13 @@
    "source": "The following add-ons have not been verified for use in { -brand-short-name }. You can\n<label data-l10n-name=\"find-addons\">find replacements</label> or ask the developer to get them verified.",
    "original": "以下原件尚未經過驗證，無法在 { -brand-short-name } 使用。您可以<label data-l10n-name=\"find-addons\">看看有沒有其他的替代方案</label>或是請開發者申請驗證。",
    "text": "以下元件尚未經過驗證，無法在 { -brand-short-name } 使用。您可以<label data-l10n-name=\"find-addons\">看看有沒有其他的替代方案</label>或是請開發者申請驗證。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396469,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=192069",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3902,9 +4503,13 @@
    "source": "aria-label: Remove shortcut",
    "original": "移除捷徑",
    "text": "移除快速鍵",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396471,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=300108",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3928,9 +4533,13 @@
    "source": "There is a secure version of <em>www.{ $websiteUrl }</em>. You can visit this page instead of <em>{ $websiteUrl }</em>.",
    "original": "此網站有個安全加密版本位於 <em>www.{ $websiteUrl }</em>，您可以改造訪此網頁，而不是目前的開啟的 <em>{ $websiteUrl }</em>。",
    "text": "此網站有個安全加密版本位於 <em>www.{ $websiteUrl }</em>，您可以改造訪此網頁，而不是目前開啟的 <em>{ $websiteUrl }</em>。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396473,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutHttpsOnlyError.ftl/?string=220980",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3954,9 +4563,13 @@
    "source": "label: Highlighter for read aloud\ntitle: Edit color",
    "original": "為閱讀功能加上強調效果",
    "text": "朗讀強調色",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396474,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutReader.ftl/?string=315360",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -3980,9 +4593,13 @@
    "source": "title: Justify text",
    "original": "文字對齊",
    "text": "文字左右對齊",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396475,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutReader.ftl/?string=316057",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4006,9 +4623,13 @@
    "source": "Last Integrity Corruption Date",
    "original": "最後一次完整性檢查日期",
    "text": "最後一次完整性損毀日期",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396476,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=327748",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4032,9 +4653,14 @@
    "source": "Not working",
    "original": "未使用中",
    "text": "無法運作",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "support-remote-settings-status-broken @ toolkit/toolkit/about/aboutSupport.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396478,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=306670",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -4058,9 +4684,13 @@
    "source": "WebGL 2 Driver Version",
    "original": "WebGL 2 驅動程式 Renderer",
    "text": "WebGL 2 驅動程式版本",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396477,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=194023",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4084,9 +4714,14 @@
    "source": "Certifications",
    "original": "憑證",
    "text": "認證",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "about-webauthn-auth-info-certifications @ toolkit/toolkit/about/aboutWebauthn.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396480,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutWebauthn.ftl/?string=288376",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -4110,9 +4745,13 @@
    "source": "Preferred platform user verification attempts",
    "original": "偏好的平台使用者驗證方式",
    "text": "偏好的平台使用者驗證嘗試次數",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396481,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutWebauthn.ftl/?string=288422",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4136,9 +4775,13 @@
    "source": "Credentials:",
    "original": "帳號密碼：",
    "text": "登入資訊：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396479,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutWebauthn.ftl/?string=288361",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4162,9 +4805,13 @@
    "source": "{$packets ->} [one] Lost { $packets } packet [other] Lost { $packets } packets",
    "original": "已捨棄 { $packets } 個封包",
    "text": "已遺失 { $packets } 個封包",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396482,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutWebrtc.ftl/?string=219909",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4188,9 +4835,13 @@
    "source": "Set Local SDP at timestamp { $timestamp }",
    "original": "已將本地 SDP 時間戳記設為 { NUMBER($timestamp, useGrouping: \"false\") }",
    "text": "本地 SDP 設定於時間戳記 { NUMBER($timestamp, useGrouping: \"false\") }",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396483,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/aboutWebrtc.ftl/?string=219902",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4214,9 +4865,13 @@
    "source": "(value): PEM (chain)\ndownload: { $fileName }-chain.pem",
    "original": "PEM（金鑰鏈）",
    "text": "PEM（憑證鏈）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396484,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/certviewer.ftl/?string=204019",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4240,9 +4895,13 @@
    "source": "Warn me when I attempt to access these preferences",
    "original": "當我嘗試修改偏好設定時警告我",
    "text": "當我嘗試存取這些偏好設定時警告我",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396485,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/about/config.ftl/?string=219807",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4266,9 +4925,14 @@
    "source": "Drag and drop denied.",
    "original": "被拒絕拖放檔案。",
    "text": "被拒絕拖放。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "contentanalysis-error-message-dropped-text @ toolkit/toolkit/contentanalysis/contentanalysis.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396486,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/contentanalysis/contentanalysis.ftl/?string=304466",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -4292,9 +4956,13 @@
    "source": "label: Add sites to your taskbar",
    "original": "將網站新增至工具列",
    "text": "將網站新增至工作列",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396488,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/firefoxlabs/features.ftl/?string=322013",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4318,9 +4986,13 @@
    "source": "Open sites you frequently visit as a web app from your taskbar. Look for the “Add tab to taskbar” icon to the right the address bar to launch that site in a streamlined window with all of { -brand-product-name }’s protections. <a data-l10n-name=\"connect\">Share feedback</a>",
    "original": "將您常造訪的網站放置於工具列，以網頁應用程式方式開啟。可尋找網址列右方的「將分頁新增至工具列」圖示，即可以流線化的視窗開啟該網站，並依然獲得 { -brand-product-name } 的所有保護機制。<a data-l10n-name=\"connect\">分享意見回饋</a>",
    "text": "將您常造訪的網站放置於工作列，以網頁應用程式方式開啟。可尋找網址列右方的「將分頁新增至工作列」圖示，即可以流線化的視窗開啟該網站，並依然獲得 { -brand-product-name } 的所有保護機制。<a data-l10n-name=\"connect\">分享意見回饋</a>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396489,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/firefoxlabs/features.ftl/?string=322014",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4344,9 +5016,13 @@
    "source": "{$sel_1 ->} [macos] To learn more about a webpage before you click, hover over a link and press Shift (⇧) plus Option (⌥) or Alt. Previews can include details like title and reading time. For some webpages, AI can also read the page text and generate key points. The AI is optimized to read and generate English text. To prioritize your privacy, the AI runs locally on your computer. <a data-l10n-name=\"connect\">Share feedback</a> [other] To learn more about a webpage before you click, hover over a link and press Shift + Alt. Previews can include details like title and reading time. For some webpages, AI can also read the page text and generate key points. The AI is optimized to read and generate English text. To prioritize your privacy, the AI runs locally on your computer. <a data-l10n-name=\"connect\">Share feedback</a>",
    "original": "若要在點擊鏈結前先了解網頁內容，請將滑鼠停留在鏈結上，然後按下 Shift+Alt 鍵。預覽內容可會包含網頁標題、閱讀時間等詳細資訊。AI 還可以針對部分頁面閱讀網頁內容、整理重點資訊。AI 是針對閱讀與產生英文內容進行最佳化，而為了保護隱私，此 AI 是在您的電腦本機內運作，<a data-l10n-name=\"connect\">歡迎提供意見回饋</a>。",
    "text": "若要在點擊鏈結前先了解網頁內容，請將滑鼠停留在鏈結上，然後按下 Shift+Alt 鍵。預覽內容可能會包含網頁標題、閱讀時間等詳細資訊。AI 還可以針對部分頁面閱讀網頁內容、整理重點資訊。AI 是針對閱讀與產生英文內容進行最佳化，而為了保護隱私，此 AI 是在您的電腦本機內運作，<a data-l10n-name=\"connect\">歡迎提供意見回饋</a>。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396487,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/firefoxlabs/features.ftl/?string=316923",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4370,9 +5046,13 @@
    "source": "Keep your to-do list top-of-mind when you open a new tab. From packing lists to shopping lists, make your plans in { -brand-product-name }. Set a timer to keep you focused, nudge you to stay on track, or remind you to recharge. <a data-l10n-name=\"connect\">Share feedback</a>",
    "original": "開啟新分頁時自動列出待辦清單，不論是要打包的項目，還是購物清單都可以在 { -brand-product-name } 當中安排。設定計時器讓您保持專心，並且搖晃視窗請您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
    "text": "開啟新分頁時自動列出待辦清單，不論是要打包的項目，還是購物清單都可以在 { -brand-product-name } 當中安排。設定計時器讓您保持專心，並且提醒您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396491,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/firefoxlabs/features.ftl/?string=322769",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4396,9 +5076,13 @@
    "source": "Set a timer to keep you focused, nudge you to stay on track, or remind you to recharge. <a data-l10n-name=\"connect\">Share feedback</a>",
    "original": "設定計時器讓您保持專心，並且搖晃視窗請您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
    "text": "設定計時器讓您保持專心，並且提醒您保持進度，或提醒該小歇一下了。<a data-l10n-name=\"connect\">分享意見回饋</a>",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396490,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/firefoxlabs/features.ftl/?string=322497",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4422,9 +5106,13 @@
    "source": "{ -brand-shorter-name } handled a cookie banner on behalf of the user.",
    "original": "{ -brand-shorter-name } 已使用者回覆了 Cookie 橫幅。",
    "text": "{ -brand-shorter-name } 已代替使用者回覆了 Cookie 橫幅。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396492,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/cookieBannerHandling.ftl/?string=288427",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4448,9 +5136,13 @@
    "source": "These are devices like microcontrollers, 3D printers, and other devices that connect via USB, serial ports, or Bluetooth.\n\nYou will be able to choose which devices the website can access.\n\nWebsites are normally not allowed to access serial devices. Improper usage could cause damage or compromise security.",
    "original": "這是指諸如微控制器、3D 印表機，或其他透過 USB、序列埠或藍牙連接的裝置。\n\n您將可以選擇網站可以存取哪些裝置。\n\n一般來說，不應允許網站存取序列埠裝置。不正確使用可能會造成損畫，或影響安全性。",
    "text": "這是指諸如微控制器、3D 印表機，或其他透過 USB、序列埠或藍牙連接的裝置。\n\n您將可以選擇網站可以存取哪些裝置。\n\n一般來說，不應允許網站存取序列埠裝置。不正確使用可能會造成損壞，或影響安全性。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396493,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/extensions.ftl/?string=334060",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4474,9 +5166,14 @@
    "source": "Always allow this file to open <strong>{ $scheme }</strong> links",
    "original": "總是使用這個檔案來開啟 <strong>{ $scheme }</strong> 鏈結",
    "text": "總是允許這個檔案開啟 <strong>{ $scheme }</strong> 鏈結",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "permission-dialog-remember-file @ toolkit/toolkit/global/handlerDialog.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396499,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=216164",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -4500,9 +5197,13 @@
    "source": "Opening a <strong>{ $scheme }</strong> link allows this site to request your real identity from your digital wallet. Only continue if you trust this site.",
    "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過您的數位錢包獲得您的真實身分資料。只有在您信任此網站時才繼續。",
    "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過您的數位錢包要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396498,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=324173",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4526,9 +5227,13 @@
    "source": "Opening a <strong>{ $scheme }</strong> link allows this site to request your real identity with <strong>{ $appName }</strong>. Only continue if you trust this site.",
    "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過 <strong>{ $appName }</strong> 獲得您的真實身分資料。只有在您信任此網站時才繼續。",
    "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓此網站透過 <strong>{ $appName }</strong> 要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396496,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=324171",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4552,9 +5257,13 @@
    "source": "heading: Allow this site to open your digital wallet?",
    "original": "要允許這個網站開啟您的數位錢包嗎嗎？",
    "text": "要允許這個網站開啟您的數位錢包嗎？",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396494,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=324169",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4578,9 +5287,13 @@
    "source": "Opening a <strong>{ $scheme }</strong> link allows <strong>{ $host }</strong> to request your real identity from your digital wallet. Only continue if you trust this site.",
    "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過您的數位錢包獲得您的真實身分資料。只有在您信任此網站時才繼續。",
    "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過您的數位錢包要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396497,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=324172",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4604,9 +5317,13 @@
    "source": "Opening a <strong>{ $scheme }</strong> link allows <strong>{ $host }</strong> to request your real identity with <strong>{ $appName }</strong>. Only continue if you trust this site.",
    "original": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過 <strong>{ $appName }</strong> 獲得您的真實身分資料。只有在您信任此網站時才繼續。",
    "text": "開啟 <strong>{ $scheme }</strong> 鏈結，將讓 <strong>{ $host }</strong> 能夠透過 <strong>{ $appName }</strong> 要求取得您的真實身分資料。只有在您信任此網站時才繼續。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396495,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/handlerDialog.ftl/?string=324170",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4630,9 +5347,13 @@
    "source": "title: Forward ({ $shortcut })",
    "original": "下一頁（{ $shortcut }）",
    "text": "下一段（{ $shortcut }）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396501,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/narrate.ftl/?string=342568",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4656,9 +5377,13 @@
    "source": "title: Back ({ $shortcut })",
    "original": "上一頁（{ $shortcut }）",
    "text": "上一段（{ $shortcut }）",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396500,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/global/narrate.ftl/?string=342565",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4682,9 +5407,13 @@
    "source": "Chamorro",
    "original": "查莫洛語 (加拿大印第安語)",
    "text": "查莫洛語",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396502,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194742",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4708,9 +5437,13 @@
    "source": "Guarani",
    "original": "巴拉圭語",
    "text": "瓜拉尼語",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396503,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194272",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4734,9 +5467,13 @@
    "source": "Luba-Katanga",
    "original": "盧巴卡丹加語 (西非)",
    "text": "盧巴卡丹加語 (剛果民主共和國)",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396504,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194506",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4760,9 +5497,13 @@
    "source": "Ossetian",
    "original": "奧賽提語 (古波斯語)",
    "text": "奧賽提語 (高加索地區)",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396505,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194390",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4786,9 +5527,13 @@
    "source": "Pashto",
    "original": "帕圖語 (伊朗．阿富汗)",
    "text": "帕圖語 (阿富汗．巴基斯坦)",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396506,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194477",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4812,9 +5557,13 @@
    "source": "Probably nothing, since it’s likely there’s a problem with the site itself. Sites use certificates issued by a certificate authority to prove they’re really who they say they are. But if you’re on a corporate network, your support team may have more info. If you’re using antivirus software, try searching for potential conflicts or known issues.",
    "original": "由於這通常是網站的設定問題，可能沒什麼能做的。網站會透過憑證機構簽發的憑證來證明自己的身分，但您如果使用的是企業網路，貴公司的技術支援單位可能有更多資訊；若您有使用防毒軟體，也可以搜尋看看該軟體是否會造成衝突或有已支的問題。",
    "text": "由於這通常是網站的設定問題，可能沒什麼能做的。網站會透過憑證機構簽發的憑證來證明自己的身分，但您如果使用的是企業網路，貴公司的技術支援單位可能有更多資訊；若您有使用防毒軟體，也可以搜尋看看該軟體是否會造成衝突或有已知的問題。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396507,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/certError.ftl/?string=311487",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4838,9 +5587,13 @@
    "source": "{ -brand-short-name } detected an issue and did not continue to <b>{ $hostname }</b>. The website is either misconfigured or your computer clock is set to the wrong time.",
    "original": "{ -brand-short-name } 偵測到潛在的安全性威脅，並未連線到 <b>{ $hostname }</b>。此網站可能有設定問題，或您的電腦上的時間不正確。",
    "text": "{ -brand-short-name } 偵測到問題，並未連線到 <b>{ $hostname }</b>。此網站可能有設定問題，或您的電腦上的時間不正確。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396511,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/netError.ftl/?string=261970",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4864,9 +5617,13 @@
    "source": "If you are trying to load a local network page, please check that { -brand-short-name } has been granted Local Network permissions in the macOS Privacy & Security settings.",
    "original": "若您要開啟的本地區域網路頁面，請確認已經在 macOS 的「隱私權與安全性」選項當中，授權 { -brand-short-name } 存取本地網路權限。",
    "text": "若您要開啟的是本地區域網路頁面，請確認已經在 macOS 的「隱私權與安全性」選項當中，授權 { -brand-short-name } 存取本地網路權限。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396508,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/netError.ftl/?string=313309",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4890,9 +5647,13 @@
    "source": "Check that the server accepts connections on this address. Some servers listen only on [::1] or only on 127.0.0.1.",
    "original": "請確認伺服器是否接受對位置的連線。部分伺服器僅監聽 [::1] 或 127.0.0.1。",
    "text": "請確認伺服器是否接受對此位址的連線。部分伺服器僅監聽 [::1] 或 127.0.0.1。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396510,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/netError.ftl/?string=343124",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -4916,9 +5677,13 @@
    "source": "If it is running, check that it is using port { $port }.",
    "original": "若正在執行中，請確認該伺服器是否使用 { $port }。",
    "text": "若正在執行中，請確認該伺服器是否使用通訊埠 { $port }。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396509,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/netError.ftl/?string=343123",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4942,9 +5707,13 @@
    "source": "The CRL for the certificate’s issuer has expired. Update it or check your system date and time.",
    "original": "憑證簽發者的已過期，請更新廢止清冊或檢查您的系統日期及時間。",
    "text": "憑證簽發者的憑證廢止清冊已過期，請更新廢止清冊或檢查您的系統日期及時間。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396512,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261973",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4968,9 +5737,13 @@
    "source": "The certificate revocation list for this certificate is not yet valid.",
    "original": "此憑證的憑證廢止清冊尚未驗證。",
    "text": "此憑證的憑證廢止清冊尚未生效。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396516,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261743",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -4994,9 +5767,13 @@
    "source": "The key revocation list for this certificate is not yet valid.",
    "original": "此憑證的金鑰廢止清冊尚未驗證。",
    "text": "此憑證的金鑰廢止清冊尚未生效。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396515,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261660",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -5020,9 +5797,13 @@
    "source": "New CRL is not later than the current one.",
    "original": "新憑證廢止清冊不能比目前的清冊還晚。",
    "text": "新憑證廢止清冊並未比目前的清冊還新。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396513,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261771",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -5046,9 +5827,13 @@
    "source": "New KRL is not later than the current one.",
    "original": "新金鑰廢止清冊不能比目前的清冊還晚。",
    "text": "新金鑰廢止清冊並未比目前的清冊還新。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396514,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=262035",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -5072,9 +5857,13 @@
    "source": "{$count ->} [one] Document signed with { $count } expired certificate [other] Document signed with { $count } expired certificates",
    "original": "文件已進行簽署，但當中的 { $count } 筆數位簽章已過期",
    "text": "文件已進行簽署，但當中的 { $count } 張憑證已過期",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396517,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/pdfviewer/viewer.ftl/?string=336598",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -5098,9 +5887,13 @@
    "source": "{$count ->} [one] Document signed with { $count } revoked certificate [other] Document signed with { $count } revoked certificates",
    "original": "文件已進行簽署，但當中的 { $count } 筆數位簽章已廢止",
    "text": "文件已進行簽署，但當中的 { $count } 張憑證已廢止",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396518,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/pdfviewer/viewer.ftl/?string=336600",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -5124,9 +5917,14 @@
    "source": "{ $origin } wants to create a passkey for { $rpId }.",
    "original": "{ $origin } 想要為 { $rpId } 建立一把 Passkey。",
    "text": "{ $origin } 想要為 { $rpId } 建立一把密碼金鑰。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>should keep Passkey intact, as per glossary.</p>",
+   "dismissal": "webauthn-related-origin-create-header @ toolkit/toolkit/webauthnDialog.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>should keep Passkey intact, as per glossary.</p>",
+   "pontoon_pk": 12396520,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/webauthnDialog.ftl/?string=334710",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -5150,9 +5948,13 @@
    "source": "Multiple devices found for { $hostname }. Please select one.",
    "original": "找到 { $hostname } 的多組帳號。請選擇要使用哪一組。",
    "text": "找到 { $hostname } 的多個裝置。請選擇要使用哪一個。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396519,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/webauthnDialog.ftl/?string=334700",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

@@ -2945,6 +2945,9 @@
   "migration-wizard-selection-option-with-profile": "b2872435 90cf9c21",
   "migration-wizard-selection-option-without-profile": "a0b8f688 818019a0"
  },
+ "browser/browser/miniWindow.ftl": {
+  "mini-window-close-button": "87232621 17d02e36"
+ },
  "browser/browser/newtab/asrouter.ftl": {
   "annotations-default-pdf-handler-body": "a3f51081 b3c9b128",
   "annotations-default-pdf-handler-headline": "60ca0463 1203c805",

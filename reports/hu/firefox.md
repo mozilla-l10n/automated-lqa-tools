@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 16,816 |
+| **Strings reviewed this run** | 59 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,43 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (adjective, tabs that are duplicates) translated as the action "duplicating tabs".
+    - Current: `Lapok duplikálása`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Ismétlődő lapok`
+    - Per the comment, this item under "Close Multiple" closes duplicate tabs; "Lapok duplikálása" means "Duplicate (verb) tabs", the opposite kind of action.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (move to start of tab strip) translated as the noun "Kezdés" (starting/beginning an action).
+    - Current: `Kezdés`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Elejére`
+    - The comment says this is a "Move to" sub-item for moving the tab to the start of the tab strip; "Kezdés" means the act of starting, not the position.
+- `move-to-end-alt` — `browser/browser/tabContextMenu.ftl` — "End" (move to end of tab strip) translated as "Befejezés" (finishing/completion).
+    - Current: `Befejezés`
+    - Source: `accesskey: E label: End`
+    - Suggest: `Végére`
+    - This is the "Move to" destination for the end of the tab strip; "Befejezés" means finishing an action.
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football matches) translated as "Találatok" (search hits).
+    - Current: `Találatok`
+    - Source: `Matches`
+    - Suggest: `Mérkőzések`
+    - In the Wrexham AFC football widget, "Matches" are games, alongside "Table" and "Fixtures"; "Találatok" means search results.
+- `hnt-card-taskbar-tabs-body` — `browser/browser/newtab/onboarding.ftl` — Wrong case: "mint egy alkalmazás" (nominative) compares the user to an app instead of the sites.
+    - Current: `mint egy alkalmazás, amely`
+    - Source: `Open your most visited sites like an app with all of { -brand-product-name }’s protections.`
+    - Suggest: `mint egy alkalmazást, amely`
+    - The comparison refers to the object (the sites opened like an app), so it needs the accusative "alkalmazást"; as written it says the user is like an app.
+- `download-ui-confirm-quit-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" rendered as "the process may be interrupted".
+    - Current: `de a folyamat megszakadhat`
+    - Source: `{ -brand-short-name } will try to resume downloads when it reopens, but progress may be lost.`
+    - Suggest: `de az eddigi előrehaladás elveszhet`
+    - The source warns that download progress may be lost; "a folyamat megszakadhat" says the process may be interrupted, which doesn't tell the user about the lost progress.
+- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" is rendered as "the process may be interrupted", which changes the meaning.
+    - Current: `de a folyamat megszakadhat`
+    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
+    - Suggest: `de az eddigi letöltési előrehaladás elveszhet`
+    - The en-US warns that download progress already made may be lost when resuming. The Hungarian says the process may be interrupted, which is a different consequence.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +79,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,816 |
-| Missing strings | 59 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,22 +97,7 @@ _Nothing retired._
 
 ### Completeness
 
-**59 strings** are not translated yet, concentrated in:
-
-- `browser/browser/tabContextMenu.ftl` — 14
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 9
-- `browser/browser/newtab/newtab.ftl` — 7
-- `browser/browser/newtab/onboarding.ftl` — 7
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/preferences/preferences.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
-- `browser/browser/customkeys.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,7 +105,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 810, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 811, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
 | ellipsis | `char` 401, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 134 | **en** |
@@ -100,7 +119,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (275)
+## 3. Open findings (282)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -120,8 +139,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 129 |
-| 3 | Degraded language (grammar, spelling, terminology) | 89 |
+| 2 | Wrong content (says something other than the English) | 135 |
+| 3 | Degraded language (grammar, spelling, terminology) | 90 |
 | 4 | Cosmetic (typography, spacing) | 27 |
 
 ### A. Functional, markup, variables & plurals
@@ -469,6 +488,11 @@ _Also listed under their own category below._
     - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
     - Suggest: `Húzással vagy kattintással jelöljön ki egy területet, amelyet áthelyez egy mini ablakba.`
     - en-US: 'Drag or click to select an area to move to a Mini Window.' The selected area is what gets moved into the Mini Window. The Hungarian reads 'select the area, and move the mini window', which describes a different action.
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football matches) translated as "Találatok" (search hits).
+    - Current: `Találatok`
+    - Source: `Matches`
+    - Suggest: `Mérkőzések`
+    - In the Wrexham AFC football widget, "Matches" are games, alongside "Table" and "Fixtures"; "Találatok" means search results.
 - `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The idiom "do your thing" is translated as "tegye a dolgát", which means "do your duty/job", the opposite of what the developer comment describes.
     - Current: `Menjen, és tegye a dolgát.`
     - Source: `All set. Go do your thing.`
@@ -529,6 +553,21 @@ _Also listed under their own category below._
     - Source: `Sign in to sync`
     - Suggest: `Jelentkezzen be a szinkronizáláshoz`
     - The en-US uses the verb "sync" (to synchronize), not the capitalized Sync feature brand; the Hungarian asserts signing in *into* Sync.
+- `move-to-end-alt` — `browser/browser/tabContextMenu.ftl` — "End" (move to end of tab strip) translated as "Befejezés" (finishing/completion).
+    - Current: `Befejezés`
+    - Source: `accesskey: E label: End`
+    - Suggest: `Végére`
+    - This is the "Move to" destination for the end of the tab strip; "Befejezés" means finishing an action.
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (move to start of tab strip) translated as the noun "Kezdés" (starting/beginning an action).
+    - Current: `Kezdés`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Elejére`
+    - The comment says this is a "Move to" sub-item for moving the tab to the start of the tab strip; "Kezdés" means the act of starting, not the position.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (adjective, tabs that are duplicates) translated as the action "duplicating tabs".
+    - Current: `Lapok duplikálása`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Ismétlődő lapok`
+    - Per the comment, this item under "Close Multiple" closes duplicate tabs; "Lapok duplikálása" means "Duplicate (verb) tabs", the opposite kind of action.
 - `urlbar-translations-button-intro` — `browser/browser/translations.ftl` — “Beta” translated as “Béta” although the developer comment forbids translating it.
     - Current: `Próbálja ki a privát fordításokat a { -brand-shorter-name }ban – Béta`
     - Source: `tooltiptext: Try private translations in { -brand-shorter-name } - Beta`
@@ -584,6 +623,16 @@ _Also listed under their own category below._
     - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
     - Suggest: `amit másolt`
     - The en-US string is about clipboard copy (see string id and source "what you copied"), not printing.
+- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" is rendered as "the process may be interrupted", which changes the meaning.
+    - Current: `de a folyamat megszakadhat`
+    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
+    - Suggest: `de az eddigi letöltési előrehaladás elveszhet`
+    - The en-US warns that download progress already made may be lost when resuming. The Hungarian says the process may be interrupted, which is a different consequence.
+- `download-ui-confirm-quit-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" rendered as "the process may be interrupted".
+    - Current: `de a folyamat megszakadhat`
+    - Source: `{ -brand-short-name } will try to resume downloads when it reopens, but progress may be lost.`
+    - Suggest: `de az eddigi előrehaladás elveszhet`
+    - The source warns that download progress may be lost; "a folyamat megszakadhat" says the process may be interrupted, which doesn't tell the user about the lost progress.
 - `autofill-delete-payment-method-os-prompt-windows` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "delete stored payment method information" was rendered as "akar használni" (wants to use) instead of "törölni akarja" (wants to delete).
     - Current: `A { -brand-short-name } tárolt fizetésimód-információkat akar használni.`
     - Source: `{ -brand-short-name } is trying to delete stored payment method information. Confirm access to this Windows account below.`
@@ -732,6 +781,11 @@ _Also listed under their own category below._
     - Source: `aria-label: Remove image { $number } title: Remove image { $number }`
     - Suggest: `aria-label: { $number }. kép eltávolítása`
     - Hungarian ordinal numbering requires a period (as used in newtab-wallpaper-your-images-item-numbered: "{ $number }. kép"); without it the text reads as a count ("remove N images").
+- `hnt-card-taskbar-tabs-body` — `browser/browser/newtab/onboarding.ftl` — Wrong case: "mint egy alkalmazás" (nominative) compares the user to an app instead of the sites.
+    - Current: `mint egy alkalmazás, amely`
+    - Source: `Open your most visited sites like an app with all of { -brand-product-name }’s protections.`
+    - Suggest: `mint egy alkalmazást, amely`
+    - The comparison refers to the object (the sites opened like an app), so it needs the accusative "alkalmazást"; as written it says the user is like an app.
 - `mr1-onboarding-theme-label-alpenglow` — `browser/browser/newtab/onboarding.ftl` — Theme name "Alpenglow" was translated although the developer comment forbids it.
     - Current: `Alpesi fény`
     - Source: `Alpenglow`
@@ -1231,19 +1285,19 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (810 occurrences).
+    - The locale's quote convention is `polish-double` (811 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (810 occurrences).
+    - The locale's quote convention is `polish-double` (811 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (810 occurrences).
+    - The locale's quote convention is `polish-double` (811 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (810 occurrences).
+    - The locale's quote convention is `polish-double` (811 occurrences).
 - `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — A final period was added after the URL value, which the developer comment explicitly forbids.
     - Current: `érvénytelen: { $value }.`
     - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`

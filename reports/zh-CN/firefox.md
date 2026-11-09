@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 16,435 |
+| **Strings reviewed this run** | 11 of 16,445 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,435 |
-| Missing strings | 440 |
+| Strings | 16,445 |
+| Missing strings | 430 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**440 strings** are not translated yet, concentrated in:
+**430 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
 - `browser/browser/newtab/newtab.ftl` — 49
@@ -94,7 +94,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 380, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
-| fullwidth | `punctuation` 8539 | **punctuation** |
+| fullwidth | `punctuation` 8555 | **punctuation** |
 | register | `informal` 24, `formal` 1543 | **formal** |
 
 ---

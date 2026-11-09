@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `GamepadHapticActuatorsWarning` — `dom/chrome/dom/dom.properties` — The identifier that must not be translated is misspelled as "rapticActuators".
-    - Current: `Gamepad.rapticActuators`
-    - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
-    - Suggest: `Gamepad.hapticActuators`
-    - The developer comment says not to translate "Gamepad.hapticActuators". It is an API name and must match the source exactly. The Russian has a typo (h→r), so the warning names an API that doesn't exist.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

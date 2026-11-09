@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 15 of 13,569 |
+| **Strings reviewed this run** | 0 of 13,569 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — Theme name uses feminine adjective سوداء after OLED, inconsistent with the masculine colour names used for all other themes and reading as 'a black OLED'.
-    - Current: `OLED سوداء`
-    - Source: `OLED Black`
-    - Suggest: `أسود OLED`
-    - Other theme names are masculine colour nouns (أحمر، أزرق، رمادي); 'OLED Black' names the black colour/theme, so the colour noun أسود should head it, matching the sibling names.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

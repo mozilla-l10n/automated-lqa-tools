@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 130 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,9 @@ Also for ko: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, to be closed) is rendered as "탭 복제", meaning the action of duplicating a tab.
-    - Current: `탭 복제`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `중복 탭`
-    - The developer comment says this item sits under "Close Multiple" and closes the duplicate tabs of the selected tab. "탭 복제" reads as the command to duplicate a tab, which is a different action.
-- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football games) is translated as "일치" (agreement/correspondence).
-    - Current: `일치`
-    - Source: `Matches`
-    - Suggest: `경기`
-    - In the Wrexham AFC widget, "Matches" is a view that lists games, next to Table and Fixtures. "일치" means things matching or corresponding, which is the wrong sense of the word here.
-- `hnt-card-extensions-body` — `browser/browser/newtab/onboarding.ftl` — "인기있는" is missing the required space; standard spelling is "인기 있는".
-    - Current: `가장 인기있는`
-    - Source: `Customize your browsing with our most loved extensions.`
-    - Suggest: `가장 인기 있는`
-    - Under Korean spacing rules, "인기 있다" is written as two words.
-- `hnt-card-wallpaper-header` — `browser/browser/newtab/onboarding.ftl` — "Wallpaper" is written "배경화면" here but "배경 화면" in the card body directly below and in the New Tab menu.
-    - Current: `배경화면`
-    - Source: `Pick a fresh wallpaper`
-    - Suggest: `배경 화면`
-    - The same term in the same card is written two different ways. hnt-card-wallpaper-body and newtab-widget-wrexhamafc-menu-wallpapers both use "배경 화면".
-- `GamepadHapticActuatorsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier Gamepad.hapticActuators is misspelled as Gamepad.haptricActuator.
-    - Current: `Gamepad.haptricActuator는`
-    - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
-    - Suggest: `Gamepad.hapticActuators는`
-    - The comment says not to translate "Gamepad.hapticActuators". The target adds an 'r' and drops the final 's', so it names an API that doesn't exist.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" of a report-only policy is translated as a plain statement that the redirect is blocked.
-    - Current: `페이지 설정에서 %1$S의 리디렉션을 차단합니다.`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `페이지 설정에서 %1$S의 리디렉션을 차단했을 것입니다.`
-    - Under a Report-Only policy nothing is actually blocked. The source says the settings 'would block' the redirect. The Korean says they block it, which misleads developers reading the console.
-- `DocumentReleaseCaptureWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier "Element.releasePointerCapture()" has lost its "Element." prefix.
-    - Current: `대신 releasePointerCapture()를 사용하세요`
-    - Source: `Document.releaseCapture() is deprecated. Use Element.releasePointerCapture() instead. For more help https://developer.mozilla.org/docs/Web/API/Element/releasePointerCapture`
-    - Suggest: `대신 Element.releasePointerCapture()를 사용하세요`
-    - The developer comment says to keep "Element.releasePointerCapture()" exactly as written. The source names Element.releasePointerCapture(), and leaving out the interface name changes the API reference the developer is pointed to.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

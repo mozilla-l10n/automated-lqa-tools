@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 16,011 |
+| **Strings reviewed this run** | 1 of 16,012 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 329 |
-| Strings | 16,011 |
-| Missing strings | 864 |
+| Files | 330 |
+| Strings | 16,012 |
+| Missing strings | 863 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -63,7 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**864 strings** are not translated yet, concentrated in:
+**863 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 140
 - `browser/browser/ipProtection.ftl` — 86
@@ -81,7 +81,6 @@ _Nothing retired._
 **Files absent from the locale:**
 
 - `browser/browser/autoTabGrouping.ftl`
-- `browser/browser/miniWindow.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

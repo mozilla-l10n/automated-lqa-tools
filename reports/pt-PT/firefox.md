@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 16,823 |
+| **Strings reviewed this run** | 0 of 16,823 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,9 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
 
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — "Open tabs" is translated as a verb instead of a noun in both the label and the tooltip.
-    - Current: `Abrir separadores`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Separadores abertos`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open). "Abrir separadores" means "to open tabs", an action. The tooltip should read "Separadores abertos dos seus outros dispositivos".
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps the English word order, which is ungrammatical in Portuguese.
-    - Current: `{ -brand-short-name } definições onde aplicável`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `Definições do { -brand-short-name }, quando aplicável`
-    - In Portuguese the possessor has to follow the noun with "do". Putting the brand name first as a modifier is ungrammatical.
-- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — There is a double space between "do" and "Wrexham" in the menu label.
-    - Current: `Abrir menu do  Wrexham AFC`
-    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
-    - Suggest: `Abrir menu do Wrexham AFC`
-    - The extra space is in text that users read, and screen readers announce this label.
-- `hnt-card-import-body` — `browser/browser/newtab/onboarding.ftl` — There is a serial comma before "e", which Portuguese punctuation does not use.
-    - Current: `palavras-passe, e muito mais`
-    - Source: `Bring in your bookmarks, passwords, and more from another browser.`
-    - Suggest: `palavras-passe e muito mais`
-    - Portuguese does not put a comma before the final "e" in a list. This copies the English Oxford comma.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
