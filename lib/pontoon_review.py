@@ -143,7 +143,12 @@ def match(record: dict, results: list[dict]) -> dict | None:
     found = [r for r in results
              if r["project"] == p["project"] and r["resource"] == p["resource"]
              and r["entity"] == entity
-             and r["preview"] == record["text"]]
+             and r["preview"] == record["text"]
+             # The preview is one part of a message with attributes, so two
+             # suggestions on different attributes look alike in it; the
+             # feed's whole message tells them apart.
+             and ("full_text" not in record
+                  or suggest.full_preview_of_feed(r) == record["full_text"])]
     if not found:
         return None
     return max(found, key=lambda r: max(filter(None, (
@@ -252,8 +257,9 @@ def decide(record: dict, result: dict | None, current: str | None,
            open_fids: set[str]) -> dict | None:
     """The fields that change on ``record``, or None if nothing does.
 
-    ``current`` is the string in the clone in Pontoon's rendering, None if
-    the clone no longer has it; ``open_fids`` are the open findings on the
+    ``current`` is the string in the clone, rendered as the record holds it
+    (in full, `tracker.text_of`), None if the clone no longer has it;
+    ``open_fids`` are the open findings on the
     same string, whatever raised them. Pure, so the tests can pin it.
     ``needs_reason`` asks the caller for an inferred reason; ``dismiss``
     says whether a dismissal is wanted.
@@ -276,11 +282,11 @@ def decide(record: dict, result: dict | None, current: str | None,
     if current is None:
         return dict(out, outcome="obsolete",
                     note="rejected; the string is no longer in the repository")
-    if current == record["text"]:
+    if current == tracker.text_of(record, "text"):
         return dict(out, outcome="adopted", note=(
             "rejected, but the repository now has this text, through another "
             "submission"))
-    if current != record["original"]:
+    if current != tracker.text_of(record, "original"):
         return dict(out, outcome="moved", note=(
             "rejected, and the translation has changed since the suggestion; "
             "the finding stays open for the next review"))
@@ -374,7 +380,11 @@ def _current_reader(project, locale: str, l10n_dir: str, source_dir: str):
             return None
         res, entries = cache[path]
         entry = entries.get(tuple(record["pontoon"]["key"]))
-        return None if entry is None else suggest.pontoon_preview(res.format, entry)
+        if entry is None:
+            return None
+        # In the form the record compares with: in full where it has that.
+        render = suggest.full_preview if "full_original" in record else suggest.pontoon_preview
+        return render(res.format, entry)
 
     return current
 
@@ -425,7 +435,7 @@ def reconcile(project, locale: str, *, l10n_dir: str, source_dir: str,
         change = decide(record, found, now,
                         open_by_string.get((record["file"], record["string_id"]), set()))
         if change is None and record.get("outcome") == "dismissed" \
-                and now is not None and now != record["original"]:
+                and now is not None and now != tracker.text_of(record, "original"):
             # Dismissed because the reviewer kept the old text, which has now
             # moved after all: the dismissal no longer describes the string.
             change = {"outcome": "moved", "dismiss": False, "needs_reason": False,

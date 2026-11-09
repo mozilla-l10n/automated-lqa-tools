@@ -513,6 +513,89 @@ def run(suite) -> None:
     check(set(autosuggest.CLOSING) | {"fix", "skip"} == set(enum),
           "every verdict the model may give is handled, and nothing else")
 
+    suite.section("A fix to an attribute is seen as a fix, and a string can be suggested again")
+    # fy-NL, 2026-11-05: `.label = Fragen…` → `Freegje…` was compared as
+    # `F` → `F` (the access key, all Pontoon's simple rendering shows), and
+    # dropped as "Pontoon already has this translation" -- 27 fixes for one
+    # locale. And `set-password-message`, suggested once for one finding,
+    # could never be suggested for its typo.
+    import tempfile as _tf
+
+    import pontoon_review as _pr
+    import suggest as _sg
+    import tracker as _tr
+    from moz.l10n.formats import Format as _Fmt
+    with _tf.TemporaryDirectory() as tmp:
+        ftl = os.path.join(tmp, "genai.ftl")
+        with open(ftl, "w", encoding="utf-8") as fh:
+            fh.write("ask =\n    .label = Fragen…\n    .accesskey = F\n"
+                     "fixed =\n    .label = Freegje…\n    .accesskey = F\n"
+                     "plain = Iepenje\n")
+        _, entries = _sg._entries(ftl)
+    ask, fixed, plain = entries[("ask",)], entries[("fixed",)], entries[("plain",)]
+    check(_sg.pontoon_preview(_Fmt.fluent, ask) == _sg.pontoon_preview(_Fmt.fluent, fixed) == "F",
+          "Pontoon's simple rendering of the two is the same access key")
+    check(_sg.full_preview(_Fmt.fluent, ask) == ".accesskey = F\n.label = Fragen…"
+          and _sg.full_preview(_Fmt.fluent, fixed) != _sg.full_preview(_Fmt.fluent, ask),
+          "the full rendering shows the label, and tells the fix from the original")
+    check(_sg.full_preview(_Fmt.fluent, plain) == _sg.pontoon_preview(_Fmt.fluent, plain),
+          "and for a message with no attributes it is just the preview")
+    change = {"old": "F", "new": "F"}
+    check(_sg.check_against_pontoon(change, "F") == "",
+          "a change Pontoon's rendering cannot show is sent, not taken as already there")
+    check("moved on" in _sg.check_against_pontoon(change, "G"),
+          "but Pontoon having moved in the part it does show still stops it")
+    seen = {"old": "Fragen", "new": "Freegje"}
+    check(_sg.check_against_pontoon(seen, "Freegje") == "Pontoon already has this translation"
+          and "moved on" in _sg.check_against_pontoon(seen, "Oars")
+          and _sg.check_against_pontoon(seen, "Fragen") == "",
+          "a change it can show is checked exactly as before")
+    row = {"format": "fluent", "preview": "F", "value": [],
+           "properties": {"label": ["Freegje…"], "accesskey": ["F"]}}
+    check(_sg.full_preview_of_feed(row) == _sg.full_preview(_Fmt.fluent, fixed)
+          and _sg.full_preview_of_feed({"format": "fluent", "properties": None}) is None,
+          "the feed's whole message renders the same as the clone's")
+
+    rec = lambda **kw: dict({"file": "a.ftl", "string_id": "s", "fids": ["f1"],  # noqa: E731
+                             "status": "rejected", "original": "Fragen", "text": "Freegje"}, **kw)
+    key = ("a.ftl", "s")
+    check("waiting" in _tr.blocked([rec(status="pending")], key, ["f2"]),
+          "a string waiting on a reviewer is not suggested again")
+    check("same finding" in _tr.blocked([rec()], key, ["f1"]),
+          "nor for a finding that was already asked about")
+    check(_tr.blocked([rec()], key, ["f2"]) == ""
+          and _tr.blocked([rec(status="approved")], key, ["f2"], now=("Freegje", "Freegje")) == "",
+          "but a different finding on it can be")
+    check("not reached" in _tr.blocked([rec(status="approved")], key, ["f2"],
+                                       now=("Fragen", "Fragen")),
+          "unless an approved fix has not reached the repository, which it would undo")
+    check("exact text" in _tr.blocked([rec()], key, ["f2"], new=("Freegje", "Freegje")),
+          "and never with a text that was rejected before, which would un-reject it")
+    check(_tr.blocked([rec()], ("a.ftl", "other"), ["f1"]) == "",
+          "another string is not affected")
+    full = _tr.entry(date="d", group="C", file="a.ftl", string_id="s", server="x", slug="p",
+                     resource="a.ftl", key=["s"], fids=["f1"], findings=[], source="",
+                     original="F", text="F", full_original=".accesskey = F\n.label = Fragen…",
+                     full_text=".accesskey = F\n.label = Freegje…")
+    bare = _tr.entry(date="d", group="C", file="a.ftl", string_id="s", server="x", slug="p",
+                     resource="a.ftl", key=["s"], fids=["f1"], findings=[], source="",
+                     original="Fragen", text="Freegje", full_original="Fragen",
+                     full_text="Freegje")
+    check("full_text" in full and "full_text" not in bare,
+          "a record keeps the full form only where it says more than the preview")
+    full["pontoon"] = {"project": "p", "resource": "a.ftl", "key": ["s"]}
+    other = dict(row, project="p", resource="a.ftl", entity="s", status="rejected",
+                 properties={"label": ["Iets oars"], "accesskey": ["F"]}, date="2026-11-01")
+    mine = dict(row, project="p", resource="a.ftl", entity="s", status="rejected",
+                date="2026-11-02", translation_pk=7, rejected_date="2026-11-03")
+    check(_pr.match(full, [other, mine]) is mine and _pr.match(full, [other]) is None,
+          "the review tells two attribute suggestions apart by the whole message")
+    got = _pr.decide(full, mine, full["full_original"], {"f1"})
+    check(got["outcome"] == "dismissed",
+          "and a rejection with the label unchanged is a rejection, not an adoption")
+    check(_pr.decide(full, mine, full["full_text"], {"f1"})["outcome"] == "adopted",
+          "while the label reaching the repository anyway is an adoption")
+
     suite.section("The fixer's dismissal lapses with the text it judged, and is not a person's")
     # A dismissal is keyed by string id. Written by the fixer about one text,
     # it went on hiding every finding raised on that string afterwards, on

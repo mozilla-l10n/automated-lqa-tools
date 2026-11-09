@@ -35,10 +35,13 @@ This writes `worklist.json`: one entry per open finding with the full
 `suggest`, the `localized` file to edit, and `moved` (the string changed after
 the finding was raised, so re-read it before believing the finding). It
 refuses to overwrite an existing work directory, since that may hold edits.
-Pass `--reset` only if the user agrees to discard them. Strings already
-listed in `<project>/pontoon_suggestions/<locale>.json` are left out, whatever
-their status, and `include` refuses them: they have been suggested once,
-by this skill or by the `pontoon-suggestions` workflow.
+Pass `--reset` only if the user agrees to discard them. Findings a
+suggestion in `<project>/pontoon_suggestions/<locale>.json` was already made
+for are left out, whatever its status, and so is any string whose suggestion
+is still pending; `include` refuses a pending string too. A string suggested
+before for a *different* finding can be suggested again, unless an approved
+fix on it has not reached the clone yet or the new text is one already
+rejected; `upload` reports those as `SKIP`.
 
 Before editing, read `<project>/locales/<locale>/conventions.md` and
 `<project>/state/<locale>/conventions.json`. What the tree measurably does is

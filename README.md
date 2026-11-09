@@ -121,7 +121,9 @@ Each stored suggestion is recorded in `<project>/pontoon_suggestions/<locale>.js
 with `status` (`pending`, `approved`, `rejected`), `status_date` and an
 optional `comment`. The skill's `suggest.py upload --submit` writes the same
 file, and `suggest.py backfill` rebuilt it from the submissions made before
-it existed. A string listed there, in any status, is never suggested again. Records and dismissals reach `main` through one pull
+it existed. A finding is suggested for once, whatever came of it, and a string
+with a suggestion still pending is left alone; a string can be suggested
+again for a different finding. Records and dismissals reach `main` through one pull
 request per project (`l10n-suggestions/<project>`), so nothing is hidden
 until a person has read why. The clone is never edited: findings close when
 an accepted suggestion reaches the repository and the next QA run sees the

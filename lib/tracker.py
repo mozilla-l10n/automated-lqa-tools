@@ -4,9 +4,19 @@ One file per locale, ``<project>/pontoon_suggestions/<locale>.json``, written
 by every path that submits: ``suggest.py upload --submit`` (a person's
 edits), ``autosuggest.py run --submit`` (the model's) and
 ``suggest.py backfill`` (submissions made before this file existed). A
-string listed here, in any status, is never suggested again: ``pending`` is
-waiting on a reviewer, ``approved`` is done, and ``rejected`` was a person's
-answer.
+string listed here may be suggested again only for a different reason --
+see `blocked`. A finding is asked about once: pending is waiting on a
+reviewer, approved is done, and rejected was a person's answer. But a string
+can carry more than one defect, and it used to be that the first suggestion
+on it shut the rest out for good: fy-NL's ``set-password-message`` kept its
+typo after an approved fix for something else.
+
+``text`` and ``original`` are in Pontoon's simple rendering, which is what
+its feed calls ``preview`` and its entities endpoint returns. For a Fluent
+message with attributes that rendering is one part of it -- the value, or
+the first attribute by name -- so a record also keeps ``full_text`` and
+``full_original``, every part, whenever they differ. Read both through
+`text_of`.
 
 Only suggestions Pontoon actually stored are recorded, each with its review
 ``status`` (``pending`` until Pontoon answers), the ``status_date`` it last
@@ -55,14 +65,47 @@ def identity(entry: dict) -> tuple:
     return (entry["file"], entry["string_id"], entry["text"])
 
 
-def strings(*trackers: dict) -> set[tuple[str, str]]:
-    """``(file, string_id)`` of every string with a suggestion recorded."""
-    return {(s["file"], s["string_id"]) for t in trackers for s in t["suggestions"]}
+def text_of(record: dict, field: str) -> str:
+    """``original`` or ``text`` in full: every part of the message."""
+    return record.get(f"full_{field}", record[field])
+
+
+def blocked(records: list[dict], key: tuple, fids, *, now: tuple | None = None,
+            new: tuple | None = None) -> str:
+    """Why string ``key`` cannot be suggested again for ``fids``; "" if it can.
+
+    ``now`` and ``new`` are ``(simple, full)`` renderings of the clone's
+    current text and of the proposed one, when known; without them only the
+    checks that need no text are made, so a worklist can be filtered before
+    any file is read.
+    """
+    fids = set(fids)
+    for r in records:
+        if (r["file"], r["string_id"]) != tuple(key):
+            continue
+        status = r.get("status", "pending")
+        if status == "pending":
+            return "a suggestion on it is still waiting for a reviewer"
+        if fids & set(r.get("fids") or []):
+            return f"already suggested for the same finding ({status})"
+        full = "full_original" in r
+        if now is not None and status == "approved" \
+                and (now[1] if full else now[0]) == text_of(r, "original"):
+            # A fix built on the old text would undo the approved one.
+            return "an approved suggestion on it has not reached the repository yet"
+        if new is not None and (new[1] if full else new[0]) == text_of(r, "text"):
+            # Re-sending it would un-reject it in Pontoon.
+            return f"this exact text was suggested before ({status})"
+    return ""
 
 
 def entry(*, date: str, group: str, file: str, string_id: str, server: str,
           slug: str, resource: str, key: list, fids: list[str],
-          findings: list[str], source: str, original: str, text: str) -> dict:
+          findings: list[str], source: str, original: str, text: str,
+          full_original: str = "", full_text: str = "") -> dict:
+    full = ({"full_original": full_original, "full_text": full_text}
+            if (full_original or original, full_text or text) != (original, text)
+            else {})
     return {
         "date": date,
         "group": group,
@@ -75,6 +118,7 @@ def entry(*, date: str, group: str, file: str, string_id: str, server: str,
         "source": source,
         "original": original,
         "text": text,
+        **full,
         "status": "pending",
         "status_date": date,
         "comment": "",

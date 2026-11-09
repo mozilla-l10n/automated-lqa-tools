@@ -280,14 +280,16 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
     all_findings = findings_mod.load(project, locale)
     open_findings = [f for f in all_findings if f.status in findings_mod.OPEN_STATUSES]
     tpath, record_data = tracker.open_for(project, locale)
-    # A string already in the tracker is never suggested again, whatever its
-    # status: pending is waiting on a reviewer, approved is done, and
-    # rejected was a person's answer.
-    done = tracker.strings(record_data, *known)
+    # A finding is asked about once, and a string waiting on a reviewer is
+    # left alone; a string suggested before for another finding is not
+    # (`tracker.blocked`). `upload` checks again, with the texts.
+    records = [s for t in (record_data, *known) for s in t["suggestions"]]
     dismissed = dismiss.load(project, locale)
 
     picked = [f for f in open_findings if f.category in groups]
-    candidates = [f for f in picked if f.key not in done and not _dismissed(dismissed, f)]
+    candidates = [f for f in picked
+                  if not tracker.blocked(records, f.key, [f.fid])
+                  and not _dismissed(dismissed, f)]
     if len(candidates) < len(picked):
         print(f"  {len(picked) - len(candidates)} already suggested or dismissed")
     if not candidates:
@@ -434,6 +436,7 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
                 slug=sent["project"], resource=sent["resource"], key=c["key"],
                 fids=[f.fid for f in used], findings=[f.summary for f in used],
                 source=item["source"], original=c["old"], text=c["new"],
+                full_original=c.get("full_old", ""), full_text=c.get("full_new", ""),
             ))
         tracker.save(tpath, record_data)
 

@@ -56,6 +56,7 @@ from collections import Counter
 from dataclasses import replace
 from fnmatch import fnmatch
 from json import dumps
+from types import SimpleNamespace
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -69,6 +70,7 @@ import tracker  # noqa: E402
 from moz.l10n.formats import Format  # noqa: E402
 from moz.l10n.formats.fluent import fluent_serialize_message  # noqa: E402
 from moz.l10n.formats.mf2 import mf2_parse_message, mf2_serialize_message  # noqa: E402
+from moz.l10n.message import message_from_json  # noqa: E402
 from moz.l10n.model import (  # noqa: E402
     CatchallKey,
     Entry,
@@ -166,6 +168,62 @@ def pontoon_preview(fmt, entry) -> str:
             )
         return fluent_serialize_message(PatternMessage(_simple_pattern(msg)))
     return "".join(_preview_part(p) for p in _simple_pattern(entry.value))
+
+
+def full_preview(fmt, entry) -> str:
+    """Every part of the message: the value, then each attribute as `.name = …`.
+
+    `pontoon_preview` is what Pontoon shows and returns, and for a Fluent
+    message with attributes that is one part only -- the value, or failing
+    that the first attribute by name. A fix to any other part looks like no
+    change at all in it: `genai-menu-ask-smart-window` read `F` → `F` (its
+    access key) for a fix to `.label`, and the upload dropped it as already
+    in Pontoon. This is the form to show a change in and to tell one from
+    none; other formats have no attributes, and it equals the preview.
+    """
+    if fmt != Format.fluent or not entry.properties:
+        return pontoon_preview(fmt, entry)
+
+    def simple(msg) -> str:
+        return fluent_serialize_message(PatternMessage(_simple_pattern(msg)))
+
+    parts = [] if entry.value.is_empty() else [simple(entry.value)]
+    parts += [f".{name} = {simple(entry.properties[name])}"
+              for name in sorted(entry.properties)]
+    return "\n".join(parts)
+
+
+def full_preview_of_feed(row: dict) -> str | None:
+    """`full_preview` of a translation in the user translations feed.
+
+    The feed carries the whole message as moz-l10n JSON (``value`` and
+    ``properties``); ``None`` for a row without attributes, where its
+    ``preview`` already is the whole thing.
+    """
+    if row.get("format") != "fluent" or not row.get("properties"):
+        return None
+    entry = SimpleNamespace(
+        value=message_from_json(row.get("value") or []),
+        properties={n: message_from_json(p) for n, p in row["properties"].items()},
+    )
+    return full_preview(Format.fluent, entry)
+
+
+def check_against_pontoon(change: dict, current: str) -> str:
+    """Why ``change`` must not be sent, given Pontoon's ``current`` text; "" if it may.
+
+    ``current`` is Pontoon's simple rendering, all its entities endpoint
+    returns, so it can only speak for the part of the message that rendering
+    shows. Where the edit is elsewhere -- an attribute behind the one Pontoon
+    shows -- whether Pontoon already has it cannot be told from here, and the
+    suggestion is sent: an identical upload comes back ``unchanged``.
+    """
+    visible = change["new"] != change["old"]
+    if visible and current == change["new"]:
+        return "Pontoon already has this translation"
+    if current != change["old"]:
+        return f"Pontoon has moved on: {current}"
+    return ""
 
 
 def preview_of_api(string: str) -> str | None:
@@ -276,6 +334,8 @@ def changes(project, worklist: dict, l10n_dir: str) -> tuple[list[dict], list[st
                 "format": res.format.name,
                 "old": pontoon_preview(res.format, before),
                 "new": pontoon_preview(res.format, entry),
+                "full_old": full_preview(res.format, before),
+                "full_new": full_preview(res.format, entry),
                 "fids": [w["fid"] for w in worklist["findings"] if (w["file"], w["string_id"]) == fkey],
             }
             if work is None and fkey not in extras:
@@ -319,11 +379,13 @@ def cmd_prepare(args) -> int:
         f for f in findings_mod.load(project, args.locale)
         if f.category == category and f.status in findings_mod.OPEN_STATUSES
     ]
-    # Already suggested, by any path and in any status: not again.
+    # Already asked about, or waiting on a reviewer: not again. A string
+    # suggested once for another finding is fine (`tracker.blocked`).
     _, recorded = tracker.open_for(project, args.locale)
-    done = tracker.strings(recorded)
-    already = sorted({f.string_id for f in picked if f.key in done})
-    picked = [f for f in picked if f.key not in done]
+    held = [f for f in picked
+            if tracker.blocked(recorded["suggestions"], f.key, [f.fid])]
+    already = sorted({f.string_id for f in held})
+    picked = [f for f in picked if f not in held]
 
     work, files, missing = [], {}, []
     localized_of = _localized_resolver(project, trees, args.l10n_dir)
@@ -413,9 +475,10 @@ def cmd_include(args) -> int:
     if any((x["file"], x["string_id"]) == key for x in worklist["extras"]):
         print(f"{args.string_id} is already included")
         return 0
-    if key in tracker.strings(tracker.open_for(project, args.locale)[1]):
-        sys.exit(f"{args.string_id} already has a suggestion recorded in "
-                 f"{tracker.path(project, args.locale)}")
+    why = tracker.blocked(tracker.open_for(project, args.locale)[1]["suggestions"], key, [])
+    if why:
+        sys.exit(f"{args.string_id}: {why} "
+                 f"(recorded in {tracker.path(project, args.locale)})")
 
     localized = _localized_resolver(project, trees, l10n_dir)(key[0])
     if localized not in worklist["files"]:
@@ -442,8 +505,12 @@ def cmd_include(args) -> int:
 def _print_changes(found: list[dict], errors: list[str]) -> None:
     for c in found:
         print(f"{c['string_id']}  [{', '.join(c['fids']) or 'included, no finding'}]")
-        print(f"  - {c['old']}")
-        print(f"  + {c['new']}")
+        for sign, text in (("-", c.get("full_old", c["old"])),
+                           ("+", c.get("full_new", c["new"]))):
+            first, *rest = text.split("\n")
+            print(f"  {sign} {first}")
+            for line in rest:
+                print(f"    {line}")
     for e in errors:
         print(f"ERROR {e}", file=sys.stderr)
 
@@ -544,18 +611,23 @@ def upload(project, locale: str, wdir: str, found: list[dict], *, server: str,
     answered for it, so a caller can persist what was published even if a
     later call dies.
 
-    A string already in the locale's tracker -- or in one of the ``known``
-    trackers -- is skipped, read from disk here rather than trusted from
-    whenever the worklist was made: re-sending a suggestion a reviewer has
-    since rejected would un-reject it in Pontoon.
+    The locale's tracker -- and the ``known`` ones -- are read from disk
+    here rather than trusted from whenever the worklist was made, and a
+    string is skipped where `tracker.blocked` says so: re-sending a text a
+    reviewer has since rejected would un-reject it in Pontoon.
     """
     # Group by Pontoon resource, dropping strings Pontoon has moved past.
     batches: dict[tuple[str, str, str], list[dict]] = {}
     skipped = []
-    recorded = tracker.strings(tracker.open_for(project, locale)[1], *known)
+    records = [s for t in (tracker.open_for(project, locale)[1], *known)
+               for s in t["suggestions"]]
     for c in found:
-        if (c["file"], c["string_id"]) in recorded:
-            skipped.append((c, "already suggested; listed in "
+        why = tracker.blocked(
+            records, (c["file"], c["string_id"]), c["fids"],
+            now=(c["old"], c.get("full_old", c["old"])),
+            new=(c["new"], c.get("full_new", c["new"])))
+        if why:
+            skipped.append((c, f"{why}; listed in "
                                f"{os.path.relpath(tracker.path(project, locale))}"))
             continue
         slug, resource = _pontoon_target(project, c["file"])
@@ -566,11 +638,9 @@ def upload(project, locale: str, wdir: str, found: list[dict], *, server: str,
             if current is None:
                 skipped.append((c, why))
                 continue
-            if current == c["new"]:
-                skipped.append((c, "Pontoon already has this translation"))
-                continue
-            if current != c["old"]:
-                skipped.append((c, f"Pontoon has moved on: {current}"))
+            why = check_against_pontoon(c, current)
+            if why:
+                skipped.append((c, why))
                 continue
         batches.setdefault((slug, resource, c["localized"]), []).append(c)
 
@@ -659,6 +729,7 @@ def _tracker_entry(worklist: dict, c: dict, record: dict, *, server: str,
         + [f"included without a finding: {x['reason']}" for x in extras],
         source=(works or extras)[0]["source"] if works or extras else "",
         original=c["old"], text=c["new"],
+        full_original=c.get("full_old", ""), full_text=c.get("full_new", ""),
     )
 
 
