@@ -19,3 +19,4 @@ NativeErrorPage.NoInternetConnection.Description.v131 @ Shared/Supporting Files/
 Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148 @ Shared/Supporting Files/en-US.lproj/Onboarding.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
 QuickAnswers.Errors.OpenSettings.v158 @ Shared/Supporting Files/en-US.lproj/QuickAnswers.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
 fi3W24-scEmjs @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+VPN.Settings.DataUsage.AccessibilityLabel.v160 @ Shared/Supporting Files/en-US.lproj/Settings.strings — auto-suggest (2026-11-09, string 29af2740): unreliable finding: zh-TW almost always writes gigabytes as GB, and VoiceOver reads it out fine; 十億位元組 is rarely used and would read oddly, so GB here is acceptable and not clearly a defect.

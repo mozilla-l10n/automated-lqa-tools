@@ -778,6 +778,87 @@
    "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-ios/firefox-ios.xliff/?string=196132",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "ErrorPages.CertWarning.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "ErrorPages.CertWarning.Title"
+    ]
+   },
+   "fids": [
+    "1494b67e20ad"
+   ],
+   "findings": [
+    "Title says \"Your connection is not private\" instead of \"This Connection is Untrusted\"."
+   ],
+   "source": "This Connection is Untrusted",
+   "original": "Vaša povezava ni zasebna",
+   "text": "Ta povezava ni zaupanja vredna",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "ScanQRCode.PermissionError.Message.v100",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "ScanQRCode.PermissionError.Message.v100"
+    ]
+   },
+   "fids": [
+    "a689990ceb2a"
+   ],
+   "findings": [
+    "The instruction to go to the device settings is reduced to \"Izberite\" (Select), dropping \"device\"."
+   ],
+   "source": "Go to device ‘Settings’ > ‘Firefox’. Allow Firefox to access camera.",
+   "original": "Izberite \"Nastavitve\" > \"Firefox\". Dajte Firefoxu dovoljenje za dostop do kamere.",
+   "text": "V napravi izberite \"Nastavitve\" > \"Firefox\". Dajte Firefoxu dovoljenje za dostop do kamere.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "SendTo.NoDevicesFound.Message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "SendTo.NoDevicesFound.Message"
+    ]
+   },
+   "fids": [
+    "eb9a54ca9ff2"
+   ],
+   "findings": [
+    "\"Firefox Računom\" uses English-style capitalization and word order for \"Firefox Account\"."
+   ],
+   "source": "You don’t have any other devices connected to this Firefox Account available to sync.",
+   "original": "S tem Firefox Računom nimate povezanih drugih naprav na voljo za sinhronizacijo.",
+   "text": "S tem računom Firefox nimate povezanih drugih naprav na voljo za sinhronizacijo.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

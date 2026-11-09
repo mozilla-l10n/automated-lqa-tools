@@ -590,6 +590,33 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-ios/firefox-ios.xliff/?string=143754",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+   "string_id": "NativeErrorPage.BadCertDomain.Description.v149",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings",
+     "NativeErrorPage.BadCertDomain.Description.v149"
+    ]
+   },
+   "fids": [
+    "b02e68ff8811"
+   ],
+   "findings": [
+    "\"could also be set up incorrectly\" (possibility) is rendered with the indicative \"peuvent également être mal configurés\", asserting it more strongly than the source."
+   ],
+   "source": "Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.",
+   "original": "Quelqu’un se faisant passer pour le site pourrait tenter de dérober vos informations personnelles. Vos paramètres de connexion peuvent également être mal configurés.",
+   "text": "Quelqu’un se faisant passer pour le site pourrait tenter de dérober vos informations personnelles. Vos paramètres de connexion pourraient également être mal configurés.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

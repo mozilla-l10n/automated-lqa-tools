@@ -1401,6 +1401,357 @@
    "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-ios/firefox-ios.xliff/?string=220670",
    "outcome": "dismissed",
    "note": "rejected with the translation unchanged; dismissed"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/EditAddress.strings",
+   "string_id": "Addresses.EditAddress.AutofillAddressState.v129",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EditAddress.strings",
+     "Addresses.EditAddress.AutofillAddressState.v129"
+    ]
+   },
+   "fids": [
+    "4cd8c350005e"
+   ],
+   "findings": [
+    "\"State\" as an administrative subdivision of an address is rendered as \"Staat\" (sovereign country) instead of \"Bundesstaat\"."
+   ],
+   "source": "State",
+   "original": "Staat",
+   "text": "Bundesstaat",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "E",
+   "file": "Shared/Supporting Files/en-US.lproj/EngagementNotification.strings",
+   "string_id": "Engagement.Notification.Treatment.B.Body.v114",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EngagementNotification.strings",
+     "Engagement.Notification.Treatment.B.Body.v114"
+    ]
+   },
+   "fids": [
+    "0b30678eef74"
+   ],
+   "findings": [
+    "Sentence-final period from the source is missing, and the comma required before the infinitive clause is absent."
+   ],
+   "source": "Browse with no saved cookies or history in %@.",
+   "original": "Surfen Sie mit %@ ohne Cookies oder eine Chronik zu speichern",
+   "text": "Surfen Sie mit %@, ohne Cookies oder eine Chronik zu speichern.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+   "string_id": "Menu.EnhancedTrackingProtection.Details.TrackersStandardModeFooterText.v150",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+     "Menu.EnhancedTrackingProtection.Details.TrackersStandardModeFooterText.v150"
+    ]
+   },
+   "fids": [
+    "671968f166a4"
+   ],
+   "findings": [
+    "\"after a page starts loading\" is rendered as \"nachdem eine Seite geladen wurde\" (after a page has loaded)."
+   ],
+   "source": "Standard blocks common trackers after a page starts loading, so you may see a higher tracker count. %@",
+   "original": "Standard blockiert gängige Skripte zur Aktivitätenverfolgung, nachdem eine Seite geladen wurde, sodass die Anzahl der Tracker möglicherweise höher ist. %@",
+   "text": "Standard blockiert gängige Skripte zur Aktivitätenverfolgung, nachdem eine Seite mit dem Laden begonnen hat, sodass die Anzahl der Tracker möglicherweise höher ist. %@",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+   "string_id": "Menu.EnhancedTrackingProtection.On.Header.v128",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+     "Menu.EnhancedTrackingProtection.On.Header.v128"
+    ]
+   },
+   "fids": [
+    "44683332e71f"
+   ],
+   "findings": [
+    "Wrong pronoun order/case in \"sagen wir Ihnen es\"."
+   ],
+   "source": "You’re protected. If we spot something, we’ll let you know.",
+   "original": "Sie sind geschützt. Wenn wir etwas entdecken, sagen wir Ihnen es.",
+   "text": "Sie sind geschützt. Wenn wir etwas entdecken, sagen wir es Ihnen.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+   "string_id": "Menu.EnhancedTrackingProtection.SwitchOn.Text.v128",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/EnhancedTrackingProtection.strings",
+     "Menu.EnhancedTrackingProtection.SwitchOn.Text.v128"
+    ]
+   },
+   "fids": [
+    "56914ff17b22"
+   ],
+   "findings": [
+    "\"looks broken\" mistranslated as \"beschädigt aussieht\" (looks damaged)."
+   ],
+   "source": "If something looks broken on this site, try turning it off.",
+   "original": "Wenn etwas auf dieser Website beschädigt aussieht, deaktivieren Sie ihn.",
+   "text": "Wenn auf dieser Website etwas nicht richtig funktioniert, deaktivieren Sie ihn.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+   "string_id": "MainMenu.Account.SigningOut.Title.v154",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+     "MainMenu.Account.SigningOut.Title.v154"
+    ]
+   },
+   "fids": [
+    "c1adaae90e40"
+   ],
+   "findings": [
+    "\"Signing out…\" (progress in course) is rendered as the imperative/infinitive \"Abmelden…\", which reads as the action label \"Sign out\" rather than an ongoing process."
+   ],
+   "source": "Signing out…",
+   "original": "Abmelden…",
+   "text": "Wird abgemeldet…",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+   "string_id": "MainMenu.ToolsSection.AccessibilityLabels.Save.v133",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/MainMenu.strings",
+     "MainMenu.ToolsSection.AccessibilityLabels.Save.v133"
+    ]
+   },
+   "fids": [
+    "acb5ed7af0f2"
+   ],
+   "findings": [
+    "\"Save submenu\" is rendered as the imperative \"Untermenü speichern\" (save the submenu) instead of the noun phrase \"submenu Save\"."
+   ],
+   "source": "Save submenu",
+   "original": "Untermenü speichern",
+   "text": "Untermenü „Speichern“",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Microsurvey.strings",
+   "string_id": "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Microsurvey.strings",
+     "Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129"
+    ]
+   },
+   "fids": [
+    "1376e75092d5"
+   ],
+   "findings": [
+    "\"Unselected\" (state: not selected) is rendered as \"Auswahl aufgehoben\" (selection removed/deselected), describing an action rather than the state."
+   ],
+   "source": "Unselected",
+   "original": "Auswahl aufgehoben",
+   "text": "Nicht ausgewählt",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+   "string_id": "Onboarding.Notification.Title.v120",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "Onboarding.Notification.Title.v120"
+    ]
+   },
+   "fids": [
+    "f96bb02b48b7"
+   ],
+   "findings": [
+    "\"Notifications help you stay safer with %@\" is translated as helping to make Firefox safer instead of helping the user stay safer."
+   ],
+   "source": "Notifications help you stay safer with %@",
+   "original": "Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen",
+   "text": "Benachrichtigungen helfen Ihnen, mit %@ noch sicherer unterwegs zu sein",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "BreachAlerts.Link",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "BreachAlerts.Link"
+    ]
+   },
+   "fids": [
+    "1f67205721c6"
+   ],
+   "findings": [
+    "Informal imperative \"Gehe zu\" violates the locale's formal register."
+   ],
+   "source": "Go to",
+   "original": "Gehe zu",
+   "text": "Gehen Sie zu",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "DownloadsPanel.Delete.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "DownloadsPanel.Delete.Title"
+    ]
+   },
+   "fids": [
+    "c86254766464"
+   ],
+   "findings": [
+    "\"Delete\" rendered as \"Entfernen\" (remove) instead of \"Löschen\"."
+   ],
+   "source": "Delete",
+   "original": "Entfernen",
+   "text": "Löschen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "FirefoxHome.CustomizeHomeButton.Title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "FirefoxHome.CustomizeHomeButton.Title"
+    ]
+   },
+   "fids": [
+    "e2808c7e8bad"
+   ],
+   "findings": [
+    "\"Homepage\" translated as \"Startbildschirm\" (home screen) instead of \"Startseite\"."
+   ],
+   "source": "Customize Homepage",
+   "original": "Startbildschirm anpassen",
+   "text": "Startseite anpassen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "E",
+   "file": "Shared/en-US.lproj/Localizable.strings",
+   "string_id": "Settings.Studies.Toggle.Link",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-ios",
+    "resource": "firefox-ios.xliff",
+    "key": [
+     "Shared/en-US.lproj/Localizable.strings",
+     "Settings.Studies.Toggle.Link"
+    ]
+   },
+   "fids": [
+    "cf3e0dc1d5c5"
+   ],
+   "findings": [
+    "Trailing period from the source \"Learn More.\" is missing."
+   ],
+   "source": "Learn More.",
+   "original": "Weitere Informationen",
+   "text": "Weitere Informationen.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }
