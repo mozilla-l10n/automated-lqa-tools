@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
 import findings as findings_mod  # noqa: E402
+import proposals as proposals_mod  # noqa: E402
 import report  # noqa: E402
 import tracker  # noqa: E402
 
@@ -587,6 +588,28 @@ def pontoon_section(items: list[tuple[str, dict]], heading: str = "##") -> str:
     return "\n".join(out)
 
 
+def proposals_section(project, since: str = "") -> str:
+    """Convention proposals, each locale's under its own heading.
+
+    With ``since``, only those resting on a dismissal no proposal at that ref
+    rested on: one a team has already read, and left out of conventions.md,
+    is not news again on every run. The locale report keeps listing it.
+    """
+    out = []
+    for locale in project.locales:
+        now = proposals_mod.load(project, locale)
+        if since and now:
+            text = _git_show(since, proposals_mod.path(project, locale))
+            was = json.loads(text).get("proposals", []) if text else []
+            now = proposals_mod.new_since(was, now)
+        if now:
+            out.append(proposals_mod.render(now, project.name, locale,
+                                            title=f"### `{locale}`", cap=5))
+    if not out:
+        return ""
+    return "\n".join(["## Proposed conventions — not applied", ""] + out)
+
+
 def pr_body(project, since: str = "") -> str:
     """The body of the project's pull request.
 
@@ -616,6 +639,7 @@ def pr_body(project, since: str = "") -> str:
             "",
             _delta_section(delta(project, rows, since), since, project),
             pontoon_section(tracker.changes(project, since)),
+            proposals_section(project, since),
             "## Everything open on the branch",
             "",
             "<details><summary>The whole backlog, not only this run</summary>",
@@ -632,6 +656,7 @@ def pr_body(project, since: str = "") -> str:
             "---",
             "",
             _highlights(rows, project),
+            proposals_section(project),
         ]
     out += [
         _table(rows, project, prefix="reports/"),

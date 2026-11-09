@@ -43,6 +43,16 @@ Best of the three when it fits. Prose, injected into every review prompt, so
 no finding is created and no tokens are spent. "The ellipsis is three ASCII
 dots." "Access keys are deliberately English."
 
+When several tool-written dismissals give the same reason, the QA run
+proposes a rule for this file (`lib/proposals.py`). The locale report
+(section 2) and the pull request list it under *Proposed conventions — not
+applied*, with the dismissals behind it. Nothing writes it here for you: most
+of those reasons are a model's inference, and a wrong one made a convention
+would hide real defects across the locale. A proposal needs at least three
+strings, at least one of them a Pontoon rejection; `auto-suggest` lines
+agreeing among themselves are not enough. Copy it in, edited as you see fit,
+or leave it: the pull request repeats it only when new dismissals support it.
+
 ---
 
 All three are re-applied to the whole backlog on every run, so any of them

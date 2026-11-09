@@ -704,6 +704,112 @@ def run(suite) -> None:
                 if v is not None:
                     os.environ[k] = v
 
+    # --- convention proposals ------------------------------------------------
+    suite.section("Recurring dismissals are proposed as a convention, never applied")
+    # fy-NL, 2026-11: the reviewer kept asking for Û/Ú/Ô on capitalised
+    # initials. Every rejection retired one string, and nothing carried the
+    # rule to the next one.
+    import proposals as prop
+    text = "\n".join([
+        "# a comment",
+        "a — fine, I checked",
+        "b @ x.ftl — a person's line, with no tag",
+        "c @ x.ftl — pontoon-rejected (2026-11-05): rejected in Pontoon without "
+        "comment; reason unclear",
+        "d @ x.ftl — pontoon-rejected (2026-11-05): rejected in Pontoon without "
+        "comment; likely reason (inferred): capital initials take no accent",
+        "e @ x.ftl — pontoon-rejected (2026-11-05): rejected in Pontoon: Ut is right",
+        "f @ y.xml — auto-suggest (2026-11-06): capital U drops the circumflex",
+        "g @ y.xml — auto-suggest (2026-11-06): capital O drops the circumflex",
+    ])
+    items = prop.parse(text, "firefox")
+    check([e["string_id"] for e in items] == ["d", "e", "f", "g"],
+          "only tool-written lines with a reason are evidence; a person's and an unclear one are not")
+    check([e["kind"] for e in items[:2]] == ["rejected, reason inferred",
+                                             "rejected, reviewer's comment"]
+          and items[0]["reason"] == "capital initials take no accent",
+          "an inferred reason stays labelled as one, without the boilerplate")
+    model_only, human = items[2:], items[1:]
+    check(not prop.eligible(model_only + [dict(model_only[0], string_id="h")]),
+          "agreement among auto-suggest lines alone proposes nothing")
+    check(prop.eligible(human) and not prop.eligible(human[:2]),
+          f"{prop.MIN_STRINGS} distinct strings with a rejection among them are needed")
+    check(not prop.eligible([items[1], items[2], dict(items[2])]),
+          "the same string twice counts once")
+    got = prop.validate([{"rule": " capital  initials\ttake no accent ", "refs": [1, 2, 3, 99]},
+                         {"rule": "too thin", "refs": [2, 3]},
+                         {"rule": "", "refs": [0, 1, 2]}], items)
+    check(len(got) == 1 and got[0]["rule"] == "capital initials take no accent"
+          and [e["string_id"] for e in got[0]["support"]] == ["e", "f", "g"],
+          "a ref outside the evidence is dropped, and a proposal it leaves too thin goes with it")
+
+    class _Resp:
+        def __init__(self, payload):
+            b = _Block(payload)
+            b.name = "report_proposals"
+            self.content = [b]
+
+    class _Client:
+        def __init__(self, payload):
+            self.calls, self.payload = 0, payload
+            self.messages = self
+
+        def create(self, **kw):
+            self.calls += 1
+            return _Resp(self.payload)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        class _Proj:
+            name, llm, conv = "firefox", {"model": "m"}, "nothing yet"
+
+            def state_dir(self, locale):
+                return os.path.join(tmp, locale)
+
+            def conventions(self, locale):
+                return self.conv
+
+        proj = _Proj()
+        client = _Client({"proposals": [{"rule": "capital initials take no accent",
+                                         "refs": [0, 1, 2, 3]}]})
+        quiet = dict(write=True, log=lambda *_: None)
+        first = prop.refresh(proj, "fy-NL", client, items=items, **quiet)
+        again = prop.refresh(proj, "fy-NL", client, items=items, **quiet)
+        check(client.calls == 1 and first == again and len(first) == 1,
+              "an unchanged input is not asked twice")
+        proj.conv = "capital initials take no accent"
+        client.payload = {"proposals": []}
+        check(prop.refresh(proj, "fy-NL", client, items=items, **quiet) == []
+              and client.calls == 2 and prop.load(proj, "fy-NL") == [],
+              "editing conventions.md re-asks, and an empty answer replaces the old one")
+        prop.refresh(proj, "fy-NL", client, items=items, **quiet)
+        check(client.calls == 2, "and an empty answer is recorded, so it is not re-asked either")
+        prop.refresh(proj, "fy-NL", client, items=model_only, **quiet)
+        check(client.calls == 2, "evidence that cannot support a proposal makes no request")
+        check(not os.path.exists(prop.path(proj, "it"))
+              and prop.refresh(proj, "it", client, items=[], **quiet) == []
+              and not os.path.exists(prop.path(proj, "it")),
+              "and a locale with nothing to propose gets no file")
+
+    was = [{"rule": "r", "support": [items[1], items[2]]}]
+    reworded = [{"rule": "r, said differently", "support": [items[1], items[2]]}]
+    grown = [{"rule": "r", "support": [items[1], items[2], items[3]]}]
+    check(prop.new_since(was, reworded) == [] and prop.new_since(was, grown) == grown,
+          "the pull request repeats a proposal only when new evidence is behind it")
+    md = prop.render([{"rule": "Keep <b>bold</b>",
+                       "support": [dict(items[1], reason="<img src=x onerror=alert(1)>"),
+                                   dict(items[2], project="android")]}], "firefox", "fy-NL")
+    check("not applied" in md and "`firefox/locales/fy-NL/conventions.md`" in md
+          and "(android)" in md and "(firefox)" not in md,
+          "a proposal says it is not applied, where it would go, and which project each string is in")
+    short = prop.render([{"rule": "r", "support": items[2:] + items[:2]}],
+                        "firefox", "fy-NL", cap=2)
+    check(short.index("`d`") < short.index("`e`") and "`f`" not in short
+          and "2 more" in short and "4 dismissals, 2 of them rejected" in short,
+          "a capped list leads with the rejections and says how many it left out")
+    page = _render(md)
+    check("<img" not in page and "&lt;img" in page and "<li>" in page,
+          "quoted reasons are shown as text on the site, and the evidence nests under the rule")
+
 
 def _site():
     import importlib.util

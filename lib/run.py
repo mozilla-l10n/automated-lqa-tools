@@ -32,6 +32,7 @@ import local_secrets  # noqa: E402
 import dismiss  # noqa: E402
 import layout  # noqa: E402
 import conventions  # noqa: E402
+import proposals  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import report  # noqa: E402
 import repos  # noqa: E402
@@ -423,6 +424,7 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
         },
         counts_conv, rules,
         report.Ctx(paths=trees.locale_paths, source=source),
+        proposals=proposals.load(project, locale),
     )
 
     if args.dry_run:
