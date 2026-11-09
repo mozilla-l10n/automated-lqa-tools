@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 49 of 16,801 |
+| **Strings reviewed this run** | 0 of 16,801 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `urlbar-view-context-menu-search-in-window` — `browser/browser/browser.ftl` — The menu label has a double space between "em" and "nova".
-    - Current: `Pesquisar em  nova janela`
-    - Source: `(value): Search in New Window accesskey: N`
-    - Suggest: `Pesquisar em nova janela`
-    - Users see a doubled space between two words in the label. The sibling strings ("Pesquisar em nova aba", "Pesquisar em nova janela privativa") use a single space.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

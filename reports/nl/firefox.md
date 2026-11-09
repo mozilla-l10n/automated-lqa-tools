@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 66 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — “View” is a noun per the developer comment but was translated as the verb “Weergeven”.
-    - Current: `Weergeven`
-    - Source: `View`
-    - Suggest: `Weergave`
-    - The developer comment says “View” is a noun meaning the view the widget shows; “Weergeven” is the infinitive “to show”, so the noun “Weergave” is required.
-- `sync-engine-addresses2` — `browser/browser/preferences/preferences.ftl` — Superfluous article “de” before the brand name.
-    - Current: `die u in de { -brand-short-name } hebt opgeslagen`
-    - Source: `accesskey: e label: Addresses tooltiptext: Addresses you’ve saved in { -brand-short-name }`
-    - Suggest: `die u in { -brand-short-name } hebt opgeslagen`
-    - Dutch does not use an article before the product name; the sibling tooltips use the brand without one, so “in de Firefox” is ungrammatical.
-- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — There is a double space between 'en' and the brand name in the [other 1] variant.
-    - Current: `1 download stoppen en  { -brand-short-name } afsluiten?`
-    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
-    - Suggest: `1 download stoppen en { -brand-short-name } afsluiten?`
-    - Users will see two spaces in the dialog title. The other variants use a single space.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

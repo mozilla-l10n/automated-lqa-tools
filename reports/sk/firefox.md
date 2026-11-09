@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 16,755 |
+| **Strings reviewed this run** | 96 of 16,822 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `newTabAlwaysContainer.tooltip` — `browser/chrome/browser/browser.properties` — "Select container to open a new tab" translated as "Opens a new container tab"
+    - Current: `Otvorí novú kontajnerovú kartu`
+    - Source: `Select container to open a new tab`
+    - Suggest: `Vyberte kontajner, v ktorom sa otvorí nová karta`
+    - The en-US instructs the user to pick a container; the sk states the button opens a container tab, dropping the selection step. It also duplicates the second line of newTabContainer.tooltip, losing the distinction between the two tooltips.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 120 |
+| Strings | 16,822 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -54,7 +58,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 89 |
+| Plural variants (dead or missing forms) | 91 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**120 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
+- `browser/browser/newtab/onboarding.ftl` — 15
 - `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `browser/browser/newtab/newtab.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
 - `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/browser.ftl` — 4
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
 - `browser/browser/tabbrowser.ftl` — 3
 - `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/genai.ftl` — 2
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 2
+- `dom/chrome/security/security.properties` — 2
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `dom/dom/manifest.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,30 +90,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 524, `curly-single` 79, `straight-double` 78, `german-double` 10 | **curly-double** |
+| quotes | `curly-double` 525, `curly-single` 79, `straight-double` 78, `german-double` 10 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
-| ellipsis | `char` 402 | **char** |
+| ellipsis | `char` 403 | **char** |
 | dash | `em` 29, `en` 67 | _mixed_ |
-| nbsp | `total` 116, `before-punctuation` 3, `space-before-punctuation` 7 | **total** |
+| nbsp | `total` 118, `before-punctuation` 4, `space-before-punctuation` 7 | **total** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 89 strings** — 89 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label` …and 77 more
+- **plurals — 91 strings** — 91 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label` …and 79 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 
 ---
 
-## 3. Open findings (229)
+## 3. Open findings (228)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 71 |
+| 2 | Wrong content (says something other than the English) | 70 |
 | 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -270,11 +274,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Only share screens with sites you trust. Sharing can allow deceptive sites to browse as you and steal your private data.`
     - Suggest: `Zdieľanie môže umožniť klamlivým stránkam prehliadať web vo vašom mene a ukradnúť vaše osobné údaje.`
     - "browse as you" means impersonating the user in their session, not observing their browsing; the sk understates the described risk. webrtc-share-browser-warning repeats the same clause.
-- `newTabAlwaysContainer.tooltip` — `browser/chrome/browser/browser.properties` — "Select container to open a new tab" translated as "Opens a new container tab"
-    - Current: `Otvorí novú kontajnerovú kartu`
-    - Source: `Select container to open a new tab`
-    - Suggest: `Vyberte kontajner, v ktorom sa otvorí nová karta`
-    - The en-US instructs the user to pick a container; the sk states the button opens a container tab, dropping the selection step. It also duplicates the second line of newTabContainer.tooltip, losing the distinction between the two tooltips.
 - `safebrowsing.reportedAttackSite` — `browser/chrome/browser/browser.properties` — "Reported Attack Site!" and "Reported Harmful Site!" both rendered identically
     - Current: `Nahlásená škodlivá stránka!`
     - Source: `Reported Attack Site!`
@@ -415,7 +414,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `XPath parse failure: ‘!’ unexpected, negation is not():`
     - Suggest: `neočakávaný '!', negácia sa zapisuje ako not():`
     - The en-US names the XPath function not(); the sk reads as "negation is not ()", which states nothing and loses the hint about which function to use.
-- _…and 39 more; see `state/` for the full list._
+- `xslt-call-to-key-not-allowed` — `dom/dom/xslt.ftl` — The XSLT key() function is rendered as "the key (important) function".
+    - Current: `Volanie kľúčovej funkcie nie je povolené.`
+    - Source: `Call to the key function not allowed.`
+    - Suggest: `Volanie funkcie key() nie je povolené.`
+    - en-US "Call to the key function not allowed" refers to the XSLT key() function; "kľúčová funkcia" reads as "a crucial function", naming something that does not exist.
+- _…and 38 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -1099,7 +1103,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (2)
+### Fixed to date (3)
 
+- `newTabAlwaysContainer.tooltip` — `browser/chrome/browser/browser.properties` — fixed 2026-11-09
 - `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-26
 - `pdfjs-editor-add-signature-type-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-10-26

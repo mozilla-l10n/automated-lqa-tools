@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 41 of 17,104 |
+| **Strings reviewed this run** | 0 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,76 +18,13 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
-    - Current: `Correspondances`
-    - Source: `Matches`
-    - Suggest: `Matchs`
-    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
-- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
-    - Current: `Tableau`
-    - Source: `Table`
-    - Suggest: `Classement`
-    - The view options Matches/Table/Fixtures are football terms. Here “Table” is the league standings, and French says “classement” for that. “Tableau” reads as a generic table or chart.
-- `contextual-manager-passwords-delete-all-confirm-button` — `browser/browser/contextual-manager.ftl` — The singular variant says “Tout supprimer” (Delete all), but the source says just “Delete” when there is one password.
-    - Current: `[one] Tout supprimer`
-    - Source: `{$total ->} [1] Delete [other] Delete all`
-    - Suggest: `[one] Supprimer`
-    - The en-US deliberately uses “Delete” for one password and “Delete all” for several. The French uses “Delete all” in both cases.
+_No new findings._
 
-### ✅ Fixed since the last run (10)
+### ✅ Fixed since the last run (0)
 
-- `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — The acronym OLED is written in lowercase and in an unnatural word order.
-    - Current: `Oled noir`
-    - Source: `OLED Black`
-    - Suggest: `Noir OLED`
-    - OLED is an acronym and stays uppercase. The theme is a black theme for OLED screens, so French says "Noir OLED".
-- `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — The singular variant reads as "delete password number 1?" instead of "delete 1 password?".
-    - Current: `Supprimer le mot de passe { $total } ?`
-    - Source: `{$total ->} [one] Delete { $total } password? [other] Delete { $total } passwords?`
-    - Suggest: `Supprimer { $total } mot de passe ?`
-    - The source says "Delete { $total } password?". Placing the number after "le mot de passe" turns the count into an identifier.
-- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — The tooltip starts with a lowercase letter.
-    - Current: `moyens de paiement enregistrés`
-    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
-    - Suggest: `Moyens de paiement enregistrés`
-    - The source and the sibling tooltips start with a capital letter.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip uses "Open" as a verb, but the source means tabs that are open.
-    - Current: `Ouvrir des onglets depuis vos autres appareils`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Onglets ouverts sur vos autres appareils`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open).
-- `close-tabs-to-the-start-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs" is translated as "Tabulations" instead of "Onglets".
-    - Current: `Tabulations à gauche`
-    - Source: `accesskey: l label: Tabs to Left`
-    - Suggest: `Onglets à gauche`
-    - Browser tabs are "onglets" in fr, and the sibling labels use "Onglets". "Tabulations" means tab characters.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (a position in the tab strip) is translated as the verb "Démarrer".
-    - Current: `Démarrer`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Début`
-    - The developer comment says this moves the tab to the start of the tab strip. It is a position, and it pairs with "Fin".
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — The label reads as "Duplicate the tabs" (a command) instead of naming the duplicate tabs to close.
-    - Current: `Dupliquer les onglets`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Onglets en double`
-    - The comment says the item, under "Close Multiple", closes duplicates of the selected tab. "Dupliquer" tells the user it copies tabs.
-- `SpeechRecognitionLangDefaultedToUserLanguageWarning` — `dom/chrome/dom/dom.properties` — "user’s preferred language" is rendered as "la langue préférée utilisée", which drops the user and reads awkwardly.
-    - Current: `la langue préférée utilisée`
-    - Source: `SpeechRecognition.lang is unset and this document declares no language, so speech will be recognized in the user’s preferred language. Set SpeechRecognition.lang, or a lang attribute on the document’s root element.`
-    - Suggest: `la langue préférée de l’utilisateur`
-    - The en-US says speech is recognized in the user’s preferred language. The French "la langue préférée utilisée" ("the preferred language used") leaves out whose preference it is and is unidiomatic.
-- `about-processes-reload-site` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Reload" is « Recharger » here but « Actualiser » in the other reload strings, and « depuis » wrongly suggests the reload comes from the site.
-    - Current: `Recharger les onglets depuis { $site }`
-    - Source: `title: Reload tabs from { $site }`
-    - Suggest: `Actualiser les onglets de { $site }`
-    - about-processes-reload-tab and bulk-reload-tabs use « Actualiser ». "Tabs from site" means the tabs belonging to the site, as the unload string's « de » shows.
-- `about-processes-site-tab-count` — `toolkit/toolkit/about/aboutProcesses.ftl` — The singular variant puts the noun before the number and keeps it plural: « (onglets 1) ».
-    - Current: `(onglets { $count })`
-    - Source: `{$count ->} [one] ({ $count } tab) [other] ({ $count } tabs)`
-    - Suggest: `({ $count } onglet)`
-    - The en-US is "(1 tab)". The French needs the number first and the singular noun, matching the other variant.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

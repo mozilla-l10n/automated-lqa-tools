@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 17,106 |
+| **Strings reviewed this run** | 0 of 17,106 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 

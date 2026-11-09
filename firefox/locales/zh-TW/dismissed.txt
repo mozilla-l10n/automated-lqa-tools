@@ -15,3 +15,17 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+ai-window-learn-from-browsing-activity @ browser/browser/aiFeatures.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>learn = 了解 is more accurate for this string</p>
+customize-mode-toolbarspring @ browser/browser/customizeMode.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+menu-application-settings @ browser/browser/menubar.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+mr2022-onboarding-gratitude-subtitle @ browser/browser/newtab/onboarding.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+colorpicker-tooltip-alpha-slider-title @ devtools/client/inspector.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>no difference from approved string?</p>
+tab @ dom/chrome/accessibility/mac/accessible.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+PostMessageSharedMemoryObjectToCrossOriginWarning @ dom/chrome/dom/dom.properties — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>post is an action verb, not postmessage.</p>
+PENeverMatchingHostSelector @ dom/chrome/layout/css.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The suggestion left the English word 'featureless' untranslated in the Chinese text, which is a new error.
+finduri-AgeInMonths-isgreater @ toolkit/chrome/places/places.properties — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The suggestion didn't fix the finding: 個月以前 still means '%S months ago', just like the original, so the 'older than' meaning is still missing.
+support-remote-settings-status-broken @ toolkit/toolkit/about/aboutSupport.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+about-webauthn-auth-info-certifications @ toolkit/toolkit/about/aboutWebauthn.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+contentanalysis-error-message-dropped-text @ toolkit/toolkit/contentanalysis/contentanalysis.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+permission-dialog-remember-file @ toolkit/toolkit/global/handlerDialog.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+webauthn-related-origin-create-header @ toolkit/toolkit/webauthnDialog.ftl — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>should keep Passkey intact, as per glossary.</p>

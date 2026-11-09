@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 15,371 |
+| **Strings reviewed this run** | 0 of 15,371 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
-    - Current: `visite  https`
-    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.addEventListener`
-    - Suggest: `visite https`
-    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
-- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
-    - Current: `visite  https`
-    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
-    - Suggest: `visite https`
-    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

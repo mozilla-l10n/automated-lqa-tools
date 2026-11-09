@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f300f0e83cb6` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `cabf9140ad9a` |
+| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 78 of 16,822 |
+| **Strings reviewed this run** | 30 of 16,843 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,26 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (4)
 
-- `PushMessageBadSenderKey` — `dom/chrome/dom/dom.properties` — The suffix apostrophe in “ServiceWorker‘ı” is a left single quote (U+2018) instead of the typographic apostrophe ’ (U+2019).
-    - Current: `ServiceWorker‘ı`
-    - Source: `The ServiceWorker for scope ‘%1$S’ failed to decrypt a push message. The ‘dh‘ parameter in the ‘Crypto-Key‘ header must be the app server’s Diffie-Hellman public key, base64url-encoded (https://tools.ietf.org/html/rfc75…`
-    - Suggest: `ServiceWorker’ı`
-    - The locale convention is ’ (U+2019) for the apostrophe before a suffix on a proper noun. The same string already uses ’ correctly in ‘dh’, so the U+2018 here is a slip.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` references ['thirds'], which en-US does not pass
+    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` drops ['purposes'], which en-US passes
+    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, under "Close Multiple") is rendered as the verb phrase "duplicate the tabs".
+    - Current: `Sekmeleri çoğalt`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Yinelenen sekmeler`
+    - Per the developer comment this item closes all duplicates of the selected tab; "Sekmeleri çoğalt" means "Duplicate (copy) the tabs", the opposite action.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier "Connection-Allowlist" is partially translated as "Bağlantı-Allowlist".
+    - Current: `Bağlantı-Allowlist:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The localization note says not to translate Connection-Allowlist; the sibling string keeps it in English.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,14 +62,14 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,822 |
-| Missing strings | 53 |
+| Strings | 16,843 |
+| Missing strings | 32 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 0 |
+| Variable & placeholder mismatches | 2 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 6 |
@@ -67,20 +80,15 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
+**32 strings** are not translated yet, concentrated in:
 
-- `browser/browser/tabContextMenu.ftl` — 11
-- `browser/browser/newtab/onboarding.ftl` — 10
+- `browser/browser/newtab/onboarding.ftl` — 9
 - `toolkit/toolkit/downloads/downloadUI.ftl` — 7
-- `browser/browser/newtab/newtab.ftl` — 5
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 5
 - `browser/browser/browser.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
+- `browser/browser/newtab/newtab.ftl` — 4
 - `browser/browser/genai.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -106,14 +114,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (168)
+## 3. Open findings (172)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 69 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
+| 2 | Wrong content (says something other than the English) | 61 |
+| 3 | Degraded language (grammar, spelling, terminology) | 70 |
 | 4 | Cosmetic (typography, spacing) | 37 |
 
 ### A. Functional, markup, variables & plurals
@@ -125,6 +133,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `autofill-address-name` — `browser/browser/preferences/formAutofill.ftl` — "Ad", identical to autofill-address-given-name (First Name) → "Ad soyad".
     - Source: `Name`
     - Suggest: `"Ad soyad".`
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` references ['thirds'], which en-US does not pass
+    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` drops ['purposes'], which en-US passes
+    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -245,6 +261,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Control how you move around and interact with { -brand-short-name }. label: Keyboard shortcuts`
 - `should-restart-ok` — `browser/browser/preferences/preferences.ftl` — "now" dropped; the OK button is now byte-identical to should-restart-title.
     - Source: `Restart { -brand-short-name } now`
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, under "Close Multiple") is rendered as the verb phrase "duplicate the tabs".
+    - Current: `Sekmeleri çoğalt`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Yinelenen sekmeler`
+    - Per the developer comment this item closes all duplicates of the selected tab; "Sekmeleri çoğalt" means "Duplicate (copy) the tabs", the opposite action.
 - `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — "Tabs sharing devices" is rendered as "Sekme paylaşan cihazlar" (devices that share tabs), reversing subject and object.
     - Current: `Sekme paylaşan cihazlar`
     - Source: `accesskey: d label: Tabs sharing devices`
@@ -270,6 +291,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
     - Suggest: `engellerdi`
     - Under a Report-Only policy the resource is not actually blocked, so the en-US uses "would block". The Turkish "engelleyecektir" says the settings will block the resource, which tells developers it really gets blocked.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier "Connection-Allowlist" is partially translated as "Bağlantı-Allowlist".
+    - Current: `Bağlantı-Allowlist:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The localization note says not to translate Connection-Allowlist; the sibling string keeps it in English.
 - `exception-mgr-supplemental-warning` — `security/manager/security/certificates/certManager.ftl` — "Legitimate" dropped; the whole point of the warning is that legitimate sites never ask this.
     - Source: `Legitimate banks, stores, and other public sites will not ask you to do this.`
 - `devmgr-button-unload` — `security/manager/security/certificates/deviceManager.ftl` — "Boşalt" (empty/pour out) → "Kaldır" (en "Unload" a PKCS#11 module).
@@ -360,11 +386,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `xp-java-remove-principal-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
     - Source: `Couldn’t remove the principal`
     - Suggest: `"Asıl`
-- `credit-card-label-with-security-code-2` — `toolkit/toolkit/payments/payments.ftl` — The aria-label puts the variables in the wrong order, so it reads as the card being saved rather than its security code.
-    - Current: `{ $securityCode }, { $ariaLabel } kaydedildi`
-    - Source: `(value): { $label } \| { $securityCode } ••• aria-label: { $ariaLabel }, { $securityCode } saved`
-    - Suggest: `{ $ariaLabel }, { $securityCode } kaydedildi`
-    - en-US reads '{ $ariaLabel }, { $securityCode } saved': the card description, then the note that the security code is saved. The reordered Turkish attaches 'kaydedildi' to the card description, which changes what the screen reader says was saved.
+- _…and 1 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

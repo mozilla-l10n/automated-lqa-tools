@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 45 of 17,104 |
+| **Strings reviewed this run** | 0 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name "characterboundsupdate" is misspelled as "charactersboundsupdate".
-    - Current: `charactersboundsupdate-Ereignis-Listener`
-    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
-    - Suggest: `characterboundsupdate-Ereignis-Listener`
-    - The developer comment says not to translate "characterboundsupdate". It is a DOM event name, and the extra "s" turns it into an event that does not exist, which misleads developers reading the console warning.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 

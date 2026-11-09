@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `363d50704369` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-05 @ `324a294b9f2a` |
+| **Previous run** | 2026-11-08 @ `363d50704369` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 53 of 16,805 |
+| **Strings reviewed this run** | 0 of 16,805 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplikovat panely" means "duplicate the tabs" (verb), but the item closes duplicate tabs.
-    - Current: `Duplikovat panely`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Duplicitní panely`
-    - The comment says this item sits in the "Close Multiple" submenu and closes the selected tab's duplicates. "Duplicate" here is an adjective. The Czech verb tells the user it will duplicate tabs.
-- `extension-classic-purple-name` — `browser/browser/appExtensionFields.ftl` — Purple is translated "Fialový", the same word used for Violet, so two themes share one name.
-    - Current: `Fialový`
-    - Source: `Purple`
-    - Suggest: `Purpurový`
-    - Violet and Purple are separate themes. Both are rendered "Fialový", so users can't tell them apart. Purple is normally "Purpurový" in Czech.
-- `experimental-features-resource-monitor` — `toolkit/toolkit/firefoxlabs/features.ftl` — "Správce procesů" (process manager) does not match "Resource monitor".
-    - Current: `Správce procesů`
-    - Source: `label: Resource monitor`
-    - Suggest: `Monitor prostředků`
-    - The source names a resource monitor feature. "Správce procesů" means process manager, which is also the name of a different tool (about:processes), so the two get confused.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
