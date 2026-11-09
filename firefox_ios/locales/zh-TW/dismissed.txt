@@ -15,3 +15,7 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+NativeErrorPage.NoInternetConnection.Description.v131 @ Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148 @ Shared/Supporting Files/en-US.lproj/Onboarding.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+QuickAnswers.Errors.OpenSettings.v158 @ Shared/Supporting Files/en-US.lproj/QuickAnswers.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear
+fi3W24-scEmjs @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **Previous run** | 2026-11-05 @ `df599b08d244` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **Previous run** | 2026-11-08 @ `050d29471acf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,983 |
+| **Strings reviewed this run** | 0 of 1,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,23 +22,9 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (3)
+### ✅ Fixed since the last run (0)
 
-- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — The URL placeholder PRIVACY_NOTICE_URL has been changed to privacy_NOTICE_URL, so the link will not be substituted.
-    - Current: `(privacy_NOTICE_URL)`
-    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
-    - Suggest: `(PRIVACY_NOTICE_URL)`
-    - The developer comment says to translate only the text inside the square brackets. The URL placeholder must stay exactly as it is or the link breaks.
-- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `pt-PT/firefox-ios.xliff` — Gender agreement error: the feminine 'a nossa' is used with the masculine noun 'Aviso'.
-    - Current: `a nossa [Aviso de privacidade]`
-    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
-    - Suggest: `o nosso [Aviso de privacidade]`
-    - 'Aviso' is masculine in Portuguese, so the article and possessive have to be 'o nosso'.
-- `FirefoxHome.PrivacyNotice.Headline.v160` — `pt-PT/firefox-ios.xliff` — The headline calls the Privacy Notice 'Informação de privacidade', but the body text on the same card calls it 'Aviso de privacidade'.
-    - Current: `Informação de privacidade atualizada`
-    - Source: `Privacy Notice updated`
-    - Suggest: `Aviso de privacidade atualizado`
-    - Both strings refer to the same document on the same card. The card announces an update to a named document, so the headline should use the same term as the body.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

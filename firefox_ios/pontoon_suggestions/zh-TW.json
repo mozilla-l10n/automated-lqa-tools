@@ -25,9 +25,13 @@
    "source": "Strict blocks more trackers by stopping them before a page loads, so you may see a lower tracker count. %@",
    "original": "嚴格模式會在頁面開始載入前就自動封鎖，所以您看到的追蹤器數量可能較少。%@",
    "text": "嚴格模式會在頁面開始載入前就封鎖更多追蹤器，所以您看到的追蹤器數量可能較少。%@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396542,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=330970",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -52,9 +56,13 @@
    "source": "Enter a valid expiration date",
    "original": "請輸入有效的到期年分",
    "text": "請輸入有效的到期日",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396543,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=276679",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -133,9 +141,14 @@
    "source": "Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.",
    "original": "您可以試著連線到其他裝置、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
    "text": "您可以試著使用其他裝置連線、檢查您的數據機或路由器，或將 Wi-Fi 斷線重連。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "NativeErrorPage.NoInternetConnection.Description.v131 @ Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396544,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=309493",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -160,9 +173,14 @@
    "source": "Start typing to get search suggestions, your top sites, bookmarks, history and search engines – all in one place.",
    "original": "在網址框輸入，就可以直接獲得搜尋建議、您最常造訪的網站、書籤、瀏覽紀錄與搜尋引擎。",
    "text": "在網址列輸入，就可以直接獲得搜尋建議、您最常造訪的網站、書籤、瀏覽紀錄與搜尋引擎。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "Onboarding.Modern.BrandRefresh.Customization.Toolbar.Description.v148 @ Shared/Supporting Files/en-US.lproj/Onboarding.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396545,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=327778",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -187,9 +205,13 @@
    "source": "Share how you discovered %1$@, and that you use it, with %2$@’s marketing partners. This data is never sold.",
    "original": "與 %2$@ 的行銷夥伴分享您如何發現 %1$@ 以及是如何使用的，我們絕不會販售此資料。",
    "text": "與 %2$@ 的行銷夥伴分享您如何發現 %1$@ 以及您正在使用它，我們絕不會販售此資料。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396546,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=327780",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -268,9 +290,14 @@
    "source": "Open Settings",
    "original": "開啟選項",
    "text": "開啟設定",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "QuickAnswers.Errors.OpenSettings.v158 @ Shared/Supporting Files/en-US.lproj/QuickAnswers.strings — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396547,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=340137",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -295,9 +322,13 @@
    "source": "New! %@ Relay email masks are now available on mobile.",
    "original": "新功能！現在起行動板也提供 %@ Relay 轉寄信箱功能。",
    "text": "新功能！現在起行動版也提供 %@ Relay 轉寄信箱功能。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396548,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=326407",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -322,9 +353,13 @@
    "source": "Search Browsing History",
    "original": "顯示瀏覽紀錄",
    "text": "搜尋瀏覽紀錄",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396549,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=301163",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -349,9 +384,13 @@
    "source": "Data about your device, hardware configuration, and usage helps us improve %@ features, performance and stability.",
    "original": "關於您的裝置、硬體設定，以及您的使用方式，可幫助我們改善 %@ 的功能、效能與穩定度。",
    "text": "關於您的裝置、硬體設定，以及您的使用方式的資料，可幫助我們改善 %@ 的功能、效能與穩定度。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396550,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=314041",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -376,9 +415,13 @@
    "source": "Double tap and hold for more options",
    "original": "雙擊後按住即可取得更多資訊",
    "text": "雙擊後按住即可取得更多選項",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396551,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=301160",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -403,9 +446,13 @@
    "source": "VPN isn’t working right now. If you continue browsing, your location may be visible.",
    "original": "目前未開啟 VPN。如果繼續上網，網站可能會得知您的所在位置。",
    "text": "VPN 目前無法正常運作。如果繼續上網，網站可能會得知您的所在位置。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396552,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=342607",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -430,9 +477,13 @@
    "source": "Closed 1 Tab",
    "original": "關閉 1 個分頁",
    "text": "已關閉 1 個分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396553,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=342610",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -457,9 +508,13 @@
    "source": "Closed %1$@ Tabs",
    "original": "關閉 %1$@ 個分頁",
    "text": "已關閉 %1$@ 個分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396554,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=342611",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -484,9 +539,13 @@
    "source": "Closed 1 Tab",
    "original": "關閉 1 個分頁",
    "text": "已關閉 1 個分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396555,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=342622",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -511,9 +570,13 @@
    "source": "Closed %1$@ Tabs",
    "original": "關閉 %1$@ 個分頁",
    "text": "已關閉 %1$@ 個分頁",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396556,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=342623",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -538,9 +601,13 @@
    "source": "A username and password are being requested by %1$@. The site says: %2$@",
    "original": "%1$@ 請您輸入使用者名稱與密碼。此網站說: %2$@",
    "text": "%1$@ 請您輸入使用者名稱與密碼。此網站說：%2$@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396529,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=66921",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -565,9 +632,13 @@
    "source": "Tabs: %d",
    "original": "分頁: %d",
    "text": "分頁：%d",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396530,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=233048",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -592,9 +663,13 @@
    "source": "Warning: we can’t confirm your connection to this website is secure.",
    "original": "警告: 無法確認您與此網站間的連線是否安全。",
    "text": "警告：無法確認您與此網站間的連線是否安全。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396531,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=151508",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -619,9 +694,13 @@
    "source": "Firefox Sync has connected to %@",
    "original": "Firefox 同步已連結到 %@",
    "text": "Firefox Sync已連結到 %@",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>there should be a space between c and 已</p>",
+   "pontoon_pk": 12396532,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=170140",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
@@ -646,9 +725,13 @@
    "source": "A device has disconnected from Firefox Sync",
    "original": "有一台裝置已與 Firefox 取消連線",
    "text": "有一台裝置已與 Firefox Sync 取消連線",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396533,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=170137",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -673,9 +756,13 @@
    "source": "Clear Recent History",
    "original": "清除最近的歷史記錄",
    "text": "清除最近的瀏覽紀錄",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396534,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=236808",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -700,9 +787,13 @@
    "source": "Synced History",
    "original": "同步自其他裝置的瀏覽記錄",
    "text": "同步自其他裝置的瀏覽紀錄",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396535,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=243274",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -727,9 +818,13 @@
    "source": "This allows you to save the image to your Camera Roll.",
    "original": "讓您可儲存照片到「照片串流」。",
    "text": "讓您可儲存照片到「相機膠卷」。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>相機膠卷 should reflect the localized feature name on iOS</p>",
+   "pontoon_pk": 12396536,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=196128",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -754,9 +849,13 @@
    "source": "Available devices:",
    "original": "可用裝置:",
    "text": "可用裝置：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396537,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=193245",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -781,9 +880,13 @@
    "source": "The theme will automatically change based on your display brightness. You can set the threshold where the theme changes. The circle indicates your display’s current brightness.",
    "original": "佈景主題將自動根據螢幕顯示亮度自動切換。您可以設定要切換的門檻，而圈圈是目前的亮度。",
    "text": "佈景主題將根據螢幕顯示亮度自動切換。您可以設定要切換的門檻，而圈圈是目前的亮度。",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396538,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=180187",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -808,9 +911,13 @@
    "source": "Default clear wallpaper.",
    "original": "預設的明亮 Firefox 背景圖",
    "text": "預設的無圖案背景圖",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396539,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=242790",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -835,9 +942,13 @@
    "source": "Remove page — %@",
    "original": "移除頁面 - %@",
    "text": "移除頁面 — %@",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396540,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=152655",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -862,9 +973,13 @@
    "source": "New Search",
    "original": "新搜尋結果",
    "text": "新搜尋",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396541,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=213196",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -889,9 +1004,14 @@
    "source": "There are ${count} options matching ‘New Private Search’.",
    "original": "有 ${count} 個符合「進行新隱私搜尋」的選項。",
    "text": "有 ${count} 個符合「新隱私搜尋」的選項。",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "fi3W24-scEmjs @ WidgetKit/Base.lproj/WidgetIntents.intentdefinition — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396557,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-ios/firefox-ios.xliff/?string=220670",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
