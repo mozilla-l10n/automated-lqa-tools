@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-11-09
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,395 raised, 625 fixed (18%), 2,458 open
+- **Findings:** 3,367 raised, 625 fixed (18%), 2,430 open
 - **Closed by a person:** 105 dismissed, 59 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -128,7 +128,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [fa](fa/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **63** | 25 | 78 | 0 | 0 |
 | [fi](fi/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,555 | 46 | **44** | 16 | 0 | 0 | 0 |
 | [fr](fr/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **47** | 35 | 27 | 7 | 0 |
-| [fy-NL](fy-NL/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **58** | 12 | 74 | 31 | 0 |
+| [fy-NL](fy-NL/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **30** | 12 | 74 | 31 | 0 |
 | [hi-IN](hi-IN/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,507 | 94 | **0** | 0 | 213 | 8 | 0 |
 | [hu](hu/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **128** | 67 | 0 | 0 | 0 |
 | [id](id/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,599 | 2 | **151** | 86 | 4 | 0 | 0 |

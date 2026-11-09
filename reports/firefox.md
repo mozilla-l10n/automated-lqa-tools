@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-11-09
 - **Locales tracked:** 30 (30 with recorded state)
-- **Findings:** 9,688 raised, 2,703 fixed (27%), 6,243 open
+- **Findings:** 9,687 raised, 2,703 fixed (27%), 6,242 open
 - **Closed by a person:** 88 dismissed, 16 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -129,7 +129,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [es-MX](es-MX/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,119 | 756 | **79** | 28 | 205 | 0 | 0 |
 | [fi](fi/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,206 | 669 | **157** | 147 | 0 | 0 | 0 |
 | [fr](fr/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,104 | 0 | **35** | 18 | 90 | 2 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **192** | 69 | 573 | 39 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **191** | 69 | 573 | 39 | 0 |
 | [hu](hu/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **282** | 161 | 7 | 0 | 0 |
 | [id](id/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 13,922 | 2,953 | **291** | 220 | 3 | 0 | 0 |
 | [it](it/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,106 | 0 | **5** | 5 | 74 | 9 | 2 |

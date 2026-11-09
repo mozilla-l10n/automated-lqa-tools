@@ -85,14 +85,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (192)
+## 3. Open findings (191)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
 | 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 94 |
+| 3 | Degraded language (grammar, spelling, terminology) | 93 |
 | 4 | Cosmetic (typography, spacing) | 29 |
 
 ### A. Functional, markup, variables & plurals
@@ -596,12 +596,12 @@ _Nothing reported._
     - Current: `De oplaad`
     - Source: `The upload didn’t go through. Try again later.`
     - Suggest: `It opladen`
-- `about-processes-bulk-unload-tabs` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Untlade" is missing the circumflex; the Frisian word is "Ûntlade".
-    - Current: `Untlade`
-    - Source: `label: Unload`
-    - Suggest: `Ûntlade`
-    - The same verb is spelled "ûntlade"/"ûntlaad" in about-processes-unload-site and the Resource monitor description; without Û it is a misspelling.
-- _…and 16 more; see `state/` for the full list._
+- `about-processes-collapse-all-sites` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Alle ynklappe" uses the plural adjective form instead of the pronoun "Alles", which the sibling string "Alles útklappe" uses.
+    - Current: `Alle ynklappe`
+    - Source: `title: Collapse all`
+    - Suggest: `Alles ynklappe`
+    - "Collapse all" needs the standalone pronoun "alles"; "alle" needs a following noun. This is also inconsistent with "Alles útklappe".
+- _…and 15 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

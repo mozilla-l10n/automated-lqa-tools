@@ -72,30 +72,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Unjildich adres",
-  "dismissed_because": "",
-  "fid": "f548c436e5fc",
-  "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The Frisian word is \"ûnjildich\" with a circumflex; the same prefix is written \"ûnjildige\" in mozac_browser_errorpages_invalid_content_encoding_message.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "7dc9dbb7",
-  "string_id": "mozac_browser_errorpages_malformed_uri_title",
-  "suggest": "Ûnjildich adres",
-  "summary": "Missing diacritic on \"Unjildich\".",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "in tydlike stroomûnderbrekking",
@@ -672,150 +648,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspylsnelheid 25 prosint flugger",
-  "dismissed_because": "",
-  "fid": "49f17c5bb99d",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôf\" carries a circumflex; inconsistent with \"ôfspylsnelheid\" used elsewhere in the same file.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ccad8c50",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_1_25",
-  "suggest": "Ôfspylsnelheid 25 prosint flugger",
-  "summary": "Missing circumflex in \"Ofspylsnelheid\"; should be \"Ôfspylsnelheid\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspylsnelheid 50 prosint flugger",
-  "dismissed_because": "",
-  "fid": "68964f3cbd9a",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôf\" carries a circumflex; inconsistent with \"ôfspylsnelheid\" used elsewhere in the same file.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b1f5d0ea",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_1_5",
-  "suggest": "Ôfspylsnelheid 50 prosint flugger",
-  "summary": "Missing circumflex in \"Ofspylsnelheid\"; should be \"Ôfspylsnelheid\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspylsnelheid 75 prosint flugger",
-  "dismissed_because": "",
-  "fid": "1c49d36f594f",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôf\" carries a circumflex; inconsistent with \"ôfspylsnelheid\" used elsewhere in the same file.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1b1635b6",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_1_75",
-  "suggest": "Ôfspylsnelheid 75 prosint flugger",
-  "summary": "Missing circumflex in \"Ofspylsnelheid\"; should be \"Ôfspylsnelheid\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspyljen ynsteld op dûbele snelheid",
-  "dismissed_because": "",
-  "fid": "17d9aa2f1f82",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôf-\" requires the circumflex, as used in other strings of this file.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "d4ea8268",
-  "string_id": "mozac_feature_listentopage_notification_playback_speed_2",
-  "suggest": "Ôfspyljen ynsteld op dûbele snelheid",
-  "summary": "Missing circumflex in \"Ofspyljen\"; should be \"Ôfspyljen\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspylje",
-  "dismissed_because": "",
-  "fid": "ec33fad17f10",
-  "file": "mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôfspylje\" is written with a circumflex, as in \"ôfspylsnelheid\" elsewhere in this file.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ee134332",
-  "string_id": "mozac_feature_listentopage_play",
-  "suggest": "Ôfspylje",
-  "summary": "Missing circumflex in \"Ofspylje\"; should be \"Ôfspylje\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofspylje",
-  "dismissed_because": "",
-  "fid": "18c72c6a27c9",
-  "file": "mozilla-mobile/android-components/components/feature/media/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian spelling is 'ôfspylje'; capitalised it is 'Ôfspylje', not 'Ofspylje'.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ee134332",
-  "string_id": "mozac_feature_media_notification_action_play",
-  "suggest": "Ôfspylje",
-  "summary": "Missing accent on the initial 'Ô' in 'Ofspylje'.",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "Bestân oplade?",
@@ -960,30 +792,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Ungelokrapporten",
-  "dismissed_because": "",
-  "fid": "bcc61b07f5c1",
-  "file": "mozilla-mobile/android-components/components/lib/crash/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian spells the word with a circumflex: ûngelok. The initial capital must keep the diacritic (Û).",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "f0c86dd1",
-  "string_id": "mozac_lib_crash_activity_title",
-  "suggest": "Ûngelokrapporten",
-  "summary": "Missing diacritic on \"Ûngelokrapporten\".",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "Ungelokken",
@@ -1005,54 +813,6 @@
   "string_id": "about_crashes",
   "suggest": "Ûnderbrekkingen",
   "summary": "\"Crashes\" (browser crashes, about:crashes) is rendered as \"Ungelokken\" (accidents), the wrong term, and it is also missing its diacritic.",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Utwreidingen ferkenne",
-  "dismissed_because": "",
-  "fid": "f06dfdb423e1",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Elsewhere the same word is spelled \"útwreidingen\" with a diacritic; capitalised it must be \"Ú/Û\" rather than plain \"U\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b96d9e6f",
-  "string_id": "addon_ga_message_button_2",
-  "suggest": "Ûtwreidingen ferkenne",
-  "summary": "Missing circumflex on the initial U of \"Utwreidingen\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofdieling",
-  "dismissed_because": "",
-  "fid": "d34764a3dfa9",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "In Frisian the word is spelled \"ôfdieling\"; capitalised it keeps the circumflex: \"Ôfdieling\". The current form drops the required diacritic.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "cb87ada7",
-  "string_id": "addresses_department",
-  "suggest": "Ôfdieling",
-  "summary": "Missing diacritic: \"Ofdieling\" should be \"Ôfdieling\".",
   "suppressed_by": ""
  },
  {
@@ -1178,78 +938,6 @@
  {
   "category": "C",
   "check": "llm",
-  "current": "Ut bestân ymportearje",
-  "dismissed_because": "",
-  "fid": "0937181be924",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian preposition is \"út\"; capitalized it requires the accent \"Ú\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "9c73ce0a",
-  "string_id": "bookmark_import_bookmarks_button_content_description",
-  "suggest": "Út bestân ymportearje",
-  "summary": "Missing diacritic on \"Út\" in \"Ut bestân ymportearje\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ut bestân ymportearje",
-  "dismissed_because": "",
-  "fid": "d41da7c5da17",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian preposition is \"út\"; capitalized it requires the accent \"Ú\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "9c73ce0a",
-  "string_id": "bookmark_import_menu_button",
-  "suggest": "Út bestân ymportearje",
-  "summary": "Missing diacritic on \"Út\" in \"Ut bestân ymportearje\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Unjildige URL",
-  "dismissed_because": "",
-  "fid": "46a106fcaae4",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian word is \"ûnjildich\"; capitalized it is \"Ûnjildige\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "bb646ac5",
-  "string_id": "bookmark_invalid_url_error",
-  "suggest": "Ûnjildige URL",
-  "summary": "Missing diacritic in \"Unjildige\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
   "current": "Alles yn proveeljepblêden iepenje",
   "dismissed_because": "",
   "fid": "ec91a65324a0",
@@ -1317,30 +1005,6 @@
   "string_id": "browser_custom_tab_menu_handlebar_content_description",
   "suggest": "Menublêd fan oanpast ljepblêd slute",
   "summary": "\"Custom tab menu sheet\" rendered as \"Menublêd Ljepblêd oanpasse\", turning the noun phrase into an imperative \"customize tab\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ut",
-  "dismissed_because": "",
-  "fid": "ff32729d7fe5",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian word for \"off\" is spelled \"út/Ût\" with a circumflex/accent; the toggle label drops the diacritic.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1c0d693a",
-  "string_id": "browser_feature_desktop_site_off",
-  "suggest": "Ût",
-  "summary": "Missing circumflex in \"Ut\"; Frisian for \"Off\" is \"Ût\".",
   "suppressed_by": ""
  },
  {
@@ -1464,78 +1128,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Untskoattelje om jo bewarre kaarten te besjen",
-  "dismissed_because": "",
-  "fid": "63448c582bdc",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian verb is \"ûntskoattelje\"; capitalised it is \"Ûntskoattelje\", not \"Untskoattelje\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "45057f73",
-  "string_id": "credit_cards_biometric_prompt_message",
-  "suggest": "Ûntskoattelje om jo bewarre kaarten te besjen",
-  "summary": "Missing circumflex on the initial capital of \"Ûntskoattelje\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Untskoattelje jo apparaat",
-  "dismissed_because": "",
-  "fid": "223ffe958893",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Frisian \"ûntskoattelje\" is written with û; the initial capital must be Û. The same error appears in the neighbouring credit_cards_biometric_prompt_* strings.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "d90e4bfb",
-  "string_id": "credit_cards_biometric_prompt_message_pin",
-  "suggest": "Ûntskoattelje jo apparaat",
-  "summary": "Word order is ungrammatical: the imperative with object should be \"Untskoattelje jo apparaat\" reversed to \"Ûntskoattelje jo apparaat\" — actual defect is the missing circumflex/accent on Û and wrong construction.",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Untskoattelje om bewarre betellingsmetoaden te brûken",
-  "dismissed_because": "",
-  "fid": "6ebc1d18849e",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian verb is \"ûntskoattelje\"; capitalised it is \"Ûntskoattelje\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "ffb40d21",
-  "string_id": "credit_cards_biometric_prompt_unlock_message_2",
-  "suggest": "Ûntskoattelje om bewarre betellingsmetoaden te brûken",
-  "summary": "Missing circumflex on the initial capital of \"Ûntskoattelje\".",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "betelmetoaden",
@@ -1632,30 +1224,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Ut",
-  "dismissed_because": "",
-  "fid": "b9245c5477fe",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "The Frisian word for \"Off\" is \"Út\" with an acute accent on the capital U; \"Ut\" is a spelling error.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1c0d693a",
-  "string_id": "delete_browsing_data_quit_off",
-  "suggest": "Út",
-  "summary": "Missing diacritic in \"Út\" (Frisian for \"Off\").",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "As jo dizze talen fuortsmite",
@@ -1677,30 +1245,6 @@
   "string_id": "delete_language_all_languages_file_dialog_message",
   "suggest": "As jo alle talen fuortsmite",
   "summary": "\"If you delete all languages\" rendered as \"As jo dizze talen fuortsmite\" (if you delete these languages).",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofbyldingen",
-  "dismissed_because": "",
-  "fid": "6d3c90316dd9",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "medium"
-  },
-  "rationale": "Frisian spells the word with a circumflex: Ôfbylding(en). The initial capital should keep the diacritic.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1bb07b61",
-  "string_id": "download_content_type_filter_image",
-  "suggest": "Ôfbyldingen",
-  "summary": "Missing accent on \"Ôfbyldingen\".",
   "suppressed_by": ""
  },
  {
@@ -1940,30 +1484,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Untfang elke moanne fergees %2$d GB.",
-  "dismissed_because": "",
-  "fid": "5d92e5b6bfec",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ûntfange\" requires the circumflex; the string elsewhere (ip_protection_onboarding_body_promo) correctly uses \"ûntfang\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "5b4a1619",
-  "string_id": "ip_protection_onboarding_body",
-  "suggest": "Ûntfang elke moanne fergees %2$d GB.",
-  "summary": "\"Untfang\" is missing the diacritic; should be \"Ûntfang\".",
-  "suppressed_by": ""
- },
- {
   "category": "D",
   "check": "llm",
   "current": "persoanliker",
@@ -2178,30 +1698,6 @@
   "suppressed_by": ""
  },
  {
-  "category": "C",
-  "check": "llm",
-  "current": "Untdek",
-  "dismissed_because": "",
-  "fid": "340f3b3dcb72",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The Frisian imperative of \"ûntdekke\" is \"Ûntdek\"; the capital U must carry the circumflex.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "c9dfbea3",
-  "string_id": "nova_onboarding_notifications_subtitle",
-  "suggest": "Ûntdek",
-  "summary": "Missing diacritic in \"Untdek\".",
-  "suppressed_by": ""
- },
- {
   "category": "B",
   "check": "llm",
   "current": "blokkearje automatysk bedriuwen dy’t jo klikken bespionearje",
@@ -2339,54 +1835,6 @@
   "string_id": "onboarding_redesign_set_default_browser_body",
   "suggest": "Ien tik helpt foar te kommen dat bedriuwen jo klikken bespionearje.",
   "summary": "The translation drops \"helps\", turning \"One tap helps stop…\" into \"With one tap you prevent…\" and losing the subject.",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Untfang standert automatyske beskerming tsjin folgjen",
-  "dismissed_because": "",
-  "fid": "a05ec352d574",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ûntfange\" requires the circumflex on the initial u; the capitalised form is \"Û\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b09ad64f",
-  "string_id": "onboarding_redesign_set_default_browser_title",
-  "suggest": "Ûntfang standert automatyske beskerming tsjin folgjen",
-  "summary": "Missing diacritic in \"Untfang\" (should be \"Ûntfang\").",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Untfang blêdwizers, ljepblêden en wachtwurden op elk apparaat.",
-  "dismissed_because": "",
-  "fid": "e63591adc83f",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ûntfange\" requires the circumflex on the initial u; the capitalised form is \"Û\".",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "54ad3157",
-  "string_id": "onboarding_redesign_sync_body",
-  "suggest": "Ûntfang blêdwizers, ljepblêden en wachtwurden op elk apparaat.",
-  "summary": "Missing diacritic in \"Untfang\" (should be \"Ûntfang\").",
   "suppressed_by": ""
  },
  {
@@ -2603,30 +2051,6 @@
   "string_id": "preference_search_learn_about_fx_suggest",
   "suggest": "Firefox Suggest",
   "summary": "\"Firefox Suggest\" brand name is translated and inconsistently rendered.",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "‘Ofslute’",
-  "dismissed_because": "",
-  "fid": "2f1573efbc71",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian spelling requires \"Ôfslute\" with a circumflex on the initial vowel.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "b44ff1e4",
-  "string_id": "preference_summary_delete_browsing_data_on_quit_2",
-  "suggest": "‘Ôfslute’",
-  "summary": "\"Ofslute\" is missing the accent on the initial O.",
   "suppressed_by": ""
  },
  {
@@ -3180,54 +2604,6 @@
  {
   "category": "C",
   "check": "llm",
-  "current": "Ofmelde",
-  "dismissed_because": "",
-  "fid": "d5b6446f6304",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôfmelde\" is spelled with a circumflex on the ô.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "93ec0402",
-  "string_id": "sign_out_dialog_confirm_button",
-  "suggest": "Ôfmelde",
-  "summary": "Missing circumflex in \"Ofmelde\"; should be \"Ôfmelde\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ofmelde by jo account?",
-  "dismissed_because": "",
-  "fid": "64fe6f99d855",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-12",
-  "impact": 3,
-  "last_seen": "2026-10-12",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian \"ôfmelde\" is spelled with a circumflex on the ô.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "54f0e4ab",
-  "string_id": "sign_out_dialog_title",
-  "suggest": "Ôfmelde by jo account?",
-  "summary": "Missing circumflex in \"Ofmelde\"; should be \"Ôfmelde\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
   "current": "Untfang live wedstriidupdates en mear.",
   "dismissed_because": "",
   "fid": "afd7d5955264",
@@ -3415,54 +2791,6 @@
   "string_id": "startup_crash_title",
   "suggest": "%s moat opnij starte wurde",
   "summary": "Ungrammatical passive/verb construction \"moat opnij opstarte wurde\" for \"needs to restart\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Untdek",
-  "dismissed_because": "",
-  "fid": "43239b638f9d",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-10-18",
-  "impact": 3,
-  "last_seen": "2026-10-18",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The Frisian verb ûntdekke is written with û, as in \"ûntdutsen\" elsewhere in this batch; \"Untdek\" is a misspelling.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "6e699899",
-  "string_id": "sync_send_tab_empty_state_link",
-  "suggest": "Ûntdek",
-  "summary": "\"Untdek\" is missing the circumflex; the correct Frisian spelling is \"Ûntdek\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
-  "current": "Ungelokrapport nei Mozilla ferstjoere",
-  "dismissed_because": "",
-  "fid": "3bfb1e6795d6",
-  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
-  "first_seen": "2026-08-21",
-  "impact": 3,
-  "last_seen": "2026-08-21",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "Frisian spelling requires the circumflex: \"ûngelok\", so the sentence-initial capital must be Û.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "3b5342fa",
-  "string_id": "tab_crash_send_report",
-  "suggest": "Ûngelokrapport nei Mozilla ferstjoere",
-  "summary": "Missing diacritic on \"Ûngelokrapport\".",
   "suppressed_by": ""
  },
  {
