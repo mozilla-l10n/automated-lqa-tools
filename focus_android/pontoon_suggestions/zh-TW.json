@@ -24,9 +24,13 @@
    "source": "To allow it:",
    "original": "若要允許:",
    "text": "若要允許：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396526,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=243678",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -50,9 +54,13 @@
    "source": "Example: mozilla.org",
    "original": "例如: mozilla.org",
    "text": "例如：mozilla.org",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396523,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224019",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -76,9 +84,13 @@
    "source": "Set default, autocomplete",
    "original": "設為預設瀏覽器、自動完成",
    "text": "設定預設搜尋引擎、自動完成",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396522,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=224052",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -102,9 +114,13 @@
    "source": "Select your preferred engine:",
    "original": "選擇想使用的搜尋引擎:",
    "text": "選擇想使用的搜尋引擎：",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396524,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=230879",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -128,9 +144,13 @@
    "source": "Example: example.com/search/?q=%s",
    "original": "例如: example.com/search/?q=%s",
    "text": "例如：example.com/search/?q=%s",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12396525,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223885",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",
@@ -154,9 +174,14 @@
    "source": "You’re protected!",
    "original": "讓我們保護您！",
    "text": "您已受到保護！",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "",
+   "dismissal": "tool_tip_title @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12396528,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=242762",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-08",
@@ -180,9 +205,14 @@
    "source": "Trackers blocked since %s",
    "original": "自 %s起封鎖的追蹤器數量",
    "text": "自 %s 起封鎖的追蹤器數量",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-08",
-   "comment": ""
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>%s is actually replaced with \"YYYY 年 MM 月 DD 日\" so there should not be a space between %s and 起</p>",
+   "dismissal": "trackers_count_note @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>%s is actually replaced with \"YYYY 年 MM 月 DD 日\" so there should not be a space between %s and 起</p>",
+   "pontoon_pk": 12396527,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=230889",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }
