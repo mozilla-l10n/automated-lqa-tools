@@ -37,39 +37,39 @@ Too many to list here; the per-locale counts are in the table below and every on
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed | Closed by fixer |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 244 | 1 | **17** | 6 | 0 | 0 | 0 | 0 |
-| [cs](cs/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **18** | 11 | 4 | 0 | 0 | 0 |
-| [de](de/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **2** | 2 | 5 | 0 | 0 | 0 |
-| [el](el/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **9** | 2 | 0 | 0 | 0 | 0 |
-| [en-CA](en-CA/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **0** | 0 | 1 | 0 | 0 | 0 |
-| [en-GB](en-GB/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **0** | 0 | 0 | 1 | 9 | 0 |
-| [es-AR](es-AR/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **13** | 3 | 0 | 0 | 0 | 0 |
-| [es-ES](es-ES/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 244 | 1 | **10** | 4 | 0 | 0 | 0 | 0 |
-| [es-MX](es-MX/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 244 | 1 | **15** | 9 | 0 | 0 | 0 | 0 |
-| [fa](fa/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **12** | 5 | 18 | 0 | 0 | 0 |
-| [fi](fi/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **8** | 4 | 0 | 0 | 0 | 0 |
-| [fr](fr/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **1** | 1 | 1 | 0 | 0 | 2 |
-| [fy-NL](fy-NL/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **5** | 3 | 8 | 0 | 0 | 6 |
-| [hi-IN](hi-IN/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 165 | 80 | **24** | 6 | 0 | 0 | 0 | 0 |
-| [hu](hu/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **17** | 11 | 0 | 0 | 0 | 0 |
-| [id](id/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 236 | 9 | **15** | 7 | 0 | 0 | 0 | 0 |
-| [it](it/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **0** | 0 | 2 | 0 | 0 | 0 |
-| [ja](ja/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **9** | 9 | 0 | 0 | 0 | 0 |
-| [ko](ko/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **15** | 5 | 0 | 0 | 0 | 0 |
-| [nl](nl/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **3** | 2 | 0 | 0 | 0 | 0 |
-| [pl](pl/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **4** | 4 | 0 | 0 | 0 | 0 |
-| [pt-BR](pt-BR/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **11** | 7 | 1 | 0 | 0 | 0 |
-| [ro](ro/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **2** | 0 | 0 | 0 | 0 | 0 |
-| [ru](ru/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **13** | 9 | 0 | 0 | 0 | 0 |
-| [sk](sk/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **7** | 2 | 0 | 0 | 0 | 0 |
-| [sl](sl/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **10** | 5 | 6 | 0 | 0 | 2 |
-| [sv-SE](sv-SE/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **5** | 1 | 0 | 0 | 0 | 0 |
-| [th](th/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 244 | 1 | **5** | 1 | 0 | 0 | 0 | 0 |
-| [tr](tr/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **17** | 8 | 0 | 0 | 0 | 0 |
-| [uk](uk/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **7** | 2 | 0 | 0 | 0 | 0 |
-| [vi](vi/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **8** | 3 | 0 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **17** | 13 | 0 | 0 | 0 | 0 |
-| [zh-TW](zh-TW/focus_android.md) | 2026-11-09 | incremental | `bf7b409a` | 245 | 0 | **0** | 0 | 5 | 2 | 0 | 0 |
+| [ar](ar/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 244 | 1 | **17** | 6 | 0 | 0 | 0 | 0 |
+| [cs](cs/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **18** | 11 | 4 | 0 | 0 | 0 |
+| [de](de/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **2** | 2 | 5 | 0 | 0 | 0 |
+| [el](el/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **9** | 2 | 0 | 0 | 0 | 0 |
+| [en-CA](en-CA/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **0** | 0 | 1 | 0 | 0 | 0 |
+| [en-GB](en-GB/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **0** | 0 | 0 | 1 | 9 | 0 |
+| [es-AR](es-AR/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **13** | 3 | 0 | 0 | 0 | 0 |
+| [es-ES](es-ES/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 244 | 1 | **10** | 4 | 0 | 0 | 0 | 0 |
+| [es-MX](es-MX/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 244 | 1 | **15** | 9 | 0 | 0 | 0 | 0 |
+| [fa](fa/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **12** | 5 | 18 | 0 | 0 | 0 |
+| [fi](fi/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **8** | 4 | 0 | 0 | 0 | 0 |
+| [fr](fr/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **1** | 1 | 1 | 0 | 0 | 2 |
+| [fy-NL](fy-NL/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **5** | 3 | 8 | 0 | 0 | 6 |
+| [hi-IN](hi-IN/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 165 | 80 | **24** | 6 | 0 | 0 | 0 | 0 |
+| [hu](hu/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **17** | 11 | 0 | 0 | 0 | 0 |
+| [id](id/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 236 | 9 | **15** | 7 | 0 | 0 | 0 | 0 |
+| [it](it/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **0** | 0 | 2 | 0 | 0 | 0 |
+| [ja](ja/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **9** | 9 | 0 | 0 | 0 | 0 |
+| [ko](ko/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **15** | 5 | 0 | 0 | 0 | 0 |
+| [nl](nl/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **3** | 2 | 0 | 0 | 0 | 0 |
+| [pl](pl/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **4** | 4 | 0 | 0 | 0 | 0 |
+| [pt-BR](pt-BR/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **11** | 7 | 1 | 0 | 0 | 0 |
+| [ro](ro/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **2** | 0 | 0 | 0 | 0 | 0 |
+| [ru](ru/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **13** | 9 | 0 | 0 | 0 | 0 |
+| [sk](sk/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **7** | 2 | 0 | 0 | 0 | 0 |
+| [sl](sl/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **10** | 5 | 6 | 0 | 0 | 2 |
+| [sv-SE](sv-SE/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 245 | 0 | **5** | 1 | 0 | 0 | 0 | 0 |
+| [th](th/focus_android.md) | 2026-11-09 | incremental | `f7a886b5` | 244 | 1 | **5** | 1 | 0 | 0 | 0 | 0 |
+| [tr](tr/focus_android.md) | 2026-11-09 | incremental | `eb586799` | 245 | 0 | **17** | 8 | 0 | 0 | 0 | 0 |
+| [uk](uk/focus_android.md) | 2026-11-09 | incremental | `eb586799` | 245 | 0 | **7** | 2 | 0 | 0 | 0 | 0 |
+| [vi](vi/focus_android.md) | 2026-11-09 | incremental | `eb586799` | 245 | 0 | **8** | 3 | 0 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/focus_android.md) | 2026-11-09 | incremental | `eb586799` | 245 | 0 | **17** | 13 | 0 | 0 | 0 | 0 |
+| [zh-TW](zh-TW/focus_android.md) | 2026-11-09 | incremental | `eb586799` | 245 | 0 | **0** | 0 | 5 | 2 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 245 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,33 +22,9 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox](firefox.md) · [F
 
 _No new findings._
 
-### ✅ Fixed since the last run (5)
+### ✅ Fixed since the last run (0)
 
-- `phone_feature_blocked_intro` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — Half-width colon used instead of the locale's full-width punctuation.
-    - Current: `若要允許:`
-    - Source: `To allow it:`
-    - Suggest: `若要允許：`
-    - zh-TW convention is full-width punctuation (1071 occurrences); a half-width colon after CJK text deviates.
-- `preference_autocomplete_add_example2` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — Half-width colon plus space used instead of the locale's full-width colon.
-    - Current: `例如: mozilla.org`
-    - Source: `Example: mozilla.org`
-    - Suggest: `例如：mozilla.org`
-    - zh-TW convention is full-width punctuation (1071 occurrences); a half-width colon followed by a space breaks that convention.
-- `preference_search_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — "Set default" is rendered as "set as default browser", but this category is about the default search engine.
-    - Current: `設為預設瀏覽器`
-    - Source: `Set default, autocomplete`
-    - Suggest: `設定預設搜尋引擎`
-    - The developer comment says this summary describes the search settings screen, where the user sets the default search engine. It is not about making the app the default browser.
-- `preference_select_preferred_engine` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — The string uses a halfwidth colon instead of the fullwidth colon used in zh-TW.
-    - Current: `搜尋引擎:`
-    - Source: `Select your preferred engine:`
-    - Suggest: `搜尋引擎：`
-    - The locale convention is fullwidth punctuation (1071 occurrences).
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — A half-width colon is used where the locale convention calls for full-width punctuation.
-    - Current: `例如:`
-    - Source: `Example: example.com/search/?q=%s`
-    - Suggest: `例如：`
-    - zh-TW uses full-width punctuation throughout the tree.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -105,6 +81,22 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 _Nothing reported._
 
+### Proposed conventions — not applied (1)
+
+Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `focus_android/locales/zh-TW/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
+
+- When the approved translation is already accurate, do not raise a finding that only swaps in a synonym or another equally valid wording. zh-TW reviewers have repeatedly rejected such rewrites as "interchangeable" or "not better from original translation". Examples: 報表 and 報告 are both acceptable for a crash "report" button. Different measure words (quantifiers) for permission items are also interchangeable. Rewording a remove-bookmark menu item or a "recommended" label gains nothing either. Still flag the translation when it actually changes or loses meaning, for example when an "older than %S months" condition is rendered as just "%S months ago". Also flag glossary violations and leftover untranslated English.
+    _Behind it: 8 dismissals, 8 of them rejected in Pontoon._
+
+    - `mozac_feature_addons_permissions_browser_settings_description_for_update` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
+    - `mozac_feature_addons_permissions_content_description_item` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>
+    - `home_bookmarks_menu_item_remove` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
+    - `ip_protection_location_recommended_label` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>
+    - `protection_panel_banner_protected_no_blocked_trackers_description` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>
+    - `startup_crash_positive` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
+    - `trackers_blocked_empty` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>
+    - `unsubmitted_crash_dialog_positive_button` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
+
 ---
 
 ## 3. Open findings (0)
@@ -147,6 +139,12 @@ _Nothing in this category._
 - `trackers_count_note` — `mozilla-mobile/focus-android/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>%s is actually replaced with "YYYY 年 MM 月 DD 日" so there should not be a space between %s and 起</p>
 
 _One line each in `locales/zh-TW/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/zh-TW/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 
