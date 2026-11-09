@@ -21,3 +21,7 @@ written here is what the model is told to treat as correct._
 - The en dash is the house dash; do not suggest an em dash.
 - "Primary Password" is deliberately translated with the legacy term.
 -->
+
+- Short UI command labels (buttons, links, menu items, toggles and setting
+  labels) use the informal 2nd-person singular imperative, e.g. `Obnovi
+  podatke`, `Posodobi`, `Omogoči`. Never flag this form.

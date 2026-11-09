@@ -20,3 +20,9 @@ written here is what the model is told to treat as correct._
 - The en dash is the house dash; do not suggest an em dash.
 - "Primary Password" is deliberately translated with the legacy term.
 -->
+
+- Do not raise a finding that only replaces an accurate translation with a
+  synonym or equally valid wording, such as 報表 for 報告 in a crash report,
+  or a different measure word. Flag it only when meaning is changed or lost
+  ("older than %S months" rendered as "%S months ago"), when it breaks the
+  glossary, or when English is left untranslated.

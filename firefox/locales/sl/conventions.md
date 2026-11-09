@@ -21,7 +21,9 @@ written here is what the model is told to treat as correct._
 _Carried over from the hand-written review; these are maintainer decisions, not guesses._
 
 - The dual is used correctly throughout: `one` / `two` / `few` / `other` are all present and right. Never flag plural coverage.
-- Short button labels use the informal singular imperative by convention.
+- Short UI command labels (buttons, links, menu items, toggles and setting
+  labels) use the informal 2nd-person singular imperative, e.g. `Obnovi
+  podatke`, `Posodobi`, `Omogoči`. Never flag this form.
 - Prompt strings in `genai.ftl` use the informal imperative on purpose — they address the model, not the user.
 - Brand terms are declined with a `sklon` (case) parameter. This is correct Slovenian and has no en-US equivalent.
 - The typo in `cclear-data-for-site-permissions` is upstream in en-US.
