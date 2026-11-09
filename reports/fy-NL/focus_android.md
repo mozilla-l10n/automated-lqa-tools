@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -140,16 +140,22 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (6)
+### Dismissed by hand (0)
 
-- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian orthography customarily omits diacritics on capital letters (cf. 'Us Heit', 'Us Mem'), so 'Us' is the expected capitalized form of 'ús'.
-- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily drops the circumflex on a capital initial (as in 'Us Mem'), so 'Ungelok-' is the normal capitalized spelling.
-- `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): The fy-NL tree writes capital Û as U (e.g. 'Untskoattelje'), and 'Untwikkelersark' is a correct compound for 'developer tools'.
-- `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05): Mozilla fy-NL uses 'ûngelok' (e.g. ûngelokrapporten) as the term for software crashes, and capital Û is written U in this tree (cf. 'Untskoattelje').
-- `preference_state_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Ut' is the normal capitalized form of 'út'.
-- `show_biometric_button_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06): Frisian customarily omits diacritics on capital letters, so 'Untskoattelje' is the normal capitalized spelling of 'ûntskoattelje'.
+_Nothing dismissed._
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (6)
+
+- `about_content` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06, string 417523ee): Frisian orthography customarily omits diacritics on capital letters (cf. 'Us Heit', 'Us Mem'), so 'Us' is the expected capitalized form of 'ús'.
+- `crash_report_send_crash_label` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06, string 3b5342fa): Frisian customarily drops the circumflex on a capital initial (as in 'Us Mem'), so 'Ungelok-' is the normal capitalized spelling.
+- `preference_advanced_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05, string 2f9db6da): The fy-NL tree writes capital Û as U (e.g. 'Untskoattelje'), and 'Untwikkelersark' is a correct compound for 'developer tools'.
+- `preference_crashes` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-05, string 790b91f0): Mozilla fy-NL uses 'ûngelok' (e.g. ûngelokrapporten) as the term for software crashes, and capital Û is written U in this tree (cf. 'Untskoattelje').
+- `preference_state_off` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06, string 1c0d693a): Frisian customarily omits diacritics on capital letters, so 'Ut' is the normal capitalized form of 'út'.
+- `show_biometric_button_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — auto-suggest (2026-11-06, string 3a59d31b): Frisian customarily omits diacritics on capital letters, so 'Untskoattelje' is the normal capitalized spelling of 'ûntskoattelje'.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fy-NL/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

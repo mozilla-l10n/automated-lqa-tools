@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -124,12 +124,18 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (0)
 
-- `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): French UI idiomatically names this permission category in the plural ("Notifications"), as in Firefox's French site-permission settings.
-- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): In Focus this setting autocompletes from a bundled list of globally popular sites, not the user's history, so "sites les plus populaires" is accurate.
+_Nothing dismissed._
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (2)
+
+- `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string d0da86d5): French UI idiomatically names this permission category in the plural ("Notifications"), as in Firefox's French site-permission settings.
+- `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string a1573859): In Focus this setting autocompletes from a bundled list of globally popular sites, not the user's history, so "sites les plus populaires" is accurate.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

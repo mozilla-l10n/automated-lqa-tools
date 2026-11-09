@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -81,6 +81,20 @@ The count includes Firefox for Android's strings for this locale, which the same
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
+
+### Proposed conventions — not applied (1)
+
+Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `focus_android/locales/sl/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
+
+- Short UI command labels (buttons, links, menu items, toggles and setting labels) use the 2nd-person singular imperative, e.g. "Obnovi podatke", "Posodobi", "Omogoči". This is the normal form for labels and does not break the formal register, so do not flag it. It also applies when running text quotes a button label: the quote must match the label's actual wording (e.g. "Obnovi podatke"), not a formal "Obnovite …" header. Still flag: full sentences, descriptions and messages addressed to the user that use informal ti-forms instead of the formal vi-forms, and quoted label text that differs from the referenced label string.
+    _Behind it: 6 dismissals, 2 of them rejected in Pontoon._
+
+    - `backup-file-moz-browser-restore-step-2-1` (firefox) — _rejected, reviewer's comment_: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je "Obnovi podatke". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>
+    - `backup-file-other-browser-restore-step-3-1` (firefox) — _rejected, reason inferred_: The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
+    - `link_sharing_toggle_title` (android) — _model_: Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
+    - `onboarding_term_of_service_line_three_link_text` (android) — _model_: Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
+    - `preference_enhanced_tracking_protection_custom_global_privacy_control` (android) — _model_: Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
+    - `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` (firefox_ios) — _model_: Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
 
 ---
 
@@ -164,12 +178,18 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (0)
 
-- `menu_share` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Slovenian typography and the sl Mozilla localization put a space before an ellipsis that follows a complete word (e.g. "Shrani kot …").
-- `preference_licensing_info` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): "Dovoljenje" is the standard Slovenian term for a software licence (e.g. GPL = "Splošno javno dovoljenje GNU").
+_Nothing dismissed._
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (2)
+
+- `menu_share` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 76af4239): Slovenian typography and the sl Mozilla localization put a space before an ellipsis that follows a complete word (e.g. "Shrani kot …").
+- `preference_licensing_info` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string a487408b): "Dovoljenje" is the standard Slovenian term for a software licence (e.g. GPL = "Splošno javno dovoljenje GNU").
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 
