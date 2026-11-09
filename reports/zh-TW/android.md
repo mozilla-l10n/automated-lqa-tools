@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 2 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -85,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
@@ -93,18 +92,11 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$quantity ->} [one] 要刪除檔案嗎？ [other] 要刪除 %d 個檔案嗎？`
-    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `nova_onboarding_customize_prompt_body` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — `nova_onboarding_customize_prompt_body` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$quantity ->} [one] 在您上網時，%1$s 封鎖了 %2$,d 組追蹤器。 [other] 在您上網時，%1$s 封鎖了 %2$,d 組追蹤器。`
-    - Source: `{$quantity ->} [one] %1$s blocked %2$,d tracker while you roamed the web. [other] %1$s blocked %2$,d trackers while you roamed the web.`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

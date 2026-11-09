@@ -125,7 +125,7 @@ Conditions inside `match` are ANDed.
 
 | Field | Matches against |
 |---|---|
-| `check` | which check raised it: `placeholders`, `selectors`, `plurals`, `escaping`, `markup`, `typography`, or `llm` |
+| `check` | which check raised it: `placeholders`, `selectors`, `escaping`, `markup`, `typography`, or `llm` |
 | `category` | the report category, `A`–`E` |
 | `string_id` | exact, `prefix*`, or `re:<regex>` |
 | `file` | exact, `prefix*`, or `re:<regex>` |

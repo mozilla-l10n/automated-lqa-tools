@@ -413,7 +413,11 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
         "## 2. Systemic items (decisions, not line items)",
         "",
         _systemic(systemic),
-        proposals_mod.render(proposals or [], meta.get("project", ""), locale),
+        # Spliced in only when there is something: an empty entry would
+        # still be joined as a line, and change every report's text.
+        *[text for text in [proposals_mod.render(proposals or [],
+                                                 meta.get("project", ""), locale)]
+          if text],
         "---",
         "",
         f"## 3. Open findings ({len(open_findings)})",

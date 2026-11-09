@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 1 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -89,7 +88,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (142)
+## 3. Open findings (141)
 
 
 | Impact | Meaning | Count |
@@ -97,14 +96,11 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 110 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
-| 4 | Cosmetic (typography, spacing) | 7 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
-- `downloads_delete_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — `downloads_delete_dialog_title` has plural variant ['one'], which ja does not have
-    - Current: `{$quantity ->} [one] ファイルを削除しますか？ [other] %d 個のファイルを削除しますか？`
-    - Source: `{$quantity ->} [one] Delete file? [other] Delete %d files?`
-    - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

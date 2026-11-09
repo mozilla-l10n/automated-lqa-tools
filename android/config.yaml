@@ -57,7 +57,8 @@ checks:
   # catch nothing extra across fourteen locales.
   - placeholders
   - selectors
-  - plurals
+  # `plurals` is deliberately absent: it cannot raise a correct finding
+  # here. See tools/checks.py.
   - escaping
   - markup
   - ui_references

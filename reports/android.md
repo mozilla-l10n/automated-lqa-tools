@@ -2,7 +2,7 @@
 
 - **Generated:** 2026-11-09
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,367 raised, 625 fixed (18%), 2,430 open
+- **Findings:** 3,360 raised, 625 fixed (18%), 2,423 open
 - **Closed by a person:** 105 dismissed, 59 suppressed by rule
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
@@ -117,7 +117,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
 |---|---|---|---|---|---|---|---|---|---|---|
 | [ar](ar/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,366 | 235 | **121** | 49 | 0 | 0 | 0 |
-| [cs](cs/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,581 | 20 | **103** | 65 | 7 | 2 | 0 |
+| [cs](cs/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,581 | 20 | **101** | 65 | 7 | 2 | 0 |
 | [de](de/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **53** | 34 | 42 | 8 | 0 |
 | [el](el/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,590 | 11 | **30** | 13 | 0 | 0 | 0 |
 | [en-CA](en-CA/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **0** | 0 | 0 | 0 | 0 |
@@ -133,7 +133,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [hu](hu/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **128** | 67 | 0 | 0 | 0 |
 | [id](id/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,599 | 2 | **151** | 86 | 4 | 0 | 0 |
 | [it](it/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **0** | 0 | 43 | 11 | 4 |
-| [ja](ja/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **142** | 110 | 1 | 0 | 0 |
+| [ja](ja/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **141** | 110 | 1 | 0 | 0 |
 | [ko](ko/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **81** | 39 | 0 | 0 | 0 |
 | [nl](nl/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **59** | 32 | 2 | 0 | 0 |
 | [pl](pl/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **79** | 55 | 5 | 1 | 0 |
@@ -141,7 +141,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [pt-PT](pt-PT/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **73** | 24 | 2 | 0 | 0 |
 | [ro](ro/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,527 | 74 | **88** | 29 | 0 | 0 | 0 |
 | [ru](ru/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **144** | 81 | 1 | 0 | 0 |
-| [sk](sk/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **49** | 26 | 2 | 0 | 0 |
+| [sk](sk/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,576 | 25 | **47** | 26 | 2 | 0 | 0 |
 | [sl](sl/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,542 | 59 | **43** | 27 | 38 | 18 | 0 |
 | [sv-SE](sv-SE/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **70** | 29 | 2 | 0 | 0 |
 | [th](th/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,410 | 191 | **46** | 26 | 0 | 0 | 0 |
@@ -149,7 +149,7 @@ Too many to list here; the per-locale counts are in the table below and every on
 | [uk](uk/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,525 | 76 | **46** | 21 | 3 | 0 | 0 |
 | [vi](vi/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,525 | 76 | **50** | 27 | 1 | 0 | 0 |
 | [zh-CN](zh-CN/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,521 | 80 | **127** | 87 | 0 | 0 | 0 |
-| [zh-TW](zh-TW/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **3** | 1 | 48 | 13 | 0 |
+| [zh-TW](zh-TW/android.md) | 2026-11-09 | incremental | `bf7b409a` | 2,601 | 0 | **1** | 1 | 48 | 13 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

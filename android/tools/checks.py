@@ -10,10 +10,19 @@ There is deliberately no `translatable="false"` check: the android-l10n
 repository exports only translatable strings, so the attribute never appears
 and the check could not fire.
 
-`plurals` does not report a dead variant in a locale whose only plural
-category is `other`. A plural form cannot be removed from an Android string,
-so zh-TW's and ja's unreachable `one` has no fix: the three findings raised
-for it were reported as noise. A missing form is still reported (cs, sk).
+Nor is there a `plurals` check, because every finding it can raise here is
+wrong (checked against all 34 locales' 623 plurals on 2026-11-09):
+
+- *A missing form.* Pontoon has the translator fill every form in the
+  locale's own plural definition, and exports the last of them as Android's
+  `other`. Measured against CLDR, or against the tree's majority, that read
+  as gaps: cs and sk were told to add `many`, which Pontoon does not use
+  for them (17 older strings each still carry one); pl, ru and uk "lack"
+  `many` because it is written as `other`.
+- *A variant the language never selects.* Only a language without `one`
+  can have one, and each of those (id, ja, ko, th, vi, zh-CN, zh-TW) has
+  only `other`. The `one` they carry comes from en-US, and a plural form
+  cannot be removed from an Android string, so the finding has no fix.
 """
 
 from __future__ import annotations
@@ -21,12 +30,7 @@ from __future__ import annotations
 import android_checks
 import common_checks as common
 
-CHECKS = {
-    **common.CHECKS,
-    **android_checks.CHECKS,
-    "plurals": lambda c: common.check_plurals(c.locale, c.l10n, c.source,
-                                              dead_removable=False),
-}
+CHECKS = {**common.CHECKS, **android_checks.CHECKS}
 
 
 def run_all(project, locale, trees, counts):

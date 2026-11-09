@@ -29,8 +29,6 @@ MUST_FIND = [
     # The Czech strings drop a placeholder the source passes -- from every
     # category, so the count never reaches the user.
     ("cs", "placeholders", "recently_closed_tab"),
-    # Czech uses `many` in most of its plurals and leaves it out here.
-    ("cs", "plurals", "mozac_feature_listentopage_notification_skip_back"),
 ]
 
 # Defects these checks caught that have since been fixed upstream. Kept
@@ -48,12 +46,6 @@ FIXED_UPSTREAM = [
 MUST_BE_SILENT = [
     ("it", "placeholders", "Italian placeholders are correct"),
     ("it", "escaping", "Italian escaping is correct"),
-    ("it", "plurals", "Italian plurals are correct"),
-    # Japanese and Chinese have only `other`, so the `one` variant en-US
-    # brings is unreachable -- and Android will not let it be removed, so
-    # reporting it gives the team a finding with no fix.
-    ("ja", "plurals", "Japanese is not blamed for a `one` it cannot remove"),
-    ("zh-TW", "plurals", "Traditional Chinese is not blamed for a `one` it cannot remove"),
     ("it", "markup", "Italian markup is correct"),
     ("fr", "placeholders", "French placeholders are correct"),
     ("de", "ui_references", "German UI references are consistent"),

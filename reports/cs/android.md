@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 2 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 2 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -89,26 +88,19 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (103)
+## 3. Open findings (101)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 36 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-- `mozac_feature_listentopage_notification_skip_back` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — `mozac_feature_listentopage_notification_skip_back` is missing the ['many'] plural form
-    - Current: `{$quantity ->} [one] Zpět %1$d sekunda [few] Zpět %1$d sekundy [other] Zpět %1$d sekund`
-    - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
-    - This locale uses ['few', 'many', 'one', 'other'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `mozac_feature_listentopage_notification_skip_forward` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — `mozac_feature_listentopage_notification_skip_forward` is missing the ['many'] plural form
-    - Current: `{$quantity ->} [one] Vpřed o %1$d sekundu [few] Vpřed o %1$d sekundy [other] Vpřed o %1$d sekund`
-    - Source: `{$quantity ->} [one] Forward %1$d second [other] Forward %1$d seconds`
-    - This locale uses ['few', 'many', 'one', 'other'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
+_Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
