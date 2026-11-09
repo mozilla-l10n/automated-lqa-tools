@@ -1266,6 +1266,214 @@
    "pontoon_url": "https://pontoon.mozilla.org/sl/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335626",
    "outcome": "dismissed",
    "note": "rejected with the translation unchanged; dismissed"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_file_not_found_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_file_not_found_message"
+    ]
+   },
+   "fids": [
+    "62b7b05f663f"
+   ],
+   "findings": [
+    "Second bullet limits the spelling check to the file name instead of the address as in the source."
+   ],
+   "source": "{ <ul> }\n{ <li> }Could the item have been renamed, removed, or relocated?{ </li> }\n{ <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> }\n{ <li> }Do you have sufficient access permissions to the requested item?{ </li> }\n{ </ul> }",
+   "original": "<ul>\n<li>Morda je bila želena datoteka preimenovana, izbrisana ali prestavljena.</li>\n<li>Je njeno ime napačno črkovano, napisano z nepravilnimi velikimi in malimi črkami ali kako drugače narobe napisano?</li>\n<li>Imate ustrezna dovoljenja za dostop do želene datoteke?</li>\n</ul>",
+   "text": "<ul>\n<li>Morda je bila želena datoteka preimenovana, izbrisana ali prestavljena.</li>\n<li>Je naslov napačno črkovan, napisan z nepravilnimi velikimi in malimi črkami ali kako drugače narobe napisan?</li>\n<li>Imate ustrezna dovoljenja za dostop do želene datoteke?</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description"
+    ]
+   },
+   "fids": [
+    "0c6e3aa6e3e3"
+   ],
+   "findings": [
+    "Imperative \"Deli\" breaks the noun-phrase pattern used by all other long descriptions in the same list."
+   ],
+   "source": "Share technical and interaction data with extension developer",
+   "original": "Deli tehnične in interakcijske podatke z razvijalcem razširitve",
+   "text": "deljenje tehničnih in interakcijskih podatkov z razvijalcem razširitve",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_trial_ml_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_trial_ml_description"
+    ]
+   },
+   "fids": [
+    "bbb1f9a30d1f"
+   ],
+   "findings": [
+    "Permission description uses an imperative verb form instead of the nominalized lowercase pattern used by all other permission descriptions."
+   ],
+   "source": "Download and run AI models on your device",
+   "original": "Prenesite in uporabljajte modele z umetno inteligenco na svoji napravi",
+   "text": "prenos in uporaba modelov z umetno inteligenco na svoji napravi",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_phone_feature_cross_origin_storage_access",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_phone_feature_cross_origin_storage_access"
+    ]
+   },
+   "fids": [
+    "0aa65b636a87"
+   ],
+   "findings": [
+    "\"Cross-site cookies\" is translated as \"Spletni piškotki\" (web cookies), losing the cross-site meaning."
+   ],
+   "source": "Cross-site cookies",
+   "original": "Spletni piškotki",
+   "text": "Piškotki med spletnimi mesti",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_delete_browsing_data_downloads",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_delete_browsing_data_downloads"
+    ]
+   },
+   "fids": [
+    "43f4a170067a"
+   ],
+   "findings": [
+    "Checkbox item in \"Delete browsing data\" list uses nominative instead of the accusative used by the sibling items."
+   ],
+   "source": "Downloads",
+   "original": "Prenosi",
+   "text": "Prenose",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_suggestions_onboarding_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_suggestions_onboarding_title"
+    ]
+   },
+   "fids": [
+    "8c45f683ffce"
+   ],
+   "findings": [
+    "\"private sessions\" is translated as \"zasebnih oknih\" (private windows)."
+   ],
+   "source": "Allow search suggestions in private sessions?",
+   "original": "Dovolite predloge iskanja v zasebnih oknih?",
+   "text": "Dovolite predloge iskanja v zasebnih sejah?",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "settings_search_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "settings_search_title"
+    ]
+   },
+   "fids": [
+    "ddcd56c3ed03"
+   ],
+   "findings": [
+    "\"Search settings\" as a verb phrase (search through settings) is rendered as the noun phrase \"Nastavitve iskanja\" (settings of search)."
+   ],
+   "source": "Search settings",
+   "original": "Nastavitve iskanja",
+   "text": "Preišči nastavitve",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "tab_manager_empty_tab_groups_page_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "tab_manager_empty_tab_groups_page_description"
+    ]
+   },
+   "fids": [
+    "3895e09459bb"
+   ],
+   "findings": [
+    "\"They're saved here\" is mistranslated as \"Vanjo bodo shranjeni\" (saved into the group) and expanded with content not in the source."
+   ],
+   "source": "Select tabs to create a group. They’re saved here, ready when you are.",
+   "original": "Izberite zavihke, iz katerih želite ustvariti skupino. Vanjo bodo shranjeni in pripravljeni na trenutek, ko jih boste potrebovali.",
+   "text": "Izberite zavihke, iz katerih želite ustvariti skupino. Tukaj bodo shranjeni in pripravljeni na trenutek, ko jih boste potrebovali.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

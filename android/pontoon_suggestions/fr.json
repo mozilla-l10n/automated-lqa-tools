@@ -707,6 +707,396 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336839",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_redirect_loop_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_redirect_loop_message"
+    ]
+   },
+   "fids": [
+    "e84d98105ae9"
+   ],
+   "findings": [
+    "\"The browser has stopped trying to retrieve the requested item\" is mistranslated as the browser stopping to wait for a response from the site."
+   ],
+   "source": "{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> }\n{ <ul> }\n{ <li> }Have you disabled or blocked cookies required by this site?{ </li> }\n{ <li> }If accepting the site’s cookies does not resolve the problem, it is likely a server configuration issue and not your device.{ </li> }\n{ </ul> }",
+   "original": "<p>Le navigateur a arrêté d’attendre une réponse du site. Le site crée une redirection de telle sorte que la requête ne peut jamais aboutir.</p>\n<ul>\n<li>Avez-vous désactivé ou bloqué les cookies nécessaires pour ce site ?</li>\n<li> Si le problème n’est pas résolu en acceptant les cookies de ce site, il s’agit probablement d’un problème de configuration du serveur et non de votre appareil.</li>\n</ul>",
+   "text": "<p>Le navigateur a cessé d’essayer de récupérer l’élément demandé. Le site crée une redirection de telle sorte que la requête ne peut jamais aboutir.</p>\n<ul>\n<li>Avez-vous désactivé ou bloqué les cookies nécessaires pour ce site ?</li>\n<li> Si le problème n’est pas résolu en acceptant les cookies de ce site, il s’agit probablement d’un problème de configuration du serveur et non de votre appareil.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_safe_browsing_malware_uri_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_safe_browsing_malware_uri_title"
+    ]
+   },
+   "fids": [
+    "dc5678531623"
+   ],
+   "findings": [
+    "\"Malware site issue\" is translated without the notion of \"site\", unlike the parallel titles."
+   ],
+   "source": "Malware site issue",
+   "original": "Problème de logiciel malveillant",
+   "text": "Problème de site malveillant",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "E",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_devtools_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_devtools_description_for_update"
+    ]
+   },
+   "fids": [
+    "403959497534"
+   ],
+   "findings": [
+    "The final period is missing, even though the developer comment says it matters because descriptions are concatenated."
+   ],
+   "source": "Extend developer tools to access your data in open tabs.",
+   "original": "Permettre aux outils de développement d’accéder à vos données dans les onglets ouverts",
+   "text": "Permettre aux outils de développement d’accéder à vos données dans les onglets ouverts.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_extra_domains_description_plural_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_extra_domains_description_plural_for_update"
+    ]
+   },
+   "fids": [
+    "0cd996ae4ef7"
+   ],
+   "findings": [
+    "\"Access your data on other domains.\" drops the possessive \"your data\"."
+   ],
+   "source": "Access your data on other domains.",
+   "original": "Accéder aux données d’autres domaines.",
+   "text": "Accéder à vos données d’autres domaines.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_one_extra_domain_description_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_one_extra_domain_description_2"
+    ]
+   },
+   "fids": [
+    "ed6a83bd2c62"
+   ],
+   "findings": [
+    "\"your data\" is dropped, giving \"les données\" instead of \"vos données\", inconsistent with the sibling strings."
+   ],
+   "source": "Access your data on another domain",
+   "original": "Accéder aux données d’un autre domaine",
+   "text": "Accéder à vos données d’un autre domaine",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_one_extra_domain_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_one_extra_domain_description_for_update"
+    ]
+   },
+   "fids": [
+    "b4911e139d25"
+   ],
+   "findings": [
+    "\"your data\" is dropped, giving \"les données\" instead of \"vos données\", inconsistent with the sibling strings."
+   ],
+   "source": "Access your data on another domain.",
+   "original": "Accéder aux données d’un autre domaine.",
+   "text": "Accéder à vos données d’un autre domaine.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_updater_permissions_dialog_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_updater_permissions_dialog_description"
+    ]
+   },
+   "fids": [
+    "10fa58360bb1"
+   ],
+   "findings": [
+    "The \"or\" between the two choices is missing, so the sentence is two orders joined by a comma."
+   ],
+   "source": "Cancel to keep your current version and settings, or update to get the new version and approve the changes.",
+   "original": "Annulez pour conserver la version et les paramètres actuels, mettez à jour pour obtenir la nouvelle version et approuver les changements.",
+   "text": "Annulez pour conserver la version et les paramètres actuels ou mettez à jour pour obtenir la nouvelle version et approuver les changements.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "automatic_translation_option_always_translate_summary_preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "automatic_translation_option_always_translate_summary_preference"
+    ]
+   },
+   "fids": [
+    "f88fa2b848c4"
+   ],
+   "findings": [
+    "The translation reverses the meaning: the source says the app will translate this (source) language automatically, not translate the page into this language."
+   ],
+   "source": "%1$s will translate this language automatically when the page loads.",
+   "original": "%1$s traduira automatiquement la page dans cette langue à son chargement.",
+   "text": "%1$s traduira automatiquement cette langue au chargement de la page.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "bookmark_import_failure_snackbar",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "bookmark_import_failure_snackbar"
+    ]
+   },
+   "fids": [
+    "ee9cdb6d0c43"
+   ],
+   "findings": [
+    "Wrong verb form: \"Veuillez réessayez\" should be the infinitive \"réessayer\"."
+   ],
+   "source": "Couldn’t import bookmarks. Try again.",
+   "original": "Impossible d’importer les marque-pages. Veuillez réessayez.",
+   "text": "Impossible d’importer les marque-pages. Veuillez réessayer.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "debug_drawer_addresses_debug_locales_header",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "debug_drawer_addresses_debug_locales_header"
+    ]
+   },
+   "fids": [
+    "176776cfca9a"
+   ],
+   "findings": [
+    "\"Debug locales to enable\" is mistranslated as an imperative \"Debug the locales to enable\"."
+   ],
+   "source": "Debug locales to enable",
+   "original": "Déboguer les locales à activer",
+   "text": "Locales de débogage à activer",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "debug_drawer_regin_tools_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "debug_drawer_regin_tools_description"
+    ]
+   },
+   "fids": [
+    "001c577199d8"
+   ],
+   "findings": [
+    "Incorrect expression \"à fin de tests\" instead of \"à des fins de test\"."
+   ],
+   "source": "Temporarily overrides the home and current region values for testing.",
+   "original": "Remplace temporairement les valeurs de région actuelle et du domicile à fin de tests.",
+   "text": "Remplace temporairement les valeurs de région actuelle et du domicile à des fins de test.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "delete_language_file_dialog_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "delete_language_file_dialog_message"
+    ]
+   },
+   "fids": [
+    "436fc55157f6"
+   ],
+   "findings": [
+    "The French says the app will download \"this language\" partially, whereas the source says it will download partial languages to the cache."
+   ],
+   "source": "If you delete this language, %1$s will download partial languages to your cache as you translate.",
+   "original": "Si vous supprimez cette langue, %1$s la téléchargera partiellement dans votre cache au fur et à mesure de vos demandes de traduction.",
+   "text": "Si vous supprimez cette langue, %1$s téléchargera des langues partielles dans votre cache au fur et à mesure de vos demandes de traduction.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "etp_suspected_fingerprinters_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "etp_suspected_fingerprinters_description"
+    ]
+   },
+   "fids": [
+    "8efb79fda95c"
+   ],
+   "findings": [
+    "Infinitive \"Activer\" used where the source is a descriptive third-person statement (\"Enables\")."
+   ],
+   "source": "Enables fingerprinting protection to stop suspected fingerprinters.",
+   "original": "Activer la protection contre les empreintes numériques pour bloquer les détecteurs d’empreintes numériques suspectés.",
+   "text": "Active la protection contre les empreintes numériques pour bloquer les détecteurs d’empreintes numériques suspectés.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translations_bottom_sheet_translating_in_progress",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translations_bottom_sheet_translating_in_progress"
+    ]
+   },
+   "fids": [
+    "72c35fe55341"
+   ],
+   "findings": [
+    "\"Translating\" (action in progress) is rendered as the noun \"Traduction\"."
+   ],
+   "source": "Translating",
+   "original": "Traduction",
+   "text": "Traduction en cours",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "webcompat_reporter_reason_checkout",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "webcompat_reporter_reason_checkout"
+    ]
+   },
+   "fids": [
+    "66f281e176d2"
+   ],
+   "findings": [
+    "The dropdown option drops \"check out\" and switches to a first-person phrasing unlike the other options."
+   ],
+   "source": "Can’t pay, check out or shop",
+   "original": "Je ne peux pas payer ou faire des achats",
+   "text": "Je ne peux pas payer, finaliser la commande ou faire des achats",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

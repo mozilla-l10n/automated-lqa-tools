@@ -1386,6 +1386,292 @@
    "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=318907",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/browser/toolbar/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_toolbar_content_description_tracking_protection_on_no_trackers_blocked",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/toolbar/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_toolbar_content_description_tracking_protection_on_no_trackers_blocked"
+    ]
+   },
+   "fids": [
+    "f65146d08dd4"
+   ],
+   "findings": [
+    "\"Tracking Protection\" is translated as \"Schutz vor Aktivitätenverfolgung\" here but as \"Tracking-Schutz\" in the two neighbouring toolbar strings."
+   ],
+   "source": "Tracking Protection is on",
+   "original": "Schutz vor Aktivitätenverfolgung ist an",
+   "text": "Tracking-Schutz ist an",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_find_description_for_update",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_find_description_for_update"
+    ]
+   },
+   "fids": [
+    "718167e589fe"
+   ],
+   "findings": [
+    "\"Read the text of all open tabs\" is rendered as \"access the texts\", losing the \"read\" meaning."
+   ],
+   "source": "Read the text of all open tabs.",
+   "original": "Auf Texte aller offenen Tabs zugreifen.",
+   "text": "Den Text aller offenen Tabs lesen.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_history_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_history_description"
+    ]
+   },
+   "fids": [
+    "b4a734011769"
+   ],
+   "findings": [
+    "Same source string \"Access browsing history\" is translated inconsistently with its _for_update counterpart (\"Auf die Surf-Chronik zugreifen\")."
+   ],
+   "source": "Access browsing history",
+   "original": "Auf Chronik zugreifen",
+   "text": "Auf die Surf-Chronik zugreifen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values/strings.xml",
+   "string_id": "mozac_tab_counter_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_tab_counter_content_description"
+    ]
+   },
+   "fids": [
+    "7b2b71a71a51"
+   ],
+   "findings": [
+    "The compound is mis-parsed: the source describes the tab counter button in the toolbar, not a button of a \"tab counter toolbar\"."
+   ],
+   "source": "The tab counter toolbar button.",
+   "original": "Die Schaltfläche der Tab-Zähler-Symbolleiste.",
+   "text": "Die Tab-Zähler-Schaltfläche in der Symbolleiste.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "bookmark_sort_menu_custom",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "bookmark_sort_menu_custom"
+    ]
+   },
+   "fids": [
+    "efec3ae0d2c2"
+   ],
+   "findings": [
+    "\"Sort by custom order\" is rendered only as \"Benutzerdefiniert\", dropping the sorting verb present in all sibling sort options."
+   ],
+   "source": "Sort by custom order",
+   "original": "Benutzerdefiniert",
+   "text": "Nach benutzerdefinierter Reihenfolge sortieren",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "certificate_warning_homepage_card_hcr1_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "certificate_warning_homepage_card_hcr1_message"
+    ]
+   },
+   "fids": [
+    "82fec7bb2d71"
+   ],
+   "findings": [
+    "Future conditional \"will ... stop working\" is rendered as a present-tense statement, and \"nicht mehr richtig\" loses the causal link."
+   ],
+   "source": "A root certificate will expire, causing your version of Firefox to stop working properly.",
+   "original": "Ein Stammzertifikat läuft ab, und Ihre Firefox-Version funktioniert nicht mehr richtig.",
+   "text": "Ein Stammzertifikat läuft ab, weshalb Ihre Firefox-Version nicht mehr richtig funktioniert.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "lens_opt_out_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "lens_opt_out_description"
+    ]
+   },
+   "fids": [
+    "8b2637cb8886"
+   ],
+   "findings": [
+    "\"an image\" is rendered as \"eine Grafik\" (a graphic) instead of \"ein Bild\"."
+   ],
+   "source": "Choose an image or use your camera to get results with Google Lens.",
+   "original": "Wählen Sie eine Grafik aus oder verwenden Sie Ihre Kamera, um mit Google Lens Ergebnisse zu erhalten.",
+   "text": "Wählen Sie ein Bild aus oder verwenden Sie Ihre Kamera, um mit Google Lens Ergebnisse zu erhalten.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_line_three",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_line_three"
+    ]
+   },
+   "fids": [
+    "8f77c6f27d94"
+   ],
+   "findings": [
+    "The German sentence reverses the meaning: it asks whether the user \"may\" help someone succeed instead of asking them to grant permission to help Firefox win."
+   ],
+   "source": "Please consider allowing to help Firefox win.",
+   "original": "Bitte überlegen Sie, ob Sie mit dieser Erlaubnis zum Erfolg verhelfen dürfen.",
+   "text": "Bitte überlegen Sie, ob Sie Firefox mit dieser Erlaubnis zum Erfolg verhelfen möchten.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preferences_passwords_autofill_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preferences_passwords_autofill_description"
+    ]
+   },
+   "fids": [
+    "a6eda644e8e4"
+   ],
+   "findings": [
+    "The translation drops \"save\" and only describes filling in usernames and passwords."
+   ],
+   "source": "Fill and save usernames and passwords in websites while using %1$s.",
+   "original": "Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.",
+   "text": "Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s ausfüllen und speichern.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "protection_panel_etp_toggle_enabled_description_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "protection_panel_etp_toggle_enabled_description_2"
+    ]
+   },
+   "fids": [
+    "c08d7a1ed40a"
+   ],
+   "findings": [
+    "\"looks broken\" is mistranslated as \"beschädigt aussieht\" and the imperative drops the \"try\" hedge."
+   ],
+   "source": "If something looks broken on this site, try turning it off.",
+   "original": "Wenn etwas auf dieser Website beschädigt aussieht, deaktivieren Sie ihn.",
+   "text": "Wenn etwas auf dieser Website fehlerhaft aussieht, versuchen Sie, ihn zu deaktivieren.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "wrex_widget_match_penalties",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "wrex_widget_match_penalties"
+    ]
+   },
+   "fids": [
+    "8d1d172189ce"
+   ],
+   "findings": [
+    "Typo: \"Elfmeterschließen\" should be \"Elfmeterschießen\"."
+   ],
+   "source": "Penalties",
+   "original": "Elfmeterschließen",
+   "text": "Elfmeterschießen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }
