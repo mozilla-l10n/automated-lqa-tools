@@ -16664,30 +16664,6 @@
  {
   "category": "C",
   "check": "llm",
-  "current": "Untlade",
-  "dismissed_because": "",
-  "fid": "9e1f3cef14ea",
-  "file": "toolkit/toolkit/about/aboutProcesses.ftl",
-  "first_seen": "2026-11-08",
-  "impact": 3,
-  "last_seen": "2026-11-08",
-  "locale": "fy-NL",
-  "origin": {
-   "confidence": "high"
-  },
-  "rationale": "The same verb is spelled \"ûntlade\"/\"ûntlaad\" in about-processes-unload-site and the Resource monitor description; without Û it is a misspelling.",
-  "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
-  "string_hash": "1f8abcf3",
-  "string_id": "about-processes-bulk-unload-tabs",
-  "suggest": "Ûntlade",
-  "summary": "\"Untlade\" is missing the circumflex; the Frisian word is \"Ûntlade\".",
-  "suppressed_by": ""
- },
- {
-  "category": "C",
-  "check": "llm",
   "current": "Alle ynklappe",
   "dismissed_because": "",
   "fid": "4db14c2523fc",
