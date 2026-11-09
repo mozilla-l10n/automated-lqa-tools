@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **Previous run** | 2026-11-05 @ `df599b08d244` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **Previous run** | 2026-11-08 @ `050d29471acf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 1,983 |
+| **Strings reviewed this run** | 0 of 1,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `050d29471acf` |
-| **Previous run** | 2026-11-05 @ `df599b08d244` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
+| **Previous run** | 2026-11-08 @ `050d29471acf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,983 |
+| **Strings reviewed this run** | 0 of 1,983 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,17 +22,9 @@ Also for it: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — `QuickAnswers.ContentView.NewQuestionButton.v161` uses a straight apostrophe
-    - Current: `Fai un'altra domanda`
-    - Source: `Ask a New Question`
-    - The tree uses ’ 76 times against 1 straight.
-- `QuickAnswers.ContentView.NewQuestionButton.v161` — `it/firefox-ios.xliff` — This string uses a straight apostrophe, but the locale convention is the typographic one (’).
-    - Current: `un'altra`
-    - Source: `Ask a New Question`
-    - Suggest: `un’altra`
-    - The Italian convention for this locale is the typographic apostrophe, and other strings in the batch already use it (e.g. dell’informativa).
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
