@@ -27,10 +27,20 @@ dismissal is recorded on the finding with its reason.
 from __future__ import annotations
 
 import os
+import re
 
 # Any of these separates the string from the reason, so nobody has to
 # remember which dash to type.
 _SEPARATORS = ("—", " -- ", " – ", " - ")
+
+# Written by the Pontoon suggestions workflow (`autosuggest`) when its model
+# judged a finding wrong or could not confirm it. No person decided those,
+# so they are counted apart from dismissals that a person made -- in
+# Pontoon (`pontoon-rejected`) or by hand -- and they carry the hash of the
+# string they were judged on, so they lapse when it changes (`withdraw_moved`).
+FIXER_TAG = "auto-suggest"
+_FIXER = re.compile(rf"^{FIXER_TAG} \((?P<date>\d{{4}}-\d{{2}}-\d{{2}})"
+                    r"(?:, string (?P<hash>[0-9a-f]+))?\): ")
 
 
 def path(project, locale: str) -> str:
@@ -58,10 +68,52 @@ def load(project, locale: str) -> dict[tuple[str, str | None], str]:
     return entries
 
 
-def line(string_id: str, file: str, tag: str, date: str, reason: str) -> str:
-    """A dismissal written by a tool, ``tag`` saying which one and ``date`` when."""
+def line(string_id: str, file: str, tag: str, date: str, reason: str,
+         anchor: str = "") -> str:
+    """A dismissal written by a tool, ``tag`` saying which one and ``date`` when.
+
+    ``anchor`` is the hash of the string the judgement was made on, for a
+    dismissal that should lapse once the string changes.
+    """
     reason = " ".join(reason.split())
-    return f"{string_id} @ {file} — {tag} ({date}): {reason}"
+    when = f"{date}, string {anchor}" if anchor else date
+    return f"{string_id} @ {file} — {tag} ({when}): {reason}"
+
+
+def by_fixer(reason: str) -> bool:
+    """Whether a finding's dismissal reason was written by the fixer model."""
+    return bool(_FIXER.match(reason or ""))
+
+
+def withdraw_moved(path: str, messages: dict, write: bool = True) -> list[str]:
+    """Remove the fixer's dismissals whose string has changed; return them.
+
+    The fixer judged one text. A dismissal keyed by string id alone would go
+    on hiding every finding on that string, raised on any later text, for
+    good -- so once the string moves, the line goes and the string is
+    reviewed like any other. A line without an anchor, or for a string no
+    longer in the tree, is left alone; a person's line is never touched.
+    """
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        lines = fh.readlines()
+    gone = []
+    for raw in lines:
+        text = raw.strip()
+        head, sep, reason = text.partition(" — ")
+        m = _FIXER.match(reason) if sep else None
+        if not m or not m["hash"]:
+            continue
+        sid, _, where = head.partition(" @ ")
+        msg = messages.get((where.strip(), sid.strip()))
+        if msg is not None and msg.hash() != m["hash"]:
+            gone.append(text)
+    if gone and write:
+        drop = set(gone)
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.writelines(x for x in lines if x.strip() not in drop)
+    return gone
 
 
 def append(path: str, lines: list[str]) -> int:

@@ -21,6 +21,7 @@ import re
 from dataclasses import dataclass, field
 
 import conventions as conv
+import dismiss as dismiss_mod
 import findings as findings_mod
 import proposals as proposals_mod
 from config import CHECKS_ONLY
@@ -306,7 +307,10 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
     ctx = ctx or Ctx()
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
-    dismissed = [f for f in findings if f.status == "dismissed"]
+    dismissed = [f for f in findings if f.status == "dismissed"
+                 and not dismiss_mod.by_fixer(f.dismissed_because)]
+    by_fixer = [f for f in findings if f.status == "dismissed"
+                and dismiss_mod.by_fixer(f.dismissed_because)]
     fixed_total = [f for f in findings if f.status == "fixed"]
     withdrawn_total = [f for f in findings if f.status == "withdrawn"]
 
@@ -454,6 +458,21 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
         "",
         "_One line each in `locales/"
         f"{locale}/dismissed.txt`. Delete the line and the finding returns._",
+        "",
+        f"### Closed by the fixer ({len(by_fixer)})",
+        "",
+        (
+            "\n".join(
+                f"- `{f.string_id}` — `{ctx.path(f.file)}` — {f.dismissed_because}"
+                for f in sorted(by_fixer, key=lambda f: f.string_id)[:40]
+            )
+            or "_Nothing closed by the fixer._"
+        ),
+        "",
+        "_The Pontoon suggestions workflow's model judged these wrong, or could "
+        "not confirm them (`unreliable finding`); no person has decided. Each "
+        "lapses when its string changes, and deleting its line in "
+        f"`locales/{locale}/dismissed.txt` brings the finding back now._",
         "",
         f"### Suppressed as false positives ({len(suppressed)})",
         "",

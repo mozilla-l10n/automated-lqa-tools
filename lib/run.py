@@ -353,7 +353,18 @@ def process(project, locale, l10n_root, source_root, args, log) -> dict:
     # lose the reason with it. Running dismissals first also means a finding
     # whose dismissal line was deleted is available to a class rule in the
     # same run rather than the next one.
+    #
+    # First, the fixer's dismissals whose string has moved since it judged
+    # it: what they said is about a text that no longer exists. Withdrawn
+    # rather than kept, so the findings they hid come back into view.
+    lapsed = dismiss.withdraw_moved(dismiss.path(project, locale), l10n,
+                                    write=not args.dry_run)
+    for text in lapsed:
+        log(f"  withdrew a fixer dismissal, its string has changed: {text.split(' — ')[0]}")
     dismissals = dismiss.load(project, locale)
+    for text in lapsed:  # still in the file on a dry run
+        sid, _, where = text.split(" — ")[0].partition(" @ ")
+        dismissals.pop((sid.strip(), where.strip() or None), None)
     dropped = dismiss.apply(dismissals, stored)
     if dropped:
         log(f"  dismissed by hand: {sum(dropped.values())}")

@@ -513,6 +513,60 @@ def run(suite) -> None:
     check(set(autosuggest.CLOSING) | {"fix", "skip"} == set(enum),
           "every verdict the model may give is handled, and nothing else")
 
+    suite.section("The fixer's dismissal lapses with the text it judged, and is not a person's")
+    # A dismissal is keyed by string id. Written by the fixer about one text,
+    # it went on hiding every finding raised on that string afterwards, on
+    # any text, for good.
+    import tempfile
+
+    import dismiss as dz
+    import summary as sm
+
+    class _M:
+        def __init__(self, h):
+            self.h = h
+
+        def hash(self):
+            return self.h
+
+    with tempfile.TemporaryDirectory() as tmp:
+        dpath = os.path.join(tmp, "dismissed.txt")
+        kept_person = "p @ a.xml — fine, I read it\n"
+        kept_old = "o @ a.xml — auto-suggest (2026-11-02): no anchor, so never withdrawn\n"
+        kept_same = dz.line("s", "a.xml", dz.FIXER_TAG, "2026-11-09", "r", "aaaa1111") + "\n"
+        moved = dz.line("m", "a.xml", dz.FIXER_TAG, "2026-11-09", "r", "bbbb2222") + "\n"
+        gone_str = dz.line("g", "a.xml", dz.FIXER_TAG, "2026-11-09", "r", "cccc3333") + "\n"
+        rejected = "m @ a.xml — pontoon-rejected (2026-11-05): rejected in Pontoon: no\n"
+        with open(dpath, "w", encoding="utf-8") as fh:
+            fh.writelines([kept_person, kept_old, kept_same, moved, gone_str, rejected])
+        msgs = {("a.xml", "p"): _M("x"), ("a.xml", "o"): _M("x"),
+                ("a.xml", "s"): _M("aaaa1111"), ("a.xml", "m"): _M("dddd4444")}
+        check(dz.withdraw_moved(dpath, msgs, write=False) == [moved.strip()]
+              and moved in open(dpath, encoding="utf-8").read(),
+              "a dry run names the lapsed line and leaves the file alone")
+        out = dz.withdraw_moved(dpath, msgs)
+        after = open(dpath, encoding="utf-8").read()
+        check(out == [moved.strip()] and moved not in after,
+              "the fixer's line goes once its string's text changes")
+        check(all(x in after for x in (kept_person, kept_old, kept_same, gone_str, rejected)),
+              "a person's line, a Pontoon rejection, an unanchored or unchanged one, "
+              "and one whose string has left the tree all stay")
+    check(dz.by_fixer("auto-suggest (2026-11-09, string ab12): unreliable finding: x")
+          and dz.by_fixer("auto-suggest (2026-11-02): x")
+          and not dz.by_fixer("pontoon-rejected (2026-11-05): rejected in Pontoon: no")
+          and not dz.by_fixer("fine, I read it"),
+          "the fixer's lines are told from a person's and from a Pontoon reviewer's")
+    closed = {k: t for k, _, t in sm._CLOSED}
+    mine = _f(status="dismissed", dismissed_because="auto-suggest (2026-11-09): x")
+    theirs = _f(status="dismissed", dismissed_because="pontoon-rejected (2026-11-05): no")
+    check(closed["fixer"](mine) and not closed["person"](mine)
+          and closed["person"](theirs) and not closed["fixer"](theirs),
+          "so the pull request counts the fixer's closures apart from people's")
+    check(sum(1 for _, _, t in sm._CLOSED
+              for f in (mine, theirs, _f(status="suppressed"), _f(status="fixed"))
+              if t(f)) == 4,
+          "and every closed finding lands in exactly one bucket")
+
     suite.section("A locale read-only in Pontoon is never worked on")
     check(config.load("firefox").pontoon_readonly("it"),
           "Italian is read-only for Firefox in Pontoon")
@@ -525,7 +579,7 @@ def run(suite) -> None:
                   impact=1, summary="ok",
                   current='<img src="https://evil.example/t.png"><script>x</script>')
     empty = {k: [] for k in ("first_run", "new", "reopened", "recheck", "gone",
-                             "fixed", "withdrawn", "person", "obsolete")}
+                             "fixed", "withdrawn", "person", "fixer", "obsolete")}
     held = digest.Outcome(fx, pr={"number": 1, "url": "https://example/1"},
                           reasons=["it changes locale instructions"],
                           delta=dict(empty, locales={}))
@@ -544,13 +598,18 @@ def run(suite) -> None:
               "--- a/x/locales/it/dismissed.txt\n+++ b/x/locales/it/dismissed.txt\n"
               "@@ -5,0 +6 @@\n")
     tagged = "s @ a.xml — pontoon-rejected (2026-10-20): rejected in Pontoon: no"
-    check(digest.only_pontoon_dismissals(header + "+" + tagged),
+    check(digest.only_tool_dismissals(header + "+" + tagged),
           "appended Pontoon dismissals do not hold the pull request")
-    check(not digest.only_pontoon_dismissals(header + "+" + tagged + "\n+t — fine"),
+    check(not digest.only_tool_dismissals(header + "+" + tagged + "\n+t — fine"),
           "but a person's own line alongside them does")
-    check(not digest.only_pontoon_dismissals(
+    check(not digest.only_tool_dismissals(
         header.replace("dismissed.txt", "conventions.md") + "+" + tagged),
           "and so does any other file under locales/")
+    fixer = "s @ a.xml — auto-suggest (2026-11-09, string 59767936): unreliable finding: x"
+    check(digest.only_tool_dismissals(header.replace("+6", "+5,0") + "-" + fixer),
+          "a run withdrawing the fixer's line for a changed string does not hold it")
+    check(not digest.only_tool_dismissals(header + "+" + fixer),
+          "but the fixer's line being added in a QA pull request does")
 
     # --- Pontoon review outcomes ---------------------------------------------
     suite.section("A Pontoon review moves a suggestion on only as far as it shows")
@@ -749,7 +808,7 @@ def run(suite) -> None:
         "comment; likely reason (inferred): capital initials take no accent",
         "e @ x.ftl — pontoon-rejected (2026-11-05): rejected in Pontoon: Ut is right",
         "f @ y.xml — auto-suggest (2026-11-06): capital U drops the circumflex",
-        "g @ y.xml — auto-suggest (2026-11-06): capital O drops the circumflex",
+        "g @ y.xml — auto-suggest (2026-11-06, string 0a1b2c3d): capital O drops the circumflex",
     ])
     items = prop.parse(text, "firefox")
     check([e["string_id"] for e in items] == ["d", "e", "f", "g"],

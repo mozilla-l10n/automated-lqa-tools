@@ -3,7 +3,8 @@
 - **Generated:** 2026-11-09
 - **Locales tracked:** 30 (30 with recorded state)
 - **Findings:** 9,687 raised, 2,703 fixed (27%), 6,242 open
-- **Closed by a person:** 88 dismissed, 16 suppressed by rule
+- **Closed by a person:** 68 dismissed, 16 suppressed by rule
+- **Closed by the fixer:** 20 — the suggestions workflow's model judged them wrong or could not confirm them; no person has decided, and each lapses when its string changes
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -116,38 +117,38 @@ The value does not render as intended: a blank string, broken markup, a variable
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/firefox.md`.
 
-| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed |
-|---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 13,569 | 3,306 | **363** | 321 | 0 | 0 | 0 |
-| [cs](cs/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,805 | 70 | **258** | 170 | 4 | 0 | 0 |
-| [de](de/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,104 | 0 | **28** | 16 | 58 | 8 | 0 |
-| [el](el/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,805 | 70 | **219** | 210 | 0 | 0 | 0 |
-| [en-CA](en-CA/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,754 | 121 | **0** | 0 | 15 | 1 | 0 |
-| [en-GB](en-GB/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **21** | 12 | 14 | 0 | 12 |
-| [es-AR](es-AR/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,837 | 38 | **298** | 161 | 144 | 0 | 0 |
-| [es-ES](es-ES/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 15,371 | 1,504 | **46** | 24 | 113 | 0 | 0 |
-| [es-MX](es-MX/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,119 | 756 | **79** | 28 | 205 | 0 | 0 |
-| [fi](fi/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,206 | 669 | **157** | 147 | 0 | 0 | 0 |
-| [fr](fr/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,104 | 0 | **35** | 18 | 90 | 2 | 0 |
-| [fy-NL](fy-NL/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **191** | 69 | 573 | 39 | 0 |
-| [hu](hu/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **282** | 161 | 7 | 0 | 0 |
-| [id](id/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 13,922 | 2,953 | **291** | 220 | 3 | 0 | 0 |
-| [it](it/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,106 | 0 | **5** | 5 | 74 | 9 | 2 |
-| [ja](ja/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,773 | 120 | **150** | 76 | 274 | 0 | 0 |
-| [ko](ko/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **295** | 283 | 0 | 0 | 0 |
-| [nl](nl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **342** | 128 | 138 | 0 | 0 |
-| [pl](pl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,755 | 120 | **84** | 59 | 168 | 2 | 0 |
-| [pt-BR](pt-BR/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,801 | 74 | **550** | 192 | 141 | 5 | 0 |
-| [pt-PT](pt-PT/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,823 | 52 | **324** | 311 | 0 | 0 | 0 |
-| [ru](ru/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **611** | 320 | 182 | 0 | 0 |
-| [sk](sk/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,822 | 53 | **228** | 222 | 3 | 0 | 0 |
-| [sl](sl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,012 | 863 | **32** | 9 | 58 | 8 | 2 |
-| [sv-SE](sv-SE/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **344** | 313 | 9 | 0 | 0 |
-| [tr](tr/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,843 | 32 | **172** | 65 | 193 | 0 | 0 |
-| [uk](uk/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 15,393 | 1,482 | **203** | 194 | 0 | 0 | 0 |
-| [vi](vi/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,321 | 554 | **501** | 396 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,445 | 430 | **78** | 26 | 51 | 0 | 0 |
-| [zh-TW](zh-TW/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **55** | 39 | 186 | 14 | 0 |
+| Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed | Closed by fixer |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| [ar](ar/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 13,569 | 3,306 | **363** | 321 | 0 | 0 | 0 | 0 |
+| [cs](cs/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,805 | 70 | **258** | 170 | 4 | 0 | 0 | 0 |
+| [de](de/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,104 | 0 | **28** | 16 | 58 | 4 | 0 | 4 |
+| [el](el/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,805 | 70 | **219** | 210 | 0 | 0 | 0 | 0 |
+| [en-CA](en-CA/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,754 | 121 | **0** | 0 | 15 | 1 | 0 | 0 |
+| [en-GB](en-GB/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **21** | 12 | 14 | 0 | 12 | 0 |
+| [es-AR](es-AR/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,837 | 38 | **298** | 161 | 144 | 0 | 0 | 0 |
+| [es-ES](es-ES/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 15,371 | 1,504 | **46** | 24 | 113 | 0 | 0 | 0 |
+| [es-MX](es-MX/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,119 | 756 | **79** | 28 | 205 | 0 | 0 | 0 |
+| [fi](fi/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,206 | 669 | **157** | 147 | 0 | 0 | 0 | 0 |
+| [fr](fr/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,104 | 0 | **35** | 18 | 90 | 2 | 0 | 0 |
+| [fy-NL](fy-NL/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **191** | 69 | 573 | 26 | 0 | 13 |
+| [hu](hu/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **282** | 161 | 7 | 0 | 0 | 0 |
+| [id](id/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 13,922 | 2,953 | **291** | 220 | 3 | 0 | 0 | 0 |
+| [it](it/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 17,106 | 0 | **5** | 5 | 74 | 9 | 2 | 0 |
+| [ja](ja/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,773 | 120 | **150** | 76 | 274 | 0 | 0 | 0 |
+| [ko](ko/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **295** | 283 | 0 | 0 | 0 | 0 |
+| [nl](nl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **342** | 128 | 138 | 0 | 0 | 0 |
+| [pl](pl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,755 | 120 | **84** | 59 | 168 | 2 | 0 | 0 |
+| [pt-BR](pt-BR/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,801 | 74 | **550** | 192 | 141 | 5 | 0 | 0 |
+| [pt-PT](pt-PT/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,823 | 52 | **324** | 311 | 0 | 0 | 0 | 0 |
+| [ru](ru/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **611** | 320 | 182 | 0 | 0 | 0 |
+| [sk](sk/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,822 | 53 | **228** | 222 | 3 | 0 | 0 | 0 |
+| [sl](sl/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,012 | 863 | **32** | 9 | 58 | 5 | 2 | 3 |
+| [sv-SE](sv-SE/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **344** | 313 | 9 | 0 | 0 | 0 |
+| [tr](tr/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,843 | 32 | **172** | 65 | 193 | 0 | 0 | 0 |
+| [uk](uk/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 15,393 | 1,482 | **203** | 194 | 0 | 0 | 0 | 0 |
+| [vi](vi/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,321 | 554 | **501** | 396 | 0 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,445 | 430 | **78** | 26 | 51 | 0 | 0 | 0 |
+| [zh-TW](zh-TW/firefox.md) | 2026-11-09 | incremental | `f278b81a` | 16,875 | 0 | **55** | 39 | 186 | 14 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

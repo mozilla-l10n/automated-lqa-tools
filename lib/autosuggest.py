@@ -15,9 +15,11 @@ edits. Here the model gives every selected finding one verdict:
 
 ``false_positive``
     The string is written to the locale's ``dismissed.txt`` with the model's
-    reason, prefixed ``auto-suggest`` so it reads as what it is. A dismissal
-    covers the whole string, so this happens only when every open finding on
-    it -- in any group -- was judged a false positive or unreliable.
+    reason, prefixed ``auto-suggest`` so it reads as what it is, and the hash
+    of the string as it was judged: once the string changes, the QA run
+    withdraws the line (`dismiss.withdraw_moved`). A dismissal covers the
+    whole string, so this happens only when every open finding on it -- in
+    any group -- was judged a false positive or unreliable.
 
 ``unreliable``
     The model cannot confirm the finding is a defect at all: the wording is
@@ -74,7 +76,7 @@ from moz.l10n.resource import serialize_resource  # noqa: E402
 
 PROJECTS = ("android", "firefox", "firefox_ios", "focus_android")
 BATCH_SIZE = 10
-DISMISS_TAG = "auto-suggest"
+DISMISS_TAG = dismiss.FIXER_TAG
 
 # Shown to the model as JSON escapes: raw, they are invisible in the prompt
 # and the model is told to write them back the same way.
@@ -95,8 +97,9 @@ def _dismissed(entries: dict, f) -> bool:
     )
 
 
-def _dismiss_line(f, reason: str, today: str) -> str:
-    return dismiss.line(f.string_id, f.file, DISMISS_TAG, today, reason)
+def _dismiss_line(f, reason: str, today: str, anchor: str = "") -> str:
+    """``anchor`` is the judged string's hash: the line lapses when it changes."""
+    return dismiss.line(f.string_id, f.file, DISMISS_TAG, today, reason, anchor)
 
 
 # Verdicts that close a string's findings through a dismissal, and how each
@@ -313,6 +316,7 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
         items.append({
             "file": key[0], "string_id": key[1], "localized": localized,
             "source": src.text(), "translation": msg.text(), "findings": fs,
+            "hash": msg.hash(),
             "moved": {f.fid: bool(f.string_hash) and f.string_hash != msg.hash() for f in fs},
         })
     if unusable:
@@ -383,7 +387,8 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
             if why:
                 skipped.append((item, why))
             elif reason:
-                dismissals.append((item, _dismiss_line(item["findings"][0], reason, today)))
+                dismissals.append((item, _dismiss_line(item["findings"][0], reason, today,
+                                                       item["hash"])))
             for fid, v in verdicts.items():
                 if v["verdict"] == "skip":
                     skipped.append((item, f"{fid} skipped: {v['reason']}"))

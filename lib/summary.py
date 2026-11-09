@@ -18,6 +18,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config  # noqa: E402
+import dismiss  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import proposals as proposals_mod  # noqa: E402
 import report  # noqa: E402
@@ -46,7 +47,9 @@ def _rows(project) -> list[dict]:
             "open": sum(1 for f in found if f.is_open),
             "fixed": sum(1 for f in found if f.status == "fixed"),
             "suppressed": sum(1 for f in found if f.status == "suppressed"),
-            "dismissed": sum(1 for f in found if f.status == "dismissed"),
+            "dismissed": sum(1 for f in found if f.status == "dismissed"
+                             and not _by_fixer(f)),
+            "by_fixer": sum(1 for f in found if _by_fixer(f)),
             "total": len(found),
             "urgent": by_impact.get(1, 0) + by_impact.get(2, 0),
         })
@@ -137,8 +140,8 @@ def _table(rows: list[dict], project, prefix: str = "") -> str:
     """
     out = [
         "| Locale | Last run | Mode | Commit | Strings | Missing | Open | "
-        "Impact 1–2 | Fixed | Dismissed | Suppressed |",
-        "|---|---|---|---|---|---|---|---|---|---|---|",
+        "Impact 1–2 | Fixed | Dismissed | Suppressed | Closed by fixer |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     # Alphabetical by locale code: the table is looked up ("where is pt-BR?"),
     # not read as a ranking, and a worst-first order shuffles rows between
@@ -153,12 +156,12 @@ def _table(rows: list[dict], project, prefix: str = "") -> str:
             f"{m.get('mode', '')} | `{m.get('l10n_sha', '')[:8]}` | "
             f"{m.get('strings', 0):,} | {m.get('missing', 0):,} | "
             f"**{r['open']}** | {r['urgent']} | {r['fixed']} | "
-            f"{r['dismissed']} | {r['suppressed']} |"
+            f"{r['dismissed']} | {r['suppressed']} | {r['by_fixer']} |"
         )
     for r in sorted(rows, key=lambda r: r["locale"]):
         if r["state"]:
             out.append(
-                f"| {r['locale']} | — | — | — | — | — | — | — | — | — | _{r['state']}_ |"
+                f"| {r['locale']} | — | — | — | — | — | — | — | — | — | — | _{r['state']}_ |"
             )
     return "\n".join(out)
 
@@ -239,16 +242,26 @@ def _highlights(rows: list[dict], project) -> str:
 # statuses are the ones `resolve` recorded, so "fixed" here means exactly
 # what it means in state.
 
-# Closed-from-open transitions, in the order they are shown. "Closed by a
-# person" is one bucket: from the pull request's point of view dismissing
-# one string and suppressing a class are the same event.
+def _by_fixer(f) -> bool:
+    return f.status == "dismissed" and dismiss.by_fixer(f.dismissed_because)
+
+
+# Closed-from-open transitions, in the order they are shown, each with the
+# test that puts a finding there. "Closed by a person" is one bucket: from
+# the pull request's point of view dismissing one string and suppressing a
+# class are the same event. The fixer's dismissals are not in it -- nobody
+# decided those, and counting them there credited people with a model's
+# judgement.
 _CLOSED = (
-    ("fixed", "✅ Fixed", ("fixed",)),
+    ("fixed", "✅ Fixed", lambda f: f.status == "fixed"),
     ("withdrawn", "↩︎ Withdrawn — the check changed its mind, the string did not move",
-     ("withdrawn",)),
+     lambda f: f.status == "withdrawn"),
     ("person", "🙅 Closed by a person — dismissed or suppressed",
-     ("dismissed", "suppressed")),
-    ("obsolete", "🗑 Retired — the string no longer exists upstream", ("obsolete",)),
+     lambda f: f.status == "suppressed" or (f.status == "dismissed" and not _by_fixer(f))),
+    ("fixer", "🤖 Closed by the fixer — a model judged the finding wrong or could not "
+              "confirm it; no person has decided", _by_fixer),
+    ("obsolete", "🗑 Retired — the string no longer exists upstream",
+     lambda f: f.status == "obsolete"),
 )
 
 
@@ -350,8 +363,8 @@ def delta(project, rows: list[dict], ref: str) -> dict:
                 if f.is_open:
                     put("new", f)
             elif b.is_open and not f.is_open:
-                for key, _, statuses in _CLOSED:
-                    if f.status in statuses:
+                for key, _, test in _CLOSED:
+                    if test(f):
                         put(key, f)
             elif not b.is_open and f.is_open:
                 put("reopened", f)
@@ -378,6 +391,7 @@ def delta_table(d: dict) -> str:
         return "_No finding changed status._"
     cols = [("new", "New"), ("reopened", "Reopened"), ("fixed", "Fixed"),
             ("withdrawn", "Withdrawn"), ("person", "Dismissed / suppressed"),
+            ("fixer", "Closed by fixer"),
             ("obsolete", "Retired"), ("recheck", "Needs re-read")]
     if d["gone"]:
         cols.append(("gone", "Removed from state"))
@@ -496,6 +510,9 @@ def render(project) -> str:
         f"({pct}), {total_open:,} open",
         f"- **Closed by a person:** {sum(r['dismissed'] for r in checked):,} "
         f"dismissed, {sum(r['suppressed'] for r in checked):,} suppressed by rule",
+        f"- **Closed by the fixer:** {sum(r['by_fixer'] for r in checked):,} — the "
+        "suggestions workflow's model judged them wrong or could not confirm "
+        "them; no person has decided, and each lapses when its string changes",
         "",
         "Counts come from `state/`, not from the rendered reports, so they "
         "always reflect what the pipeline recorded.",

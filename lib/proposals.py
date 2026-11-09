@@ -59,7 +59,7 @@ MIN_STRINGS = 3
 
 _LINE = re.compile(
     rf"^(?P<sid>\S+) @ (?P<file>.+?) — (?P<tag>{HUMAN_TAG}|{MODEL_TAG}) "
-    r"\((?P<date>\d{4}-\d{2}-\d{2})\): (?P<reason>.+)$")
+    r"\((?P<date>\d{4}-\d{2}-\d{2})(?:, string [0-9a-f]+)?\): (?P<reason>.+)$")
 _UNCLEAR = "rejected in Pontoon without comment; reason unclear"
 _INFERRED = "rejected in Pontoon without comment; likely reason (inferred): "
 _COMMENT = "rejected in Pontoon: "

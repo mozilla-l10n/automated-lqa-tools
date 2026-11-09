@@ -27,6 +27,15 @@ the model inferred and labelled as such. The run withdraws its own line if
 the outcome changes or the string later moves; delete one yourself to bring
 the finding back. Lines without the tag are never touched by it.
 
+Lines tagged `auto-suggest (<date>, string <hash>)` are written by the Pontoon
+suggestions workflow (`lib/autosuggest.py`) when its model judged a finding
+wrong, or could not confirm it was a defect (`unreliable finding:` in the
+reason). No person has decided these, so reports count them apart, as
+*Closed by the fixer*. The hash is the string as the model judged it: once
+the translation changes, the QA run removes the line and the string is
+reviewed again like any other. Delete one yourself to bring the finding back
+sooner.
+
 The text after the dash is kept with the finding and printed in the report,
 so the next person can see why it was dropped.
 

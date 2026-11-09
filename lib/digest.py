@@ -12,8 +12,10 @@ when nothing about it needs a person:
 - it touches nothing under `<project>/locales/`. Those files are written by
   people, and a run only adds there on the first sight of a locale -- a
   draft `conventions.md` that would go straight into the reviewer's prompt.
-  The one exception is `dismissed.txt` lines tagged `pontoon-rejected`:
-  those record a Pontoon reviewer's rejection, already a person's answer.
+  The exceptions are in `dismissed.txt`: lines tagged `pontoon-rejected`,
+  which record a Pontoon reviewer's rejection, already a person's answer;
+  and the removal of an `auto-suggest` line whose string has changed, which
+  brings findings back into view and hides nothing.
 
 Anything left open is named at the top of the email with the reason, so a
 skipped pull request cannot pass for a quiet week.
@@ -61,6 +63,11 @@ import tracker  # noqa: E402
 # pulls in the whole parsing stack and this one needs none of it.
 PONTOON_TAG = "pontoon-rejected"
 _TAGGED = re.compile(rf"^.+ @ .+ — {re.escape(PONTOON_TAG)} \(\d{{4}}-\d{{2}}-\d{{2}}\): ")
+# Must match `dismiss.FIXER_TAG`. Only ever *removed* by a QA run, when its
+# string has changed (`dismiss.withdraw_moved`); added only by the
+# suggestions workflow's own pull request, never by this one.
+FIXER_TAG = "auto-suggest"
+_FIXER = re.compile(rf"^.+ @ .+ — {re.escape(FIXER_TAG)} \(\d{{4}}-\d{{2}}-\d{{2}}, string [0-9a-f]+\): ")
 
 RECIPIENTS = ["flodolo+l10nqa@mozilla.com"]
 SITE = "https://mozilla-l10n.github.io/automated-lqa-tools/"
@@ -168,7 +175,7 @@ def assess(project) -> Outcome:
     locales = os.path.relpath(project.root, config.REPO_ROOT) + "/locales/"
     touched = [p for p in _run("git", "diff", "--name-only",
                                f"origin/{BASE}...{head}", "--", locales).split()
-               if not only_pontoon_dismissals(
+               if not only_tool_dismissals(
                    _run("git", "diff", "-U0", f"origin/{BASE}...{head}", "--", p))]
     if touched:
         shown = ", ".join(f"`{p}`" for p in touched[:5])
@@ -184,14 +191,16 @@ def assess(project) -> Outcome:
     return out
 
 
-def only_pontoon_dismissals(diff: str) -> bool:
+def only_tool_dismissals(diff: str) -> bool:
     """Whether a `git diff -U0` of a locale file is nothing a person must read.
 
     True for a `dismissed.txt` change made only of lines `pontoon_review`
     writes and withdraws -- a Pontoon reviewer's rejection, already a
-    person's decision -- plus the comment header a new file starts with.
-    Anything else under `locales/` reaches the reviewer's prompt or is a
-    person's own dismissal, and holds the pull request.
+    person's decision -- plus the comment header a new file starts with,
+    and the removal of anchored `auto-suggest` lines, which only ever brings
+    a finding back. Anything else under `locales/` reaches the reviewer's
+    prompt or is a person's own dismissal, and holds the pull request --
+    including an `auto-suggest` line being *added* here.
     """
     lines = diff.splitlines()
     if not lines or not any(x.startswith("+++ ") and x.endswith("/dismissed.txt")
@@ -204,7 +213,7 @@ def only_pontoon_dismissals(diff: str) -> bool:
         if x.startswith("+") and (not body.strip() or body.startswith("#")
                                   or _TAGGED.match(body)):
             continue
-        if x.startswith("-") and _TAGGED.match(body):
+        if x.startswith("-") and (_TAGGED.match(body) or _FIXER.match(body)):
             continue
         return False
     return True
@@ -269,6 +278,7 @@ def _counts(d: dict) -> str:
     ]
     for key, label in (("fixed", "fixed"), ("withdrawn", "withdrawn"),
                        ("person", "dismissed or suppressed"),
+                       ("fixer", "closed by the fixer"),
                        ("obsolete", "retired"), ("recheck", "need re-reading")):
         if d[key]:
             bits.append(f"{len(d[key])} {label}")
