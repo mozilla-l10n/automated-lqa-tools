@@ -22,3 +22,10 @@ written here is what the model is told to treat as correct._
 - The en dash is the house dash; do not suggest an em dash.
 - "Primary Password" is deliberately translated with the legacy term.
 -->
+
+- A capitalised word whose other letters are lowercase never carries a
+  diacritic on its first letter: `Ut`, `Us`, `Untskoattelje`, `Ofspylsnelheid`,
+  `Unbetroubere` are correct. Diacritics are written on lowercase letters
+  (`ûnbekend`) and in words written entirely in capitals (`ÛNBEKEND`). Never
+  suggest adding a diacritic to a capitalised initial. A diacritic missing from
+  a lowercase letter is still a defect.
