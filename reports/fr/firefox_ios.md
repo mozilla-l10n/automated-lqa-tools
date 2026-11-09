@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
-| **Previous run** | 2026-11-09 @ `62ca1adeb53c` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
+| **Previous run** | 2026-11-09 @ `a6af93c85149` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,983 |
 
@@ -82,14 +82,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (25)
+## 3. Open findings (12)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 19 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 2 | Wrong content (says something other than the English) | 8 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -98,51 +98,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `NSMicrophoneUsageDescription` — `fr/firefox-ios.xliff` — "upload audio" is rendered as "charger des fichiers audio" (load audio files) instead of envoyer/téléverser.
-    - Current: `charger des fichiers audio`
-    - Source: `Firefox uses your microphone to record and upload audio.`
-    - Suggest: `envoyer des fichiers audio`
-    - en-US "upload" means sending audio to a server; "charger" reads as loading/opening files, which is a different action.
-- `Settings.AppIconSelection.SectionNames.Gradients.Title.v139` — `fr/firefox-ios.xliff` — Plural section heading "Gradients" rendered as singular "Fond en dégradé", inconsistent with the other plural section headings.
-    - Current: `Fond en dégradé`
-    - Source: `Gradients`
-    - Suggest: `Dégradés`
-    - The source is the plural section name "Gradients", matching sibling headings "Basiques", "Colorées", "Autres"; the French introduces a singular "background" noun not in the source.
-- `Addresses.EditAddress.AutofillAddressTownland.v129` — `fr/firefox-ios.xliff` — "Townland" is rendered as "Commune", which names a different administrative unit.
-    - Current: `Commune`
-    - Source: `Townland`
-    - Suggest: `Townland`
-    - A townland is a small rural land division (Ireland); "Commune" is the French municipality level and is also used for other address fields, so the label names the wrong thing.
-- `CloseTab.ArrivingNotification.title.v133` — `fr/firefox-ios.xliff` — The app name placeholder is attached to "Onglets" as a modifier, changing the meaning.
-    - Current: `Onglets %1$@ fermés : %2$@`
-    - Source: `%1$@ tabs closed: %2$@`
-    - Suggest: `%1$@ : onglets fermés : %2$@`
-    - The comment says %1$@ is the app name (e.g. Firefox) and the source reads "%1$@ tabs closed", i.e. Firefox announcing closed tabs; "Onglets Firefox fermés" reads as "Firefox tabs", a different meaning.
-- `LibraryPanel.Section.Older` — `fr/firefox-ios.xliff` — "Older" (items older than thirty days) rendered as "Avant le mois dernier".
-    - Current: `Avant le mois dernier`
-    - Source: `Older`
-    - Suggest: `Plus ancien`
-    - The source is a generic "Older" section label for entries older than thirty days; "Avant le mois dernier" asserts a specific calendar-month boundary the source does not state.
 - `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — "could also be set up incorrectly" (possibility) is rendered with the indicative "peuvent également être mal configurés", asserting it more strongly than the source.
     - Current: `Vos paramètres de connexion peuvent également être mal configurés.`
     - Source: `Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.`
     - Suggest: `Vos paramètres de connexion pourraient également être mal configurés.`
     - The source uses the conditional "could", matching the preceding "pourrait"; the indicative weakens the hypothetical framing.
-- `NativeErrorPage.BadCertDomain.HideAdvancedButton.v149` — `fr/firefox-ios.xliff` — "Hide advanced" is translated as just "Masquer", dropping the object of the action.
-    - Current: `Masquer`
-    - Source: `Hide advanced`
-    - Suggest: `Masquer les détails avancés`
-    - The source names the advanced section that will be hidden; the French only says "Hide", losing the pairing with the "Avancé" button.
-- `NativeErrorPage.CellularDataRestricted.Description.v156` — `fr/firefox-ios.xliff` — "go to iOS Settings and turn on cellular data for %@" is rephrased as "ouvrez les réglages d’iOS pour autoriser %@ à utiliser les données cellulaires", changing the instruction from turning on a setting to granting permission.
-    - Current: `ouvrez les réglages d’iOS pour autoriser %@ à utiliser les données cellulaires`
-    - Source: `Connect to Wi-Fi or go to iOS Settings and turn on cellular data for %@.`
-    - Suggest: `ouvrez les réglages d’iOS et activez les données cellulaires pour %@`
-    - The source gives two explicit steps (go to Settings, turn on cellular data for the app); the French merges them into a purpose clause and loses the "activez" instruction.
-- `NativeErrorPage.GenericError.Description.v134` — `fr/firefox-ios.xliff` — Present tense "can’t be created" is rendered in the past as "n’a pas pu être établie".
-    - Current: `une connexion sécurisée n’a pas pu être établie`
-    - Source: `The owner of %@ hasn’t set it up properly and a secure connection can’t be created.`
-    - Suggest: `une connexion sécurisée ne peut pas être établie`
-    - The en-US states an ongoing impossibility ("a secure connection can’t be created"), not a past failed attempt.
 - `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `fr/firefox-ios.xliff` — "won’t sell you out" is rendered as "digne de confiance" (trustworthy), losing the meaning of not selling out/betraying the user.
     - Current: `Rapide, sûr et digne de confiance.`
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
@@ -183,26 +143,6 @@ _Nothing in this category._
     - Source: `Translates pages to your top preferred language automatically.`
     - Suggest: `Traduit automatiquement les pages dans votre première langue préférée.`
     - The source refers to the top entry of the Preferred Languages list, not simply any language the user chooses; the section is named « Langues préférées » in the same screen.
-- `Open Last Bookmark` — `fr/firefox-ios.xliff` — The action verb "Open" is dropped, leaving only a noun phrase instead of an action label.
-    - Current: `Dernier marque-page`
-    - Source: `Open Last Bookmark`
-    - Suggest: `Ouvrir le dernier marque-page`
-    - en-US "Open Last Bookmark" describes the action of opening the last added bookmark; the French only names the bookmark and loses the verb.
-- `Hotkeys.Forward.DiscoveryTitle` — `fr/firefox-ios.xliff` — Navigation "Forward" (page suivante dans l'historique) est traduit par « Suivant », mais le pendant de « Retour » dans la barre de navigation est « Suivant »/« Avancer » — ici le libellé doit correspondre à l'action de navigation avant.
-    - Current: `Suivant`
-    - Source: `Forward`
-    - Suggest: `Avancer`
-    - Paired with Hotkeys.Back.DiscoveryTitle ("Retour"), the source "Forward" refers to navigating forward in session history; French Firefox uses « Avancer » for this toolbar/shortcut action.
-- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `fr/firefox-ios.xliff` — "some ad tracking" is rendered as "certains traqueurs publicitaires" (some ad trackers) and "websites" becomes the vague "des sites".
-    - Current: `Autorise certains traqueurs publicitaires afin que des sites fonctionnent correctement.`
-    - Source: `Allows some ad tracking so websites function properly.`
-    - Suggest: `Autorise une partie du pistage publicitaire afin que les sites web fonctionnent correctement.`
-    - The source allows a certain amount of ad tracking, not a subset of trackers; "les sites web" is the correct rendering of "websites".
-- `Search Input Field` — `fr/firefox-ios.xliff` — Accessibility label renders "Search Input Field" as an action "Rechercher des identifiants" instead of naming the field.
-    - Current: `Rechercher des identifiants`
-    - Source: `Search Input Field`
-    - Suggest: `Champ de recherche`
-    - The en-US string names the UI element (search input field) for VoiceOver; the French says "Search for logins", which is a different, action-style label.
 
 ### C. Grammar, agreement & spelling
 
@@ -219,11 +159,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `Microsurvey.Survey.Sheet.AccessibilityLabel.v130` — `fr/firefox-ios.xliff` — "Survey" in the microsurvey context is translated as "Enquête" (investigation/inquiry) instead of the usual "Sondage".
-    - Current: `Enquête`
-    - Source: `Survey`
-    - Suggest: `Sondage`
-    - The feature is a microsurvey (questionnaire); French Firefox uses "sondage" for survey, while "enquête" suggests an investigation.
 - `Settings.Search.Suggest.PrivateSession.Description.v125` — `fr/firefox-ios.xliff` — "Firefox Suggest" is rendered as "Firefox Suggest" here but as "Firefox suggère" in the neighbouring strings on the same settings screen.
     - Current: `Afficher les suggestions de Firefox Suggest dans les sessions privées`
     - Source: `Show suggestions from Firefox Suggest in private sessions`
@@ -247,10 +182,23 @@ _Nothing in this category._
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (4)
+### Closed by the fixer (17)
 
+- `Addresses.EditAddress.AutofillAddressTownland.v129` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string f8651f61): unreliable finding: Townland has no exact French equivalent; adapting it to "Commune" is a plausible localizer choice.
+- `CloseTab.ArrivingNotification.title.v133` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 53dda1f1): unreliable finding: "Onglets Firefox fermés" carries the same reading as the source "Firefox tabs closed", and the placeholder's meaning can't be verified here.
+- `Hotkeys.Forward.DiscoveryTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 395e0e18): unreliable finding: « Suivant » is an acceptable label for forward navigation in a hotkey discovery list paired with « Retour »; « Avancer » is a preference, not a correction of an error.
 - `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 1e54dae2): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
+- `LibraryPanel.Section.Older` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 17921018): unreliable finding: "Avant le mois dernier" is a plausible label for entries older than about a month; the change would be stylistic.
+- `Microsurvey.Survey.Sheet.AccessibilityLabel.v130` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 81ca3edc): unreliable finding: "Enquête" is a valid French word for a survey/questionnaire; no evidence the tree standardizes on "sondage".
+- `NSMicrophoneUsageDescription` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 44935fa5): unreliable finding: "Charger" is commonly used in French for uploading content; "envoyer" would be a stylistic alternative, not a clear correction.
+- `NativeErrorPage.BadCertDomain.HideAdvancedButton.v149` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 6fb7feb1): unreliable finding: A short toggle label "Masquer" paired with the "Avancé" button is plausibly a deliberate, acceptable rendering.
+- `NativeErrorPage.CellularDataRestricted.Description.v156` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 263ac79b): unreliable finding: Allowing the app to use cellular data in iOS settings is the same action as turning on cellular data for it; meaning is preserved.
+- `NativeErrorPage.GenericError.Description.v134` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string cf080c59): unreliable finding: "n’a pas pu être établie" is a natural French phrasing for a connection error and does not change the message.
+- `Open Last Bookmark` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 3774d852): unreliable finding: As a 3D Touch quick-action label, a concise noun phrase « Dernier marque-page » is a common and understandable style; adding the verb is a stylistic preference.
+- `Search Input Field` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string cbf9608f): unreliable finding: For a VoiceOver label on a search field (whose role is announced by the system), describing its purpose « Rechercher des identifiants » is plausibly acceptable.
+- `Settings.AppIconSelection.SectionNames.Gradients.Title.v139` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string 5b94592a): unreliable finding: "Fond en dégradé" correctly describes the gradient icon category; singular vs plural heading is a stylistic choice.
 - `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 7ac1c1f7): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
+- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-09, string af5bdb64): unreliable finding: « certains traqueurs publicitaires » conveys the same meaning as allowing some ad tracking and uses the established Firefox term « traqueurs »; « des sites » vs « les sites web » is stylistic.
 - `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 0e68199e): In this Summarizer error, 'this one' means the page being summarized, so 'Impossible de résumer cette page pour l’instant' says the same thing.
 - `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string cfb40d5c): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
 
