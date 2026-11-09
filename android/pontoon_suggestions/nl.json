@@ -1,0 +1,764 @@
+{
+ "project": "android",
+ "locale": "nl",
+ "suggestions": [
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_archive_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_archive_description"
+    ]
+   },
+   "fids": [
+    "45de14c1a167"
+   ],
+   "findings": [
+    "Untranslated English article \"the\" left in the Dutch sentence before \"Internet Archive\"."
+   ],
+   "source": "%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.",
+   "original": "%1$s kan een eerdere versie van deze pagina zoeken vanuit %2$s van the Internet Archive.",
+   "text": "%1$s kan een eerdere versie van deze pagina zoeken vanuit %2$s van het Internet Archive.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "BC",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_net_interrupt_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_net_interrupt_message"
+    ]
+   },
+   "fids": [
+    "2314797f4bbc",
+    "05052623fe0b"
+   ],
+   "findings": [
+    "\"Try again in a few moments\" is rendered as \"over een paar seconden\" (a few seconds).",
+    "Missing hyphen makes \"de gegevens of Wi-Fi-verbinding\" ungrammatical compared with the parallel strings."
+   ],
+   "source": "{ <p> }The browser connected successfully, but the connection was interrupted while transferring information. Please try again.{ </p> }\n{ <ul> }\n{ <li> }The site could be temporarily unavailable or too busy. Try again in a few moments.{ </li> }\n{ <li> }If you are unable to load any pages, check your device’s data or Wi-Fi connection.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser is succesvol verbonden, maar de verbinding is verbroken tijdens het overbrengen van informatie. Probeer het opnieuw.</p>\n<ul>\n<li>De website kan tijdelijk niet beschikbaar of te druk zijn. Probeer het over een paar seconden opnieuw.</li>\n<li>Als u geen pagina’s kunt laden, controleer dan de gegevens of Wi-Fi-verbinding van uw apparaat.</li>\n</ul>",
+   "text": "<p>De browser is succesvol verbonden, maar de verbinding is verbroken tijdens het overbrengen van informatie. Probeer het opnieuw.</p>\n<ul>\n<li>De website kan tijdelijk niet beschikbaar of te druk zijn. Probeer het over enkele ogenblikken opnieuw.</li>\n<li>Als u geen pagina’s kunt laden, controleer dan de gegevens- of Wi-Fi-verbinding van uw apparaat.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_net_timeout_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_net_timeout_message"
+    ]
+   },
+   "fids": [
+    "fe82a75c6df9"
+   ],
+   "findings": [
+    "\"Is your device or network protected...\" is translated as \"uw computer\"."
+   ],
+   "source": "{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> }\n{ <ul> }\n{ <li> }Could the server be experiencing high demand or a temporary outage? Try again later.{ </li> }\n{ <li> }Are you unable to browse other sites? Check the device’s network connection.{ </li> }\n{ <li> }Is your device or network protected by a firewall or proxy? Incorrect settings can interfere with Web browsing.{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
+   "original": "<p>De opgevraagde website heeft niet op een verbindingsaanvraag geantwoord, en de browser wacht niet meer op een antwoord.</p>\n<ul>\n<li>Misschien wordt de server zwaar belast of is deze tijdelijk onbereikbaar? Probeer het later opnieuw.</li>\n<li>Kunt u geen andere websites bezoeken? Controleer de netwerkverbinding van de computer.</li>\n<li>Wordt uw computer of netwerk beschermd door een firewall of proxy? Onjuiste instellingen kunnen een goede werking tijdens het webbrowsen verstoren.</li>\n<li>Hebt u nog steeds problemen? Raadpleeg uw netwerkbeheerder of internetprovider voor assistentie.</li>\n</ul>",
+   "text": "<p>De opgevraagde website heeft niet op een verbindingsaanvraag geantwoord, en de browser wacht niet meer op een antwoord.</p>\n<ul>\n<li>Misschien wordt de server zwaar belast of is deze tijdelijk onbereikbaar? Probeer het later opnieuw.</li>\n<li>Kunt u geen andere websites bezoeken? Controleer de netwerkverbinding van de computer.</li>\n<li>Wordt uw apparaat of netwerk beschermd door een firewall of proxy? Onjuiste instellingen kunnen een goede werking tijdens het webbrowsen verstoren.</li>\n<li>Hebt u nog steeds problemen? Raadpleeg uw netwerkbeheerder of internetprovider voor assistentie.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_offline_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_offline_message"
+    ]
+   },
+   "fids": [
+    "f60fb991022b"
+   ],
+   "findings": [
+    "“Press” rendered as “Klik” (click) on a touch device."
+   ],
+   "source": "{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> }\n{ <ul> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Press “Try Again” to switch to online mode and reload the page.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser werkt momenteel in offlinemodus en kan geen verbinding maken met het opgevraagde item.</p>\n<ul>\n<li>Is de computer verbonden met een actief netwerk?</li>\n<li>Klik op ‘Opnieuw proberen’ om naar de onlinemodus over te schakelen en de pagina opnieuw te laden.</li>\n</ul>",
+   "text": "<p>De browser werkt momenteel in offlinemodus en kan geen verbinding maken met het opgevraagde item.</p>\n<ul>\n<li>Is de computer verbonden met een actief netwerk?</li>\n<li>Tik op ‘Opnieuw proberen’ om naar de onlinemodus over te schakelen en de pagina opnieuw te laden.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_redirect_loop_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_redirect_loop_message"
+    ]
+   },
+   "fids": [
+    "bde63eadb081"
+   ],
+   "findings": [
+    "“your device” translated as “uw computer”."
+   ],
+   "source": "{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> }\n{ <ul> }\n{ <li> }Have you disabled or blocked cookies required by this site?{ </li> }\n{ <li> }If accepting the site’s cookies does not resolve the problem, it is likely a server configuration issue and not your device.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser is gestopt met pogen het opgevraagde item op te halen. De website verwijst de aanvraag door op een manier die nooit zal worden voltooid.</p>\n<ul>\n<li>Hebt u cookies die nodig zijn voor deze website uitgeschakeld of geblokkeerd?</li>\n<li>Als het accepteren van cookies van deze website het probleem niet oplost, is dit waarschijnlijk een probleem met de serverconfiguratie en niet met uw computer.</li>\n</ul>",
+   "text": "<p>De browser is gestopt met pogen het opgevraagde item op te halen. De website verwijst de aanvraag door op een manier die nooit zal worden voltooid.</p>\n<ul>\n<li>Hebt u cookies die nodig zijn voor deze website uitgeschakeld of geblokkeerd?</li>\n<li>Als het accepteren van cookies van deze website het probleem niet oplost, is dit waarschijnlijk een probleem met de serverconfiguratie en niet met uw apparaat.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "CD",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_security_bad_hsts_cert_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_security_bad_hsts_cert_message"
+    ]
+   },
+   "fids": [
+    "22fd1443618d",
+    "4c4f00d0f26a"
+   ],
+   "findings": [
+    "Missing subject pronoun 'u' in the relative clause.",
+    "English word “issue” left untranslated where Dutch “probleem” is the established term."
+   ],
+   "source": "{ <ul> }\n{ <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> }\n{ <li> }The issue is most likely with the website, and there is nothing you can do to resolve it.{ </li> }\n{ <li> }You can notify the website’s administrator about the problem.{ </li> }\n{ </ul> }",
+   "original": "<ul>\n<li>De pagina die probeert te bekijken kan niet worden getoond, omdat deze website een beveiligde verbinding vereist.</li>\n<li>Het issue ligt waarschijnlijk bij de website en er is niets dat u kunt doen om het op te lossen.</li>\n<li>U kunt de beheerder van de website op de hoogte stellen van het probleem.</li>\n</ul>",
+   "text": "<ul>\n<li>De pagina die u probeert te bekijken kan niet worden getoond, omdat deze website een beveiligde verbinding vereist.</li>\n<li>Het probleem ligt waarschijnlijk bij de website en er is niets dat u kunt doen om het op te lossen.</li>\n<li>U kunt de beheerder van de website op de hoogte stellen van het probleem.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+   "string_id": "mozac_browser_errorpages_unknown_proxy_host_message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_browser_errorpages_unknown_proxy_host_message"
+    ]
+   },
+   "fids": [
+    "274565a388ba"
+   ],
+   "findings": [
+    "“device” translated as “computer”."
+   ],
+   "source": "{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> }\n{ <ul> }\n{ <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> }\n{ <li> }Is the device connected to an active network?{ </li> }\n{ <li> }Still having trouble? Consult your network administrator or Internet provider for assistance.{ </li> }\n{ </ul> }",
+   "original": "<p>De browser is geconfigureerd om een proxyserver te gebruiken, maar de proxy kon niet worden gevonden.</p>\n<ul>\n<li>Is de proxyconfiguratie van de browser in orde? Controleer de instellingen en probeer het opnieuw.</li>\n<li>Is de computer verbonden met een actief netwerk?</li>\n<li>Hebt u nog steeds problemen? Raadpleeg uw netwerkbeheerder of internetprovider voor assistentie.</li>\n</ul>",
+   "text": "<p>De browser is geconfigureerd om een proxyserver te gebruiken, maar de proxy kon niet worden gevonden.</p>\n<ul>\n<li>Is de proxyconfiguratie van de browser in orde? Controleer de instellingen en probeer het opnieuw.</li>\n<li>Is het apparaat verbonden met een actief netwerk?</li>\n<li>Hebt u nog steeds problemen? Raadpleeg uw netwerkbeheerder of internetprovider voor assistentie.</li>\n</ul>",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+   "string_id": "mozac_menu_customize_reset_to_default",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_menu_customize_reset_to_default"
+    ]
+   },
+   "fids": [
+    "65659e1e8882"
+   ],
+   "findings": [
+    "Button label drops the action 'reset' and reads only as 'Default values'."
+   ],
+   "source": "Reset to default",
+   "original": "Standaardwaarden",
+   "text": "Standaardwaarden herstellen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_author",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_author"
+    ]
+   },
+   "fids": [
+    "300d356296c5"
+   ],
+   "findings": [
+    "\"Author\" of an add-on is rendered as \"Schrijver\" (writer of texts) instead of the established \"Auteur\"/\"Ontwikkelaar\"."
+   ],
+   "source": "Author",
+   "original": "Schrijver",
+   "text": "Auteur",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_optional_permissions_with_data_collection_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_optional_permissions_with_data_collection_dialog_title"
+    ]
+   },
+   "fids": [
+    "07f2b7f8d411"
+   ],
+   "findings": [
+    "Missing preposition \"om\" makes the sentence ungrammatical and inconsistent with the parallel string."
+   ],
+   "source": "%1$s requests additional settings",
+   "original": "%1$s vraagt aanvullende instellingen",
+   "text": "%1$s vraagt om aanvullende instellingen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "browser_custom_tab_menu_handlebar_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "browser_custom_tab_menu_handlebar_content_description"
+    ]
+   },
+   "fids": [
+    "afc6c553b051"
+   ],
+   "findings": [
+    "\"custom tab\" is mistranslated as \"Tabblad aanpassen\" (customize tab) instead of the noun \"aangepast tabblad\"."
+   ],
+   "source": "Close custom tab menu sheet",
+   "original": "Menublad Tabblad aanpassen sluiten",
+   "text": "Menublad van aangepast tabblad sluiten",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "close_tabs_manually",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "close_tabs_manually"
+    ]
+   },
+   "fids": [
+    "64652266091d"
+   ],
+   "findings": [
+    "\"Never\" is translated as \"Handmatig\" (Manually) instead of \"Nooit\"."
+   ],
+   "source": "Never",
+   "original": "Handmatig",
+   "text": "Nooit",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "homepage_shortcuts_show_all_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "homepage_shortcuts_show_all_content_description"
+    ]
+   },
+   "fids": [
+    "e28bb0b1c0a2"
+   ],
+   "findings": [
+    "\"Shortcuts\" (home screen tiles) is translated as \"sneltoetsen\" (keyboard shortcuts) instead of \"snelkoppelingen\"."
+   ],
+   "source": "Show all shortcuts",
+   "original": "Alle sneltoetsen tonen",
+   "text": "Alle snelkoppelingen tonen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "likert_scale_option_3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "likert_scale_option_3"
+    ]
+   },
+   "fids": [
+    "276ed0524273"
+   ],
+   "findings": [
+    "\"Neutral\" is rendered as \"Gemiddeld\" (average) instead of the neutral midpoint term."
+   ],
+   "source": "Neutral",
+   "original": "Gemiddeld",
+   "text": "Neutraal",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "microsurvey_homepage_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "microsurvey_homepage_title"
+    ]
+   },
+   "fids": [
+    "cdfb80f0ada8"
+   ],
+   "findings": [
+    "Translation adds \"ervaring\" (experience), which is not in the source."
+   ],
+   "source": "How satisfied are you with your Firefox homepage?",
+   "original": "Hoe tevreden bent u met uw Firefox Startpagina-ervaring?",
+   "text": "Hoe tevreden bent u met uw Firefox-startpagina?",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "microsurvey_prompt_search_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "microsurvey_prompt_search_title"
+    ]
+   },
+   "fids": [
+    "91419c256e02"
+   ],
+   "findings": [
+    "The translation drops \"search\", making the string about Firefox in general rather than search in Firefox."
+   ],
+   "source": "Help make search in Firefox better. It only takes a minute",
+   "original": "Help Firefox te verbeteren. Het duurt maar een minuutje",
+   "text": "Help zoeken in Firefox te verbeteren. Het duurt maar een minuutje",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body"
+    ]
+   },
+   "fids": [
+    "3df772e093e5"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"marketingtechnologiepartners\", adding \"technologie\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s",
+   "original": "Deel met Mozilla’s marketingtechnologiepartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht. %1$s",
+   "text": "Deel met Mozilla’s marketingpartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht. %1$s",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "nova_onboarding_marketing_body_2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "nova_onboarding_marketing_body_2"
+    ]
+   },
+   "fids": [
+    "0ad144f17eb5"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"marketingtechnologiepartners\", adding \"technologie\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Deel met Mozilla’s marketingtechnologiepartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "text": "Deel met Mozilla’s marketingpartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_body_1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_body_1"
+    ]
+   },
+   "fids": [
+    "6d2e69d3c3ea"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"marketingtechnologiepartners\", adding \"technologie\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Deel met Mozilla’s marketingtechnologiepartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "text": "Deel met Mozilla’s marketingpartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_marketing_redesign_opt_out_checkbox",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_marketing_redesign_opt_out_checkbox"
+    ]
+   },
+   "fids": [
+    "4d999a5258b0"
+   ],
+   "findings": [
+    "\"marketing partners\" is rendered as \"marketingtechnologiepartners\", adding \"technologie\" which is not in the source."
+   ],
+   "source": "Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.",
+   "original": "Deel met Mozilla’s marketingtechnologiepartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "text": "Deel met Mozilla’s marketingpartners hoe u Firefox hebt ontdekt en dat u het gebruikt. Deze gegevens worden nooit verkocht.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "onboarding_redesign_set_default_browser_body",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "onboarding_redesign_set_default_browser_body"
+    ]
+   },
+   "fids": [
+    "559056f5b19e"
+   ],
+   "findings": [
+    "Sentence is ungrammatical: missing subject/verb agreement for \"One tap helps stop…\"."
+   ],
+   "source": "One tap helps stop companies spying on your clicks.",
+   "original": "Met één tik voorkomen dat bedrijven uw tikken bespioneren.",
+   "text": "Met één tik voorkomt u dat bedrijven uw tikken bespioneren.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_search_address_bar_fx_suggest",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_search_address_bar_fx_suggest"
+    ]
+   },
+   "fids": [
+    "af962039464f"
+   ],
+   "findings": [
+    "Brand name \"Firefox Suggest\" translated as \"Firefox Suggesties\"."
+   ],
+   "source": "Address bar - Firefox Suggest",
+   "original": "Adresbalk – Firefox Suggesties",
+   "text": "Adresbalk – Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "preference_search_learn_about_fx_suggest",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_search_learn_about_fx_suggest"
+    ]
+   },
+   "fids": [
+    "5f001df7306d"
+   ],
+   "findings": [
+    "Brand name \"Firefox Suggest\" translated as \"Firefox Suggesties\"."
+   ],
+   "source": "Learn more about Firefox Suggest",
+   "original": "Meer info over Firefox Suggesties",
+   "text": "Meer info over Firefox Suggest",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "search_bar_with_lens_widget_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "search_bar_with_lens_widget_description"
+    ]
+   },
+   "fids": [
+    "8207582afc76"
+   ],
+   "findings": [
+    "Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'."
+   ],
+   "source": "Search bar with image, private and voice search",
+   "original": "Zoekbalk met afbeelding, privé en gesproken zoekopdrachten",
+   "text": "Zoekbalk met afbeeldings-, privé- en gesproken zoekopdrachten",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "sent_from_firefox_template_short",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "sent_from_firefox_template_short"
+    ]
+   },
+   "fids": [
+    "2f4c51ca03e0"
+   ],
+   "findings": [
+    "The blank line separating the shared link from the footer is missing in the translation."
+   ],
+   "source": "%1$s\n\nSent from %2$s 🦊 %3$s",
+   "original": "%1$s\nVerzonden vanuit %2$s 🦊 %3$s",
+   "text": "%1$s\n\nVerzonden vanuit %2$s 🦊 %3$s",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translation_option_bottom_sheet_switch_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translation_option_bottom_sheet_switch_description"
+    ]
+   },
+   "fids": [
+    "01c27c3b6f4b"
+   ],
+   "findings": [
+    "\"Overrides offers to translate\" is rendered as \"Negeert\" (ignores) instead of \"overschrijft\" (overrides), inconsistent with the sibling string."
+   ],
+   "source": "Overrides offers to translate",
+   "original": "Negeert vertaalaanbiedingen",
+   "text": "Overschrijft vertaalaanbiedingen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_error_failed",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_error_failed"
+    ]
+   },
+   "fids": [
+    "b088362db30a"
+   ],
+   "findings": [
+    "\"system uninstall prompt\" mistranslated as prompt for uninstalling the system."
+   ],
+   "source": "Failed to open the system uninstall prompt, please use the system uninstall action directly.",
+   "original": "Het openen van de prompt voor het de-installeren van het systeem is mislukt; gebruik rechtstreeks de actie voor de-installatie van het systeem.",
+   "text": "Het openen van de de-installatieprompt van het systeem is mislukt; gebruik rechtstreeks de actie voor de-installatie van het systeem.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "uninstall_survey_option_1_v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "uninstall_survey_option_1_v2"
+    ]
+   },
+   "fids": [
+    "e3fee5829c76"
+   ],
+   "findings": [
+    "\"or\" translated as \"en\", changing the meaning of the survey option."
+   ],
+   "source": "It’s slow or unreliable",
+   "original": "De browser is traag en onbetrouwbaar",
+   "text": "De browser is traag of onbetrouwbaar",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "unsubmitted_crash_requested_by_devs_dialog_title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "unsubmitted_crash_requested_by_devs_dialog_title"
+    ]
+   },
+   "fids": [
+    "2fb3f7d0c55b"
+   ],
+   "findings": [
+    "Subject mismatch: \"Door dit te verzenden, helpt het ons\" is ungrammatical and inconsistent with the plural variant."
+   ],
+   "source": "You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.",
+   "original": "U hebt een niet-verzonden crashrapport in relatie tot crashes die worden onderzocht. Door dit te verzenden, helpt het ons %1$s te verbeteren. Als u deze melding sluit, wordt dit rapport genegeerd.",
+   "text": "U hebt een niet-verzonden crashrapport in relatie tot crashes die worden onderzocht. Als u dit verzendt, helpt u ons %1$s te verbeteren. Als u deze melding sluit, wordt dit rapport genegeerd.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  }
+ ]
+}
