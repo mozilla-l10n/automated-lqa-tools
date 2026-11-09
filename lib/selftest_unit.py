@@ -481,6 +481,42 @@ def run(suite) -> None:
         why = digest.wait_and_merge("b", "abc", timeout=60, view=lambda: pending,
                                     sleep=lambda s: None, now=lambda: next(clock))
         check(not merged and "timed out" in why, "and the wait has an end")
+
+        # 2026-11-09: four projects' pull requests merged within a second of
+        # each other and GitHub refused android's with this; it sat open.
+        refusal = ("merging failed: GraphQL: Base branch was modified. Review "
+                   "and try the merge again. (mergePullRequest)")
+        attempts = []
+
+        def racing(out):
+            attempts.append(out.pr["number"])
+            if len(attempts) == 1:
+                out.reasons.append(refusal)
+        digest.merge = racing
+        why = digest.wait_and_merge("b", "abc", view=lambda: green,
+                                    sleep=lambda s: None)
+        check(why == "" and attempts == [9, 9],
+              "a merge refused because another landed at once is retried")
+        attempts.clear()
+        views = iter([green, dict(green, headRefOid="def")])
+        why = digest.wait_and_merge("b", "abc", view=lambda: next(views),
+                                    sleep=lambda s: None)
+        check(attempts == [9] and "moved" in why,
+              "and the retry still refuses a branch that moved meanwhile")
+
+        def refused(out):
+            out.reasons.append(refusal)
+        digest.merge = refused
+        clock = iter([0, 0, 10_000])
+        why = digest.wait_and_merge("b", "abc", timeout=60, view=lambda: green,
+                                    sleep=lambda s: None, now=lambda: next(clock))
+        check("Base branch was modified" in why,
+              "a refusal past the deadline is reported as GitHub gave it")
+
+        digest.merge = lambda out: out.reasons.append("merging failed: other")
+        why = digest.wait_and_merge("b", "abc", view=lambda: green,
+                                    sleep=lambda s: None)
+        check(why == "merging failed: other", "any other merge failure is final")
     finally:
         digest.merge = real_merge
 

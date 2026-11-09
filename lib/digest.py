@@ -233,6 +233,8 @@ def merge(out: Outcome) -> None:
 
 # Problems that only mean "not yet": anything else stops the wait.
 _PENDING = ("has not finished", "has not run on it", "is pending")
+# GitHub's refusal when another merge landed on the base at the same moment.
+_BASE_MOVED = "Base branch was modified"
 
 
 def wait_and_merge(branch: str, head: str, timeout: float = 1500,
@@ -258,8 +260,15 @@ def wait_and_merge(branch: str, head: str, timeout: float = 1500,
         if not problems:
             out = Outcome(project=None, pr=pr)
             merge(out)
-            return "; ".join(out.reasons)
-        if not all(p.endswith(_PENDING) for p in problems):
+            why = "; ".join(out.reasons)
+            # The workflow merges every project's pull request at about the
+            # same time, and GitHub refuses the second of two merges landing
+            # on the base in the same moment. Nothing is wrong with this one:
+            # look again (state, head, checks) and retry until the deadline.
+            if _BASE_MOVED not in why:
+                return why
+            problems = [why]
+        elif not all(p.endswith(_PENDING) for p in problems):
             return "; ".join(problems)
         if now() > deadline:
             return "timed out waiting for " + "; ".join(problems)
