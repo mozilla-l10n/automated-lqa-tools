@@ -224,6 +224,17 @@ reviewer's comment is the reason. Without one, the model infers a reason
 and the line says it is inferred. The tool removes only its own tagged
 lines.
 
+A dismissal covers one string, so a reviewer mistake that recurs (fy-NL's
+accent on a capitalised initial) comes back on every new string.
+`lib/proposals.py` runs after the rejections are recorded and asks, in one
+plain request made only when its input changed, which reasons recur across
+the locale's `pontoon-rejected` and `auto-suggest` lines in every project.
+It writes the answer to `state/<locale>/convention_proposals.json`, and the
+report and PR body show it as *not applied*. It never writes
+`conventions.md`: an inferred reason promoted to a convention would hide a
+class of real defects with nobody having decided it. The code, not the
+prompt, requires three strings and a Pontoon rejection among them.
+
 `qa-digest.yml` (`lib/digest.py`) merges the QA pull requests. On Monday at
 08:00 UTC it squash-merges each `l10n-qa/<project>` pull request and emails
 `digest.RECIPIENTS` what changed, over SMTP, the way `mozl10n-linter` sends

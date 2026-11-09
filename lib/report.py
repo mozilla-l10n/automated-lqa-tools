@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 
 import conventions as conv
 import findings as findings_mod
+import proposals as proposals_mod
 from config import CHECKS_ONLY
 from findings import CATEGORIES, IMPACT
 
@@ -301,7 +302,7 @@ def _siblings(locale: str, project: str) -> str:
 
 
 def render(locale, meta, health, findings, systemic, delta_report, counts_conv, rules,
-           ctx: Ctx | None = None) -> str:
+           ctx: Ctx | None = None, proposals: list | None = None) -> str:
     ctx = ctx or Ctx()
     open_findings = [f for f in findings if f.is_open]
     suppressed = [f for f in findings if f.status == "suppressed"]
@@ -412,6 +413,7 @@ def render(locale, meta, health, findings, systemic, delta_report, counts_conv, 
         "## 2. Systemic items (decisions, not line items)",
         "",
         _systemic(systemic),
+        proposals_mod.render(proposals or [], meta.get("project", ""), locale),
         "---",
         "",
         f"## 3. Open findings ({len(open_findings)})",

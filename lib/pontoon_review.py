@@ -49,6 +49,10 @@ A suggestion Pontoon has not answered -- unreviewed, or simply absent from
 the window that was read -- stays ``pending``. Not hearing back is not an
 answer, the same rule as for the reviewer model.
 
+Once a locale's dismissals are written, `proposals.refresh` looks for a
+reason that keeps recurring among them and proposes it as a convention.
+It proposes only; ``conventions.md`` is a person's to edit.
+
 The QA workflows run this for the last two weeks before each review, so the
 dismissals take effect in the same run. ``--since`` reaches further back;
 ranges longer than Pontoon's limit are read in windows.
@@ -75,6 +79,7 @@ import local_secrets  # noqa: E402
 import dismiss  # noqa: E402
 import findings as findings_mod  # noqa: E402
 import layout  # noqa: E402
+import proposals  # noqa: E402
 import suggest  # noqa: E402
 import tracker  # noqa: E402
 from llm_incremental import _call, _close, language_of  # noqa: E402
@@ -529,6 +534,12 @@ def main(argv=None) -> int:
             continue
         print("  " + (", ".join(f"{k} {v}" for k, v in sorted(counts.items()))
                       or "no change"))
+        # After the dismissals above, which are its evidence. Proposes only:
+        # conventions.md is a person's to edit (see `proposals`).
+        try:
+            proposals.refresh(project, locale, client, write=args.write)
+        except Exception as exc:  # noqa: BLE001 - must not stop the review
+            print(f"::warning::{locale}: could not refresh convention proposals: {exc}")
     if not args.write:
         print("\ndry run: pass --write to record this")
     # Zero even when every locale failed: the QA review runs straight after
