@@ -298,6 +298,194 @@
    "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/global/viewSource.ftl/?string=341762",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/aiWindow.ftl",
+   "string_id": "toolbar-switcher-customizable-label-v2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aiWindow.ftl",
+    "key": [
+     "toolbar-switcher-customizable-label-v2"
+    ]
+   },
+   "fids": [
+    "ab8cd004ce22"
+   ],
+   "findings": [
+    "The tooltip omits the term \"fenêtre\" for the Classic window, producing the ungrammatical/incomplete \"entre une { -smart-window-brand-name } et classique\"."
+   ],
+   "source": "label: { -smart-window-brand-name } switcher\ntooltiptext: Switch between Smart and Classic Windows",
+   "original": "Sélecteur de { -smart-window-brand-name(form: \"lower-singular\") }",
+   "text": "Sélecteur de { -smart-window-brand-name(form: \"lower-singular\") }",
+   "full_original": ".label = Sélecteur de { -smart-window-brand-name(form: \"lower-singular\") }\n.tooltiptext = Basculer entre une { -smart-window-brand-name(form: \"lower-singular\") } et classique",
+   "full_text": ".label = Sélecteur de { -smart-window-brand-name(form: \"lower-singular\") }\n.tooltiptext = Basculer entre une { -smart-window-brand-name(form: \"lower-singular\") } et une fenêtre classique",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/newtab/newtab.ftl",
+   "string_id": "newtab-widget-wrexhamafc-view-table",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/newtab.ftl",
+    "key": [
+     "newtab-widget-wrexhamafc-view-table"
+    ]
+   },
+   "fids": [
+    "d1c959757a5e"
+   ],
+   "findings": [
+    "In football, “Table” means the league table, which is “Classement” in French, not “Tableau”."
+   ],
+   "source": "Table",
+   "original": "Tableau",
+   "text": "Classement",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/newtab/onboarding.ftl",
+   "string_id": "tab-groups-onboarding-session-restore-title-3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/newtab/onboarding.ftl",
+    "key": [
+     "tab-groups-onboarding-session-restore-title-3"
+    ]
+   },
+   "fids": [
+    "7cf50aa220a8"
+   ],
+   "findings": [
+    "The phrase « à tout moment » appears twice in the same sentence."
+   ],
+   "source": "Reopen your tab groups from the “Search and manage tabs” menu anytime.",
+   "original": "Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.",
+   "text": "Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "preferences-ai-controls-sidebar-chatbot-group-3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "preferences-ai-controls-sidebar-chatbot-group-3"
+    ]
+   },
+   "fids": [
+    "a15393e1b13f"
+   ],
+   "findings": [
+    "\"Keep a chatbot in view\" rendered as \"Gardez un œil sur un chatbot\" (keep an eye on a chatbot), reversing who watches whom."
+   ],
+   "source": "description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime.\nlabel: AI chatbot providers in sidebar",
+   "original": "Gardez un œil sur un chatbot pendant votre navigation. Choisissez parmi plusieurs fournisseurs et changez de fournisseur à tout moment.",
+   "text": "Gardez un chatbot sous les yeux pendant votre navigation. Choisissez parmi plusieurs fournisseurs et changez de fournisseur à tout moment.",
+   "full_original": ".description = Gardez un œil sur un chatbot pendant votre navigation. Choisissez parmi plusieurs fournisseurs et changez de fournisseur à tout moment.\n.label = Fournisseurs de chatbots IA dans le panneau latéral",
+   "full_text": ".description = Gardez un chatbot sous les yeux pendant votre navigation. Choisissez parmi plusieurs fournisseurs et changez de fournisseur à tout moment.\n.label = Fournisseurs de chatbots IA dans le panneau latéral",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-scope-not-same-origin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-scope-not-same-origin"
+    ]
+   },
+   "fids": [
+    "ced5189566ad"
+   ],
+   "findings": [
+    "\"The scope URL\" was rendered as « La portée de l’URL » (the scope of the URL)."
+   ],
+   "source": "The scope URL must be same origin as document.",
+   "original": "La portée de l’URL doit posséder la même origine que le document.",
+   "text": "L’URL de portée doit posséder la même origine que le document.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-scope-url-invalid",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-scope-url-invalid"
+    ]
+   },
+   "fids": [
+    "a85c7ea986c0"
+   ],
+   "findings": [
+    "\"The scope URL\" was rendered as « La portée de l’URL » (the scope of the URL)."
+   ],
+   "source": "The scope URL is invalid.",
+   "original": "La portée de l’URL est invalide.",
+   "text": "L’URL de portée est invalide.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "toolkit/toolkit/global/textActions.ftl",
+   "string_id": "text-action-copy-clean-link-to-highlight-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/global/textActions.ftl",
+    "key": [
+     "text-action-copy-clean-link-to-highlight-2"
+    ]
+   },
+   "fids": [
+    "586ba41d1126"
+   ],
+   "findings": [
+    "« lien nettoyé à surligner » means a link to be highlighted, not a clean link pointing to the highlighted text."
+   ],
+   "source": "accesskey: k\nlabel: Copy Clean Link to Highlight",
+   "original": "C",
+   "text": "C",
+   "full_original": ".accesskey = C\n.label = Copier le lien nettoyé à surligner",
+   "full_text": ".accesskey = C\n.label = Copier le lien nettoyé du surlignage",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }
