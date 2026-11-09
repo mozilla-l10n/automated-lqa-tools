@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 16,012 |
 
@@ -106,15 +106,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (32)
+## 3. Open findings (20)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 9 |
-| 3 | Degraded language (grammar, spelling, terminology) | 21 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 15 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -122,16 +122,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "you’ve reinstalled" rendered impersonally as "je nameščen na novo" (it has been newly installed), dropping the user as agent.
-    - Current: `Kaže, da je { -brand-short-name } nameščen na novo.`
-    - Source: `Looks like you’ve reinstalled { -brand-short-name }. Want us to clean it up for a fresh, like-new experience?`
-    - Suggest: `Kaže, da ste { -brand-short-name } namestili znova.`
-    - The en-US addresses the user directly about their reinstallation; the Slovenian states a passive fact and loses the meaning of "re-".
-- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "clean it up" rendered as "očistiti navlake" (clean it of junk/clutter), adding a claim the source does not make.
-    - Current: `Ga želite očistiti navlake, da bo deloval kot nov?`
-    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
-    - Suggest: `Ga želite počistiti, da bo deloval kot nov?`
-    - The en-US only says "clean it up for a fresh, like-new experience"; the Slovenian asserts the browser is full of junk. The parallel string uses the neutral "počistimo".
 - `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — The purpose clause is mistranslated so that the sentence reads "To improve the { -brand-product-name } browser" and merges the subject, changing which product is being improved and who sends the data.
     - Current: `Za izboljšanje brskalnika { -brand-product-name } { -vendor-short-name } pošilja diagnostične podatke in podatke o uporabi.`
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
@@ -147,11 +137,6 @@ _Nothing in this category._
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
-- `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Add notes" rendered as "Pišite opombe" (write notes) instead of adding notes.
-    - Current: `Pišite opombe`
-    - Source: `Add notes`
-    - Suggest: `Dodajte opombe`
-    - The source heading is "Add notes"; the verb "dodajte" is the established rendering of "add" in the sibling strings.
 - `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
     - Current: `jih odstranite, združite ali posamič izvozite`
     - Source: `Reorder, remove, merge, and export pages.`
@@ -162,24 +147,9 @@ _Nothing in this category._
     - Source: `Organize pages`
     - Suggest: `Organizirajte strani`
     - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
-- `about-pdf-feature-presentation-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Present PDFs fullscreen" is rendered without the PDF qualifier.
-    - Current: `Predstavite dokumente v celozaslonskem načinu`
-    - Source: `Present PDFs fullscreen`
-    - Suggest: `Predstavite dokumente PDF v celozaslonskem načinu`
-    - The en-US says PDFs; the locale elsewhere keeps "PDF" with "dokumenti"/"datoteke".
-- `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — "Remote Experiments" (experiments delivered remotely) is rendered as "Poskusi na daljavo", which means experiments performed at a distance.
-    - Current: `Poskusi na daljavo`
-    - Source: `Remote Experiments`
-    - Suggest: `Oddaljeni poskusi`
-    - In about:support this lists remotely-configured experiments (Nimbus), not experiments conducted remotely; "na daljavo" is the adverbial used for remote debugging and misdescribes the item.
 
 ### C. Grammar, agreement & spelling
 
-- `password-rules-email-description2` — `browser/browser/backupSettings.ftl` — Missing predicate agreement/copula wording: "ni e-poštni naslov" should use the genitive after the negated copula.
-    - Current: `ni e-poštni naslov`
-    - Source: `Not an email address`
-    - Suggest: `ni e-poštni naslov (npr. "Ni e-poštni naslov" → "Ni e-poštnega naslova")`
-    - In Slovenian the negated 'biti' requires the genitive: 'ni e-poštnega naslova'. Also, the string begins a UI message and should be capitalized like the en-US 'Not an email address'.
 - `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
     - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
     - Suggest: `"Strani za deljenje…".`
@@ -220,27 +190,9 @@ _Nothing in this category._
 - `newtab-section-follow-topic` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — "slediti" (newtab-section-follow-button etc.) vs "spremljati" (newtab-section-follow-topic etc.) within the same feature. → pick one verb.
     - Source: `aria-label: Follow { $topic }`
     - Suggest: `pick one verb.`
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Kaj je novega” but the string it names, `releaseNotes-link`, reads “Novosti”
-    - Current: `Preglasi stran "Kaj je novega", ki se odpre po posodobitvi. Če želite onemogočiti prikaz strani po posodobitvi, nastavite pravilnik na prazno vrednost.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Novosti`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — "Kannada" (Indic script) rendered "kanadsko" (reads as Canadian, colliding with fonts-langgroup-canadian). → "kannada".
     - Source: `label: Kannada`
     - Suggest: `"kannada".`
-- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — browser/browser/preferences/preferences.ftl — Lowercase + accusative ("naslove", "kreditne kartice") break the "Choose what to sync" sibling pattern (Zaznamki, Zgodovina, Gesla…). → "Naslovi", "Kreditne kartice".
-    - Source: `accesskey: e label: Addresses tooltiptext: Postal addresses you’ve saved (desktop only)`
-    - Suggest: `"Naslovi", "Kreditne kartice".`
-- `options-experimental-label` — `devtools/client/toolbox-options.ftl` — "Experimental Features" rendered as "Poskusne zmogljivosti" instead of the established "Poskusne funkcije/možnosti".
-    - Current: `Poskusne zmogljivosti`
-    - Source: `Experimental Features`
-    - Suggest: `Poskusne funkcije`
-    - en-US "Features" here means functionality; "zmogljivosti" means capacities/performance, which is not the standard sl rendering of "features" in DevTools settings.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “z uporabo” but the string it names, `options-local-mode-label`, reads “Lokalni način”
-    - Current: `Ta dokument bi bilo mogoče naložiti tudi z naslova "{ $url }" z uporabo "lokalnega načina" razvojnih orodij, ki ga lahko omogočite na plošči z nastavitvami.`
-    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-    - Suggest: `Lokalni način`
-    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
     - Current: `enako poreklo`
     - Source: `The id member must have the same origin as the start_url member.`
@@ -249,18 +201,9 @@ _Nothing in this category._
 - `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
     - Source: `Certificate Authority`
     - Suggest: `align on "overitelj`
-- `user-context-color-violet` — `toolkit/toolkit/global/contextual-identity.ftl` — toolkit/toolkit/global/contextual-identity.ftl — Color labels mix gender: most are neuter (Modro, Zeleno, Rumeno, Oranžno, Rdeče, Vijolično) but violet "Vijolična" and gray "Siva" are feminine. In particular purple (Vijolično, neuter) and violet (Vijolična, feminine) clash. → unify gender.
-    - Current: `Vijolična`
-    - Source: `label: Violet`
-    - Suggest: `unify gender.`
 
 ### E. Typography, punctuation & spacing
 
-- `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — Space inserted before the ellipsis character.
-    - Current: `Nalaganje …`
-    - Source: `Loading…`
-    - Suggest: `Nalaganje…`
-    - The en-US source is "Loading…" with no space before the ellipsis; Slovenian does not insert a space before the ellipsis in such loading strings.
 - `btp-warning-tracker-classified` — `toolkit/toolkit/global/antiTracking.ftl` — btp-warning-tracker-classified ([two]) — toolkit/toolkit/global/antiTracking.ftl — Missing space before the variable: "v naslednjih{ $gracePeriodSeconds } sekundah" → "v naslednjih { $gracePeriodSeconds } sekundah" (the [few]/[other] variants have the space).
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
     - Suggest: `[few]`
@@ -279,11 +222,23 @@ _Nothing in this category._
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (3)
+### Closed by the fixer (15)
 
+- `about-pdf-feature-comments-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — auto-suggest (2026-11-09, string ee5fb1e1): unreliable finding: 'Pišite opombe' is a natural heading for the notes feature; 'Dodajte' would be a stylistic preference.
+- `about-pdf-feature-presentation-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — auto-suggest (2026-11-09, string e8811c55): unreliable finding: In the about:pdf context 'dokumente' clearly means PDFs; omission is not clearly a defect.
 - `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — auto-suggest (2026-11-03, string 2aea1636): The sl tree uses straight double quotes (259) and curly double quotes (268) about equally, so straight quotes are an accepted convention.
+- `newtab-stocks-search-loading` — `browser/browser/newtab/newtab.ftl` — auto-suggest (2026-11-09, string 7b2ef640): Slovenian spelling rules put a space before an ellipsis that follows a whole word ('Nalaganje …'); this is the locale's standard.
+- `options-experimental-label` — `devtools/client/toolbox-options.ftl` — auto-suggest (2026-11-09, string fae16250): unreliable finding: "Zmogljivosti" is used for "features" in Slovenian software localization; changing it is a matter of preference.
+- `password-rules-email-description2` — `browser/browser/backupSettings.ftl` — auto-suggest (2026-11-09, string b5b2e01d): A predicate noun after negated 'biti' stays in the nominative ('To ni e-poštni naslov'); the genitive is only used for negated existence. The lowercase start may be on purpose.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — auto-suggest (2026-11-09, string 2fa73412): unreliable finding: The policy describes the page that opens after an update, not necessarily the menu link label, so "Kaj je novega" is plausibly acceptable.
+- `refresh-reinstalled-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — auto-suggest (2026-11-09, string 0b410d55): unreliable finding: 'nameščen na novo' still conveys a reinstall; leaving out the user as the one who did it is a style choice, not a mistranslation.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — auto-suggest (2026-11-09, string ca644fff): unreliable finding: 'očistiti navlake' is an idiomatic way to say 'clean up' and matches what the refresh feature does; the change would be stylistic.
+- `support-remote-experiments-title` — `toolkit/toolkit/about/aboutSupport.ftl` — auto-suggest (2026-11-09, string cd199e87): unreliable finding: 'Poskusi na daljavo' is an acceptable rendering of remotely delivered experiments; the alternative is a stylistic choice.
+- `sync-engine-addresses` — `browser/browser/preferences/preferences.ftl` — auto-suggest (2026-11-09, string c1bd1374): unreliable finding: The sibling sync labels cannot be seen here; the accusative may follow a sentence-style pattern, so the inconsistency cannot be confirmed.
 - `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03, string 878a0d6f): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov), so the forms are correct.
 - `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03, string 6adb9ae8): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov); the mute string uses accusative, hence differs.
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — auto-suggest (2026-11-09, string a3c02400): The quoted UI name is "lokalnega načina", which is the correctly inflected (genitive) form of the label "Lokalni način"; "z uporabo" is not inside the quotes.
+- `user-context-color-violet` — `toolkit/toolkit/global/contextual-identity.ftl` — auto-suggest (2026-11-09, string a2cdbde8): unreliable finding: The feminine 'Vijolična' may be deliberate, to tell violet apart from purple ('Vijolično'), and gray is feminine too, so changing the gender would be a stylistic choice rather than fixing a confirmed error.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 

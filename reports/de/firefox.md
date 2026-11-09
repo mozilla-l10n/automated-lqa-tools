@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `f82b652e600a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,104 |
+| **Strings reviewed this run** | 6 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,38 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (6)
 
-_Nothing was fixed._
+- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
+    - Current: `Suchmaschinen und Tastenkombinationen`
+    - Source: `aria-label: Search engines and shortcuts`
+    - Suggest: `Suchmaschinen und Suchverknüpfungen`
+    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
+    - Current: `{ -brand-short-name } Einstellungen`
+    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
+    - Suggest: `{ -brand-short-name }-Einstellungen`
+    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
+    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Offene Tabs von Ihren anderen Geräten`
+    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
+    - Current: `Tabs duplizieren`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Doppelte Tabs`
+    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
+    - Current: `denselben Ursprung (origin) als das Dokument`
+    - Source: `The scope URL must be same origin as document.`
+    - Suggest: `denselben Ursprung (origin) wie das Dokument`
+    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here. The sibling string dom-manifest-id-not-same-origin correctly uses "wie".
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
+    - Current: `denselben Ursprung (origin) als das Dokument`
+    - Source: `The start URL must be same origin as document.`
+    - Suggest: `denselben Ursprung (origin) wie das Dokument`
+    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -95,7 +124,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 416 | **char** |
 | dash | `em` 19, `en` 70 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4056 | **formal** |
+| register | `informal` 12, `formal` 4055 | **formal** |
 
 ---
 
@@ -105,14 +134,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (28)
+## 3. Open findings (9)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 16 |
-| 3 | Degraded language (grammar, spelling, terminology) | 10 |
+| 2 | Wrong content (says something other than the English) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -124,109 +153,25 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — "Follow our progress in Bugzilla bug 2072739" is rendered as "Den aktuellen Stand finden Sie …", dropping the sense of following ongoing progress.
-    - Current: `Den aktuellen Stand finden Sie im Bugzilla-Fehler 2072739.`
-    - Source: `Yes. We know this is disruptive, and we’re working on a fix to prevent it. Follow our progress in Bugzilla bug 2072739.`
-    - Suggest: `Verfolgen Sie unseren Fortschritt im Bugzilla-Fehler 2072739.`
-    - The English asks users to follow the team's progress; the German states the current status can be found there, a different statement.
 - `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
     - Current: `wenn ein anderes Firefox-Profil`
     - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
     - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
     - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
-- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — The German says tabs are being checked "for useful groups" in a way that implies searching for existing groups, contrary to the developer comment.
-    - Current: `Tabs werden auf nützliche Gruppen überprüft…`
-    - Source: `Checking tabs for useful groups…`
-    - Suggest: `Tabs werden auf nützliche Gruppierungen geprüft…`
-    - The comment states the model is forming new groups from the tabs, not searching for groups that already exist; "Tabs werden auf … Gruppen überprüft" reads as inspecting tabs for groups they belong to.
-- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — "Organize Tabs" is rendered as "Tabs verwalten" (manage tabs) instead of "Tabs organisieren".
-    - Current: `label: Tabs verwalten`
-    - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
-    - Suggest: `label: Tabs organisieren`
-    - The en-US "Organize" means arranging/grouping tabs (the feature clusters tabs into groups); "verwalten" is the established German rendering of "Manage", which is a different term used elsewhere (e.g. "Manage shortcuts" → "Tastenkombinationen verwalten").
-- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — "Try built-in VPN, now site by site" loses "site by site" nuance, rendered as "gezielt für einzelne Websites testen".
-    - Current: `Integriertes VPN jetzt gezielt für einzelne Websites testen`
-    - Source: `Try built-in VPN, now site by site`
-    - Suggest: `Integriertes VPN testen – jetzt Website für Website`
-    - The English emphasizes the new per-site capability ("site by site"); the German adds "gezielt" and blurs it, though meaning is close.
-- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — The German says using passwords is blocked, but the source means the Passwords page (about:logins) is blocked.
-    - Current: `wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert`
-    - Source: `Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.`
-    - Suggest: `wird die Seite Passwörter (about:logins) ebenfalls blockiert`
-    - In en-US, "Passwords (about:logins)" is the name of the Passwords page, and the policy blocks that page. "Die Verwendung von Passwörtern" means using passwords in general, which describes a broader effect than the policy has.
 - `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
     - Current: `Websites erlauben, App-Links zu öffnen.`
     - Source: `accesskey: A label: Allow sites to ask to open app links.`
     - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
     - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
-- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — "get ... on this device" rendered as "auf dieses Gerät zu übertragen" (transfer onto this device) changes the stated action direction/claim of sync.
-    - Current: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf dieses Gerät zu übertragen`
-    - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
-    - Suggest: `um Ihre Lesezeichen, Passwörter, Chronik und mehr auf diesem Gerät zu erhalten`
-    - The en-US says to get the data on this device (sync); the German says it will be transferred to this device, a one-directional claim not in the source.
-- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
-    - Current: `Suchmaschinen und Tastenkombinationen`
-    - Source: `aria-label: Search engines and shortcuts`
-    - Suggest: `Suchmaschinen und Suchverknüpfungen`
-    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
-    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Offene Tabs von Ihren anderen Geräten`
-    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
-- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — "Data syncing on this device" translated as "Auf diesem Gerät synchronisierte Daten" (data already synced), changing the heading's meaning.
-    - Current: `Auf diesem Gerät synchronisierte Daten`
-    - Source: `Data syncing on this device`
-    - Suggest: `Datensynchronisation auf diesem Gerät`
-    - The source is about the ongoing syncing of data on this device, not a list of data that has been synced; the German past participle asserts completed action.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
-    - Current: `Tabs duplizieren`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Doppelte Tabs`
-    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
-- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — "partially checked" is translated as "teilweise ausgewählt" (partially selected) instead of "teilweise aktiviert/angekreuzt".
-    - Current: `teilweise ausgewählt`
-    - Source: `partially checked`
-    - Suggest: `teilweise aktiviert`
-    - The accessibility state refers to a checkbox being checked, not selected; "ausgewählt" is the German term for "selected", a distinct accessibility state.
 - `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name "characterboundsupdate" is misspelled as "charactersboundsupdate".
     - Current: `charactersboundsupdate-Ereignis-Listener`
     - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
     - Suggest: `characterboundsupdate-Ereignis-Listener`
     - The developer comment says not to translate "characterboundsupdate". It is a DOM event name, and the extra "s" turns it into an event that does not exist, which misleads developers reading the console warning.
-- `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — "insecure request" rendered as "nicht verschlüsselte Anfrage" (unencrypted), narrowing the meaning.
-    - Current: `Die nicht verschlüsselte Anfrage`
-    - Source: `%1$S: Upgrading insecure request “%2$S” to use “%3$S”.`
-    - Suggest: `Die unsichere Anfrage`
-    - The en-US says "insecure", which is the established term (unsicher); "nicht verschlüsselt" states a different, narrower fact about the request.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "Reorder" is translated as "sortieren" (sort) instead of "neu anordnen" (reorder).
-    - Current: `Seiten sortieren, löschen, zusammenführen und exportieren.`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `Seiten neu anordnen, löschen, zusammenführen und exportieren.`
-    - The en-US "Reorder" means rearranging pages manually, not sorting them; "sortieren" names a different function.
-- `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — "just got easier" translated as "sind noch einfacher", losing the meaning of a new improvement.
-    - Current: `PDFs sind in { -brand-short-name } noch einfacher.`
-    - Source: `aria-label: Notification heading: PDFs just got easier in { -brand-short-name }.`
-    - Suggest: `PDFs sind in { -brand-short-name } jetzt noch einfacher.`
-    - en-US states the experience has just improved; the German drops the temporal "just/now", changing the statement.
 
 ### C. Grammar, agreement & spelling
 
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
-    - Current: `{ -brand-short-name } Einstellungen`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `{ -brand-short-name }-Einstellungen`
-    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here. The sibling string dom-manifest-id-not-same-origin correctly uses "wie".
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here.
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -240,16 +185,6 @@ _Nothing reported._
     - Source: `accesskey: i label: Tabs to Right`
     - Suggest: `Tabs rechts davon`
     - The source is "Tabs to Right", parallel to "Tabs to Left" ("Tabs links davon"). The verb is already in the parent menu.
-- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “Lokalen Modus” but the string it names, `options-local-mode-label`, reads “Lokaler Modus”
-    - Current: `Dieses Dokument kann auch über den "Lokalen Modus" der DevTools von "{ $url }" geladen werden, der im Einstellungsbereich aktiviert werden kann.`
-    - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
-    - Suggest: `Lokaler Modus`
-    - In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Descriptive label rendered as an imperative addressed to the user instead of a noun-phrase description of the preset.
-    - Current: `Protokollieren Sie Module zur Diagnose`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Module zur Diagnose von Problemen mit dem IP-Schutz (VPN) protokollieren`
-    - The en-US "Log modules to diagnose…" is a preset description, not an instruction to the user; sibling preset descriptions use an infinitive/noun phrase.
 - `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
     - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
     - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
@@ -273,19 +208,32 @@ _Nothing reported._
 
 ## 4. Appendix
 
-### Dismissed by hand (4)
+### Dismissed by hand (5)
 
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 - `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word "your" in the original string.</p>
+- `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; reason unclear
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>"Persist Logs" is a plural form in my opinion.</p>
 - `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (4)
+### Closed by the fixer (16)
 
+- `SecureUpgradeRequest` — `dom/chrome/security/security.properties` — auto-suggest (2026-11-09, string 428f73ae): unreliable finding: An insecure (http) request being upgraded is accurately described as unencrypted; the change is a matter of preference.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — auto-suggest (2026-11-09, string f3e49c3c): unreliable finding: The formal imperative is a grammatical, acceptable rendering; the claimed sibling inconsistency cannot be verified and the change would be stylistic.
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — auto-suggest (2026-11-09, string c6a50e2d): unreliable finding: "Seiten sortieren" is commonly used in German PDF tools for rearranging pages; the meaning is not materially changed.
 - `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — auto-suggest (2026-11-02, string 47f66f8b): The quoted label refers to the Windows 10 Settings > Default apps entry, which German Windows displays as "Webbrowser", not to Firefox's desktop-entry-generic-name.
+- `ipprotection-site-inclusions-callout-title-lapsed-users` — `browser/browser/ipProtection.ftl` — auto-suggest (2026-11-09, string 4223ae8d): unreliable finding: "jetzt gezielt für einzelne Websites" conveys the per-site meaning; the finding itself admits the meaning is close.
 - `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — auto-suggest (2026-11-02, string fa53790f): The step describes Chrome's own password-export button, not Firefox's downloadFile.label, so matching Firefox's 'Datei speichern unter…' would be wrong.
+- `pdf-features-notification` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — auto-suggest (2026-11-09, string 7ef34357): unreliable finding: "noch einfacher" already conveys an improvement; adding "jetzt" is a stylistic preference.
+- `prefs-syncing-off-3` — `browser/browser/preferences/preferences.ftl` — auto-suggest (2026-11-09, string 50c3a023): unreliable finding: "auf dieses Gerät zu übertragen" is an acceptable idiomatic rendering of "get ... on this device".
+- `restart-required-fix-answer` — `browser/browser/aboutRestartRequired.ftl` — auto-suggest (2026-11-09, string 794066fb): unreliable finding: "Den aktuellen Stand finden Sie im Bugzilla-Fehler" is a natural, acceptable rendering of following progress; the change would be stylistic.
+- `smartwindow-group-tabs-loading` — `browser/browser/autoTabGrouping.ftl` — auto-suggest (2026-11-09, string bc0f7db5): unreliable finding: The German mirrors the English "Checking tabs for useful groups" closely; the claimed misreading is equally present in the source.
+- `smartwindow-organize-tabs-button` — `browser/browser/autoTabGrouping.ftl` — auto-suggest (2026-11-09, string 8eed8b91): unreliable finding: "Tabs verwalten" is a plausible German rendering of "Organize Tabs"; preferring "organisieren" is a terminology preference.
+- `statePartiallyChecked` — `dom/chrome/accessibility/AccessFu.properties` — auto-suggest (2026-11-09, string d661d6e0): unreliable finding: Cannot confirm which term the de locale uses for the checked state elsewhere; "ausgewählt" is commonly used for checkboxes in German UI.
+- `sync-syncing-across-devices-heading-3` — `browser/browser/preferences/preferences.ftl` — auto-suggest (2026-11-09, string 58ab2cc1): unreliable finding: As a heading over the list of data types synced on this device, the participle phrasing is an acceptable rendering.
+- `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — auto-suggest (2026-11-09, string fc9d2a5f): unreliable finding: "Lokalen Modus" is the grammatically required accusative inflection of the label "Lokaler Modus" after "über den", so the UI name remains recognizable.
 - `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — auto-suggest (2026-11-02, string 92c79088): "Freizeit" is the long-established German Firefox name for the Personal container (paired with "Arbeit" for Work). It is a deliberate localization choice that keeps the private-vs-work contrast, not a mistranslation.
 - `xslt-bad-value` — `dom/dom/xslt.ftl` — auto-suggest (2026-11-02, string cfe5ead7): The string is an XSLT attribute-value error and contains no history term, so "Chronik" is irrelevant.
 
@@ -320,8 +268,14 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (58)
+### Fixed to date (64)
 
+- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
+- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-09
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — fixed 2026-11-09
 - `newtab-wallpaper-firefox-sky-light` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-05
 - `pdf-features-notification-message` — `toolkit/toolkit/about/pdfFeaturesNotification.ftl` — fixed 2026-11-05
 - `restart-required-see-more-button` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-11-03
@@ -356,9 +310,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
 - `windows-10-eos-challenger-sync-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
 - `windows-10-eos-sync-callout-privacy-screen-1-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `windows-10-eos-sync-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `newtab-sports-widget-match-penalties` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-27
-- `onboarding-focused-tabs-subtitle` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-27
-- `fxa-qrcode-error-title` — `browser/browser/preferences/fxaPairDevice.ftl` — fixed 2026-07-27
-- `extension-controlling-privacy-containers` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-27
-- `search-keyword-warning-title` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-27

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
-    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
-    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
-    - Current: `en blader om de pagina opnieuw te tonen.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
-    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

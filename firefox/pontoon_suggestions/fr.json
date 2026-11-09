@@ -483,9 +483,14 @@
    "text": "C",
    "full_original": ".accesskey = C\n.label = Copier le lien nettoyé à surligner",
    "full_text": ".accesskey = C\n.label = Copier le lien nettoyé du surlignage",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "dismissal": "text-action-copy-clean-link-to-highlight-2 @ toolkit/toolkit/global/textActions.ftl — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; likely reason (inferred): The suggestion was the same as the original (\"C\"), so it changed nothing; the finding is about the wording of the label, not this accesskey value.",
+   "pontoon_pk": 12398663,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/toolkit/toolkit/global/textActions.ftl/?string=342560",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

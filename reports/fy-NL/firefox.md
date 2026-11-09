@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `f82b652e600a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 23 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,141 +18,13 @@ Also for fy-NL: [Firefox for Android](android.md) · [Focus for Android](focus_a
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (0)
 
-- `preferences-etp-status-header` — `browser/browser/preferences/preferences.ftl` — Translation says 'most trackers' are blocked, where the source just says trackers are blocked automatically.
-    - Current: `wêrby’t de measte trackers automatysk blokkearre wurde`
-    - Source: `description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking trackers automatically so you’re in control of your digital trail. label: Enhanced Trac…`
-    - Suggest: `wêrby’t trackers automatysk blokkearre wurde`
-    - en-US 'blocking trackers automatically' has no quantifier, but the Frisian adds 'de measte' (most).
-- `preferences-etp-status-header` — `browser/browser/preferences/preferences.ftl` — 'wylst it sneupen' is ungrammatical because the conjunction 'wylst' needs a clause.
-    - Current: `wylst it sneupen`
-    - Source: `description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking trackers automatically so you’re in control of your digital trail. label: Enhanced Trac…`
-    - Suggest: `wylst jo sneupe`
-    - 'wylst' (while) introduces a subordinate clause with a finite verb. It can't be followed by a nominalised infinitive.
-- `elevation-finished-background-page` — `toolkit/toolkit/updates/elevation.ftl` — Wrong past participle: 'download' instead of 'downloade'.
-    - Current: `is krekt download`
-    - Source: `A security and stability update for { -brand-short-name } has been downloaded and is ready to be installed.`
-    - Suggest: `is downloade`
-    - The Frisian past participle of 'downloade' is 'downloade'. The translation also adds 'krekt' (just), which the source doesn't have.
-- `SEC_ERROR_CRL_INVALID_VERSION` — `security/manager/chrome/pipnss/nsserrors.properties` — Typo in 'Sertifikaateerroppingslist'.
-    - Current: `Sertifikaateerroppingslist`
-    - Source: `Issuer’s Certificate Revocation List has an unknown version number.`
-    - Suggest: `Sertifikaatwerroppingslist`
-    - The word should be 'werroppingslist'. The same string in nsserrors.ftl spells it correctly.
-- `options-stylesheet-autocompletion-tooltip` — `devtools/client/toolbox-options.ftl` — Wrong verb form 'type' instead of 'typje'.
-    - Current: `wylst jo type`
-    - Source: `title: Autocomplete CSS properties, values and selectors in Style Editor as you type`
-    - Suggest: `wylst jo typje`
-    - The Frisian verb is 'typje', and its form with 'jo' is 'typje'.
+_No new findings._
 
-### ✅ Fixed since the last run (21)
+### ✅ Fixed since the last run (0)
 
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — 'working normally' has been reduced to 'normal', so the sentence now says restarting keeps the browser 'safe and normal'.
-    - Current: `feilich en normaal.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `feilich en normaal wurkjend.`
-    - en-US says restarting keeps the browser 'secure and working normally'. The Frisian drops the verb 'working', which changes the meaning and reads oddly.
-- `contextual-manager-passwords-delete-all-passwords-checkbox` — `browser/browser/contextual-manager.ftl` — Typo: 'wachturd' should be 'wachtwurd'.
-    - Current: `Ja, wachturd fuortsmite`
-    - Source: `{$total ->} [1] Yes, delete password [other] Yes, delete passwords`
-    - Suggest: `Ja, wachtwurd fuortsmite`
-    - The Frisian word for password is 'wachtwurd', as spelled in the other variant and the surrounding strings.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path leaves out 'Tabs' and turns 'browsing' into the verb 'browse', and 'it' (the menu) has become 'the page'.
-    - Current: `<span data-l10n-name="chevron"></span> en blêdzje om de side opnij te toanen.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `<span data-l10n-name="chevron"></span> Ljepblêden en navigaasje om it menu opnij te toanen.`
-    - en-US says 'Settings > Tabs and browsing' (a settings section name) and that this shows the menu again. The Frisian reads 'Visit Settings > and browse to show the page again', so the user gets the wrong path and the wrong object.
-- `newtab-wallpaper-palm-trees` — `browser/browser/newtab/newtab.ftl` — 'wylst' is a conjunction and cannot govern the noun phrase 'gouden oere'.
-    - Current: `wylst gouden oere`
-    - Source: `Silhouette of coconut palm trees during golden hour`
-    - Suggest: `yn it gouden oere`
-    - 'during golden hour' needs a preposition (yn/tidens) plus article; 'wylst gouden oere' is ungrammatical.
-- `hnt-card-extensions-body` — `browser/browser/newtab/onboarding.ftl` — 'meast leafste' is a double superlative; 'most loved' should be 'meast leafde'.
-    - Current: `meast leafste`
-    - Source: `Customize your browsing with our most loved extensions.`
-    - Suggest: `meast leafde`
-    - 'leafste' is already superlative; combining with 'meast' is ungrammatical. The source means 'most loved'.
-- `hnt-card-pin-body` — `browser/browser/newtab/onboarding.ftl` — Nominal infinitive should be 'navigearjen', not the bare verb 'navigearje'.
-    - Current: `beskerme navigearje fan`
-    - Source: `{$sel_1 ->} [macos] Jump back in to protected browsing from your dock. [other] Jump back in to protected browsing from your taskbar.`
-    - Suggest: `beskerme navigearjen fan`
-    - Used as a noun after 'nei', Frisian requires the -en form, as the locale itself uses in 'Begjin mei navigearjen'.
-- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — 'Tabgroepen' is a Dutch-style term inconsistent with the locale's 'ljepblêd' and 'groep'.
-    - Current: `Tabgroepen`
-    - Source: `Tab groups are auto-saved. Find them here.`
-    - Suggest: `Ljepblêdgroepen`
-    - The locale translates 'tab' as 'ljepblêd' and 'group' as 'groep' (e.g. 'Ljepblêden oan groep tafoegje'); 'Tabgroepen' mixes English and Dutch forms.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — Stray 'oer' ('about') inserted before the about:third-party reference, garbling the feature name.
-    - Current: `eksterne module-ynformaasje oer (about:third-party)`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `eksterne module-ynformaasje (about:third-party)`
-    - The source names the page 'Third-party Module Information (about:third-party)'; the added 'oer' makes it read 'information about (about:third-party)'.
-- `policy-OfferToSaveLoginsDefault` — `browser/browser/policies/policies-descriptions.ftl` — Infinitive clause uses 'mei' instead of 'om' after 'oanbiede'.
-    - Current: `oanbiede mei bewarre oanmeldingen en wachtwurden te ûnthâlden`
-    - Source: `Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - Suggest: `oanbiede om bewarre oanmeldingen en wachtwurden te ûnthâlden`
-    - 'offer to remember' requires 'om … te' in Frisian; 'mei … te ûnthâlden' is a grammatical slip.
-- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — Tooltip uses the Dutch spelling 'Betellingsmethoden', inconsistent with the label's Frisian 'Betellingsmetoaden'.
-    - Current: `Betellingsmethoden`
-    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
-    - Suggest: `Betellingsmetoaden`
-    - Frisian spelling is 'metoaden', as in the label of the same message.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — Tooltip uses the imperative verb 'Iepenje' (open!) instead of the adjective 'iepen' (open tabs).
-    - Current: `Iepenje ljepblêden`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Iepen ljepblêden`
-    - The developer comment states 'Open tabs' is a modified noun (tabs that are open), not an instruction.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — Misspelling of 'ljepblêden' (missing b) in the label.
-    - Current: `Iepen ljeplêden`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Iepen ljepblêden`
-    - The locale's word for tabs is 'ljepblêden', as used in the tooltip and elsewhere.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — Typo: 'jepblêden' is missing the initial 'l' of 'ljepblêden'.
-    - Current: `Dûbele jepblêden`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Dûbele ljepblêden`
-    - The locale's word for tabs is 'ljepblêden', used consistently elsewhere in the tab context menu.
-- `options-stylesheet-autocompletion-tooltip` — `devtools/client/toolbox-options.ftl` — Wrong verb form 'type' instead of 'typje'.
-    - Current: `wylst jo type`
-    - Source: `title: Autocomplete CSS properties, values and selectors in Style Editor as you type`
-    - Suggest: `wylst jo typje`
-    - The Frisian verb is 'typje', and its form with 'jo' is 'typje'.
-- `about-processes-collapse-all-sites` — `toolkit/toolkit/about/aboutProcesses.ftl` — "Alle ynklappe" uses the plural adjective form instead of the pronoun "Alles", which the sibling string "Alles útklappe" uses.
-    - Current: `Alle ynklappe`
-    - Source: `title: Collapse all`
-    - Suggest: `Alles ynklappe`
-    - "Collapse all" needs the standalone pronoun "alles"; "alle" needs a following noun. This is also inconsistent with "Alles útklappe".
-- `sec-error-baggage-not-created` — `toolkit/toolkit/neterror/nsserrors.ftl` — Ungrammatical construction: the conjunction 'wylst' is followed by a noun phrase.
-    - Current: `flater wylst it meitsjen fan bagageobjekt`
-    - Source: `error while creating baggage object`
-    - Suggest: `flater by it meitsjen fan bagageobjekt`
-    - 'wylst' is a conjunction that needs a clause; 'error while creating' should be 'flater by it meitsjen fan'.
-- `sec-error-crl-invalid-version` — `toolkit/toolkit/neterror/nsserrors.ftl` — 'unknown version number' translated as 'invalid version number'.
-    - Current: `hat in ûnjildich ferzjenûmer`
-    - Source: `Issuer’s Certificate Revocation List has an unknown version number.`
-    - Suggest: `hat in ûnbekend ferzjenûmer`
-    - Source says 'unknown', not 'invalid'; 'ûnjildich' means invalid.
-- `ssl-error-cipher-disallowed-for-version` — `toolkit/toolkit/neterror/nsserrors.ftl` — Preposition 'yn' (in) used instead of the indefinite article 'in' (a).
-    - Current: `selektearre yn net tastiene`
-    - Source: `SSL peer selected a cipher suite disallowed for the selected protocol version.`
-    - Suggest: `selektearre in net tastiene`
-    - Source 'selected a cipher suite' needs the article 'in'; 'yn' means 'in/into'.
-- `elevation-finished-background-page` — `toolkit/toolkit/updates/elevation.ftl` — Wrong past participle: 'download' instead of 'downloade'.
-    - Current: `is krekt download`
-    - Source: `A security and stability update for { -brand-short-name } has been downloaded and is ready to be installed.`
-    - Suggest: `is downloade`
-    - The Frisian past participle of 'downloade' is 'downloade'. The translation also adds 'krekt' (just), which the source doesn't have.
-- `options-stylesheet-autocompletion-tooltip` — `devtools/client/toolbox-options.ftl` — Wrong verb form 'type' instead of 'typje'.
-    - Current: `wylst jo type`
-    - Source: `title: Autocomplete CSS properties, values and selectors in Style Editor as you type`
-    - Suggest: `wylst jo typje`
-    - The Frisian verb is 'typje', and its form with 'jo' is 'typje'.
-- `elevation-finished-background-page` — `toolkit/toolkit/updates/elevation.ftl` — Wrong past participle: 'download' instead of 'downloade'.
-    - Current: `is krekt download`
-    - Source: `A security and stability update for { -brand-short-name } has been downloaded and is ready to be installed.`
-    - Suggest: `is downloade`
-    - The Frisian past participle of 'downloade' is 'downloade'. The translation also adds 'krekt' (just), which the source doesn't have.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

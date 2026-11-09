@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,843 |
+| **Strings reviewed this run** | 0 of 16,843 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,16 +22,9 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` references ['thirds'], which en-US does not pass
-    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` drops ['purposes'], which en-US passes
-    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 

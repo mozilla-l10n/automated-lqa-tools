@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 16,875 |
 
@@ -88,31 +88,17 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 _Nothing reported._
 
-### Proposed conventions — not applied (1)
-
-Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `firefox/locales/zh-TW/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
-
-- Do not flag an approved translation just because it uses one of several interchangeable Chinese word choices, such as an equally valid synonym or measure word. If the existing wording is accurate and natural, swapping in an alternative is not a fix. For example, 報表 and 報告 are interchangeable for "report" in crash-report buttons, and different measure words are interchangeable for permission items. A finding is still valid if the wording changes or drops meaning, leaves English untranslated, or departs from a glossary term.
-    _Behind it: 6 dismissals, 6 of them rejected in Pontoon._
-
-    - `mozac_feature_addons_permissions_browser_settings_description_for_update` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `mozac_feature_addons_permissions_content_description_item` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>
-    - `home_bookmarks_menu_item_remove` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `ip_protection_location_recommended_label` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>
-    - `startup_crash_positive` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
-    - `unsubmitted_crash_dialog_positive_button` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
-
 ---
 
-## 3. Open findings (55)
+## 3. Open findings (48)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 21 |
-| 2 | Wrong content (says something other than the English) | 18 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 20 |
+| 2 | Wrong content (says something other than the English) | 17 |
 | 3 | Degraded language (grammar, spelling, terminology) | 3 |
-| 4 | Cosmetic (typography, spacing) | 13 |
+| 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -145,31 +131,11 @@ Recurring reasons in this locale's tool-written dismissals. Nothing here reaches
     - Source: `Nice work organizing your tabs`
     - Suggest: `分頁整理得真好`
     - The comment says this is shown when every suggested group has already been created. The translation tells the user to organize their tabs instead of acknowledging that they already did.
-- `menu-share-copy-links` — `browser/browser/browser.ftl` — `menu-share-copy-links` (`.label`) has plural variant ['one'], which zh-TW does not have
-    - Current: `{$count ->} [one] 複製鏈結 [other] 複製 { $count } 個鏈結`
-    - Source: `accesskey: L label: {$count ->} [one] Copy Link [other] Copy { $count } Links`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-countdown` — `browser/browser/browser.ftl` — `urlbar-result-dates-countdown` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilStart ->} [one] { $name } · 明天 [other] { $name } · { $daysUntilStart } 天後`
-    - Source: `{$daysUntilStart ->} [one] { $name } · In { $daysUntilStart } day [other] { $name } · In { $daysUntilStart } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-countdown-range` — `browser/browser/browser.ftl` — `urlbar-result-dates-countdown-range` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilStart ->} [one] { $name } · 明天開始 [other] { $name } · { $daysUntilStart } 天後開始`
-    - Source: `{$daysUntilStart ->} [one] { $name } · Starts in { $daysUntilStart } day [other] { $name } · Starts in { $daysUntilStart } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
-- `urlbar-result-dates-ongoing` — `browser/browser/browser.ftl` — `urlbar-result-dates-ongoing` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$daysUntilEnd ->} [one] { $name } · 明天結束 [other] { $name } · { $daysUntilEnd } 天後結束`
-    - Source: `{$daysUntilEnd ->} [one] { $name } · Ends in { $daysUntilEnd } day [other] { $name } · Ends in { $daysUntilEnd } days`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `customkeys-description` — `browser/browser/customkeys.ftl` — 'Control how you move around and interact with Firefox' is rendered as 'control how you move the cursor'.
     - Current: `控制您如何移動游標以及與 { -brand-short-name } 互動。`
     - Source: `Control how you move around and interact with { -brand-short-name }.`
     - Suggest: `控制您如何在 { -brand-short-name } 中瀏覽與互動。`
     - In this context 'move around' means navigating the browser with shortcuts, not moving a cursor. The translation narrows the meaning of the keyboard-shortcuts page.
-- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — `downloads-files-not-downloaded` has plural variant ['one'], which zh-TW does not have
-    - Current: `{$num ->} [other] 未下載 { $num } 個檔案。 [one] 未下載檔案。`
-    - Source: `{$num ->} [one] File not downloaded. [other] { $num } files not downloaded.`
-    - zh-TW has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
 - `genai-settings-chat-localhost-links` — `browser/browser/genai.ftl` — The sentence is reversed: it tells the user to bring their chatbot's llamafile to Mozilla's Innovation group.
     - Current: `將您本機端的私人聊天機器人的 <a data-l10n-name="link1">llamafile</a> 帶到 { -vendor-short-name } 的創新群組使用。`
     - Source: `Bring your own private local chatbot such as <a data-l10n-name="link1">llamafile</a> from { -vendor-short-name }’s Innovation group.`
@@ -276,11 +242,6 @@ Recurring reasons in this locale's tool-written dismissals. Nothing here reaches
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — "Section" is translated as 段落 (paragraph), but the feature selects an area of the page.
-    - Current: `將段落移動到迷你視窗`
-    - Source: `accesskey: w label: Move Section to Mini Window`
-    - Suggest: `將區域移動到迷你視窗`
-    - The tool selects a rectangular region of the page, and the overlay header already calls it 區域. 段落 means a text paragraph.
 - `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the noun phrase 'open tabs from your other devices' into the command 'open the tabs on your other devices'.
     - Current: `開啟您其他裝置上的分頁`
     - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
@@ -334,11 +295,6 @@ Recurring reasons in this locale's tool-written dismissals. Nothing here reaches
     - Source: `accesskey: G label: {$tabCount ->} [1] Add to Group [other] Add { $tabCount } Tabs to Group`
     - Suggest: `將 { $tabCount } 個分頁加入至群組`
     - The en-US is 'Add N Tabs to Group'. A number in Chinese needs the classifier 個, as in the sibling string 移動 { $tabCount } 個分頁到. With 的 the phrase is ungrammatical.
-- `STUB_BLURB_FIRST3` — `browser/installer/nsisstrings.properties` — 'open web' is left in English, although the sibling string translates it
-    - Current: `準備好在 Open Web 中漫遊`
-    - Source: `Get ready to roam on the open web`
-    - Suggest: `準備好在開放的網路中漫遊`
-    - The sibling STUB_BLURB_FIRST2_DEVEDITION renders 'the open web' as 開放的網路環境. 'Open web' is a common phrase, not a brand.
 - `url-classifier-content-classifier-col-important` — `toolkit/toolkit/about/url-classifier.ftl` — 'Important' was translated although the comment says not to
     - Current: `重要`
     - Source: `Important`
@@ -414,9 +370,15 @@ Recurring reasons in this locale's tool-written dismissals. Nothing here reaches
 
 _One line each in `locales/zh-TW/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (0)
+### Closed by the fixer (7)
 
-_Nothing closed by the fixer._
+- `STUB_BLURB_FIRST3` — `browser/installer/nsisstrings.properties` — auto-suggest (2026-11-09, string 56cf369f): unreliable finding: Keeping 'Open Web' as a concept term is a plausible stylistic choice, not a clear error.
+- `downloads-files-not-downloaded` — `browser/browser/downloads.ftl` — auto-suggest (2026-11-09, string ed64d941): unreliable finding: Dead [one] variant is harmless; the [other] output is correct, and removal requires changing select markup.
+- `main-context-menu-use-mini-window` — `browser/browser/miniWindow.ftl` — auto-suggest (2026-11-09, string bb628b99): unreliable finding: 段落 is a plausible rendering of Section and the claimed 區域 usage in the overlay header cannot be verified here.
+- `menu-share-copy-links` — `browser/browser/browser.ftl` — auto-suggest (2026-11-09, string 8bf28060): unreliable finding: The unused [one] variant is harmless; the [other] output is correct and removing it would require changing select markup.
+- `urlbar-result-dates-countdown` — `browser/browser/browser.ftl` — auto-suggest (2026-11-09, string 95ae0c86): unreliable finding: Dead [one] variant is harmless; the [other] output is correct for all counts, and removal requires changing select markup.
+- `urlbar-result-dates-countdown-range` — `browser/browser/browser.ftl` — auto-suggest (2026-11-09, string 71397184): unreliable finding: Dead [one] variant is harmless; the [other] output is correct for all counts, and removal requires changing select markup.
+- `urlbar-result-dates-ongoing` — `browser/browser/browser.ftl` — auto-suggest (2026-11-09, string 2ed1f40d): unreliable finding: Dead [one] variant is harmless; the [other] output is correct for all counts, and removal requires changing select markup.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/zh-TW/dismissed.txt` brings the finding back now._
 

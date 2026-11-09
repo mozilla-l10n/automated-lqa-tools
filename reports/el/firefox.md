@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `f82b652e600a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 27 of 16,831 |
+| **Strings reviewed this run** | 44 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ### 🆕 New findings (1)
 
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective describing tabs) is translated as the action "Copying tabs".
-    - Current: `Αντιγραφή καρτελών`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Διπλότυπες καρτέλες`
-    - The developer comment says this item, under "Close Multiple", closes all duplicates of the selected tab. «Αντιγραφή καρτελών» means "copying/duplicating tabs", which is the opposite kind of action.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — The pronoun after the imperative is in the wrong form: «τις» is used where Greek requires «τες».
+    - Current: `Βρείτε τις εδώ`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `Βρείτε τες εδώ`
+    - In standard Greek, a feminine plural object pronoun that follows an imperative takes the form «τες» («βρείτε τες»). «τις» is a common error in this position.
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,831 |
-| Missing strings | 44 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,22 +67,7 @@ _Nothing retired._
 
 ### Completeness
 
-**44 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 20
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 7
-- `browser/browser/tabContextMenu.ftl` — 4
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/newtab/newtab.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
-- `browser/browser/contextual-manager.ftl` — 1
-- `browser/browser/customkeys.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
-- `dom/dom/manifest.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -90,7 +75,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1016, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
+| quotes | `guillemet` 1019, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
 | ellipsis | `char` 400, `ascii` 2 | **char** |
 | dash | `em` 65, `en` 2 | **em** |
@@ -104,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (220)
+## 3. Open findings (221)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 142 |
 | 2 | Wrong content (says something other than the English) | 69 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -482,6 +467,11 @@ _Nothing reported._
     - Source: `Internet Explorer`
     - Suggest: `Internet Explorer`
     - A Cyrillic/Greek homoglyph inside an otherwise Latin brand name breaks search, sorting and screen-reader pronunciation; the neighbouring migration-wizard-migrator-display-name-ie uses the correct Latin spelling.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — The pronoun after the imperative is in the wrong form: «τις» is used where Greek requires «τες».
+    - Current: `Βρείτε τις εδώ`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `Βρείτε τες εδώ`
+    - In standard Greek, a feminine plural object pronoun that follows an imperative takes the form «τες» («βρείτε τες»). «τις» is a common error in this position.
 - `policy-NoDefaultBookmarks` — `browser/browser/policies/policies-descriptions.ftl` — Misspelling of «συμπεριλαμβάνονται».
     - Current: `συμπεριλαμβάνοται`
     - Source: `Disable creation of the default bookmarks bundled with { -brand-short-name }, and the Smart Bookmarks (Most Visited, Recent Tags). Note: this policy is only effective if used before the first run of the profile.`
