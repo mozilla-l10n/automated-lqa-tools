@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -87,14 +87,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (47)
+## 3. Open findings (20)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 35 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 2 | Wrong content (says something other than the English) | 14 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -138,66 +138,16 @@ _Nothing in this category._
     - Source: `Provide cryptographic authentication services.`
     - Suggest: `Fournir des services d’authentification cryptographique.`
     - The source describes cryptographic authentication services (PKCS#11), not "encrypted" authentication.
-- `mozac_feature_downloads_third_party_app_chooser_dialog_title` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — "Complete action using" is rendered as "Continuer avec" (Continue with) instead of indicating completing the action with an app.
-    - Current: `Continuer avec`
-    - Source: `Complete action using`
-    - Suggest: `Effectuer l’action avec`
-    - The source is the standard Android app-chooser title "Complete action using"; "Continuer avec" means "Continue with" and loses the meaning of completing the action.
-- `mozac_feature_listentopage_playback_speed_option` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — Multiplier and × symbol are reversed, producing "× 1,5" instead of "1,5×".
-    - Current: `× %1$s`
-    - Source: `%1$s×`
-    - Suggest: `%1$s×`
-    - The developer comment says the item shows the speed multiplier such as "1.5×", with %1$s being the number followed by the multiplication sign; placing × before the number reads as a mathematical operator, not a speed.
-- `mozac_feature_listentopage_playback_speed_option_default` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — The multiplier "1×" is rendered as "× 1", reversing number and symbol.
-    - Current: `× 1 (par défaut)`
-    - Source: `1× (Default)`
-    - Suggest: `1× (par défaut)`
-    - The comment explains "1×" means one times the normal speed; "× 1" inverts the notation and no longer reads as a playback speed.
-- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — The source says entered data "may not be saved", the French says the data "may be lost", changing the meaning.
-    - Current: `Des données saisies peuvent être perdues`
-    - Source: `Do you want to leave this site? Data you have entered may not be saved`
-    - Suggest: `Les données que vous avez saisies pourraient ne pas être enregistrées`
-    - "may not be saved" = « pourraient ne pas être enregistrées », not « peuvent être perdues ».
-- `mozac_feature_prompt_repost_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — The phrase "twice" is dropped from the translation.
-    - Current: `la publication d’un commentaire.`
-    - Source: `Refreshing this page could duplicate recent actions, such as sending a payment or posting a comment twice.`
-    - Suggest: `la publication d’un commentaire en double.`
-    - Source: "such as sending a payment or posting a comment twice"; the duplication qualifier is missing in French.
-- `mozac_feature_prompts_account_picture` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — "Account picture" is rendered as "Photo du profil" (profile picture) instead of account picture.
-    - Current: `Photo du profil`
-    - Source: `Account picture`
-    - Suggest: `Image du compte`
-    - The source and developer comment refer to the account picture in the Select Account FedCM prompt, not a profile picture.
 - `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — "entering a text input field" (saisie dans un champ) is rendered as "création" (creating).
     - Current: `Libellé pour la création d’un champ de saisie de texte`
     - Source: `Label for entering a text input field`
     - Suggest: `Libellé pour la saisie dans un champ de texte`
     - The source labels the field where the user enters text; "création" says the label is for creating a field, which is a different meaning.
-- `add_private_tab` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Add private tab" is rendered as "Ouvrir un nouvel onglet privé" while the parallel string add_tab uses "Ajouter un onglet".
-    - Current: `Ouvrir un nouvel onglet privé`
-    - Source: `Add private tab`
-    - Suggest: `Ajouter un onglet privé`
-    - The source says "Add private tab"; the sibling string add_tab is translated "Ajouter un onglet", so the verb and the added "nouvel" are inconsistent with the source.
-- `addresses_townland` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Townland" is rendered as "Commune", which names a different administrative unit than the Irish townland described in the comment.
-    - Current: `Commune`
-    - Source: `Townland`
-    - Suggest: `Townland`
-    - The developer comment states the Townland is a specific Irish rural land division; "Commune" is a French municipality-level unit and is also used for other address levels, making the field misleading.
 - `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The translation reverses the meaning: the source says the app will translate this (source) language automatically, not translate the page into this language.
     - Current: `%1$s traduira automatiquement la page dans cette langue à son chargement.`
     - Source: `%1$s will translate this language automatically when the page loads.`
     - Suggest: `%1$s traduira automatiquement cette langue au chargement de la page.`
     - Source: "%1$s will translate this language automatically when the page loads." — the language is the one being translated from, matching the sibling strings ("ne proposera jamais de traduire les sites dans cette langue"). The current text says the page will be translated into that language.
-- `browser_menu_webcompat_reporter_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Singular "Report broken site" is rendered as a plural "des problèmes" instead of reporting the site as broken.
-    - Current: `Signaler des problèmes avec ce site`
-    - Source: `Report broken site`
-    - Suggest: `Signaler un site défectueux`
-    - The source is a menu label meaning to report that this site is broken; the French turns it into reporting multiple unspecified problems.
-- `credit_cards_warning_dialog_message_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French drops "from being accessed", reversing the sense so it reads "protect your payment methods if someone accesses your device" instead of "protect them from being accessed if someone else has your device".
-    - Current: `pour protéger vos moyens de paiement enregistrés si jamais quelqu’un accède à votre appareil`
-    - Source: `Set up a device lock pattern, PIN, or password to protect your saved payment methods from being accessed if someone else has your device.`
-    - Suggest: `pour empêcher l’accès à vos moyens de paiement enregistrés si quelqu’un d’autre venait à utiliser votre appareil`
-    - Source: "protect your saved payment methods from being accessed if someone else has your device" — the object of protection is access prevention when another person has the device; the French says "protect ... if someone accesses your device", which loses the meaning.
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Debug locales to enable" is mistranslated as an imperative "Debug the locales to enable".
     - Current: `Déboguer les locales à activer`
     - Source: `Debug locales to enable`
@@ -208,36 +158,6 @@ _Nothing in this category._
     - Source: `If you delete this language, %1$s will download partial languages to your cache as you translate.`
     - Suggest: `%1$s téléchargera des langues partielles dans votre cache`
     - Source: "%1$s will download partial languages to your cache as you translate." — the object is "partial languages", not the deleted language; the parallel string delete_language_all_languages_file_dialog_message renders it correctly.
-- `download_time_period_older` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Older" is rendered as "Avant le mois dernier" ("before last month"), which states a specific period not present in the source.
-    - Current: `Avant le mois dernier`
-    - Source: `Older`
-    - Suggest: `Plus ancien`
-    - The source is a generic header "Older" for downloads older than the other groups (today, yesterday, last 7 days, last 30 days); the French invents a specific timeframe.
-- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Firefox Suggest" is a product/feature name and must not be translated as a verb phrase.
-    - Current: `Firefox suggère`
-    - Source: `Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - The developer comment identifies this as the Firefox Suggest feature name; brand/feature names stay untranslated, and "Firefox suggère" turns it into a sentence.
-- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Switched to the recommended location" is rendered as "Connexion à l’emplacement recommandé" (connecting to), losing the completed switch.
-    - Current: `Connexion à l’emplacement recommandé.`
-    - Source: `Selected VPN location unavailable. Switched to the recommended location.`
-    - Suggest: `Basculement vers l’emplacement recommandé.`
-    - The source states the location has already been switched; the French states a connection is being made, changing the meaning and tense.
-- `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French reverses the speaker: the source asks the user to consider allowing, while the translation says "we ask for your authorization".
-    - Current: `Nous vous demandons votre autorisation pour contribuer à la victoire de Firefox.`
-    - Source: `Please consider allowing to help Firefox win.`
-    - Suggest: `Merci d’envisager de donner votre autorisation pour aider Firefox à gagner.`
-    - Source "Please consider allowing to help Firefox win" is an appeal to the user to allow; the translation states that Mozilla is requesting authorization, changing the sentence's actor and losing the "consider" nuance.
-- `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The product name "Firefox Suggest" is translated as "Firefox suggère" instead of being kept as the brand feature name.
-    - Current: `Barre d’adresse - Firefox suggère`
-    - Source: `Address bar - Firefox Suggest`
-    - Suggest: `Barre d’adresse - Firefox Suggest`
-    - "Firefox Suggest" is a product/feature brand name (see developer comment "settings to Firefox Suggest") and must not be translated into a verb phrase.
-- `preference_search_learn_about_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The product name "Firefox Suggest" is translated as "Firefox suggère".
-    - Current: `En savoir plus sur Firefox suggère`
-    - Source: `Learn more about Firefox Suggest`
-    - Suggest: `En savoir plus sur Firefox Suggest`
-    - "Firefox Suggest" is a brand feature name and must be kept untranslated; "Firefox suggère" reads as a sentence, not a feature name.
 - `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "your active search engine" is translated as "moteur de recherche principal" (default/primary) instead of active/current.
     - Current: `défini comme moteur de recherche principal lors de la navigation`
     - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
@@ -248,26 +168,6 @@ _Nothing in this category._
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
     - Suggest: `Partagez avec les partenaires en technologies marketing de Mozilla la façon dont vous avez découvert Firefox et le fait que vous l’utilisez.`
     - The source means sharing, with Mozilla's marketing technology partners, how the user discovered Firefox and that they use it. The French reads as "Tell the story of your discovery... and explain that you use it with Mozilla's marketing partners", which changes the meaning (suggesting the user uses Firefox together with the partners) and loses the sharing/opt-in sense described in the developer co…
-- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Search %s" is an action (search using engine %s) but was rendered as the noun "Recherche".
-    - Current: `Recherche %s`
-    - Source: `Search %s`
-    - Suggest: `Rechercher avec %s`
-    - The source is a verb phrase inviting the user to search with the suggested engine; "Recherche %s" reads as a noun phrase ("Search of %s") and loses the imperative meaning.
-- `setup_checklist_subtitle_6_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "You’re 4 steps in" is rendered awkwardly/incorrectly as "Vous en êtes à quatre étapes".
-    - Current: `Vous en êtes à quatre étapes. Plus que deux !`
-    - Source: `You’re 4 steps in. Only 2 more to go!`
-    - Suggest: `Vous avez terminé quatre étapes. Plus que deux !`
-    - The source states four steps are completed; the French phrasing does not convey completion clearly.
-- `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Section title "Active" is translated as a plural adjective "Activées" rather than the section heading "Actives".
-    - Current: `Activées`
-    - Source: `Active`
-    - Suggest: `Actives`
-    - The source is the title of the "active" section of the studies list (studies that are currently running), not a state "enabled"; "Activées" also mismatches the neighbouring on/off strings.
-- `tab_group_onboarding_item_dismiss_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "onboarding" is rendered as « accueil » (welcome/reception), which misnames the onboarding card being dismissed.
-    - Current: `Fermer l’accueil des groupes d’onglets`
-    - Source: `Dismiss tab group onboarding`
-    - Suggest: `Ignorer la présentation des groupes d’onglets`
-    - The source dismisses the tab group onboarding card; « accueil » means reception/home and does not convey onboarding/introduction.
 - `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translating" (action in progress) is rendered as the noun "Traduction".
     - Current: `Traduction`
     - Source: `Translating`
@@ -278,16 +178,6 @@ _Nothing in this category._
     - Source: `Can’t pay, check out or shop`
     - Suggest: `Impossible de payer, de finaliser la commande ou de faire des achats`
     - Source is "Can’t pay, check out or shop"; the checkout step is omitted and the register differs from the parallel option webcompat_reporter_reason_account2 ("Impossible de se connecter ou de s’inscrire").
-- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Video isn’t playing or loading" is rendered as an impossibility for the user to play the video.
-    - Current: `Impossible de lire une vidéo ou de la charger`
-    - Source: `Video isn’t playing or loading`
-    - Suggest: `La vidéo ne se lit pas ou ne se charge pas`
-    - The source describes the video's behaviour, matching the other options such as "Le site ne se charge pas"; the translation shifts the subject to the user.
-- `webcompat_reporter_screen_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Report broken site" is rendered as the vaguer "Signaler des problèmes avec ce site".
-    - Current: `Signaler des problèmes avec ce site`
-    - Source: `Report broken site`
-    - Suggest: `Signaler un site défectueux`
-    - The source names the action of reporting a broken site; the plural "des problèmes" and the longer wording change the meaning of the toolbar title.
 
 ### C. Grammar, agreement & spelling
 
@@ -306,39 +196,15 @@ _Nothing in this category._
     - Source: `Temporarily overrides the home and current region values for testing.`
     - Suggest: `à des fins de test`
     - "à fin de tests" is not a correct French locution; the standard form is "à des fins de test".
-- `debug_drawer_tab_tools_tab_count_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Active" tab count category translated in the singular while the sibling categories use the plural.
-    - Current: `Actif`
-    - Source: `Active`
-    - Suggest: `Actifs`
-    - The string labels a count category for tabs, like "Inactifs" and "Privés"; the singular "Actif" is inconsistent and incorrect.
 - `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Infinitive "Activer" used where the source is a descriptive third-person statement ("Enables").
     - Current: `Activer la protection`
     - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
     - Suggest: `Active la protection`
     - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
-- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong preposition: "se déconnecter de votre compte" should be "se déconnecter de son compte" or rather "Se déconnecter du compte"; the possessive conflicts with the reflexive pronoun.
-    - Current: `Se déconnecter de votre compte ?`
-    - Source: `Sign out of your account?`
-    - Suggest: `Vous déconnecter de votre compte ?`
-    - In French, "se déconnecter" with the infinitive keeps the third-person reflexive; combined with "votre compte" addressed to the user, the correct form is "Vous déconnecter de votre compte ?".
 
 ### D. Terminology, register & consistency
 
-- `mozac_compose_base_snackbar_dismiss_content_description` — `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fr/strings.xml` — "Dismiss message" translated as "Masquer ce message" (hide this message) instead of the established "Ignorer".
-    - Current: `Masquer ce message`
-    - Source: `Dismiss message`
-    - Suggest: `Ignorer le message`
-    - "Dismiss" is rendered "Ignorer" in mozac_compose_base_link_text_dismiss in the same file; "Masquer" (hide) is inconsistent terminology for the same source term on the same surface.
-- `mozac_feature_prompt_not_now` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — "Not now" is translated inconsistently: « Plus tard » elsewhere but « Pas pour cette fois » here.
-    - Current: `Pas pour cette fois`
-    - Source: `Not now`
-    - Suggest: `Plus tard`
-    - The same source string "Not now" on the same prompt surface is rendered « Plus tard » in mozac_feature_prompt_dont_save_2 and mozac_feature_prompt_dont_update_2.
-- `webcompat_reporter_label_url` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "URL" is rendered as "Adresse web" while other Web Compat Reporter strings keep "URL".
-    - Current: `Adresse web`
-    - Source: `URL`
-    - Suggest: `URL`
-    - The source label is "URL" and webcompat_reporter_edit_url_dialog_title translates it as « Modifier l’URL du site web », so the field label is inconsistent on the same surface.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -359,13 +225,40 @@ _Nothing in this category._
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (5)
+### Closed by the fixer (32)
 
+- `add_private_tab` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 0bb53af7): unreliable finding: « Ouvrir un nouvel onglet privé » is an idiomatic label for the action; the difference is stylistic.
+- `addresses_townland` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string f8651f61): unreliable finding: There is no French equivalent for townland; choosing « Commune » is a localization decision, not a confirmed error.
+- `browser_menu_webcompat_reporter_2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 7e2ede7e): unreliable finding: « Signaler des problèmes avec ce site » is a natural French label for reporting a broken site.
+- `credit_cards_warning_dialog_message_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 5e8ed611): unreliable finding: The French conveys protecting saved payment methods in case someone accesses the device, which preserves the source intent.
+- `debug_drawer_tab_tools_tab_count_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string fbcbce37): unreliable finding: Sibling strings are not visible to confirm plural usage; « Actif » is a plausible label.
+- `download_time_period_older` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 17921018): unreliable finding: The groups precede it with last 30 days, so « Avant le mois dernier » is a reasonable adaptation; change would be stylistic.
 - `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string 715c7d68): "Si + imparfait, conditionnel" ("Si vous poursuiviez…, vous ne devriez…") is the standard, grammatical French hypothetical construction.
+- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string ea7063b0): unreliable finding: French Firefox localizations have used « Firefox suggère » for this feature label, so this may be an established locale choice.
 - `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string 0e45ab51): "Aidez-nous à" is the idiomatic French rendering of an object-less "Help (to) do X"; "Aidez à attraper" would be unnatural.
+- `ip_protection_location_selection_reset_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 14d5968c): unreliable finding: « Connexion à l’emplacement recommandé » is an acceptable snackbar rendering; change would be stylistic.
 - `mozac_browser_awesomebar_stock_suggestion_decrease` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string a7d7c9fe): A capital "A" without an accent is the correct verb form in "A perdu"; the finding itself admits it is correct and suggests the identical text.
+- `mozac_compose_base_snackbar_dismiss_content_description` — `mozilla-mobile/android-components/components/compose/base/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 3c9cd745): unreliable finding: 'Masquer ce message' is a natural, correct rendering for dismissing a snackbar; preferring 'Ignorer' is stylistic.
+- `mozac_feature_downloads_third_party_app_chooser_dialog_title` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 3c7cc219): unreliable finding: 'Continuer avec' is a common French rendering for Android app-chooser titles and conveys the intended action.
 - `mozac_feature_downloads_time_remaining` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string b237052a): « dans %1$s » is a literal, faithful rendering of the source "in %1$s".
+- `mozac_feature_listentopage_playback_speed_option` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string b97ca809): unreliable finding: Placing the multiplication sign before the number appears to be a deliberate display choice and is understandable as a speed factor.
+- `mozac_feature_listentopage_playback_speed_option_default` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 84d30124): unreliable finding: « × 1 » is a common French typographic rendering of a speed multiplier and remains understandable as playback speed.
+- `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string c3bd6465): unreliable finding: In context, data not saved when leaving is data lost; the wording is an acceptable idiomatic equivalent.
+- `mozac_feature_prompt_not_now` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 369eb2f9): unreliable finding: « Pas pour cette fois » is a valid rendering of "Not now"; aligning with « Plus tard » is a stylistic preference.
+- `mozac_feature_prompt_repost_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 342f64e3): unreliable finding: « répéter des actions récentes » already conveys the duplication, so "twice" is implicitly covered.
+- `mozac_feature_prompts_account_picture` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 3d1dcd15): unreliable finding: « Photo du profil » is a plausible, commonly used label for an account picture; the change is preferential.
+- `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string e2438e60): unreliable finding: The polite request rendering conveys the same appeal for permission; the suggested change is stylistic.
 - `preference_doh_off_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string d5b6aabc): French naturally uses the definite article here; "le serveur … par défaut" conveys the same meaning as "your default".
+- `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 7f15bc0c): unreliable finding: French Firefox localization deliberately renders the feature name Firefox Suggest as « Firefox suggère », so this is a team choice, not a clear error.
+- `preference_search_learn_about_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 95d0a9b0): unreliable finding: French Firefox localization deliberately renders Firefox Suggest as « Firefox suggère »; consistent with string 1.
+- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string f5d1b1b2): unreliable finding: « Recherche %s » works fine as a heading for search engine suggestions; the change would be stylistic.
+- `setup_checklist_subtitle_6_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 34b78c78): unreliable finding: « Vous en êtes à quatre étapes » is idiomatic enough to show progress; the change is a matter of preference.
+- `sign_out_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 45a5659a): unreliable finding: An infinitive question with « se » plus « votre » is a widespread, accepted pattern in French UI strings.
+- `studies_active` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 7d94f015): unreliable finding: « Activées » agrees with « études » and is a valid label for active studies.
+- `tab_group_onboarding_item_dismiss_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 3b2108db): unreliable finding: « accueil » is a common French Mozilla rendering of onboarding; the change would be stylistic.
+- `webcompat_reporter_label_url` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 8c2d136e): unreliable finding: « Adresse web » is a standard French Mozilla rendering of URL for a field label; the change would be a preference.
+- `webcompat_reporter_reason_media2` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 878c5b54): unreliable finding: "Impossible de lire une vidéo ou de la charger" correctly conveys the problem; the change of subject is a stylistic preference, not an error.
+- `webcompat_reporter_screen_title` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 7e2ede7e): unreliable finding: "Signaler des problèmes avec ce site" is an acceptable idiomatic rendering of the reporting action; the suggested wording is a preference.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
 

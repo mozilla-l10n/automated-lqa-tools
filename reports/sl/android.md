@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `eb5867992b38` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,542 |
 
@@ -91,31 +91,17 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 _Nothing reported._
 
-### Proposed conventions — not applied (1)
-
-Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `android/locales/sl/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
-
-- Short UI command labels, such as buttons, links, toggles and setting labels, use the 2nd-person singular imperative (e.g. "Shrani", "Posodobi", "Omogoči", "Obnovi podatke"). This is the standard Slovenian form for commands and does not break the formal register. Do not flag it as informal, and do not suggest the plural form ("Obnovite", "Shranite"). The same applies when prose quotes a button's label: the quote must match the actual label, e.g. "Obnovi podatke" (link_sharing_toggle_title, backup-file-moz-browser-restore-step-2-1, Onboarding…AgreementButtonTitle). What still counts as a defect: full sentences and instructions addressed to the user in prose, such as descriptions, messages and help text, must use the formal (vikanje) form. A quoted label that doesn't match the real string's wording is also still an error.
-    _Behind it: 6 dismissals, 2 of them rejected in Pontoon._
-
-    - `backup-file-moz-browser-restore-step-2-1` (firefox) — _rejected, reviewer's comment_: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je "Obnovi podatke". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>
-    - `backup-file-other-browser-restore-step-3-1` (firefox) — _rejected, reason inferred_: The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
-    - `link_sharing_toggle_title` — _model_: Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
-    - `onboarding_term_of_service_line_three_link_text` — _model_: Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
-    - `preference_enhanced_tracking_protection_custom_global_privacy_control` — _model_: Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
-    - `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` (firefox_ios) — _model_: Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
-
 ---
 
-## 3. Open findings (43)
+## 3. Open findings (8)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 27 |
-| 3 | Degraded language (grammar, spelling, terminology) | 14 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
+| 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -128,106 +114,11 @@ _Nothing in this category._
     - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
     - Suggest: `Je v naslovu napaka v črkovanju`
     - Source asks about a typographical error in the address, not in the item's name.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — Third bullet drops the source's mention that incorrect firewall/proxy settings can interfere with web browsing and rewrites the question.
-    - Current: `Če uporabljate posrednika ali požarni zid, se prepričajte, da so vaše nastavitve pravilne.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Ali je vaša naprava ali omrežje zaščiteno s požarnim zidom ali posredniškim strežnikom? Napačne nastavitve lahko ovirajo brskanje po spletu.`
-    - The source sentence's content (device/network protected by firewall or proxy; incorrect settings can interfere with Web browsing) is not conveyed.
-- `mozac_browser_errorpages_port_blocked_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — "Port restricted for security reasons" is rendered as "Vrata nesprejemljiva" (port unacceptable) instead of restricted/blocked.
-    - Current: `Vrata nesprejemljiva iz varnostnih razlogov`
-    - Source: `Port restricted for security reasons`
-    - Suggest: `Vrata omejena iz varnostnih razlogov`
-    - The source says the port is restricted (blocked), not that it is "unacceptable".
-- `mozac_summarize_download_progress_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — "Setting up summaries" is rendered as "Namestitev povzetkov" (installation of summaries) instead of setup/preparation.
-    - Current: `Namestitev povzetkov`
-    - Source: `Setting up summaries`
-    - Suggest: `Nastavljanje povzetkov`
-    - The source means the feature is being set up/prepared, not that summaries are being installed; "namestitev" means installation of software.
-- `mozac_support_base_permissions_needed_negative_button` — `mozilla-mobile/android-components/components/support/base/src/main/res/values-sl/strings.xml` — "Dismiss" is translated as "Skrij" (Hide) instead of a dismiss/close term.
-    - Current: `Skrij`
-    - Source: `Dismiss`
-    - Suggest: `Opusti`
-    - The button dismisses the dialog; "Skrij" means "hide", which is a different action than dismissing.
-- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "you can unblock anything you want to keep using" is rendered as "you can enable individual features", losing the unblock/keep-using meaning and using inconsistent terminology.
-    - Current: `Naknadno lahko omogočite posamezne možnosti, ki bi jih radi uporabljali.`
-    - Source: `You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.  Blocking also affects extensions that use AI provided by %1$s.`
-    - Suggest: `Pozneje lahko odblokirate karkoli, kar želite še naprej uporabljati.`
-    - The source states the user can unblock anything they want to keep using; the translation changes it to enabling individual options, and elsewhere the same concept uses prepovedati/omogočiti inconsistently.
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Custom tab menu" is mistranslated as "menu of custom tabs", changing the meaning.
-    - Current: `Zapri meni zavihkov po meri`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `Zapri list menija prilagojenega zavihka`
-    - Source is "Close custom tab menu sheet" — the menu of the custom tab (singular), and the word "sheet" (bottom sheet) is dropped; the Slovenian genitive plural "zavihkov po meri" says "tabs made to order".
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Debug locales to enable" is rendered as "Jeziki" (languages), losing both "debug" and the locale concept.
-    - Current: `Jeziki, ki naj bodo omogočeni`
-    - Source: `Debug locales to enable`
-    - Suggest: `Razhroščevalne območne nastavitve, ki naj bodo omogočene`
-    - The source refers to debug locales, not languages; elsewhere in the same feature (debug_drawer_add_new_address) "locale" is translated as "območna nastavitev".
-- `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Redirect Trackers" is rendered as "Preusmeritve sledilcev" ("redirects of trackers"), reversing the head of the phrase.
-    - Current: `Preusmeritve sledilcev`
-    - Source: `Redirect Trackers`
-    - Suggest: `Preusmeritveni sledilci`
-    - The source names a category of trackers (trackers that use redirects), not redirects belonging to trackers; the head noun must be "sledilci", as in the sibling titles "Sledilci družbenih omrežij".
-- `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Placeholder for the app name is used as a modifier of "zavihkov", producing "Zaprtih Firefox zavihkov" instead of naming the app as subject/prefix.
-    - Current: `Zaprtih %1$s zavihkov: %2$d`
-    - Source: `%1$s tabs closed: %2$d`
-    - Suggest: `%1$s – zaprtih zavihkov: %2$d`
-    - %1$s is the app name (Firefox). "Zaprtih Firefox zavihkov: 3" is ungrammatical in Slovenian (unmarked noun-noun modification) and misreads the placeholder role described in the developer comment.
-- `link_shared_snackbar_action` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Manage settings" is shortened to just "Nastavitve", dropping the verb "Manage".
-    - Current: `Nastavitve`
-    - Source: `Manage settings`
-    - Suggest: `Upravljaj nastavitve`
-    - The source action label instructs the user to manage settings; the translation only says "Settings".
-- `link_shared_snackbar_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Link shared" is translated as "Povezava poslana" (link sent) instead of "shared".
-    - Current: `Povezava poslana`
-    - Source: `Link shared`
-    - Suggest: `Povezava deljena`
-    - The source says the link was shared, not sent; other strings in this feature use "deliti/deljeno" for share.
-- `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "translation menu" rendered as "meni prevajalnika" (translator's menu).
-    - Current: `v meniju prevajalnika`
-    - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
-    - Suggest: `v meniju za prevajanje`
-    - The source says "the translation menu"; "prevajalnik" names a translator tool rather than the translation menu.
-- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Translation adds "sledilce" (trackers), a specific object the source does not state.
-    - Current: `Brskajte dalje, %1$s pa bo še naprej blokiral sledilce.`
-    - Source: `Keep browsing. %1$s will keep blocking.`
-    - Suggest: `Brskajte dalje, %1$s pa bo še naprej blokiral.`
-    - Source is "Keep browsing. %1$s will keep blocking." with no explicit object; the sentence structure and content were changed.
 - `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Cross-site cookies" is translated as "Spletni piškotki" (web cookies), losing the cross-site meaning.
     - Current: `Spletni piškotki`
     - Source: `Cross-site cookies`
     - Suggest: `Piškotki drugih strani`
     - The source refers specifically to cross-site cookies; the translation says merely "web cookies", which is a different, broader concept.
-- `preferences_https_only_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The object "sites" is dropped, so the sentence says it connects to the protocol rather than to sites using HTTPS.
-    - Current: `Za večjo varnost poskuša samodejno vzpostaviti povezavo s šifrirnim protokolom HTTPS.`
-    - Source: `Automatically attempts to connect to sites using HTTPS encryption protocol for increased security.`
-    - Suggest: `Za večjo varnost poskuša samodejno vzpostaviti povezavo s spletnimi mesti prek šifrirnega protokola HTTPS.`
-    - Source: "Automatically attempts to connect to sites using HTTPS encryption protocol" — the connection target (sites) is omitted.
-- `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "haven’t viewed" rendered as "niste odprli" (haven't opened).
-    - Current: `ki jih dva tedna niste odprli`
-    - Source: `Tabs you haven’t viewed for two weeks get moved to the inactive section.`
-    - Suggest: `ki si jih dva tedna niste ogledali`
-    - Source says tabs you haven't viewed for two weeks; opening and viewing are different actions.
-- `restart_warning_dialog_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The placeholder (brand name) was moved to the first sentence, so the translation says "Firefox may close" instead of "The app may close … to reopen Firefox".
-    - Current: `%1$s se bo morda zaprl. Ponovno ga odprite z dotikom čudovite nove ikone.`
-    - Source: `The app may close. Just tap your shiny new icon to reopen %1$s.`
-    - Suggest: `Aplikacija se bo morda zaprla. Za ponovno odprtje %1$s se dotaknite čudovite nove ikone.`
-    - Source: "The app may close. Just tap your shiny new icon to reopen %1$s." The brand name belongs to the second sentence; the first sentence should refer to the app generically.
-- `review_prompt_feedback_button` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Leave feedback" is rendered as "Send feedback" instead of leaving/giving feedback.
-    - Current: `Pošlji povratne informacije`
-    - Source: `Leave feedback`
-    - Suggest: `Pustite povratne informacije`
-    - The source asks the user to leave feedback in a forum, not to send it; also the imperative form differs from the formal register used elsewhere in this prompt group.
-- `saved_login_clear_hostname` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "hostname" is translated as "domeno" (domain) rather than host/site name.
-    - Current: `Počisti domeno`
-    - Source: `Clear hostname`
-    - Suggest: `Počisti ime gostitelja`
-    - The field is the hostname field; a domain is not the same as a hostname, and this content description misnames the control.
-- `saved_login_hostname_required` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Hostname required" translated as "domain name required".
-    - Current: `Zahtevano je ime domene`
-    - Source: `Hostname required`
-    - Suggest: `Zahtevano je ime gostitelja`
-    - The error refers to the hostname field, not a domain name.
 - `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "private sessions" is translated as "zasebnih oknih" (private windows).
     - Current: `zasebnih oknih`
     - Source: `Allow search suggestions in private sessions?`
@@ -238,49 +129,19 @@ _Nothing in this category._
     - Source: `Search settings`
     - Suggest: `Preišči nastavitve`
     - The developer comment explicitly says "Search" is a verb here — this is the title of the Settings Search screen, not the search settings page (which is search_settings_menu_item).
-- `tab_group_color_purple` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Purple" is translated as "Lila" (lilac) instead of "Vijolična".
-    - Current: `Lila`
-    - Source: `Purple`
-    - Suggest: `Vijolična`
-    - The standard Slovenian term for the color purple is "vijolična"; "lila" denotes a different, lighter shade (lilac).
-- `tab_group_sheet_dismiss_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "View tab group" is rendered as an imperative command to the app rather than the accessibility action label, and the string is a content description for a handle.
-    - Current: `Prikaži skupino zavihkov, strni ročico za vlečenje`
-    - Source: `View tab group, collapse drag handle`
-    - Suggest: `Ogled skupine zavihkov, ročica za strnjenje`
-    - The source describes the drag handle state (view tab group / collapse drag handle) for screen readers; the Slovenian imperative "Prikaži ... strni ..." reads as commands rather than a description.
 - `tab_manager_empty_tab_groups_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "They're saved here" is mistranslated as "Vanjo bodo shranjeni" (saved into the group) and expanded with content not in the source.
     - Current: `Vanjo bodo shranjeni in pripravljeni na trenutek, ko jih boste potrebovali.`
     - Source: `Select tabs to create a group. They’re saved here, ready when you are.`
     - Suggest: `Shranjene bodo tukaj, pripravljene, ko boste vi.`
     - The source says the groups are saved here (on this page), ready when you are; the translation says the tabs will be saved into the group and ready when you need them.
-- `tab_tray_close_tabs_banner_negative_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Dismiss" (dismiss the banner) is translated as "Zapri" which in this tab-tray context reads as "Close [tabs]".
-    - Current: `Zapri`
-    - Source: `Dismiss`
-    - Suggest: `Opusti`
-    - The button dismisses the Close Tabs Banner; "Zapri" is the same word used elsewhere for closing tabs (tab_tray_menu_item_close) and is ambiguous/wrong here.
-- `translation_option_bottom_sheet_close_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Content description drops "sheet", saying "Close Translations" instead of "Close Translations sheet".
-    - Current: `Zaprite Prevode`
-    - Source: `Close Translations sheet`
-    - Suggest: `Zaprite list Prevajanje`
-    - The source describes closing the translations bottom sheet; the target omits the "sheet" element and reads as closing the translations themselves.
 
 ### C. Grammar, agreement & spelling
 
-- `download_delete_single_item_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Adjective agreement is wrong: the placeholder holds a file name ("datoteka" is not in the string), so "izbrisana" should be neuter/masculine-neutral form.
-    - Current: `"%1$s" izbrisana`
-    - Source: `Deleted “%1$s”`
-    - Suggest: `"%1$s" izbrisano`
-    - The source is "Deleted “%1$s”"; %1$s is the download item name, which has no fixed gender, so the feminine form "izbrisana" is unwarranted agreement.
 - `preferences_delete_browsing_data_downloads` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Checkbox item in "Delete browsing data" list uses nominative instead of the accusative used by the sibling items.
     - Current: `Prenosi`
     - Source: `Downloads`
     - Suggest: `Prenose`
     - The other items in the same list ("Zgodovino brskanja", "Piškotke in podatke strani", "Dovoljenja strani") are in accusative agreeing with "Izbriši ..."; this one breaks that pattern.
-- `translation_option_bottom_sheet_about_translations` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The placeholder holding the app name is given an inflectional suffix '-u' that produces wrong forms for many app names.
-    - Current: `O prevodih v %1$su`
-    - Source: `About translations in %1$s`
-    - Suggest: `O prevodih v brskalniku %1$s`
-    - %1$s is the app name (e.g. Firefox); appending the locative ending directly to the placeholder yields incorrect and unnatural output.
 
 ### D. Terminology, register & consistency
 
@@ -289,64 +150,15 @@ _Nothing in this category._
     - Source: `Share technical and interaction data with extension developer`
     - Suggest: `deljenje tehničnih podatkov in podatkov o interakcijah z razvijalcem razširitve`
     - Every sibling *_long_description string uses the lowercase gerund form ("deljenje ... z razvijalcem razširitve"); this one uses a capitalized imperative verb, an inconsistency on the same surface.
-- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Checkbox label uses imperative "Deli" while the parallel data-collection string uses the nominalized "deljenje", breaking consistency in the same dialog.
-    - Current: `Deli tehnične in interakcijske podatke z razvijalcem razširitve`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `Deljenje tehničnih in interakcijskih podatkov z razvijalcem razširitve`
-    - The parallel string mozac_feature_addons_permissions_data_collection_websiteContent_long_description ("Share website content with extension developer") is rendered as "deljenje vsebine spletnih strani z razvijalcem razširitve"; the same source pattern in the same dialog should not switch to an imperative verb form.
 - `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Permission description uses an imperative verb form instead of the nominalized lowercase pattern used by all other permission descriptions.
     - Current: `Prenesite in uporabljajte modele z umetno inteligenco na svoji napravi`
     - Source: `Download and run AI models on your device`
     - Suggest: `prenos in uporaba modelov umetne inteligence na napravi`
     - All sibling permission descriptions (e.g. "dostop do zavihkov brskalnika", "branje in spreminjanje nastavitev zasebnosti") are lowercase nominal phrases describing what the add-on may do; here it is rendered as a command to the user, which also changes the meaning (the extension downloads the models, not the user). The _for_update variant already uses the correct nominal form.
-- `mozac_summarize_shake_consent_off_device_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — Title is rendered in first person ("Povzamem vsebino") instead of the impersonal/imperative form used in the parallel on-device title.
-    - Current: `Povzamem vsebino s tresenjem?`
-    - Source: `Summarize with a shake?`
-    - Suggest: `Povzetek s stresanjem?`
-    - The source "Summarize with a shake?" is impersonal; the sibling string uses "Povzemi to stran" and the feature term elsewhere is "stresanje" (Občutljivost na stresanje), so "tresenjem" is also inconsistent.
-- `ai_controls_ai_powered_features` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — AI is abbreviated as "UI" here while other strings in the same surface spell it out as "umetna inteligenca", creating inconsistency.
-    - Current: `Funkcije, ki jih poganja UI`
-    - Source: `AI-powered features`
-    - Suggest: `Funkcije, ki jih poganja umetna inteligenca`
-    - Within the same AI controls screen, ai_controls_banner_supporting_text_2 and ai_controls_block_ai_description use "umetna inteligenca" while this and other strings use the abbreviation "UI"; the same source term should be rendered consistently.
-- `nova_onboarding_marketing_primary_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Button uses informal singular imperative "Pomagaj" while the locale convention and neighbouring marketing strings use the formal plural.
-    - Current: `Pomagaj Firefoxu`
-    - Source: `Help Firefox`
-    - Suggest: `Pomagajte Firefoxu`
-    - sl convention is formal address; the related title uses "Pomagajte nam ...".
-- `preferences_ai_controls` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "AI" is rendered as "UI" instead of the Slovenian abbreviation "UI"... reversed word order gives wrong term.
-    - Current: `Nadzor UI`
-    - Source: `AI controls`
-    - Suggest: `Nadzor umetne inteligence`
-    - "Nadzor UI" is ambiguous/incorrect in Slovenian (UI also reads as user interface); the settings screen title for AI controls should spell out "umetne inteligence".
-- `quick_setting_option_autoplay_block_audio` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Block" is rendered as "Zavrni" (deny/reject) instead of "Blokiraj"/"Zavračaj", inconsistent with the "Allow" counterpart and the standard blocking terminology.
-    - Current: `Zavrni samo zvok`
-    - Source: `Block audio only`
-    - Suggest: `Blokiraj samo zvok`
-    - Source "Block audio only" refers to blocking autoplay; "zavrni" means to deny/reject a request, not block content.
-- `quick_setting_option_autoplay_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Block audio and video" translated as "Zavrni zvok in video" instead of using the blocking term.
-    - Current: `Zavrni zvok in video`
-    - Source: `Block audio and video`
-    - Suggest: `Blokiraj zvok in video`
-    - Source uses "Block"; Slovenian "zavrni" means deny/reject, not block.
-- `studies_title_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "feature studies" is translated as "raziskave značilnosti" instead of the established term for features (funkcije).
-    - Current: `Dovoli raziskave značilnosti`
-    - Source: `Allow feature studies`
-    - Suggest: `Dovoli raziskave funkcij`
-    - "Features" in Mozilla sl is rendered as "funkcije"; "značilnosti" is a different concept (characteristics).
 
 ### E. Typography, punctuation & spacing
 
-- `mozac_browser_engine_system_auth_message` — `mozilla-mobile/android-components/components/browser/engine-system/src/main/res/values-sl/strings.xml` — Curly typographic quotes used instead of the locale's straight double quotes.
-    - Current: `“%1$s”`
-    - Source: `%2$s is requesting your username and password. The site says: “%1$s”`
-    - Suggest: `"%1$s"`
-    - The sl convention is straight-double quotes; the string keeps the English curly quotes.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — Curly/typographic double quotes used where the locale convention is straight double quotes.
-    - Current: `Pritisnite “Poskusi znova” za preklop`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Pritisnite "Poskusi znova" za preklop`
-    - The sl convention is straight-double quotes; the source uses “Try Again” but the locale's house style is straight doubles.
+_Nothing in this category._
 
 ---
 
@@ -362,21 +174,48 @@ _Nothing in this category._
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (13)
+### Closed by the fixer (48)
 
+- `ai_controls_ai_powered_features` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string e74456d0): unreliable finding: UI is the standard Slovenian abbreviation for umetna inteligenca, and the tree uses both forms; using the abbreviation in a short label is not clearly an error.
+- `ai_controls_block_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 628a415c): unreliable finding: The paraphrase "enable the individual options you want to use" keeps the meaning of unblocking the features you want to keep using; the change would be stylistic.
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 4fb0ff62): unreliable finding: "zavihek po meri" is the established term for custom tab, and dropping "sheet" in an accessibility label for closing the menu does not clearly change the meaning.
+- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 902ab77d): unreliable finding: This is a header in a debug-only drawer, and "Jeziki" for locales is a plausible simplification; this is not a confirmed defect.
 - `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string ec247628): Straight double quotes are the measured majority convention in the sl tree (14–15 straight vs 4 curly).
+- `download_delete_single_item_snackbar_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 92443a02): unreliable finding: The feminine form implies the unstated noun "datoteka" (file), which is a common, acceptable pattern; the neuter form is also possible, so this is a preference.
+- `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 51a1c1cb): unreliable finding: "Preusmeritve sledilcev" is an established rendering of this ETP category name, and the suggested wording is not clearly more correct.
+- `fxa_tabs_closed_notification_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 9eb1757e): unreliable finding: Using the brand name as an uninflected modifier ("Firefox zavihki") is common practice in Slovenian Mozilla localization, so the wording is acceptable.
+- `link_shared_snackbar_action` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 6e5f433a): unreliable finding: A short snackbar action label "Nastavitve" still conveys opening the settings; adding the verb would be a stylistic change.
+- `link_shared_snackbar_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 20a0910a): unreliable finding: "poslana" (sent) is an acceptable Slovenian rendering of a shared link, and "deljena" is not clearly better.
 - `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 2b275a17): Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
+- `mozac_browser_engine_system_auth_message` — `mozilla-mobile/android-components/components/browser/engine-system/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 9a0defd0): The en-US source uses the same curly quotes around %1$s, and the locale also uses curly quotes in some strings.
+- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 4035b9c4): unreliable finding: The paraphrase still tells the user to check their proxy/firewall settings, so the meaning comes across; a closer rendering would be a stylistic rewrite.
+- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string dc4fa37f): The en-US source uses the same curly quotes around “Try Again”, and the locale also uses curly quotes in some strings.
+- `mozac_browser_errorpages_port_blocked_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 11822b86): unreliable finding: "nesprejemljiva" is a plausible established rendering for a restricted port; the change is a matter of preference.
+- `mozac_feature_addons_permissions_dialog_technical_and_interaction_data` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 917b156a): This is a checkbox/setting label, and the locale conventions say such labels use the informal imperative (e.g. "Deli").
 - `mozac_feature_applinks_open_in` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string bd7c47c0): Slovenian orthography (SP) separates the ellipsis by a space after a complete word indicating omission, e.g. "Odpri v …", a standard Slovenian Mozilla convention.
 - `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 54371095): Each link keeps its correct placeholder (%3$s privacy policy, %4$s terms), so reordering the two items is a valid stylistic choice with no functional or semantic change.
 - `mozac_feature_summarize_disclaimer_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string c1d201a3): "UI" is the standard Slovenian abbreviation for "umetna inteligenca"; user interface is not abbreviated UI in Slovenian.
+- `mozac_summarize_download_progress_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 03d3b2c6): unreliable finding: "Namestitev" (setup/installation) is a reasonable rendering for a step that downloads and installs models.
+- `mozac_summarize_shake_consent_off_device_title` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string b32d4183): unreliable finding: A first-person offer ("Povzamem…?") is a natural Slovenian way to phrase this kind of question; the change is stylistic.
+- `mozac_support_base_permissions_needed_negative_button` — `mozilla-mobile/android-components/components/support/base/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string f440d86d): unreliable finding: "Skrij" is a common, acceptable Slovenian rendering of a "Dismiss" button that closes a prompt; the suggestion is a preference.
+- `never_translate_site_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 904a3e60): unreliable finding: "meni prevajalnika" naturally refers to the translation feature's menu; the suggestion is a stylistic alternative.
+- `notification_privacy_report_body_has_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 375428c4): unreliable finding: Making the implied object (trackers) explicit is a legitimate clarification for a transitive Slovenian verb, not a meaning change.
+- `nova_onboarding_marketing_primary_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 39b6a8ff): Locale instructions specify that button labels use the informal singular imperative, so "Pomagaj Firefoxu" is correct.
 - `onboarding_term_of_service_line_three_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 1018b662): Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
 - `open_all_warning_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 51d91efc): 'več zavihkov (%d)' is a standard way to avoid plural forms; here 'več' means 'multiple' and the exact count still shows through %d.
 - `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 2f1015ff): Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
+- `preferences_ai_controls` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 1bd5a4ac): unreliable finding: "UI" is the standard Slovenian abbreviation for umetna inteligenca; the label is acceptable.
 - `preferences_enable_gecko_logs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 8a2caa37): Gecko is Mozilla's rendering engine, so "izrisovalnika Gecko" is an accurate descriptor that also allows correct declension of the brand name.
+- `preferences_https_only_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string d6b1c3b4): unreliable finding: The sentence reads as connecting using the HTTPS protocol, which is understandable; adding sites is a rewording.
+- `preferences_inactive_tabs_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 6ef4e42a): unreliable finding: "odprli" for viewed tabs is a natural, acceptable rendering; the difference is stylistic.
+- `quick_setting_option_autoplay_block_audio` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 16e4d639): unreliable finding: "Zavrni" is used consistently in the autoplay options and appears to be the locale's chosen term.
+- `quick_setting_option_autoplay_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string c4cbbb6d): unreliable finding: "Zavrni" is used consistently across the autoplay options; changing it would be a terminology preference.
+- `restart_warning_dialog_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string ee34a357): unreliable finding: The app is %1$s itself, so "%1$s may close… reopen it" means the same as the source; this is a legitimate restructuring.
+- `review_prompt_feedback_button` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 0b669242): unreliable finding: "Pošlji povratne informacije" is the idiomatic Slovenian button label for leaving feedback, and the imperative is the house style for buttons.
+- `saved_login_clear_hostname` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 0b8ba364): unreliable finding: Calling this login field "domena" is a plausible established term choice; changing it would be terminology preference.
+- `saved_login_hostname_required` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-09, string 20b55f9a): unreliable finding: This matches the "domena" term the sibling strings use for the same field; changing it would be terminology preference.
 - `search_add_custom_engine_error_missing_template` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string c77183cc): 'Prepričajte se, da se iskalni niz ujema z obliko primera' accurately conveys 'Check that search string matches Example format'.
 - `setup_checklist_subtitle_5_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string eecc6405): "Ste samo 1 korak od ciljne črte" is grammatical Slovenian; no preposition is missing, the suggestion is only stylistic.
-- `sync_failed_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 7ee04b8c): "Nazadnje sinhronizirano" after a failure message conveys the last successful sync, equivalent to the source.
-- `toast_customize_extension_collection_done` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 41860cd2): Slovenian orthography puts a space before an ellipsis following a complete word, as the tree does elsewhere ("Prevajanje …").
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 

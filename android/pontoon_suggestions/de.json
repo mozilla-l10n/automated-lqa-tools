@@ -1197,13 +1197,13 @@
    "source": "Fill and save usernames and passwords in websites while using %1$s.",
    "original": "Benutzernamen und Passwörter auf Webseite bei Nutzung von %1$s automatisch ausfüllen.",
    "text": "Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.",
-   "status": "approved",
-   "status_date": "2026-11-02",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12373881,
    "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=228798",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -1409,9 +1409,13 @@
    "source": "Tracking Protection is on",
    "original": "Schutz vor Aktivitätenverfolgung ist an",
    "text": "Tracking-Schutz ist an",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398692,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/android-components/components/browser/toolbar/src/main/res/values/strings.xml/?string=201647",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1435,9 +1439,13 @@
    "source": "Read the text of all open tabs.",
    "original": "Auf Texte aller offenen Tabs zugreifen.",
    "text": "Den Text aller offenen Tabs lesen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398694,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321375",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1461,9 +1469,13 @@
    "source": "Access browsing history",
    "original": "Auf Chronik zugreifen",
    "text": "Auf die Surf-Chronik zugreifen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398693,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206758",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1487,9 +1499,13 @@
    "source": "The tab counter toolbar button.",
    "original": "Die Schaltfläche der Tab-Zähler-Symbolleiste.",
    "text": "Die Tab-Zähler-Schaltfläche in der Symbolleiste.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398695,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values/strings.xml/?string=217744",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1513,9 +1529,14 @@
    "source": "Sort by custom order",
    "original": "Benutzerdefiniert",
    "text": "Nach benutzerdefinierter Reihenfolge sortieren",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "dismissal": "bookmark_sort_menu_custom @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 11104350,
+   "pontoon_url": "",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed (Pontoon revived an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-09",
@@ -1539,9 +1560,13 @@
    "source": "A root certificate will expire, causing your version of Firefox to stop working properly.",
    "original": "Ein Stammzertifikat läuft ab, und Ihre Firefox-Version funktioniert nicht mehr richtig.",
    "text": "Ein Stammzertifikat läuft ab, weshalb Ihre Firefox-Version nicht mehr richtig funktioniert.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398699,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=313810",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1565,9 +1590,13 @@
    "source": "Choose an image or use your camera to get results with Google Lens.",
    "original": "Wählen Sie eine Grafik aus oder verwenden Sie Ihre Kamera, um mit Google Lens Ergebnisse zu erhalten.",
    "text": "Wählen Sie ein Bild aus oder verwenden Sie Ihre Kamera, um mit Google Lens Ergebnisse zu erhalten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398701,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=338484",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1591,9 +1620,13 @@
    "source": "Please consider allowing to help Firefox win.",
    "original": "Bitte überlegen Sie, ob Sie mit dieser Erlaubnis zum Erfolg verhelfen dürfen.",
    "text": "Bitte überlegen Sie, ob Sie Firefox mit dieser Erlaubnis zum Erfolg verhelfen möchten.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398696,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335843",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1617,9 +1650,13 @@
    "source": "Fill and save usernames and passwords in websites while using %1$s.",
    "original": "Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.",
    "text": "Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s ausfüllen und speichern.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398697,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=228798",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1643,9 +1680,13 @@
    "source": "If something looks broken on this site, try turning it off.",
    "original": "Wenn etwas auf dieser Website beschädigt aussieht, deaktivieren Sie ihn.",
    "text": "Wenn etwas auf dieser Website fehlerhaft aussieht, versuchen Sie, ihn zu deaktivieren.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398698,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=321233",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1669,9 +1710,13 @@
    "source": "Penalties",
    "original": "Elfmeterschließen",
    "text": "Elfmeterschießen",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398700,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=343971",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back) instead of the standard "Terugnavigeren"/"Terug".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The source means navigating back within the debug drawer; "bladeren" means browsing/leafing through and is not the term used for navigation elsewhere in the product.
-- `webcompat_reporter_reason_notsupported_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The order of "blocked" and "unsupported" is swapped relative to the source.
-    - Current: `Browser wordt niet ondersteund of geblokkeerd`
-    - Source: `Browser is blocked or unsupported`
-    - Suggest: `Browser is geblokkeerd of wordt niet ondersteund`
-    - Source is "Browser is blocked or unsupported"; the Dutch reverses the order of the two conditions.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -95,14 +86,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (57)
+## 3. Open findings (31)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 31 |
-| 3 | Degraded language (grammar, spelling, terminology) | 26 |
+| 2 | Wrong content (says something other than the English) | 20 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -145,86 +136,21 @@ _Nothing reported._
     - Source: `Reset to default`
     - Suggest: `Standaardwaarden herstellen`
     - Source 'Reset to default' is a button that resets the menu configuration; 'Standaardwaarden' is just a noun ('default values') and does not convey the reset action.
-- `bookmark_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren", which means "browse back" rather than navigating back.
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The content description describes a back navigation button; "bladeren" means browsing/leafing through, not navigating. Standard Dutch Mozilla wording is "Terugnavigeren" or "Teruggaan".
 - `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "custom tab" is mistranslated as "Tabblad aanpassen" (customize tab) instead of the noun "aangepast tabblad".
     - Current: `Menublad Tabblad aanpassen sluiten`
     - Source: `Close custom tab menu sheet`
     - Suggest: `Menublad van aangepast tabblad sluiten`
     - The source refers to the menu sheet of a custom tab (aangepast tabblad), not to an action of customizing a tab.
-- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The Dutch says features stop working "on 14 March" as a completed statement but places the time adverbial ambiguously, changing "will stop working on March 14" into "work no longer on 14 March".
-    - Current: `Add-ons en sommige functies werken niet meer op 14 maart.`
-    - Source: `Add-ons and some features will stop working on March 14.`
-    - Suggest: `Add-ons en sommige functies werken vanaf 14 maart niet meer.`
-    - Source is a future warning: they will stop working on March 14. "werken niet meer op 14 maart" reads as a present-tense statement and misplaces the date; "vanaf 14 maart niet meer" conveys the intended meaning.
 - `close_tabs_manually` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Never" is translated as "Handmatig" (Manually) instead of "Nooit".
     - Current: `Handmatig`
     - Source: `Never`
     - Suggest: `Nooit`
     - The source option label is "Never"; the summary string separately renders "Close manually". Rendering the option itself as "Handmatig" changes the displayed content.
-- `content_description_settings_search_navigate_back` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate Back" is rendered as "Terug bladeren" (page through backwards) instead of "Terug"/"Terug navigeren".
-    - Current: `Terug bladeren`
-    - Source: `Navigate Back`
-    - Suggest: `Terug navigeren`
-    - The button navigates back to the Settings page; "bladeren" means browsing/leafing through, not navigating back. Mozilla nl uses "Terug" / "Terug navigeren".
-- `credit_cards_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back / leaf through), which is not the meaning of navigating back.
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terug navigeren`
-    - The content description describes a back button; Dutch Firefox uses ‘Terug navigeren’ / ‘Terug’. ‘Terug bladeren’ means paging/leafing backwards and misdescribes the control for screen-reader users.
-- `download_navigate_back_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back) instead of the standard "Terug"/"Terugnavigeren".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terug navigeren`
-    - The source is a content description for the back button; "bladeren" means browsing/leafing, not navigating back, and is inconsistent with "Naar Downloadinstellingen navigeren" used for the sibling button.
-- `edit_login_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (page/leaf through backwards) instead of "Terugnavigeren"/"Terug".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The source means navigating back (going back a screen); "bladeren" means browsing/leafing through and misdescribes the control for screen-reader users.
-- `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "we picked one for you to reuse" is translated as "we hebben er één uitgekozen om opnieuw te gebruiken", dropping the "for you".
-    - Current: `dus we hebben er één uitgekozen om opnieuw te gebruiken`
-    - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
-    - Suggest: `dus we hebben er één voor u uitgekozen om opnieuw te gebruiken`
-    - The source says the app picked a mask for the user to reuse; the omission of "voor u" loses part of the meaning.
-- `etp_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" instead of "Terugnavigeren"/"Terug".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The source means navigating back from the ETP detail screen; "bladeren" (leaf through/browse) is not the meaning of "navigate".
-- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The product name "Firefox Suggest" is translated instead of kept as a brand name.
-    - Current: `Firefox Suggesties`
-    - Source: `Firefox Suggest`
-    - Suggest: `Firefox Suggest`
-    - "Firefox Suggest" is a Mozilla feature/product name that stays untranslated per brand conventions.
-- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Get Mozilla VPN" is translated as "Mozilla VPN downloaden" (download), adding a meaning not in the source.
-    - Current: `Mozilla VPN downloaden`
-    - Source: `Get Mozilla VPN`
-    - Suggest: `Mozilla VPN aanschaffen`
-    - The button takes the user to get the standalone paid product; "downloaden" states a specific action (download) not implied by "Get".
-- `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren", which means "browse back" rather than "go back".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terug`
-    - The back button content description should say "Terug" (or "Teruggaan"); "bladeren" means to browse/leaf through and is the wrong verb for navigation in Mozilla nl, which uses "Terug" for back buttons.
-- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "unlimited bandwidth through %1$s" (a date) is translated as "tot %1$s onbeperkte bandbreedte" with the amount phrasing reversed/ambiguous.
-    - Current: `Probeer het nu en ontvang tot %1$s onbeperkte bandbreedte.`
-    - Source: `Turn it on to make your browsing more private and harder to trace. Try it now to get unlimited bandwidth through %1$s. %2$s`
-    - Suggest: `Probeer het nu en ontvang onbeperkte bandbreedte tot en met %1$s.`
-    - %1$s is an end date; "tot %1$s onbeperkte bandbreedte" reads as a quantity limit rather than "through <date>", and "tot en met" correctly renders "through".
 - `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Neutral" is rendered as "Gemiddeld" (average) instead of the neutral midpoint term.
     - Current: `Gemiddeld`
     - Source: `Neutral`
     - Suggest: `Neutraal`
     - The likert midpoint "Neutral" means neither satisfied nor dissatisfied; "Gemiddeld" means "average", a different concept.
-- `login_details_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is translated as "Terug bladeren" (page/scroll back) instead of navigating back.
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - "Bladeren" means browsing/leafing through; the control returns to the previous screen, and the parallel string logins_navigate_back_button_content_description uses "Terug".
 - `microsurvey_homepage_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Translation adds "ervaring" (experience), which is not in the source.
     - Current: `Hoe tevreden bent u met uw Firefox Startpagina-ervaring?`
     - Source: `How satisfied are you with your Firefox homepage?`
@@ -255,11 +181,6 @@ _Nothing reported._
     - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
     - Suggest: `Mozilla’s marketingpartners`
     - Source says "Mozilla’s marketing partners", not "marketing technology partners".
-- `past_explorations_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "past explorations" (browsing history) is rendered as "zoekopdrachten" (search queries).
-    - Current: `Alle eerdere zoekopdrachten tonen`
-    - Source: `Show all past explorations`
-    - Suggest: `Alle eerdere verkenningen tonen`
-    - The developer comment says the button navigates the user to their history; the source says "explorations", not searches.
 - `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Brand name "Firefox Suggest" translated as "Firefox Suggesties".
     - Current: `Firefox Suggesties`
     - Source: `Address bar - Firefox Suggest`
@@ -270,31 +191,6 @@ _Nothing reported._
     - Source: `Learn more about Firefox Suggest`
     - Suggest: `Firefox Suggest`
     - "Firefox Suggest" is a product/feature brand name and must not be translated.
-- `saved_logins_menu_dropdown_chevron_icon_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Sort passwords menu" is rendered as "Wachtwoordmenu sorteren" (sort the password menu), reversing the meaning.
-    - Current: `Wachtwoordmenu sorteren`
-    - Source: `Sort passwords menu`
-    - Suggest: `Menu Wachtwoorden sorteren`
-    - The source names a menu for sorting passwords; the Dutch reads as a command to sort a password menu.
-- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Search %s" (search using engine %s) is rendered as "%s doorzoeken" (search through %s).
-    - Current: `%s doorzoeken`
-    - Source: `Search %s`
-    - Suggest: `Zoeken met %s`
-    - The developer comment says %s is the name of the suggested search engine; the string means to search using that engine, not to search inside it.
-- `setup_checklist_group_essentials` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "essentials" is left untranslated in the Dutch group title.
-    - Current: `%1$s-essentials`
-    - Source: `%1$s essentials`
-    - Suggest: `%1$s-basisinstellingen`
-    - Only the app name %1$s is a brand; the common noun "essentials" should be translated into Dutch.
-- `stories_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is translated as "Terug bladeren" (page/browse back) instead of "Terug"/"Terugnavigeren".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terug`
-    - 'Bladeren' means browsing/paging; the control is a back navigation button, and elsewhere Mozilla nl uses 'Terug' or 'Terugnavigeren'.
-- `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Word order makes "Gesynchroniseerde open tabbladen" inconsistent with the parallel normal/private strings.
-    - Current: `Gesynchroniseerde open tabbladen: %1$s.`
-    - Source: `Synced Tabs Open: %1$s. Tap to switch tabs.`
-    - Suggest: `Open gesynchroniseerde tabbladen: %1$s.`
-    - The sibling strings render "Tabs Open" as "Open ... tabbladen"; here the modifiers are swapped, breaking consistency on the same surface.
 - `translation_option_bottom_sheet_switch_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Overrides offers to translate" is rendered as "Negeert" (ignores) instead of "overschrijft" (overrides), inconsistent with the sibling string.
     - Current: `Negeert vertaalaanbiedingen`
     - Source: `Overrides offers to translate`
@@ -333,21 +229,6 @@ _Nothing reported._
     - Source: `%1$s requests additional settings`
     - Suggest: `%1$s vraagt om aanvullende instellingen`
     - Dutch "vragen" requires "om" here; the parallel string mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title correctly uses "vraagt om aanvullende gegevensverzameling".
-- `mozac_feature_sitepermissions_local_network_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-nl/strings.xml` — Misplaced prepositional phrase makes the sentence say permission is granted "on devices" rather than access to apps/services on those devices.
-    - Current: `Toegang tot apps en services door %1$s toestaan op apparaten die zijn verbonden met uw lokale netwerk?`
-    - Source: `Allow %1$s to access apps and services on devices connected to your local network?`
-    - Suggest: `%1$s toegang geven tot apps en services op apparaten die zijn verbonden met uw lokale netwerk?`
-    - The source is "access to apps and services on devices connected to your local network"; in the Dutch the phrase "op apparaten…" is detached from "apps en services" and attaches to "toestaan", changing the meaning.
-- `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Inconsistent/incorrect spelling of "doorleidings-" vs "doorgeleidingen" used in the matching description string.
-    - Current: `Doorleidingstrackers`
-    - Source: `Redirect Trackers`
-    - Suggest: `Doorgeleidingstrackers`
-    - The description string etp_redirect_trackers_description renders "redirects" as "doorgeleidingen"; the title uses the malformed "Doorleidings-", inconsistent with the same term on the same surface.
-- `nova_onboarding_marketing_body_line_two` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "trots onafhankelijk" is ungrammatical as an adverbial modifier in Dutch.
-    - Current: `Firefox is trots onafhankelijk`
-    - Source: `Firefox is proudly independent and dedicated to defending the open web against tech monopolies.`
-    - Suggest: `Firefox is trots op zijn onafhankelijkheid`
-    - "proudly independent" requires an adverb construction; "trots onafhankelijk" is not idiomatic/grammatical Dutch.
 - `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Sentence is ungrammatical: missing subject/verb agreement for "One tap helps stop…".
     - Current: `Met één tik voorkomen dat bedrijven uw tikken bespioneren.`
     - Source: `One tap helps stop companies spying on your clicks.`
@@ -358,11 +239,6 @@ _Nothing reported._
     - Source: `Search bar with image, private and voice search`
     - Suggest: `met afbeeldings-, privé- en gesproken zoekopdrachten`
     - The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.
-- `terms_of_use_prompt_body_line_two_alternative` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Sentence reads awkwardly/ungrammatically with the link placeholder inserted mid-sentence.
-    - Current: `U vindt %1$s meer info.`
-    - Source: `You can learn more %1$s.`
-    - Suggest: `U kunt %1$s meer info vinden.`
-    - %1$s is the link text "hier"; "U vindt hier meer info" splits oddly and the source is "You can learn more here."
 - `unsubmitted_crash_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Subject mismatch: "Door dit te verzenden, helpt het ons" is ungrammatical and inconsistent with the plural variant.
     - Current: `Door dit te verzenden, helpt het ons %1$s te verbeteren.`
     - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
@@ -381,26 +257,11 @@ _Nothing reported._
     - Source: `Author`
     - Suggest: `Auteur`
     - The developer comment says this is the author (developer) of an add-on; Dutch "Schrijver" refers to a writer of text and is the wrong term in a software context.
-- `add_login_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren", which means "browse back" rather than navigating back/going back.
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terug navigeren`
-    - The source is a content description for a back button; Dutch "bladeren" means to browse/leaf through, not to navigate back. Compare action_bar_up_description usage of navigation wording.
-- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "permission" is translated as "toestemming" here while the sibling strings use "machtigingen", creating inconsistency on the same surface.
-    - Current: `deze toestemming`
-    - Source: `Are you sure that you want to clear this permission for this site?`
-    - Suggest: `deze machtiging`
-    - confirm_clear_permissions_site and confirm_clear_permissions_on_all_sites use "machtigingen" for the same source term "permissions" in the same dialog family.
 - `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Shortcuts" (home screen tiles) is translated as "sneltoetsen" (keyboard shortcuts) instead of "snelkoppelingen".
     - Current: `Alle sneltoetsen tonen`
     - Source: `Show all shortcuts`
     - Suggest: `Alle snelkoppelingen tonen`
     - The related string homepage_shortcuts_add_shortcut uses "Snelkoppeling"; "sneltoetsen" means keyboard shortcuts, which is the wrong concept for home screen shortcut tiles.
-- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren", which is not the standard Dutch back-navigation wording.
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The source is a back button content description; "bladeren" means "to browse/leaf through" and misdescribes the control for screen-reader users. Mozilla nl uses "Terug"/"Terugnavigeren".
 
 ### E. Typography, punctuation & spacing
 
@@ -416,9 +277,34 @@ _Nothing dismissed._
 
 _One line each in `locales/nl/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (0)
+### Closed by the fixer (26)
 
-_Nothing closed by the fixer._
+- `add_login_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is used consistently across all the back-button strings in this locale, so it looks deliberate; 'bladeren' is the standard nl verb for browsing.
+- `bookmark_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is used consistently across all the back-button strings in this locale, so it looks deliberate; it is an understandable way to say 'go back'.
+- `certificate_warning_push_notification_pnr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 7b175ac5): unreliable finding: Dutch commonly uses the present tense for future events, and 'werken niet meer op 14 maart' acceptably says they stop working on that date; the suggested wording is a style preference.
+- `confirm_clear_permission_site` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 1b25438a): unreliable finding: 'Toestemming' is a common and correct Dutch rendering of 'permission'; nothing confirms that 'machtiging' is the required term here.
+- `content_description_settings_search_navigate_back` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is used consistently across all the back-button strings in this locale, so it looks deliberate rather than wrong.
+- `credit_cards_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is used consistently across all the back-button strings in this locale, so it looks deliberate rather than wrong.
+- `download_navigate_back_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is used consistently across all the back-button strings in this locale, so it looks deliberate rather than wrong.
+- `edit_login_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: "Terug bladeren" is the consistent, understandable nl rendering used for every Navigate back control; changing it is a terminology preference.
+- `email_masks_max_free_tier_reached` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string a8e8d8c8): unreliable finding: The meaning (a mask was picked to reuse) is fully conveyed; adding "voor u" is stylistic.
+- `etp_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: "Terug bladeren" is the consistent, understandable nl rendering used across back buttons; the change is preference.
+- `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string cd436654): unreliable finding: "Doorleiding" is a valid Dutch noun and the claimed wording of the description string cannot be verified here.
+- `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 6de0e127): unreliable finding: Whether nl keeps Firefox Suggest untranslated in this header cannot be confirmed; the descriptive rendering is plausible.
+- `ip_protection_locations_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: "Terug bladeren" is the consistent nl wording for back controls and is understandable; the change is preference.
+- `ip_protection_mozilla_vpn_upsell_button` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 378950f8): unreliable finding: Rendering "Get" as "downloaden" is a common, acceptable choice for app/product CTAs.
+- `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: "Terug bladeren" is the consistent nl wording for back controls and is understandable; the change is preference.
+- `ip_protection_onboarding_body_promo` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 43f8856f): unreliable finding: "ontvang tot %1$s onbeperkte bandbreedte" naturally reads as "until <date>" in Dutch; "tot en met" is a nuance.
+- `login_details_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is an understandable label for a back control, so replacing it is a matter of style.
+- `mozac_feature_sitepermissions_local_network_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 1e41d011): unreliable finding: The word order is somewhat loose but most readers will understand that access is to apps and services on those devices; a rewrite would be stylistic and would require moving text across the placeholder.
+- `nova_onboarding_marketing_body_line_two` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string cab6f8dc): unreliable finding: In Dutch, 'trots' can modify an adjective adverbially ('trots onafhankelijk'), and the phrase is idiomatic.
+- `past_explorations_show_all_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string d5b26c23): unreliable finding: In Fenix 'past explorations' are search-based history groups, so 'eerdere zoekopdrachten' is a plausible deliberate rendering.
+- `saved_logins_menu_dropdown_chevron_icon_content_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string f6c6455c): unreliable finding: The source is itself ambiguous and the Dutch is an acceptable content description for the sort menu control.
+- `search_engine_suggestions_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 130d77d2): unreliable finding: 'Google doorzoeken' style phrasing is common, acceptable Dutch for searching with an engine.
+- `setup_checklist_group_essentials` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string 18dc2611): unreliable finding: 'essentials' may be an intentional loanword in this feature title; the proposed Dutch term is a guess.
+- `stories_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string e6ea73b4): unreliable finding: 'Terug bladeren' is idiomatic for going back in a stories carousel and is not a mistranslation.
+- `tabs_header_synced_tabs_counter_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string be64e7e2): unreliable finding: The sibling strings can't be checked, and the current word order is correct Dutch.
+- `terms_of_use_prompt_body_line_two_alternative` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — auto-suggest (2026-11-09, string ca395ba5): With %1$s being the link text 'hier', the sentence reads 'U vindt hier meer info.', which is grammatical, natural Dutch matching the source.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/nl/dismissed.txt` brings the finding back now._
 
