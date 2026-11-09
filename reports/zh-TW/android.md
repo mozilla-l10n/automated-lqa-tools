@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `eb5867992b38` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,601 |
 
@@ -81,20 +81,6 @@ The count includes Focus for Android's strings for this locale, which the same t
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
-
-### Proposed conventions — not applied (1)
-
-Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `android/locales/zh-TW/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
-
-- Do not raise a finding just to swap a word in an approved translation for an equally valid synonym or quantifier. The zh-TW reviewer treats such swaps as interchangeable, and the approved wording stands. Examples: 報表 and 報告 for "report" on crash-report buttons; the measure word used for permission items; similar wording swaps in bookmark-removal and add-on permission strings. Only flag the wording if it changes, loses or adds meaning (for example, "older than %S months" rendered as only "%S months ago"), breaks the glossary, or adds an error (for example, leaving English untranslated).
-    _Behind it: 6 dismissals, 6 of them rejected in Pontoon._
-
-    - `mozac_feature_addons_permissions_browser_settings_description_for_update` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `mozac_feature_addons_permissions_content_description_item` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>
-    - `home_bookmarks_menu_item_remove` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `ip_protection_location_recommended_label` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>
-    - `startup_crash_positive` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
-    - `unsubmitted_crash_dialog_positive_button` — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
 
 ---
 
