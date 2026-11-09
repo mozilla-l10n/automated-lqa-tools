@@ -181,6 +181,32 @@
    "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=223929",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+   "string_id": "preference_auto_battery_theme",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "focus-for-android",
+    "resource": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+    "key": [
+     "preference_auto_battery_theme"
+    ]
+   },
+   "fids": [
+    "5a53fdb913c9"
+   ],
+   "findings": [
+    "\"Set by Battery Saver\" is rendered as an imperative \"Set the battery saver\", reversing the meaning."
+   ],
+   "source": "Set by Battery Saver",
+   "original": "Nastavi ohranjevalnik baterije",
+   "text": "Glede na ohranjevalnik baterije",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

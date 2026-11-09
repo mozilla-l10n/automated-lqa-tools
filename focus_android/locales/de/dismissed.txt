@@ -15,3 +15,5 @@
 # recurring across strings -- a house convention, a term that is correct
 # everywhere -- write a rule in suppressions.yaml instead, or better, a
 # sentence in conventions.md so the reviewer never raises it.
+cfr_for_start_browsing @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-09, string 5f5e3a51): unreliable finding: "bei der Gelegenheit auch noch" is a free, idiomatic rendering of "as you go" that still conveys trackers and other harmful elements being blocked during the session; changing it would be stylistic.
+preference_privacy_block_content_summary2 @ mozilla-mobile/focus-android/app/src/main/res/values/strings.xml — auto-suggest (2026-11-09, string 6f991eb6): unreliable finding: As a summary shown under the setting toggle, "Dies" naturally refers to enabling the setting, so the condition is implied and the warning's meaning is preserved.
