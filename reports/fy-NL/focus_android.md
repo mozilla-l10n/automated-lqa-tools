@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 245 |
+| **Strings reviewed this run** | 0 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,48 +22,9 @@ Also for fy-NL: [Firefox for Android](android.md) · [Firefox](firefox.md)
 
 _No new findings._
 
-### ✅ Fixed since the last run (8)
+### ✅ Fixed since the last run (0)
 
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Back-button instruction wrongly says "press the back gesture" instead of pressing the back button, duplicating the gesture string.
-    - Current: `druk it gebear werom`
-    - Source: `Drag from top & press back to exit`
-    - Suggest: `druk op de weromknop`
-    - Source is "press back to exit" (hardware/back button), not a gesture; the gesture wording belongs to exit_fullscreen_with_gesture_short.
-- `feedback_erase_custom_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Singular "Tab's browsing history" rendered as plural "of the tabs".
-    - Current: `Jo sneupskiednis fan de ljepblêden is wiske.`
-    - Source: `Tab’s browsing history has been erased.`
-    - Suggest: `De sneupskiednis fan it ljepblêd is wiske.`
-    - Source refers to a single tab's browsing history; the translation says the history of the tabs (plural) and adds "Jo" (your).
-- `onboarding_first_screen_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Dutch spelling "bij" used instead of Frisian "by".
-    - Current: `Wolkom bij %1$s`
-    - Source: `Welcome to %1$s`
-    - Suggest: `Wolkom by %1$s`
-    - In Frisian the preposition is "by"; "bij" is the Dutch form (Frisian "bij" means the insect).
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "Shortcuts" (pinned website shortcuts) is rendered as "fluchtoetsen" (keyboard shortcuts).
-    - Current: `fluchtoetsen`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `fluchkeppelingen`
-    - The developer comment explains Shortcuts are pinned favourite websites, not keyboard shortcuts.
-- `search_add_manually_example` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Misspelling of "Bygelyks".
-    - Current: `Bygelyls`
-    - Source: `Example: example.com/search/?q=%s`
-    - Suggest: `Bygelyks`
-    - "Bygelyls" is a typo for the Frisian "Bygelyks" (Example/For example).
-- `tabs_tray_action_add_new_tab` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Adjective agreement error: 'ljepblêd' is neuter, so the attributive adjective should be 'Nij', not 'Nije'.
-    - Current: `Nije ljepblêd tafoegje`
-    - Source: `Add new tab`
-    - Suggest: `Nij ljepblêd tafoegje`
-    - In Frisian, indefinite neuter nouns take the uninflected adjective form ('in nij ljepblêd'), as also used correctly in tip_open_in_new_tab ('in nij ljepblêd').
-- `preference_privacy_should_block_cookies_third_party_only_option` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — The verb "blokkearje" (block) is missing, so the option reads "Only third-party cookies" instead of "Block 3rd-party cookies only".
-    - Current: `Allinnich cookies fan tredden`
-    - Source: `Block 3rd-party cookies only`
-    - Suggest: `Allinnich cookies fan tredden blokkearje`
-    - Source is "Block 3rd-party cookies only"; the parallel option string for tracker cookies correctly ends in "blokkearje".
-- `preference_security_biometric_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — Missing diacritic in "Untskoattelje".
-    - Current: `Untskoattelje`
-    - Source: `Unlock using fingerprint if you’ve added Shortcuts or when a website is already open in %s.`
-    - Suggest: `Ûntskoattelje`
-    - Frisian spelling requires Û; the same verb is written "ûntskoatteljen" in preference_security_biometric.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -73,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `firstrun_shortcut_title` — `mozilla-mobile/focus-android/app/src/main/res/values-fy-rNL/strings.xml` — "shortcuts" translated as "keppelingen" (links) instead of "fluchkeppelingen" (shortcuts).
-    - Current: `Foegje keppelingen ta oan jo startskerm`
-    - Suggest: `Foegje fluchkeppelingen ta oan jo startskerm`
-    - Source says "Add shortcuts to your home screen"; elsewhere (menu_add_to_shortcuts) "Shortcuts" is "fluchkeppelingen", while "keppelingen" means links.
+_Nothing retired._
 
 ---
 

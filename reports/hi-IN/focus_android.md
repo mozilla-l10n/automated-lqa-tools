@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 165 |
 
@@ -34,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `firstrun_privacy_title` — `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — Imperative verb form is wrong/incomplete for "Make privacy a habit".
-    - Current: `गोपनीयता एक आदत बनाये`
-    - Suggest: `गोपनीयता को एक आदत बनाएँ`
-    - "बनाये" is not the correct polite imperative; the correct form is "बनाएँ", and the object marker is missing.
-- `firstrun_search_title` — `mozilla-mobile/focus-android/app/src/main/res/values-hi-rIN/strings.xml` — Gender agreement error: "खोज" is feminine, so the possessive should be "आपकी".
-    - Current: `आपका खोज, आपका रास्ता`
-    - Suggest: `आपकी खोज, आपका रास्ता`
-    - "खोज" is a feminine noun in Hindi and requires "आपकी", not "आपका".
+_Nothing retired._
 
 ---
 
