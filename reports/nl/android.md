@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 2 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back) instead of the standard "Terugnavigeren"/"Terug".
+    - Current: `Terug bladeren`
+    - Source: `Navigate back`
+    - Suggest: `Terugnavigeren`
+    - The source means navigating back within the debug drawer; "bladeren" means browsing/leafing through and is not the term used for navigation elsewhere in the product.
+- `webcompat_reporter_reason_notsupported_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The order of "blocked" and "unsupported" is swapped relative to the source.
+    - Current: `Browser wordt niet ondersteund of geblokkeerd`
+    - Source: `Browser is blocked or unsupported`
+    - Suggest: `Browser is geblokkeerd of wordt niet ondersteund`
+    - Source is "Browser is blocked or unsupported"; the Dutch reverses the order of the two conditions.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -55,7 +64,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -87,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (59)
+## 3. Open findings (57)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 32 |
-| 3 | Degraded language (grammar, spelling, terminology) | 27 |
+| 2 | Wrong content (says something other than the English) | 31 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -167,11 +175,6 @@ _Nothing reported._
     - Source: `Navigate back`
     - Suggest: `Terug navigeren`
     - The content description describes a back button; Dutch Firefox uses ‘Terug navigeren’ / ‘Terug’. ‘Terug bladeren’ means paging/leafing backwards and misdescribes the control for screen-reader users.
-- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back) instead of the standard "Terugnavigeren"/"Terug".
-    - Current: `Terug bladeren`
-    - Source: `Navigate back`
-    - Suggest: `Terugnavigeren`
-    - The source means navigating back within the debug drawer; "bladeren" means browsing/leafing through and is not the term used for navigation elsewhere in the product.
 - `download_navigate_back_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Navigate back" is rendered as "Terug bladeren" (browse back) instead of the standard "Terug"/"Terugnavigeren".
     - Current: `Terug bladeren`
     - Source: `Navigate back`
@@ -307,11 +310,6 @@ _Nothing reported._
     - Source: `It’s slow or unreliable`
     - Suggest: `De browser is traag of onbetrouwbaar`
     - Source is "It’s slow or unreliable" — a disjunction, not a conjunction.
-- `webcompat_reporter_reason_notsupported_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The order of "blocked" and "unsupported" is swapped relative to the source.
-    - Current: `Browser wordt niet ondersteund of geblokkeerd`
-    - Source: `Browser is blocked or unsupported`
-    - Suggest: `Browser is geblokkeerd of wordt niet ondersteund`
-    - Source is "Browser is blocked or unsupported"; the Dutch reverses the order of the two conditions.
 
 ### C. Grammar, agreement & spelling
 
@@ -418,6 +416,12 @@ _Nothing dismissed._
 
 _One line each in `locales/nl/dismissed.txt`. Delete the line and the finding returns._
 
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/nl/dismissed.txt` brings the finding back now._
+
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
@@ -428,7 +432,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (2)
+### Fixed to date (4)
 
+- `debug_drawer_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-09
+- `webcompat_reporter_reason_notsupported_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-09
 - `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-08
 - `ip_protection_settings_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-05
