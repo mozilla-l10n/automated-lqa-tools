@@ -856,7 +856,7 @@ def check_typography(project, locale, l10n, counts, source=None) -> list[Finding
     return out
 
 
-def check_plurals(locale, l10n, source) -> list[Finding]:
+def check_plurals(locale, l10n, source, dead_removable: bool = True) -> list[Finding]:
     """Plural variants, judged against CLDR and the locale's own habits.
 
     Two different questions, and conflating them is what makes naive plural
@@ -877,10 +877,17 @@ def check_plurals(locale, l10n, source) -> list[Finding]:
 
     Adding categories en-US does not have is never a defect: that is
     precisely what localizing a plural means.
+
+    ``dead_removable=False`` is for a format whose tooling will not let a
+    translator delete a variant. Android's does not: Pontoon keeps the
+    `quantity` items en-US has, so zh-TW and ja carry a `one` nobody can
+    remove. For a locale whose only category is `other`, that dead variant
+    is not reported -- the backlog would hold findings with no fix.
     """
     valid = categories_for(locale)
     if valid is None:
         return []
+    report_dead = dead_removable or valid != {"other"}
 
     # What this locale habitually does: categories present in most of its
     # own number-selects.
@@ -902,7 +909,7 @@ def check_plurals(locale, l10n, source) -> list[Finding]:
                 label = f"`{msg.id}`" + (f" (`.{prop}`)" if prop else "")
 
                 dead = sorted(c for c in cats if c not in valid and not is_numeric_key(c))
-                if dead:
+                if dead and report_dead:
                     out.append(_mk(
                         locale, msg, "A", "plurals",
                         f"{label} has plural {'variants' if len(dead) > 1 else 'variant'} "
