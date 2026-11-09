@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **Previous run** | 2026-11-08 @ `050d29471acf` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **Previous run** | 2026-11-09 @ `62ca1adeb53c` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,983 |
 
@@ -304,18 +304,23 @@ _Nothing reported._
 
 ## 4. Appendix
 
-### Dismissed by hand (8)
+### Dismissed by hand (5)
 
 - `Bookmarks.NewBookmark.Label` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>We use „Lesezeichen hinzufügen“ everywhere else, as far as I can tell.</p>
-- `CloseTabsToast.Title.v113` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "Geschlossene Tabs: %d" is correct, natural German that conveys the number of tabs closed; no meaning is lost.
 - `NativeErrorPage.BadCertDomain.TitleLabel.v149` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; likely reason (inferred): The original was probably already acceptable: "sieht nicht gut aus" is a correct and closer rendering of "doesn't look right", and the wording difference from a separate generic-error string is a style variation, not an error.
 - `PasswordAutofill.LoginListCellNoUsername.v129` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer this with a capital letter.</p>
-- `SendTo.NotSignedIn.Title.v119` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "mit Ihrem Konto angemeldet" is idiomatic German (cf. "Angemeldet mit Ihrem Google-Konto"); mit is not ungrammatical.
 - `Settings.Home.Option.Pocket` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>I prefer the noun here.</p>
-- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02): "jemandem erlauben, etwas zu tun" takes a dative object, and "bestimmter Werbung" is the correct feminine dative, so the sentence is grammatical.
 - `fi3W24-scEmjs` — `de/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>„Private Suche“ is a name, so capital letters are ok.</p>
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (3)
+
+- `CloseTabsToast.Title.v113` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02, string a35856b3): "Geschlossene Tabs: %d" is correct, natural German that conveys the number of tabs closed; no meaning is lost.
+- `SendTo.NotSignedIn.Title.v119` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02, string bbad985c): "mit Ihrem Konto angemeldet" is idiomatic German (cf. "Angemeldet mit Ihrem Google-Konto"); mit is not ungrammatical.
+- `Settings.TrackingProtection.ProtectionLevelStandard.Description` — `de/firefox-ios.xliff` — auto-suggest (2026-11-02, string 44e07fd5): "jemandem erlauben, etwas zu tun" takes a dative object, and "bestimmter Werbung" is the correct feminine dative, so the sentence is grammatical.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/de/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

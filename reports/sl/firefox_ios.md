@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **Previous run** | 2026-11-08 @ `050d29471acf` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `372c1b986f13` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `372c1b986f13` |
+| **Previous run** | 2026-11-09 @ `62ca1adeb53c` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,903 |
 
@@ -89,6 +89,19 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
+
+### Proposed conventions — not applied (1)
+
+Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `firefox_ios/locales/sl/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
+
+- Short UI command labels (buttons, toggles, setting switches, link texts, menu commands) conventionally use the 2nd-person singular imperative, e.g. "Shrani", "Omogoči", "Posodobi", "Obnovi podatke". This is the standard Slovenian label form and is not a violation of the formal register; do not flag it or suggest the plural ("Shranite", "Obnovite podatke"). The formal register (vikanje, e.g. "Prepričajte se, da …") still applies to full sentences and prose addressed to the user; informal singular forms in such prose remain a defect.
+    _Behind it: 5 dismissals, 1 of them rejected in Pontoon._
+
+    - `backup-file-other-browser-restore-step-3-1` (firefox) — _rejected, reason inferred_: The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
+    - `link_sharing_toggle_title` (android) — _model_: Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
+    - `onboarding_term_of_service_line_three_link_text` (android) — _model_: Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
+    - `preference_enhanced_tracking_protection_custom_global_privacy_control` (android) — _model_: Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
+    - `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — _model_: Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
 
 ---
 
@@ -353,21 +366,26 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (11)
+### Dismissed by hand (2)
 
-- `Alerts.RestoreTabs.Message.v109` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): "Oprostite." is the standard formal Slovenian apology equivalent to "Sorry (about that)".
-- `CreditCard.Settings.Yes.v122` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The quoted text "Posodobim kartico?" is not in this string; the translation "Posodobi" correctly renders "Update".
-- `DefaultBrowserCard.PeaceOfMind.Description.v108` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): Slovenian Mozilla products consistently render tracker blocking with 'zavračati/zavrniti' (cf. 'Zavračanje' in string 10), so 'zavrne' is the established term.
 - `FxA.FirefoxAccount` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The original capitalizes "Račun", so it likely treats "Firefox Račun" as a fixed product name, and the reviewer probably kept that brand form instead of reordering it into an ordinary noun phrase.
-- `MainMenu.Submenus.Tools.ReaderView.Off.Title.v131` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The quoted text "Prijavi nedelujočo stran …" does not appear in this translation, which has no ellipsis.
-- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
-- `PzSrmZ-2GqvPe` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
-- `PzSrmZ-eHmH1H` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
-- `PzSrmZ-scEmjs` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
-- `PzSrmZ-xRJbBP` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
 - `Settings.Studies.Title.v148` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (9)
+
+- `Alerts.RestoreTabs.Message.v109` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string 2112de14): "Oprostite." is the standard formal Slovenian apology equivalent to "Sorry (about that)".
+- `CreditCard.Settings.Yes.v122` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string ef6a551a): The quoted text "Posodobim kartico?" is not in this string; the translation "Posodobi" correctly renders "Update".
+- `DefaultBrowserCard.PeaceOfMind.Description.v108` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string 85acf892): Slovenian Mozilla products consistently render tracker blocking with 'zavračati/zavrniti' (cf. 'Zavračanje' in string 10), so 'zavrne' is the established term.
+- `MainMenu.Submenus.Tools.ReaderView.Off.Title.v131` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string 48d8d948): The quoted text "Prijavi nedelujočo stran …" does not appear in this translation, which has no ellipsis.
+- `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string d3acda8b): Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
+- `PzSrmZ-2GqvPe` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string 984e0ea4): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-eHmH1H` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string b8f37ed5): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-scEmjs` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string 9076ae3b): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+- `PzSrmZ-xRJbBP` — `sl/firefox-ios.xliff` — auto-suggest (2026-11-03, string a772c74b): The sl tree mostly uses straight double quotes (13 vs 2 curly), so they are the locale's convention.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **Previous run** | 2026-11-08 @ `050d29471acf` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **Previous run** | 2026-11-09 @ `62ca1adeb53c` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,983 |
 
@@ -609,6 +609,12 @@ _Nothing in this category._
 _Nothing dismissed._
 
 _One line each in `locales/ko/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/ko/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

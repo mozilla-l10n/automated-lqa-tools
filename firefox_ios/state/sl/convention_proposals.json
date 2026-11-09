@@ -1,0 +1,56 @@
+{
+ "input": "08d2ccfcd31ace172b7a6127449f23a14e26a4221154d3680b7786881c56f49a",
+ "date": "2026-11-09",
+ "proposals": [
+  {
+   "rule": "Short UI command labels (buttons, toggles, setting switches, link texts, menu commands) conventionally use the 2nd-person singular imperative, e.g. \"Shrani\", \"Omogoči\", \"Posodobi\", \"Obnovi podatke\". This is the standard Slovenian label form and is not a violation of the formal register; do not flag it or suggest the plural (\"Shranite\", \"Obnovite podatke\"). The formal register (vikanje, e.g. \"Prepričajte se, da …\") still applies to full sentences and prose addressed to the user; informal singular forms in such prose remain a defect.",
+   "support": [
+    {
+     "project": "android",
+     "string_id": "link_sharing_toggle_title",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "auto-suggest",
+     "kind": "model",
+     "date": "2026-11-03",
+     "reason": "Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. \"Shrani\", \"Prikaži\"), which is not a register violation."
+    },
+    {
+     "project": "android",
+     "string_id": "onboarding_term_of_service_line_three_link_text",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "auto-suggest",
+     "kind": "model",
+     "date": "2026-11-03",
+     "reason": "Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose."
+    },
+    {
+     "project": "android",
+     "string_id": "preference_enhanced_tracking_protection_custom_global_privacy_control",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "auto-suggest",
+     "kind": "model",
+     "date": "2026-11-03",
+     "reason": "Setting labels in sl use this imperative form (cf. \"Omogoči\"), and the suggested \"sporoči\" is the same 2nd-person singular, so there is no register mismatch."
+    },
+    {
+     "project": "firefox",
+     "string_id": "backup-file-other-browser-restore-step-3-1",
+     "file": "browser/browser/backupSettings.ftl",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reason inferred",
+     "date": "2026-11-03",
+     "reason": "The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so \"Obnovi podatke\" likely matches the actual button rather than the \"Obnovite podatke\" header the finding compared it to."
+    },
+    {
+     "project": "firefox_ios",
+     "string_id": "Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148",
+     "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+     "tag": "auto-suggest",
+     "kind": "model",
+     "date": "2026-11-03",
+     "reason": "Singular imperative is the standard Slovenian button form (cf. \"Posodobi\", \"Dovoli\"); the reviewer's own suggestion keeps \"nadaljuj\"."
+    }
+   ]
+  }
+ ]
+}

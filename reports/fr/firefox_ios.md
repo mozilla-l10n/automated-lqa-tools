@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `62ca1adeb53c` |
-| **Previous run** | 2026-11-08 @ `050d29471acf` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `a6af93c85149` |
+| **Previous run** | 2026-11-09 @ `62ca1adeb53c` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,983 |
 
@@ -238,18 +238,23 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (8)
+### Dismissed by hand (4)
 
-- `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
 - `PasswordGenerator.Description.v132` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `Search.SuggestSectionTitle.v102` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
-- `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
-- `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): In this Summarizer error, 'this one' means the page being summarized, so 'Impossible de résumer cette page pour l’instant' says the same thing.
 - `Summarizer.Error.Unknown.Message.v142` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
-- `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
 - `There was a problem accessing tabs from your other devices. Try again in a few moments.` — `fr/firefox-ios.xliff` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (4)
+
+- `Keyboard.Shortcuts.FindAgain` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 1e54dae2): 'Find Again' (Cmd+G) jumps to the next match, and French Firefox labels this action 'Rechercher le suivant'.
+- `Settings.Home.Option.Wallpaper.CollectionTitle` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 7ac1c1f7): The en-US source is literally "OPENING SCREEN" and "ÉCRAN À L’OUVERTURE" translates it faithfully; any mismatch with the section purpose lies in the source.
+- `Summarizer.Error.RateLimited.Message.v142` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string 0e68199e): In this Summarizer error, 'this one' means the page being summarized, so 'Impossible de résumer cette page pour l’instant' says the same thing.
+- `Summarizer.Footnote.Label.v144` — `fr/firefox-ios.xliff` — auto-suggest (2026-11-02, string cfb40d5c): 'Le résumé peut contenir des erreurs' is a natural and accurate disclaimer for 'Summarization can make errors'.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 
