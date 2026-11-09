@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -84,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 2 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -100,16 +100,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "as you go" is mistranslated as "bei der Gelegenheit auch noch", which changes the meaning.
-    - Current: `und wir blockieren Tracker und bei der Gelegenheit auch noch andere schädliche Elemente`
-    - Source: `Start your private browsing session, and we’ll block trackers and other bad stuff as you go.`
-    - Suggest: `und wir blockieren dabei Tracker und andere schädliche Elemente`
-    - The source says trackers and other bad stuff are blocked as you browse; the German implies blocking other bad stuff is a casual side effect ("bei der Gelegenheit auch noch"), which is not the source meaning.
-- `preference_privacy_block_content_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — "Enabling" is not rendered; the German says "This can cause…" without the condition of activating the setting.
-    - Current: `Dies kann dazu führen, dass manche Seiten sich ungewöhnlich verhalten`
-    - Source: `Enabling may cause some pages to behave unexpectedly`
-    - Suggest: `Das Aktivieren kann dazu führen, dass sich manche Seiten unerwartet verhalten`
-    - The source conditions the warning on enabling the option; the translation drops that.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -133,9 +124,10 @@ _Nothing dismissed._
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (0)
+### Closed by the fixer (2)
 
-_Nothing closed by the fixer._
+- `cfr_for_start_browsing` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-09, string 5f5e3a51): unreliable finding: "bei der Gelegenheit auch noch" is a free, idiomatic rendering of "as you go" that still conveys trackers and other harmful elements being blocked during the session; changing it would be stylistic.
+- `preference_privacy_block_content_summary2` — `mozilla-mobile/focus-android/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-09, string 6f991eb6): unreliable finding: As a summary shown under the setting toggle, "Dies" naturally refers to enabling the setting, so the condition is implied and the warning's meaning is preserved.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/de/dismissed.txt` brings the finding back now._
 

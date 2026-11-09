@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `eb5867992b38` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -80,22 +80,6 @@ The count includes Firefox for Android's strings for this locale, which the same
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
-
-### Proposed conventions — not applied (1)
-
-Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `focus_android/locales/zh-TW/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
-
-- When the approved translation is already accurate, do not raise a finding that only swaps in a synonym or another equally valid wording. zh-TW reviewers have repeatedly rejected such rewrites as "interchangeable" or "not better from original translation". Examples: 報表 and 報告 are both acceptable for a crash "report" button. Different measure words (quantifiers) for permission items are also interchangeable. Rewording a remove-bookmark menu item or a "recommended" label gains nothing either. Still flag the translation when it actually changes or loses meaning, for example when an "older than %S months" condition is rendered as just "%S months ago". Also flag glossary violations and leftover untranslated English.
-    _Behind it: 8 dismissals, 8 of them rejected in Pontoon._
-
-    - `mozac_feature_addons_permissions_browser_settings_description_for_update` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `mozac_feature_addons_permissions_content_description_item` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>
-    - `home_bookmarks_menu_item_remove` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
-    - `ip_protection_location_recommended_label` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>
-    - `protection_panel_banner_protected_no_blocked_trackers_description` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>
-    - `startup_crash_positive` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
-    - `trackers_blocked_empty` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>
-    - `unsubmitted_crash_dialog_positive_button` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
 
 ---
 

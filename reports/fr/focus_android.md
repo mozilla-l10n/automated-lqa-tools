@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
-| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
+| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -86,13 +86,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -102,11 +102,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `content_description_back` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — "Navigate back" is rendered as the label "Précédent" instead of an action description, inconsistent with content_description_forward ("Avancer dans l’historique").
-    - Current: `Précédent`
-    - Source: `Navigate back`
-    - Suggest: `Reculer dans l’historique`
-    - The source is an action content description read by screen readers; the sibling string content_description_forward is translated as "Avancer dans l’historique", so "Précédent" is both inconsistent and not describing the action.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -130,8 +126,9 @@ _Nothing dismissed._
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (2)
+### Closed by the fixer (3)
 
+- `content_description_back` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-09, string 0acb46a5): unreliable finding: "Précédent" is the standard French label for a back button and correctly conveys the action to screen-reader users; aligning it with the sibling string is a stylistic preference, not a mistranslation.
 - `preference_phone_feature_notification` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string d0da86d5): French UI idiomatically names this permission category in the plural ("Notifications"), as in Firefox's French site-permission settings.
 - `preference_switch_autocomplete_topsites` — `mozilla-mobile/focus-android/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string a1573859): In Focus this setting autocompletes from a bundled list of globally popular sites, not the user's history, so "sites les plus populaires" is accurate.
 
