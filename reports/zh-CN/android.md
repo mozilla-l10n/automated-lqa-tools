@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,521 |
 
@@ -34,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_theme_selection_dark_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Dark" rendered as "深邃" instead of the standard Firefox term "深色".
-    - Current: `深邃`
-    - Suggest: `深色`
-    - Firefox zh-CN consistently uses 深色/浅色 for dark/light theme options; "深邃" (profound) is not the established term.
-- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — Theme option "Light" rendered as "明亮" instead of the standard Firefox term "浅色".
-    - Current: `明亮`
-    - Suggest: `浅色`
-    - Firefox zh-CN consistently uses 浅色 for the light theme; "明亮" is inconsistent with the paired dark option and product terminology.
+_Nothing retired._
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The masculine "no nosso" does not agree with the feminine link text "Informação de privacidade" that replaces %1$s.
-    - Current: `Saiba mais no nosso %1$s.`
-    - Suggest: `Saiba mais na nossa %1$s.`
-    - %1$s is replaced by onboarding_term_of_service_line_two_link_text, "Informação de privacidade", which is feminine. The parallel string onboarding_redesign_tou_body_two correctly uses "na nossa".
+_Nothing retired._
 
 ---
 

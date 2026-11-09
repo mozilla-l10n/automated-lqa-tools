@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,366 |
 
@@ -34,16 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — Brand name Firefox transliterated into Arabic script although the comment says it is intentionally hardcoded.
-    - Current: `فايرفوكس`
-    - Suggest: `Firefox`
-    - Developer comment: 'Firefox' is intentionally hardcoded; brand names must stay untranslated and all other strings keep 'Firefox' in Latin script.
-- `nova_onboarding_theme_selection_light_label` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — "Light" theme option is translated as "إضاءة" (lighting/illumination) instead of the light-theme adjective.
-    - Current: `إضاءة`
-    - Suggest: `فاتحة`
-    - The option is the light theme, the opposite of "داكنة" (dark). "إضاءة" is a noun meaning lighting, so the two options don't match.
+_Nothing retired._
 
 ---
 

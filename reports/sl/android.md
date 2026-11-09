@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,542 |
+| **Strings reviewed this run** | 0 of 2,542 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Trackers blocked" rendered as "Zavrnjeni sledilci" instead of the consistent "blokirani" used in neighbouring protection-panel strings.
-    - Current: `Zavrnjeni sledilci: %d`
-    - Suggest: `Blokirani sledilci: %d`
-    - Other strings on the same panel translate "blocked" as "blokiran" (e.g. "Sledilci niso blokirani", "je bil blokiran %1$d sledilec"); "zavrnjeni" (rejected) is inconsistent terminology on the same surface.
+_Nothing retired._
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,600 |
+| **Strings reviewed this run** | 1 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,20 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (3)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_add_search_widget_button` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "widget" is translated as "modul" instead of the established Hungarian term "widget".
-    - Current: `Firefox modul hozzáadása`
-    - Suggest: `Firefox widget hozzáadása`
-    - The Android home-screen "widget" is rendered "widget" in Hungarian Firefox/Android UI; "modul" means module and is misleading.
-- `onboarding_term_of_service_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Superfluous comma between the adverbial phrase and the subject.
-    - Current: `A böngésző fejlesztése érdekében, a Firefox`
-    - Suggest: `A böngésző fejlesztése érdekében a Firefox`
-    - Hungarian punctuation does not place a comma after a fronted adverbial phrase like this; the source has a comma only because of English usage after an introductory phrase.
-- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Trackers" is rendered as "követők" here while the surrounding protection panel strings use "nyomkövetők".
-    - Current: `Blokkolt követők: %d`
-    - Suggest: `Blokkolt nyomkövetők: %d`
-    - The same source term "trackers" is translated "nyomkövető" in protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked; "követők" (followers) is inconsistent and misleading on the same surface.
+_Nothing retired._
 
 ---
 
@@ -56,8 +45,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,600 |
-| Missing strings | 1 |
+| Strings | 2,601 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -74,11 +63,7 @@ _Nothing to re-read._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 

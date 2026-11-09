@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,579 |
+| **Strings reviewed this run** | 11 of 2,590 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,579 |
-| Missing strings | 22 |
+| Strings | 2,590 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**22 strings** are not translated yet, concentrated in:
+**11 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — 22
+- `mozilla-mobile/fenix/app/src/main/res/values-el/strings.xml` — 11
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -77,7 +77,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 45 | **guillemet** |
+| quotes | `guillemet` 46 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 

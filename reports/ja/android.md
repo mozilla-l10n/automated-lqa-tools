@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,576 |
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `protection_panel_num_trackers_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — "Trackers" is translated as 追跡 here while other strings in the same panel use トラッカー.
-    - Current: `ブロックされた追跡: %d`
-    - Suggest: `ブロックしたトラッカー: %d`
-    - protection_panel_banner_protected_blocked_trackers_description and protection_panel_etp_disabled_no_trackers_blocked render "trackers" as トラッカー; 追跡 means "tracking" (the act), not the trackers themselves.
+_Nothing retired._
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `tab_tray_close_tabs_banner_positive_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "View options" (view the settings/options) is translated as "Beeldopties" (display options).
-    - Current: `Beeldopties`
-    - Source: `View options`
-    - Suggest: `Opties bekijken`
-    - Per the developer comment the button goes to Settings for auto close tabs; "View" is a verb here, not "display/beeld".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
