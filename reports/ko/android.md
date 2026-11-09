@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — The deletion prompt calls the tab collection a "file" (파일), which the source never says.
-    - Current: `%1$s 파일을 삭제하시겠습니까?`
-    - Suggest: `%1$s 컬렉션을 삭제하시겠습니까?`
-    - The developer comment says %1$s is the collection name, and the source simply asks "Are you sure you want to delete %1$s?". A tab collection is not a file, so adding 파일 misdescribes what the user is about to delete.
+_Nothing retired._
 
 ---
 

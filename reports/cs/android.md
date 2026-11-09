@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,581 |
+| **Strings reviewed this run** | 0 of 2,581 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,12 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_theme_selection_automatic_label` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Gender of the theme option label is inconsistent with the sibling options ("Tmavý", "Světlý").
-    - Current: `Automatická`
-    - Suggest: `Automatický`
-    - The three theme options must agree with the same noun; dark/light use masculine (vzhled), so "Automatická" (feminine) does not agree.
+_Nothing retired._
 
 ---
 

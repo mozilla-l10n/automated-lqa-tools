@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 2,563 |
+| **Strings reviewed this run** | 36 of 2,599 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for id: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `wrex_widget_match_half_time` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Paruh waktu" means "part-time" in Indonesian, not the half-time break in a match.
+    - Current: `Paruh waktu`
+    - Source: `Half-time`
+    - Suggest: `Turun minum`
+    - The source and comment refer to the break between halves of a soccer match. In Indonesian, "paruh waktu" is the standard term for part-time work. The football term is "turun minum" (or "jeda babak").
+- `preferences_enable_sync_title` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "device" is rendered as "peranti" here but as "perangkat" in the summaries on the same Sync preference.
+    - Current: `Sinkronkan peranti ini`
+    - Source: `Sync this device`
+    - Suggest: `Sinkronkan perangkat ini`
+    - The summaries shown under this toggle (preferences_enable_sync_summary_sync_enabled) use "perangkat" for device, so the same term varies on the same preference.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,16 +43,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (2)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_toolbar_selection_bottom_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Bottom" for toolbar position is translated as "Dasar" (basic/base) instead of "Bawah".
-    - Current: `Dasar`
-    - Suggest: `Bawah`
-    - The option refers to placing the address bar at the bottom of the screen; Indonesian uses "Bawah". "Dasar" reads as "basic/foundation" and conflicts with "baku" usage elsewhere.
-- `nova_onboarding_toolbar_selection_top_label` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Top" for toolbar position is translated as "Puncak" (summit/peak) instead of "Atas".
-    - Current: `Puncak`
-    - Suggest: `Atas`
-    - The option refers to placing the address bar at the top of the screen; Indonesian UI uses "Atas". "Puncak" means peak/summit and is wrong here.
+_Nothing retired._
 
 ---
 
@@ -52,8 +54,8 @@ _Nothing to re-read._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,563 |
-| Missing strings | 38 |
+| Strings | 2,599 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -70,9 +72,9 @@ _Nothing to re-read._
 
 ### Completeness
 
-**38 strings** are not translated yet, concentrated in:
+**2 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 38
+- `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -96,14 +98,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (149)
+## 3. Open findings (151)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 85 |
-| 3 | Degraded language (grammar, spelling, terminology) | 60 |
+| 2 | Wrong content (says something other than the English) | 86 |
+| 3 | Degraded language (grammar, spelling, terminology) | 61 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -412,7 +414,7 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- _…and 27 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -659,6 +661,11 @@ _Nothing in this category._
     - Source: `Sync`
     - Suggest: `Sinkronisasi`
     - The comment says Sync is short for "Synchronization", i.e. a noun heading a preference category, not a command to synchronize.
+- `preferences_enable_sync_title` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "device" is rendered as "peranti" here but as "perangkat" in the summaries on the same Sync preference.
+    - Current: `Sinkronkan peranti ini`
+    - Source: `Sync this device`
+    - Suggest: `Sinkronkan perangkat ini`
+    - The summaries shown under this toggle (preferences_enable_sync_summary_sync_enabled) use "perangkat" for device, so the same term varies on the same preference.
 - `preferences_passwords_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Exceptions" is rendered "Kekecualian" here but "pengecualian" in the related remove-all string on the same screen.
     - Current: `Kekecualian`
     - Source: `Exceptions`

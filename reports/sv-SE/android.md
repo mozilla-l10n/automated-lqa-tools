@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-08 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `c1a76afc1b60` |
-| **Previous run** | 2026-11-05 @ `66b4c732bf9d` |
+| **Generated** | 2026-11-09 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
+| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 2,601 |
+| **Strings reviewed this run** | 0 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,21 +18,13 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `wrex_widget_match_extra_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "ET" (extra time) is translated as "Tilläggstid", which means stoppage time, not extra time.
-    - Current: `Tilläggstid`
-    - Source: `ET`
-    - Suggest: `Förlängning`
-    - The developer comment says this label is shown during extra time. In Swedish football, extra time is "förlängning" and "tilläggstid" is stoppage (added) time, so the label shows the wrong match status.
+_No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `wrex_widget_error_load_failed_title` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Match info" (sports match) is rendered as "matchningsinformation" (matching information).
-    - Current: `matchningsinformation`
-    - Source: `Can’t show match info right now`
-    - Suggest: `matchinformation`
-    - The source and comment refer to a sports match. "Matchning" means matching/pairing, so the Swedish word names the wrong thing.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -42,28 +34,9 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (5)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `nova_onboarding_add_search_widget_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Split compound: "Firefox widget" should be hyphenated as a compound.
-    - Current: `Lägg till Firefox widget`
-    - Suggest: `Lägg till Firefox-widget`
-    - Swedish compounds with a proper name need a hyphen; writing it as two words is a spelling error.
-- `nova_onboarding_add_search_widget_subtitle` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The clause 'känn att Firefox automatiska skydd dig' has no verb, so the sentence is ungrammatical and doesn't render 'have your back'.
-    - Current: `känn att Firefox automatiska skydd dig`
-    - Suggest: `vet att Firefox automatiska skydd har din rygg`
-    - The source says Firefox's automatic protections 'have your back'. The Swedish leaves out the verb, so the sentence doesn't parse and that meaning is lost.
-- `nova_onboarding_theme_selection_automatic_label` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The theme option 'Automatisk' uses the common-gender form, while its sibling options 'Mörkt' and 'Ljust' use the neuter form that agrees with 'tema'.
-    - Current: `Automatisk`
-    - Suggest: `Automatiskt`
-    - All three labels describe a theme ('tema', a neuter noun). The dark and light options are neuter, so the automatic option should be 'Automatiskt' to agree with them.
-- `onboarding_term_of_service_line_two_2` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Plural possessive "våra" does not agree with the singular common-gender link text "Sekretesspolicy".
-    - Current: `Läs mer i våra %1$s.`
-    - Suggest: `Läs mer i vår %1$s.`
-    - The placeholder is replaced by "Sekretesspolicy" (singular, common gender), so the possessive must be "vår"; "våra" is plural and ungrammatical here.
-- `tab_collection_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The preposition "på" is missing from "säker att"; standard Swedish is "säker på att".
-    - Current: `Är du säker att du vill`
-    - Suggest: `Är du säker på att du vill`
-    - In standard Swedish, the adjective "säker" (sure) takes the preposition "på" before an att-clause. Without it, the confirmation dialog reads as colloquial or ungrammatical.
+_Nothing retired._
 
 ---
 
