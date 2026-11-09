@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,106 |
+| **Strings reviewed this run** | 5 of 17,106 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,33 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (5)
 
-_Nothing was fixed._
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro`
+    - Source: `The id member did not resolve to a valid URL.`
+    - Suggest: `Il membro id`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
+    - Current: `L’id del membro deve`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `Il membro id deve`
+    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "Repeated purpose(s)" is rendered as "more than one purpose".
+    - Current: `include più di uno scopo (“purpose”)`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `include scopi (“purpose”) ripetuti`
+    - The warning is about duplicated purpose values. Having more than one purpose is valid, so the Italian describes the wrong problem.
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL deve`
+    - Source: `The scope URL must be same origin as document.`
+    - Suggest: `L’URL dell’ambito deve`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL.
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
+    - Current: `L’ambito dell’URL`
+    - Source: `The scope URL is invalid.`
+    - Suggest: `L’URL dell’ambito`
+    - The en-US means the URL given for the scope. The Italian says the scope of a URL, which reverses the relationship.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -86,8 +110,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 977, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1789, `straight` 6 | **typographic** |
+| quotes | `curly-double` 979, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1787, `straight` 6 | **typographic** |
 | ellipsis | `char` 419 | **char** |
 | dash | `em` 53, `en` 17 | **em** |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
@@ -101,13 +125,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (5)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -117,31 +141,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
-    - Current: `L’id del membro`
-    - Source: `The id member did not resolve to a valid URL.`
-    - Suggest: `Il membro id`
-    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — "The id member" is rendered as "the member's id".
-    - Current: `L’id del membro deve`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `Il membro id deve`
-    - The en-US means the manifest member called "id". "L’id del membro" means the id of a member.
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — "Repeated purpose(s)" is rendered as "more than one purpose".
-    - Current: `include più di uno scopo (“purpose”)`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `include scopi (“purpose”) ripetuti`
-    - The warning is about duplicated purpose values. Having more than one purpose is valid, so the Italian describes the wrong problem.
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
-    - Current: `L’ambito dell’URL deve`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `L’URL dell’ambito deve`
-    - The en-US means the URL given for the scope. The Italian says the scope of a URL.
-- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" is rendered as "the URL's scope".
-    - Current: `L’ambito dell’URL`
-    - Source: `The scope URL is invalid.`
-    - Suggest: `L’URL dell’ambito`
-    - The en-US means the URL given for the scope. The Italian says the scope of a URL, which reverses the relationship.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -173,6 +173,12 @@ _Nothing in this category._
 
 _One line each in `locales/it/dismissed.txt`. Delete the line and the finding returns._
 
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/it/dismissed.txt` brings the finding back now._
+
 ### Suppressed as false positives (2)
 
 - **`it-crittare`** (1) — `crittare` and its forms (`critta`, `crittato`) are the correct Italian verb for "to encrypt" — not a typo for `criptare`. Confirmed by the maintainer. Scoped to spelling findings so a mistranslation in the same string still reports.
@@ -188,8 +194,13 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (74)
+### Fixed to date (79)
 
+- `dom-manifest-id-is-invalid` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — fixed 2026-11-09
 - `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-10-30
 - `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — fixed 2026-10-30
 - `taskbar-tabs-social-callout-subtitle` — `browser/browser/featureCallout.ftl` — fixed 2026-10-30
@@ -225,8 +236,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `newtab-widget-section-minimize` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-26
 - `newtab-widget-timer-start-aria` — `browser/browser/newtab/newtab.ftl` — fixed 2026-07-26
 - `mr2022-onboarding-privacy-segmentation-image-alt` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-26
-- `onboarding-infrequent-import-primary-button` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-07-26
-- `select-bookmark-desc` — `browser/browser/preferences/selectBookmark.ftl` — fixed 2026-07-26
-- `protections-panel-etp-on-header` — `browser/browser/protectionsPanel.ftl` — fixed 2026-07-26
-- `recently-closed-window-panel-tooltip` — `browser/browser/recentlyClosed.ftl` — fixed 2026-07-26
-- `add-engine-no-url` — `browser/browser/search.ftl` — fixed 2026-07-26

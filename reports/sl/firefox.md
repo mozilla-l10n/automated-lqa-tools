@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 16,012 |
+| **Strings reviewed this run** | 0 of 16,012 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -269,18 +269,23 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (8)
+### Dismissed by hand (5)
 
 - `appmenu-fxa-sign-in-promo-heading2` — `browser/browser/appmenu.ftl` — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je "Obnovi podatke". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>
 - `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
-- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — auto-suggest (2026-11-03): The sl tree uses straight double quotes (259) and curly double quotes (268) about equally, so straight quotes are an accepted convention.
 - `onboarding-focused-tabs-subtitle` — `browser/browser/newtab/onboarding.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Ni potrebe po spreminjanju, pravilno je oboje.</p>
 - `onboarding-genai-sidebar-title` — `browser/browser/newtab/onboarding.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The finding itself says both "preskusiti" and "preizkusiti" are valid and marks it low priority, so the reviewer probably saw a purely stylistic change that wasn't needed.
-- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov), so the forms are correct.
-- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov); the mute string uses accusative, hence differs.
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (3)
+
+- `newtab-recent-searches-row-remove` — `browser/browser/newtab/newtab.ftl` — auto-suggest (2026-11-03, string 2aea1636): The sl tree uses straight double quotes (259) and curly double quotes (268) about equally, so straight quotes are an accepted convention.
+- `tabbrowser-unmute-tab-audio-background-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03, string 878a0d6f): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov), so the forms are correct.
+- `tabbrowser-unmute-tab-audio-tooltip` — `browser/browser/tabbrowser.ftl` — auto-suggest (2026-11-03, string 6adb9ae8): After "glasnost" the noun is in genitive, and genitive dual and plural of zavihek are both "zavihkov" (dveh/treh zavihkov); the mute string uses accusative, hence differs.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (2)
 

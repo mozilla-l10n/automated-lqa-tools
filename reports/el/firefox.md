@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 16,805 |
+| **Strings reviewed this run** | 27 of 16,831 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective describing tabs) is translated as the action "Copying tabs".
+    - Current: `Αντιγραφή καρτελών`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Διπλότυπες καρτέλες`
+    - The developer comment says this item, under "Close Multiple", closes all duplicates of the selected tab. «Αντιγραφή καρτελών» means "copying/duplicating tabs", which is the opposite kind of action.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,805 |
-| Missing strings | 70 |
+| Strings | 16,831 |
+| Missing strings | 44 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +67,20 @@ _Nothing retired._
 
 ### Completeness
 
-**70 strings** are not translated yet, concentrated in:
+**44 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 21
-- `browser/browser/tabContextMenu.ftl` — 10
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 8
+- `browser/browser/newtab/onboarding.ftl` — 20
 - `toolkit/toolkit/downloads/downloadUI.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/tabbrowser.ftl` — 3
-- `browser/browser/newtab/newtab.ftl` — 3
+- `browser/browser/tabContextMenu.ftl` — 4
 - `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/genai.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
 - `dom/chrome/security/security.properties` — 2
-- `browser/browser/appExtensionFields.ftl` — 1
 - `browser/browser/contextual-manager.ftl` — 1
+- `browser/browser/customkeys.ftl` — 1
+- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
+- `toolkit/toolkit/about/aboutGlean.ftl` — 1
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 1
+- `dom/dom/manifest.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -88,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `guillemet` 1016, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
-| ellipsis | `char` 399, `ascii` 2 | **char** |
+| ellipsis | `char` 400, `ascii` 2 | **char** |
 | dash | `em` 65, `en` 2 | **em** |
 | nbsp | `total` 15, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -100,13 +104,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (219)
+## 3. Open findings (220)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 142 |
-| 2 | Wrong content (says something other than the English) | 68 |
+| 2 | Wrong content (says something other than the English) | 69 |
 | 3 | Degraded language (grammar, spelling, terminology) | 7 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -425,6 +429,11 @@ _Nothing reported._
     - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
     - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
     - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective describing tabs) is translated as the action "Copying tabs".
+    - Current: `Αντιγραφή καρτελών`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Διπλότυπες καρτέλες`
+    - The developer comment says this item, under "Close Multiple", closes all duplicates of the selected tab. «Αντιγραφή καρτελών» means "copying/duplicating tabs", which is the opposite kind of action.
 - `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — "Would block" is translated as a future ("will block") instead of a conditional.
     - Current: `θα αποκλείσουν`
     - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
@@ -957,7 +966,7 @@ _Nothing reported._
 - `about-logins-menu-menuitem-export-logins2` — `browser/browser/aboutLogins.ftl` — `about-logins-menu-menuitem-export-logins2` uses three dots where this locale uses …
     - Current: `Εξαγωγή κωδικών πρόσβασης...`
     - Source: `Export Passwords…`
-    - The tree uses … 399 times against 2 ASCII runs.
+    - The tree uses … 400 times against 2 ASCII runs.
 - `bar-tooltip-social` — `browser/browser/protections.ftl` — The plural variant of the aria-label is missing the opening parenthesis before the percentage.
     - Current: `ιχνηλάτες κοινωνικών δικτύων { $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } social media tracker ({ $percentage }%) [other] { $count } social media trackers ({ $percentage }%) title: Social Media Trackers`
@@ -1036,7 +1045,7 @@ _Nothing reported._
 - `unknowncontenttype-other` — `toolkit/toolkit/global/unknownContentType.ftl` — `unknowncontenttype-other` uses three dots where this locale uses …
     - Current: `Άλλο...`
     - Source: `label: Other…`
-    - The tree uses … 399 times against 2 ASCII runs.
+    - The tree uses … 400 times against 2 ASCII runs.
 
 ---
 
@@ -1047,6 +1056,12 @@ _Nothing reported._
 _Nothing dismissed._
 
 _One line each in `locales/el/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/el/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

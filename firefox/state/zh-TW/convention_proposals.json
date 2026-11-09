@@ -1,0 +1,65 @@
+{
+ "input": "6806f81cfa799003ad3476750898c52a0e8b98171a17467b05574d35172f0dc5",
+ "date": "2026-11-09",
+ "proposals": [
+  {
+   "rule": "Do not flag an approved translation just because it uses one of several interchangeable Chinese word choices, such as an equally valid synonym or measure word. If the existing wording is accurate and natural, swapping in an alternative is not a fix. For example, 報表 and 報告 are interchangeable for \"report\" in crash-report buttons, and different measure words are interchangeable for permission items. A finding is still valid if the wording changes or drops meaning, leaves English untranslated, or departs from a glossary term.",
+   "support": [
+    {
+     "project": "android",
+     "string_id": "mozac_feature_addons_permissions_browser_settings_description_for_update",
+     "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>"
+    },
+    {
+     "project": "android",
+     "string_id": "mozac_feature_addons_permissions_content_description_item",
+     "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>"
+    },
+    {
+     "project": "android",
+     "string_id": "home_bookmarks_menu_item_remove",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>"
+    },
+    {
+     "project": "android",
+     "string_id": "ip_protection_location_recommended_label",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>"
+    },
+    {
+     "project": "android",
+     "string_id": "startup_crash_positive",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>"
+    },
+    {
+     "project": "android",
+     "string_id": "unsubmitted_crash_dialog_positive_button",
+     "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+     "tag": "pontoon-rejected",
+     "kind": "rejected, reviewer's comment",
+     "date": "2026-11-04",
+     "reason": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>"
+    }
+   ]
+  }
+ ]
+}

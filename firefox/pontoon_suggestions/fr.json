@@ -84,9 +84,13 @@
    "source": "Running",
    "original": "Exécution",
    "text": "En cours d’exécution",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-09",
+   "comment": "",
+   "pontoon_pk": 12373302,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox/devtools/client/aboutdebugging.ftl/?string=196785",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-02",

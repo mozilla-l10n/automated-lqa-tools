@@ -892,13 +892,13 @@
    "source": "You won’t see this menu when you select text. Visit Settings <span data-l10n-name=\"chevron\"></span> Tabs and browsing to show it again.",
    "original": "Jo sjogge dit menu as jo tekst selektearje. Besykje Ynstellingen <span data-l10n-name=\"chevron\"></span> en blêdzje om de side opnij te toanen.",
    "text": "Jo sjogge dit menu net as jo tekst selektearje. Besykje Ynstellingen <span data-l10n-name=\"chevron\"></span> en blêdzje om de side opnij te toanen.",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12388561,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/genai.ftl/?string=343484",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -1823,13 +1823,13 @@
    "source": "Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.",
    "original": "De standertwearde ynstelle foar it tastean dat { -brand-short-name } oanbiede mei bewarre oanmeldingen en wachtwurden te ûnthâlden ôftwingje. Sawol de wearde true as false wurdt akseptearre.",
    "text": "De standertwearde ynstelle foar it tastean dat { -brand-short-name } oanbiede mei bewarre oanmeldingen en wachtwurden te ûnthâlden. Sawol de wearde true as false wurdt akseptearre.",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12388570,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/policies/policies-descriptions.ftl/?string=201986",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -4348,13 +4348,13 @@
    "source": "This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.",
    "original": "Dit kin barre wykst in lange navigaasjesesje, of as jo bestjoeringssysteem { -brand-short-name } bywurket. Opnij starte hâldt { -brand-short-name } feilich en normaal.",
    "text": "Dit kin barre wylst in lange navigaasjesesje, of as jo bestjoeringssysteem { -brand-short-name } bywurket. Opnij starte hâldt { -brand-short-name } feilich en normaal.",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12391528,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/aboutRestartRequired.ftl/?string=340819",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-06",
@@ -6280,13 +6280,13 @@
    "source": "description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking trackers automatically so you’re in control of your digital trail.\nlabel: Enhanced Tracking Protection",
    "original": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
    "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12391598,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330911",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-06",
@@ -8562,13 +8562,13 @@
    "source": "Issuer’s Certificate Revocation List has an unknown version number.",
    "original": "Sertifikaateerroppingslist fan útjouwer hat in ûnjildich ferzjenûmer.",
    "text": "Sertifikaatwerroppingslist fan útjouwer hat in ûnjildich ferzjenûmer.",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12391684,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261879",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-06",
@@ -9162,13 +9162,13 @@
    "source": "A security and stability update for { -brand-short-name } has been\ndownloaded and is ready to be installed.",
    "original": "In feilichheids- en stabliliteitsfernijing foar { -brand-short-name } is krekt downloaden\nen is ree om ynstallearre te wurden.",
    "text": "In feilichheids- en stabiliteitsfernijing foar { -brand-short-name } is krekt downloaden\nen is ree om ynstallearre te wurden.",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-09",
    "comment": "",
    "pontoon_pk": 12391693,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/updates/elevation.ftl/?string=209516",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   }
  ]
 }

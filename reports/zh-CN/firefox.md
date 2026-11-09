@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 16,445 |
+| **Strings reviewed this run** | 70 of 16,505 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,445 |
-| Missing strings | 430 |
+| Strings | 16,505 |
+| Missing strings | 370 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +63,20 @@ _Nothing retired._
 
 ### Completeness
 
-**430 strings** are not translated yet, concentrated in:
+**370 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
 - `browser/browser/newtab/newtab.ftl` — 49
 - `browser/browser/newtab/onboarding.ftl` — 45
 - `browser/browser/preferences/preferences.ftl` — 38
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
 - `dom/chrome/dom/dom.properties` — 19
 - `devtools/client/toolbox-options.ftl` — 18
 - `browser/browser/autoTabGrouping.ftl` — 15
-- `browser/browser/tabContextMenu.ftl` — 14
 - `toolkit/toolkit/neterror/netError.ftl` — 13
-- `browser/browser/appExtensionFields.ftl` — 11
 - `browser/browser/policies/policies-descriptions.ftl` — 11
+- `browser/browser/contextual-manager.ftl` — 8
+- `dom/chrome/security/security.properties` — 8
+- `browser/browser/browser.ftl` — 7
 
 **Files absent from the locale:**
 
@@ -90,12 +90,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 889, `straight-double` 46, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 893, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 380, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
-| fullwidth | `punctuation` 8555 | **punctuation** |
-| register | `informal` 24, `formal` 1543 | **formal** |
+| fullwidth | `punctuation` 8569 | **punctuation** |
+| register | `informal` 24, `formal` 1545 | **formal** |
 
 ---
 
@@ -436,6 +436,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 _Nothing dismissed._
 
 _One line each in `locales/zh-CN/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/zh-CN/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 30 of 16,843 |
+| **Strings reviewed this run** | 1 of 16,843 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,7 +18,11 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (0)
+
+_No new findings._
+
+### ✅ Fixed since the last run (2)
 
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` references ['thirds'], which en-US does not pass
     - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
@@ -28,20 +32,6 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
     - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
     - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
     - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (tabs that are duplicates, under "Close Multiple") is rendered as the verb phrase "duplicate the tabs".
-    - Current: `Sekmeleri çoğalt`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Yinelenen sekmeler`
-    - Per the developer comment this item closes all duplicates of the selected tab; "Sekmeleri çoğalt" means "Duplicate (copy) the tabs", the opposite action.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier "Connection-Allowlist" is partially translated as "Bağlantı-Allowlist".
-    - Current: `Bağlantı-Allowlist:`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The localization note says not to translate Connection-Allowlist; the sibling string keeps it in English.
-
-### ✅ Fixed since the last run (0)
-
-_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -69,7 +59,7 @@ _Nothing retired._
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 2 |
+| Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 6 |
@@ -114,13 +104,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (172)
+## 3. Open findings (170)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 61 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
+| 2 | Wrong content (says something other than the English) | 60 |
 | 3 | Degraded language (grammar, spelling, terminology) | 70 |
 | 4 | Cosmetic (typography, spacing) | 37 |
 
@@ -133,14 +123,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `autofill-address-name` — `browser/browser/preferences/formAutofill.ftl` — "Ad", identical to autofill-address-given-name (First Name) → "Ad soyad".
     - Source: `Name`
     - Suggest: `"Ad soyad".`
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` references ['thirds'], which en-US does not pass
-    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` drops ['purposes'], which en-US passes
-    - Current: `{$count ->} [one] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen bir amaç içeriyor: { $thirds }. [other] { $index } numaralı indeksteki { $memberName } öğesi desteklenmeyen amaçlar içeriyor: { $thir…`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -749,6 +731,12 @@ _Nothing dismissed._
 
 _One line each in `locales/tr/dismissed.txt`. Delete the line and the finding returns._
 
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/tr/dismissed.txt` brings the finding back now._
+
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
@@ -759,8 +747,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (193)
+### Fixed to date (195)
 
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-09
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-09
 - `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
 - `delete-ssl-override-confirm` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
 - `delete-ssl-override-impact` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
@@ -799,5 +789,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `space-alert-under-5gb-message2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `site-data-settings-description` — `browser/browser/preferences/siteDataSettings.ftl` — fixed 2026-08-24
 - `profiles-cyan-theme-title` — `browser/browser/profiles.ftl` — fixed 2026-08-24
-- `monitor-partial-breaches-motivation-description` — `browser/browser/protections.ftl` — fixed 2026-08-24
-- `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — fixed 2026-08-24

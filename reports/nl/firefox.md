@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,875 |
+| **Strings reviewed this run** | 5 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
+    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
+    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
+    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
+    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
+    - Current: `en blader om de pagina opnieuw te tonen.`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
+    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -86,14 +95,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (342)
+## 3. Open findings (340)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 9 |
-| 2 | Wrong content (says something other than the English) | 119 |
-| 3 | Degraded language (grammar, spelling, terminology) | 195 |
+| 2 | Wrong content (says something other than the English) | 118 |
+| 3 | Degraded language (grammar, spelling, terminology) | 194 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
 ### A. Functional, markup, variables & plurals
@@ -139,11 +148,6 @@ _Nothing reported._
     - Current: `{ -brand-short-name }`
     - Source: `Protect the { -brand-short-name } you’ve made yours.`
     - Suggest: `"…die u zich eigen hebt gemaakt."`
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings path 'Tabs and browsing' is mistranslated as 'en blader', and 'show it again' (the menu) became 'show the page again'.
-    - Current: `en blader om de pagina opnieuw te tonen.`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `Tabbladen en navigeren om het opnieuw te tonen.`
-    - The en-US points to the Settings › Tabs and browsing section and says the menu can be shown again. The Dutch turns the section name into the verb 'and browse' and talks about the page instead of the menu, so the user is sent down the wrong path.
 - `genai-prompts-summarize` — `browser/browser/genai.ftl` — "concise" became "descriptive", nearly reversing the instruction. Current: "…in exacte en beschrijvende woorden." → Suggest: "…in precieze en beknopte woorden."
     - Source: `label: Summarize value: Please summarize the selection using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
     - Suggest: `"…in precieze en beknopte woorden."`
@@ -299,7 +303,9 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- _…and 62 more; see `state/` for the full list._
+- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
+    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
+- _…and 61 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -308,11 +314,6 @@ _Nothing reported._
     - Source: `If one profile or instance updates while another is still open, the open one can be left on an older version. Restarting keeps everything on the same version.`
     - Suggest: `kan het geopende exemplaar op een oudere versie blijven staan`
     - The en-US refers to the still-open profile/instance remaining on an older version, not to "the open version" being held on an older version; the Dutch sentence says "the open version ... on an older version", which is confused.
-- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — "keeps { -brand-short-name } secure and working normally" rendered as "houdt { -brand-short-name } veilig en normaal", dropping "working".
-    - Current: `Herstarten houdt { -brand-short-name } veilig en normaal.`
-    - Source: `This can happen during a long browsing session, or when your operating system updates { -brand-short-name }. Restarting keeps { -brand-short-name } secure and working normally.`
-    - Suggest: `Herstarten houdt { -brand-short-name } veilig en zorgt dat het normaal blijft werken.`
-    - The en-US says restarting keeps the browser secure and working normally; "veilig en normaal" loses the sense of functioning correctly and is ungrammatical as a predicate here.
 - `ai-window-learn-from-browsing-activity` — `browser/browser/aiFeatures.ftl` — "in de klassieke en Slimme Vensters" mixes a lone adjective with a plural brand term; en-US "in Classic and Smart Windows". Worth rewording.
     - Source: `label: Learn from browsing in Classic and { -smart-window-brand-name }`
     - Suggest: `.label`
@@ -467,7 +468,12 @@ _Nothing reported._
 - `styleeditor-go-to-line` — `devtools/client/styleeditor.ftl` — imperative among infinitive menu labels. Current: "Spring naar regel…" → Suggest: "Naar regel springen…"
     - Source: `accesskey: J label: Jump to Line…`
     - Suggest: `"Naar regel springen…"`
-- _…and 27 more; see `state/` for the full list._
+- `inactive-css-at-position-try-not-supported` — `devtools/client/tooltips.ftl` — The preposition 'in' is missing before the @position-try rules.
+    - Current: `wordt niet ondersteund <strong>@position-try</strong>-regels`
+    - Source: `<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.`
+    - Suggest: `wordt niet ondersteund in <strong>@position-try</strong>-regels`
+    - The en-US says 'is not supported in @position-try rules'. Without 'in', the Dutch sentence is ungrammatical.
+- _…and 26 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -678,6 +684,12 @@ _Nothing dismissed._
 
 _One line each in `locales/nl/dismissed.txt`. Delete the line and the finding returns._
 
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/nl/dismissed.txt` brings the finding back now._
+
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
@@ -707,8 +719,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (138)
+### Fixed to date (140)
 
+- `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-11-09
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — fixed 2026-11-09
 - `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
 - `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
@@ -747,5 +761,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `main-context-menu-frame-add-bookmark` — `browser/browser/browserContext.ftl` — fixed 2026-08-10
 - `main-context-menu-send-to-mobile-enable-sync2` — `browser/browser/browserContext.ftl` — fixed 2026-08-10
 - `clear-data-for-site-cookies` — `browser/browser/clearDataForSite.ftl` — fixed 2026-08-10
-- `sidebar-callout-survey-neutral` — `browser/browser/featureCallout.ftl` — fixed 2026-08-10
-- `ipprotection-feature-introduction-description-private-browsing` — `browser/browser/ipProtection.ftl` — fixed 2026-08-10
