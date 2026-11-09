@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 70 of 16,505 |
+| **Strings reviewed this run** | 18 of 16,523 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,505 |
-| Missing strings | 370 |
+| Strings | 16,523 |
+| Missing strings | 352 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**370 strings** are not translated yet, concentrated in:
+**352 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
 - `browser/browser/newtab/newtab.ftl` — 49
@@ -73,10 +73,10 @@ _Nothing retired._
 - `devtools/client/toolbox-options.ftl` — 18
 - `browser/browser/autoTabGrouping.ftl` — 15
 - `toolkit/toolkit/neterror/netError.ftl` — 13
-- `browser/browser/policies/policies-descriptions.ftl` — 11
 - `browser/browser/contextual-manager.ftl` — 8
-- `dom/chrome/security/security.properties` — 8
 - `browser/browser/browser.ftl` — 7
+- `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
+- `toolkit/toolkit/about/aboutAddons.ftl` — 6
 
 **Files absent from the locale:**
 
@@ -90,11 +90,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 893, `straight-double` 46, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 903, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
 | ellipsis | `char` 380, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
-| fullwidth | `punctuation` 8569 | **punctuation** |
+| fullwidth | `punctuation` 8598 | **punctuation** |
 | register | `informal` 24, `formal` 1545 | **formal** |
 
 ---

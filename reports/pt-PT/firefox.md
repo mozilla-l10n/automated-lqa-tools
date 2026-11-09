@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `3685bd005e67` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,823 |
+| **Strings reviewed this run** | 52 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (the start of the tab strip) is translated as the verb "Iniciar" instead of the noun "Início".
+    - Current: `Iniciar`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Início`
+    - The developer comment says this is a "Move to" destination: the start of the tab strip. It pairs with "Fim" (End). "Iniciar" means to start or launch something.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective, under Close Multiple) is translated as the verb phrase "Duplicar Separadores" (to duplicate tabs).
+    - Current: `Duplicar Separadores`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Separadores Duplicados`
+    - The developer comment says this item under "Close Multiple" closes duplicate tabs. The translation reads as an action that duplicates tabs.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [other] variant makes the item plural, but $count counts unsupported purposes, not items.
+    - Current: `Os itens de { $memberName } no índice { $index } incluem finalidades não suportadas`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - Suggest: `O item de { $memberName } no índice { $index } inclui finalidades não suportadas`
+    - The en-US says a single item (the one at index $index) includes unsupported purposes. The plural is about the purposes, so 'Os itens… incluem' (the items… include) misdescribes what is happening.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [one] variant uses the plural 'finalidades não suportadas' for a single unsupported purpose.
+    - Current: `inclui finalidades não suportadas`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - Suggest: `inclui uma finalidade não suportada`
+    - The en-US [one] variant reads 'includes an unsupported purpose' (singular), but the translation uses the plural, so the number is wrong.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,823 |
-| Missing strings | 52 |
+| Strings | 16,875 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,19 +82,7 @@ _Nothing retired._
 
 ### Completeness
 
-**52 strings** are not translated yet, concentrated in:
-
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/tabbrowser.ftl` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
-- `dom/dom/manifest.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -83,7 +90,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 569, `curly-single` 114, `straight-double` 40 | **curly-double** |
+| quotes | `curly-double` 570, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
 | ellipsis | `char` 374, `ascii` 28 | **char** |
 | dash | `em` 66, `en` 8 | **em** |
@@ -98,14 +105,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (324)
+## 3. Open findings (328)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
-| 2 | Wrong content (says something other than the English) | 128 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 2 | Wrong content (says something other than the English) | 131 |
+| 3 | Degraded language (grammar, spelling, terminology) | 9 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -432,6 +439,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
     - Suggest: `Separadores abertos`
     - The developer comment says "Open tabs" is a modified noun (tabs that are open). "Abrir separadores" means "to open tabs", an action. The tooltip should read "Separadores abertos dos seus outros dispositivos".
+- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (the start of the tab strip) is translated as the verb "Iniciar" instead of the noun "Início".
+    - Current: `Iniciar`
+    - Source: `accesskey: S label: Start`
+    - Suggest: `Início`
+    - The developer comment says this is a "Move to" destination: the start of the tab strip. It pairs with "Fim" (End). "Iniciar" means to start or launch something.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective, under Close Multiple) is translated as the verb phrase "Duplicar Separadores" (to duplicate tabs).
+    - Current: `Duplicar Separadores`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Separadores Duplicados`
+    - The developer comment says this item under "Close Multiple" closes duplicate tabs. The translation reads as an action that duplicates tabs.
 - `netmonitor.security.usedOcsp` — `devtools/client/netmonitor.properties` — The OCSP acronym is misspelled as OSCSP.
     - Current: `(OSCSP)`
     - Source: `Used Online Certificate Status Protocol (OCSP):`
@@ -482,6 +499,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The id member must have the same origin as the start_url member.`
     - Suggest: `O membro id`
     - The source refers to the manifest member named "id", matching the "start_url" member mentioned later in the same sentence. "O ID do membro" means the member's identifier.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [other] variant makes the item plural, but $count counts unsupported purposes, not items.
+    - Current: `Os itens de { $memberName } no índice { $index } incluem finalidades não suportadas`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - Suggest: `O item de { $memberName } no índice { $index } inclui finalidades não suportadas`
+    - The en-US says a single item (the one at index $index) includes unsupported purposes. The plural is about the purposes, so 'Os itens… incluem' (the items… include) misdescribes what is happening.
 - `CookieForeignNoPartitionedError` — `netwerk/necko.properties` — Cookie attribute name “Partitioned” translated despite the developer comment.
     - Current: `não tem o atributo “Particionado“`
     - Source: `Cookie “%1$S” has been rejected because it is foreign and does not have the “Partitioned“ attribute.`
@@ -785,6 +807,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Ignoring duplicate source %1$S`
     - Suggest: `A ignorar fonte duplicada %1$S`
     - “suplicada” is not a word; the source says “duplicate source”.
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [one] variant uses the plural 'finalidades não suportadas' for a single unsupported purpose.
+    - Current: `inclui finalidades não suportadas`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - Suggest: `inclui uma finalidade não suportada`
+    - The en-US [one] variant reads 'includes an unsupported purpose' (singular), but the translation uses the plural, so the number is wrong.
 - `mediastatus-fallback-title` — `dom/dom/media.ftl` — Missing “a” in the progressive construction.
     - Current: `está reproduzir media`
     - Source: `{ -brand-short-name } is playing media`
@@ -885,12 +912,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Current log modules`
     - Suggest: `Módulos de registo atuais`
     - en-US “Current log modules” qualifies the modules, which are plural; as written it qualifies “registo”.
-- `btp-warning-tracker-purged` — `toolkit/toolkit/global/antiTracking.ftl` — “bounce tracker” is translated despite the developer comment saying not to translate it, and inconsistently with the sibling string.
-    - Current: `um rastreador de rejeições`
-    - Source: `The state of “{ $siteHost }” was recently purged because it was detected as a bounce tracker.`
-    - Suggest: `um bounce tracker`
-    - The comment states: Do not translate "bounce tracker"; btp-warning-tracker-classified in the same file keeps it in English.
-- _…and 1 more; see `state/` for the full list._
+- _…and 2 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

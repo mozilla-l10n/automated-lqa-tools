@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
+| **Previous run** | 2026-11-09 @ `f82b652e600a` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 17,104 |
+| **Strings reviewed this run** | 0 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,15 +22,9 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
-    - Current: `Correspondances`
-    - Source: `Matches`
-    - Suggest: `Matchs`
-    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
-- `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
-    - Source: `Running`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -107,15 +101,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (20)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 17 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 2 | Wrong content (says something other than the English) | 13 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -133,16 +127,6 @@ _Nothing in this category._
     - Source: `{$total ->} [1] Delete [other] Delete all`
     - Suggest: `[one] Supprimer`
     - The en-US deliberately uses “Delete” for one password and “Delete all” for several. The French uses “Delete all” in both cases.
-- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — "Your rule" translated as "Règle personnalisée" ("Custom rule") instead of a possessive referring to the user's rule.
-    - Current: `Règle personnalisée`
-    - Source: `Your rule`
-    - Suggest: `Votre règle`
-    - The source heading is "Your rule"; "Règle personnalisée" drops the possessive and introduces the notion of customization not present in the source.
-- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — "for a fresh, like-new experience" rendered as "pour profiter d’une meilleure navigation" ("for better browsing"), a different claim.
-    - Current: `pour profiter d’une meilleure navigation ?`
-    - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
-    - Suggest: `pour retrouver une expérience comme neuve ?`
-    - The en-US promises a fresh, like-new state after cleanup, not improved browsing performance; the French makes a claim the source does not.
 - `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
     - Current: `Tableau`
     - Source: `Table`
@@ -158,11 +142,6 @@ _Nothing in this category._
     - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
     - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
     - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
-- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — "may see your encrypted traffic" translated as "pourrait accéder à" (could access), altering the claim.
-    - Current: `pourrait accéder à votre trafic chiffré`
-    - Source: `label: An app or service may see your encrypted traffic.`
-    - Suggest: `pourrait voir votre trafic chiffré`
-    - en-US says an app or service may see the traffic; "accéder à" asserts access rather than visibility.
 - `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier Connection-Allowlist was translated as « Connexion-Allowlist ».
     - Current: `Connexion-Allowlist`
     - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
@@ -193,11 +172,6 @@ _Nothing in this category._
     - Source: `{$count ->} [one] { $count } log [other] { $count } logs`
     - Suggest: `[one] { $count } journal [other] { $count } journaux`
     - The en-US counts logs (files), and the surrounding strings render "logs" as "journaux"; "entrées" means log entries, a different unit.
-- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — "Log modules" (verb phrase: enable logging for modules) rendered as a noun phrase "Modules de journalisation".
-    - Current: `Modules de journalisation pour diagnostiquer`
-    - Source: `Log modules to diagnose IP Protection (VPN) issues`
-    - Suggest: `Journaliser les modules permettant de diagnostiquer`
-    - The source is a description of a logging preset instructing which modules to log; "Modules de journalisation" means "logging modules", a different thing.
 - `pdfjs-open-attachments-inline` — `toolkit/toolkit/about/aboutSupport.ftl` — "Inline" mistranslated as "dans les messages", adding a message context absent from the source.
     - Current: `Ouvrir les PDF joints dans les messages`
     - Source: `Open PDF Attachments Inline`
@@ -208,11 +182,6 @@ _Nothing in this category._
     - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
     - Suggest: `mais leur progression pourrait être perdue`
     - The source says progress may be lost, not interrupted. The matching quit message correctly uses "perdue".
-- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — « lien nettoyé à surligner » means a link to be highlighted, not a clean link pointing to the highlighted text.
-    - Current: `Copier le lien nettoyé à surligner`
-    - Source: `accesskey: k label: Copy Clean Link to Highlight`
-    - Suggest: `Copier le lien nettoyé du surlignage`
-    - The developer comment says this creates a link with a text fragment pointing to the current selection, with trackers removed. « à surligner » reads as 'to be highlighted'. It also doesn't match the sibling string « Copier le lien du surlignage ».
 
 ### C. Grammar, agreement & spelling
 
@@ -239,41 +208,17 @@ _Nothing in this category._
     - Source: `Summarize with AI`
     - Suggest: `Résumer avec l’IA`
     - French Firefox menu commands use the infinitive, as the sibling string "Demander à l’IA…" does. The imperative "Résumez" is inconsistent with that.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Nouveautés” but the string it names, `releaseNotes-link`, reads “Notes de version”
-    - Current: `Contrôler la page « Nouveautés » après une mise à jour. Laissez cette règle vide pour désactiver la page après une mise à jour.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Notes de version`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `fonts-default-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
-    - Source: `label: Serif`
-- `fonts-sans-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
-    - Source: `(value): Sans-serif accesskey: n`
-- `fonts-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
-    - Source: `(value): Serif accesskey: S`
-- `serviceworker-worker-status-running` — `devtools/client/application.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
-    - Source: `Running`
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The plural variant uses « fins » for "purposes" while the singular variant and sibling strings use « objectif(s) ».
     - Current: `contient des fins non prises en charge`
     - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
     - Suggest: `possède des objectifs non pris en charge`
     - The same term "purpose" is translated differently within one message and across the manifest strings.
-- `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — about-processes-cpu-almost-idle (.title) — toolkit/toolkit/about/aboutProcesses.ftl:167 — "Temps CPU total" vs "Temps total de CPU" (lines 161/170); align.
-    - Source: `(value): < 0.1% title: Total CPU time: { $total }{ $unit }`
-    - Suggest: `.title`
 
 ### E. Typography, punctuation & spacing
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
     - The tree uses ’ 5194 times against 10 straight.
-- `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
-    - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
-    - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1053 occurrences).
-- `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
-    - Current: `L’évènement « key » n’est pas disponible pour certaines dispositions de clavier : key="%S" modifiers="%S" id="%S"`
-    - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `guillemet` (1053 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
     - The tree uses ’ 5194 times against 10 straight.
@@ -282,16 +227,28 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (3)
 
 - `about-glean-metrics-table-settings-timelines-vertical-line-x-offset` — `toolkit/toolkit/about/aboutGlean.ftl` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `about-networking-ssl-tokens-summary-compression` — `toolkit/toolkit/about/aboutNetworking.ftl` — the message is valid Fluent; the reviewer read the flattened rendering `{$saved ->} [one] …` as if it were the file and reported a stray brace that is not there
+- `text-action-copy-clean-link-to-highlight-2` — `toolkit/toolkit/global/textActions.ftl` — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; likely reason (inferred): The suggestion was the same as the original ("C"), so it changed nothing; the finding is about the wording of the label, not this accesskey value.
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
-### Closed by the fixer (0)
+### Closed by the fixer (12)
 
-_Nothing closed by the fixer._
+- `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — auto-suggest (2026-11-09, string 8360ea4e): unreliable finding: The quotes delimit code-like attribute values (key="%S"), where straight quotes are plausible and guillemets would be odd.
+- `WinConflict2` — `dom/chrome/dom/dom.properties` — auto-suggest (2026-11-09, string b70cb64b): unreliable finding: The quotes delimit code-like attribute values (key="%S"), where straight quotes are plausible and guillemets would be odd.
+- `about-logging-preset-vpn-description` — `toolkit/toolkit/about/aboutLogging.ftl` — auto-suggest (2026-11-09, string fbc154d8): unreliable finding: "Log modules" in a preset description can be read as a noun phrase, so « Modules de journalisation » is plausible.
+- `about-processes-cpu-almost-idle` — `toolkit/toolkit/about/aboutProcesses.ftl` — auto-suggest (2026-11-09, string d97dc52d): unreliable finding: The finding gives no quote or rationale, and the sibling wording it mentions cannot be checked here; « Temps CPU total » is correct as it stands.
+- `fonts-default-serif` — `browser/browser/preferences/fonts.ftl` — auto-suggest (2026-11-09, string bc03c67e): unreliable finding: « Serif » is correct as is; the finding gives no evidence which spelling should prevail.
+- `fonts-sans-serif` — `browser/browser/preferences/fonts.ftl` — auto-suggest (2026-11-09, string c8d1069a): unreliable finding: Both « sérif » and « serif » are accepted French spellings; without seeing the sibling lines it cannot be determined which side is the outlier to align.
+- `fonts-serif` — `browser/browser/preferences/fonts.ftl` — auto-suggest (2026-11-09, string 0ebde28e): unreliable finding: Both « Sérif » and « Serif » are accepted French spellings; which form the file should settle on cannot be confirmed from here.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — auto-suggest (2026-11-09, string f756ccb7): unreliable finding: « Nouveautés » is the usual French name for the post-update page; it is unclear the policy text must match the link label.
+- `refresh-unused-profile-infobar-message` — `browser/browser/newtab/asrouter.ftl` — auto-suggest (2026-11-09, string a0163a27): unreliable finding: « coup de jeune » already conveys the fresh/like-new idea; the rest is acceptable marketing adaptation.
+- `serviceworker-worker-status-running` — `devtools/client/application.ftl` — auto-suggest (2026-11-09, string 5bffb1ab): unreliable finding: « En cours d’exécution » is the correct rendering of Running; any alignment should be done on the other file's terse « Exécution », not here.
+- `site-rules-status-heading` — `browser/browser/ipProtection.ftl` — auto-suggest (2026-11-09, string ebbcc306): unreliable finding: « Règle personnalisée » is a plausible, idiomatic heading for a user-set rule; the change is stylistic.
+- `tls-key-logging-notice-nav` — `browser/browser/preferences/preferences.ftl` — auto-suggest (2026-11-09, string 730bf67e): unreliable finding: « pourrait accéder à » conveys essentially the same possibility as « may see »; the change is stylistic.
 
 _The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
 

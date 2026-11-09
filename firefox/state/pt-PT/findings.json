@@ -3232,6 +3232,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Iniciar",
+  "dismissed_because": "",
+  "fid": "098225fef113",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-09",
+  "impact": 2,
+  "last_seen": "2026-11-09",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this is a \"Move to\" destination: the start of the tab strip. It pairs with \"Fim\" (End). \"Iniciar\" means to start or launch something.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "597df292",
+  "string_id": "move-to-start-alt",
+  "suggest": "Início",
+  "summary": "\"Start\" (the start of the tab strip) is translated as the verb \"Iniciar\" instead of the noun \"Início\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "accesskey",
   "current": "B",
@@ -3273,6 +3297,30 @@
   "string_id": "tab-context-bookmark-tab2",
   "suggest": "",
   "summary": "Access key `B` of `tab-context-bookmark-tab2` is not present in its label",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Duplicar Separadores",
+  "dismissed_because": "",
+  "fid": "1e6f6653bbba",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-09",
+  "impact": 2,
+  "last_seen": "2026-11-09",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this item under \"Close Multiple\" closes duplicate tabs. The translation reads as an action that duplicates tabs.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d08bcb92",
+  "string_id": "tab-context-close-duplicate-tabs-alt",
+  "suggest": "Separadores Duplicados",
+  "summary": "\"Duplicate Tabs\" (an adjective, under Close Multiple) is translated as the verb phrase \"Duplicar Separadores\" (to duplicate tabs).",
   "suppressed_by": ""
  },
  {
@@ -5345,6 +5393,54 @@
   "string_id": "dom-manifest-id-not-same-origin",
   "suggest": "O membro id",
   "summary": "\"The id member\" is rendered as \"the member's ID\" instead of the manifest's id member.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Os itens de { $memberName } no índice { $index } incluem finalidades não suportadas",
+  "dismissed_because": "",
+  "fid": "f606b7965621",
+  "file": "dom/dom/manifest.ftl",
+  "first_seen": "2026-11-09",
+  "impact": 2,
+  "last_seen": "2026-11-09",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US says a single item (the one at index $index) includes unsupported purposes. The plural is about the purposes, so 'Os itens… incluem' (the items… include) misdescribes what is happening.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "409cec8e",
+  "string_id": "dom-manifest-image-unsupported-purposes",
+  "suggest": "O item de { $memberName } no índice { $index } inclui finalidades não suportadas",
+  "summary": "The [other] variant makes the item plural, but $count counts unsupported purposes, not items.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "inclui finalidades não suportadas",
+  "dismissed_because": "",
+  "fid": "408da8642649",
+  "file": "dom/dom/manifest.ftl",
+  "first_seen": "2026-11-09",
+  "impact": 3,
+  "last_seen": "2026-11-09",
+  "locale": "pt-PT",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US [one] variant reads 'includes an unsupported purpose' (singular), but the translation uses the plural, so the number is wrong.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "409cec8e",
+  "string_id": "dom-manifest-image-unsupported-purposes",
+  "suggest": "inclui uma finalidade não suportada",
+  "summary": "The [one] variant uses the plural 'finalidades não suportadas' for a single unsupported purpose.",
   "suppressed_by": ""
  },
  {
