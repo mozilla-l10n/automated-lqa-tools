@@ -623,6 +623,358 @@
    "pontoon_url": "https://pontoon.mozilla.org/de/firefox/toolkit/toolkit/about/pdfFeaturesNotification.ftl/?string=339720",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/aboutRestartRequired.ftl",
+   "string_id": "restart-required-why-now-answer",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/aboutRestartRequired.ftl",
+    "key": [
+     "restart-required-why-now-answer"
+    ]
+   },
+   "fids": [
+    "4ea3b74297bd"
+   ],
+   "findings": [
+    "Brand placeable replaced with hardcoded \"Firefox\" in the first occurrence."
+   ],
+   "source": "This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.",
+   "original": "Dies kann vorkommen, wenn ein anderes Firefox-Profil oder eine andere Instanz von { -brand-short-name } aktualisiert wird oder ein Update nicht bis zum nächsten Neustart warten kann.",
+   "text": "Dies kann vorkommen, wenn ein anderes Profil oder eine andere Instanz von { -brand-short-name } aktualisiert wird oder ein Update nicht bis zum nächsten Neustart warten kann.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "E",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ip-protection-site-rules-button-1",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ip-protection-site-rules-button-1"
+    ]
+   },
+   "fids": [
+    "85223c97f1c5"
+   ],
+   "findings": [
+    "There is a comma before \"oder\", which German doesn't use when \"oder\" joins two noun phrases."
+   ],
+   "source": "description: Set rules for sites that need extra privacy or VPN turned off.\nlabel: Manage VPN rules",
+   "original": "Legen Sie Regeln für Websites fest, die mehr Datenschutz, oder ein deaktiviertes VPN benötigen.",
+   "text": "Legen Sie Regeln für Websites fest, die mehr Datenschutz oder ein deaktiviertes VPN benötigen.",
+   "full_original": ".description = Legen Sie Regeln für Websites fest, die mehr Datenschutz, oder ein deaktiviertes VPN benötigen.\n.label = VPN-Regeln verwalten",
+   "full_text": ".description = Legen Sie Regeln für Websites fest, die mehr Datenschutz oder ein deaktiviertes VPN benötigen.\n.label = VPN-Regeln verwalten",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-PasswordManagerEnabled2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-PasswordManagerEnabled2"
+    ]
+   },
+   "fids": [
+    "d80be3d4a42c"
+   ],
+   "findings": [
+    "The German says using passwords is blocked, but the source means the Passwords page (about:logins) is blocked."
+   ],
+   "source": "Enable or disable saving passwords to the password manager. If disabled, Passwords (about:logins) is also blocked.",
+   "original": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren. Wenn dies deaktiviert ist, wird die Verwendung von Passwörtern (about:logins) ebenfalls blockiert.",
+   "text": "Speichern von Passwörtern im Passwort-Manager aktivieren oder deaktivieren. Wenn dies deaktiviert ist, wird die Seite Passwörter (about:logins) ebenfalls blockiert.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "permissions-allow-app-links",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "permissions-allow-app-links"
+    ]
+   },
+   "fids": [
+    "f3098f1e263e"
+   ],
+   "findings": [
+    "The German drops \"ask\", so it says sites may open app links rather than ask to open them."
+   ],
+   "source": "accesskey: A\nlabel: Allow sites to ask to open app links.",
+   "original": "W",
+   "text": "W",
+   "full_original": ".accesskey = W\n.label = Websites erlauben, App-Links zu öffnen.",
+   "full_text": ".accesskey = W\n.label = Websites erlauben, das Öffnen von App-Links anzufragen.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "search-engine-list",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "search-engine-list"
+    ]
+   },
+   "fids": [
+    "e4aa5b78e8d7"
+   ],
+   "findings": [
+    "\"shortcuts\" (search shortcuts/keywords) is rendered as \"Tastenkombinationen\" (keyboard shortcuts)."
+   ],
+   "source": "aria-label: Search engines and shortcuts",
+   "original": "Suchmaschinen und Tastenkombinationen",
+   "text": "Suchmaschinen und Suchverknüpfungen",
+   "full_original": ".aria-label = Suchmaschinen und Tastenkombinationen",
+   "full_text": ".aria-label = Suchmaschinen und Suchverknüpfungen",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "sync-engine-settings2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "sync-engine-settings2"
+    ]
+   },
+   "fids": [
+    "9a85f19a9e12"
+   ],
+   "findings": [
+    "The compound of brand name and \"Einstellungen\" is missing its hyphen."
+   ],
+   "source": "accesskey: s\nlabel: Settings\ntooltiptext: { -brand-short-name } settings where applicable",
+   "original": "E",
+   "text": "E",
+   "full_original": ".accesskey = E\n.label = Einstellungen\n.tooltiptext = { -brand-short-name } Einstellungen, wo zutreffend",
+   "full_text": ".accesskey = E\n.label = Einstellungen\n.tooltiptext = { -brand-short-name }-Einstellungen, wo zutreffend",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "sync-engine-tabs2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "sync-engine-tabs2"
+    ]
+   },
+   "fids": [
+    "ba1ed00f58b0"
+   ],
+   "findings": [
+    "The tooltip turns the adjective \"Open\" into an imperative (\"Öffnen Sie Tabs\")."
+   ],
+   "source": "accesskey: t\nlabel: Open tabs\ntooltiptext: Open tabs from your other devices",
+   "original": "O",
+   "text": "O",
+   "full_original": ".accesskey = O\n.label = Offene Tabs\n.tooltiptext = Öffnen Sie Tabs von Ihren anderen Geräten",
+   "full_text": ".accesskey = O\n.label = Offene Tabs\n.tooltiptext = Offene Tabs von Ihren anderen Geräten",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "browser/browser/tabContextMenu.ftl",
+   "string_id": "close-tabs-to-the-end-alt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabContextMenu.ftl",
+    "key": [
+     "close-tabs-to-the-end-alt"
+    ]
+   },
+   "fids": [
+    "f2951ddda240"
+   ],
+   "findings": [
+    "The label adds a redundant \"schließen\" inside the \"Close Multiple\" submenu and doesn't match its sibling \"Tabs links davon\"."
+   ],
+   "source": "accesskey: i\nlabel: Tabs to Right",
+   "original": "r",
+   "text": "r",
+   "full_original": ".accesskey = r\n.label = Tabs rechts schließen",
+   "full_text": ".accesskey = r\n.label = Tabs rechts davon",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "browser/browser/tabContextMenu.ftl",
+   "string_id": "tab-context-close-duplicate-tabs-alt",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/tabContextMenu.ftl",
+    "key": [
+     "tab-context-close-duplicate-tabs-alt"
+    ]
+   },
+   "fids": [
+    "413143d28fef"
+   ],
+   "findings": [
+    "\"Tabs duplizieren\" means \"duplicate (copy) tabs\" instead of naming the duplicate tabs that get closed."
+   ],
+   "source": "accesskey: x\nlabel: Duplicate Tabs",
+   "original": "d",
+   "text": "d",
+   "full_original": ".accesskey = d\n.label = Tabs duplizieren",
+   "full_text": ".accesskey = d\n.label = Doppelte Tabs",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "dom/chrome/dom/dom.properties",
+   "string_id": "EditContextCharacterBoundsWarning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/dom/dom.properties",
+    "key": [
+     "EditContextCharacterBoundsWarning"
+    ]
+   },
+   "fids": [
+    "72f9dadc51b9"
+   ],
+   "findings": [
+    "The do-not-translate event name \"characterboundsupdate\" is misspelled as \"charactersboundsupdate\"."
+   ],
+   "source": "EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
+   "original": "EditContext.updateCharacterBounds() wurde nicht synchron im charactersboundsupdate-Ereignis-Listener aufgerufen. Die IME-Schnittstelle kann für einige Benutzer unerwartet wechseln. Weitere Informationen: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
+   "text": "EditContext.updateCharacterBounds() wurde nicht synchron im characterboundsupdate-Ereignis-Listener aufgerufen. Die IME-Schnittstelle kann für einige Benutzer unerwartet wechseln. Weitere Informationen: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-scope-not-same-origin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-scope-not-same-origin"
+    ]
+   },
+   "fids": [
+    "6ceaf9ca9421"
+   ],
+   "findings": [
+    "\"denselben … als\" is ungrammatical; the comparison after \"derselbe\" takes \"wie\"."
+   ],
+   "source": "The scope URL must be same origin as document.",
+   "original": "Die scope-URL muss denselben Ursprung (origin) als das Dokument haben.",
+   "text": "Die scope-URL muss denselben Ursprung (origin) wie das Dokument haben.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-start-url-should-be-same-origin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-start-url-should-be-same-origin"
+    ]
+   },
+   "fids": [
+    "3e013cba60ae"
+   ],
+   "findings": [
+    "\"denselben … als\" is ungrammatical; the comparison after \"derselbe\" takes \"wie\"."
+   ],
+   "source": "The start URL must be same origin as document.",
+   "original": "Die Start-URL muss denselben Ursprung (origin) als das Dokument haben.",
+   "text": "Die Start-URL muss denselben Ursprung (origin) wie das Dokument haben.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "toolkit/toolkit/downloads/downloadUI.ftl",
+   "string_id": "download-ui-confirm-quit-title",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/downloads/downloadUI.ftl",
+    "key": [
+     "download-ui-confirm-quit-title"
+    ]
+   },
+   "fids": [
+    "629d48854f35"
+   ],
+   "findings": [
+    "\"Stop\" is rendered as \"abbrechen\" (cancel) in one variant, while the other variants of the same message use \"anhalten\"/\"stoppen\"."
+   ],
+   "source": "{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-short-name }? [other other] Stop { $downloadsCount } downloads and quit { -brand-short-name }?",
+   "original": "{ $downloadsCount } Downloads stoppen und { -brand-short-name } beenden?",
+   "text": "{ $downloadsCount } Downloads stoppen und { -brand-short-name } beenden?",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

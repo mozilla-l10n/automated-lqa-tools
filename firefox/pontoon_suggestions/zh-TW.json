@@ -5955,6 +5955,436 @@
    "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/toolkit/webauthnDialog.ftl/?string=334700",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "browser/browser/autoTabGrouping.ftl",
+   "string_id": "smartwindow-group-tabs-all-sorted",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/autoTabGrouping.ftl",
+    "key": [
+     "smartwindow-group-tabs-all-sorted"
+    ]
+   },
+   "fids": [
+    "da9a278e60a5"
+   ],
+   "findings": [
+    "The praise message 'Nice work organizing your tabs' is rendered as an instruction, 'Organize your tabs well'."
+   ],
+   "source": "Nice work organizing your tabs",
+   "original": "好好整理您的分頁",
+   "text": "您的分頁整理得真好",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "decoder-doctor-no-codecs-linux-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "decoder-doctor-no-codecs-linux-message"
+    ]
+   },
+   "fids": [
+    "760ea5dcc80b"
+   ],
+   "findings": [
+    "必須的 is used where 必需的 is meant (\"required\")."
+   ],
+   "source": "To play video, you may need to install the required video codecs.",
+   "original": "您可能需要安裝必須的視訊解碼器才能播放影片。",
+   "text": "您可能需要安裝必需的視訊解碼器才能播放影片。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "browser/browser/browser.ftl",
+   "string_id": "identity-https-only-info-turn-on3",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/browser.ftl",
+    "key": [
+     "identity-https-only-info-turn-on3"
+    ]
+   },
+   "fids": [
+    "eb70879a82cc"
+   ],
+   "findings": [
+    "The verb 'turn on' is missing: 請對此網站 HTTPS 升級."
+   ],
+   "source": "Turn on HTTPS upgrades for this site if you want { -brand-short-name } to upgrade the connection when possible.",
+   "original": "若您想要 { -brand-short-name } 盡可能升級使用安全連線，請對此網站 HTTPS 升級。",
+   "text": "若您想要 { -brand-short-name } 盡可能升級使用安全連線，請對此網站開啟 HTTPS 升級。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "browser/browser/customkeys.ftl",
+   "string_id": "customkeys-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/customkeys.ftl",
+    "key": [
+     "customkeys-description"
+    ]
+   },
+   "fids": [
+    "ab9715c24b70"
+   ],
+   "findings": [
+    "'Control how you move around and interact with Firefox' is rendered as 'control how you move the cursor'."
+   ],
+   "source": "Control how you move around and interact with { -brand-short-name }.",
+   "original": "控制您如何移動游標以及與 { -brand-short-name } 互動。",
+   "text": "控制您如何瀏覽以及與 { -brand-short-name } 互動。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/ipProtection.ftl",
+   "string_id": "ip-protection-not-opted-in-inclusions-enabled",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/ipProtection.ftl",
+    "key": [
+     "ip-protection-not-opted-in-inclusions-enabled"
+    ]
+   },
+   "fids": [
+    "0a0f86108608"
+   ],
+   "findings": [
+    "\"免費\" (\"free\") appears twice in the same sentence."
+   ],
+   "source": "heading: Ready to try it?\nmessage: Get { $maxUsage } GB free each month and choose which sites use VPN.",
+   "original": "準備好試用了嗎？",
+   "text": "準備好試用了嗎？",
+   "full_original": ".heading = 準備好試用了嗎？\n.message = 每月免費獲得 { $maxUsage } GB 的免費流量，並可自行選擇要讓哪些網站透過 VPN 連線。",
+   "full_text": ".heading = 準備好試用了嗎？\n.message = 每月免費獲得 { $maxUsage } GB 的流量，並可自行選擇要讓哪些網站透過 VPN 連線。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-OfferToSaveLoginsDefault",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-OfferToSaveLoginsDefault"
+    ]
+   },
+   "fids": [
+    "b83d5136cb30"
+   ],
+   "findings": [
+    "'Set the default value for' is dropped, so this reads like an enforcing policy rather than a default"
+   ],
+   "source": "Set the default value for allowing { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.",
+   "original": "允許 { -brand-short-name } 提供記住儲存登入帳號與密碼的功能。true 與 false 值都接受。",
+   "text": "設定是否預設允許 { -brand-short-name } 提供記住儲存登入帳號與密碼的功能。true 與 false 值都接受。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-SkipTermsOfUse2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-SkipTermsOfUse2"
+    ]
+   },
+   "fids": [
+    "aaa32c9da265"
+   ],
+   "findings": [
+    "The legal representation is turned into an obligation to obtain authorization from every user"
+   ],
+   "source": "Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.",
+   "original": "程式啟動時不顯示使用條款與隱私權公告。您必須獲得您提供使用此瀏覽器的所有使用者授權，並代表他們同意使用條款。",
+   "text": "程式啟動時不顯示使用條款與隱私權公告。您聲明您接受使用條款，並有權代表所有您提供此瀏覽器使用權限的人員接受使用條款。",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "browser/browser/preferences/preferences.ftl",
+   "string_id": "connection-dns-over-https-url-item",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/preferences.ftl",
+    "key": [
+     "connection-dns-over-https-url-item"
+    ]
+   },
+   "fids": [
+    "5d0be057583b"
+   ],
+   "findings": [
+    "Typo: 使用者 (\"user\") is written where 使用 (\"use\") is meant."
+   ],
+   "source": "label: { $name }\ntooltiptext: Use this provider for resolving DNS over HTTPS",
+   "original": "{ $name }",
+   "text": "{ $name }",
+   "full_original": ".label = { $name }\n.tooltiptext = 使用者此提供者進行 DNS over HTTPS 解析",
+   "full_text": ".label = { $name }\n.tooltiptext = 使用此提供者進行 DNS over HTTPS 解析",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "devtools/client/inspector.ftl",
+   "string_id": "inspector-emulation-panel-reduced-motion-no-preference",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/inspector.ftl",
+    "key": [
+     "inspector-emulation-panel-reduced-motion-no-preference"
+    ]
+   },
+   "fids": [
+    "a412976babd1"
+   ],
+   "findings": [
+    "The aria-label reads as 'do not prefer the reduced-motion emulation' instead of 'enable no-preference reduced-motion emulation'."
+   ],
+   "source": "(value): No preference\naria-label: Enable no preference for reduced motion emulation",
+   "original": "無偏好",
+   "text": "無偏好",
+   "full_original": "無偏好\n.aria-label = 不偏好減少動畫模擬功能",
+   "full_text": "無偏好\n.aria-label = 啟用「無偏好」減少動畫模擬功能",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "devtools/client/styleeditor.ftl",
+   "string_id": "styleeditor-new-button",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "devtools/client/styleeditor.ftl",
+    "key": [
+     "styleeditor-new-button"
+    ]
+   },
+   "fids": [
+    "9db6a5ca8fb8"
+   ],
+   "findings": [
+    "'append' is translated 擴充 ('expand / extend') instead of 附加."
+   ],
+   "source": "accesskey: N\ntooltiptext: Create and append a new style sheet to the document",
+   "original": "N",
+   "text": "N",
+   "full_original": ".accesskey = N\n.tooltiptext = 建立並將新的樣式表擴充至文件尾端",
+   "full_text": ".accesskey = N\n.tooltiptext = 建立並將新的樣式表附加到文件尾端",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "dom/chrome/accessibility/AccessFu.properties",
+   "string_id": "comboboxlist",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/accessibility/AccessFu.properties",
+    "key": [
+     "comboboxlist"
+    ]
+   },
+   "fids": [
+    "2becd9ae62d8"
+   ],
+   "findings": [
+    "'combo box list' is translated as 'multi-select drop-down list' (複選下拉清單)."
+   ],
+   "source": "combo box list",
+   "original": "複選下拉清單",
+   "text": "下拉清單",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "E",
+   "file": "dom/chrome/accessibility/AccessFu.properties",
+   "string_id": "underscript",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/chrome/accessibility/AccessFu.properties",
+    "key": [
+     "underscript"
+    ]
+   },
+   "fids": [
+    "89fda3f86dd6"
+   ],
+   "findings": [
+    "'underscript' is announced as 下標, the same word as 'subscript'."
+   ],
+   "source": "underscript",
+   "original": "下標",
+   "text": "底標",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/about/url-classifier.ftl",
+   "string_id": "url-classifier-content-classifier-col-important",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/url-classifier.ftl",
+    "key": [
+     "url-classifier-content-classifier-col-important"
+    ]
+   },
+   "fids": [
+    "14552433fd07"
+   ],
+   "findings": [
+    "'Important' was translated although the comment says not to"
+   ],
+   "source": "Important",
+   "original": "重要",
+   "text": "Important",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+   "string_id": "experimental-features-media-jxl",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/firefoxlabs/features.ftl",
+    "key": [
+     "experimental-features-media-jxl"
+    ]
+   },
+   "fids": [
+    "d314f49ae5f1"
+   ],
+   "findings": [
+    "The experiment title is translated although the developer comment says to keep it in English"
+   ],
+   "source": "label: Media: JPEG XL",
+   "original": "媒體：JPEG XL 格式",
+   "text": "Media: JPEG XL",
+   "full_original": ".label = 媒體：JPEG XL 格式",
+   "full_text": ".label = Media: JPEG XL",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "A",
+   "file": "toolkit/toolkit/passwordmgr/passwordmgr.ftl",
+   "string_id": "password-manager-update-password-button-delete",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/passwordmgr/passwordmgr.ftl",
+    "key": [
+     "password-manager-update-password-button-delete"
+    ]
+   },
+   "fids": [
+    "8dc608fbe318"
+   ],
+   "findings": [
+    "The button label says it deletes ALL saved passwords, but the action removes only the one saved password"
+   ],
+   "source": "accesskey: R\nlabel: Remove saved password",
+   "original": "R",
+   "text": "R",
+   "full_original": ".accesskey = R\n.label = 刪除所有已儲存的密碼",
+   "full_text": ".accesskey = R\n.label = 刪除已儲存的密碼",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "toolkit/toolkit/payments/payments.ftl",
+   "string_id": "credit-card-label-with-security-code-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/payments/payments.ftl",
+    "key": [
+     "credit-card-label-with-security-code-2"
+    ]
+   },
+   "fids": [
+    "9b7b5bc860e1"
+   ],
+   "findings": [
+    "The aria-label says the card is saved, instead of saying the security code is saved."
+   ],
+   "source": "(value): { $label } | { $securityCode } •••\naria-label: { $ariaLabel }, { $securityCode } saved",
+   "original": "{ $label } | { $securityCode } •••",
+   "text": "{ $label } | { $securityCode } •••",
+   "full_original": "{ $label } | { $securityCode } •••\n.aria-label = 已儲存 { $ariaLabel }，{ $securityCode }",
+   "full_text": "{ $label } | { $securityCode } •••\n.aria-label = { $ariaLabel }，已儲存 { $securityCode }",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }

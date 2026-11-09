@@ -576,6 +576,324 @@
    "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/intl/languageNames.ftl/?string=194443",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/contentSharing.ftl",
+   "string_id": "content-sharing-modal-generic-error-2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/contentSharing.ftl",
+    "key": [
+     "content-sharing-modal-generic-error-2"
+    ]
+   },
+   "fids": [
+    "f2d261bc0e7f"
+   ],
+   "findings": [
+    "\"Strani a deljenje…\" → \"Strani za deljenje…\"."
+   ],
+   "source": "heading: Something went wrong\nmessage: We couldn’t create your shared page this time. Try again later.",
+   "original": "Prišlo je do napake",
+   "text": "Prišlo je do napake",
+   "full_original": ".heading = Prišlo je do napake\n.message = Strani a deljenje tokrat ni bilo mogoče ustvariti. Poskusite znova pozneje.",
+   "full_text": ".heading = Prišlo je do napake\n.message = Strani za deljenje tokrat ni bilo mogoče ustvariti. Poskusite znova pozneje.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/pageInfo.ftl",
+   "string_id": "security-technical-weak-cipher",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/pageInfo.ftl",
+    "key": [
+     "security-technical-weak-cipher"
+    ]
+   },
+   "fids": [
+    "9c09739d1995"
+   ],
+   "findings": [
+    "Adjective–noun gender agreement error: masculine \"Drugi\" with feminine plural \"osebe\"."
+   ],
+   "source": "Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.",
+   "original": "Vaša povezava na to stran uporablja šibko šifriranje in ni zasebna. Drugi osebe lahko dostopajo do vaših podatkov ali spreminjajo delovanje spletne strani.",
+   "text": "Vaša povezava na to stran uporablja šibko šifriranje in ni zasebna. Druge osebe lahko dostopajo do vaših podatkov ali spreminjajo delovanje spletne strani.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "browser/browser/policies/policies-descriptions.ftl",
+   "string_id": "policy-DisableThirdPartyModuleBlocking2",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/policies/policies-descriptions.ftl",
+    "key": [
+     "policy-DisableThirdPartyModuleBlocking2"
+    ]
+   },
+   "fids": [
+    "7810c6a52b34"
+   ],
+   "findings": [
+    "The participle \"vstavljenih\" (inserted) is in the wrong case; it should agree with \"module\" (modules, accusative plural)."
+   ],
+   "source": "Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.",
+   "original": "Uporabniku onemogoči, da bi na strani Podatki o modulih tretjih ponudnikov (about:third-party) blokiral module tretjih ponudnikov, vstavljenih v proces { -brand-short-name(sklon: \"rodilnik\") }.",
+   "text": "Uporabniku onemogoči, da bi na strani Podatki o modulih tretjih ponudnikov (about:third-party) blokiral module tretjih ponudnikov, vstavljene v proces { -brand-short-name(sklon: \"rodilnik\") }.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "browser/browser/preferences/fonts.ftl",
+   "string_id": "fonts-langgroup-kannada",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "browser/browser/preferences/fonts.ftl",
+    "key": [
+     "fonts-langgroup-kannada"
+    ]
+   },
+   "fids": [
+    "b6253a4342eb"
+   ],
+   "findings": [
+    "\"Kannada\" (Indic script) rendered \"kanadsko\" (reads as Canadian, colliding with fonts-langgroup-canadian). → \"kannada\"."
+   ],
+   "source": "label: Kannada",
+   "original": "kanadsko",
+   "text": "kannadsko",
+   "full_original": ".label = kanadsko",
+   "full_text": ".label = kannadsko",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "dom/dom/manifest.ftl",
+   "string_id": "dom-manifest-id-not-same-origin",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "dom/dom/manifest.ftl",
+    "key": [
+     "dom-manifest-id-not-same-origin"
+    ]
+   },
+   "fids": [
+    "e602bfbcffdb"
+   ],
+   "findings": [
+    "This string translates \"origin\" as \"poreklo\", but the rest of the same file uses \"izvor\"."
+   ],
+   "source": "The id member must have the same origin as the start_url member.",
+   "original": "Član id mora imeti enako poreklo kot član start_url.",
+   "text": "Član id mora imeti enak izvor kot član start_url.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutAddons.ftl",
+   "string_id": "colorway-removal-notice-message",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutAddons.ftl",
+    "key": [
+     "colorway-removal-notice-message"
+    ]
+   },
+   "fids": [
+    "7dcd7e9ddad3"
+   ],
+   "findings": [
+    "Wrong case. \"…zbirko barvnih kombinacije.\" → \"…kombinacij.\" (genitive plural)."
+   ],
+   "source": "heading: Your colorway theme(s) were removed.\nmessage: { -brand-product-name } updated its colorways collection. We removed\nthe old version(s) from your “Saved Themes” list. Get new versions on\nthe add-ons site.",
+   "original": "Vaše teme barvne kombinacije so bile odstranjene.",
+   "text": "Vaše teme barvne kombinacije so bile odstranjene.",
+   "full_original": ".heading = Vaše teme barvne kombinacije so bile odstranjene.\n.message = { -brand-product-name } je posodobil svojo zbirko barvnih kombinacije. Stare različice smo odstranili s seznama “Shranjene teme”. Poiščite nove različice na spletnem mestu dodatkov.",
+   "full_text": ".heading = Vaše teme barvne kombinacije so bile odstranjene.\n.message = { -brand-product-name } je posodobil svojo zbirko barvnih kombinacij. Stare različice smo odstranili s seznama “Shranjene teme”. Poiščite nove različice na spletnem mestu dodatkov.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-feature-organize-description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-feature-organize-description"
+    ]
+   },
+   "fids": [
+    "1043c2924802"
+   ],
+   "findings": [
+    "\"export pages\" rendered as \"posamič izvozite\" (export individually), adding a claim not in the source."
+   ],
+   "source": "Reorder, remove, merge, and export pages.",
+   "original": "Spremenite vrstni red strani, jih odstranite, združite ali posamič izvozite.",
+   "text": "Spremenite vrstni red strani, jih odstranite, združite ali izvozite.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "B",
+   "file": "toolkit/toolkit/about/aboutPDF.ftl",
+   "string_id": "about-pdf-feature-organize-heading",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutPDF.ftl",
+    "key": [
+     "about-pdf-feature-organize-heading"
+    ]
+   },
+   "fids": [
+    "2ec37f5f6d98"
+   ],
+   "findings": [
+    "\"Organize pages\" translated as \"Organizirajte dokumente\" (organize documents) instead of pages."
+   ],
+   "source": "Organize pages",
+   "original": "Organizirajte dokumente",
+   "text": "Organizirajte strani",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "touch-warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "touch-warning"
+    ]
+   },
+   "fids": [
+    "a386f87ab28e"
+   ],
+   "findings": [
+    "toolkit/toolkit/about/aboutSupport.ftl — \"…zaradi nedpodprte nastavitve…\" → \"…nepodprte…\" (both strings)."
+   ],
+   "source": "async touch input disabled due to unsupported pref: { $preferenceKey }",
+   "original": "asinhroni vnos na dotik onemogočen zaradi nedpodprte nastavitve: { $preferenceKey }",
+   "text": "asinhroni vnos na dotik onemogočen zaradi nepodprte nastavitve: { $preferenceKey }",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/about/aboutSupport.ftl",
+   "string_id": "wheel-warning",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/aboutSupport.ftl",
+    "key": [
+     "wheel-warning"
+    ]
+   },
+   "fids": [
+    "95f25be2b312"
+   ],
+   "findings": [
+    "toolkit/toolkit/about/aboutSupport.ftl — \"…zaradi nedpodprte nastavitve…\" → \"…nepodprte…\" (both strings)."
+   ],
+   "source": "async wheel input disabled due to unsupported pref: { $preferenceKey }",
+   "original": "asinhroni vnos s koleščkom onemogočen zaradi nedpodprte nastavitve: { $preferenceKey }",
+   "text": "asinhroni vnos s koleščkom onemogočen zaradi nepodprte nastavitve: { $preferenceKey }",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "D",
+   "file": "toolkit/toolkit/about/certviewer.ftl",
+   "string_id": "certificate-viewer-certificate-authority",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/about/certviewer.ftl",
+    "key": [
+     "certificate-viewer-certificate-authority"
+    ]
+   },
+   "fids": [
+    "886af14457e2"
+   ],
+   "findings": [
+    "certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — \"Certificate Authority\" rendered \"uradna oseba za digitalna potrdila\", but the CA tab (certificate-viewer-tab-ca) uses the standard \"Overitelji\". → align on \"overitelj (digitalnih potrdil)\"."
+   ],
+   "source": "Certificate Authority",
+   "original": "Uradna oseba za digitalna potrdila",
+   "text": "Overitelj digitalnih potrdil",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-09",
+   "group": "C",
+   "file": "toolkit/toolkit/contentanalysis/contentanalysis.ftl",
+   "string_id": "contentanalysis-slow-agent-dialog-body-file-and-more",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox",
+    "resource": "toolkit/toolkit/contentanalysis/contentanalysis.ftl",
+    "key": [
+     "contentanalysis-slow-agent-dialog-body-file-and-more"
+    ]
+   },
+   "fids": [
+    "729a7203ae82"
+   ],
+   "findings": [
+    "contentanalysis-slow-agent-dialog-body-file-and-more ([one]) — toolkit/toolkit/contentanalysis/contentanalysis.ftl — Dual verb \"sta\" with singular adjective \"skladen\". → \"skladna\" (dual, agreeing with two subjects)."
+   ],
+   "source": "{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count } additional items against your organization’s data policies. This may take a moment.",
+   "original": "{ $agent } pregleduje, ali so “{ $filename }” in še { $count } predmetov skladni s pravilniki vaše organizacije. To lahko traja nekaj časa.",
+   "text": "{ $agent } pregleduje, ali so “{ $filename }” in še { $count } predmetov skladni s pravilniki vaše organizacije. To lahko traja nekaj časa.",
+   "status": "pending",
+   "status_date": "2026-11-09",
+   "comment": ""
   }
  ]
 }
