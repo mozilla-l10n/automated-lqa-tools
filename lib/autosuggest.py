@@ -2,7 +2,10 @@
 """Fix open findings with the model and submit the fixes to Pontoon.
 
 The unattended counterpart of ``suggest.py``, where a person makes the
-edits. Here the model gives every selected finding one verdict:
+edits. ``--group`` picks the strings to work on -- those with an open finding
+in the groups -- and every open finding on them goes to the model together
+(`select`), so one suggestion covers all of a string's defects. The model
+gives each finding one verdict:
 
 ``fix``
     The edit is applied to a copy of the localized file, verified -- it must
@@ -267,6 +270,29 @@ def _paths(values: list[str], projects: list[str], what: str) -> dict[str, str]:
     return out
 
 
+def select(open_findings: list, groups: list[str], records: list[dict],
+           dismissed: dict) -> tuple[list, int, int]:
+    """The findings to work on: ``(candidates, held back, added from other groups)``.
+
+    ``groups`` chooses the *strings* -- those with a workable open finding in
+    one of them -- and every workable open finding on those strings comes
+    along, whatever its group. Picking findings by group left a string's
+    other defects out of its one suggestion: fixed for its E finding, fy-NL's
+    `page-info-page` kept its C one, and a C finding judged wrong could not
+    be dismissed because a B finding on the same string was still open.
+    Workable: not dismissed, and not barred by `tracker.blocked`.
+    """
+    def workable(f) -> bool:
+        return not tracker.blocked(records, f.key, [f.fid]) and not _dismissed(dismissed, f)
+
+    in_group = [f for f in open_findings if f.category in groups]
+    strings = {f.key for f in in_group if workable(f)}
+    candidates = [f for f in open_findings if f.key in strings and workable(f)]
+    held = sum(1 for f in in_group if not workable(f))
+    added = sum(1 for f in candidates if f.category not in groups)
+    return candidates, held, added
+
+
 def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
                source_dir: str, args, client, known: list[dict]) -> int:
     """Fix, verify and (with --submit) send one locale. Returns an error count."""
@@ -286,12 +312,12 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
     records = [s for t in (record_data, *known) for s in t["suggestions"]]
     dismissed = dismiss.load(project, locale)
 
-    picked = [f for f in open_findings if f.category in groups]
-    candidates = [f for f in picked
-                  if not tracker.blocked(records, f.key, [f.fid])
-                  and not _dismissed(dismissed, f)]
-    if len(candidates) < len(picked):
-        print(f"  {len(picked) - len(candidates)} already suggested or dismissed")
+    candidates, held, added = select(open_findings, groups, records, dismissed)
+    if held:
+        print(f"  {held} already suggested or dismissed")
+    if added:
+        print(f"  {added} finding(s) from other groups on the same strings, "
+              "handled with them")
     if not candidates:
         print("  nothing to do")
         return 0
@@ -343,7 +369,10 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
                 return entry
         return None
 
-    system = system_prompt(project, locale, groups)
+    # Every group the findings in front of the model belong to, not only the
+    # ones asked for: a string brings all its open findings with it.
+    system = system_prompt(project, locale,
+                           sorted({f.category for i in items for f in i["findings"]}))
     errors = 0
     fixed, dismissals, skipped = [], [], []
     batch_size = args.batch_size
@@ -660,7 +689,10 @@ def main() -> int:
     run = sub.add_parser("run", help="fix findings and submit them")
     run.add_argument("--project", required=True, choices=[*PROJECTS, "all"])
     run.add_argument("--locales", default="all", help='comma-separated, or "all"')
-    run.add_argument("--group", default="all", help='finding group A-E, comma-separated, or "all"')
+    run.add_argument("--group", default="all",
+                     help='finding group A-E, comma-separated, or "all": works on the strings '
+                          'with an open finding in these groups, and on every open finding '
+                          'on them')
     run.add_argument("--l10n-dir", action="append",
                      help="the clone; with --project all, repeat as project=PATH")
     run.add_argument("--source-dir", action="append",

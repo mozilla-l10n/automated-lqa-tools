@@ -513,6 +513,31 @@ def run(suite) -> None:
     check(set(autosuggest.CLOSING) | {"fix", "skip"} == set(enum),
           "every verdict the model may give is handled, and nothing else")
 
+    suite.section("A group picks the strings, and each string brings all its findings")
+    # fy-NL `page-info-page`: a group-E run fixed its E finding and sent
+    # that, and its C finding ('syd' for 'side') was never in front of the
+    # model. 31 of 1029 suggestions left another group's finding behind.
+    import autosuggest as _as
+    e1 = _f(string_id="s1", category="E", fid="e1")
+    c1 = _f(string_id="s1", category="C", fid="c1")
+    c2 = _f(string_id="s2", category="C", fid="c2")
+    asked = _f(string_id="s1", category="B", fid="b1")
+    gone = _f(string_id="s3", category="E", fid="e3")
+    recs = [{"file": "a.ftl", "string_id": "s1", "fids": ["b1"], "status": "rejected",
+             "original": "o", "text": "t"}]
+    got, held, added = _as.select([e1, c1, c2, asked, gone], ["E"], recs, {("s3", None): "fine"})
+    check([f.fid for f in got] == ["e1", "c1"],
+          "an E run takes the string with an E finding, and its C finding with it")
+    check(added == 1 and held == 1,
+          "and says how many came from other groups and how many were held back")
+    check("b1" not in [f.fid for f in got],
+          "a finding already asked about on that string stays out")
+    got, _, _ = _as.select([c1, c2], ["E"], [], {})
+    check(got == [], "a string with nothing in the group is not touched")
+    pending = [dict(recs[0], status="pending")]
+    got, held, _ = _as.select([e1, c1], ["E"], pending, {})
+    check(got == [] and held == 1, "nor is one with a suggestion still pending")
+
     suite.section("A fix to an attribute is seen as a fix, and a string can be suggested again")
     # fy-NL, 2026-11-05: `.label = Fragen…` → `Freegje…` was compared as
     # `F` → `F` (the access key, all Pontoon's simple rendering shows), and

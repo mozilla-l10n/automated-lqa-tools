@@ -29,7 +29,7 @@ on:
         required: true
         default: 'all'
       group:
-        description: 'Comma-separated finding groups, or "all" (A functional, B meaning, C grammar, D terminology, E typography)'
+        description: 'Comma-separated finding groups, or "all" (A functional, B meaning, C grammar, D terminology, E typography). Picks the strings; every open finding on them is handled, whatever its group'
         required: true
         default: 'all'
       dry_run:
