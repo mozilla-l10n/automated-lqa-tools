@@ -12031,7 +12031,7 @@
   "dom-manifest-id-is-invalid": "1001e3ac d638cdcd",
   "dom-manifest-id-not-same-origin": "2bc73e85 256f3431",
   "dom-manifest-image-repeated-purposes": "1df479cc 031c7639 03bd65e8",
-  "dom-manifest-image-unsupported-purposes": "af0e0313 e0ba0b0e 59a43ce1",
+  "dom-manifest-image-unsupported-purposes": "635bc53c e0ba0b0e 59a43ce1",
   "dom-manifest-image-unusable": "fdec4d44 43483679 0d3c6cb2",
   "dom-manifest-image-url-is-invalid": "fa9babfc a9f25151 1e6611e8",
   "dom-manifest-invalid-css-color": "1500e193 984b0df9 dca5dd8a",

@@ -6,7 +6,7 @@
  },
  "apostrophe": {
   "straight": 6,
-  "typographic": 1789
+  "typographic": 1787
  },
  "dash": {
   "em": 53,
@@ -30,7 +30,7 @@
   "total": 12
  },
  "quotes": {
-  "curly-double": 977,
+  "curly-double": 979,
   "straight-double": 25
  },
  "register": {

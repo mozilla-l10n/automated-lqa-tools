@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 59 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,43 +18,9 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (7)
+### 🆕 New findings (0)
 
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (adjective, tabs that are duplicates) translated as the action "duplicating tabs".
-    - Current: `Lapok duplikálása`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Ismétlődő lapok`
-    - Per the comment, this item under "Close Multiple" closes duplicate tabs; "Lapok duplikálása" means "Duplicate (verb) tabs", the opposite kind of action.
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (move to start of tab strip) translated as the noun "Kezdés" (starting/beginning an action).
-    - Current: `Kezdés`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Elejére`
-    - The comment says this is a "Move to" sub-item for moving the tab to the start of the tab strip; "Kezdés" means the act of starting, not the position.
-- `move-to-end-alt` — `browser/browser/tabContextMenu.ftl` — "End" (move to end of tab strip) translated as "Befejezés" (finishing/completion).
-    - Current: `Befejezés`
-    - Source: `accesskey: E label: End`
-    - Suggest: `Végére`
-    - This is the "Move to" destination for the end of the tab strip; "Befejezés" means finishing an action.
-- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football matches) translated as "Találatok" (search hits).
-    - Current: `Találatok`
-    - Source: `Matches`
-    - Suggest: `Mérkőzések`
-    - In the Wrexham AFC football widget, "Matches" are games, alongside "Table" and "Fixtures"; "Találatok" means search results.
-- `hnt-card-taskbar-tabs-body` — `browser/browser/newtab/onboarding.ftl` — Wrong case: "mint egy alkalmazás" (nominative) compares the user to an app instead of the sites.
-    - Current: `mint egy alkalmazás, amely`
-    - Source: `Open your most visited sites like an app with all of { -brand-product-name }’s protections.`
-    - Suggest: `mint egy alkalmazást, amely`
-    - The comparison refers to the object (the sites opened like an app), so it needs the accusative "alkalmazást"; as written it says the user is like an app.
-- `download-ui-confirm-quit-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" rendered as "the process may be interrupted".
-    - Current: `de a folyamat megszakadhat`
-    - Source: `{ -brand-short-name } will try to resume downloads when it reopens, but progress may be lost.`
-    - Suggest: `de az eddigi előrehaladás elveszhet`
-    - The source warns that download progress may be lost; "a folyamat megszakadhat" says the process may be interrupted, which doesn't tell the user about the lost progress.
-- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" is rendered as "the process may be interrupted", which changes the meaning.
-    - Current: `de a folyamat megszakadhat`
-    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
-    - Suggest: `de az eddigi letöltési előrehaladás elveszhet`
-    - The en-US warns that download progress already made may be lost when resuming. The Hungarian says the process may be interrupted, which is a different consequence.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -1345,6 +1311,12 @@ _Also listed under their own category below._
 _Nothing dismissed._
 
 _One line each in `locales/hu/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/hu/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

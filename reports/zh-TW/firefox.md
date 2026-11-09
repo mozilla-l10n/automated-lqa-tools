@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 188 of 16,875 |
+| **Strings reviewed this run** | 0 of 16,875 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,322 +18,13 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `protections-panel-shim-allowed-indicator` — `browser/browser/protectionsPanel.ftl` — The tooltip says some trackers were unblocked; the source says this one tracker was partly unblocked.
-    - Current: `已解除封鎖部分追蹤器`
-    - Source: `tooltiptext: Tracker partially unblocked`
-    - Suggest: `已部分解除封鎖追蹤器`
-    - en-US "Tracker partially unblocked" means the blocking of this tracker was partly lifted. The zh-TW reads as "unblocked some of the trackers", which moves "partially" from the unblocking to the number of trackers.
-- `protections-vpn-banner-content` — `browser/browser/protections.ftl` — "Risk-free" is translated as "free trial", which is a different offer.
-    - Current: `免費試用`
-    - Source: `Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”`
-    - Suggest: `零風險試用`
-    - "Try risk-free" refers to a money-back guarantee on a paid subscription. It is not a free trial. "免費試用" ("try for free") tells users the VPN can be used at no cost.
+_No new findings._
 
-### ✅ Fixed since the last run (185)
+### ✅ Fixed since the last run (0)
 
-- `about-logins-add-password-tooltip` — `browser/browser/aboutLogins.ftl` — The Add-password tooltip says 'make sure you've changed this site's password, then modify it here'. The en-US says to make sure you are saving your current password.
-    - Current: `請確認您更改過此網站的密碼，再於此處修改。`
-    - Source: `Make sure you’re saving your current password for this site.`
-    - Suggest: `請確認您儲存的是此網站目前使用的密碼。`
-    - en-US: 'Make sure you're saving your current password for this site.' This tooltip is shown when adding a new password. Telling the user to have changed the password first and then 'modify' it does not fit that context.
-- `about-logins-confirm-export-dialog-message2` — `browser/browser/aboutLogins.ftl` — The translation tells the user to delete their passwords after export. The en-US says to delete the exported file.
-    - Current: `建議您在使用完檔案後立即刪除密碼`
-    - Source: `When you export, your passwords are saved to a file with readable text. When you’re done using the file, we recommend deleting it so others who use this device can’t see your passwords.`
-    - Suggest: `建議您在使用完檔案後立即刪除該檔案`
-    - en-US: 'When you're done using the file, we recommend deleting it'. Here 'it' is the exported file. The zh-TW says 刪除密碼 (delete the passwords), which could lead a user to remove their saved passwords.
-- `about-logins-login-list-empty-search-title2` — `browser/browser/aboutLogins.ftl` — The empty-search title says 'No passwords saved' instead of 'No passwords found'.
-    - Current: `未儲存密碼`
-    - Source: `No passwords found`
-    - Suggest: `找不到密碼`
-    - en-US: 'No passwords found'. It appears when a search has no matches. It reuses the no-saved-passwords text, which wrongly tells the user they have no saved passwords.
-- `smart-window-model-custom-info` — `browser/browser/aiFeatures.ftl` — 'Custom model' is rendered as 'custom mode' (模式 instead of 模型).
-    - Current: `使用自訂模式時`
-    - Source: `message: When you use a custom model, { -smart-window-brand-name } may not work as expected.`
-    - Suggest: `使用自訂模型時`
-    - en-US: 'When you use a custom model'. The surrounding strings consistently use 自訂模型.
-- `aiwindow-firstrun-memories-subtitle` — `browser/browser/aiWindow.ftl` — The pronoun 他們 (used for people) refers to the memories.
-    - Current: `久而久之，他們可讓回覆結果對您更有幫助。`
-    - Source: `{ -smart-window-brand-name } can learn from your chats, browsing, or both to create memories. They make answers more helpful over time.`
-    - Suggest: `久而久之，記憶可讓回覆結果對您更有幫助。`
-    - 'They' refers to memories, which are inanimate. Standard written Chinese uses 它們 for things, or repeats the noun.
-- `aiwindow-firstrun-model-subtitle-v2` — `browser/browser/aiWindow.ftl` — 'Across your tabs' is rendered as 'across different devices'.
-    - Current: `在不同裝置間進行摘要、比對、探索`
-    - Source: `Each model can help you to summarize, compare, and explore across your tabs. Switch anytime.`
-    - Suggest: `在您的分頁間進行摘要、比對、探索`
-    - en-US: 'Each model can help you to summarize, compare, and explore across your tabs.' The translation claims the models work across devices, which is a capability the source does not mention.
-- `contextual-manager-passwords-update-label` — `browser/browser/contextual-manager.ftl` — The edit-form label 'Update password' is rendered as the past-tense confirmation 'Password updated'.
-    - Current: `已更新密碼`
-    - Source: `label: Update password`
-    - Suggest: `更新密碼`
-    - This is the label of the login form in edit mode, paired with 新增密碼 ('Add password'). The translation tells the user an update has already happened before they have saved anything.
-- `customkeys-dev-profiler-capture` — `browser/browser/customkeys.ftl` — Typo: 補捉 should be 捕捉.
-    - Current: `補捉效能檢測檔`
-    - Source: `Capture a Performance Profile`
-    - Suggest: `捕捉效能檢測檔`
-    - The correct word for 'capture' is 捕捉, as in profiler-popup-capture-button in appmenu.ftl.
-- `downloads-blocked-download-detailed-info` — `browser/browser/downloads.ftl` — Typo: 擋案 should be 檔案.
-    - Current: `無用擋案`
-    - Source: `{ $url } attempted to automatically download multiple files. The site could be broken or trying to store spam files on your device.`
-    - Suggest: `無用檔案`
-    - 擋 means 'block'. 'File' is 檔案, which is used everywhere else in the tree.
-- `downloads-blocked-potentially-insecure` — `browser/browser/downloads.ftl` — Half-width colon followed by a space is used instead of the locale's full-width colon.
-    - Current: `未下載檔案: 有`
-    - Source: `File not downloaded: Potential security risk.`
-    - Suggest: `未下載檔案：有`
-    - zh-TW consistently uses full-width punctuation; a half-width colon plus space deviates from the established convention.
-- `bookmark-properties-title-add-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Add bookmark folder" is translated as "Add bookmarks toolbar".
-    - Current: `新增書籤工具列`
-    - Source: `Add bookmark folder`
-    - Suggest: `新增書籤資料夾`
-    - In this locale 書籤工具列 means the Bookmarks Toolbar. The source says "bookmark folder", which elsewhere in this file is 資料夾.
-- `bookmark-properties-title-edit-folder` — `browser/browser/editBookmarkOverlay.ftl` — "Edit bookmark folder" is translated as "Edit bookmarks toolbar".
-    - Current: `編輯書籤工具列`
-    - Source: `Edit bookmark folder`
-    - Suggest: `編輯書籤資料夾`
-    - 書籤工具列 means the Bookmarks Toolbar, not a bookmark folder.
-- `taskbar-tabs-chat-callout-title` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `從工具列直接聊天`
-    - Source: `Chat from your taskbar`
-    - Suggest: `從工作列直接聊天`
-    - Same issue as the other taskbar-tabs callouts.
-- `taskbar-tabs-chat-callout-title-v3` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `從工具列保持連線`
-    - Source: `Stay connected from your taskbar`
-    - Suggest: `從工作列保持連線`
-    - Same issue as the other taskbar-tabs callouts.
-- `taskbar-tabs-email-callout-title` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `在工具列收發信件`
-    - Source: `Keep your email in your taskbar`
-    - Suggest: `在工作列收發信件`
-    - Same issue as the other taskbar-tabs callouts.
-- `taskbar-tabs-email-callout-title-v3` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `從工具列直接開啟收件匣`
-    - Source: `Keep your inbox in your taskbar`
-    - Suggest: `從工作列直接開啟收件匣`
-    - Same issue as the other taskbar-tabs callouts.
-- `taskbar-tabs-media-callout-title-v3` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `將您的影片網站放在工具列`
-    - Source: `Keep your streaming in your taskbar`
-    - Suggest: `將您的影片網站放在工作列`
-    - Same issue as the other taskbar-tabs callouts. The non-v3 media title correctly uses 工作列.
-- `taskbar-tabs-social-callout-title` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar).
-    - Current: `放置於工具列`
-    - Source: `Keep your favorite feeds in your taskbar`
-    - Suggest: `放置於工作列`
-    - Same issue as the other taskbar-tabs callouts. 工作列 is the locale's term for the OS taskbar.
-- `taskbar-tabs-value-prop-callout-title` — `browser/browser/featureCallout.ftl` — The Windows taskbar is rendered as 工具列 (toolbar) instead of 工作列.
-    - Current: `將此網站新增至工具列`
-    - Source: `Add this site to your taskbar`
-    - Suggest: `將此網站新增至工作列`
-    - Taskbar tabs pin a site to the OS taskbar. zh-TW uses 工作列 for the taskbar, including in this same file (taskbar-tabs-callout-primary-button-v3 釘選到工作列, the media and gaming titles) and in aboutPrivateBrowsing. 工具列 is the browser toolbar.
-- `taskbar-tabs-value-prop-callout-title-v3` — `browser/browser/featureCallout.ftl` — 'Taskbar' is rendered as 工具列 (toolbar), right next to a button that says 釘選到工作列.
-    - Current: `將您最愛的網站釘選至工具列`
-    - Source: `Pin your favorite sites to your taskbar`
-    - Suggest: `將您最愛的網站釘選至工作列`
-    - The callout title says toolbar and its primary button says taskbar, for the same action.
-- `genai-menu-new-badge` — `browser/browser/genai.ftl` — The 'New' feature badge is rendered as 新增 ('Add').
-    - Current: `新增`
-    - Source: `New`
-    - Suggest: `新功能`
-    - This badge marks a new menu item. 新增 is the verb 'add', which makes the badge read like an action. The locale uses 新功能 for the same badge elsewhere (main-context-menu-new-feature-badge, ipprotection-recommended-location-badge).
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — The settings section name "Tabs and browsing" is translated as an action phrase ("tabs, and browse"), so the path to the setting is wrong.
-    - Current: `分頁並瀏覽`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `分頁與瀏覽`
-    - "Tabs and browsing" is the name of a Settings section, shown after a chevron. 並 turns it into a sequence of actions ("tabs and browse"), so it no longer names the section.
-- `genai-selection-callout-text` — `browser/browser/genai.ftl` — This string uses the informal 你, while the surrounding strings use 您.
-    - Current: `你可以透過`
-    - Source: `Search or copy when you select text. Choose which actions appear with the <span data-l10n-name="more-actions">•••</span> menu.`
-    - Suggest: `您可以透過`
-    - The neighbouring strings in this batch use the polite 您 (e.g. downloads, sanitize), so 你 here is inconsistent with the locale's form of address.
-- `fxa-adoption-addresses-backup-title` — `browser/browser/newtab/asrouter.ftl` — Saved (postal) addresses are rendered as 網址 (web addresses/URLs)
-    - Current: `一起備份儲存的網址吧！`
-    - Source: `Let’s back up your saved addresses`
-    - Suggest: `一起備份儲存的地址吧！`
-    - This message is about saved autofill addresses. Its subtitle uses 地址, but the title says 網址, which means URLs.
-- `multi-cta-fox-doodle-msix-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `並釘選至工具列與開始選單。`
-    - Source: `Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and pin it to your taskbar and Start menu.`
-    - Suggest: `並釘選至工作列與開始選單。`
-    - The source is 'pin it to your taskbar and Start menu'.
-- `multi-cta-fox-doodle-pin-checkbox` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar'. The same file uses 工作列 in spotlight-pin-primary-button.
-- `multi-cta-fox-doodle-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `並釘選至工具列。`
-    - Source: `{$sel_1 ->} [macos] Keep your favorite privacy-focused browser just one click away. Set { -brand-short-name } as your default browser for opening links and keep it in your Dock. [other] Keep your favorite privacy-focuse…`
-    - Suggest: `並釘選至工作列。`
-    - The source is 'pin it to your taskbar'.
-- `root-certificate-succession-infobar-january-message` — `browser/browser/newtab/asrouter.ftl` — 'Problems' is narrowed to 'startup problems', and the date is missing 日
-    - Current: `可能會在 2025 年 1 月 14 起遇到啟動問題`
-    - Source: `<strong>Older versions of { -brand-short-name } may start to have problems on January 14, 2025.</strong>`
-    - Suggest: `可能會在 2025 年 1 月 14 日起開始遇到問題`
-    - The en-US says only 'may start to have problems'; it does not say the problems are at startup. The sibling March message writes the date with 日.
-- `set-default-menu-message-row-layout-subtitle-variant` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `保留在您的工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your Dock. [other] Keep { -brand-short-name } at your fingertips — make it your default and keep it in your taskbar.`
-    - Suggest: `保留在您的工作列`
-    - The source is 'keep it in your taskbar'.
-- `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `釘選到工具列，`
-    - Source: `Pin { -brand-shorter-name } to your taskbar so the browser you chose is always there when you need it.`
-    - Suggest: `釘選到工作列，`
-    - The source is 'Pin … to your taskbar'.
-- `home-custom-homepage-delete-address-button` — `browser/browser/newtab/newtab.ftl` — A website address is called 地址 (postal address), while the neighbouring strings use 網址
-    - Current: `刪除地址`
-    - Source: `aria-label: Delete address title: Delete address`
-    - Suggest: `刪除網址`
-    - In the same subpage, 'Enter address' and 'Add address' are rendered 請輸入網址 and 新增網址. The delete button should match them.
-- `newtab-privacy-message-info-10` — `browser/browser/newtab/newtab.ftl` — A preposition is missing before 任何網站
-    - Current: `即可任何網站都使用`
-    - Source: `Save passwords in { -brand-short-name } to use strong, unique logins everywhere.`
-    - Suggest: `即可在任何網站都使用`
-    - Without 在 the clause is ungrammatical.
-- `newtab-wallpaper-error-upload-file-type` — `browser/browser/newtab/newtab.ftl` — This file-type error tells the user to retry later instead of telling them to use an image file
-    - Current: `請稍後再重新上傳圖片。`
-    - Source: `We couldn’t upload your file. Please try again with an image file.`
-    - Suggest: `請改用圖片檔案再試一次。`
-    - The en-US says 'Please try again with an image file.' The error is about the file type, so 'try again later' sends the user the wrong way.
-- `fx100-thank-you-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar'.
-- `hnt-card-taskbar-tabs-primary-button` — `browser/browser/newtab/onboarding.ftl` — The button translates "taskbar" as 工具列 ("toolbar") instead of 工作列.
-    - Current: `將網站新增至工具列`
-    - Source: `Add sites to taskbar`
-    - Suggest: `將網站新增至工作列`
-    - The en-US says "Add sites to taskbar", meaning the Windows taskbar. The card's header (hnt-card-taskbar-tabs-header) and hnt-card-pin-body both use 工作列 for taskbar, while 工具列 means a browser toolbar. As written, the button names a different place than the header does.
-- `mr1-return-to-amo-addon-title` — `browser/browser/newtab/onboarding.ftl` — Typo: a stray 斯 after 隱私
-    - Current: `又快又有隱私斯的瀏覽器`
-    - Source: `You’ve got a fast, private browser at your fingertips. Now you can add <b>{ $addon-name }</b> and do even more with { -brand-short-name }.`
-    - Suggest: `又快又有隱私的瀏覽器`
-    - 斯 is a stray character that makes the phrase ungrammatical.
-- `mr2022-onboarding-pin-primary-button-label` — `browser/browser/newtab/onboarding.ftl` — 'Pin to taskbar' is rendered with 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 釘選到工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Pin { -brand-short-name } to taskbar`
-    - Suggest: `將 { -brand-short-name } 釘選到工作列`
-    - The source is 'Pin … to taskbar' (the Windows taskbar, 工作列). 工具列 means the browser toolbar.
-- `mr2022-onboarding-pin-primary-button-label-msix` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `釘選到工具列與開始選單`
-    - Source: `Pin { -brand-short-name } to taskbar and start menu`
-    - Suggest: `釘選到工作列與開始選單`
-    - Windows taskbar is 工作列.
-- `onboarding-checklist-pin` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar) instead of 工作列
-    - Current: `釘選到工具列`
-    - Source: `Pin { -brand-short-name } to taskbar`
-    - Suggest: `釘選到工作列`
-    - In zh-TW Windows the taskbar is 工作列. In Firefox, 工具列 is the browser toolbar, which is a different thing. Other strings that mean pinning to the taskbar already use 工作列: launch-on-login-spotlight-pin-taskbar-checkbox, spotlight-pin-primary-button, mr2022-upgrade-onboarding-pin-private-window-primary-button-label and ICONS_TASKBAR.
-- `onboarding-checklist-subtitle` — `browser/browser/newtab/onboarding.ftl` — The particle 的 is duplicated
-    - Current: `最完整的的上網體驗`
-    - Source: `Complete these steps to get the most out of your browsing experience.`
-    - Suggest: `最完整的上網體驗`
-    - Repeated particle.
-- `onboarding-refresh-tou-pin` — `browser/browser/newtab/onboarding.ftl` — 'Taskbar' is rendered 工具列 (toolbar)
-    - Current: `將 { -brand-short-name } 新增到您的工具列`
-    - Source: `{$sel_1 ->} [macos] Keep { -brand-short-name } in Dock [other] Add { -brand-short-name } to your taskbar`
-    - Suggest: `將 { -brand-short-name } 新增到您的工作列`
-    - The source is 'Add … to your taskbar'.
-- `appearance-browser-icon-entry-group` — `browser/browser/preferences/browserIcon.ftl` — The en-US says "taskbar", but the translation says 工具列, which means "toolbar".
-    - Current: `選擇要在工具列、桌面與開始選單顯示的自訂圖示。`
-    - Source: `description: Choose a custom icon for your taskbar, desktop and start menu. label: Browser icon`
-    - Suggest: `選擇要在工作列、桌面與開始選單顯示的自訂圖示。`
-    - The developer comment says the icon appears on the desktop, taskbar and Start Menu. The same file already uses 工作列 for taskbar in appearance-browser-icon-pin-button (釘選到工作列). 工具列 is the browser toolbar, which is a different thing.
-- `more-from-moz-firefox-enterprise-card` — `browser/browser/preferences/moreFromMozilla.ftl` — "regulated" is translated as 受管理 (managed), and a stray 對 makes the sentence ungrammatical.
-    - Current: `為受管理或對注重安全性的組織進行瀏覽器治理。`
-    - Source: `description: Browser governance for regulated and security-sensitive organizations. label: { -firefox-enterprise-brand-name }`
-    - Suggest: `為受法規監管及注重安全性的組織提供瀏覽器治理。`
-    - "Regulated organizations" are ones under regulatory oversight, not organizations that are "managed". Also, 或對注重安全性的組織 has a dangling 對 that breaks the sentence.
-- `permissions-site-speaker-desc` — `browser/browser/preferences/permissions.ftl` — 允許 ("allow") appears twice, which makes the sentence ungrammatical.
-    - Current: `您可指定要允許哪些網站允許選擇音訊輸出裝置。`
-    - Source: `The following websites have requested to select an audio output device. You can specify which websites are allowed to select an audio output device.`
-    - Suggest: `您可指定要允許哪些網站選擇音訊輸出裝置。`
-    - The en-US is "You can specify which websites are allowed to select an audio output device." The second 允許 is redundant and garbles the sentence.
-- `preferences-ai-controls-description` — `browser/browser/preferences/preferences.ftl` — "Features enhanced with AI" is rendered as AI 擴充功能 ("AI extension features"), while the rest of the page uses AI 強化功能.
-    - Current: `是否使用 AI 擴充功能`
-    - Source: `You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.`
-    - Suggest: `是否使用 AI 強化功能`
-    - Every other string on the AI controls page uses 強化功能 for "enhancements" (for example 封鎖 AI 強化功能). In zh-TW, 擴充 suggests add-ons or extensions, which is a different concept in Firefox settings.
-- `preferences-ai-controls-tab-group-suggestions-control` — `browser/browser/preferences/preferences.ftl` — The translation says the feature manages the user's tabs, but the source only says it suggests names and organization.
-    - Current: `管理您的分頁，並提供名稱建議。`
-    - Source: `description: Get suggestions to name and organize your tabs. label: Tab group suggestions`
-    - Suggest: `取得為分頁命名與整理分頁的建議。`
-    - The en-US is "Get suggestions to name and organize your tabs." Both naming and organizing are suggestions. The translation instead states that the feature itself manages your tabs.
-- `space-alert-over-5gb-message2` — `browser/browser/preferences/preferences.ftl` — The menu path starts with the old name 選項 ("Options"), but the page is now called 設定 ("Settings").
-    - Current: `您可以到「選項 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。`
-    - Source: `<strong>{ -brand-short-name } is running out of disk space.</strong> Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.`
-    - Suggest: `您可以到「設定 > 隱私權與安全性 > Cookie 與網站資料」清除目前儲存的網站資料。`
-    - The en-US path is Settings > Privacy & Security, and this locale names the page 設定 (settings-page-title, category-nav-heading). A user following 選項 would look for a menu entry that does not exist.
-- `delete-profile-page-title-2` — `browser/browser/profiles.ftl` — 'Profile' is rendered as 原則 ('policy') in the delete page title.
-    - Current: `刪除「{ $profilename }」原則`
-    - Source: `Delete “{ $profilename }” profile`
-    - Suggest: `刪除「{ $profilename }」設定檔`
-    - en-US is 'Delete “{ $profilename }” profile'. 原則 means policy. Every other string in this file uses 設定檔 for profile, including delete-profile-header-2 right next to it.
-- `new-profile-page-header-description` — `browser/browser/profiles.ftl` — 'Privacy protections' is rendered as 'security protections' (安全性保護).
-    - Current: `強大的安全性保護設定`
-    - Source: `Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.`
-    - Suggest: `強大的隱私保護設定`
-    - en-US is 'Firefox’s strong privacy protections are on by default'. 安全性 means security, which is a different claim. restored-profile-page-header-description has the same wording.
-- `restored-profile-page-header-description` — `browser/browser/profiles.ftl` — 'Privacy protections' is rendered as 'security protections' (安全性保護).
-    - Current: `強大的安全性保護設定`
-    - Source: `Each profile keeps its unique browsing history and settings separate from your other profiles. Plus, { -brand-short-name }’s strong privacy protections are on by default.`
-    - Suggest: `強大的隱私保護設定`
-    - Same issue as new-profile-page-header-description: the en-US says 'privacy protections'.
-- `protection-report-page-summary-default` — `browser/browser/protections.ftl` — The assertive 'protects' variant keeps the hedged 'can protect' (可).
-    - Current: `可在背景保護您的隱私`
-    - Source: `{ -brand-short-name } protects your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.`
-    - Suggest: `會在背景保護您的隱私`
-    - The developer comments separate the two summaries: one says 'can' because protections are off, this one says Firefox is actively protecting you. The translation is identical to protection-report-page-summary, so the difference is lost.
-- `protections-vpn-banner-content` — `browser/browser/protections.ftl` — The personal pronoun 他 is used for a product.
-    - Current: `他的速度`
-    - Source: `Try { -mozilla-vpn-brand-name } risk-free and see why TechRadar says, “its speed, simplicity and low monthly price make it worth a look.”`
-    - Suggest: `它的速度`
-    - The quote refers to the VPN product ('its speed'). 他 is the pronoun for a person; a thing takes 它.
-- `cfr-protections-panel-body` — `browser/browser/protectionsPanel.ftl` — 'Protects you from many of the most common trackers' became a flat promise that common trackers can't record you.
-    - Current: `{ -brand-short-name } 不讓常見的追蹤器記錄您的上網行為。`
-    - Source: `Keep your data to yourself. { -brand-short-name } protects you from many of the most common trackers that follow what you do online.`
-    - Suggest: `{ -brand-short-name } 可保護您不受許多最常見的追蹤器記錄上網行為。`
-    - The en-US limits the claim to 'many of' the common trackers. The translation drops that limit and says Firefox stops common trackers outright, a promise the product does not make.
-- `protections-panel-description-shim-allowed` — `browser/browser/protectionsPanel.ftl` — 'Partially unblocked' is rendered as plainly 'unblocked'.
-    - Current: `已解除封鎖下列標示的追蹤器`
-    - Source: `Some trackers marked below have been partially unblocked on this page because you interacted with them.`
-    - Suggest: `已部分解除封鎖下列標示的追蹤器`
-    - en-US is 'Some trackers marked below have been partially unblocked on this page'. Dropping 'partially' tells the user the trackers were fully unblocked, which overstates what the browser did.
-- `protections-panel-shim-allowed-indicator` — `browser/browser/protectionsPanel.ftl` — 'Tracker partially unblocked' became 'some trackers have been unblocked'.
-    - Current: `部分追蹤器已解除封鎖`
-    - Source: `tooltiptext: Tracker partially unblocked`
-    - Suggest: `追蹤器已部分解除封鎖`
-    - In the translation 部分 modifies the trackers ('some trackers'), not the unblocking. The en-US says each tracker is only partially unblocked.
-- `report-broken-site-panel-reason-adblocker-moz-box-button` — `browser/browser/reportBrokenSite.ftl` — 'Ad blocker' is translated as 'ad trackers' (廣告追蹤器).
-    - Current: `網站要求關閉廣告追蹤器`
-    - Source: `label: Site asked to turn off ad blocker`
-    - Suggest: `網站要求關閉廣告封鎖器`
-    - en-US is 'Site asked to turn off ad blocker'. 廣告追蹤器 means ad trackers, which is close to the opposite thing, so the report reason no longer makes sense.
-- `safeb-blocked-unwanted-page-title` — `browser/browser/safebrowsing/blockedSite.ftl` — 'Harmful programs' in the unwanted-software title is translated as 惡意軟體 ('malware'), so it reads the same as the malware title.
-    - Current: `此網站可能含有惡意軟體`
-    - Source: `The site ahead may contain harmful programs`
-    - Suggest: `此網站可能含有有害程式`
-    - en-US uses different titles for the unwanted-software page ('harmful programs') and the harmful page ('malware'). The locale renders both as 惡意軟體, even though the unwanted-software descriptions in this file use 有害軟體.
-- `menu-view-open-tabs` — `browser/browser/sidebar.ftl` — The noun phrase 'Open Tabs' reads as the command 'open a tab'.
-    - Current: `開啟分頁`
-    - Source: `label: Open Tabs`
-    - Suggest: `已開啟的分頁`
-    - The comment says 'Open Tabs' is a noun phrase for tabs currently open, not an instruction. 開啟分頁 reads as an imperative. delete-profile-tabs in profiles.ftl uses 開啟的分頁 for the same idea. sidebar-menu-open-tabs-header and sidebar-opentabs-title use the same wording.
-- `sidebar-menu-open-tabs-label` — `browser/browser/sidebar.ftl` — The noun phrase 'Open tabs' reads as the command 'open a tab'.
-    - Current: `開啟分頁`
-    - Source: `label: Open tabs`
-    - Suggest: `已開啟的分頁`
-    - The comment says this is a noun phrase, not an instruction to open tabs.
-- `speech-dispatcher-lib-missing` — `browser/browser/speechDispatcher.ftl` — The product name Speech Dispatcher is translated.
-    - Current: `語音分配器`
-    - Source: `You can’t use speech synthesis because the Speech Dispatcher library is missing.`
-    - Suggest: `Speech Dispatcher`
-    - The file comment says Speech Dispatcher is the name of a speech synthesis tool and shouldn't be localized. The same translated name appears in all five speech-dispatcher-* messages.
-- _…and 125 more._
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -396,6 +87,20 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
+
+### Proposed conventions — not applied (1)
+
+Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `firefox/locales/zh-TW/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
+
+- Do not flag an approved translation just because it uses one of several interchangeable Chinese word choices, such as an equally valid synonym or measure word. If the existing wording is accurate and natural, swapping in an alternative is not a fix. For example, 報表 and 報告 are interchangeable for "report" in crash-report buttons, and different measure words are interchangeable for permission items. A finding is still valid if the wording changes or drops meaning, leaves English untranslated, or departs from a glossary term.
+    _Behind it: 6 dismissals, 6 of them rejected in Pontoon._
+
+    - `mozac_feature_addons_permissions_browser_settings_description_for_update` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
+    - `mozac_feature_addons_permissions_content_description_item` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable for quantifiers for permission items</p>
+    - `home_bookmarks_menu_item_remove` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
+    - `ip_protection_location_recommended_label` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangeable; not better from original translation</p>
+    - `startup_crash_positive` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
+    - `unsubmitted_crash_dialog_positive_button` (android) — _rejected, reviewer's comment_: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
 
 ---
 
@@ -708,6 +413,12 @@ _Nothing reported._
 - `webauthn-related-origin-create-header` — `toolkit/toolkit/webauthnDialog.ftl` — pontoon-rejected (2026-11-08): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>should keep Passkey intact, as per glossary.</p>
 
 _One line each in `locales/zh-TW/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/zh-TW/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

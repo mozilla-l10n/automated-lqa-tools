@@ -59,7 +59,7 @@
   "last_seen": "2026-11-09",
   "locale": "el",
   "origin": {},
-  "rationale": "The tree uses … 399 times against 2 ASCII runs.",
+  "rationale": "The tree uses … 400 times against 2 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",
@@ -1575,6 +1575,30 @@
   "string_id": "sidebar-opentabs-sort-option-order",
   "suggest": "Σειρά καρτελών",
   "summary": "\"Tab order\" is rendered as \"Tab sorting\", which does not name the sort option.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Αντιγραφή καρτελών",
+  "dismissed_because": "",
+  "fid": "7aa075a7d4d2",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-09",
+  "impact": 2,
+  "last_seen": "2026-11-09",
+  "locale": "el",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this item, under \"Close Multiple\", closes all duplicates of the selected tab. «Αντιγραφή καρτελών» means \"copying/duplicating tabs\", which is the opposite kind of action.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4178d5bc",
+  "string_id": "tab-context-close-duplicate-tabs-alt",
+  "suggest": "Διπλότυπες καρτέλες",
+  "summary": "\"Duplicate Tabs\" (an adjective describing tabs) is translated as the action \"Copying tabs\".",
   "suppressed_by": ""
  },
  {
@@ -4707,7 +4731,7 @@
   "last_seen": "2026-11-09",
   "locale": "el",
   "origin": {},
-  "rationale": "The tree uses … 399 times against 2 ASCII runs.",
+  "rationale": "The tree uses … 400 times against 2 ASCII runs.",
   "reads_as_deliberate": false,
   "resolved_on": "",
   "status": "open",

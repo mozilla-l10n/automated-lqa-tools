@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 17,104 |
+| **Strings reviewed this run** | 5 of 17,104 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,15 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
+    - Current: `Correspondances`
+    - Source: `Matches`
+    - Suggest: `Matchs`
+    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
+- `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
+    - Source: `Running`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -87,7 +93,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 1053, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5193, `straight` 10 | **typographic** |
+| apostrophe | `typographic` 5194, `straight` 10 | **typographic** |
 | ellipsis | `char` 411 | **char** |
 | dash | `em` 45, `en` 9 | **em** |
 | nbsp | `total` 4079, `before-punctuation` 1789 | _mixed_ |
@@ -101,14 +107,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (35)
+## 3. Open findings (33)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
-| 3 | Degraded language (grammar, spelling, terminology) | 13 |
+| 2 | Wrong content (says something other than the English) | 17 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
 ### A. Functional, markup, variables & plurals
@@ -137,11 +143,6 @@ _Nothing in this category._
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `pour retrouver une expérience comme neuve ?`
     - The en-US promises a fresh, like-new state after cleanup, not improved browsing performance; the French makes a claim the source does not.
-- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — “Matches” in this football widget means games, but it was translated as “Correspondances” (things that match).
-    - Current: `Correspondances`
-    - Source: `Matches`
-    - Suggest: `Matchs`
-    - This is a menu option in the Wrexham AFC football widget that shows the team's matches. “Correspondances” means matching items or connections, not sports matches.
 - `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
     - Current: `Tableau`
     - Source: `Table`
@@ -249,8 +250,6 @@ _Nothing in this category._
     - Source: `(value): Sans-serif accesskey: n`
 - `fonts-serif` — `browser/browser/preferences/fonts.ftl` — browser/browser/preferences/fonts.ftl:79,81,84,86 — "Serif"/"Sans serif" vs "Sérif"/"Sans sérif" in one file; pick one.
     - Source: `(value): Serif accesskey: S`
-- `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
-    - Source: `Running`
 - `serviceworker-worker-status-running` — `devtools/client/application.ftl` — serviceworker-worker-status-running vs about-debugging-worker-status-running — devtools/client/application.ftl:43 vs devtools/client/aboutdebugging.ftl:312 — "En cours d'exécution" vs "Exécution" for the same "Running" status; align.
     - Source: `Running`
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The plural variant uses « fins » for "purposes" while the singular variant and sibling strings use « objectif(s) ».
@@ -266,7 +265,7 @@ _Nothing in this category._
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5193 times against 10 straight.
+    - The tree uses ’ 5194 times against 10 straight.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `L’évènement « key » n’est pas disponible dans GTK2 : key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
@@ -277,7 +276,7 @@ _Nothing in this category._
     - The locale's quote convention is `guillemet` (1053 occurrences).
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5193 times against 10 straight.
+    - The tree uses ’ 5194 times against 10 straight.
 
 ---
 
@@ -290,6 +289,12 @@ _Nothing in this category._
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
 
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
+
 ### Suppressed as false positives (0)
 
 _No suppression rules have matched._
@@ -300,8 +305,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (90)
+### Fixed to date (92)
 
+- `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-09
+- `about-debugging-worker-status-running` — `devtools/client/aboutdebugging.ftl` — fixed 2026-11-09
 - `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — fixed 2026-11-08
 - `contextual-manager-passwords-delete-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-11-08
 - `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-08
@@ -340,5 +347,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `browser-main-window-window-titles` — `browser/browser/browser.ftl` — fixed 2026-08-24
 - `contextual-manager-passwords-breached-origin-heading-and-message` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
 - `contextual-manager-passwords-remove-all-title` — `browser/browser/contextual-manager.ftl` — fixed 2026-08-24
-- `customkeys-conflict-confirm` — `browser/browser/customkeys.ftl` — fixed 2026-08-24
-- `sidebar-callout-survey-productive-question` — `browser/browser/featureCallout.ftl` — fixed 2026-08-24

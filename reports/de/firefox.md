@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f82b652e600a` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `363d50704369` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 17,104 |
 
@@ -273,18 +273,23 @@ _Nothing reported._
 
 ## 4. Appendix
 
-### Dismissed by hand (8)
+### Dismissed by hand (4)
 
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 - `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word "your" in the original string.</p>
-- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — auto-suggest (2026-11-02): The quoted label refers to the Windows 10 Settings > Default apps entry, which German Windows displays as "Webbrowser", not to Firefox's desktop-entry-generic-name.
-- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — auto-suggest (2026-11-02): The step describes Chrome's own password-export button, not Firefox's downloadFile.label, so matching Firefox's 'Datei speichern unter…' would be wrong.
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>"Persist Logs" is a plural form in my opinion.</p>
 - `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
-- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — auto-suggest (2026-11-02): "Freizeit" is the long-established German Firefox name for the Personal container (paired with "Arbeit" for Work). It is a deliberate localization choice that keeps the private-vs-work contrast, not a mistranslation.
-- `xslt-bad-value` — `dom/dom/xslt.ftl` — auto-suggest (2026-11-02): The string is an XSLT attribute-value error and contains no history term, so "Chronik" is irrelevant.
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (4)
+
+- `default-browser-guidance-notification-body-instruction-win10` — `browser/browser/defaultBrowserNotification.ftl` — auto-suggest (2026-11-02, string 47f66f8b): The quoted label refers to the Windows 10 Settings > Default apps entry, which German Windows displays as "Webbrowser", not to Firefox's desktop-entry-generic-name.
+- `migration-chrome-windows-password-import-step3` — `browser/browser/migrationWizard.ftl` — auto-suggest (2026-11-02, string fa53790f): The step describes Chrome's own password-export button, not Firefox's downloadFile.label, so matching Firefox's 'Datei speichern unter…' would be wrong.
+- `user-context-personal2` — `toolkit/toolkit/global/contextual-identity.ftl` — auto-suggest (2026-11-02, string 92c79088): "Freizeit" is the long-established German Firefox name for the Personal container (paired with "Arbeit" for Work). It is a deliberate localization choice that keeps the private-vs-work contrast, not a mistranslation.
+- `xslt-bad-value` — `dom/dom/xslt.ftl` — auto-suggest (2026-11-02, string cfe5ead7): The string is an XSLT attribute-value error and contains no history term, so "Chronik" is irrelevant.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/de/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

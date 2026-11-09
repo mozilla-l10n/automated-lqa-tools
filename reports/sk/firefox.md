@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `f278b81a68aa` |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `3685bd005e67` |
 | **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-08 @ `f300f0e83cb6` |
+| **Previous run** | 2026-11-09 @ `f278b81a68aa` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 96 of 16,822 |
+| **Strings reviewed this run** | 0 of 16,822 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,13 +22,9 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 _No new findings._
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `newTabAlwaysContainer.tooltip` — `browser/chrome/browser/browser.properties` — "Select container to open a new tab" translated as "Opens a new container tab"
-    - Current: `Otvorí novú kontajnerovú kartu`
-    - Source: `Select container to open a new tab`
-    - Suggest: `Vyberte kontajner, v ktorom sa otvorí nová karta`
-    - The en-US instructs the user to pick a container; the sk states the button opens a container tab, dropping the selection step. It also duplicates the second line of newTabContainer.tooltip, losing the distinction between the two tooltips.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -1092,6 +1088,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 _Nothing dismissed._
 
 _One line each in `locales/sk/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (0)
+
+_Nothing closed by the fixer._
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sk/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 
