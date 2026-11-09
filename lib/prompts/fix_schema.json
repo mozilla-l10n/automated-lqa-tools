@@ -48,11 +48,11 @@
                   },
                   "verdict": {
                     "type": "string",
-                    "enum": ["fix", "false_positive", "skip"]
+                    "enum": ["fix", "false_positive", "unreliable", "skip"]
                   },
                   "reason": {
                     "type": "string",
-                    "description": "One sentence. For false_positive, why the translation is correct, in terms a reviewer can check."
+                    "description": "One sentence. For false_positive, why the translation is correct, in terms a reviewer can check; for unreliable, why the finding cannot be confirmed."
                   }
                 },
                 "required": ["fid", "verdict", "reason"]

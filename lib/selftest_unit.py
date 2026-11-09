@@ -484,6 +484,35 @@ def run(suite) -> None:
     finally:
         digest.merge = real_merge
 
+    suite.section("The fixer closes what it cannot stand behind, and only that")
+    # fy-NL, 2026-11-05: "'Ljepblêd oanpasse' may be the localized name for
+    # custom tabs" came back as `skip`, which records nothing, and group B
+    # never ran again -- so a finding the fixer doubted stayed open for good.
+    import autosuggest
+    import json as _json
+    v = lambda verdict, reason="r": {"verdict": verdict, "reason": reason}  # noqa: E731
+    reason, why = autosuggest.closing({"a": v("unreliable", "may be the usual term")}, 0)
+    check(reason == "unreliable finding: may be the usual term" and why is None,
+          "a doubted finding is closed, and its reason says it was doubted, not disproved")
+    reason, _ = autosuggest.closing({"a": v("false_positive", "en-US has it too"),
+                                     "b": v("unreliable", "stylistic")}, 0)
+    check(reason == "en-US has it too; unreliable finding: stylistic",
+          "a string whose findings are all doubted or wrong is closed with every reason")
+    check(autosuggest.closing({"a": v("skip")}, 0) == (None, None),
+          "a real defect too big for a small edit stays open")
+    check(autosuggest.closing({"a": v("unreliable"), "b": v("skip")}, 0) == (None, None)
+          and autosuggest.closing({"a": v("unreliable"), "b": v("fix")}, 0) == (None, None),
+          "and keeps its string open: a dismissal covers the whole string")
+    reason, why = autosuggest.closing({"a": v("unreliable")}, 2)
+    check(reason is None and "2 other open finding(s)" in why,
+          "so does an open finding outside this run's groups, and the log says so")
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "prompts", "fix_schema.json"), encoding="utf-8") as fh:
+        enum = (_json.load(fh)["input_schema"]["properties"]["strings"]["items"]
+                ["properties"]["findings"]["items"]["properties"]["verdict"]["enum"])
+    check(set(autosuggest.CLOSING) | {"fix", "skip"} == set(enum),
+          "every verdict the model may give is handled, and nothing else")
+
     suite.section("A locale read-only in Pontoon is never worked on")
     check(config.load("firefox").pontoon_readonly("it"),
           "Italian is read-only for Firefox in Pontoon")

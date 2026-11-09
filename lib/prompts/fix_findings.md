@@ -20,10 +20,16 @@ on its own and give it one verdict:
   measurably uses (see below); the finding misreads the source or quotes
   text that is not in the translation. Your reason is shown to a person who
   will check it, and a string dismissed this way is hidden from every later
-  review until somebody removes the line, so when in doubt say `skip`.
-- `skip` — anything else: you are not certain either way, fixing it needs
-  rewording beyond the defect, it would need a placeholder or markup changed,
-  or it depends on context you do not have.
+  review until somebody removes the line.
+- `unreliable` — you cannot confirm the finding is a defect: the current
+  wording is plausibly acceptable, the change would be stylistic or a matter
+  of preference, or nothing you can see shows an error. Closed like a false
+  positive, and labelled as unreliable rather than wrong. Use it whenever you
+  doubt the finding itself, whether or not it would be easy to fix.
+- `skip` — the finding is right, but the defect cannot be removed with a
+  small literal edit: it needs rewording beyond the defect, or a placeholder
+  or markup changed. It stays open for a person to fix. Do not use `skip`
+  for a finding you doubt; that is `unreliable`.
 
 Rules for edits:
 

@@ -17,11 +17,21 @@ edits. Here the model gives every selected finding one verdict:
     The string is written to the locale's ``dismissed.txt`` with the model's
     reason, prefixed ``auto-suggest`` so it reads as what it is. A dismissal
     covers the whole string, so this happens only when every open finding on
-    it -- in any group -- was judged a false positive. None of it takes
-    effect until a person merges the pull request the workflow opens.
+    it -- in any group -- was judged a false positive or unreliable.
+
+``unreliable``
+    The model cannot confirm the finding is a defect at all: the wording is
+    plausibly fine, the change would be a matter of taste, or nothing in
+    front of it shows an error. Closed exactly as a false positive, with the
+    reason labelled ``unreliable finding``. This used to be a ``skip``, and a
+    skip is only offered again when the same group runs again -- fy-NL's
+    group B ran once, so its doubted findings sat open with nothing recorded
+    against them.
 
 ``skip``
-    Nothing. The finding stays open and is offered again on the next run.
+    The defect is real but cannot be removed with a small literal edit:
+    rewording, a moved placeholder. Nothing is recorded; the finding stays
+    open for a person, and is offered again when its group next runs.
 
 Without ``--submit`` nothing is sent and nothing in the repository is
 written: the edits are shown, and the partial files are left under
@@ -87,6 +97,26 @@ def _dismissed(entries: dict, f) -> bool:
 
 def _dismiss_line(f, reason: str, today: str) -> str:
     return dismiss.line(f.string_id, f.file, DISMISS_TAG, today, reason)
+
+
+# Verdicts that close a string's findings through a dismissal, and how each
+# one's reason is labelled there.
+CLOSING = {"false_positive": "", "unreliable": "unreliable finding: "}
+
+
+def closing(verdicts: dict, others: int) -> tuple[str | None, str | None]:
+    """``(dismissal reason, None)``, ``(None, why it stays open)`` or neither.
+
+    Only when every verdict on the string closes: a dismissal covers the whole
+    string, so one finding the model would fix or leave keeps it open -- and
+    so does an open finding outside the groups this run was given.
+    """
+    if not verdicts or not all(v["verdict"] in CLOSING for v in verdicts.values()):
+        return None, None
+    if others:
+        return None, (f"judged a false positive or unreliable, but the string has "
+                      f"{others} other open finding(s)")
+    return "; ".join(CLOSING[v["verdict"]] + v["reason"] for v in verdicts.values()), None
 
 
 append_dismissals = dismiss.append
@@ -349,13 +379,11 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
                 fixed.append(item)
             others = [f for f in open_findings if f.key == (item["file"], item["string_id"])
                       and f.fid not in fids]
-            if not to_fix and all(v["verdict"] == "false_positive" for v in verdicts.values()):
-                if others:
-                    skipped.append((item, "judged a false positive, but the string has "
-                                          f"{len(others)} other open finding(s)"))
-                else:
-                    reason = "; ".join(v["reason"] for v in verdicts.values())
-                    dismissals.append((item, _dismiss_line(item["findings"][0], reason, today)))
+            reason, why = closing(verdicts, len(others))
+            if why:
+                skipped.append((item, why))
+            elif reason:
+                dismissals.append((item, _dismiss_line(item["findings"][0], reason, today)))
             for fid, v in verdicts.items():
                 if v["verdict"] == "skip":
                     skipped.append((item, f"{fid} skipped: {v['reason']}"))
