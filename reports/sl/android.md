@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `eb5867992b38` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,542 |
 
@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -91,6 +90,20 @@ The count includes Focus for Android's strings for this locale, which the same t
 ## 2. Systemic items (decisions, not line items)
 
 _Nothing reported._
+
+### Proposed conventions — not applied (1)
+
+Recurring reasons in this locale's tool-written dismissals. Nothing here reaches the reviewer until a person adds it to `android/locales/sl/conventions.md`; an inferred reason is a model's guess at why a Pontoon reviewer said no.
+
+- Short UI command labels, such as buttons, links, toggles and setting labels, use the 2nd-person singular imperative (e.g. "Shrani", "Posodobi", "Omogoči", "Obnovi podatke"). This is the standard Slovenian form for commands and does not break the formal register. Do not flag it as informal, and do not suggest the plural form ("Obnovite", "Shranite"). The same applies when prose quotes a button's label: the quote must match the actual label, e.g. "Obnovi podatke" (link_sharing_toggle_title, backup-file-moz-browser-restore-step-2-1, Onboarding…AgreementButtonTitle). What still counts as a defect: full sentences and instructions addressed to the user in prose, such as descriptions, messages and help text, must use the formal (vikanje) form. A quoted label that doesn't match the real string's wording is also still an error.
+    _Behind it: 6 dismissals, 2 of them rejected in Pontoon._
+
+    - `backup-file-moz-browser-restore-step-2-1` (firefox) — _rejected, reviewer's comment_: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Sprememba na narobe. Citirani niz (backup-folder-name) je "Obnovi podatke". https://pontoon.mozilla.org/sl/firefox/browser/browser/backupSettings.ftl/?string=324818</p>
+    - `backup-file-other-browser-restore-step-3-1` (firefox) — _rejected, reason inferred_: The quoted text is probably a button label, and this locale's convention is that short button labels use the informal singular imperative, so "Obnovi podatke" likely matches the actual button rather than the "Obnovite podatke" header the finding compared it to.
+    - `link_sharing_toggle_title` — _model_: Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
+    - `onboarding_term_of_service_line_three_link_text` — _model_: Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
+    - `preference_enhanced_tracking_protection_custom_global_privacy_control` — _model_: Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
+    - `Onboarding.Modern.BrandRefresh.TermsOfUse.AgreementButtonTitle.v148` (firefox_ios) — _model_: Singular imperative is the standard Slovenian button form (cf. "Posodobi", "Dovoli"); the reviewer's own suggestion keeps "nadaljuj".
 
 ---
 
@@ -339,28 +352,33 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (18)
+### Dismissed by hand (5)
 
-- `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Straight double quotes are the measured majority convention in the sl tree (14–15 straight vs 4 curly).
 - `etp_known_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je prav, da je v rodilniku.</p>
 - `etp_suspected_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
-- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
-- `mozac_feature_applinks_open_in` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Slovenian orthography (SP) separates the ellipsis by a space after a complete word indicating omission, e.g. "Odpri v …", a standard Slovenian Mozilla convention.
-- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Each link keeps its correct placeholder (%3$s privacy policy, %4$s terms), so reordering the two items is a valid stylistic choice with no functional or semantic change.
-- `mozac_feature_summarize_disclaimer_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): "UI" is the standard Slovenian abbreviation for "umetna inteligenca"; user interface is not abbreviated UI in Slovenian.
-- `onboarding_term_of_service_line_three_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
-- `open_all_warning_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): 'več zavihkov (%d)' is a standard way to avoid plural forms; here 'več' means 'multiple' and the exact count still shows through %d.
 - `preference_auto_battery_theme` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Razumem, zakaj je bot reagiral na ta niz, ampak če se prebere kot "ohranjevalnik baterije nastavi to nastavitev", je pravilen in slogovno boljši.</p>
 - `preference_doh_increased_protection_info_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je v redu, da je mala začetnica. Slovenski pravopis ima malo drugačna pravila za alinejno naštevanje kot angleški. Bodisi morajo biti male začetnice, bodisi mora biti na koncu vsake alineje končno ločilo.</p>
-- `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
-- `preferences_enable_gecko_logs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Gecko is Mozilla's rendering engine, so "izrisovalnika Gecko" is an accurate descriptor that also allows correct declension of the brand name.
-- `search_add_custom_engine_error_missing_template` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): 'Prepričajte se, da se iskalni niz ujema z obliko primera' accurately conveys 'Check that search string matches Example format'.
-- `setup_checklist_subtitle_5_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): "Ste samo 1 korak od ciljne črte" is grammatical Slovenian; no preposition is missing, the suggestion is only stylistic.
-- `sync_failed_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): "Nazadnje sinhronizirano" after a failure message conveys the last successful sync, equivalent to the source.
-- `toast_customize_extension_collection_done` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03): Slovenian orthography puts a space before an ellipsis following a complete word, as the tree does elsewhere ("Prevajanje …").
 - `webcompat_reporter_clear_reason_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (13)
+
+- `delete_all_history_group_prompt_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string ec247628): Straight double quotes are the measured majority convention in the sl tree (14–15 straight vs 4 curly).
+- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 2b275a17): Slovenian UI labels and toggles conventionally use the 2nd-person singular imperative (e.g. "Shrani", "Prikaži"), which is not a register violation.
+- `mozac_feature_applinks_open_in` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string bd7c47c0): Slovenian orthography (SP) separates the ellipsis by a space after a complete word indicating omission, e.g. "Odpri v …", a standard Slovenian Mozilla convention.
+- `mozac_feature_prompts_identity_credentials_privacy_policy_description` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 54371095): Each link keeps its correct placeholder (%3$s privacy policy, %4$s terms), so reordering the two items is a valid stylistic choice with no functional or semantic change.
+- `mozac_feature_summarize_disclaimer_message` — `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string c1d201a3): "UI" is the standard Slovenian abbreviation for "umetna inteligenca"; user interface is not abbreviated UI in Slovenian.
+- `onboarding_term_of_service_line_three_link_text` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 1018b662): Slovenian UI command labels (buttons/links) normally use the singular imperative (e.g. 'Shrani', 'Prekliči'), independent of the formal register used in prose.
+- `open_all_warning_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 51d91efc): 'več zavihkov (%d)' is a standard way to avoid plural forms; here 'več' means 'multiple' and the exact count still shows through %d.
+- `preference_enhanced_tracking_protection_custom_global_privacy_control` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 2f1015ff): Setting labels in sl use this imperative form (cf. "Omogoči"), and the suggested "sporoči" is the same 2nd-person singular, so there is no register mismatch.
+- `preferences_enable_gecko_logs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 8a2caa37): Gecko is Mozilla's rendering engine, so "izrisovalnika Gecko" is an accurate descriptor that also allows correct declension of the brand name.
+- `search_add_custom_engine_error_missing_template` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string c77183cc): 'Prepričajte se, da se iskalni niz ujema z obliko primera' accurately conveys 'Check that search string matches Example format'.
+- `setup_checklist_subtitle_5_steps_fourth_step` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string eecc6405): "Ste samo 1 korak od ciljne črte" is grammatical Slovenian; no preposition is missing, the suggestion is only stylistic.
+- `sync_failed_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 7ee04b8c): "Nazadnje sinhronizirano" after a failure message conveys the last successful sync, equivalent to the source.
+- `toast_customize_extension_collection_done` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — auto-suggest (2026-11-03, string 41860cd2): Slovenian orthography puts a space before an ellipsis following a complete word, as the tree does elsewhere ("Prevajanje …").
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/sl/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

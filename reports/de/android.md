@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 2,601 |
 
@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -381,18 +380,23 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (8)
+### Dismissed by hand (5)
 
-- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): "Download-Link für %1$s" correctly means the download link for the app; the meaning is not reversed.
 - `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
-- `mozac_protections_dashboard_empty_subtitle` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): 'Sie werden sie hier sehen.' correctly means 'You will see them here' with formal 'Sie' as subject; the meaning is not reversed.
 - `preferences_downloads_delete_from_device_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>Sounds to me as if this is a deletion process that has been coompleted.</p>
 - `preferences_downloads_remove_from_download_history_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon: k0V4UFt5TWwQnn4xMvAosRkgFS0: <p>Sounds to me as if this is a deletion process that has been coompleted.</p>
 - `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `terms_of_use_prompt_body_line_two_alternative_link` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
-- `terms_of_use_prompt_postpone` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02): "Später erinnern" is a standard, idiomatic German button label (infinitive style used throughout German UI); no object is required.
 
 _One line each in `locales/de/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (3)
+
+- `link_sharing_toggle_title` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02, string ffe7de12): "Download-Link für %1$s" correctly means the download link for the app; the meaning is not reversed.
+- `mozac_protections_dashboard_empty_subtitle` — `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02, string 44a6f360): 'Sie werden sie hier sehen.' correctly means 'You will see them here' with formal 'Sie' as subject; the meaning is not reversed.
+- `terms_of_use_prompt_postpone` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — auto-suggest (2026-11-02, string 009aca5e): "Später erinnern" is a standard, idiomatic German button label (infinitive style used throughout German UI); no object is required.
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/de/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 

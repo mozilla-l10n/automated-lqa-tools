@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `bf7b409a0435` |
-| **Previous run** | 2026-11-08 @ `c1a76afc1b60` |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `f7a886b5b048` |
+| **Previous run** | 2026-11-09 @ `bf7b409a0435` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 1 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -55,7 +55,6 @@ _Nothing retired._
 | Android escaping (apostrophes, quotes, ampersands) | 0 |
 | printf placeholder mismatches | 0 |
 | Plural / select selector mismatches | 0 |
-| Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -353,17 +352,22 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (7)
+### Dismissed by hand (2)
 
-- `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): "Si + imparfait, conditionnel" ("Si vous poursuiviez…, vous ne devriez…") is the standard, grammatical French hypothetical construction.
-- `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): "Aidez-nous à" is the idiomatic French rendering of an object-less "Help (to) do X"; "Aidez à attraper" would be unnatural.
-- `mozac_browser_awesomebar_stock_suggestion_decrease` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): A capital "A" without an accent is the correct verb form in "A perdu"; the finding itself admits it is correct and suggests the identical text.
-- `mozac_feature_downloads_time_remaining` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): « dans %1$s » is a literal, faithful rendering of the source "in %1$s".
 - `mozac_feature_prompts_suggest_strong_password_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
-- `preference_doh_off_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02): French naturally uses the definite article here; "le serveur … par défaut" conveys the same meaning as "your default".
 - `tab_tray_close_tabs_banner_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/fr/dismissed.txt`. Delete the line and the finding returns._
+
+### Closed by the fixer (5)
+
+- `errorpage_httpsonly_message_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string 715c7d68): "Si + imparfait, conditionnel" ("Si vous poursuiviez…, vous ne devriez…") is the standard, grammatical French hypothetical construction.
+- `help_catch_trackers` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string 0e45ab51): "Aidez-nous à" is the idiomatic French rendering of an object-less "Help (to) do X"; "Aidez à attraper" would be unnatural.
+- `mozac_browser_awesomebar_stock_suggestion_decrease` — `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string a7d7c9fe): A capital "A" without an accent is the correct verb form in "A perdu"; the finding itself admits it is correct and suggests the identical text.
+- `mozac_feature_downloads_time_remaining` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string b237052a): « dans %1$s » is a literal, faithful rendering of the source "in %1$s".
+- `preference_doh_off_summary` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — auto-suggest (2026-11-02, string d5b6aabc): French naturally uses the definite article here; "le serveur … par défaut" conveys the same meaning as "your default".
+
+_The Pontoon suggestions workflow's model judged these wrong, or could not confirm them (`unreliable finding`); no person has decided. Each lapses when its string changes, and deleting its line in `locales/fr/dismissed.txt` brings the finding back now._
 
 ### Suppressed as false positives (0)
 
