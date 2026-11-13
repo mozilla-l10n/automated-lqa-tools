@@ -2318,6 +2318,110 @@
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=320897",
    "outcome": "approved",
    "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+  },
+  {
+   "date": "2026-11-13",
+   "group": "D",
+   "file": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+   "string_id": "mozac_feature_addons_permissions_browser_data_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml",
+    "key": [
+     "mozac_feature_addons_permissions_browser_data_description"
+    ]
+   },
+   "fids": [
+    "6f8478f8a217"
+   ],
+   "findings": [
+    "\"browsing history\" is rendered as \"browserskiednis\" here but as \"sneupskiednis\" in the parallel _for_update string."
+   ],
+   "source": "Clear recent browsing history, cookies, and related data",
+   "original": "Resinte browserskiednis, cookies en relatearre gegevens wiskje",
+   "text": "Resinte sneupskiednis, cookies en relatearre gegevens wiskje",
+   "status": "pending",
+   "status_date": "2026-11-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-13",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "addresses_street_address",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "addresses_street_address"
+    ]
+   },
+   "fids": [
+    "a017d90b5bea"
+   ],
+   "findings": [
+    "\"Street Address\" is translated as just \"Adres\", losing the street distinction and colliding with the generic address label."
+   ],
+   "source": "Street Address",
+   "original": "Adres",
+   "text": "Strjitadres",
+   "status": "pending",
+   "status_date": "2026-11-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-13",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "browser_custom_tab_menu_handlebar_content_description",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "browser_custom_tab_menu_handlebar_content_description"
+    ]
+   },
+   "fids": [
+    "4de6834b0ff7"
+   ],
+   "findings": [
+    "\"Custom tab menu sheet\" rendered as \"Menublêd Ljepblêd oanpasse\", turning the noun phrase into an imperative \"customize tab\"."
+   ],
+   "source": "Close custom tab menu sheet",
+   "original": "Menublêd Ljepblêd oanpasse slute",
+   "text": "Menublêd fan oanpast ljepblêd slute",
+   "status": "pending",
+   "status_date": "2026-11-13",
+   "comment": ""
+  },
+  {
+   "date": "2026-11-13",
+   "group": "B",
+   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+   "string_id": "translations_bottom_sheet_translating_in_progress",
+   "pontoon": {
+    "server": "https://pontoon.mozilla.org",
+    "project": "firefox-for-android",
+    "resource": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+    "key": [
+     "translations_bottom_sheet_translating_in_progress"
+    ]
+   },
+   "fids": [
+    "d545030c283b"
+   ],
+   "findings": [
+    "\"Translating\" (in-progress state) is translated as the infinitive \"Oersette\", identical to the \"Translate\" button, losing the progress meaning."
+   ],
+   "source": "Translating",
+   "original": "Oersette",
+   "text": "Oersette…",
+   "status": "pending",
+   "status_date": "2026-11-13",
+   "comment": ""
   }
  ]
 }
