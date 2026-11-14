@@ -69,7 +69,11 @@ _TAGGED = re.compile(rf"^.+ @ .+ — {re.escape(PONTOON_TAG)} \(\d{{4}}-\d{{2}}-
 FIXER_TAG = "auto-suggest"
 _FIXER = re.compile(rf"^.+ @ .+ — {re.escape(FIXER_TAG)} \(\d{{4}}-\d{{2}}-\d{{2}}, string [0-9a-f]+\): ")
 
-RECIPIENTS = ["flodolo+l10nqa@mozilla.com"]
+RECIPIENTS = [
+    "bolsson+l10nqa@mozilla.com",
+    "cpedraza+l10nqa@mozilla.com",
+    "flodolo+l10nqa@mozilla.com"
+]
 SITE = "https://mozilla-l10n.github.io/automated-lqa-tools/"
 BASE = "main"
 
