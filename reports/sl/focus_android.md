@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 245 |
+| **Strings reviewed this run** | 1 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,13 @@ Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
+    - Current: `Nastavi ohranjevalnik baterije`
+    - Source: `Set by Battery Saver`
+    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
+    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -74,7 +78,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 | quotes | `straight-double` 17, `curly-double` 2 | **straight-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 5 | **en** |
-| register | `informal` 4, `formal` 90 | **formal** |
+| register | `informal` 4, `formal` 91 | **formal** |
 
 ---
 
@@ -84,13 +88,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -100,11 +104,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — "Set by Battery Saver" is rendered as an imperative "Set the battery saver", reversing the meaning.
-    - Current: `Nastavi ohranjevalnik baterije`
-    - Source: `Set by Battery Saver`
-    - Suggest: `Nastavi ohranjevalnik baterije → "Nastavi ohranjevalnik baterije" naj bo "Nastavi varčevanje z baterijo" (tj. "Določi ohranjevalnik baterije")`
-    - The source means the theme is determined by the Battery Saver setting; the Slovenian reads as a command to set/configure the battery saver, i.e. the battery saver becomes the object rather than the agent.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -154,8 +154,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (6)
+### Fixed to date (7)
 
+- `preference_auto_battery_theme` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
 - `notification_browsing_session_channel_description` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `preference_autocomplete_title_remove` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `preference_privacy_should_block_cookies_cross_site_option` — `mozilla-mobile/focus-android/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
