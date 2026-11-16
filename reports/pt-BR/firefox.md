@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,801 |
+| **Strings reviewed this run** | 82 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,33 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — “Open tabs” is translated as the verb “Abrir abas” instead of the noun phrase “Abas abertas”.
+    - Current: `Abrir abas`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Abas abertas`
+    - The developer comment says this is a modified noun (tabs that are open). The label and the tooltip (“Abrir abas de seus outros dispositivos”) both read as a command to open tabs. Here they should name the open tabs synced from other devices, e.g. “Abas abertas em seus outros dispositivos”.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — “Duplicate Tabs” (tabs that are duplicates) is translated as the verb “Duplicar abas” (duplicate the tabs).
+    - Current: `Duplicar abas`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Abas duplicadas`
+    - This item sits under “Close Multiple” and closes tabs that are duplicates. “Duplicar abas” reads as an action that creates duplicates, which is the wrong meaning.
+- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — The preposition "em" is missing from the idiom "se sentir em casa".
+    - Current: `se sentir casa`
+    - Source: `Make this screen feel like home with a background you love.`
+    - Suggest: `se sentir em casa`
+    - The idiom for "feel like home" is "sentir-se em casa". Without "em", the sentence is ungrammatical.
+- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The preposition "a" is missing in "voltar ter", which should read "voltar a ter".
+    - Current: `Quando voltar ter a conexão`
+    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
+    - Suggest: `Quando voltar a ter conexão`
+    - "Voltar" in the sense of "to do something again" needs the preposition "a" before the infinitive. As written, "voltar ter" is ungrammatical.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — There is a stray space before the closing parenthesis.
+    - Current: `(diretiva Report-Only )`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `(diretiva Report-Only)`
+    - The space before ")" is part of the text the user reads, and the en-US source does not have it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +69,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,801 |
-| Missing strings | 74 |
+| Strings | 16,883 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,22 +87,7 @@ _Nothing retired._
 
 ### Completeness
 
-**74 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `browser/browser/tabContextMenu.ftl` — 14
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 9
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 5
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `dom/chrome/security/security.properties` — 2
-- `browser/browser/contextual-manager.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,12 +95,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 599, `curly-single` 124, `straight-double` 64 | **curly-double** |
+| quotes | `curly-double` 600, `curly-single` 124, `straight-double` 64 | **curly-double** |
 | apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
 | ellipsis | `char` 395, `ascii` 4 | **char** |
 | dash | `em` 49, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 10, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1538 | **informal** |
+| register | `informal` 1550 | **informal** |
 
 ---
 
@@ -101,15 +110,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (550)
+## 3. Open findings (555)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 181 |
-| 3 | Degraded language (grammar, spelling, terminology) | 266 |
-| 4 | Cosmetic (typography, spacing) | 92 |
+| 2 | Wrong content (says something other than the English) | 183 |
+| 3 | Degraded language (grammar, spelling, terminology) | 268 |
+| 4 | Cosmetic (typography, spacing) | 93 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -374,6 +383,16 @@ _Nothing reported._
     - Source: `description: Invite someone to choose the browser that puts privacy first. label: Share { -brand-product-name }`
     - Suggest: `description: Convide alguém a escolher o navegador que põe a privacidade em primeiro lugar.`
     - en-US reads "Invite someone to choose the browser that puts privacy first"; the translation omits "someone" and replaces "choose" with "use", leaving an incomplete sentence without a direct object.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — “Open tabs” is translated as the verb “Abrir abas” instead of the noun phrase “Abas abertas”.
+    - Current: `Abrir abas`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Abas abertas`
+    - The developer comment says this is a modified noun (tabs that are open). The label and the tooltip (“Abrir abas de seus outros dispositivos”) both read as a command to open tabs. Here they should name the open tabs synced from other devices, e.g. “Abas abertas em seus outros dispositivos”.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — “Duplicate Tabs” (tabs that are duplicates) is translated as the verb “Duplicar abas” (duplicate the tabs).
+    - Current: `Duplicar abas`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Abas duplicadas`
+    - This item sits under “Close Multiple” and closes tabs that are duplicates. “Duplicar abas” reads as an action that creates duplicates, which is the wrong meaning.
 - `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — “em grupo” reads as “collectively/as a group” rather than “the links belonging to the group”.
     - Current: `Copiar { $linkCount } links em grupo`
     - Source: `label: {$linkCount ->} [1] Copy link in group [other] Copy { $linkCount } links in group`
@@ -391,15 +410,7 @@ _Nothing reported._
     - Current: `Extrair dados da tela`
     - Source: `Extract canvas data`
     - Suggest: `Extrair dados do canvas`
-- `permission.popup-only.label` — `browser/chrome/browser/sitePermissions.properties` — permission.popup-only.label, permission.popup.label, permission.popup-and-framebusting.label (sitePermissions.properties) — the pop-up qualifier is dropped, so the permission reads as any window/tab opening: Abrir janelas ou abas → Abrir janelas popup; Abertura de janelas e redirecionamento de terceiros → Janelas popup e redirecionamentos de terceiros
-    - Current: `Abrir janelas ou abas`
-    - Source: `Open pop-up windows`
-    - Suggest: `Abrir janelas popup`
-- `UN_SURVEY_CHECKBOX_LABEL` — `browser/installer/custom.properties` — UNSURVEYCHECKBOXLABEL (custom.properties) — indirect interrogative needs por que, and the brand article is missing: Fale para a Mozilla porque você desinstalou $BrandShortName → Diga à Mozilla por que você desinstalou o $BrandShortName
-    - Current: `Fale para a Mozilla porque você desinstalou $BrandShortName`
-    - Source: `Tell Mozilla why you uninstalled $BrandShortName`
-    - Suggest: `Diga à Mozilla por que você desinstalou o $BrandShortName`
-- _…and 120 more; see `state/` for the full list._
+- _…and 122 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -617,6 +628,11 @@ _Nothing reported._
     - Current: `métodos de pagamentos`
     - Source: `Passwords and payments not included`
     - Suggest: `métodos de pagamento`
+- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — The preposition "em" is missing from the idiom "se sentir em casa".
+    - Current: `se sentir casa`
+    - Source: `Make this screen feel like home with a background you love.`
+    - Suggest: `se sentir em casa`
+    - The idiom for "feel like home" is "sentir-se em casa". Without "em", the sentence is ungrammatical.
 - `mr2022-onboarding-get-started-primary-subtitle` — `browser/browser/newtab/onboarding.ftl` — refers to "versão": Está repleto → Está repleta
     - Current: `Está repleto`
     - Source: `Our latest version is built around you, making it easier than ever to zip around the web. It’s packed with features we think you’ll adore.`
@@ -629,12 +645,7 @@ _Nothing reported._
     - Current: `lembre que pode importar`
     - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
     - Suggest: `lembre-se de que pode importar`
-- `onboarding-refresh-fro-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — "pernanecem" is misspelled; it should be "permanecem".
-    - Current: `pernanecem`
-    - Source: `It stays yours. { -brand-product-name } never sells personal data.`
-    - Suggest: `permanecem`
-    - The verb "permanecer" (stay/remain) is misspelled. The meaning matches the en-US "It stays yours", so only the spelling is wrong.
-- _…and 94 more; see `state/` for the full list._
+- _…and 96 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -920,11 +931,11 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
     - Current: `"Restaurar o { -brand-short-name }"`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
@@ -933,21 +944,21 @@ _Nothing reported._
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -1000,7 +1011,7 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (599 occurrences).
+    - The locale's quote convention is `curly-double` (600 occurrences).
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -1025,7 +1036,7 @@ _Nothing reported._
     - Suggest: `para <strong>`
 - `inactive-css-resize` — `devtools/client/tooltips.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `<strong>{ $property }</strong> has no effect on this element since it can only be applied to elements with an overflow value other than visible, and to certain replaced elements, such as textareas.`
-- _…and 26 more; see `state/` for the full list._
+- _…and 27 more; see `state/` for the full list._
 
 ---
 

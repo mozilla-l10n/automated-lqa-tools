@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,773 |
+| **Strings reviewed this run** | 145 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,61 @@ Also for ja: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (9)
 
-_No new findings._
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — "Separate Tabs" (undo split view) is rendered as "split the tabs", the opposite action.
+    - Current: `タブを分割`
+    - Source: `accesskey: t label: Separate Tabs`
+    - Suggest: `タブの分割を解除`
+    - The comment says this separates the two split-view tabs back to normal display; 分割 means 'split', which describes creating the split view, not ending it.
+- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — Football "Table" (league standings) is translated as 対戦表 (fixture/match chart).
+    - Current: `対戦表`
+    - Source: `Table`
+    - Suggest: `順位表`
+    - Alongside Matches and Fixtures, 'Table' is the league standings table; 対戦表 means a match schedule/bracket, duplicating Fixtures.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "Find them here" is rendered as "search here".
+    - Current: `ここで検索してください`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `ここから見つけられます`
+    - The comment says 'here' is the application menu button; the message tells users where saved groups are, not to perform a search.
+- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — "Browse to start blocking" is reduced to "Blocking started", dropping the instruction to browse.
+    - Current: `ブロック開始。`
+    - Source: `Browse to start blocking.`
+    - Suggest: `ブラウジングしてブロックを開始しましょう。`
+    - The source tells the user that browsing will start blocking; the translation states only 'start of blocking', losing the condition.
+- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The header "All set. Go do your thing." has been translated as "You can configure it however you like", which loses both the meaning that setup is complete and the idiom.
+    - Current: `思いのままに設定できます。`
+    - Source: `All set. Go do your thing.`
+    - Suggest: `準備完了です。思いのままにブラウジングしましょう。`
+    - "All set" means setup is complete. Per the developer comment, "Go do your thing" is an idiom inviting the user to do what interests them. The Japanese instead tells the user they can configure settings freely, which is a different message.
+- `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate keyword “Connection-Allowlist” has been translated.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The localization note says explicitly: Do not translate Connection-Allowlist. It is a policy or header identifier that developers search for in the console.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate keyword “Connection-Allowlist” has been translated.
+    - Current: `接続許可リスト:`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Connection-Allowlist:`
+    - The localization note says explicitly: Do not translate Connection-Allowlist.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — “would block” is rendered as an actual block, although a Report-Only policy does not block anything.
+    - Current: `リダイレクトをブロックします。`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `リダイレクトがブロックされるところでした。`
+    - en-US uses the conditional “would block” because under a Report-Only policy the redirect is only reported, not blocked. “ブロックします” says the block actually happens.
+- `about-processes-shutdown-process` — `toolkit/toolkit/about/aboutProcesses.ftl` — “Unload tabs” is translated as “close tabs”.
+    - Current: `タブを閉じて`
+    - Source: `title: Unload tabs and kill process`
+    - Suggest: `タブを解放して`
+    - Unloading a tab is not the same as closing it. The same file renders “Unload tab” as “タブを解放します” and “Close tab” as “タブを閉じます”.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
+    - Current: `porpose`
+    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
+    - Suggest: `purpose`
+    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +82,10 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
+    - Suggest: `今日の写真`
 
 ---
 
@@ -45,9 +94,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,773 |
-| Missing strings | 120 |
-| Obsolete strings | 18 |
+| Strings | 16,883 |
+| Missing strings | 0 |
+| Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,21 +112,6 @@ _Nothing retired._
 
 ### Completeness
 
-**120 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `browser/browser/newtab/newtab.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/genai.ftl` — 2
-
 **Files present but identical to en-US:**
 
 - `security/manager/chrome/pipnss/nsserrors.properties`
@@ -91,12 +125,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 447, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
+| quotes | `curly-double` 448, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 398 | **ascii** |
+| ellipsis | `ascii` 399 | **ascii** |
 | dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 5146 | **punctuation** |
+| fullwidth | `punctuation` 5178 | **punctuation** |
 
 ---
 
@@ -106,7 +140,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (150)
+## 3. Open findings (157)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -126,8 +160,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 68 |
-| 3 | Degraded language (grammar, spelling, terminology) | 43 |
+| 2 | Wrong content (says something other than the English) | 77 |
+| 3 | Degraded language (grammar, spelling, terminology) | 41 |
 | 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
@@ -344,6 +378,11 @@ _Also listed under their own category below._
     - Source: `Explore light or dark themes and wallpapers that make the new { -brand-product-name } feel more like yours.`
     - Suggest: `新しい { -brand-product-name } をより自分らしく感じられるようにする壁紙やライトテーマ、ダークテーマ`
     - The source says the themes/wallpapers make the new browser feel more like the user's own; the ja instead says they give it a new look, and drops "new" as a modifier of the product.
+- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — "Browse to start blocking" is reduced to "Blocking started", dropping the instruction to browse.
+    - Current: `ブロック開始。`
+    - Source: `Browse to start blocking.`
+    - Suggest: `ブラウジングしてブロックを開始しましょう。`
+    - The source tells the user that browsing will start blocking; the translation states only 'start of blocking', losing the condition.
 - `newtab-recent-searches-empty-recent` — `browser/browser/newtab/newtab.ftl` — Empty-state message turned into a statement that searches are shown, contradicting the empty state.
     - Current: `ここに表示される最近の検索から選んでいつでも再検索できます。`
     - Source: `Recent searches will show here so you can pick them up again anytime.`
@@ -384,6 +423,16 @@ _Also listed under their own category below._
     - Source: `aria-label: Your images, wallpapers that you have saved`
     - Suggest: `aria-label: 保存された画像、あなたが保存した壁紙`
     - The en-US label names the tile ("Your images") and then explains it ("wallpapers that you have saved"); the Japanese instead lists two separate things (images and wallpapers), which misinforms screen reader users about what the tile contains.
+- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — Football "Table" (league standings) is translated as 対戦表 (fixture/match chart).
+    - Current: `対戦表`
+    - Source: `Table`
+    - Suggest: `順位表`
+    - Alongside Matches and Fixtures, 'Table' is the league standings table; 対戦表 means a match schedule/bracket, duplicating Fixtures.
+- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The header "All set. Go do your thing." has been translated as "You can configure it however you like", which loses both the meaning that setup is complete and the idiom.
+    - Current: `思いのままに設定できます。`
+    - Source: `All set. Go do your thing.`
+    - Suggest: `準備完了です。思いのままにブラウジングしましょう。`
+    - "All set" means setup is complete. Per the developer comment, "Go do your thing" is an idiom inviting the user to do what interests them. The Japanese instead tells the user they can configure settings freely, which is a different message.
 - `onboarding-minimal-tabs-description` — `browser/browser/newtab/onboarding.ftl` — aria-description translated as an action rather than a description of the depicted browser window.
     - Current: `ブラウザーウィンドウの側面に沿って、タブを最小化されたサイドバー内に小さなアイコンのように表示します。`
     - Source: `aria-description: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
@@ -409,6 +458,11 @@ _Also listed under their own category below._
     - Source: `Play with your look`
     - Suggest: `お好みの見た目で楽しもう`
     - The string is about the theme/appearance, not the layout; レイアウト is used for the separate tab-layout strings and confuses the two.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "Find them here" is rendered as "search here".
+    - Current: `ここで検索してください`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `ここから見つけられます`
+    - The comment says 'here' is the application menu button; the message tells users where saved groups are, not to perform a search.
 - `speech-recognition-model-download-message` — `browser/browser/permissions.ftl` — "the audio never leaves your device" is rendered as "the audio only remains on this device", and "~{ $sizeMB } MB" (approximately) is rendered as "{ $sizeMB } MB or less".
     - Current: `音声はこの端末にしか残りません。セットアップを続けると、音声認識モデル ({ $sizeMB } MB 以下) のデータがダウンロードされます。`
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
@@ -458,6 +512,11 @@ _Also listed under their own category below._
     - Source: `label: Most visited`
     - Suggest: `訪問回数の多い順`
     - The en-US sorts history by number of visits (visited), not by display count; ja elsewhere uses 訪問回数 for visit count.
+- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — "Separate Tabs" (undo split view) is rendered as "split the tabs", the opposite action.
+    - Current: `タブを分割`
+    - Source: `accesskey: t label: Separate Tabs`
+    - Suggest: `タブの分割を解除`
+    - The comment says this separates the two split-view tabs back to normal display; 分割 means 'split', which describes creating the split view, not ending it.
 - `decoder.noCodecs.button` — `browser/chrome/browser/browser.properties` — "Learn how" button label translated as "利用方法" (usage/how to use) rather than a learn-more style label.
     - Current: `利用方法`
     - Source: `Learn how`
@@ -487,30 +546,7 @@ _Also listed under their own category below._
     - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
     - Suggest: `Connection-Allowlist:`
     - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy that developers need to recognize.
-- `ConnectionAllowlistReportOnlyBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
-    - Current: `接続許可リスト:`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy.
-- `about-sync-log-empty-filtered` — `toolkit/services/aboutSyncLog.ftl` — "the current filters" is translated as "the current search".
-    - Current: `現在の検索と一致するログはありません。`
-    - Source: `No logs match the current filters.`
-    - Suggest: `現在の絞り込み条件と一致するログはありません。`
-    - The source refers to the filter controls (type/date filters), not to a search; the page has both, so naming the wrong one misleads the user.
-- `about-sync-log-page-header` — `toolkit/services/aboutSyncLog.ftl` — "Diagnostic logs written by sync." is translated as "diagnoses the logs written by sync", turning a noun phrase into an action.
-    - Current: `description: 同期機能により書き込まれたログを診断します。`
-    - Source: `description: Diagnostic logs written by sync. heading: Sync logs`
-    - Suggest: `description: 同期機能により書き込まれた診断ログです。`
-    - The source describes what the logs are (diagnostic logs written by sync), not an action the page performs on them.
-- `mlmodel-formfill-engine` — `toolkit/toolkit/about/aboutAddons.ftl` — "address forms" mistranslated as "アドレスフォーム" (email/URL address), losing the meaning of postal address forms.
-    - Current: `アドレスフォームの入力の補助`
-    - Source: `{ -brand-short-name } uses this to help fill in address forms`
-    - Suggest: `住所フォームの入力の補助`
-    - en-US "address forms" refers to postal address entry forms in form autofill; アドレス in Japanese Firefox usually means URL/email address, so the meaning is wrong.
-- `about-logging-title` — `toolkit/toolkit/about/aboutLogging.ftl` — about-logging-title (aboutLogging.ftl) — "About Logging" → HTTP ログについて; the page now covers media, gfx, WebRTC and WebGPU presets. → ログについて Verified.
-    - Source: `About Logging`
-    - Suggest: `HTTP ログについて`
-- _…and 19 more; see `state/` for the full list._
+- _…and 28 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -551,11 +587,6 @@ _Also listed under their own category below._
     - Current: `開きなおす`
     - Source: `accesskey: o label: {$tabCount ->} [1] Reopen Closed Tab [other] Reopen Closed Tabs`
     - Suggest: `開き直す`
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
-    - Current: `porpose`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `purpose`
-    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
 - `autofill-delete-payment-method-os-prompt-macos` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Typo "支払い時方法" instead of "支払い方法", and the macOS fragment is phrased as a full sentence unlike the source fragment.
     - Current: `保存した支払い時方法情報を削除しようとしています`
     - Source: `delete stored payment method information`
@@ -594,8 +625,6 @@ _Also listed under their own category below._
     - Source: `Every month, { -brand-short-name } blocks an average of 3,000+ trackers per user, giving you safe, speedy access to the good internet.`
 - `newtab-picture-image-alt` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Source: `Wikimedia Commons picture of the day`
-    - Suggest: `今日の写真`
-- `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
     - Suggest: `今日の写真`
 - `newtab-stocks-search-input` — `browser/browser/newtab/newtab.ftl` — The placeholder for the search input is rendered as a verb phrase "〜します" instead of a noun/placeholder form.
     - Current: `placeholder: 企業名または銘柄コードで検索します`
@@ -703,8 +732,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (274)
+### Fixed to date (275)
 
+- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-16
 - `policy-BlockAboutSupport2` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-10-26
 - `newtab-stocks-search-button` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
 - `newtab-stocks-watchlist-empty-search` — `browser/browser/newtab/newtab.ftl` — fixed 2026-10-05
@@ -744,4 +774,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `preferences-web-appearance-link` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `search-keyword-warning-engine` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `security-enable-safe-browsing` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `sync-currently-syncing-addresses` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24

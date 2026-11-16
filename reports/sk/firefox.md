@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,822 |
+| **Strings reviewed this run** | 62 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,822 |
-| Missing strings | 53 |
+| Strings | 16,883 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -54,7 +54,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 91 |
+| Plural variants (dead or missing forms) | 94 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -63,22 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**53 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 15
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/preferences/preferences.ftl` — 5
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
-- `toolkit/toolkit/about/aboutGlean.ftl` — 1
-- `dom/dom/manifest.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -96,8 +81,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 91 strings** — 91 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label` …and 79 more
+- **plurals — 94 strings** — 94 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-bulk-selected-count`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames` …and 82 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 

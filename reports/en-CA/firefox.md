@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,754 |
+| **Strings reviewed this run** | 129 of 16,884 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,9 +45,9 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,754 |
-| Missing strings | 121 |
-| Obsolete strings | 0 |
+| Strings | 16,884 |
+| Missing strings | 0 |
+| Obsolete strings | 1 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
@@ -63,22 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**121 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `browser/browser/newtab/newtab.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/genai.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,9 +71,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 699, `curly-single` 64, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1010, `straight` 4 | **typographic** |
-| ellipsis | `char` 400 | **char** |
+| quotes | `curly-double` 700, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1024, `straight` 4 | **typographic** |
+| ellipsis | `char` 401 | **char** |
 | dash | `em` 84, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,837 |
+| **Strings reviewed this run** | 11 of 16,848 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — "caracter" is missing its written accent; the correct spelling is "carácter".
+    - Current: `{ $count } caracter restante`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `{ $count } carácter restante`
+    - The singular of "caracteres" is spelled "carácter" in Spanish (it's stressed on the second-to-last syllable and ends in -r, so it takes an accent). Without the accent it's a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,837 |
-| Missing strings | 38 |
+| Strings | 16,848 |
+| Missing strings | 35 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,11 +67,11 @@ _Nothing retired._
 
 ### Completeness
 
-**38 strings** are not translated yet, concentrated in:
+**35 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 11
-- `browser/browser/newtab/onboarding.ftl` — 7
+- `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
+- `browser/browser/newtab/onboarding.ftl` — 5
 - `browser/browser/featureCallout.ftl` — 3
 - `browser/browser/preferences/preferences.ftl` — 3
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 2
@@ -102,14 +106,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (298)
+## 3. Open findings (299)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
 | 2 | Wrong content (says something other than the English) | 113 |
-| 3 | Degraded language (grammar, spelling, terminology) | 101 |
+| 3 | Degraded language (grammar, spelling, terminology) | 102 |
 | 4 | Cosmetic (typography, spacing) | 31 |
 
 ### A. Functional, markup, variables & plurals
@@ -694,6 +698,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `It looks like you haven’t started { -brand-short-name } in a while. Do you want to clean it up for a fresh, like-new experience? And by the way, welcome back!`
     - Suggest: `Parece que no iniciaste { -brand-short-name } desde hace un tiempo.`
     - The negative perfect requires "desde hace"; also the surrounding es-AR copy uses voseo rather than "ha iniciado".
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — "caracter" is missing its written accent; the correct spelling is "carácter".
+    - Current: `{ $count } caracter restante`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `{ $count } carácter restante`
+    - The singular of "caracteres" is spelled "carácter" in Spanish (it's stressed on the second-to-last syllable and ends in -r, so it takes an accent). Without the accent it's a spelling error.
 - `onboarding-refresh-fro-import-body` — `browser/browser/newtab/onboarding.ftl` — Pronoun disagreement: "los datos" (plural) referenced by singular "lo".
     - Current: `{ -brand-product-name } nunca lo venderá.`
     - Source: `Your personal data stays personal. { -brand-product-name } will never sell it.`
@@ -949,12 +958,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
     - Suggest: `para JSON recuperada usando XMLHttpRequest`
     - Misspelling of “recuperada”.
-- `KillScriptWithDebugMessage` — `dom/chrome/dom/dom.properties` — Typo “el el debugger”.
-    - Current: `abrir el script el el debugger`
-    - Source: `A script on this page may be busy, or it may have stopped responding. You can stop the script now, open the script in the debugger, or let the script continue.`
-    - Suggest: `abrir el script en el depurador`
-    - Duplicated article instead of the preposition “en”; appears in a user-facing dialog.
-- _…and 30 more; see `state/` for the full list._
+- _…and 31 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

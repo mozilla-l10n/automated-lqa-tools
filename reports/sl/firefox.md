@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,012 |
+| **Strings reviewed this run** | 69 of 16,069 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,67 @@ Also for sl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Podvoji zavihke" is the command "duplicate tabs", but the item names the duplicate tabs that the Close Multiple submenu will close.
+    - Current: `Podvoji zavihke`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Podvojene zavihke`
+    - The developer comment says this label sits under "Close Multiple" and closes all duplicate tabs. The Slovenian imperative tells the user it will create duplicates, so the menu says the opposite of what it does.
+- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — "Mini okno" is capitalized here, but every other string writes it as "mini okno".
+    - Current: `v Mini okno`
+    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
+    - Suggest: `v mini okno`
+    - The other miniWindow.ftl strings (e.g. "Premakni v mini okno", "Izberite, kaj premakniti v mini okno") write the feature name in lowercase.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (12)
 
-_Nothing was fixed._
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
+    - Current: `Drugi osebe`
+    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
+    - Suggest: `Druge osebe`
+    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
+    - Current: `vstavljenih v proces`
+    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
+    - Suggest: `vstavljene v proces`
+    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
+    - Current: `enako poreklo`
+    - Source: `The id member must have the same origin as the start_url member.`
+    - Suggest: `enak izvor`
+    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
+    - Current: `jih odstranite, združite ali posamič izvozite`
+    - Source: `Reorder, remove, merge, and export pages.`
+    - Suggest: `jih odstranite, združite in izvozite`
+    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
+- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
+    - Current: `Organizirajte dokumente`
+    - Source: `Organize pages`
+    - Suggest: `Organizirajte strani`
+    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
+- `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
+    - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
+    - Suggest: `"Strani za deljenje…".`
+- `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — "Kannada" (Indic script) rendered "kanadsko" (reads as Canadian, colliding with fonts-langgroup-canadian). → "kannada".
+    - Source: `label: Kannada`
+    - Suggest: `"kannada".`
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
+    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
+    - Suggest: `"…kombinacij."`
+- `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
+    - Source: `async touch input disabled due to unsupported pref: { $preferenceKey }`
+    - Suggest: `"…nepodprte…"`
+- `wheel-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
+    - Source: `async wheel input disabled due to unsupported pref: { $preferenceKey }`
+    - Suggest: `"…nepodprte…"`
+- `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
+    - Source: `Certificate Authority`
+    - Suggest: `align on "overitelj`
+- `contentanalysis-slow-agent-dialog-body-file-and-more` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — contentanalysis-slow-agent-dialog-body-file-and-more ([one]) — toolkit/toolkit/contentanalysis/contentanalysis.ftl — Dual verb "sta" with singular adjective "skladen". → "skladna" (dual, agreeing with two subjects).
+    - Source: `{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count }…`
+    - Suggest: `"skladna"`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +99,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,012 |
-| Missing strings | 863 |
+| Strings | 16,069 |
+| Missing strings | 814 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,15 +117,15 @@ _Nothing retired._
 
 ### Completeness
 
-**863 strings** are not translated yet, concentrated in:
+**814 strings** are not translated yet, concentrated in:
 
 - `browser/browser/aiWindow.ftl` — 140
 - `browser/browser/ipProtection.ftl` — 86
 - `browser/browser/aiWindowContent.ftl` — 58
 - `dom/chrome/dom/dom.properties` — 53
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
-- `browser/browser/preferences/preferences.ftl` — 41
-- `browser/browser/newtab/newtab.ftl` — 41
+- `browser/browser/newtab/newtab.ftl` — 45
+- `browser/browser/preferences/preferences.ftl` — 42
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 33
 - `dom/chrome/security/security.properties` — 30
 - `browser/browser/aiFeatures.ftl` — 27
@@ -106,15 +160,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (10)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 15 |
-| 4 | Cosmetic (typography, spacing) | 1 |
+| 2 | Wrong content (says something other than the English) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -132,52 +186,28 @@ _Nothing in this category._
     - Source: `{ -brand-short-name } runs speech recognition locally, so the audio never leaves your device. To set this up, a ~{ $sizeMB } MB download will start when you continue.`
     - Suggest: `V { -brand-short-name } prepoznavanje govora poteka krajevno, zato zvok nikoli ne zapusti vaše naprave. Za nastavitev se bo ob nadaljevanju začel prenos velikosti ~{ $sizeMB } MB.`
     - The en-US says the download will start when you continue; the target states it will simply be downloaded, omitting the condition, and the second sentence also lacks a subject ("bo na napravo preneslo").
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Podvoji zavihke" is the command "duplicate tabs", but the item names the duplicate tabs that the Close Multiple submenu will close.
+    - Current: `Podvoji zavihke`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Podvojene zavihke`
+    - The developer comment says this label sits under "Close Multiple" and closes all duplicate tabs. The Slovenian imperative tells the user it will create duplicates, so the menu says the opposite of what it does.
 - `options-stylesheets-in-the-debugger-tooltip` — `devtools/client/toolbox-options.ftl` — Tooltip drops "and view" from "List and view stylesheets in the debugger".
     - Current: `Prikaži seznam slogovnih predlog v razhroščevalniku`
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
-    - Current: `jih odstranite, združite ali posamič izvozite`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `jih odstranite, združite in izvozite`
-    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
-- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
-    - Current: `Organizirajte dokumente`
-    - Source: `Organize pages`
-    - Suggest: `Organizirajte strani`
-    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
 
 ### C. Grammar, agreement & spelling
 
-- `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
-    - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
-    - Suggest: `"Strani za deljenje…".`
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
-    - Current: `Drugi osebe`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `Druge osebe`
-    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
-    - Current: `vstavljenih v proces`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `vstavljene v proces`
-    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
-- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
-    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
-    - Suggest: `"…kombinacij."`
-- `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
-    - Source: `async touch input disabled due to unsupported pref: { $preferenceKey }`
-    - Suggest: `"…nepodprte…"`
-- `wheel-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
-    - Source: `async wheel input disabled due to unsupported pref: { $preferenceKey }`
-    - Suggest: `"…nepodprte…"`
-- `contentanalysis-slow-agent-dialog-body-file-and-more` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — contentanalysis-slow-agent-dialog-body-file-and-more ([one]) — toolkit/toolkit/contentanalysis/contentanalysis.ftl — Dual verb "sta" with singular adjective "skladen". → "skladna" (dual, agreeing with two subjects).
-    - Source: `{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count }…`
-    - Suggest: `"skladna"`
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — "Mini okno" is capitalized here, but every other string writes it as "mini okno".
+    - Current: `v Mini okno`
+    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
+    - Suggest: `v mini okno`
+    - The other miniWindow.ftl strings (e.g. "Premakni v mini okno", "Izberite, kaj premakniti v mini okno") write the feature name in lowercase.
 - `newtab-section-block-button` — `browser/browser/newtab/newtab.ftl` — newtab "Block" verb — browser/browser/newtab/newtab.ftl — Inconsistent across the same feature: newtab-section-block-button etc. use "Prepovej/Prepovedano/Dovoli" while the topic strings (newtab-section-block-topic etc.) use "Blokiraj/Blokirano/Odblokiraj". → standardize on one verb.
     - Source: `Block`
     - Suggest: `standardize on one verb.`
@@ -190,17 +220,6 @@ _Nothing in this category._
 - `newtab-section-follow-topic` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — "slediti" (newtab-section-follow-button etc.) vs "spremljati" (newtab-section-follow-topic etc.) within the same feature. → pick one verb.
     - Source: `aria-label: Follow { $topic }`
     - Suggest: `pick one verb.`
-- `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — "Kannada" (Indic script) rendered "kanadsko" (reads as Canadian, colliding with fonts-langgroup-canadian). → "kannada".
-    - Source: `label: Kannada`
-    - Suggest: `"kannada".`
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
-    - Current: `enako poreklo`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `enak izvor`
-    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
-- `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
-    - Source: `Certificate Authority`
-    - Suggest: `align on "overitelj`
 
 ### E. Typography, punctuation & spacing
 
@@ -256,8 +275,20 @@ _Suppressions live in `locales/sl/suppressions.yaml`. Removing a rule brings its
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (58)
+### Fixed to date (70)
 
+- `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — fixed 2026-11-16
+- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — fixed 2026-11-16
+- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-16
+- `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — fixed 2026-11-16
+- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — fixed 2026-11-16
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-16
+- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-11-16
+- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-11-16
+- `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-11-16
+- `wheel-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — fixed 2026-11-16
+- `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — fixed 2026-11-16
+- `contentanalysis-slow-agent-dialog-body-file-and-more` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — fixed 2026-11-16
 - `restore-from-backup-profiles-disabled-message` — `browser/browser/backupSettings.ftl` — fixed 2026-11-05
 - `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — fixed 2026-11-05
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-11-05
@@ -286,15 +317,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `policy-AIControls` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-07-29 (undated)
 - `policy-Handlers` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-07-29 (undated)
 - `policy-PopupBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-07-29 (undated)
-- `connection-proxy-noproxy-desc` — `browser/browser/preferences/connection.ftl` — fixed 2026-07-29 (undated)
-- `fxa-qrcode-error-body` — `browser/browser/preferences/fxaPairDevice.ftl` — fixed 2026-07-29 (undated)
-- `browser-theme-group` — `browser/browser/preferences/preferences.ftl` — fixed 2026-07-29 (undated)
-- `protections-panel-site-not-working-view-issue-list-fonts` — `browser/browser/protectionsPanel.ftl` — fixed 2026-07-29 (undated)
-- `safeb-blocked-malware-page-short-desc` — `browser/browser/safebrowsing/blockedSite.ftl` — fixed 2026-07-29 (undated)
-- `protections-not-blocking-tracking-content` — `browser/browser/siteProtections.ftl` — fixed 2026-07-29 (undated)
-- `accessibility-keyboard-issue-mouse-only` — `devtools/client/accessibility.ftl` — fixed 2026-07-29 (undated)
-- `options-disable-http-cache-tooltip` — `devtools/client/toolbox-options.ftl` — fixed 2026-07-29 (undated)
-- `xslt-network-error` — `dom/dom/xslt.ftl` — fixed 2026-07-29 (undated)
-- `certmgr-edit-cert-trust-email` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-29 (undated)
-- `pkcs12-unknown-err-restore` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-07-29 (undated)
-- `devinfo-fwversion` — `security/manager/security/certificates/deviceManager.ftl` — fixed 2026-07-29 (undated)

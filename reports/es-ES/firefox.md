@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 15,371 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 321 |
 | Strings | 15,371 |
-| Missing strings | 1,504 |
+| Missing strings | 1,512 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 10 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +63,16 @@ _Nothing retired._
 
 ### Completeness
 
-**1,504 strings** are not translated yet, concentrated in:
+**1,512 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 226
+- `browser/browser/newtab/newtab.ftl` — 230
 - `browser/browser/aiWindow.ftl` — 135
 - `browser/browser/newtab/onboarding.ftl` — 80
 - `browser/browser/appmenu.ftl` — 63
 - `browser/browser/browser.ftl` — 53
 - `browser/browser/aiWindowContent.ftl` — 51
 - `browser/browser/ipProtection.ftl` — 48
-- `browser/browser/preferences/preferences.ftl` — 47
+- `browser/browser/preferences/preferences.ftl` — 48
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 33
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
 - `browser/browser/tabContextMenu.ftl` — 28

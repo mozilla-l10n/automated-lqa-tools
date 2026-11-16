@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 17,104 |
+| **Strings reviewed this run** | 16 of 17,112 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,42 +18,41 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
+    - Current: `unerwartet wechseln`
+    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
+    - Suggest: `sich unerwartet verschieben`
+    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
 
-### ✅ Fixed since the last run (6)
+### ✅ Fixed since the last run (5)
 
-- `search-engine-list` — `browser/browser/preferences/preferences.ftl` — "shortcuts" (search shortcuts/keywords) is rendered as "Tastenkombinationen" (keyboard shortcuts).
-    - Current: `Suchmaschinen und Tastenkombinationen`
-    - Source: `aria-label: Search engines and shortcuts`
-    - Suggest: `Suchmaschinen und Suchverknüpfungen`
-    - The list in search preferences contains search engines and search shortcuts (e.g. @bookmarks keywords), not keyboard combinations; "Tastenkombinationen" names the wrong thing for screen reader users.
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The compound of brand name and "Einstellungen" is missing its hyphen.
-    - Current: `{ -brand-short-name } Einstellungen`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `{ -brand-short-name }-Einstellungen`
-    - German spelling requires a hyphenated compound here (e.g. "Firefox-Einstellungen"), and the de locale uses that form elsewhere.
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the adjective "Open" into an imperative ("Öffnen Sie Tabs").
-    - Current: `Öffnen Sie Tabs von Ihren anderen Geräten`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Offene Tabs von Ihren anderen Geräten`
-    - The developer comment says "Open" modifies the noun (tabs that are open), so it is not an instruction to open tabs.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Tabs duplizieren" means "duplicate (copy) tabs" instead of naming the duplicate tabs that get closed.
-    - Current: `Tabs duplizieren`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Doppelte Tabs`
-    - The developer comment says this item closes duplicate tabs in the "Close Multiple" menu. "Duplicate" is an adjective here, but it was translated as a verb (to copy).
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here. The sibling string dom-manifest-id-not-same-origin correctly uses "wie".
-- `dom-manifest-start-url-should-be-same-origin` — `dom/dom/manifest.ftl` — "denselben … als" is ungrammatical; the comparison after "derselbe" takes "wie".
-    - Current: `denselben Ursprung (origin) als das Dokument`
-    - Source: `The start URL must be same origin as document.`
-    - Suggest: `denselben Ursprung (origin) wie das Dokument`
-    - German uses "derselbe … wie" for comparisons of identity. "als" is wrong here.
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
+    - Current: `wenn ein anderes Firefox-Profil`
+    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
+    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
+    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
+    - Current: `Websites erlauben, App-Links zu öffnen.`
+    - Source: `accesskey: A label: Allow sites to ask to open app links.`
+    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
+    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
+    - Current: `unerwartet wechseln`
+    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
+    - Suggest: `sich unerwartet verschieben`
+    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
+    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
+    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
+    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
+    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
+    - Current: `unerwartet wechseln`
+    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
+    - Suggest: `sich unerwartet verschieben`
+    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -74,7 +73,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 341 |
-| Strings | 17,104 |
+| Strings | 17,112 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -124,7 +123,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 416 | **char** |
 | dash | `em` 19, `en` 70 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4055 | **formal** |
+| register | `informal` 12, `formal` 4057 | **formal** |
 
 ---
 
@@ -134,15 +133,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (9)
+## 3. Open findings (3)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -153,21 +152,7 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
-    - Current: `wenn ein anderes Firefox-Profil`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
-    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
-    - Current: `Websites erlauben, App-Links zu öffnen.`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
-    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
-- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate event name "characterboundsupdate" is misspelled as "charactersboundsupdate".
-    - Current: `charactersboundsupdate-Ereignis-Listener`
-    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
-    - Suggest: `characterboundsupdate-Ereignis-Listener`
-    - The developer comment says not to translate "characterboundsupdate". It is a DOM event name, and the extra "s" turns it into an event that does not exist, which misleads developers reading the console warning.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -180,16 +165,6 @@ _Nothing in this category._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `empfehlen Sie { -brand-product-name }`
     - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
-- `close-tabs-to-the-end-alt` — `browser/browser/tabContextMenu.ftl` — The label adds a redundant "schließen" inside the "Close Multiple" submenu and doesn't match its sibling "Tabs links davon".
-    - Current: `Tabs rechts schließen`
-    - Source: `accesskey: i label: Tabs to Right`
-    - Suggest: `Tabs rechts davon`
-    - The source is "Tabs to Right", parallel to "Tabs to Left" ("Tabs links davon"). The verb is already in the parent menu.
-- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
-    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
-    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
-    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
-    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
 
 ### E. Typography, punctuation & spacing
 
@@ -198,20 +173,17 @@ _Nothing in this category._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `Teilen Sie { -brand-product-name }</label> oder`
     - German does not use a comma before "oder" joining the last item of a simple enumeration; the comma is a direct carry-over of the English serial comma.
-- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — There is a comma before "oder", which German doesn't use when "oder" joins two noun phrases.
-    - Current: `mehr Datenschutz, oder ein deaktiviertes VPN`
-    - Source: `description: Set rules for sites that need extra privacy or VPN turned off. label: Manage VPN rules`
-    - Suggest: `mehr Datenschutz oder ein deaktiviertes VPN`
-    - German doesn't put a comma before "oder" when it joins two objects of the same verb. The en-US source has no comma here either.
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (5)
+### Dismissed by hand (7)
 
 - `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 - `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>This translation ignores the word "your" in the original string.</p>
+- `close-tabs-to-the-end-alt` — `browser/browser/tabContextMenu.ftl` — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; likely reason (inferred): Inferred: the suggestion was identical to the existing translation ("r", the access key only), so it changed nothing and didn't touch the label the finding was about.
+- `ip-protection-site-rules-button-1` — `browser/browser/ipProtection.ftl` — pontoon-rejected (2026-11-09): rejected in Pontoon: mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>This seems to be removing the colon before "oder"</p>; d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>Yes and this comma shouldn´t be removed there.</p>
 - `policy-PasswordManagerEnabled2` — `browser/browser/policies/policies-descriptions.ftl` — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; reason unclear
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — pontoon-rejected (2026-11-03): rejected in Pontoon: d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>"Persist Logs" is a plural form in my opinion.</p>
 - `translations-panel-revisit-to-label` — `browser/browser/translations.ftl` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
@@ -268,8 +240,12 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (64)
+### Fixed to date (68)
 
+- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-11-16
+- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-16
+- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-16
+- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-16
 - `search-engine-list` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
 - `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
 - `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-11-09
@@ -306,7 +282,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `customkeys-conflict-confirm-body` — `browser/browser/customkeys.ftl` — fixed 2026-07-27
 - `default-browser-guidance-notification-title` — `browser/browser/defaultBrowserNotification.ftl` — fixed 2026-07-27
 - `migration-no-permissions-instructions` — `browser/browser/migrationWizard.ftl` — fixed 2026-07-27
-- `fxa-menu-message-backup-sync-secondary-text` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `windows-10-eos-challenger-sync-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27
-- `windows-10-eos-sync-callout-privacy-screen-1-title` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-07-27

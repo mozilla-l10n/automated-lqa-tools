@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,805 |
+| **Strings reviewed this run** | 78 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,38 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (6)
 
-_No new findings._
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip translates "Open" as an imperative verb ("Otevírejte"), but it means tabs that are open.
+    - Current: `Otevírejte panely z ostatních zařízení`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Otevřené panely z ostatních zařízení`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The tooltip describes the synced data type, like the other engine tooltips ("Addresses you've saved"). The Czech reads as an instruction to open tabs.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as a verb ("Zobrazit"), but the comment says it is a noun.
+    - Current: `Zobrazit`
+    - Source: `View`
+    - Suggest: `Zobrazení`
+    - The developer comment says "View" is a noun here, as in the view the widget shows. It opens a submenu for switching views. "Zobrazit" means "to show/display".
+- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — Misspelled imperative "ciťte" instead of "cíťte".
+    - Current: `ciťte`
+    - Source: `Make this screen feel like home with a background you love.`
+    - Suggest: `cíťte`
+    - The imperative of "cítit" is "cíťte" with a long í.
+- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — Agreement error in the few variant: neuter noun "stahování" used with masculine/feminine plural forms.
+    - Current: `Tyto stahování nebudou možné obnovit.`
+    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
+    - Suggest: `Tato stahování nebude možné obnovit.`
+    - "Stahování" is neuter, so the plural is "tato stahování". The construction "nebude možné obnovit" is impersonal, as in the [other] variant.
+- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — Double space between words that users can see.
+    - Current: `stahování  a přejít`
+    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
+    - Suggest: `stahování a přejít`
+    - The one, few and other variants contain two spaces between "stahování" and "a".
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" is rendered as the future "will block", which misrepresents a report-only policy.
+    - Current: `Nastavení této stránky zablokuje přesměrování`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Nastavení této stránky by zablokovalo přesměrování`
+    - A Report-Only policy does not block. The source says the settings would block the redirect, but "zablokuje" states that it will be blocked.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +74,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,805 |
-| Missing strings | 70 |
+| Strings | 16,883 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -54,7 +83,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
-| Plural variants (dead or missing forms) | 75 |
+| Plural variants (dead or missing forms) | 78 |
 | Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
@@ -63,22 +92,7 @@ _Nothing retired._
 
 ### Completeness
 
-**70 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 21
-- `browser/browser/newtab/newtab.ftl` — 10
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 8
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 7
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/tabContextMenu.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/tabbrowser.ftl` — 2
-- `dom/chrome/security/security.properties` — 2
-- `browser/browser/contextual-manager.ftl` — 1
-- `browser/browser/customkeys.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,30 +100,30 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 476, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 477, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
 | ellipsis | `char` 393, `ascii` 3 | **char** |
 | dash | `em` 67, `en` 30 | _mixed_ |
-| nbsp | `total` 13, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
+| nbsp | `total` 14, `before-punctuation` 4, `space-before-punctuation` 7 | _mixed_ |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 75 strings** — 75 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label`, `about-webrtc-sent-label` …and 63 more
+- **plurals — 78 strings** — 78 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-bulk-selected-count`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames`, `about-webrtc-lost-label`, `about-webrtc-received-label` …and 66 more
 
 ---
 
-## 3. Open findings (258)
+## 3. Open findings (264)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 129 |
-| 3 | Degraded language (grammar, spelling, terminology) | 64 |
-| 4 | Cosmetic (typography, spacing) | 19 |
+| 2 | Wrong content (says something other than the English) | 132 |
+| 3 | Degraded language (grammar, spelling, terminology) | 66 |
+| 4 | Cosmetic (typography, spacing) | 20 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -452,6 +466,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Your images, wallpapers that you have saved`
     - Suggest: `Vaše obrázky, tapety, které jste uložili`
     - In en-US "wallpapers that you have saved" explains what "Your images" is; the Czech "a" makes it two separate things.
+- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as a verb ("Zobrazit"), but the comment says it is a noun.
+    - Current: `Zobrazit`
+    - Source: `View`
+    - Suggest: `Zobrazení`
+    - The developer comment says "View" is a noun here, as in the view the widget shows. It opens a submenu for switching views. "Zobrazit" means "to show/display".
 - `onboarding-minimal-tabs-description` — `browser/browser/newtab/onboarding.ftl` — "along the side of the screen" (singular side) translated as "po stranách obrazovky" (on the sides, plural).
     - Current: `jako malé ikony po stranách obrazovky`
     - Source: `aria-description: A browser window displaying tabs as small icons along the side of the screen, in a minimized sidebar.`
@@ -477,6 +496,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `description: Turn on sync to get your bookmarks, passwords, history, and more on this device. label: Syncing is OFF`
     - Suggest: `a další data na tomto zařízení`
     - The en-US says "on this device", and the developer comment makes clear the string is about the current device where sync is disabled; "na svém zařízení" is vague and loses that.
+- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip translates "Open" as an imperative verb ("Otevírejte"), but it means tabs that are open.
+    - Current: `Otevírejte panely z ostatních zařízení`
+    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
+    - Suggest: `Otevřené panely z ostatních zařízení`
+    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The tooltip describes the synced data type, like the other engine tooltips ("Addresses you've saved"). The Czech reads as an instruction to open tabs.
 - `safeb-report-false-deceptive-error-message` — `browser/browser/safebrowsing/blockedSite.ftl` — A double negative ("nelze nehlásit") reverses the meaning: the Czech says the error cannot not be reported.
     - Current: `nelze nehlásit`
     - Source: `It’s not possible to report this error at this time.`
@@ -497,6 +521,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: x label: Duplicate Tabs`
     - Suggest: `Duplicitní panely`
     - The comment says this item sits in the "Close Multiple" submenu and closes the selected tab's duplicates. "Duplicate" here is an adjective. The Czech verb tells the user it will duplicate tabs.
+- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" is rendered as the future "will block", which misrepresents a report-only policy.
+    - Current: `Nastavení této stránky zablokuje přesměrování`
+    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
+    - Suggest: `Nastavení této stránky by zablokovalo přesměrování`
+    - A Report-Only policy does not block. The source says the settings would block the redirect, but "zablokuje" states that it will be blocked.
 - `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "Začátek adresy URL" (the beginning of the URL) instead of the starting address.
     - Current: `Začátek adresy URL je neplatný.`
     - Source: `The start URL is invalid.`
@@ -595,6 +624,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Collapse all widgets to compact size title: Minimize widgets`
     - Suggest: `Minimalizovat widgety`
     - Every other widget string in the file spells it "widgety".
+- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — Misspelled imperative "ciťte" instead of "cíťte".
+    - Current: `ciťte`
+    - Source: `Make this screen feel like home with a background you love.`
+    - Suggest: `cíťte`
+    - The imperative of "cítit" is "cíťte" with a long í.
 - `onboarding-infrequent-import-title` — `browser/browser/newtab/onboarding.ftl` — "Buďte se" is ungrammatical — a stray reflexive pronoun.
     - Current: `Buďte se jako doma`
     - Source: `Make yourself at home`
@@ -725,6 +759,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Reorder, remove, merge, and export pages.`
     - Suggest: `Měňte pořadí stránek, odstraňujte je, slučujte a exportujte.`
     - The en-US lists parallel actions; the Czech mixes aspects inconsistently within one list.
+- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — Agreement error in the few variant: neuter noun "stahování" used with masculine/feminine plural forms.
+    - Current: `Tyto stahování nebudou možné obnovit.`
+    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
+    - Suggest: `Tato stahování nebude možné obnovit.`
+    - "Stahování" is neuter, so the plural is "tato stahování". The construction "nebude možné obnovit" is impersonal, as in the [other] variant.
 - `moz-box-item-reorder-handle` — `toolkit/toolkit/global/mozBoxBase.ftl` — Spelling: "Šipka dolu" instead of "Šipka dolů".
     - Current: `Ctrl+Shift+Šipka dolu`
     - Source: `aria-label: Reorder item using Ctrl+Shift+ArrowUp or Ctrl+Shift+ArrowDown`
@@ -1185,6 +1224,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The Content Analysis tool is taking a long time to respond for resource “{ $content }”`
     - Suggest: `„{ $content }“`
     - Czech pairs „…“; the closing mark here is the English right double quote.
+- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — Double space between words that users can see.
+    - Current: `stahování  a přejít`
+    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
+    - Suggest: `stahování a přejít`
+    - The one, few and other variants contain two spaces between "stahování" and "a".
 - `neterror-search-cta-hint-search-query` — `toolkit/toolkit/neterror/netError.ftl` — Mismatched quotation marks: Czech opening quote closed with an ASCII double quote.
     - Current: `„{ $query }"`
     - Source: `Search the web for <strong>“{ $query }”</strong>`

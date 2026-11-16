@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 52 of 16,875 |
+| **Strings reviewed this run** | 8 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,23 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (3)
 
-- `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — "Start" (the start of the tab strip) is translated as the verb "Iniciar" instead of the noun "Início".
-    - Current: `Iniciar`
-    - Source: `accesskey: S label: Start`
-    - Suggest: `Início`
-    - The developer comment says this is a "Move to" destination: the start of the tab strip. It pairs with "Fim" (End). "Iniciar" means to start or launch something.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective, under Close Multiple) is translated as the verb phrase "Duplicar Separadores" (to duplicate tabs).
-    - Current: `Duplicar Separadores`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Separadores Duplicados`
-    - The developer comment says this item under "Close Multiple" closes duplicate tabs. The translation reads as an action that duplicates tabs.
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [other] variant makes the item plural, but $count counts unsupported purposes, not items.
-    - Current: `Os itens de { $memberName } no índice { $index } incluem finalidades não suportadas`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - Suggest: `O item de { $memberName } no índice { $index } inclui finalidades não suportadas`
-    - The en-US says a single item (the one at index $index) includes unsupported purposes. The plural is about the purposes, so 'Os itens… incluem' (the items… include) misdescribes what is happening.
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The [one] variant uses the plural 'finalidades não suportadas' for a single unsupported purpose.
-    - Current: `inclui finalidades não suportadas`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - Suggest: `inclui uma finalidade não suportada`
-    - The en-US [one] variant reads 'includes an unsupported purpose' (singular), but the translation uses the plural, so the number is wrong.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — Singular 'caractere' is the Brazilian spelling; pt-PT uses 'carácter'.
+    - Current: `Falta { $count } caractere`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Falta { $count } carácter`
+    - In European Portuguese the singular of 'caracteres' is 'carácter'; 'caractere' is pt-BR.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'Nickname' left untranslated in an otherwise Portuguese label.
+    - Current: `Nickname (opcional)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Nome personalizado (opcional)`
+    - The comment describes a user-defined label for a saved location; pt-PT would translate this (e.g. 'Nome personalizado' or 'Alcunha') rather than keep the English word mixed into a translated string.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'nickname' left untranslated in placeholder.
+    - Current: `Adicionar um nickname`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Adicionar um nome personalizado`
+    - Same English term left untranslated in a Portuguese sentence; should match the translated label.
 
 ### ✅ Fixed since the last run (0)
 
@@ -64,7 +59,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,875 |
+| Strings | 16,883 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -105,14 +100,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (328)
+## 3. Open findings (331)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
 | 2 | Wrong content (says something other than the English) | 131 |
-| 3 | Degraded language (grammar, spelling, terminology) | 9 |
+| 3 | Degraded language (grammar, spelling, terminology) | 12 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -657,6 +652,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Nickname (optional) label: Nickname (optional) placeholder: Add a nickname`
     - Suggest: `Nome alternativo (opcional)`
     - newtab-clock-widget-label-nickname-with-value translates the same term as “Nome alternativo”, so the field label and the value label name the same thing differently, one of them in English.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — Singular 'caractere' is the Brazilian spelling; pt-PT uses 'carácter'.
+    - Current: `Falta { $count } caractere`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Falta { $count } carácter`
+    - In European Portuguese the singular of 'caracteres' is 'carácter'; 'caractere' is pt-BR.
 - `fx-backup-opt-in-filepath-label` — `browser/browser/newtab/onboarding.ftl` — Microsoft brand name miscapitalized as “Onedrive”.
     - Current: `tal como o Onedrive`
     - Source: `Pick a place you plan to transfer to a new device, like OneDrive.`
@@ -907,12 +907,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Warn me when I attempt to access these preferences`
     - Suggest: `Avisar-me quando tentar aceder a estas preferências`
     - A future conditional clause with “quando” requires the future subjunctive (“tentar”); “quando eu tento” is ungrammatical here.
-- `url-classifier-debug-modules` — `toolkit/toolkit/about/url-classifier.ftl` — Adjective does not agree with the plural noun.
-    - Current: `Módulos de registo atual`
-    - Source: `Current log modules`
-    - Suggest: `Módulos de registo atuais`
-    - en-US “Current log modules” qualifies the modules, which are plural; as written it qualifies “registo”.
-- _…and 2 more; see `state/` for the full list._
+- _…and 3 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1006,6 +1001,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Every month, { -brand-short-name } blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.`
     - Suggest: `Porque nada, especialmente empecilhos de privacidade como os rastreadores, deve ficar entre si`
     - The subject is the singular “nada”; the verb must be “deve”.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'Nickname' left untranslated in an otherwise Portuguese label.
+    - Current: `Nickname (opcional)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Nome personalizado (opcional)`
+    - The comment describes a user-defined label for a saved location; pt-PT would translate this (e.g. 'Nome personalizado' or 'Alcunha') rather than keep the English word mixed into a translated string.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'nickname' left untranslated in placeholder.
+    - Current: `Adicionar um nickname`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Adicionar um nome personalizado`
+    - Same English term left untranslated in a Portuguese sentence; should match the translated label.
 - `newtab-custom-stories-toggle` — `browser/browser/newtab/newtab.ftl` — Pre-AO90 spelling “excepcional” where the tree uses “excecional”.
     - Current: `Conteúdo excepcional com curadoria da família { -brand-product-name }`
     - Source: `description: Exceptional content curated by the { -brand-product-name } family label: Recommended stories`
@@ -1206,17 +1211,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Local Mode allows you to load local files via https URL without any external dependency. The URLs can only be loaded from tabs with DevTools opened.`
     - Suggest: `Os URLs só podem ser carregados`
     - The participle must agree with the masculine “Os URLs”.
-- `options-stylesheet-autocompletion-tooltip` — `devtools/client/toolbox-options.ftl` — Verb form typo: “forme escritos” instead of “forem escritos”.
-    - Current: `assim que forme escritos`
-    - Source: `title: Autocomplete CSS properties, values and selectors in Style Editor as you type`
-    - Suggest: `assim que forem escritos`
-    - “forme” is not a valid form here; the future subjunctive “forem” is required.
-- `inactive-css-column-span` — `devtools/client/tooltips.ftl` — The verb is missing: “não efeito de expansão”.
-    - Current: `não efeito de expansão`
-    - Source: `<strong>{ $property }</strong> has no spanning effect on this element since it is not within a multi-column container.`
-    - Suggest: `não tem efeito de expansão`
-    - “tem” was dropped, leaving the sentence without a verb; every sibling tooltip reads “não tem efeito”.
-- _…and 23 more; see `state/` for the full list._
+- _…and 25 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 

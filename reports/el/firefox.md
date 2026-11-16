@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 44 of 16,875 |
+| **Strings reviewed this run** | 3 of 16,878 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — The pronoun after the imperative is in the wrong form: «τις» is used where Greek requires «τες».
-    - Current: `Βρείτε τις εδώ`
-    - Source: `Tab groups are auto-saved. Find them here.`
-    - Suggest: `Βρείτε τες εδώ`
-    - In standard Greek, a feminine plural object pronoun that follows an imperative takes the form «τες» («βρείτε τες»). «τις» is a common error in this position.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,875 |
-| Missing strings | 0 |
+| Strings | 16,878 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -67,7 +63,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**5 strings** are not translated yet, concentrated in:
+
+- `browser/browser/newtab/newtab.ftl` — 4
+- `browser/browser/preferences/preferences.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

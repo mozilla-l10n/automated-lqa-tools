@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,206 |
+| **Strings reviewed this run** | 198 of 16,404 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,28 @@ Also for fi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — The Finnish makes "built-in" describe the rules instead of the VPN, so it reads as "set the built-in VPN rules".
+    - Current: `Aseta sisäänrakennetut VPN-säännöt`
+    - Source: `Set built-in VPN rules, then browse on`
+    - Suggest: `Aseta sisäänrakennetun VPN:n säännöt`
+    - The en-US means rules for the built-in VPN. In "sisäänrakennetut VPN-säännöt" the adjective agrees with "säännöt", so it describes predefined rules that come built in. That is not what the user is asked to do: they create their own rules.
+- `move-to-mini-window` — `browser/browser/miniWindow.ftl` — Plural variant says "go to" (Siirry) instead of "move" (Siirrä).
+    - Current: `Siirry pienoisikkunoihin`
+    - Source: `accesskey: M label: {$tabCount ->} [1] Move to Mini Window [other] Move to Mini Windows`
+    - Suggest: `Siirrä pienoisikkunoihin`
+    - en-US "Move to Mini Windows" is an action that moves tabs. "Siirry" means "go to", which doesn't match the source or the singular variants, which use "Siirrä".
+- `item-history-and-downloads-description3` — `browser/browser/sanitize.ftl` — Case agreement error: "tiedoston" should be plural genitive "tiedostojen".
+    - Current: `ladattujen tiedoston luettelo`
+    - Source: `Visited sites and downloads list`
+    - Suggest: `ladattujen tiedostojen luettelo`
+    - "ladattujen" is plural genitive, so the noun has to agree with it: "downloads list" = "ladattujen tiedostojen luettelo".
+- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — Spelling error in "Tallennetamasi".
+    - Current: `Tallennetamasi`
+    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
+    - Suggest: `Tallentamasi`
+    - The correct agent participle of "tallentaa" with a possessive suffix is "tallentamasi".
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +64,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,206 |
-| Missing strings | 669 |
+| Strings | 16,404 |
+| Missing strings | 479 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +82,20 @@ _Nothing retired._
 
 ### Completeness
 
-**669 strings** are not translated yet, concentrated in:
+**479 strings** are not translated yet, concentrated in:
 
 - `dom/chrome/dom/dom.properties` — 75
 - `toolkit/toolkit/about/aboutGlean.ftl` — 63
-- `browser/browser/ipProtection.ftl` — 48
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 36
 - `dom/chrome/security/csp.properties` — 34
-- `browser/browser/newtab/newtab.ftl` — 32
 - `dom/chrome/security/security.properties` — 32
-- `browser/browser/newtab/onboarding.ftl` — 29
+- `browser/browser/newtab/newtab.ftl` — 24
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
-- `browser/browser/genai.ftl` — 20
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 15
+- `toolkit/toolkit/about/aboutSupport.ftl` — 15
+- `netwerk/necko.properties` — 13
+- `browser/browser/browser.ftl` — 11
 
 **Files present but identical to en-US:**
 
@@ -111,7 +130,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 309, `straight-double` 116, `curly-single` 70 | _mixed_ |
 | apostrophe | `typographic` 148, `straight` 33 | **typographic** |
-| ellipsis | `char` 400, `ascii` 1 | **char** |
+| ellipsis | `char` 401, `ascii` 1 | **char** |
 | dash | `em` 44, `en` 29 | _mixed_ |
 | nbsp | `total` 11, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
 
@@ -123,14 +142,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (157)
+## 3. Open findings (161)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 108 |
-| 2 | Wrong content (says something other than the English) | 39 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 41 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -399,6 +418,16 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — The Finnish makes "built-in" describe the rules instead of the VPN, so it reads as "set the built-in VPN rules".
+    - Current: `Aseta sisäänrakennetut VPN-säännöt`
+    - Source: `Set built-in VPN rules, then browse on`
+    - Suggest: `Aseta sisäänrakennetun VPN:n säännöt`
+    - The en-US means rules for the built-in VPN. In "sisäänrakennetut VPN-säännöt" the adjective agrees with "säännöt", so it describes predefined rules that come built in. That is not what the user is asked to do: they create their own rules.
+- `move-to-mini-window` — `browser/browser/miniWindow.ftl` — Plural variant says "go to" (Siirry) instead of "move" (Siirrä).
+    - Current: `Siirry pienoisikkunoihin`
+    - Source: `accesskey: M label: {$tabCount ->} [1] Move to Mini Window [other] Move to Mini Windows`
+    - Suggest: `Siirrä pienoisikkunoihin`
+    - en-US "Move to Mini Windows" is an action that moves tabs. "Siirry" means "go to", which doesn't match the source or the singular variants, which use "Siirrä".
 - `screenshots-component-mini-window-cancel-button` — `browser/browser/miniWindow.ftl` — The macOS variant of the title renders "Cancel" as "Kumoa" (Undo), while the other variant and the label use "Peruuta".
     - Current: `Kumoa (esc)`
     - Source: `(value): Cancel aria-label: Cancel title: {$sel_1 ->} [macos] Cancel (esc) [other] Cancel (Esc)`
@@ -477,6 +506,16 @@ _Nothing reported._
     - Source: `Do not display the Terms of Use and Privacy Notice upon startup. You represent that you accept and have the authority to accept the Terms of Use on behalf of all individuals to whom you provide access to this browser.`
     - Suggest: `käyttöehtoja ja tietosuojakäytäntöä`
     - Vowel error in a standard term; everywhere else in the tree it is "tietosuojakäytäntö".
+- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — Spelling error in "Tallennetamasi".
+    - Current: `Tallennetamasi`
+    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
+    - Suggest: `Tallentamasi`
+    - The correct agent participle of "tallentaa" with a possessive suffix is "tallentamasi".
+- `item-history-and-downloads-description3` — `browser/browser/sanitize.ftl` — Case agreement error: "tiedoston" should be plural genitive "tiedostojen".
+    - Current: `ladattujen tiedoston luettelo`
+    - Source: `Visited sites and downloads list`
+    - Suggest: `ladattujen tiedostojen luettelo`
+    - "ladattujen" is plural genitive, so the noun has to agree with it: "downloads list" = "ladattujen tiedostojen luettelo".
 - `ERROR_CREATE_DIRECTORY_PREFIX` — `browser/installer/custom.properties` — Garbled word in installer error message: "kans1iota" contains a stray digit.
     - Current: `Virhe luotaessa kans1iota:`
     - Source: `Error creating directory:`
@@ -885,7 +924,7 @@ _Nothing reported._
 - `headerFooterCustom` — `toolkit/chrome/global/printdialog.properties` — `headerFooterCustom` uses three dots where this locale uses …
     - Current: `Oma...`
     - Source: `Custom…`
-    - The tree uses … 400 times against 1 ASCII runs.
+    - The tree uses … 401 times against 1 ASCII runs.
 - `addon-category-dictionary` — `toolkit/toolkit/about/aboutAddons.ftl` — “Dictionaries” rendered as “Oikoluvut” while the rest of the page uses “sanastot”.
     - Current: `Oikoluvut`
     - Source: `Dictionaries`

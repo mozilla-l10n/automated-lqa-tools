@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,875 |
+| **Strings reviewed this run** | 10 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — The label and aria-label say «Ник» (an online username) while the placeholder says «псевдоним» (an alias), and the developer comment rules out both meanings.
+    - Current: `Ник (необязательно)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Название (необязательно)`
+    - The comment says this is a custom label for a saved location (Home, Office) and must not be translated as a username or alias. «Ник» means an online username, and the placeholder uses a different term, «псевдоним», so one field has two names.
+- `newtab-report-ads-reason-scam` — `browser/browser/newtab/newtab.ftl` — The slang loanword «Скам» is too colloquial for the UI's neutral, formal tone.
+    - Current: `Скам или мошенничество`
+    - Source: `label: Scam or fraudulent`
+    - Suggest: `Мошенничество или обман`
+    - «Скам» is internet slang. The other report reasons, and the locale in general, use neutral, formal vocabulary.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,875 |
+| Strings | 16,883 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -76,7 +85,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | ellipsis | `char` 404, `ascii` 5 | **char** |
 | dash | `em` 132, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 977, `formal` 3294 | **formal** |
+| register | `informal` 977, `formal` 3295 | **formal** |
 
 ---
 
@@ -87,7 +96,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (611)
+## 3. Open findings (613)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -103,7 +112,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
 | 2 | Wrong content (says something other than the English) | 276 |
-| 3 | Degraded language (grammar, spelling, terminology) | 230 |
+| 3 | Degraded language (grammar, spelling, terminology) | 232 |
 | 4 | Cosmetic (typography, spacing) | 61 |
 
 ### A. Functional, markup, variables & plurals
@@ -755,8 +764,18 @@ _Also listed under their own category below._
 - `set-default-menu-message-row-layout-subtitle` — `browser/browser/newtab/asrouter.ftl` — set-default-menu-message-row-layout-subtitle uses конфиденциальность where the scope uses приватность
     - Source: `Get speed, safety and privacy every time you browse.`
     - Suggest: `конфиденциальность`
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — The label and aria-label say «Ник» (an online username) while the placeholder says «псевдоним» (an alias), and the developer comment rules out both meanings.
+    - Current: `Ник (необязательно)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Название (необязательно)`
+    - The comment says this is a custom label for a saved location (Home, Office) and must not be translated as a username or alias. «Ник» means an online username, and the placeholder uses a different term, «псевдоним», so one field has two names.
 - `newtab-privacy-message-milestone-year` — `browser/browser/newtab/newtab.ftl` — newtab-privacy-message-milestone-year (all variants) — same
     - Source: `{$count ->} [one] { $count } tracker blocked this year. That’s a powerful year of protecting your privacy. [other] { $count } trackers blocked this year. That’s a powerful year of protecting your privacy.`
+- `newtab-report-ads-reason-scam` — `browser/browser/newtab/newtab.ftl` — The slang loanword «Скам» is too colloquial for the UI's neutral, formal tone.
+    - Current: `Скам или мошенничество`
+    - Source: `label: Scam or fraudulent`
+    - Suggest: `Мошенничество или обман`
+    - «Скам» is internet slang. The other report reasons, and the locale in general, use neutral, formal vocabulary.
 - `newtab-section-mangage-topics-followed-topics-empty-state` — `browser/browser/newtab/newtab.ftl` — newtab-section-toast-follow/-unfollow and newtab-section-mangage-topics-followed-topics-empty-state use читаете/отслеживаете while every button and aria-label uses подписаться/отписаться, per the dev comment
     - Source: `You have not followed any topics yet.`
     - Suggest: `-unfollow`
@@ -852,12 +871,7 @@ _Also listed under their own category below._
     - Source: `Rotate viewport`
 - `responsive.screenshot` — `devtools/client/responsive.properties` — responsive.leftAlignViewport / responsive.changeDevicePixelRatio leave viewport Latin while responsive.rotate / responsive.screenshot use окно просмотра
     - Source: `Take a screenshot of the viewport`
-- `storage-tree-labels-session-storage` — `devtools/client/storage.ftl` — storage-tree-labels-session-storage-class and eventsTooltip.Capturing vs eventsTooltip.Bubbling (participle vs noun)
-    - Source: `Session Storage`
-- `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — toolbox-meatball-menu-splitconsole-label / -hideconsole-label use positional wording where toolbox-options.ftl uses разделённая консоль
-    - Source: `Show Split Console`
-    - Suggest: `-hideconsole-label`
-- _…and 19 more; see `state/` for the full list._
+- _…and 21 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
