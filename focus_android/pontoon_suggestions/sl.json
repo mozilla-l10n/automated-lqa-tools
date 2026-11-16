@@ -204,9 +204,13 @@
    "source": "Set by Battery Saver",
    "original": "Nastavi ohranjevalnik baterije",
    "text": "Glede na ohranjevalnik baterije",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398736,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/focus-for-android/mozilla-mobile/focus-android/app/src/main/res/values/strings.xml/?string=233020",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }
