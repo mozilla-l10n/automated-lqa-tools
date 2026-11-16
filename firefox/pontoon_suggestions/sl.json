@@ -601,9 +601,13 @@
    "text": "Prišlo je do napake",
    "full_original": ".heading = Prišlo je do napake\n.message = Strani a deljenje tokrat ni bilo mogoče ustvariti. Poskusite znova pozneje.",
    "full_text": ".heading = Prišlo je do napake\n.message = Strani za deljenje tokrat ni bilo mogoče ustvariti. Poskusite znova pozneje.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398664,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/contentSharing.ftl/?string=334643",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -627,9 +631,13 @@
    "source": "Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.",
    "original": "Vaša povezava na to stran uporablja šibko šifriranje in ni zasebna. Drugi osebe lahko dostopajo do vaših podatkov ali spreminjajo delovanje spletne strani.",
    "text": "Vaša povezava na to stran uporablja šibko šifriranje in ni zasebna. Druge osebe lahko dostopajo do vaših podatkov ali spreminjajo delovanje spletne strani.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398665,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/pageInfo.ftl/?string=344034",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -653,9 +661,13 @@
    "source": "Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.",
    "original": "Uporabniku onemogoči, da bi na strani Podatki o modulih tretjih ponudnikov (about:third-party) blokiral module tretjih ponudnikov, vstavljenih v proces { -brand-short-name(sklon: \"rodilnik\") }.",
    "text": "Uporabniku onemogoči, da bi na strani Podatki o modulih tretjih ponudnikov (about:third-party) blokiral module tretjih ponudnikov, vstavljene v proces { -brand-short-name(sklon: \"rodilnik\") }.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398666,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/policies/policies-descriptions.ftl/?string=341512",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -681,9 +693,13 @@
    "text": "kannadsko",
    "full_original": ".label = kanadsko",
    "full_text": ".label = kannadsko",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398667,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/browser/browser/preferences/fonts.ftl/?string=178031",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -707,9 +723,13 @@
    "source": "The id member must have the same origin as the start_url member.",
    "original": "Član id mora imeti enako poreklo kot član start_url.",
    "text": "Član id mora imeti enak izvor kot član start_url.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398668,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/dom/dom/manifest.ftl/?string=344103",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -735,9 +755,13 @@
    "text": "Vaše teme barvne kombinacije so bile odstranjene.",
    "full_original": ".heading = Vaše teme barvne kombinacije so bile odstranjene.\n.message = { -brand-product-name } je posodobil svojo zbirko barvnih kombinacije. Stare različice smo odstranili s seznama “Shranjene teme”. Poiščite nove različice na spletnem mestu dodatkov.",
    "full_text": ".heading = Vaše teme barvne kombinacije so bile odstranjene.\n.message = { -brand-product-name } je posodobil svojo zbirko barvnih kombinacij. Stare različice smo odstranili s seznama “Shranjene teme”. Poiščite nove različice na spletnem mestu dodatkov.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398669,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=317631",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -761,9 +785,13 @@
    "source": "Reorder, remove, merge, and export pages.",
    "original": "Spremenite vrstni red strani, jih odstranite, združite ali posamič izvozite.",
    "text": "Spremenite vrstni red strani, jih odstranite, združite ali izvozite.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398671,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutPDF.ftl/?string=340305",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -787,9 +815,13 @@
    "source": "Organize pages",
    "original": "Organizirajte dokumente",
    "text": "Organizirajte strani",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398670,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutPDF.ftl/?string=340304",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -813,9 +845,13 @@
    "source": "async touch input disabled due to unsupported pref: { $preferenceKey }",
    "original": "asinhroni vnos na dotik onemogočen zaradi nedpodprte nastavitve: { $preferenceKey }",
    "text": "asinhroni vnos na dotik onemogočen zaradi nepodprte nastavitve: { $preferenceKey }",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398673,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=193991",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -839,9 +875,13 @@
    "source": "async wheel input disabled due to unsupported pref: { $preferenceKey }",
    "original": "asinhroni vnos s koleščkom onemogočen zaradi nedpodprte nastavitve: { $preferenceKey }",
    "text": "asinhroni vnos s koleščkom onemogočen zaradi nepodprte nastavitve: { $preferenceKey }",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398672,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=194024",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -865,9 +905,13 @@
    "source": "Certificate Authority",
    "original": "Uradna oseba za digitalna potrdila",
    "text": "Overitelj digitalnih potrdil",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398674,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/about/certviewer.ftl/?string=203193",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -891,9 +935,13 @@
    "source": "{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count } additional items against your organization’s data policies. This may take a moment.",
    "original": "{ $agent } pregleduje, ali so “{ $filename }” in še { $count } predmetov skladni s pravilniki vaše organizacije. To lahko traja nekaj časa.",
    "text": "{ $agent } pregleduje, ali so “{ $filename }” in še { $count } predmetov skladni s pravilniki vaše organizacije. To lahko traja nekaj časa.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-15",
+   "comment": "",
+   "pontoon_pk": 12398675,
+   "pontoon_url": "https://pontoon.mozilla.org/sl/firefox/toolkit/toolkit/contentanalysis/contentanalysis.ftl/?string=316648",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

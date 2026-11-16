@@ -36,3 +36,9 @@ urlbar-result-dates-ongoing @ browser/browser/browser.ftl — auto-suggest (2026
 downloads-files-not-downloaded @ browser/browser/downloads.ftl — auto-suggest (2026-11-09, string ed64d941): unreliable finding: Dead [one] variant is harmless; the [other] output is correct, and removal requires changing select markup.
 main-context-menu-use-mini-window @ browser/browser/miniWindow.ftl — auto-suggest (2026-11-09, string bb628b99): unreliable finding: 段落 is a plausible rendering of Section and the claimed 區域 usage in the overlay header cannot be verified here.
 STUB_BLURB_FIRST3 @ browser/installer/nsisstrings.properties — auto-suggest (2026-11-09, string 56cf369f): unreliable finding: Keeping 'Open Web' as a concept term is a plausible stylistic choice, not a clear error.
+policy-OfferToSaveLoginsDefault @ browser/browser/policies/policies-descriptions.ftl — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+policy-SkipTermsOfUse2 @ browser/browser/policies/policies-descriptions.ftl — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+comboboxlist @ dom/chrome/accessibility/AccessFu.properties — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+underscript @ dom/chrome/accessibility/AccessFu.properties — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+experimental-features-media-jxl @ toolkit/toolkit/firefoxlabs/features.ftl — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+credit-card-label-with-security-code-2 @ toolkit/toolkit/payments/payments.ftl — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; likely reason (inferred): The suggestion was exactly the same as the original and fixed nothing; the translation has no aria-label for the finding to apply to, so there was nothing new to accept.

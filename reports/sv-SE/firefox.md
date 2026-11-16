@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,875 |
+| **Strings reviewed this run** | 9 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for sv-SE: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `confirmation-hint-tab-group-button-removed` — `browser/browser/confirmationHints.ftl` — "Find tab groups in this menu" is rendered as "Search for tab groups", which tells the user to search instead of pointing to where the feature is.
+    - Current: `Sök efter flikgrupper`
+    - Source: `Find tab groups in this menu`
+    - Suggest: `Hitta flikgrupper`
+    - The developer comment says the hint points to the app menu where tab groups can still be found. "Sök efter" means "search for" and suggests a search action, not finding something in the menu.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (noun, tabs that are duplicates) translated as the verb phrase "Duplicera flikar".
+    - Current: `Duplicera flikar`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Dubblettflikar`
+    - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +53,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,875 |
+| Strings | 16,883 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -408,6 +416,11 @@ _Nothing reported._
     - Source: `label: Edit controls title: Edit controls`
     - Suggest: `Redigeringskontroller`
     - "Edit controls" is the label for the group of Cut/Copy/Paste buttons. The Swedish uses the verb form, so it reads as an instruction to edit some controls.
+- `confirmation-hint-tab-group-button-removed` — `browser/browser/confirmationHints.ftl` — "Find tab groups in this menu" is rendered as "Search for tab groups", which tells the user to search instead of pointing to where the feature is.
+    - Current: `Sök efter flikgrupper`
+    - Source: `Find tab groups in this menu`
+    - Suggest: `Hitta flikgrupper`
+    - The developer comment says the hint points to the app menu where tab groups can still be found. "Sök efter" means "search for" and suggests a search action, not finding something in the menu.
 - `genai-settings-chat-claude-links` — `browser/browser/genai.ftl` — The brand name Anthropic is misspelled twice as "Antropic"/"Antropics".
     - Current: `Genom att välja Antropic Claude, godkänner du`
     - Source: `By choosing Anthropic Claude, you agree to the Anthropic <a data-l10n-name="link1">Consumer Terms of Service</a>, <a data-l10n-name="link2">Usage Policy</a>, and <a data-l10n-name="link3">Privacy Policy</a>.`
@@ -433,11 +446,6 @@ _Nothing reported._
     - Source: `label: Closed Groups`
     - Suggest: `Stängda grupper`
     - The groups have been closed (stängda); "slutna" means closed in the sense of exclusive or sealed.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (noun, tabs that are duplicates) translated as the verb phrase "Duplicera flikar".
-    - Current: `Duplicera flikar`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Dubblettflikar`
-    - Under "Close Multiple" this closes duplicate tabs; "Duplicera flikar" means to make copies of tabs.
 - `permission.register-protocol-handler.label` — `browser/chrome/browser/sitePermissions.properties` — "Fråga för att öppna" means "ask in order to open", not "ask to open" (the site may ask whether to open app links).
     - Current: `Fråga för att öppna applänkar`
     - Source: `Ask to open app links`
@@ -1271,8 +1279,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (9)
+### Fixed to date (10)
 
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-16
 - `extension-classic-oled-name` — `browser/browser/appExtensionFields.ftl` — fixed 2026-11-08
 - `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — fixed 2026-11-08
 - `move-to-start-alt` — `browser/browser/tabContextMenu.ftl` — fixed 2026-11-08

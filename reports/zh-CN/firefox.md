@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 16,523 |
+| **Strings reviewed this run** | 157 of 16,669 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `urlbar-view-context-menu-search-in-tab` — `browser/browser/browser.ftl` — "新建新标签页搜索" says "新" twice, which makes the label ungrammatical.
+    - Current: `新建新标签页搜索`
+    - Source: `(value): Search in New Tab accesskey: w`
+    - Suggest: `在新标签页中搜索`
+    - en-US "Search in New Tab". "新建" plus "新标签页" says "new" twice ("create new new tab search"). The sibling labels do not have this redundancy.
+- `IDBObjectStoreMozGetAllWarning` — `dom/chrome/dom/dom.properties` — There is a stray space before the fullwidth full stop at the end of the message.
+    - Current: `IDBObjectStore.getAll() 。`
+    - Source: `IDBObjectStore.mozGetAll() is deprecated. Use IDBObjectStore.getAll() instead.`
+    - Suggest: `IDBObjectStore.getAll()。`
+    - In zh-CN, fullwidth punctuation follows the preceding text directly. The sibling strings (IDBIndexMozGetAllWarning, IDBIndexMozGetAllKeysWarning) have no space before 。.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +54,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 330 |
-| Strings | 16,523 |
-| Missing strings | 352 |
+| Strings | 16,669 |
+| Missing strings | 214 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +72,20 @@ _Nothing retired._
 
 ### Completeness
 
-**352 strings** are not translated yet, concentrated in:
+**214 strings** are not translated yet, concentrated in:
 
 - `browser/browser/ipProtection.ftl` — 52
-- `browser/browser/newtab/newtab.ftl` — 49
 - `browser/browser/newtab/onboarding.ftl` — 45
-- `browser/browser/preferences/preferences.ftl` — 38
-- `dom/chrome/dom/dom.properties` — 19
 - `devtools/client/toolbox-options.ftl` — 18
 - `browser/browser/autoTabGrouping.ftl` — 15
 - `toolkit/toolkit/neterror/netError.ftl` — 13
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/browser.ftl` — 7
+- `dom/chrome/dom/dom.properties` — 13
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
-- `toolkit/toolkit/about/aboutAddons.ftl` — 6
+- `devtools/client/debugger.properties` — 6
+- `browser/browser/newtab/asrouter.ftl` — 5
+- `browser/browser/newtab/newtab.ftl` — 5
+- `toolkit/toolkit/about/aboutGlean.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 3
 
 **Files absent from the locale:**
 
@@ -90,12 +99,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 903, `straight-double` 46, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 906, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 380, `ascii` 12 | **char** |
+| ellipsis | `char` 381, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
-| fullwidth | `punctuation` 8598 | **punctuation** |
-| register | `informal` 24, `formal` 1545 | **formal** |
+| fullwidth | `punctuation` 8668 | **punctuation** |
+| register | `informal` 24, `formal` 1549 | **formal** |
 
 ---
 
@@ -106,15 +115,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (78)
+## 3. Open findings (80)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
 | 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
-| 4 | Cosmetic (typography, spacing) | 35 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 4 | Cosmetic (typography, spacing) | 36 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -297,6 +306,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{ -brand-short-name } automatically asks participating sites not to sell or share your personal data.`
     - Suggest: `参与计划的网站`
     - The developer comment explains participating sites are those honoring GPC signals; 参加网站 reads as a verb phrase "attend a site" and is ungrammatical as a noun phrase.
+- `urlbar-view-context-menu-search-in-tab` — `browser/browser/browser.ftl` — "新建新标签页搜索" says "新" twice, which makes the label ungrammatical.
+    - Current: `新建新标签页搜索`
+    - Source: `(value): Search in New Tab accesskey: w`
+    - Suggest: `在新标签页中搜索`
+    - en-US "Search in New Tab". "新建" plus "新标签页" says "new" twice ("create new new tab search"). The sibling labels do not have this redundancy.
 
 ### D. Terminology, register & consistency
 
@@ -397,6 +411,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Suggest: `…`
 - `options-enable-f12-tooltip` — `devtools/client/toolbox-options.ftl` — Stray space. options-enable-f12-tooltip (toolbox-options.ftl, space after 「，」); firefox-relay-mask-generation-failed (firefoxRelay.ftl, space after 「。」before HTTP).
     - Source: `title: Turning this option on will bind the F12 key to open or close the DevTools toolbox`
+- `IDBObjectStoreMozGetAllWarning` — `dom/chrome/dom/dom.properties` — There is a stray space before the fullwidth full stop at the end of the message.
+    - Current: `IDBObjectStore.getAll() 。`
+    - Source: `IDBObjectStore.mozGetAll() is deprecated. Use IDBObjectStore.getAll() instead.`
+    - Suggest: `IDBObjectStore.getAll()。`
+    - In zh-CN, fullwidth punctuation follows the preceding text directly. The sibling strings (IDBIndexMozGetAllWarning, IDBIndexMozGetAllKeysWarning) have no space before 。.
 - `xpath-bad-argument-count` — `dom/dom/xslt.ftl` — CJK↔Latin spacing (missing space around Latin/acronyms, inconsistent with same file): devmgr-button-enable-fips/-disable-fips/load-device-modname-default + devinfo-hwversion/-fwversion (deviceManager.ftl, e.g. 启用FIPS → 启用 FIPS), xpath-bad-argument-count/-bad-extension-function (xslt.ftl), ipprotection-come-back-title (ipProtection.ftl, 内置VPN → 内置 VPN), about-webrtc-aec-logging-unavailable-sandbox…
     - Source: `An XPath function was called with the wrong number of arguments.`
 - `xslt-parse-failure` — `dom/dom/xslt.ftl` — stylesheet term — 样式表单 (= 样式表+form) in xslt-parse-failure/-bad-recursion/-network-error/-load-recursion/-load-blocked-error/-loading-error (xslt.ftl) → 样式表 (6 strings).

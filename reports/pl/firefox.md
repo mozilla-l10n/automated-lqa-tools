@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,755 |
+| **Strings reviewed this run** | 134 of 16,883 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,28 @@ Also for pl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` is missing the ['few', 'many'] plural forms
+    - Current: `{$count ->} [1] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowanie: { $purposes }. [other] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowania: { $purpo…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "zachowują się automatycznie" means "behave automatically", not "are auto-saved".
+    - Current: `Grupy kart zachowują się automatycznie.`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `Grupy kart są automatycznie zachowywane.`
+    - The en-US says tab groups are saved automatically. The reflexive "zachowywać się" means "to behave", so the Polish says the groups behave automatically. The passive "są zachowywane" is needed for "are saved".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
+    - Current: `[1]`
+    - Source: `{$downloadsCount ->} [1] Cancel 1 Download [other] Cancel { $downloadsCount } Downloads`
+    - Suggest: `[other]`
+- `download-ui-confirm-leave-private-browsing-windows-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
+    - Current: `[1]`
+    - Source: `{$downloadsCount ->} [1] If you close all Private Browsing windows now, 1 download will be canceled. Are you sure you want to leave Private Browsing? [other] If you close all Private Browsing windows now, { $downloadsCo…`
+    - Suggest: `[other]`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +60,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,755 |
-| Missing strings | 120 |
+| Strings | 16,883 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -54,7 +69,7 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 1 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 3 |
+| Plural variants (dead or missing forms) | 4 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
@@ -63,22 +78,7 @@ _Nothing retired._
 
 ### Completeness
 
-**120 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/onboarding.ftl` — 22
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
-- `browser/browser/tabContextMenu.ftl` — 14
-- `browser/browser/appExtensionFields.ftl` — 11
-- `browser/browser/newtab/newtab.ftl` — 11
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 10
-- `browser/browser/contextual-manager.ftl` — 8
-- `browser/browser/preferences/preferences.ftl` — 5
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/tabbrowser.ftl` — 3
-- `dom/chrome/dom/dom.properties` — 3
-- `browser/browser/genai.ftl` — 2
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,12 +86,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1453, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1462, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 407 | **char** |
+| ellipsis | `char` 408 | **char** |
 | dash | `em` 125, `en` 14 | **em** |
-| nbsp | `total` 4963, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
-| register | `informal` 80 | **informal** |
+| nbsp | `total` 5007, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| register | `informal` 82 | **informal** |
 
 ---
 
@@ -106,9 +106,9 @@ _Nothing reported._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 49 |
-| 3 | Degraded language (grammar, spelling, terminology) | 22 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
+| 2 | Wrong content (says something other than the English) | 50 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -138,14 +138,10 @@ _Nothing reported._
     - Current: `[one]`
     - Source: `{$numBreaches ->} [other] { $numBreachesResolved } out of { $numBreaches } breaches marked as resolved`
     - Suggest: `"{ $numBreachesResolved } z { $numBreaches } wycieków jest oznaczony jako rozwiązany".`
-- `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
-    - Current: `[1]`
-    - Source: `{$downloadsCount ->} [1] Cancel 1 Download [other] Cancel { $downloadsCount } Downloads`
-    - Suggest: `[other]`
-- `download-ui-confirm-leave-private-browsing-windows-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
-    - Current: `[1]`
-    - Source: `{$downloadsCount ->} [1] If you close all Private Browsing windows now, 1 download will be canceled. Are you sure you want to leave Private Browsing? [other] If you close all Private Browsing windows now, { $downloadsCo…`
-    - Suggest: `[other]`
+- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` is missing the ['few', 'many'] plural forms
+    - Current: `{$count ->} [1] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowanie: { $purposes }. [other] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowania: { $purpo…`
+    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
+    - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
 - `download-ui-confirm-offline-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
     - Current: `[1]`
     - Source: `{$downloadsCount ->} [1] If you go offline now, 1 download will be canceled. Are you sure you want to go offline? [other] If you go offline now, { $downloadsCount } downloads will be canceled. Are you sure you want to g…`
@@ -300,6 +296,11 @@ _Nothing reported._
     - Source: `Want to keep the assistant closed?`
     - Suggest: `Czy chcesz, aby asystent pozostał zamknięty?`
     - en-US asks about keeping the assistant closed (continuing state); the pl drops that nuance.
+- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "zachowują się automatycznie" means "behave automatically", not "are auto-saved".
+    - Current: `Grupy kart zachowują się automatycznie.`
+    - Source: `Tab groups are auto-saved. Find them here.`
+    - Suggest: `Grupy kart są automatycznie zachowywane.`
+    - The en-US says tab groups are saved automatically. The reflexive "zachowywać się" means "to behave", so the Polish says the groups behave automatically. The passive "są zachowywane" is needed for "are saved".
 - `fxa-qrcode-pair-step1` — `browser/browser/preferences/fxaPairDevice.ftl` — narrows "mobile device" to "telefon", contradicting the dialog title (fxa-qrcode-pair-title = "…na telefonie lub tablecie"). → "…na urządzeniu mobilnym."
     - Source: `1. Open { -brand-product-name } on your mobile device.`
     - Suggest: `"…na urządzeniu mobilnym."`
@@ -481,11 +482,11 @@ _Nothing reported._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1453 occurrences).
+    - The locale's quote convention is `polish-double` (1462 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1453 occurrences).
+    - The locale's quote convention is `polish-double` (1462 occurrences).
 
 ---
 
@@ -517,8 +518,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (168)
+### Fixed to date (170)
 
+- `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-16
+- `download-ui-confirm-leave-private-browsing-windows-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-16
 - `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-09-03
 - `protections-panel-cookie-banner-blocker-view-turn-on-for-site` — `browser/browser/protectionsPanel.ftl` — fixed 2026-09-02
 - `media-count` — `browser/browser/pageInfo.ftl` — fixed 2026-08-27
@@ -557,5 +560,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-08-24
 - `csp-error-illegal-host-wildcard` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-08-24
 - `webext-perms-header-unsigned` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-08-24
-- `language-name-ii` — `toolkit/toolkit/intl/languageNames.ftl` — fixed 2026-08-24
-- `netReset-title` — `toolkit/toolkit/neterror/certError.ftl` — fixed 2026-08-24

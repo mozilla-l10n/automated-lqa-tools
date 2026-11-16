@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,843 |
+| **Strings reviewed this run** | 24 of 16,861 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — The club's proper name “Wrexham AFC” is changed to “Wrexham ASC” in .label and .title.
+    - Current: `Wrexham ASC`
+    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
+    - Suggest: `Wrexham AFC`
+    - “Wrexham AFC” is the official name of a football club. It should be kept as is, not partly translated or altered. The same message's .menu-label keeps “Wrexham AFC”, so the widget now shows two different names for the same club.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,843 |
-| Missing strings | 32 |
+| Strings | 16,861 |
+| Missing strings | 22 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,14 +67,15 @@ _Nothing retired._
 
 ### Completeness
 
-**32 strings** are not translated yet, concentrated in:
+**22 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 9
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 7
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 5
+- `browser/browser/newtab/onboarding.ftl` — 7
+- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
 - `browser/browser/browser.ftl` — 4
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/genai.ftl` — 2
+- `browser/browser/newtab/newtab.ftl` — 2
+- `browser/browser/confirmationHints.ftl` — 1
+- `browser/browser/genai.ftl` — 1
+- `browser/browser/preferences/preferences.ftl` — 1
 - `browser/browser/newtab/asrouter.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -82,7 +87,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 623, `curly-single` 157, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 903, `straight` 47 | **typographic** |
+| apostrophe | `typographic` 904, `straight` 47 | **typographic** |
 | ellipsis | `char` 399 | **char** |
 | dash | `em` 46, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
@@ -97,13 +102,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (170)
+## 3. Open findings (171)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 60 |
+| 2 | Wrong content (says something other than the English) | 61 |
 | 3 | Degraded language (grammar, spelling, terminology) | 70 |
 | 4 | Cosmetic (typography, spacing) | 37 |
 
@@ -177,6 +182,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `New { -brand-short-name }. More private. Fewer trackers. No compromises.`
 - `windows-10-eos-challenger-callout-title` — `browser/browser/newtab/asrouter.ftl` — "gereksiz özelliklerle dolu halde gelmez" ≠ en "isn't preloaded like other Big Tech browsers" (= not pre-installed on the device). The second sentence "That's the point." is also dropped.
     - Source: `{ -brand-product-name } isn’t preloaded like other Big Tech browsers. That’s the point.`
+- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — The club's proper name “Wrexham AFC” is changed to “Wrexham ASC” in .label and .title.
+    - Current: `Wrexham ASC`
+    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
+    - Suggest: `Wrexham AFC`
+    - “Wrexham AFC” is the official name of a football club. It should be kept as is, not partly translated or altered. The same message's .menu-label keeps “Wrexham AFC”, so the widget now shows two different names for the same club.
 - `newtab-privacy-across-sites` — `browser/browser/newtab/newtab.ftl` — Turkish adds a claim that Firefox protected the user, which the source does not say.
     - Current: `{ $count } sitede sizi koruduk`
     - Source: `{$count ->} [one] Across { $count } site [other] Across { $count } sites`
@@ -358,10 +368,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `xp-java-cert-not-exists-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
     - Source: `This principal doesn’t have a certificate`
     - Suggest: `"Asıl`
-- `xp-java-remove-principal-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
-    - Source: `Couldn’t remove the principal`
-    - Suggest: `"Asıl`
-- _…and 1 more; see `state/` for the full list._
+- _…and 2 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

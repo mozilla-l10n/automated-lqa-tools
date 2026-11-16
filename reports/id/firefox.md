@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 13,922 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 324 |
 | Strings | 13,922 |
-| Missing strings | 2,953 |
+| Missing strings | 2,961 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -63,13 +63,13 @@ _Nothing retired._
 
 ### Completeness
 
-**2,953 strings** are not translated yet, concentrated in:
+**2,961 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 498
-- `browser/browser/preferences/preferences.ftl` — 467
+- `browser/browser/newtab/newtab.ftl` — 502
+- `browser/browser/preferences/preferences.ftl` — 468
 - `browser/browser/ipProtection.ftl` — 160
 - `browser/browser/newtab/onboarding.ftl` — 155
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 88
+- `toolkit/toolkit/pdfviewer/viewer.ftl` — 89
 - `browser/browser/newtab/asrouter.ftl` — 87
 - `toolkit/toolkit/about/aboutAddons.ftl` — 62
 - `browser/browser/featureCallout.ftl` — 57

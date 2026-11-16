@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "nl",
-  "prose_chunks": 17698,
-  "strings": 16875
+  "prose_chunks": 17710,
+  "strings": 16883
  },
  "apostrophe": {
   "straight": 0,
@@ -35,7 +35,7 @@
   "straight-double": 25
  },
  "register": {
-  "formal": 2812,
+  "formal": 2814,
   "informal": 0
  }
 }

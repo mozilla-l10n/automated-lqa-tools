@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 13,569 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 326 |
 | Strings | 13,569 |
-| Missing strings | 3,306 |
+| Missing strings | 3,314 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -63,9 +63,9 @@ _Nothing retired._
 
 ### Completeness
 
-**3,306 strings** are not translated yet, concentrated in:
+**3,314 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 357
+- `browser/browser/newtab/newtab.ftl` — 361
 - `dom/chrome/dom/dom.properties` — 218
 - `browser/browser/aiWindow.ftl` — 160
 - `devtools/client/tooltips.ftl` — 98

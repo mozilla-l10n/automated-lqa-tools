@@ -1973,6 +1973,7 @@
   "confirmation-hint-pin-tab-description": "2529d9ed ff95a8f4",
   "confirmation-hint-screenshot-copied": "7d8bc7a9 d30e535c",
   "confirmation-hint-send-to-device": "e90d7b14 63e7413e",
+  "confirmation-hint-tab-group-button-removed": "97c4c5c7 4871d19b 1106c8ef",
   "confirmation-hint-tab-group-saved": "34f7f037 a848098c"
  },
  "browser/browser/contentCrash.ftl": {
@@ -7188,6 +7189,7 @@
   "sidebar-hide-tabs-and-sidebar": "2645c2a8 c51b8265",
   "sidebar-history-clear": "5f13eb0f b3289ffb",
   "sidebar-history-context-menu-bookmark-page": "79315bf6 1c8240bc",
+  "sidebar-history-context-menu-delete": "97ffc060 817e75a2 a64fcdc6",
   "sidebar-history-context-menu-delete-page-2": "f4abc110 ca6f9316",
   "sidebar-history-context-menu-delete-pages": "c06b6e00 5cea8f1a",
   "sidebar-history-date-prev-month": "23f0c43d 23f0c43d",
@@ -17107,6 +17109,7 @@
   "pdfjs-editor-signature-button": "b149b5f4 b489a775",
   "pdfjs-editor-signature-button-label": "1d5ac351 78e77e0e",
   "pdfjs-editor-signature-editor1": "ed2ae014 5267ca64 2467d510",
+  "pdfjs-editor-signature-editor2": "6e244aa2 e56666df 2467d510",
   "pdfjs-editor-stamp-add-image-button": "5211e0c5 0603f860",
   "pdfjs-editor-stamp-add-image-button-label": "87cda331 72a2a96f",
   "pdfjs-editor-stamp-added-alert": "9d45c7d3 8d18bb2f",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `f82b652e600a` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,119 |
+| **Strings reviewed this run** | 8 of 16,127 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 327 |
-| Strings | 16,119 |
+| Strings | 16,127 |
 | Missing strings | 756 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 4 |
@@ -65,15 +65,15 @@ _Nothing retired._
 
 **756 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 131
+- `browser/browser/newtab/newtab.ftl` — 135
 - `browser/browser/ipProtection.ftl` — 55
 - `browser/browser/newtab/onboarding.ftl` — 55
-- `browser/browser/preferences/preferences.ftl` — 50
+- `browser/browser/preferences/preferences.ftl` — 51
 - `browser/browser/browser.ftl` — 25
 - `toolkit/toolkit/formautofill/formAutofill.ftl` — 25
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 25
 - `toolkit/services/aboutSyncLog.ftl` — 25
-- `toolkit/toolkit/pdfviewer/viewer.ftl` — 22
+- `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
 - `toolkit/toolkit/about/aboutAddons.ftl` — 16
 - `toolkit/toolkit/about/aboutPDF.ftl` — 16
 - `browser/browser/miniWindow.ftl` — 15
@@ -99,7 +99,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
 | inverted marks | `open-question` 329, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1243, `formal` 209 | **informal** |
+| register | `informal` 1244, `formal` 209 | **informal** |
 
 ---
 

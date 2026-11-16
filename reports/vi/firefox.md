@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `74047c5347bc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `bcf134b6aeea` |
-| **Previous run** | 2026-11-09 @ `3685bd005e67` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
+| **Previous run** | 2026-11-09 @ `74047c5347bc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 16,321 |
+| **Strings reviewed this run** | 242 of 16,563 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,48 @@ Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (8)
 
-_No new findings._
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — The message says all saved passwords will be deleted, but the dialog deletes only one password.
+    - Current: `Hành động này sẽ xóa mọi mật khẩu đã lưu cho { -brand-short-name } trên các thiết bị khác.`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.`
+    - The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — 'On every device that syncs your passwords' is rendered as 'on other devices'.
+    - Current: `trên các thiết bị khác`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `trên mọi thiết bị đồng bộ mật khẩu của bạn`
+    - The source says the deletion happens on every device that syncs passwords, including the current one. 'các thiết bị khác' means 'other devices', which changes the scope. The equivalent string in contextual-manager.ftl already translates this correctly.
+- `customkeys-history-reopen-tab-current-window` — `browser/browser/customkeys.ftl` — A trailing full stop was added to a shortcut label that has none in the source.
+    - Current: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại.`
+    - Source: `Reopen Last Closed Tab of the Current Window`
+    - Suggest: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại`
+    - The en-US label has no final punctuation, and none of the other shortcut labels end with a period.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — A literal ">" was added after the chevron span, so the path shows two separators.
+    - Current: `<span data-l10n-name="chevron"></span> > Thẻ và duyệt web`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `<span data-l10n-name="chevron"></span> Thẻ và duyệt web`
+    - The developer comment says the span is a chevron shown in place of a ">" character, so the added ">" makes the separator appear twice.
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — This item description ends with a full stop that the source and the other descriptions in the dialog don't have.
+    - Current: `có thể xoá giỏ hàng.`
+    - Source: `Signs you out and may clear shopping carts`
+    - Suggest: `có thể xoá giỏ hàng`
+    - The en-US description has no final punctuation, and the other descriptions in this dialog (e.g. "Giúp trang web tải nhanh hơn") don't end with a period either.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" is rendered as the verb "duplicate the tabs" instead of the noun phrase "tabs that are duplicates".
+    - Current: `Nhân đôi các thẻ`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Các thẻ trùng lặp`
+    - The developer comment says this item sits under "Close Multiple" and closes duplicate tabs. "Nhân đôi các thẻ" means "duplicate (copy) the tabs", which is a different action.
+- `hnt-card-default-body` — `browser/browser/newtab/onboarding.ftl` — "major" is dropped, so the Vietnamese claims Firefox is the only browser (not the only major browser) built to protect users.
+    - Current: `là trình duyệt duy nhất được xây dựng`
+    - Source: `{ -brand-product-name } is the only major browser built to protect you, not track you.`
+    - Suggest: `là trình duyệt lớn duy nhất được xây dựng`
+    - The en-US limits the claim to "the only major browser". Without that qualifier, the Vietnamese makes a broader claim about Firefox compared with every other browser, and that claim is not true.
+- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — "unload tabs" is translated as "đóng các thẻ" (close tabs), which is a different action.
+    - Current: `đóng các thẻ bạn không sử dụng`
+    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
+    - Suggest: `dỡ (giải phóng) các thẻ bạn không sử dụng`
+    - In en-US, unloading a tab frees its memory but keeps the tab open. "Đóng" means closing the tab, so users would think the feature closes their tabs.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +84,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 331 |
-| Strings | 16,321 |
-| Missing strings | 554 |
+| Strings | 16,563 |
+| Missing strings | 320 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -57,26 +96,26 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 560 |
+| Access keys not in their label | 579 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 73 |
 
 ### Completeness
 
-**554 strings** are not translated yet, concentrated in:
+**320 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
 - `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
-- `dom/chrome/dom/dom.properties` — 33
+- `dom/chrome/dom/dom.properties` — 31
 - `devtools/client/tooltips.ftl` — 28
-- `browser/browser/preferences/preferences.ftl` — 26
-- `browser/browser/newtab/onboarding.ftl` — 24
-- `browser/browser/newtab/newtab.ftl` — 20
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 19
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 19
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
+- `dom/chrome/layout/htmlparser.properties` — 15
+- `toolkit/toolkit/about/aboutGlean.ftl` — 14
+- `devtools/client/perftools.ftl` — 11
+- `dom/chrome/accessibility/AccessFu.properties` — 10
+- `devtools/client/inspector.properties` — 9
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,9 +125,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 498, `curly-single` 133, `straight-double` 88 | **curly-double** |
-| apostrophe | `typographic` 134, `straight` 12 | **typographic** |
-| ellipsis | `char` 376, `ascii` 18 | **char** |
+| quotes | `curly-double` 499, `curly-single` 134, `straight-double` 88 | **curly-double** |
+| apostrophe | `typographic` 135, `straight` 12 | **typographic** |
+| ellipsis | `char` 378, `ascii` 18 | **char** |
 | dash | `em` 69, `en` 3 | **em** |
 | nbsp | `space-before-punctuation` 6 | **space-before-punctuation** |
 
@@ -96,17 +135,22 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 560 strings** — 560 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 541 more
+- **accesskey — 579 strings** — 579 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 560 more
 - **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
 
 ---
 
-## 3. Open findings (501)
+## 3. Open findings (509)
 
-> **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
+> **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — The message says all saved passwords will be deleted, but the dialog deletes only one password.
+    - Current: `Hành động này sẽ xóa mọi mật khẩu đã lưu cho { -brand-short-name } trên các thiết bị khác.`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.`
+    - The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.
 - `security-technical-encrypted-description` — `browser/browser/pageInfo.ftl` — "It is therefore unlikely that anyone read this page" is rendered as an absolute "no one could read this page".
     - Current: `Do đó, không ai có thể đọc trang này khi nó di chuyển trên mạng.`
     - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
@@ -128,9 +172,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 184 |
-| 3 | Degraded language (grammar, spelling, terminology) | 62 |
-| 4 | Cosmetic (typography, spacing) | 43 |
+| 2 | Wrong content (says something other than the English) | 189 |
+| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 4 | Cosmetic (typography, spacing) | 45 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -438,6 +482,16 @@ _Also listed under their own category below._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — 'On every device that syncs your passwords' is rendered as 'on other devices'.
+    - Current: `trên các thiết bị khác`
+    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
+    - Suggest: `trên mọi thiết bị đồng bộ mật khẩu của bạn`
+    - The source says the deletion happens on every device that syncs passwords, including the current one. 'các thiết bị khác' means 'other devices', which changes the scope. The equivalent string in contextual-manager.ftl already translates this correctly.
+- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — The message says all saved passwords will be deleted, but the dialog deletes only one password.
+    - Current: `Hành động này sẽ xóa mọi mật khẩu đã lưu cho { -brand-short-name } trên các thiết bị khác.`
+    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
+    - Suggest: `Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.`
+    - The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.
 - `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "decoding" is translated as "mã hóa" (encoding) instead of "giải mã".
     - Current: `khi mã hóa một tài nguyên`
     - Source: `An error occurred while decoding a media resource.`
@@ -458,6 +512,11 @@ _Also listed under their own category below._
     - Source: `<strong>Open previous tabs?</strong> You can restore your previous session from the { -brand-short-name } application menu <img data-l10n-name="icon"/>, under History.`
     - Suggest: `Mở các thẻ trước đó?`
     - The source is an invitation to reopen previous tabs. "Đã" turns it into a question about something that already happened.
+- `hnt-card-default-body` — `browser/browser/newtab/onboarding.ftl` — "major" is dropped, so the Vietnamese claims Firefox is the only browser (not the only major browser) built to protect users.
+    - Current: `là trình duyệt duy nhất được xây dựng`
+    - Source: `{ -brand-product-name } is the only major browser built to protect you, not track you.`
+    - Suggest: `là trình duyệt lớn duy nhất được xây dựng`
+    - The en-US limits the claim to "the only major browser". Without that qualifier, the Vietnamese makes a broader claim about Firefox compared with every other browser, and that claim is not true.
 - `security-technical-ct-compliant` — `browser/browser/pageInfo.ftl` — "Certificate Transparency" is rendered as "Chứng chỉ minh bạch" (transparent certificate) instead of transparency of certificates.
     - Current: `Chứng chỉ minh bạch`
     - Source: `This website complies with the Certificate Transparency policy.`
@@ -468,6 +527,11 @@ _Also listed under their own category below._
     - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
     - Suggest: `Do đó, khó có khả năng ai đó đã đọc được trang này khi nó di chuyển trên mạng.`
     - The en-US only says it is unlikely the page was read. The Vietnamese says nobody can read it, a security guarantee the product does not make.
+- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" is rendered as the verb "duplicate the tabs" instead of the noun phrase "tabs that are duplicates".
+    - Current: `Nhân đôi các thẻ`
+    - Source: `accesskey: x label: Duplicate Tabs`
+    - Suggest: `Các thẻ trùng lặp`
+    - The developer comment says this item sits under "Close Multiple" and closes duplicate tabs. "Nhân đôi các thẻ" means "duplicate (copy) the tabs", which is a different action.
 - `mathmlroot` — `dom/chrome/accessibility/AccessFu.properties` — MathML 'root' is translated as 'gốc', which means a tree root or origin, not the math root (radical).
     - Current: `gốc`
     - Source: `root`
@@ -718,27 +782,7 @@ _Also listed under their own category below._
     - Source: `Ignoring sandbox directive when delivered in a report-only policy ‘%1$S’`
     - Suggest: `khi được gửi trong chính sách report-only ‘%1$S’`
     - The source says the sandbox directive is ignored only when it is delivered in a report-only policy. The translation drops "report-only", so it reads as if the directive is ignored under any policy.
-- `triedToSendReport` — `dom/chrome/security/csp.properties` — "Tried to" is dropped, so the message reads as an instruction to send the report rather than a report of a failed attempt.
-    - Current: `Gửi báo cáo đến URI không hợp lệ: "%1$S"`
-    - Source: `Tried to send report to invalid URI: “%1$S”`
-    - Suggest: `Đã thử gửi báo cáo đến URI không hợp lệ: “%1$S”`
-    - The en-US says the browser tried to send a report to an invalid URI. The Vietnamese reads as an imperative "Send report to invalid URI". It also uses straight quotes, which goes against the locale's curly-quote convention.
-- `BlockFileScriptWithWrongMimeType` — `dom/chrome/security/security.properties` — The URI scheme "file:" was translated as "tập tin:" even though the developer comment says not to.
-    - Current: `từ tập tin: URI`
-    - Source: `Loading script from file: URI (“%1$S”) was blocked because its MIME type (“%2$S”) is not a valid JavaScript MIME type.`
-    - Suggest: `từ file: URI`
-    - The localization note says: Do not translate "file: URI". It is a literal URI scheme.
-- `BlockJsonModuleWithWrongMimeType` — `dom/chrome/security/security.properties` — "JSON module" was translated as just "JSON", so the word "module" is missing.
-    - Current: `Đã chặn việc tải JSON từ`
-    - Source: `Loading JSON module from “%1$S” was blocked because of a disallowed MIME type (“%2$S”).`
-    - Suggest: `Đã chặn việc tải mô-đun JSON từ`
-    - The source says a JSON module was blocked, not generic JSON. The sibling string BlockModuleWithWrongMimeType translates "module" as "mô-đun".
-- `BlockRedirectToDataURI` — `dom/chrome/security/security.properties` — The URI scheme "data:" was translated as "dữ liệu:", which garbles the technical term.
-    - Current: `Chuyển hướng đến dữ liệu: URI`
-    - Source: `Redirecting to data: URI not allowed (Blocked loading of: “%1$S”)`
-    - Suggest: `Chuyển hướng đến data: URI`
-    - "data:" is a URI scheme and must stay literal, as the sibling string BlockTopLevelDataURINavigation tells translators ("Do not translate 'data: URI'"). "dữ liệu: URI" doesn't make sense.
-- _…and 51 more; see `state/` for the full list._
+- _…and 56 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -1360,6 +1404,16 @@ _Also listed under their own category below._
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
     - Suggest: `{ -brand-short-name }.`
     - Vietnamese does not put a space before a period. The space appears in the text the user reads.
+- `customkeys-history-reopen-tab-current-window` — `browser/browser/customkeys.ftl` — A trailing full stop was added to a shortcut label that has none in the source.
+    - Current: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại.`
+    - Source: `Reopen Last Closed Tab of the Current Window`
+    - Suggest: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại`
+    - The en-US label has no final punctuation, and none of the other shortcut labels end with a period.
+- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — A literal ">" was added after the chevron span, so the path shows two separators.
+    - Current: `<span data-l10n-name="chevron"></span> > Thẻ và duyệt web`
+    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
+    - Suggest: `<span data-l10n-name="chevron"></span> Thẻ và duyệt web`
+    - The developer comment says the span is a chevron shown in place of a ">" character, so the added ">" makes the separator appear twice.
 - `launch-on-login-autostart-infobar-message` — `browser/browser/newtab/asrouter.ftl` — There is a double space after the brand name in the visible text.
     - Current: `{ -brand-short-name }  bây giờ`
     - Source: `{ -brand-short-name } now starts up when you sign in to Windows. You can always change this later in settings.`
@@ -1370,6 +1424,11 @@ _Also listed under their own category below._
     - Source: `title: Manage Cookies and Site Data`
     - Suggest: `cookie và`
     - The double space is visible in the window title.
+- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — This item description ends with a full stop that the source and the other descriptions in the dialog don't have.
+    - Current: `có thể xoá giỏ hàng.`
+    - Source: `Signs you out and may clear shopping carts`
+    - Suggest: `có thể xoá giỏ hàng`
+    - The en-US description has no final punctuation, and the other descriptions in this dialog (e.g. "Giúp trang web tải nhanh hơn") don't end with a period either.
 - `tabbrowser-confirm-close-all-duplicate-tabs-text` — `browser/browser/tabbrowser.ftl` — No space after the full stop between the two sentences.
     - Current: `trong cửa sổ này.Thẻ hoạt động`
     - Source: `We’ll close duplicate tabs in this window. The last active tab will stay open.`
@@ -1635,11 +1694,7 @@ _Also listed under their own category below._
     - Source: `Contact your network administrator to make sure the proxy server is working.`
     - Suggest: `proxy vẫn`
     - Two spaces where one is meant, in a user-visible message.
-- `webauthn-uv-blocked-prompt` — `toolkit/toolkit/webauthnDialog.ftl` — Double space before the hostname in visible text
-    - Current: `trên  { $hostname }`
-    - Source: `User verification failed on { $hostname }. There were too many failed attempts and the built-in user verification method has been blocked.`
-    - Suggest: `trên { $hostname }`
-    - Two spaces where one is meant, in a user-visible message.
+- _…and 1 more; see `state/` for the full list._
 
 ---
 

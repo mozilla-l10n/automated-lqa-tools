@@ -24,6 +24,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "trên các thiết bị khác",
+  "dismissed_because": "",
+  "fid": "4d0b9e68419f",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says the deletion happens on every device that syncs passwords, including the current one. 'các thiết bị khác' means 'other devices', which changes the scope. The equivalent string in contextual-manager.ftl already translates this correctly.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "80639862",
+  "string_id": "about-logins-confirm-delete-all-sync-dialog-message",
+  "suggest": "trên mọi thiết bị đồng bộ mật khẩu của bạn",
+  "summary": "'On every device that syncs your passwords' is rendered as 'on other devices'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Hành động này sẽ xóa mọi mật khẩu đã lưu cho { -brand-short-name } trên các thiết bị khác.",
+  "dismissed_because": "",
+  "fid": "57b16723af34",
+  "file": "browser/browser/aboutLogins.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.",
+  "reads_as_deliberate": true,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "f41e364a",
+  "string_id": "about-logins-confirm-delete-dialog-message2",
+  "suggest": "Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.",
+  "summary": "The message says all saved passwords will be deleted, but the dialog deletes only one password.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "7 ngày trước",
@@ -792,6 +840,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại.",
+  "dismissed_because": "",
+  "fid": "75c5a67196b0",
+  "file": "browser/browser/customkeys.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 4,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US label has no final punctuation, and none of the other shortcut labels end with a period.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b670f8da",
+  "string_id": "customkeys-history-reopen-tab-current-window",
+  "suggest": "Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại",
+  "summary": "A trailing full stop was added to a shortcut label that has none in the source.",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "ui_references",
   "current": "Bước 1: Đi tới Cài đặt > Ứng dụng mặc định\nBước 2: Cuộn xuống đến “Trình duyệt Web”\nBước 3: Chọn { -brand-short-name }",
@@ -800,7 +872,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "vi",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -918,7 +990,7 @@
   "file": "browser/browser/featureCallout.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "vi",
   "origin": {},
   "rationale": "In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1052,6 +1124,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "<span data-l10n-name=\"chevron\"></span> > Thẻ và duyệt web",
+  "dismissed_because": "",
+  "fid": "bb1977eaac68",
+  "file": "browser/browser/genai.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says the span is a chevron shown in place of a \">\" character, so the added \">\" makes the separator appear twice.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0eecea26",
+  "string_id": "genai-more-actions-all-off-notice",
+  "suggest": "<span data-l10n-name=\"chevron\"></span> Thẻ và duyệt web",
+  "summary": "A literal \">\" was added after the chevron span, so the path shows two separators.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "chính sách cấm sử dụng AI sáng tạo",
@@ -1156,7 +1252,7 @@
   "file": "browser/browser/migrationWizard.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "vi",
   "origin": {},
   "rationale": "In the source this string quotes “Download file”, which is exactly the value of `downloadFile.label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1695,6 +1791,30 @@
   "string_id": "newtab-widget-section-show-less",
   "suggest": "Hiện ít widget hơn",
   "summary": "Typo: 'ích' should be 'ít' (fewer).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "là trình duyệt duy nhất được xây dựng",
+  "dismissed_because": "",
+  "fid": "8116a49e9f20",
+  "file": "browser/browser/newtab/onboarding.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The en-US limits the claim to \"the only major browser\". Without that qualifier, the Vietnamese makes a broader claim about Firefox compared with every other browser, and that claim is not true.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b247ad1c",
+  "string_id": "hnt-card-default-body",
+  "suggest": "là trình duyệt lớn duy nhất được xây dựng",
+  "summary": "\"major\" is dropped, so the Vietnamese claims Firefox is the only browser (not the only major browser) built to protect users.",
   "suppressed_by": ""
  },
  {
@@ -3162,6 +3282,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "có thể xoá giỏ hàng.",
+  "dismissed_because": "",
+  "fid": "31fb5ac9f1ba",
+  "file": "browser/browser/sanitize.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 4,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US description has no final punctuation, and the other descriptions in this dialog (e.g. \"Giúp trang web tải nhanh hơn\") don't end with a period either.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "ddb9910b",
+  "string_id": "item-cookies-site-data-description2",
+  "suggest": "có thể xoá giỏ hàng",
+  "summary": "This item description ends with a full stop that the source and the other descriptions in the dialog don't have.",
+  "suppressed_by": ""
+ },
+ {
   "category": "A",
   "check": "llm",
   "current": "Mở rộng",
@@ -3279,6 +3423,30 @@
   "string_id": "sync-disconnect-dialog-body",
   "suggest": "sẽ không xóa bất kỳ dữ liệu duyệt web nào của bạn",
   "summary": "'won't delete any of your data' can be read as 'won't delete all of your data'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Nhân đôi các thẻ",
+  "dismissed_because": "",
+  "fid": "1cd445be2730",
+  "file": "browser/browser/tabContextMenu.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says this item sits under \"Close Multiple\" and closes duplicate tabs. \"Nhân đôi các thẻ\" means \"duplicate (copy) the tabs\", which is a different action.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b18c2511",
+  "string_id": "tab-context-close-duplicate-tabs-alt",
+  "suggest": "Các thẻ trùng lặp",
+  "summary": "\"Duplicate Tabs\" is rendered as the verb \"duplicate the tabs\" instead of the noun phrase \"tabs that are duplicates\".",
   "suppressed_by": ""
  },
  {
@@ -4490,7 +4658,7 @@
   "file": "devtools/client/toolbox.ftl",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "vi",
   "origin": {},
   "rationale": "In the source this string quotes “Local Mode”, which is exactly the value of `options-local-mode-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -11221,6 +11389,30 @@
   "string_id": "experimental-features-newtab-widget-lists-and-timer-description",
   "suggest": "khi mở một thẻ mới",
   "summary": "'tab' is left in English while the locale uses 'thẻ' everywhere else",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "đóng các thẻ bạn không sử dụng",
+  "dismissed_because": "",
+  "fid": "0e6456209baf",
+  "file": "toolkit/toolkit/firefoxlabs/features.ftl",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "In en-US, unloading a tab frees its memory but keeps the tab open. \"Đóng\" means closing the tab, so users would think the feature closes their tabs.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "42ab1e60",
+  "string_id": "experimental-features-resource-monitor-description",
+  "suggest": "dỡ (giải phóng) các thẻ bạn không sử dụng",
+  "summary": "\"unload tabs\" is translated as \"đóng các thẻ\" (close tabs), which is a different action.",
   "suppressed_by": ""
  },
  {

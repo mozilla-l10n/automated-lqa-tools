@@ -646,9 +646,13 @@
    "source": "This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.",
    "original": "Dies kann vorkommen, wenn ein anderes Firefox-Profil oder eine andere Instanz von { -brand-short-name } aktualisiert wird oder ein Update nicht bis zum nächsten Neustart warten kann.",
    "text": "Dies kann vorkommen, wenn ein anderes Profil oder eine andere Instanz von { -brand-short-name } aktualisiert wird oder ein Update nicht bis zum nächsten Neustart warten kann.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398644,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/aboutRestartRequired.ftl/?string=340813",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -674,9 +678,14 @@
    "text": "Legen Sie Regeln für Websites fest, die mehr Datenschutz oder ein deaktiviertes VPN benötigen.",
    "full_original": ".description = Legen Sie Regeln für Websites fest, die mehr Datenschutz, oder ein deaktiviertes VPN benötigen.\n.label = VPN-Regeln verwalten",
    "full_text": ".description = Legen Sie Regeln für Websites fest, die mehr Datenschutz oder ein deaktiviertes VPN benötigen.\n.label = VPN-Regeln verwalten",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>This seems to be removing the colon before \"oder\"</p>; d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>Yes and this comma shouldn´t be removed there.</p>",
+   "dismissal": "ip-protection-site-rules-button-1 @ browser/browser/ipProtection.ftl — pontoon-rejected (2026-11-09): rejected in Pontoon: mZuzEFP7EcmgBBTbvtgJP2LFFTY: <p>This seems to be removing the colon before \"oder\"</p>; d3_a_WJBXT7jM9HiCUG3-gcQQl0: <p>Yes and this comma shouldn´t be removed there.</p>",
+   "pontoon_pk": 12398645,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/ipProtection.ftl/?string=341475",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-09",
@@ -733,9 +742,13 @@
    "text": "W",
    "full_original": ".accesskey = W\n.label = Websites erlauben, App-Links zu öffnen.",
    "full_text": ".accesskey = W\n.label = Websites erlauben, das Öffnen von App-Links anzufragen.",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398650,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/preferences/preferences.ftl/?string=341746",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -857,9 +870,14 @@
    "text": "r",
    "full_original": ".accesskey = r\n.label = Tabs rechts schließen",
    "full_text": ".accesskey = r\n.label = Tabs rechts davon",
-   "status": "pending",
+   "status": "rejected",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "dismissal": "close-tabs-to-the-end-alt @ browser/browser/tabContextMenu.ftl — pontoon-rejected (2026-11-09): rejected in Pontoon without comment; likely reason (inferred): Inferred: the suggestion was identical to the existing translation (\"r\", the access key only), so it changed nothing and didn't touch the label the finding was about.",
+   "pontoon_pk": 12398651,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/tabContextMenu.ftl/?string=344050",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-09",
@@ -915,9 +933,13 @@
    "source": "EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
    "original": "EditContext.updateCharacterBounds() wurde nicht synchron im charactersboundsupdate-Ereignis-Listener aufgerufen. Die IME-Schnittstelle kann für einige Benutzer unerwartet wechseln. Weitere Informationen: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
    "text": "EditContext.updateCharacterBounds() wurde nicht synchron im characterboundsupdate-Ereignis-Listener aufgerufen. Die IME-Schnittstelle kann für einige Benutzer unerwartet wechseln. Weitere Informationen: https://developer.mozilla.org/docs/Web/API/EditContext/updateCharacterBounds",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398653,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/dom/chrome/dom/dom.properties/?string=337732",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1001,9 +1023,13 @@
    "source": "{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-short-name }? [other other] Stop { $downloadsCount } downloads and quit { -brand-short-name }?",
    "original": "{ $downloadsCount } Downloads stoppen und { -brand-short-name } beenden?",
    "text": "{ $downloadsCount } Downloads stoppen und { -brand-short-name } beenden?",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-09",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 12398656,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/toolkit/toolkit/downloads/downloadUI.ftl/?string=344090",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

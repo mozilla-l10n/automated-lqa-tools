@@ -755,6 +755,11 @@
   "all-tabs-menu-view-all-tabs": "67f0ec1d 889540b2"
  },
  "browser/browser/appExtensionFields.ftl": {
+  "extension-classic-blue-name": "5a883490 cd661020 59b25f86",
+  "extension-classic-cyan-name": "b9334fd2 f5e45f58 50d9754f",
+  "extension-classic-green-name": "e8b38768 7150279f 3ae3f9f3",
+  "extension-classic-proton-name": "18b78c4e 42567944 66cad703",
+  "extension-classic-violet-name": "0f02c2cb 4d1b0d62 6ed205c2",
   "extension-default-theme-description": "9016565d 232309d6",
   "extension-default-theme-description2": "e1b7d212 08afc1e9",
   "extension-default-theme-name-auto": "08757602 670ea588",
@@ -1877,6 +1882,7 @@
   "search-find-selection-shortcut": "405231bf 1f52f400",
   "search-focus-shortcut": "0e4ad055 3f2c335e",
   "search-focus-shortcut-alt": "0821d872 7304fded",
+  "search-tabs-shortcut": "6d131810 6d131810",
   "tab-new-shortcut": "aa3687ec f2b24d44",
   "toggle-sidebar-shortcut": "22317de5 22317de5",
   "window-minimize-command": "4cadd6e5 d7946667",
@@ -2631,7 +2637,8 @@
   "firefoxview-tabs-list-tab-button": "59046835 4e25bcbc",
   "firefoxview-view-all-link": "d045bb2e c668d698",
   "menu-tools-firefox-view": "600823d9 600823d9",
-  "toolbar-button-firefox-view-2": "ef5d0a7b 59a2311d"
+  "toolbar-button-firefox-view-2": "ef5d0a7b 59a2311d",
+  "toolbar-button-firefox-view-3": "6cef83d1 7181aa59"
  },
  "browser/browser/fxviewTabList.ftl": {
   "fxviewtabrow-add-bookmark": "a5f98791 b4f791cc",
@@ -2740,6 +2747,7 @@
   "genai-settings-chat-lechat-links": "9c803c38 b2515065",
   "genai-settings-chat-lechat-links-2": "49fdf200 aa05367e",
   "genai-settings-chat-localhost-links": "8d0bceb1 e4904358",
+  "genai-settings-chat-scout-links": "601ebd5f 9932e452",
   "genai-shortcut-button": "59740ae5 12e89a46",
   "genai-shortcut-copy-confirmation": "f67aae76 17dcf16c 1505ac44",
   "genai-shortcut-more-actions-button": "fb8bda6e eea1f02f",
