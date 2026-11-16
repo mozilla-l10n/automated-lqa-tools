@@ -240,6 +240,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "B",
+  "check": "llm",
+  "current": "để cung cấp các tính năng mới nhất",
+  "dismissed_because": "",
+  "fid": "b0b0a3b4bd55",
+  "file": "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "vi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The source says the Privacy Notice was updated to reflect (describe) new features; \"cung cấp\" means \"provide\", claiming the notice update delivers the features.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "fb392aa8",
+  "string_id": "FirefoxHome.PrivacyNotice.Body.Markdown.v160",
+  "suggest": "để phản ánh các tính năng mới nhất",
+  "summary": "\"to reflect the latest features\" is rendered as \"to provide the latest features\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "Lưu menu phụ",

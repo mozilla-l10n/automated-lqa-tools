@@ -456,6 +456,7 @@
   "MainMenu.SettingsSection.WhatsNew.Title.v131": "145264a5 0068f643 4ce85dc8",
   "MainMenu.SiteProtection.AdBlocker.Title.v153": "4d39e3a3 ef07e8df 95558a54",
   "MainMenu.SiteProtection.ConnectionNotSecure.Title.v141": "897c22d7 b3115394 c5f25825",
+  "MainMenu.SiteProtection.Protections.ReaderModeSubtitle.v162": "66259a2e 9dea0549 7e2681c9",
   "MainMenu.SiteProtection.Protections.Title.v153": "4f5e721b 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "0ec7e6c0 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "8d2ebf4f 0f76f2fd 29145267",
@@ -594,7 +595,7 @@
   "NativeErrorPage.BadCertDomain.AdvancedSecurityInfo.v149": "7d522ca4 aa4803e1 00af61e4",
   "NativeErrorPage.BadCertDomain.AdvancedWarning1.v149": "56f4f365 84045a06 9e4a2683",
   "NativeErrorPage.BadCertDomain.AdvancedWarning2.v149": "bf7ef24f d7073b97 6f87a508",
-  "NativeErrorPage.BadCertDomain.Description.v149": "8a985ad5 7d61287e e6918bfd",
+  "NativeErrorPage.BadCertDomain.Description.v149": "661d04ac 7d61287e e6918bfd",
   "NativeErrorPage.BadCertDomain.ErrorCodeLabel.v149": "b315dfda b6702033 07a7fb60",
   "NativeErrorPage.BadCertDomain.HideAdvancedButton.v149": "6fb7feb1 74f365bf 804c3d17",
   "NativeErrorPage.BadCertDomain.LearnMoreLink.v149": "3cf96968 d9b20450 eda35a34",
@@ -1043,7 +1044,7 @@
   "Settings.Search.DefaultSearchEngine.Title.v121": "d64135ff 8ec38c08 9531533a",
   "Settings.Search.EnginesSuggestions.Title.v124": "73897ce6 8bcee2af 0e738717",
   "Settings.Search.GoogleLens.Description.v153": "6b31e650 b8ed666a 8209ad93",
-  "Settings.Search.GoogleLens.Footnote.v153": "dab0776e af4d9ce4 402c74fd",
+  "Settings.Search.GoogleLens.Footnote.v153": "c05b2194 af4d9ce4 402c74fd",
   "Settings.Search.GoogleLens.Title.v153": "51bb4da0 51bb4da0 c7338fb2",
   "Settings.Search.PageTitle.v121": "0201b04f 4dbcba2a ab4662f0",
   "Settings.Search.PrivateSession.Description.v125": "2ad7de11 86ca536d 57f9c23e",
@@ -1289,7 +1290,7 @@
   "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "22de0741 978267cd 2699c015",
   "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "5d14000e 708e1251 d35af549",
   "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "644df099 819cf749 94973be0",
-  "VPN.ErrorBrowsingPopup.Continue.v160": "b9d6b471 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "b9d6b471 54cfcf7b 3c4d0ea1",
   "VPN.ErrorBrowsingPopup.Title.v160": "d5acfade 0df91faf 4881e8b2",
   "VPN.ErrorConnectingPopup.Body.v160": "1c515b28 4dad2f2b 518c5e81",
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "5a00f1df 0e7c6115 70cb9732",
@@ -1302,6 +1303,10 @@
   "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "5d14000e 708e1251 886535ab",
   "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "644df099 819cf749 db106b11",
   "VPN.ReachedDataLimitPopup.Title.v160": "077b189a bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "6f9fbd34 d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "c476f847 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "fdcfba35 3076b2c4 d1b45d55",

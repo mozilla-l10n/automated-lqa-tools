@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,983 |
+| **Strings reviewed this run** | 6 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for fr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — "could also be set up incorrectly" (possibility) is rendered with the indicative "peuvent également être mal configurés", asserting it more strongly than the source.
+    - Current: `Vos paramètres de connexion peuvent également être mal configurés.`
+    - Source: `Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.`
+    - Suggest: `Vos paramètres de connexion pourraient également être mal configurés.`
+    - The source uses the conditional "could", matching the preceding "pourrait"; the indicative weakens the hypothetical framing.
+- `Settings.Search.GoogleLens.Footnote.v153` — `fr/firefox-ios.xliff` — "your active search engine" is translated as "moteur de recherche principal" (main/primary), changing the meaning.
+    - Current: `défini comme moteur de recherche principal lors de la navigation`
+    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
+    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
+    - The source says the engine must be the active one while browsing, not the "main" one; French "principal" is also confusable with "par défaut" used elsewhere on this screen.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,8 +53,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,983 |
+| Files | 99 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -68,7 +77,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 376 | **typographic** |
+| apostrophe | `typographic` 379 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
 | nbsp | `total` 167, `before-punctuation` 99 | _mixed_ |
@@ -82,13 +91,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (12)
+## 3. Open findings (10)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 8 |
+| 2 | Wrong content (says something other than the English) | 6 |
 | 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -98,11 +107,6 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — "could also be set up incorrectly" (possibility) is rendered with the indicative "peuvent également être mal configurés", asserting it more strongly than the source.
-    - Current: `Vos paramètres de connexion peuvent également être mal configurés.`
-    - Source: `Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.`
-    - Suggest: `Vos paramètres de connexion pourraient également être mal configurés.`
-    - The source uses the conditional "could", matching the preceding "pourrait"; the indicative weakens the hypothetical framing.
 - `Onboarding.Modern.BrandRefresh.TermsOfUse.Description.v148` — `fr/firefox-ios.xliff` — "won’t sell you out" is rendered as "digne de confiance" (trustworthy), losing the meaning of not selling out/betraying the user.
     - Current: `Rapide, sûr et digne de confiance.`
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
@@ -133,11 +137,6 @@ _Nothing in this category._
     - Source: `Learn about useful features and how to get the most out of %@.`
     - Suggest: `Découvrez des fonctionnalités utiles et comment tirer le meilleur parti de %@.`
     - The source describes learning about features and how to get the most out of the app; "et des conseils" introduces content the source does not state.
-- `Settings.Search.GoogleLens.Footnote.v153` — `fr/firefox-ios.xliff` — "your active search engine" is translated as "moteur de recherche principal" (main/primary), changing the meaning.
-    - Current: `défini comme moteur de recherche principal lors de la navigation`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
-    - The source says the engine must be the active one while browsing, not the "main" one; French "principal" is also confusable with "par défaut" used elsewhere on this screen.
 - `Settings.Translation.AutoTranslate.Footer.v151` — `fr/firefox-ios.xliff` — "your top preferred language" is rendered as "la langue de votre choix", losing the notion of the highest-ranked preferred language.
     - Current: `Traduit automatiquement les pages dans la langue de votre choix.`
     - Source: `Translates pages to your top preferred language automatically.`
@@ -214,8 +213,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (20)
+### Fixed to date (22)
 
+- `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — fixed 2026-11-16
+- `Settings.Search.GoogleLens.Footnote.v153` — `fr/firefox-ios.xliff` — fixed 2026-11-16
 - `Settings.AppIconSelection.AppIconNames.Sunrise.Title.v137` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fr/firefox-ios.xliff` — fixed 2026-11-02
 - `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `fr/firefox-ios.xliff` — fixed 2026-11-02

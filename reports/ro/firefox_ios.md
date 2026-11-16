@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,973 |
+| **Strings reviewed this run** | 1 of 1,973 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 98 |
 | Strings | 1,973 |
-| Missing strings | 10 |
+| Missing strings | 13 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,12 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
+**13 strings** are not translated yet, concentrated in:
 
 - `ro/firefox-ios.xliff` — 5
 - `ro/firefox-ios.xliff` — 2
 - `ro/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 - `ro/firefox-ios.xliff` — 1
+- `ro/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

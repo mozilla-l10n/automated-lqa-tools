@@ -1,5 +1,29 @@
 [
  {
+  "category": "B",
+  "check": "llm",
+  "current": "Kumoa",
+  "dismissed_because": "",
+  "fid": "e49099378ba9",
+  "file": "Shared/Supporting Files/en-US.lproj/Alerts.strings",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "fi",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says the button cancels the download and closes the window. In Finnish, \"Kumoa\" means undoing or reverting an action already done. The standard Finnish UI word for Cancel is \"Peruuta\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "7c6e1e9e",
+  "string_id": "Alerts.ConfigurationProfile.Button.Cancel.v160.1",
+  "suggest": "Peruuta",
+  "summary": "The Cancel button is translated as \"Kumoa\" (Undo), not \"Peruuta\" (Cancel).",
+  "suppressed_by": ""
+ },
+ {
   "category": "D",
   "check": "llm",
   "current": "Kumoa",

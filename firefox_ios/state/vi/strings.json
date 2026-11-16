@@ -40,6 +40,11 @@
   "Alerts.AddToCalendar.BodyDefault.v134": "37b217f1 70fe87b8 8dbcd3a5",
   "Alerts.AddToCalendar.Button.Add.v134": "e0ebaf06 01172d28 8f018583",
   "Alerts.AddToCalendar.Title.v134": "af1c67d5 08d8ff50 ea781d29",
+  "Alerts.ConfigurationProfile.Body.v160.1": "36a60ffd e60e0053 074a52b6",
+  "Alerts.ConfigurationProfile.BodyDefault.v160.1": "deddcc8e 54eba705 c891871a",
+  "Alerts.ConfigurationProfile.Button.Cancel.v160.1": "7be79106 871d661d 9f7d31af",
+  "Alerts.ConfigurationProfile.Button.Continue.v160.1": "22536bec 5009bc49 248707f1",
+  "Alerts.ConfigurationProfile.Title.v160.1": "1c7a8bd8 7ed5ad40 983f661d",
   "Alerts.FeltDeletion.Body.v122": "c09be4ef 7183e636 a55c275d",
   "Alerts.FeltDeletion.Button.Cancel.v122": "a1ef40cd 871d661d 3e734601",
   "Alerts.FeltDeletion.Button.Cancel.v134": "a1ef40cd 871d661d 1bfe1810",
@@ -329,7 +334,9 @@
   "ExternalLink.ExternalSmsLinkConfirmation.v136": "403d8700 bc105275 2d0a7110"
  },
  "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings": {
+  "FirefoxHome.PrivacyNotice.Body.Markdown.v160": "fb392aa8 291c8443 5ce7ea0c",
   "FirefoxHome.PrivacyNotice.Body.v148": "a8328758 e9082260 fade0257",
+  "FirefoxHome.PrivacyNotice.Headline.v160": "7c46cee5 c8dc72ab 2bcb2a8c",
   "FirefoxHome.PrivacyNotice.LearnMoreLink.v148": "9fccfcf0 8ed49578 79d95a90",
   "FirefoxHome.PrivacyNotice.PrivacyNoticeLink.v148": "4125bf79 f90e5f8c 260331a6",
   "FirefoxHome.ScreenTitle.v144": "5f274999 9e90592c a9e45512",
@@ -449,6 +456,7 @@
   "MainMenu.SettingsSection.WhatsNew.Title.v131": "6874463d 0068f643 4ce85dc8",
   "MainMenu.SiteProtection.AdBlocker.Title.v153": "429b34eb ef07e8df 95558a54",
   "MainMenu.SiteProtection.ConnectionNotSecure.Title.v141": "ffbd456f b3115394 c5f25825",
+  "MainMenu.SiteProtection.Protections.ReaderModeSubtitle.v162": "31a11699 9dea0549 7e2681c9",
   "MainMenu.SiteProtection.Protections.Title.v153": "dde9a688 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "f9398d83 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "cf78e9ef 0f76f2fd 29145267",
@@ -617,7 +625,9 @@
   "NativeErrorPage.Wayback.Error.Search.v155": "b4bcec78 50fdc79d f60b10a8",
   "NativeErrorPage.Wayback.Error.SearchWayback.v155": "db74f94e 55e56d2c 4d9c8e7f",
   "NativeErrorPage.Wayback.Error.Title.v154": "b214723d 09fe4418 225e49a3",
-  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "76a02605 5c853c83 41cb4c56"
+  "NativeErrorPage.Wayback.Error.WaybackButtonA11yHint.v154": "76a02605 5c853c83 41cb4c56",
+  "VPN.ErrorPage.Body.v160": "8fc9a4ac c1aca96f 19c107e0",
+  "VPN.ErrorPage.Title.v160": "030eef60 155c43d9 34e6d123"
  },
  "Shared/Supporting Files/en-US.lproj/Notification.strings": {
   "Notification.Fallback.Title.v113": "3903d209 e38877e5 1d128de3"
@@ -791,7 +801,14 @@
   "Onboarding.Welcome.Link.Action.v114": "f2b7a36c e22c5bd6 68ce2114",
   "Onboarding.Welcome.Skip.v114": "11ab3e9f dfb31eca 2527904c",
   "Onboarding.Welcome.Title.TreatementA.v120": "d04dec67 8edee85e 42b6b9a4",
-  "Onboarding.Welcome.Title.v114": "00599c22 309cad48 42b6b9a4"
+  "Onboarding.Welcome.Title.v114": "00599c22 309cad48 42b6b9a4",
+  "VPN.Onboarding.LimitBody.v160": "8b0fd925 e7918393 395cc65b",
+  "VPN.Onboarding.LimitSubheading.v160": "e79e2329 9fddebc0 f3cdbd32",
+  "VPN.Onboarding.LocationsBody.v160": "943f49b6 d1dbad46 958e7087",
+  "VPN.Onboarding.LocationsSubheading.v160": "b221446c da3baa74 27db0145",
+  "VPN.Onboarding.Title.v160": "688f3048 0996c1bd 414c90a4",
+  "VPN.Onboarding.WifiBody.v160": "093c3c3f f48475df 99388cdc",
+  "VPN.Onboarding.WifiSubheading.v160": "78784d1e b2ff4b77 d4af947c"
  },
  "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings": {
   "PasswordAutofill.LoginListCellNoUsername.v129": "980e3e9c 00ac2900 5441cc20",
@@ -834,6 +851,7 @@
   "QuickAnswers.ContentView.Footer.v158": "4908d348 2f8ace80 51573155",
   "QuickAnswers.ContentView.Listening.v158": "594ce831 647477fe 206365c4",
   "QuickAnswers.ContentView.ListeningFollowUp.v160": "e0b16d48 58e05d3b 383d83dd",
+  "QuickAnswers.ContentView.NewQuestionButton.v161": "70e62a38 c8f2cc6e 139d73fc",
   "QuickAnswers.ContentView.Placeholder.v158": "ec6107f8 07b487b5 d5c1aeb3",
   "QuickAnswers.ContentView.ResultHeader.v160": "858a70de e2ed6049 0b132920",
   "QuickAnswers.ContentView.SearchingSources.v158": "1e9b01a2 955b7c57 a6d3ccc8",
@@ -1076,7 +1094,26 @@
   "Settings.Translation.SettingOn.v145": "8e5c873b 201cd7a0 33647977",
   "Settings.Translation.Title.v145": "84bf28a3 9afb9485 e8e90a78",
   "Settings.Translation.ToggleFooter.v151": "f2316950 925a0171 a8fa2621",
-  "Settings.Translation.ToggleTitle.v145": "6105199d c640ad8b 22fa395f"
+  "Settings.Translation.ToggleTitle.v145": "6105199d c640ad8b 22fa395f",
+  "VPN.LocationPicker.FindingLocationsText.v160": "05e1b29c 43b0b6a7 ae6285e2",
+  "VPN.LocationPicker.RecommendedMainText.v160": "0fc424fe 40b5cb8f 1eb33093",
+  "VPN.LocationPicker.RecommendedSubText.v160": "b61b86a6 cce40e95 4da8d9f0",
+  "VPN.Settings.Connected.v161": "da151987 34f0ad6f ae1c1244",
+  "VPN.Settings.Connecting.v160": "db0c4b52 49447206 8b0ee67e",
+  "VPN.Settings.DataLimit.AccessibilityValue.v161": "1ac21619 82627945 2fa27c62",
+  "VPN.Settings.DataLimitResetFooter.v160": "9ba611e0 fbbabbae 1ed1a1cc",
+  "VPN.Settings.DataLimitTitle.v160": "a8fa23e6 4c6e9549 a6cf0d3d",
+  "VPN.Settings.DataUsage.AccessibilityLabel.v160": "1c0563e4 c6eaf97e bcc8cae6",
+  "VPN.Settings.DataUsage.v160": "376d19f8 74e9dde4 c447ed91",
+  "VPN.Settings.Description.v160": "ad13d2c9 e6b663af 5d2317a3",
+  "VPN.Settings.LearnMore.v160": "ec069da5 8edf7739 65664dbb",
+  "VPN.Settings.LocationRecommended.v160": "0fc424fe 40b5cb8f 2297934e",
+  "VPN.Settings.LocationTitle.v160": "8f220a05 3d0aa4e0 1de5adea",
+  "VPN.Settings.StatusOff.v160": "fe96e6fd 4c5ca662 562e39ab",
+  "VPN.Settings.StatusOn.v160": "8e5c873b 201cd7a0 01345c84",
+  "VPN.Settings.StatusPaused.v160": "f4974077 2debda1f 310bdff1",
+  "VPN.Settings.Title.v160": "809e90e3 2c0cc769 a9e95dd7",
+  "VPN.Settings.ToggleTitle.v160": "ba165965 ba165965 96d00464"
  },
  "Shared/Supporting Files/en-US.lproj/Share.strings": {
   "SendTo.NoDevicesFound.Message.v119": "2a924047 285cd0fc 13fc1cc8",
@@ -1244,6 +1281,32 @@
   "Upgrade.Welcome.Action.v114": "3cd7c003 be2e61de e2701915",
   "Upgrade.Welcome.Description.v114": "d30d08b4 5adaa1ee f468827a",
   "Upgrade.Welcome.Title.v114": "044e52c8 df7f4dbc a9213614"
+ },
+ "Shared/Supporting Files/en-US.lproj/VPN.strings": {
+  "VPN.DataLimitRefreshNotification.Body.v160": "b3de7773 3b369fe0 a4b8247f",
+  "VPN.DataLimitRefreshNotification.Title.v160": "2bd85883 90fb029a db9491ce",
+  "VPN.ErrorBrowsingPopup.Body.v160": "87d83af2 353f5d66 dfd38663",
+  "VPN.ErrorBrowsingPopup.CloseAllTabs.v160": "f19d35a6 5f9d1590 9f42bc84",
+  "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "43310dcd 978267cd 2699c015",
+  "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "0d5a28c3 708e1251 d35af549",
+  "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "4040a333 819cf749 94973be0",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "b9795b4c 54cfcf7b 3c4d0ea1",
+  "VPN.ErrorBrowsingPopup.Title.v160": "fe1cf975 0df91faf 4881e8b2",
+  "VPN.ErrorConnectingPopup.Body.v160": "821ae736 4dad2f2b 518c5e81",
+  "VPN.ErrorConnectingPopup.CloseButtonText.v160": "6f5a0c93 0e7c6115 70cb9732",
+  "VPN.ErrorConnectingPopup.RetryButtonText.v160": "8e59af5a 67f53444 631d8583",
+  "VPN.ErrorConnectingPopup.Title.v160": "d73c1740 dc30d148 ece5c8ec",
+  "VPN.ReachedDataLimitPopup.AltPopupBody.v160": "391fab72 42e50fea 4c89c492",
+  "VPN.ReachedDataLimitPopup.Body.v160": "e95a15e4 78f113bb e7e25f42",
+  "VPN.ReachedDataLimitPopup.CloseAllTabs.v160": "f19d35a6 5f9d1590 4802c44c",
+  "VPN.ReachedDataLimitPopup.CloseThisTab.v160": "43310dcd 978267cd fa458859",
+  "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "0d5a28c3 708e1251 886535ab",
+  "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "4040a333 819cf749 db106b11",
+  "VPN.ReachedDataLimitPopup.Title.v160": "ca0e6f45 bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "b1e347ac d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "b815edd6 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "fa783b23 3076b2c4 d1b45d55",

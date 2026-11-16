@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `372c1b986f13` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,903 |
+| **Strings reviewed this run** | 3 of 1,903 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,9 +22,18 @@ Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `ErrorPages.CertWarning.Title` — `sl/firefox-ios.xliff` — Title says "Your connection is not private" instead of "This Connection is Untrusted".
+    - Current: `Vaša povezava ni zasebna`
+    - Source: `This Connection is Untrusted`
+    - Suggest: `Ta povezava ni zaupanja vredna`
+    - The en-US says the connection is untrusted; the Slovenian asserts it is not private, a different claim.
+- `ScanQRCode.PermissionError.Message.v100` — `sl/firefox-ios.xliff` — The instruction to go to the device settings is reduced to "Izberite" (Select), dropping "device".
+    - Current: `Izberite "Nastavitve" > "Firefox".`
+    - Source: `Go to device ‘Settings’ > ‘Firefox’. Allow Firefox to access camera.`
+    - Suggest: `Pojdite v "Nastavitve" naprave > "Firefox".`
+    - en-US says "Go to device ‘Settings’ > ‘Firefox’"; the reference to the device's Settings app is lost.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,9 +55,9 @@ _Nothing retired._
 |---|---|
 | Files | 98 |
 | Strings | 1,903 |
-| Missing strings | 80 |
+| Missing strings | 83 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,7 +68,7 @@ _Nothing retired._
 
 ### Completeness
 
-**80 strings** are not translated yet, concentrated in:
+**83 strings** are not translated yet, concentrated in:
 
 - `sl/firefox-ios.xliff` — 35
 - `sl/firefox-ios.xliff` — 20
@@ -68,8 +77,14 @@ _Nothing retired._
 - `sl/firefox-ios.xliff` — 5
 - `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 - `sl/firefox-ios.xliff` — 1
 - `sl/firefox-ios.xliff` — 1
+- `sl/firefox-ios.xliff` — 1
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -82,7 +97,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `straight-double` 15 | **straight-double** |
 | ellipsis | `char` 23 | **char** |
 | dash | `en` 11 | **en** |
-| register | `informal` 2, `formal` 64 | **formal** |
+| register | `informal` 2, `formal` 63 | **formal** |
 
 ---
 
@@ -92,14 +107,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (24)
+## 3. Open findings (21)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 12 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
+| 2 | Wrong content (says something other than the English) | 10 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -178,16 +193,6 @@ _Nothing in this category._
     - Source: `Offline Website Data`
     - Suggest: `Podatke spletnih strani brez povezave`
     - The source names data stored by websites for offline use; the translation says only "data when working offline", losing the website reference.
-- `ErrorPages.CertWarning.Title` — `sl/firefox-ios.xliff` — Title says "Your connection is not private" instead of "This Connection is Untrusted".
-    - Current: `Vaša povezava ni zasebna`
-    - Source: `This Connection is Untrusted`
-    - Suggest: `Ta povezava ni zaupanja vredna`
-    - The en-US says the connection is untrusted; the Slovenian asserts it is not private, a different claim.
-- `ScanQRCode.PermissionError.Message.v100` — `sl/firefox-ios.xliff` — The instruction to go to the device settings is reduced to "Izberite" (Select), dropping "device".
-    - Current: `Izberite "Nastavitve" > "Firefox".`
-    - Source: `Go to device ‘Settings’ > ‘Firefox’. Allow Firefox to access camera.`
-    - Suggest: `Pojdite v "Nastavitve" naprave > "Firefox".`
-    - en-US says "Go to device ‘Settings’ > ‘Firefox’"; the reference to the device's Settings app is lost.
 
 ### C. Grammar, agreement & spelling
 
@@ -206,11 +211,6 @@ _Nothing in this category._
     - Source: `Closed %1$@ Tabs`
     - Suggest: `Zaprti zavihki: %1$@`
     - The string has no plural variants, so a single form is used for every count above one. In Slovenian "zavihkov zaprtih" is correct only for 5 and above. For 2 it should be "zavihka zaprta" and for 3–4 "zavihki zaprti", and the comment gives 3 as an example. A form that works for any number avoids the agreement error.
-- `SendTo.NoDevicesFound.Message` — `sl/firefox-ios.xliff` — "Firefox Računom" uses English-style capitalization and word order for "Firefox Account".
-    - Current: `S tem Firefox Računom`
-    - Source: `You don’t have any other devices connected to this Firefox Account available to sync.`
-    - Suggest: `S tem računom Firefox`
-    - In Slovenian the generic noun is lowercase and follows the brand name: "račun Firefox".
 
 ### D. Terminology, register & consistency
 
@@ -243,9 +243,10 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (3)
 
 - `FxA.FirefoxAccount` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; likely reason (inferred): The original capitalizes "Račun", so it likely treats "Firefox Račun" as a fixed product name, and the reviewer probably kept that brand form instead of reordering it into an ordinary noun phrase.
+- `SendTo.NoDevicesFound.Message` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-15): rejected in Pontoon without comment; reason unclear
 - `Settings.Studies.Title.v148` — `sl/firefox-ios.xliff` — pontoon-rejected (2026-11-04): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
@@ -296,8 +297,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (23)
+### Fixed to date (25)
 
+- `ErrorPages.CertWarning.Title` — `sl/firefox-ios.xliff` — fixed 2026-11-16
+- `ScanQRCode.PermissionError.Message.v100` — `sl/firefox-ios.xliff` — fixed 2026-11-16
 - `Bookmarks.Menu.SavedBookmarkToastDefaultFolderLabel.v136` — `sl/firefox-ios.xliff` — fixed 2026-11-05
 - `Bookmarks.Menu.SavedBookmarkToastLabel.v136` — `sl/firefox-ios.xliff` — fixed 2026-11-05
 - `CreditCard.ErrorState.CardExpirationDateSublabel.v112` — `sl/firefox-ios.xliff` — fixed 2026-11-05

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `372c1b986f13` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,885 |
+| **Strings reviewed this run** | 32 of 1,917 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for th: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `Onboarding.MultiDay.NotificationCard.Title.v159` — `th/firefox-ios.xliff` — The idiom "Stay in the Loop" is translated word for word as "ยังอยู่ในแวดวง" ("still in the circle/scene"), not as "stay informed".
+    - Current: `ยังอยู่ในแวดวง`
+    - Source: `Stay in the Loop`
+    - Suggest: `ติดตามข่าวสารอยู่เสมอ`
+    - The developer comment says the phrase means "Remain informed". In Thai, "ยังอยู่ในแวดวง" reads as still being part of a circle or industry and says nothing about getting updates or notifications.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,885 |
-| Missing strings | 98 |
+| Files | 98 |
+| Strings | 1,917 |
+| Missing strings | 69 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 2 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,25 +63,24 @@ _Nothing retired._
 
 ### Completeness
 
-**98 strings** are not translated yet, concentrated in:
+**69 strings** are not translated yet, concentrated in:
 
-- `th/firefox-ios.xliff` — 20
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `th/firefox-ios.xliff` — 18
-- `th/firefox-ios.xliff` — 13
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `th/firefox-ios.xliff` — 5
+- `th/firefox-ios.xliff` — 14
+- `th/firefox-ios.xliff` — 12
+- `th/firefox-ios.xliff` — 11
+- `th/firefox-ios.xliff` — 9
+- `th/firefox-ios.xliff` — 7
+- `th/firefox-ios.xliff` — 3
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 - `th/firefox-ios.xliff` — 2
-- `th/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,7 +92,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 6, `curly-double` 5 | _mixed_ |
 | apostrophe | `typographic` 6 | **typographic** |
-| ellipsis | `char` 25 | **char** |
+| ellipsis | `char` 27 | **char** |
 | dash | `em` 1, `en` 2 | _mixed_ |
 
 ---
@@ -100,7 +103,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (36)
+## 3. Open findings (37)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -115,7 +118,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
+| 2 | Wrong content (says something other than the English) | 19 |
 | 3 | Degraded language (grammar, spelling, terminology) | 11 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -175,6 +178,11 @@ _Nothing in this category._
     - Source: `Load sites lightning fast Automatic tracking protection Sync on all your devices`
     - Suggest: `ป้องกันการติดตามอัตโนมัติ`
     - In Thai, 'ปกป้องการติดตาม' means protecting the tracking itself. The source means protection against tracking, and the usual term for that is 'ป้องกันการติดตาม' (prevent tracking).
+- `Onboarding.MultiDay.NotificationCard.Title.v159` — `th/firefox-ios.xliff` — The idiom "Stay in the Loop" is translated word for word as "ยังอยู่ในแวดวง" ("still in the circle/scene"), not as "stay informed".
+    - Current: `ยังอยู่ในแวดวง`
+    - Source: `Stay in the Loop`
+    - Suggest: `ติดตามข่าวสารอยู่เสมอ`
+    - The developer comment says the phrase means "Remain informed". In Thai, "ยังอยู่ในแวดวง" reads as still being part of a circle or industry and says nothing about getting updates or notifications.
 - `RelayMask.RelayEmailMaskFreeTierLimitReached.v147` — `th/firefox-ios.xliff` — Translation says a new mask was picked for reuse, contradicting the source's reuse of an existing mask.
     - Current: `เราจึงเลือกตัวหนึ่งใหม่ให้คุณใช้ซ้ำ`
     - Source: `You’ve used your 5 free email masks, so we picked one for you to reuse.`
