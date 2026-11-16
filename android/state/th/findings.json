@@ -368,7 +368,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "th",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
@@ -870,7 +870,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "th",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (13 occurrences).",
@@ -1001,6 +1001,30 @@
   "string_id": "setup_checklist_task_search_widget_2",
   "suggest": "สำรวจวิดเจ็ตการค้นหา",
   "summary": "\"Search widget\" is rendered as เครื่องมือค้นหา, the standard Thai term for \"search engine\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "มุมมอง",
+  "dismissed_because": "",
+  "fid": "5256ed87c2e4",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "th",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The developer comment says tapping the button displays the tab group, so \"View\" is an imperative verb. \"มุมมอง\" means a view or perspective (a noun) and reads wrongly as a button label.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "334e1236",
+  "string_id": "snackbar_action_view",
+  "suggest": "ดู",
+  "summary": "The action button \"View\" is translated with the noun \"มุมมอง\" (a viewpoint or display mode) instead of the verb \"ดู\".",
   "suppressed_by": ""
  },
  {

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 19 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `snackbar_action_view` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — The action button label "View" is translated as the noun «Вид» (appearance or view mode) instead of a verb meaning "show".
+    - Current: `Вид`
+    - Source: `View`
+    - Suggest: `Показать`
+    - The comment says that tapping the button shows the tab group, so it needs an action verb. «Вид» reads as a view or appearance setting.
+- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — «Не удалось скрыть» ("failed to hide") presents a by-design restriction as an error.
+    - Current: `Не удалось скрыть этот раздел`
+    - Source: `Can’t hide this section`
+    - Suggest: `Этот раздел нельзя скрыть`
+    - The comment says the message appears for a section that cannot be hidden, which is a fixed restriction. «Не удалось» suggests something went wrong while hiding it.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -75,7 +84,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 6 | **em** |
-| register | `informal` 149, `formal` 482 | **formal** |
+| register | `informal` 150, `formal` 485 | **formal** |
 
 ---
 
@@ -85,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (144)
+## 3. Open findings (146)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 81 |
+| 2 | Wrong content (says something other than the English) | 83 |
 | 3 | Degraded language (grammar, spelling, terminology) | 58 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -286,6 +295,11 @@ _Nothing in this category._
     - Source: `More options`
     - Suggest: `Дополнительные опции`
     - The source is "More options" for the three-dot menu; "настройки" means settings, not options/menu items.
+- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — «Не удалось скрыть» ("failed to hide") presents a by-design restriction as an error.
+    - Current: `Не удалось скрыть этот раздел`
+    - Source: `Can’t hide this section`
+    - Suggest: `Этот раздел нельзя скрыть`
+    - The comment says the message appears for a section that cannot be hidden, which is a fixed restriction. «Не удалось» suggests something went wrong while hiding it.
 - `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "Debug locales" is translated as "Языки отладки" (debug languages) instead of locales.
     - Current: `Языки отладки для включения`
     - Source: `Debug locales to enable`
@@ -396,12 +410,7 @@ _Nothing in this category._
     - Source: `Blocked`
     - Suggest: `Заблокировано`
     - The developer comment says this label indicates a permission state (blocked), not an action.
-- `preference_phone_feature_media_key_system_access` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "DRM-controlled content" rendered as "copyright-protected content", losing the DRM term.
-    - Current: `Защищённое авторским правом содержимое`
-    - Source: `DRM-controlled content`
-    - Suggest: `Содержимое, защищённое DRM`
-    - The source and developer comment refer to DRM/EME-controlled content, not copyright protection generally.
-- _…and 24 more; see `state/` for the full list._
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

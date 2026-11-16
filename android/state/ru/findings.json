@@ -1280,7 +1280,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "ru",
   "origin": {},
   "rationale": "The locale's quote convention is `guillemet` (43 occurrences).",
@@ -1747,6 +1747,30 @@
   "string_id": "credit_cards_warning_dialog_message_3",
   "suggest": "PIN-код",
   "summary": "\"Пин-код\" is misspelled; Russian orthography requires \"PIN-код\" or \"ПИН-код\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Не удалось скрыть этот раздел",
+  "dismissed_because": "",
+  "fid": "db206385bbb9",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says the message appears for a section that cannot be hidden, which is a fixed restriction. «Не удалось» suggests something went wrong while hiding it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "b3e74667",
+  "string_id": "customize_menu_cannot_hide_section",
+  "suggest": "Этот раздел нельзя скрыть",
+  "summary": "«Не удалось скрыть» (\"failed to hide\") presents a by-design restriction as an error.",
   "suppressed_by": ""
  },
  {
@@ -2718,7 +2742,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "ru",
   "origin": {},
   "rationale": "The locale's quote convention is `guillemet` (43 occurrences).",
@@ -3209,6 +3233,30 @@
   "string_id": "sign_in_ready_for_scan",
   "suggest": "Готово к сканированию",
   "summary": "\"Ready to scan\" mistranslated as an imperative \"Scan the barcode\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Вид",
+  "dismissed_because": "",
+  "fid": "8aeadffddbcd",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "ru",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The comment says that tapping the button shows the tab group, so it needs an action verb. «Вид» reads as a view or appearance setting.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c4d5d75d",
+  "string_id": "snackbar_action_view",
+  "suggest": "Показать",
+  "summary": "The action button label \"View\" is translated as the noun «Вид» (appearance or view mode) instead of a verb meaning \"show\".",
   "suppressed_by": ""
  },
  {

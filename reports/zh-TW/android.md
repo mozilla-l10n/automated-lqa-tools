@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 21 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,9 +72,9 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 24 | **corner** |
+| quotes | `corner` 26 | **corner** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1111 | **punctuation** |
+| fullwidth | `punctuation` 1118 | **punctuation** |
 
 ---
 
@@ -84,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (0)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -100,11 +100,7 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `webcompat_reporter_edit_url_dialog_dismiss` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — The dismiss button in the Edit URL dialog is rendered as "Got it!" instead of a cancel/close action.
-    - Current: `知道了！`
-    - Source: `Dismiss`
-    - Suggest: `取消`
-    - This button sits next to "Save" in an edit confirmation dialog, so "Dismiss" means close without saving. 知道了！ ("Got it!") reads as an acknowledgement, not as discarding the edit.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
@@ -122,7 +118,7 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (13)
+### Dismissed by hand (14)
 
 - `download_item_paused_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>correct but original approved translation provides more context</p>
 - `home_bookmarks_menu_item_remove` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>interchangable</p>
@@ -137,6 +133,7 @@ _Nothing in this category._
 - `startup_crash_positive` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
 - `trackers_blocked_empty` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>not better from original translation</p>
 - `unsubmitted_crash_dialog_positive_button` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>報表, 報告 for is interchangable</p>
+- `webcompat_reporter_edit_url_dialog_dismiss` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rTW/strings.xml` — pontoon-rejected (2026-11-11): rejected in Pontoon without comment; likely reason (inferred): Likely rejected because 取消 means "Cancel", which is a different action from "Dismiss"; the original 知道了！ is an acceptable, natural wording for closing the dialog, so the finding is a wording preference, not an error.
 
 _One line each in `locales/zh-TW/dismissed.txt`. Delete the line and the finding returns._
 

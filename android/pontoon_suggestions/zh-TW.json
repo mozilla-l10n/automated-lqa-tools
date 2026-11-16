@@ -1837,9 +1837,14 @@
    "source": "Dismiss",
    "original": "知道了！",
    "text": "取消",
-   "status": "pending",
-   "status_date": "2026-11-08",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-11",
+   "comment": "",
+   "dismissal": "webcompat_reporter_edit_url_dialog_dismiss @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-11): rejected in Pontoon without comment; likely reason (inferred): Likely rejected because 取消 means \"Cancel\", which is a different action from \"Dismiss\"; the original 知道了！ is an acceptable, natural wording for closing the dialog, so the finding is a wording preference, not an error.",
+   "pontoon_pk": 12396521,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=335337",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

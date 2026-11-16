@@ -3622,5 +3622,29 @@
   "suggest": "サイトが詐欺的である",
   "summary": "Dropdown option is rendered as a full sentence with polite copula, inconsistent with the other reason options which are all plain-form noun/verb phrases.",
   "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "ペナルティー",
+  "dismissed_because": "",
+  "fid": "686b1db6203e",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "ja",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says this label is shown while a match is in its penalties phase, meaning the shootout. The standard Japanese soccer term for that is 「PK戦」. 「ペナルティー」 on its own suggests a penalty or foul.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "a5409b2c",
+  "string_id": "wrex_widget_match_penalties",
+  "suggest": "PK戦",
+  "summary": "The match status for a penalty shootout is rendered as 「ペナルティー」, which reads as a foul or punishment rather than the shootout phase.",
+  "suppressed_by": ""
  }
 ]

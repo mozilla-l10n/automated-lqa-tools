@@ -480,9 +480,10 @@
   "sponsored_suggestion_description": "f6ad4011 31b7b94f f5fe285f"
  },
  "mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml": {
-  "mozac_feature_importer_dialog_cancel": "f29fc6f9 871d661d 5e2970aa",
-  "mozac_feature_importer_dialog_description": "d70ec43f 9c1a9868 047447ad",
-  "mozac_feature_importer_dialog_title": "c61d9905 f19c2093 47e4e9a1"
+  "mozac_feature_importer_dialog_cancel": "f29fc6f9 871d661d e0c59daf",
+  "mozac_feature_importer_dialog_description": "d70ec43f 9c1a9868 4599741e",
+  "mozac_feature_importer_dialog_title": "c61d9905 f19c2093 47e4e9a1",
+  "mozac_feature_passwords_importer_dialog_title": "f69061ae 3b7273c1 42770328"
  },
  "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml": {
   "mozac_feature_ipprotection_unavaliable_dialog_body": "3fce9a2f 2c0ad859 44e870e6",
@@ -1072,6 +1073,7 @@
   "browser_menu_manage_extensions": "bc89de0f 163fba1a fe9d0d32",
   "browser_menu_more_settings": "2c4fe5cb 8384698b e6849153",
   "browser_menu_move_to_non_private_tab": "d68e6ba4 a8f4f8a0 114cc4a8",
+  "browser_menu_move_to_tab_group": "460e8ab7 9f485444 4b8e3ec6",
   "browser_menu_no_extensions_installed_description": "ff4fde1d f37c5899 8115e18f",
   "browser_menu_open_app_link": "0780b304 177c9c47 e56cb735",
   "browser_menu_open_in_fenix": "57cc7121 3f38935b 8206df99",
@@ -1163,6 +1165,7 @@
   "collection_open_tabs": "a928c2a4 638ea584 54302ae9",
   "collection_rename": "da3c1215 b3067458 5090a614",
   "collections_header": "c5a7adf0 c383eded b36a9896",
+  "collections_migration_card_close_button_content_description": "cbc41cb6 0e7c6115 56d66960",
   "collections_migration_homepage_banner_title": "fbfd5d8d 0ac8fa81 30d7e648",
   "collections_migration_homepage_card_link": "78f21d5b dc852c4b d08d77d9",
   "collections_migration_homepage_card_message": "1442523a 7733b387 343c8364",
@@ -1637,6 +1640,8 @@
   "logins_warning_dialog_message_2": "0ace1ebf f815c465 a95571b7",
   "logins_warning_dialog_set_up_now": "89d6f50d 2ccc09fd 2397f3f2",
   "logins_warning_dialog_title_2": "ec210063 43ba87bf bf04e31a",
+  "menu_customize_reset_dialog_cancel": "f29fc6f9 871d661d a840242a",
+  "menu_customize_reset_dialog_reset": "e3e1bd3c 64dba04b 9585d511",
   "menu_print": "58d7e1ed a5bd5b46 94301258",
   "micro_survey_continue_button_label": "489afd4f 5009bc49 b19b0886",
   "micro_survey_feedback_confirmation": "b0f1d3e0 9702c810 c8f4bc32",
@@ -1713,6 +1718,8 @@
   "nova_onboarding_set_to_default_title_2": "5c796c4b 413160fb 604eecad",
   "nova_onboarding_skip_button": "0fd1005a dfb31eca a721ee3f",
   "nova_onboarding_sync_button": "0d14dc81 51790b68 863fda2d",
+  "nova_onboarding_sync_pairing_email_button": "693517b9 ad7b5203 e05d69ea",
+  "nova_onboarding_sync_pairing_scan_button": "148a95d7 777f5e6c b5a21d74",
   "nova_onboarding_sync_subtitle": "42646bff 44b87112 4600ffda",
   "nova_onboarding_sync_title": "e1fb65e9 3125a103 64779a09",
   "nova_onboarding_tou_body_line_1": "38533c1e 906720fb 39495e2c",
@@ -2342,6 +2349,7 @@
   "shortcuts_update_error": "dca67946 7c5fd3b3 74bbd2e5",
   "sign_in_create_account_text": "6adb23d7 760c9c0a 649b9c4a",
   "sign_in_instructions": "409ee1e7 f286f215 60648111",
+  "sign_in_promo_title": "4ac2359c e485cb58 1317dde1",
   "sign_in_ready_for_scan": "6aeb0e37 35f724c9 cb30d2eb",
   "sign_in_with_camera": "9c671a5b 4a0b6ba1 75ed7a78",
   "sign_in_with_email": "b764993e 392b3d66 f9c2ed2a",
@@ -2351,6 +2359,7 @@
   "sign_out_dialog_message": "6d09fdfd 89f01042 ea5a6695",
   "sign_out_dialog_title": "e8661053 e9e22d51 4f0704c2",
   "sign_out_disconnect": "d973b4ea a8ad4b43 b53e81f7",
+  "snackbar_action_view": "df861a91 4c9ff4aa b9c20882",
   "snackbar_added_to_shortcuts": "d541ac1b 65762c47 b3a5f471",
   "snackbar_deleted_undo": "78eb44dc e953adca 99bbf40a",
   "snackbar_message_bookmarks_saved_in_2": "5a062492 b6155102 bc28a236",

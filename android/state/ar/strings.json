@@ -451,9 +451,10 @@
   "sponsored_suggestion_description": "77a64f54 31b7b94f f5fe285f"
  },
  "mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml": {
-  "mozac_feature_importer_dialog_cancel": "48dcf685 871d661d 5e2970aa",
-  "mozac_feature_importer_dialog_description": "86de3461 9c1a9868 047447ad",
-  "mozac_feature_importer_dialog_title": "56cf7f32 f19c2093 47e4e9a1"
+  "mozac_feature_importer_dialog_cancel": "48dcf685 871d661d e0c59daf",
+  "mozac_feature_importer_dialog_description": "86de3461 9c1a9868 4599741e",
+  "mozac_feature_importer_dialog_title": "56cf7f32 f19c2093 47e4e9a1",
+  "mozac_feature_passwords_importer_dialog_title": "75c94f06 3b7273c1 42770328"
  },
  "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml": {
   "mozac_feature_ipprotection_unavaliable_dialog_confirm_button": "f3ec6583 b498b00d f8836ae1",
@@ -1020,6 +1021,7 @@
   "camera_permissions_needed_message": "d09578d6 c653b153 caf5cd0d",
   "camera_permissions_needed_negative_button_text": "a8d90c76 b21634a9 a169171b",
   "camera_permissions_needed_positive_button_text": "df516e0b f387217a c77d3a64",
+  "certificate_details_panel_issued_to_label": "99352828 f4458c32 c1a88117",
   "certificate_warning_homepage_card_hca1_message": "79268b94 d9087a89 999a1391",
   "certificate_warning_homepage_card_hca1_title": "19b2b35e 9085e152 2c3c2971",
   "certificate_warning_homepage_card_hcr1_message": "06fa86b4 47014999 13f24bc2",
@@ -1069,6 +1071,7 @@
   "collection_open_tabs": "7ed38544 638ea584 54302ae9",
   "collection_rename": "4f2396c7 b3067458 5090a614",
   "collections_header": "a26c5e43 c383eded b36a9896",
+  "collections_migration_card_close_button_content_description": "ea098e39 0e7c6115 56d66960",
   "collections_migration_homepage_card_link": "ed1a5570 dc852c4b d08d77d9",
   "collections_migration_homepage_card_message": "111d5138 7733b387 343c8364",
   "confirm_clear_permission_site": "096276e6 e57c22b0 f7097901",
@@ -2153,6 +2156,8 @@
   "shortcuts_update_error": "f74d5396 7c5fd3b3 74bbd2e5",
   "sign_in_create_account_text": "52ae4d46 760c9c0a 649b9c4a",
   "sign_in_instructions": "0e3c173c f286f215 60648111",
+  "sign_in_promo_description": "e010c2bb d9682235 ecb9c2cb",
+  "sign_in_promo_title": "d7d1795d e485cb58 1317dde1",
   "sign_in_ready_for_scan": "10688d64 35f724c9 cb30d2eb",
   "sign_in_with_camera": "b3c1b8d6 4a0b6ba1 75ed7a78",
   "sign_in_with_email": "1b5c9914 392b3d66 f9c2ed2a",
