@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 33 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,101 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
+    - Current: `sur d’autres domaines`
+    - Source: `Access your data on another domain`
+    - Suggest: `sur un autre domaine`
+    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
+- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
+    - Current: `sur d’autres domaines.`
+    - Source: `Access your data on another domain.`
+    - Suggest: `sur un autre domaine.`
+    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (16)
 
-_Nothing was fixed._
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — "The browser has stopped trying to retrieve the requested item" is mistranslated as the browser stopping to wait for a response from the site.
+    - Current: `Le navigateur a arrêté d’attendre une réponse du site.`
+    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
+    - Suggest: `Le navigateur a cessé d’essayer de récupérer l’élément demandé.`
+    - The source states the browser stopped trying to retrieve the requested item, not that it stopped waiting for a response.
+- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Access your data on other domains." drops the possessive "your data".
+    - Current: `Accéder aux données d’autres domaines.`
+    - Source: `Access your data on other domains.`
+    - Suggest: `Accéder à vos données pour d’autres domaines.`
+    - The source refers to the user's data on other domains; the target says "the data of other domains", inconsistent with the parallel sites string which uses "vos données".
+- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
+    - Current: `sur d’autres domaines`
+    - Source: `Access your data on another domain`
+    - Suggest: `sur un autre domaine`
+    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
+- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
+    - Current: `sur d’autres domaines.`
+    - Source: `Access your data on another domain.`
+    - Suggest: `sur un autre domaine.`
+    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
+- `mozac_feature_addons_updater_permissions_dialog_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The "or" between the two choices is missing, so the sentence is two orders joined by a comma.
+    - Current: `actuels, mettez à jour`
+    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
+    - Suggest: `actuels, ou mettez à jour`
+    - The source offers a choice: "Cancel ... or update ...". Without "ou", the French reads as two instructions in a row.
+- `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The translation reverses the meaning: the source says the app will translate this (source) language automatically, not translate the page into this language.
+    - Current: `%1$s traduira automatiquement la page dans cette langue à son chargement.`
+    - Source: `%1$s will translate this language automatically when the page loads.`
+    - Suggest: `%1$s traduira automatiquement cette langue au chargement de la page.`
+    - Source: "%1$s will translate this language automatically when the page loads." — the language is the one being translated from, matching the sibling strings ("ne proposera jamais de traduire les sites dans cette langue"). The current text says the page will be translated into that language.
+- `bookmark_import_failure_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong verb form: "Veuillez réessayez" should be the infinitive "réessayer".
+    - Current: `Veuillez réessayez.`
+    - Source: `Couldn’t import bookmarks. Try again.`
+    - Suggest: `Veuillez réessayer.`
+    - After "Veuillez" the following verb must be in the infinitive; "réessayez" is a conjugated form and is a grammatical error.
+- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Debug locales to enable" is mistranslated as an imperative "Debug the locales to enable".
+    - Current: `Déboguer les locales à activer`
+    - Source: `Debug locales to enable`
+    - Suggest: `Locales de débogage à activer`
+    - "Debug locales" is a noun phrase (the list of debug locales that can be enabled), not a verb phrase; the header names a list, per the developer comment.
+- `delete_language_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says the app will download "this language" partially, whereas the source says it will download partial languages to the cache.
+    - Current: `%1$s la téléchargera partiellement dans votre cache`
+    - Source: `If you delete this language, %1$s will download partial languages to your cache as you translate.`
+    - Suggest: `%1$s téléchargera des langues partielles dans votre cache`
+    - Source: "%1$s will download partial languages to your cache as you translate." — the object is "partial languages", not the deleted language; the parallel string delete_language_all_languages_file_dialog_message renders it correctly.
+- `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Infinitive "Activer" used where the source is a descriptive third-person statement ("Enables").
+    - Current: `Activer la protection`
+    - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
+    - Suggest: `Active la protection`
+    - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
+- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "your active search engine" is translated as "moteur de recherche principal" (default/primary) instead of active/current.
+    - Current: `défini comme moteur de recherche principal lors de la navigation`
+    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
+    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
+    - The source specifies the active search engine while browsing, not the primary/default one.
+- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The dropdown option drops "check out" and switches to a first-person phrasing unlike the other options.
+    - Current: `Je ne peux pas payer ou faire des achats`
+    - Source: `Can’t pay, check out or shop`
+    - Suggest: `Impossible de payer, de finaliser la commande ou de faire des achats`
+    - Source is "Can’t pay, check out or shop"; the checkout step is omitted and the register differs from the parallel option webcompat_reporter_reason_account2 ("Impossible de se connecter ou de s’inscrire").
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
+    - Current: `dans les onglets ouverts`
+    - Source: `Extend developer tools to access your data in open tabs.`
+    - Suggest: `dans les onglets ouverts.`
+    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
+- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
+    - Current: `sur d’autres domaines`
+    - Source: `Access your data on another domain`
+    - Suggest: `sur un autre domaine`
+    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
+- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
+    - Current: `sur d’autres domaines.`
+    - Source: `Access your data on another domain.`
+    - Suggest: `sur un autre domaine.`
+    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
+- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translating" (action in progress) is rendered as the noun "Traduction".
+    - Current: `Traduction`
+    - Source: `Translating`
+    - Suggest: `Traduction en cours`
+    - The comment states this button text indicates a translation is currently in progress; "Traduction" alone is ambiguous with the noun/label "Translation".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +133,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -73,11 +161,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 696 | **typographic** |
+| apostrophe | `typographic` 702 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 214, `before-punctuation` 144, `space-before-punctuation` 62 | _mixed_ |
-| register | `formal` 443 | **formal** |
+| nbsp | `total` 217, `before-punctuation` 147, `space-before-punctuation` 62 | _mixed_ |
+| register | `formal` 450 | **formal** |
 
 ---
 
@@ -87,14 +175,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (20)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -103,104 +191,15 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — "The browser has stopped trying to retrieve the requested item" is mistranslated as the browser stopping to wait for a response from the site.
-    - Current: `Le navigateur a arrêté d’attendre une réponse du site.`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `Le navigateur a cessé d’essayer de récupérer l’élément demandé.`
-    - The source states the browser stopped trying to retrieve the requested item, not that it stopped waiting for a response.
-- `mozac_browser_errorpages_safe_browsing_malware_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — "Malware site issue" is translated without the notion of "site", unlike the parallel titles.
-    - Current: `Problème de logiciel malveillant`
-    - Source: `Malware site issue`
-    - Suggest: `Problème de site malveillant`
-    - Source is "Malware site issue"; the other titles in the same family ("Problème de site indésirable", "Problème de site dangereux", "Problème de site trompeur") keep "site", so dropping it here is inconsistent and loses the meaning.
-- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Access your data on other domains." drops the possessive "your data".
-    - Current: `Accéder aux données d’autres domaines.`
-    - Source: `Access your data on other domains.`
-    - Suggest: `Accéder à vos données pour d’autres domaines.`
-    - The source refers to the user's data on other domains; the target says "the data of other domains", inconsistent with the parallel sites string which uses "vos données".
-- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "your data" is dropped, giving "les données" instead of "vos données", inconsistent with the sibling strings.
-    - Current: `Accéder aux données d’un autre domaine`
-    - Source: `Access your data on another domain`
-    - Suggest: `Accéder à vos données pour un autre domaine`
-    - Source is "Access your data on another domain"; the possessive "your" is lost and the wording diverges from the parallel site/domain strings which use "vos données".
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "your data" is dropped, giving "les données" instead of "vos données", inconsistent with the sibling strings.
-    - Current: `Accéder aux données d’un autre domaine.`
-    - Source: `Access your data on another domain.`
-    - Suggest: `Accéder à vos données pour un autre domaine.`
-    - Source is "Access your data on another domain."; the possessive "your" is lost and the wording diverges from the parallel domain string mozac_feature_addons_permissions_sites_in_domain_description which uses "vos données".
-- `mozac_feature_addons_permissions_pkcs11_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "cryptographic authentication services" is rendered as "authentification chiffrée" (encrypted authentication), changing the meaning.
-    - Current: `Fournir des services d’authentification chiffrée`
-    - Source: `Provide cryptographic authentication services`
-    - Suggest: `Fournir des services d’authentification cryptographique`
-    - The source describes cryptographic authentication services (PKCS#11), not "encrypted" authentication.
-- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "cryptographic authentication services" is rendered as "authentification chiffrée" (encrypted authentication), changing the meaning.
-    - Current: `Fournir des services d’authentification chiffrée.`
-    - Source: `Provide cryptographic authentication services.`
-    - Suggest: `Fournir des services d’authentification cryptographique.`
-    - The source describes cryptographic authentication services (PKCS#11), not "encrypted" authentication.
-- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — "entering a text input field" (saisie dans un champ) is rendered as "création" (creating).
-    - Current: `Libellé pour la création d’un champ de saisie de texte`
-    - Source: `Label for entering a text input field`
-    - Suggest: `Libellé pour la saisie dans un champ de texte`
-    - The source labels the field where the user enters text; "création" says the label is for creating a field, which is a different meaning.
-- `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The translation reverses the meaning: the source says the app will translate this (source) language automatically, not translate the page into this language.
-    - Current: `%1$s traduira automatiquement la page dans cette langue à son chargement.`
-    - Source: `%1$s will translate this language automatically when the page loads.`
-    - Suggest: `%1$s traduira automatiquement cette langue au chargement de la page.`
-    - Source: "%1$s will translate this language automatically when the page loads." — the language is the one being translated from, matching the sibling strings ("ne proposera jamais de traduire les sites dans cette langue"). The current text says the page will be translated into that language.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Debug locales to enable" is mistranslated as an imperative "Debug the locales to enable".
-    - Current: `Déboguer les locales à activer`
-    - Source: `Debug locales to enable`
-    - Suggest: `Locales de débogage à activer`
-    - "Debug locales" is a noun phrase (the list of debug locales that can be enabled), not a verb phrase; the header names a list, per the developer comment.
-- `delete_language_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says the app will download "this language" partially, whereas the source says it will download partial languages to the cache.
-    - Current: `%1$s la téléchargera partiellement dans votre cache`
-    - Source: `If you delete this language, %1$s will download partial languages to your cache as you translate.`
-    - Suggest: `%1$s téléchargera des langues partielles dans votre cache`
-    - Source: "%1$s will download partial languages to your cache as you translate." — the object is "partial languages", not the deleted language; the parallel string delete_language_all_languages_file_dialog_message renders it correctly.
-- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "your active search engine" is translated as "moteur de recherche principal" (default/primary) instead of active/current.
-    - Current: `défini comme moteur de recherche principal lors de la navigation`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
-    - The source specifies the active search engine while browsing, not the primary/default one.
 - `preferences_marketing_data_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The translation turns a data-sharing statement into an instruction to tell someone a story, and misattaches "with Mozilla's marketing partners".
     - Current: `Racontez votre découverte de Firefox et expliquez que vous l’utilisez avec les partenaires en technologies marketing de Mozilla.`
     - Source: `Share how you discovered Firefox and that you use it with Mozilla’s marketing technology partners.`
     - Suggest: `Partagez avec les partenaires en technologies marketing de Mozilla la façon dont vous avez découvert Firefox et le fait que vous l’utilisez.`
     - The source means sharing, with Mozilla's marketing technology partners, how the user discovered Firefox and that they use it. The French reads as "Tell the story of your discovery... and explain that you use it with Mozilla's marketing partners", which changes the meaning (suggesting the user uses Firefox together with the partners) and loses the sharing/opt-in sense described in the developer co…
-- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translating" (action in progress) is rendered as the noun "Traduction".
-    - Current: `Traduction`
-    - Source: `Translating`
-    - Suggest: `Traduction en cours`
-    - The comment states this button text indicates a translation is currently in progress; "Traduction" alone is ambiguous with the noun/label "Translation".
-- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The dropdown option drops "check out" and switches to a first-person phrasing unlike the other options.
-    - Current: `Je ne peux pas payer ou faire des achats`
-    - Source: `Can’t pay, check out or shop`
-    - Suggest: `Impossible de payer, de finaliser la commande ou de faire des achats`
-    - Source is "Can’t pay, check out or shop"; the checkout step is omitted and the register differs from the parallel option webcompat_reporter_reason_account2 ("Impossible de se connecter ou de s’inscrire").
 
 ### C. Grammar, agreement & spelling
 
-- `mozac_feature_addons_updater_permissions_dialog_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The "or" between the two choices is missing, so the sentence is two orders joined by a comma.
-    - Current: `actuels, mettez à jour`
-    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
-    - Suggest: `actuels, ou mettez à jour`
-    - The source offers a choice: "Cancel ... or update ...". Without "ou", the French reads as two instructions in a row.
-- `bookmark_import_failure_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong verb form: "Veuillez réessayez" should be the infinitive "réessayer".
-    - Current: `Veuillez réessayez.`
-    - Source: `Couldn’t import bookmarks. Try again.`
-    - Suggest: `Veuillez réessayer.`
-    - After "Veuillez" the following verb must be in the infinitive; "réessayez" is a conjugated form and is a grammatical error.
-- `debug_drawer_regin_tools_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Incorrect expression "à fin de tests" instead of "à des fins de test".
-    - Current: `à fin de tests`
-    - Source: `Temporarily overrides the home and current region values for testing.`
-    - Suggest: `à des fins de test`
-    - "à fin de tests" is not a correct French locution; the standard form is "à des fins de test".
-- `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Infinitive "Activer" used where the source is a descriptive third-person statement ("Enables").
-    - Current: `Activer la protection`
-    - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
-    - Suggest: `Active la protection`
-    - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
@@ -208,18 +207,19 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
-    - Current: `dans les onglets ouverts`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `dans les onglets ouverts.`
-    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
+_Nothing in this category._
 
 ---
 
 ## 4. Appendix
 
-### Dismissed by hand (2)
+### Dismissed by hand (7)
 
+- `debug_drawer_regin_tools_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+- `mozac_browser_errorpages_safe_browsing_malware_uri_title` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; likely reason (inferred): Likely rejected because the suggestion introduced a new error: "site malveillant" drops "logiciel", so the title no longer mentions malware, which the source names.
+- `mozac_feature_addons_permissions_pkcs11_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
+- `mozac_feature_prompts_content_description_input_label` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear
 - `mozac_feature_prompts_suggest_strong_password_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-02): rejected in Pontoon without comment; reason unclear
 - `tab_tray_close_tabs_banner_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
@@ -272,8 +272,22 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (27)
+### Fixed to date (41)
 
+- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_updater_permissions_dialog_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `bookmark_import_failure_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `delete_language_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
+- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-16
 - `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
 - `browser_menu_extensions_review_update_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — fixed 2026-11-05
@@ -300,4 +314,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `mozac_feature_listentopage_notification_playback_speed_0_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
 - `mozac_feature_listentopage_notification_playback_speed_1_25` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
 - `mozac_feature_listentopage_notification_playback_speed_1_5` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05
-- `mozac_feature_listentopage_notification_playback_speed_1_75` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fr/strings.xml` — fixed 2026-10-05

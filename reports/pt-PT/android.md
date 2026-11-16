@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 21 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `certificate_details_panel_eu_trust_mark_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The Portuguese text uses the English abbreviation "EU" where it should say "UE" (União Europeia).
+    - Current: `Marca de confiança da EU`
+    - Source: `EU trust mark`
+    - Suggest: `Marca de confiança da UE`
+    - In Portuguese, the European Union is abbreviated "UE". "EU" is the English form, and in Portuguese it also reads as the pronoun "eu" (I). That makes it confusing when a screen reader reads this content description aloud.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -84,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (73)
+## 3. Open findings (74)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 24 |
-| 3 | Degraded language (grammar, spelling, terminology) | 39 |
+| 3 | Degraded language (grammar, spelling, terminology) | 40 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -278,6 +282,11 @@ _Nothing in this category._
     - Source: `Add to Home screen`
     - Suggest: `ecrã inicial`
     - Portuguese doesn't capitalise a common noun phrase in the middle of a sentence. The sibling string browser_menu_add_app_to_homescreen uses "ecrã inicial" in lowercase, so this capital looks like an English carry-over from "Home screen".
+- `certificate_details_panel_eu_trust_mark_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The Portuguese text uses the English abbreviation "EU" where it should say "UE" (União Europeia).
+    - Current: `Marca de confiança da EU`
+    - Source: `EU trust mark`
+    - Suggest: `Marca de confiança da UE`
+    - In Portuguese, the European Union is abbreviated "UE". "EU" is the English form, and in Portuguese it also reads as the pronoun "eu" (I). That makes it confusing when a screen reader reads this content description aloud.
 - `close_tabs_after_one_month_summary` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The preposition "de" is missing after "depois".
     - Current: `Fechar depois um mês`
     - Source: `Close after one month`

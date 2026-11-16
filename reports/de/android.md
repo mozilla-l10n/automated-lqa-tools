@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 2,601 |
+| **Strings reviewed this run** | 19 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,58 +22,9 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 _No new findings._
 
-### ✅ Fixed since the last run (10)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_toolbar_content_description_tracking_protection_on_no_trackers_blocked` — `mozilla-mobile/android-components/components/browser/toolbar/src/main/res/values-de/strings.xml` — "Tracking Protection" is translated as "Schutz vor Aktivitätenverfolgung" here but as "Tracking-Schutz" in the two neighbouring toolbar strings.
-    - Current: `Schutz vor Aktivitätenverfolgung ist an`
-    - Source: `Tracking Protection is on`
-    - Suggest: `Der Tracking-Schutz ist an`
-    - The same source term on the same surface (tracking protection toolbar icon content descriptions) is rendered two different ways; the adjacent strings use "Tracking-Schutz".
-- `mozac_feature_addons_permissions_find_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — "Read the text of all open tabs" is rendered as "access the texts", losing the "read" meaning.
-    - Current: `Auf Texte aller offenen Tabs zugreifen.`
-    - Source: `Read the text of all open tabs.`
-    - Suggest: `Den Text aller offenen Tabs lesen.`
-    - The source says "Read the text of all open tabs"; "zugreifen" (access) is used elsewhere for "access" permissions and blurs the distinction.
-- `mozac_feature_addons_permissions_history_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-de/strings.xml` — Same source string "Access browsing history" is translated inconsistently with its _for_update counterpart ("Auf die Surf-Chronik zugreifen").
-    - Current: `Auf Chronik zugreifen`
-    - Source: `Access browsing history`
-    - Suggest: `Auf die Surf-Chronik zugreifen`
-    - mozac_feature_addons_permissions_history_description_for_update uses "Auf die Surf-Chronik zugreifen" for the identical source text; the bare "Auf Chronik zugreifen" also lacks the article.
-- `mozac_tab_counter_content_description` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-de/strings.xml` — The compound is mis-parsed: the source describes the tab counter button in the toolbar, not a button of a "tab counter toolbar".
-    - Current: `Die Schaltfläche der Tab-Zähler-Symbolleiste.`
-    - Source: `The tab counter toolbar button.`
-    - Suggest: `Die Tab-Zähler-Schaltfläche in der Symbolleiste.`
-    - "The tab counter toolbar button" = the toolbar button that counts tabs; the German says "button of the tab-counter toolbar", which names a nonexistent toolbar.
-- `certificate_warning_homepage_card_hcr1_message` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Future conditional "will ... stop working" is rendered as a present-tense statement, and "nicht mehr richtig" loses the causal link.
-    - Current: `Ein Stammzertifikat läuft ab, und Ihre Firefox-Version funktioniert nicht mehr richtig.`
-    - Source: `A root certificate will expire, causing your version of Firefox to stop working properly.`
-    - Suggest: `Ein Stammzertifikat läuft ab, weshalb Ihre Firefox-Version nicht mehr richtig funktionieren wird.`
-    - The source says the expiry will cause Firefox to stop working properly; the German coordinates two independent statements in present tense, losing the causal/future meaning that the parallel string hca1_message preserves with "weshalb".
-- `lens_opt_out_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "an image" is rendered as "eine Grafik" (a graphic) instead of "ein Bild".
-    - Current: `Wählen Sie eine Grafik aus`
-    - Source: `Choose an image or use your camera to get results with Google Lens.`
-    - Suggest: `Wählen Sie ein Bild aus`
-    - In the Google Lens context the user picks a photo/image from the device; "Grafik" means graphic/illustration and is the wrong term for "image" here.
-- `nova_onboarding_marketing_body_line_three` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The German sentence reverses the meaning: it asks whether the user "may" help someone succeed instead of asking them to grant permission to help Firefox win.
-    - Current: `Bitte überlegen Sie, ob Sie mit dieser Erlaubnis zum Erfolg verhelfen dürfen.`
-    - Source: `Please consider allowing to help Firefox win.`
-    - Suggest: `Bitte erwägen Sie, die Erlaubnis zu erteilen, um Firefox zum Erfolg zu verhelfen.`
-    - Source: "Please consider allowing to help Firefox win." The developer comment explains that "allowing" refers to the "Allow and Continue" button; the German says "whether you are allowed to help to success" and drops Firefox entirely.
-- `preferences_passwords_autofill_description` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — The translation drops "save" and only describes filling in usernames and passwords.
-    - Current: `Benutzernamen und Passwörter auf Webseiten bei Nutzung von %1$s automatisch ausfüllen.`
-    - Source: `Fill and save usernames and passwords in websites while using %1$s.`
-    - Suggest: `Benutzernamen und Passwörter auf Websites bei Nutzung von %1$s ausfüllen und speichern.`
-    - The source says "Fill and save usernames and passwords", so the preference covers both filling and saving. The German only mentions filling.
-- `protection_panel_etp_toggle_enabled_description_2` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "looks broken" is mistranslated as "beschädigt aussieht" and the imperative drops the "try" hedge.
-    - Current: `Wenn etwas auf dieser Website beschädigt aussieht, deaktivieren Sie ihn.`
-    - Source: `If something looks broken on this site, try turning it off.`
-    - Suggest: `Wenn etwas auf dieser Website nicht richtig funktioniert, versuchen Sie, ihn zu deaktivieren.`
-    - The source says the site may appear broken (not working correctly) and suggests trying to turn protection off; "beschädigt aussieht" means physically damaged and the German loses "try".
-- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Typo: "Elfmeterschließen" should be "Elfmeterschießen".
-    - Current: `Elfmeterschließen`
-    - Source: `Penalties`
-    - Suggest: `Elfmeterschießen`
-    - The German term for a penalty shootout is "Elfmeterschießen" (from "schießen", to shoot). "Elfmeterschließen" (from "schließen", to close) is a misspelling.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -94,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -124,7 +75,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `german-double` 23, `curly-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 7 | **en** |
-| register | `formal` 658 | **formal** |
+| register | `formal` 660 | **formal** |
 
 ---
 

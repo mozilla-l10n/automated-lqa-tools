@@ -654,7 +654,7 @@
   "file": "mozilla-mobile/android-components/components/lib/crash/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "tr",
   "origin": {},
   "rationale": "The tree uses ’ 148 times against 1 straight.",
@@ -748,7 +748,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "tr",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (14 occurrences).",
@@ -2208,7 +2208,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 4,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "tr",
   "origin": {},
   "rationale": "The locale's quote convention is `curly-double` (14 occurrences).",
@@ -3227,6 +3227,30 @@
   "string_id": "webcompat_reporter_etp_checkbox_text_2",
   "suggest": "İzleyici koruması tarafından engellenen öğelerin listesini gönder",
   "summary": "\"tracking protection\" is rendered as \"İzlenme koruması\" instead of the established Turkish term \"İzleyici koruması\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Geçen süre: %1$s",
+  "dismissed_because": "",
+  "fid": "8b93a84f39b1",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 2,
+  "last_seen": "2026-11-16",
+  "locale": "tr",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"Elapsed time in minutes\". The placeholder is a bare number such as \"72\" or \"90+3\", so without the unit the announcement is ambiguous for screen-reader users.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0127e9b9",
+  "string_id": "wrex_widget_match_elapsed_minutes",
+  "suggest": "Geçen süre (dakika): %1$s",
+  "summary": "The translation drops \"in minutes\", so the screen reader announces the elapsed time without a unit.",
   "suppressed_by": ""
  }
 ]

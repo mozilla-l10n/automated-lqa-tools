@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,581 |
+| **Strings reviewed this run** | 39 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for cs: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `addon_remove_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The passive participle doesn't agree with its subject: both nouns are neuter, so the plural should be "odstraněna", not "odstraněny".
+    - Current: `budou z tohoto zařízení odstraněny`
+    - Source: `This removes the extension and its settings from this device.`
+    - Suggest: `budou z tohoto zařízení odstraněna`
+    - The subject is "Rozšíření i jeho nastavení". Both nouns are neuter, and two neuter subjects take the neuter plural ending -a. The ending -y is for masculine inanimate or feminine plurals.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,581 |
-| Missing strings | 20 |
+| Strings | 2,620 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,11 +66,7 @@ _Nothing retired._
 
 ### Completeness
 
-**20 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 20
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -88,14 +88,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (101)
+## 3. Open findings (102)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 36 |
+| 3 | Degraded language (grammar, spelling, terminology) | 37 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -448,6 +448,11 @@ _Nothing in this category._
     - Source: `New extensions now available`
     - Suggest: `Nová rozšíření jsou nyní k dispozici`
     - Source is plural "New extensions now available"; Czech nominative plural of "rozšíření" requires the neuter plural adjective "Nová".
+- `addon_remove_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The passive participle doesn't agree with its subject: both nouns are neuter, so the plural should be "odstraněna", not "odstraněny".
+    - Current: `budou z tohoto zařízení odstraněny`
+    - Source: `This removes the extension and its settings from this device.`
+    - Suggest: `budou z tohoto zařízení odstraněna`
+    - The subject is "Rozšíření i jeho nastavení". Both nouns are neuter, and two neuter subjects take the neuter plural ending -a. The ending -y is for masculine inanimate or feminine plurals.
 - `connection_security_panel_qualified_certificate` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — "EÚ" is the Slovak abbreviation; Czech uses "EU".
     - Current: `(EÚ) 2024/1183`
     - Source: `Qualified as specified in Regulation (EU) 2024/1183.`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,592 |
+| **Strings reviewed this run** | 28 of 2,618 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for tr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `wrex_widget_match_elapsed_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The translation drops "in minutes", so the screen reader announces the elapsed time without a unit.
+    - Current: `Geçen süre: %1$s`
+    - Source: `Elapsed time in minutes: %1$s`
+    - Suggest: `Geçen süre (dakika): %1$s`
+    - The source says "Elapsed time in minutes". The placeholder is a bare number such as "72" or "90+3", so without the unit the announcement is ambiguous for screen-reader users.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,592 |
-| Missing strings | 9 |
+| Strings | 2,618 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +66,9 @@ _Nothing retired._
 
 ### Completeness
 
-**9 strings** are not translated yet, concentrated in:
+**2 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 9
+- `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,13 +93,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (122)
+## 3. Open findings (123)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 67 |
+| 2 | Wrong content (says something other than the English) | 68 |
 | 3 | Degraded language (grammar, spelling, terminology) | 49 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -405,7 +409,7 @@ _Nothing in this category._
     - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
     - Suggest: `Firefox, güncellemeler arasında özellikleri`
     - The source says improvements happen between updates (remotely, without an update), whereas the target says they happen with each update — the opposite point.
-- _…and 15 more; see `state/` for the full list._
+- _…and 16 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

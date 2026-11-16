@@ -816,6 +816,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "budou z tohoto zařízení odstraněny",
+  "dismissed_because": "",
+  "fid": "646d88f8ddff",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "cs",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The subject is \"Rozšíření i jeho nastavení\". Both nouns are neuter, and two neuter subjects take the neuter plural ending -a. The ending -y is for masculine inanimate or feminine plurals.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "491f1dc2",
+  "string_id": "addon_remove_dialog_body",
+  "suggest": "budou z tohoto zařízení odstraněna",
+  "summary": "The passive participle doesn't agree with its subject: both nouns are neuter, so the plural should be \"odstraněna\", not \"odstraněny\".",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Název",
@@ -1208,7 +1232,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "cs",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",
@@ -2262,7 +2286,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-08-20",
   "impact": 1,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "cs",
   "origin": {},
   "rationale": "The set of placeholders must match the source: a missing one drops a value the user should see, an extra one throws.",

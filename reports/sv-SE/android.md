@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,601 |
+| **Strings reviewed this run** | 22 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Wrong gender agreement: 'sektion' is a common-gender (en) noun, so the demonstrative must be 'Den här'.
+    - Current: `Det här sektionen`
+    - Source: `Can’t hide this section`
+    - Suggest: `Den här sektionen`
+    - 'en sektion' takes 'den här', not the neuter 'det här'.
+- `nova_onboarding_sync_pairing_scan_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — 'parningskod' is inconsistent with 'parkopplingen' used in the title on the same pairing card.
+    - Current: `Skanna parningskod`
+    - Source: `Scan pairing code`
+    - Suggest: `Skanna parkopplingskod`
+    - The title on the same card uses 'parkoppling' for pairing. 'Parning' in Swedish usually means animal mating, so 'parkoppling' is the right term here.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,601 |
+| Strings | 2,620 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -84,14 +93,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (70)
+## 3. Open findings (72)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 41 |
+| 3 | Degraded language (grammar, spelling, terminology) | 43 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -333,6 +342,11 @@ _Nothing in this category._
     - Source: `On March 14, add-ons and other Firefox features will stop working because a root certificate is expiring.`
     - Suggest: `håller på att upphöra att gälla.`
     - "Upphöra" alone means "cease"; certificate expiry is "upphöra att gälla", consistent with hcr1_message.
+- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Wrong gender agreement: 'sektion' is a common-gender (en) noun, so the demonstrative must be 'Den här'.
+    - Current: `Det här sektionen`
+    - Source: `Can’t hide this section`
+    - Suggest: `Den här sektionen`
+    - 'en sektion' takes 'den här', not the neuter 'det här'.
 - `debug_drawer_override_region` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The shortened compound "hem" needs a hyphen before "och".
     - Current: `Åsidosätt hem och aktuell region`
     - Source: `Override home and current region`
@@ -451,6 +465,11 @@ _Nothing in this category._
     - Source: `To add a new site: Visit it and select “Never translate this site” from the translation menu.`
     - Suggest: `Översätt aldrig denna sida`
     - In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `nova_onboarding_sync_pairing_scan_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — 'parningskod' is inconsistent with 'parkopplingen' used in the title on the same pairing card.
+    - Current: `Skanna parningskod`
+    - Source: `Scan pairing code`
+    - Suggest: `Skanna parkopplingskod`
+    - The title on the same card uses 'parkoppling' for pairing. 'Parning' in Swedish usually means animal mating, so 'parkoppling' is the right term here.
 - `preference_accessibility_auto_size_summary` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Font size is called "Teckensnittstorlek" here (also missing the joining s), but "teckenstorlek" later in the same string and in the title.
     - Current: `Teckensnittstorlek matchar`
     - Source: `Font size will match your Android settings. Disable to manage font size here.`

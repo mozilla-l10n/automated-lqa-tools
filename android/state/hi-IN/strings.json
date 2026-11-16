@@ -467,8 +467,8 @@
   "sponsored_suggestion_description": "27cb3423 31b7b94f f5fe285f"
  },
  "mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml": {
-  "mozac_feature_importer_dialog_cancel": "9fe369fd 871d661d 5e2970aa",
-  "mozac_feature_importer_dialog_description": "877f70b1 9c1a9868 047447ad",
+  "mozac_feature_importer_dialog_cancel": "9fe369fd 871d661d e0c59daf",
+  "mozac_feature_importer_dialog_description": "877f70b1 9c1a9868 4599741e",
   "mozac_feature_importer_dialog_title": "20938958 f19c2093 47e4e9a1"
  },
  "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml": {

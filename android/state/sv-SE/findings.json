@@ -768,6 +768,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Det här sektionen",
+  "dismissed_because": "",
+  "fid": "8f3620b934fd",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "sv-SE",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "'en sektion' takes 'den här', not the neuter 'det här'.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "9b58f52e",
+  "string_id": "customize_menu_cannot_hide_section",
+  "suggest": "Den här sektionen",
+  "summary": "Wrong gender agreement: 'sektion' is a common-gender (en) noun, so the demonstrative must be 'Den här'.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Felsök språkversioner för att aktivera",
@@ -1184,7 +1208,7 @@
   "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 2,
-  "last_seen": "2026-11-09",
+  "last_seen": "2026-11-16",
   "locale": "sv-SE",
   "origin": {},
   "rationale": "In the source this string quotes “Never translate this site”, which is exactly the value of `translation_option_bottom_sheet_never_translate_site` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1267,6 +1291,30 @@
   "string_id": "nova_onboarding_add_search_widget_subtitle",
   "suggest": "vet att Firefox automatiska skydd har din rygg",
   "summary": "The clause 'känn att Firefox automatiska skydd dig' has no verb, so the sentence is ungrammatical and doesn't render 'have your back'.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "Skanna parningskod",
+  "dismissed_because": "",
+  "fid": "2670fbd2a561",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "sv-SE",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The title on the same card uses 'parkoppling' for pairing. 'Parning' in Swedish usually means animal mating, so 'parkoppling' is the right term here.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "eadb793d",
+  "string_id": "nova_onboarding_sync_pairing_scan_button",
+  "suggest": "Skanna parkopplingskod",
+  "summary": "'parningskod' is inconsistent with 'parkopplingen' used in the title on the same pairing card.",
   "suppressed_by": ""
  },
  {

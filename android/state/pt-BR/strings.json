@@ -482,7 +482,8 @@
  "mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml": {
   "mozac_feature_importer_dialog_cancel": "b2eb5e2b 871d661d",
   "mozac_feature_importer_dialog_description": "0df62e06 9c1a9868",
-  "mozac_feature_importer_dialog_title": "37a8f206 f19c2093"
+  "mozac_feature_importer_dialog_title": "37a8f206 f19c2093",
+  "mozac_feature_passwords_importer_dialog_title": "a9cb1727 3b7273c1 42770328"
  },
  "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml": {
   "mozac_feature_ipprotection_unavaliable_dialog_body": "68d39005 2c0ad859",
@@ -1113,6 +1114,8 @@
   "camera_permissions_needed_message": "b76d4c4b c653b153",
   "camera_permissions_needed_negative_button_text": "e538dd59 b21634a9",
   "camera_permissions_needed_positive_button_text": "c0f4ddd1 f387217a",
+  "certificate_details_panel_eu_trust_mark_content_description": "960a4eea 6af1c86b 276d40b5",
+  "certificate_details_panel_issued_to_label": "691648ed f4458c32 c1a88117",
   "certificate_details_panel_secure_connection_title": "753823a3 ac092914 c6c11f25",
   "certificate_warning_homepage_card_hca1_message": "b9f8dbab d9087a89",
   "certificate_warning_homepage_card_hca1_title": "3773bce9 9085e152",
@@ -1163,6 +1166,7 @@
   "collection_open_tabs": "4214eb57 638ea584",
   "collection_rename": "35845ada b3067458",
   "collections_header": "89a4c115 c383eded",
+  "collections_migration_card_close_button_content_description": "a800f036 0e7c6115 56d66960",
   "collections_migration_homepage_banner_title": "15d5443c 0ac8fa81",
   "collections_migration_homepage_card_link": "e08d19e3 dc852c4b",
   "collections_migration_homepage_card_message": "8d88f886 7733b387",
@@ -2101,6 +2105,7 @@
   "preferences_search_engines": "e9935473 0b3fe485",
   "preferences_search_engines_suggestions": "3053033c 23958734",
   "preferences_search_synced_tabs": "19848c8c f4ee7004",
+  "preferences_search_widget_in_home_screen": "facb0801 0553b7a5 02223787",
   "preferences_set_as_default_browser": "270853b2 4bd82454",
   "preferences_settings_address_bar": "7ac46a26 f56bcc61",
   "preferences_shake_to_summarize": "c99555e2 32c601c9",
@@ -2341,6 +2346,8 @@
   "shortcuts_update_error": "5ada87d8 7c5fd3b3",
   "sign_in_create_account_text": "dd9a1416 760c9c0a",
   "sign_in_instructions": "3de43a69 f286f215",
+  "sign_in_promo_description": "5314d35e d9682235 ecb9c2cb",
+  "sign_in_promo_title": "54152a3f e485cb58 1317dde1",
   "sign_in_ready_for_scan": "1cb7aa48 35f724c9",
   "sign_in_with_camera": "e49b66a7 4a0b6ba1",
   "sign_in_with_email": "1b3faea7 392b3d66",
@@ -2672,6 +2679,8 @@
   "wrex_widget_match_content_description": "13a86c3e c6089174 035727ea",
   "wrex_widget_match_delayed": "af8162e8 0b0694cd d8bcda65",
   "wrex_widget_match_elapsed_minutes": "248b8248 8d569bca 67e5af26",
+  "wrex_widget_match_extra_time_short": "0f543469 f5ad95e5 e75c20b2",
+  "wrex_widget_match_full_time_short": "f322293b 6c45c14c 79731198",
   "wrex_widget_match_half_time": "9d0f2dd9 609e1a5a 37bc8430",
   "wrex_widget_match_live": "a9782537 67dd663e 2c6a24d8",
   "wrex_widget_match_penalties": "bff8b096 28e9ef0a bfb12f08",

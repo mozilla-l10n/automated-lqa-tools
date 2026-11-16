@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,525 |
+| **Strings reviewed this run** | 84 of 2,607 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — The screen reader state "Expanded" is translated as the action "Mở rộng" (Expand) instead of the state "Đã mở rộng".
+    - Current: `Mở rộng`
+    - Source: `Expanded`
+    - Suggest: `Đã mở rộng`
+    - The comment says this string is the state read out while the menu is open. The matching collapsed state is translated as a state ("Đã thu gọn"), but "Mở rộng" reads as a command to expand.
+- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "hóa" uses the old tone-mark placement, unlike the "hoá" style used elsewhere.
+    - Current: `đồng bộ hóa`
+    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
+    - Suggest: `đồng bộ hoá`
+    - The surrounding strings consistently use the newer placement ("Đồng bộ hoá", "Huỷ", "Tuỳ", "Xoá").
+- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The word for "sensitive" is misspelled as "nhảy cảm" instead of "nhạy cảm".
+    - Current: `nhảy cảm`
+    - Source: `Secure your sensitive data`
+    - Suggest: `nhạy cảm`
+    - "Sensitive" is "nhạy cảm", and the next string's message already spells it correctly. "Nhảy" means "jump", so the title has a misspelled word with the wrong tone mark.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +59,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,525 |
-| Missing strings | 76 |
+| Strings | 2,607 |
+| Missing strings | 13 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,12 +76,9 @@ _Nothing retired._
 
 ### Completeness
 
-**76 strings** are not translated yet, concentrated in:
+**13 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 55
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — 9
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 5
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 13
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -91,7 +102,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (50)
+## 3. Open findings (53)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -111,9 +122,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 27 |
-| 3 | Degraded language (grammar, spelling, terminology) | 17 |
-| 4 | Cosmetic (typography, spacing) | 6 |
+| 2 | Wrong content (says something other than the English) | 28 |
+| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -166,6 +177,11 @@ _Nothing in this category._
     - Source: `Download files and read and modify the browser’s download history.`
     - Suggest: `Tải về các tập tin, đọc và chỉnh sửa lịch sử tải về của trình duyệt.`
     - The source says the permission lets the add-on both read and modify the download history. The Vietnamese only mentions modifying, so the permission description is incomplete.
+- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — The screen reader state "Expanded" is translated as the action "Mở rộng" (Expand) instead of the state "Đã mở rộng".
+    - Current: `Mở rộng`
+    - Source: `Expanded`
+    - Suggest: `Đã mở rộng`
+    - The comment says this string is the state read out while the menu is open. The matching collapsed state is translated as a state ("Đã thu gọn"), but "Mở rộng" reads as a command to expand.
 - `mozac_feature_prompts_manage_credit_cards_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-vi/strings.xml` — Translation still says "credit cards" although the revised source says just "cards".
     - Current: `Quản lý thẻ tín dụng`
     - Source: `Manage cards`
@@ -294,6 +310,11 @@ _Nothing in this category._
     - Source: `Reminder: %1$s is still using your microphone and camera. Tap to open the tab.`
     - Suggest: `Nhắc nhở`
     - "Reminder" is "Nhắc nhở" in Vietnamese, as in the sibling microphone string. "Nhăc" without the tone mark is not a real word.
+- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The word for "sensitive" is misspelled as "nhảy cảm" instead of "nhạy cảm".
+    - Current: `nhảy cảm`
+    - Source: `Secure your sensitive data`
+    - Suggest: `nhạy cảm`
+    - "Sensitive" is "nhạy cảm", and the next string's message already spells it correctly. "Nhảy" means "jump", so the title has a misspelled word with the wrong tone mark.
 - `browser_menu_discover_more_extensions` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "tiện tích" is a misspelling of "tiện ích" (extensions).
     - Current: `tiện tích`
     - Source: `Discover more extensions`
@@ -378,6 +399,11 @@ _Nothing in this category._
     - Source: `Get suggestions from the web related to your search`
     - Suggest: `từ web`
     - The source has no zero-width characters. These look like stray characters left by copy-pasting, and they can affect searching and line breaking. Only a normal space should be there.
+- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "hóa" uses the old tone-mark placement, unlike the "hoá" style used elsewhere.
+    - Current: `đồng bộ hóa`
+    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
+    - Suggest: `đồng bộ hoá`
+    - The surrounding strings consistently use the newer placement ("Đồng bộ hoá", "Huỷ", "Tuỳ", "Xoá").
 
 ---
 

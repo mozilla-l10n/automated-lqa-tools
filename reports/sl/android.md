@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,542 |
+| **Strings reviewed this run** | 47 of 2,582 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,51 @@ Also for sl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `certificate_details_panel_issued_to_label` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The preposition "to" is missing, so the label reads "Certificate issued:" instead of "Certificate issued to:".
+    - Current: `Potrdilo izdano:`
+    - Source: `Certificate issued to:`
+    - Suggest: `Potrdilo izdano za:`
+    - The label introduces the organisation the certificate was issued to. Without "za", the Slovenian reads like an issue date or status. It no longer introduces the recipient.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (7)
 
-_Nothing was fixed._
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — Second bullet limits the spelling check to the file name instead of the address as in the source.
+    - Current: `Je njeno ime napačno črkovano`
+    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
+    - Suggest: `Je v naslovu napaka v črkovanju`
+    - Source asks about a typographical error in the address, not in the item's name.
+- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Imperative "Deli" breaks the noun-phrase pattern used by all other long descriptions in the same list.
+    - Current: `Deli tehnične in interakcijske podatke z razvijalcem razširitve`
+    - Source: `Share technical and interaction data with extension developer`
+    - Suggest: `deljenje tehničnih podatkov in podatkov o interakcijah z razvijalcem razširitve`
+    - Every sibling *_long_description string uses the lowercase gerund form ("deljenje ... z razvijalcem razširitve"); this one uses a capitalized imperative verb, an inconsistency on the same surface.
+- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Permission description uses an imperative verb form instead of the nominalized lowercase pattern used by all other permission descriptions.
+    - Current: `Prenesite in uporabljajte modele z umetno inteligenco na svoji napravi`
+    - Source: `Download and run AI models on your device`
+    - Suggest: `prenos in uporaba modelov umetne inteligence na napravi`
+    - All sibling permission descriptions (e.g. "dostop do zavihkov brskalnika", "branje in spreminjanje nastavitev zasebnosti") are lowercase nominal phrases describing what the add-on may do; here it is rendered as a command to the user, which also changes the meaning (the extension downloads the models, not the user). The _for_update variant already uses the correct nominal form.
+- `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Cross-site cookies" is translated as "Spletni piškotki" (web cookies), losing the cross-site meaning.
+    - Current: `Spletni piškotki`
+    - Source: `Cross-site cookies`
+    - Suggest: `Piškotki drugih strani`
+    - The source refers specifically to cross-site cookies; the translation says merely "web cookies", which is a different, broader concept.
+- `preferences_delete_browsing_data_downloads` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Checkbox item in "Delete browsing data" list uses nominative instead of the accusative used by the sibling items.
+    - Current: `Prenosi`
+    - Source: `Downloads`
+    - Suggest: `Prenose`
+    - The other items in the same list ("Zgodovino brskanja", "Piškotke in podatke strani", "Dovoljenja strani") are in accusative agreeing with "Izbriši ..."; this one breaks that pattern.
+- `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "private sessions" is translated as "zasebnih oknih" (private windows).
+    - Current: `zasebnih oknih`
+    - Source: `Allow search suggestions in private sessions?`
+    - Suggest: `zasebnih sejah`
+    - The source says sessions, not windows; Android has no windows.
+- `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Search settings" as a verb phrase (search through settings) is rendered as the noun phrase "Nastavitve iskanja" (settings of search).
+    - Current: `Nastavitve iskanja`
+    - Source: `Search settings`
+    - Suggest: `Preišči nastavitve`
+    - The developer comment explicitly says "Search" is a verb here — this is the title of the Settings Search screen, not the search settings page (which is search_settings_menu_item).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +83,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,542 |
-| Missing strings | 59 |
+| Strings | 2,582 |
+| Missing strings | 38 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,11 +100,11 @@ _Nothing retired._
 
 ### Completeness
 
-**59 strings** are not translated yet, concentrated in:
+**38 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 42
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — 7
+- `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — 23
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-sl/strings.xml` — 5
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — 5
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-sl/strings.xml` — 4
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-sl/strings.xml` — 1
 
@@ -83,7 +121,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | quotes | `straight-double` 17, `curly-double` 2 | **straight-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 5 | **en** |
-| register | `informal` 4, `formal` 90 | **formal** |
+| register | `informal` 4, `formal` 91 | **formal** |
 
 ---
 
@@ -93,14 +131,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (8)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -109,52 +147,19 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — Second bullet limits the spelling check to the file name instead of the address as in the source.
-    - Current: `Je njeno ime napačno črkovano`
-    - Source: `{ <ul> } { <li> }Could the item have been renamed, removed, or relocated?{ </li> } { <li> }Is there a spelling, capitalization, or other typographical error in the address?{ </li> } { <li> }Do you have sufficient access…`
-    - Suggest: `Je v naslovu napaka v črkovanju`
-    - Source asks about a typographical error in the address, not in the item's name.
-- `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Cross-site cookies" is translated as "Spletni piškotki" (web cookies), losing the cross-site meaning.
-    - Current: `Spletni piškotki`
-    - Source: `Cross-site cookies`
-    - Suggest: `Piškotki drugih strani`
-    - The source refers specifically to cross-site cookies; the translation says merely "web cookies", which is a different, broader concept.
-- `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "private sessions" is translated as "zasebnih oknih" (private windows).
-    - Current: `zasebnih oknih`
-    - Source: `Allow search suggestions in private sessions?`
-    - Suggest: `zasebnih sejah`
-    - The source says sessions, not windows; Android has no windows.
-- `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "Search settings" as a verb phrase (search through settings) is rendered as the noun phrase "Nastavitve iskanja" (settings of search).
-    - Current: `Nastavitve iskanja`
-    - Source: `Search settings`
-    - Suggest: `Preišči nastavitve`
-    - The developer comment explicitly says "Search" is a verb here — this is the title of the Settings Search screen, not the search settings page (which is search_settings_menu_item).
-- `tab_manager_empty_tab_groups_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — "They're saved here" is mistranslated as "Vanjo bodo shranjeni" (saved into the group) and expanded with content not in the source.
-    - Current: `Vanjo bodo shranjeni in pripravljeni na trenutek, ko jih boste potrebovali.`
-    - Source: `Select tabs to create a group. They’re saved here, ready when you are.`
-    - Suggest: `Shranjene bodo tukaj, pripravljene, ko boste vi.`
-    - The source says the groups are saved here (on this page), ready when you are; the translation says the tabs will be saved into the group and ready when you need them.
+- `certificate_details_panel_issued_to_label` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — The preposition "to" is missing, so the label reads "Certificate issued:" instead of "Certificate issued to:".
+    - Current: `Potrdilo izdano:`
+    - Source: `Certificate issued to:`
+    - Suggest: `Potrdilo izdano za:`
+    - The label introduces the organisation the certificate was issued to. Without "za", the Slovenian reads like an issue date or status. It no longer introduces the recipient.
 
 ### C. Grammar, agreement & spelling
 
-- `preferences_delete_browsing_data_downloads` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — Checkbox item in "Delete browsing data" list uses nominative instead of the accusative used by the sibling items.
-    - Current: `Prenosi`
-    - Source: `Downloads`
-    - Suggest: `Prenose`
-    - The other items in the same list ("Zgodovino brskanja", "Piškotke in podatke strani", "Dovoljenja strani") are in accusative agreeing with "Izbriši ..."; this one breaks that pattern.
+_Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Imperative "Deli" breaks the noun-phrase pattern used by all other long descriptions in the same list.
-    - Current: `Deli tehnične in interakcijske podatke z razvijalcem razširitve`
-    - Source: `Share technical and interaction data with extension developer`
-    - Suggest: `deljenje tehničnih podatkov in podatkov o interakcijah z razvijalcem razširitve`
-    - Every sibling *_long_description string uses the lowercase gerund form ("deljenje ... z razvijalcem razširitve"); this one uses a capitalized imperative verb, an inconsistency on the same surface.
-- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — Permission description uses an imperative verb form instead of the nominalized lowercase pattern used by all other permission descriptions.
-    - Current: `Prenesite in uporabljajte modele z umetno inteligenco na svoji napravi`
-    - Source: `Download and run AI models on your device`
-    - Suggest: `prenos in uporaba modelov umetne inteligence na napravi`
-    - All sibling permission descriptions (e.g. "dostop do zavihkov brskalnika", "branje in spreminjanje nastavitev zasebnosti") are lowercase nominal phrases describing what the add-on may do; here it is rendered as a command to the user, which also changes the meaning (the extension downloads the models, not the user). The _for_update variant already uses the correct nominal form.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -164,12 +169,13 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (5)
+### Dismissed by hand (6)
 
 - `etp_known_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je prav, da je v rodilniku.</p>
 - `etp_suspected_fingerprinters_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 - `preference_auto_battery_theme` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Razumem, zakaj je bot reagiral na ta niz, ampak če se prebere kot "ohranjevalnik baterije nastavi to nastavitev", je pravilen in slogovno boljši.</p>
 - `preference_doh_increased_protection_info_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon: vX1Hk3se1FZ1WU5PoOJOALMcZjw: <p>Glede na kontekst je v redu, da je mala začetnica. Slovenski pravopis ima malo drugačna pravila za alinejno naštevanje kot angleški. Bodisi morajo biti male začetnice, bodisi mora biti na koncu vsake alineje končno ločilo.</p>
+- `tab_manager_empty_tab_groups_page_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-15): rejected in Pontoon without comment; reason unclear
 - `webcompat_reporter_clear_reason_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — pontoon-rejected (2026-11-03): rejected in Pontoon without comment; reason unclear
 
 _One line each in `locales/sl/dismissed.txt`. Delete the line and the finding returns._
@@ -229,8 +235,15 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (38)
+### Fixed to date (45)
 
+- `mozac_browser_errorpages_file_not_found_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `preference_phone_feature_cross_origin_storage_access` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `preferences_delete_browsing_data_downloads` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `search_suggestions_onboarding_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
+- `settings_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-16
 - `mozac_browser_errorpages_harmful_addon_uri_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `mozac_browser_errorpages_httpsonly_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `mozac_browser_errorpages_net_reset_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
@@ -264,8 +277,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `protection_panel_banner_not_protected_description` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `setup_checklist_subtitle_5_steps_third_step` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
 - `setup_checklist_task_explore_extensions` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
-- `snackbar_message_bookmarks_saved_in_2` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
-- `synced_tabs_no_tabs` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
-- `tab_tray_inactive_onboarding_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
-- `translations_bottom_sheet_info_message` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-11-05
-- `sync_send_tab_error_auth_remove_account` — `mozilla-mobile/fenix/app/src/main/res/values-sl/strings.xml` — fixed 2026-09-10

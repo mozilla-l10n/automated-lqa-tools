@@ -1,10 +1,10 @@
 # Firefox for Android and the shared Android Components — l10n QA
 
-- **Generated:** 2026-11-09
+- **Generated:** 2026-11-16
 - **Locales tracked:** 34 (34 with recorded state)
-- **Findings:** 3,360 raised, 650 fixed (19%), 2,269 open
-- **Closed by a person:** 61 dismissed, 59 suppressed by rule
-- **Closed by the fixer:** 173 — the suggestions workflow's model judged them wrong or could not confirm them; no person has decided, and each lapses when its string changes
+- **Findings:** 3,374 raised, 697 fixed (20%), 2,212 open
+- **Closed by a person:** 72 dismissed, 59 suppressed by rule
+- **Closed by the fixer:** 186 — the suggestions workflow's model judged them wrong or could not confirm them; no person has decided, and each lapses when its string changes
 
 Counts come from `state/`, not from the rendered reports, so they always reflect what the pipeline recorded.
 
@@ -111,46 +111,46 @@ The translation makes the product assert something the en-US never said. Nothing
 
 _Nothing open at impact 1._
 
-### Wrong content — impact 2 (1217)
+### Wrong content — impact 2 (1180)
 
 Too many to list here; the per-locale counts are in the table below and every one of them is in `reports/<locale>/android.md`.
 
 | Locale | Last run | Mode | Commit | Strings | Missing | Open | Impact 1–2 | Fixed | Dismissed | Suppressed | Closed by fixer |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| [ar](ar/android.md) | 2026-11-09 | incremental | `3c577835` | 2,366 | 235 | **121** | 49 | 0 | 0 | 0 | 0 |
-| [cs](cs/android.md) | 2026-11-09 | incremental | `3c577835` | 2,581 | 20 | **101** | 65 | 7 | 2 | 0 | 0 |
-| [de](de/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **2** | 0 | 52 | 6 | 0 | 43 |
-| [el](el/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **30** | 13 | 0 | 0 | 0 | 0 |
-| [en-CA](en-CA/android.md) | 2026-11-09 | incremental | `3c577835` | 2,576 | 25 | **0** | 0 | 0 | 0 | 0 | 0 |
-| [en-GB](en-GB/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **2** | 1 | 0 | 2 | 55 | 0 |
-| [es-AR](es-AR/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **102** | 41 | 7 | 0 | 0 | 0 |
-| [es-ES](es-ES/android.md) | 2026-11-09 | incremental | `3c577835` | 2,457 | 144 | **110** | 48 | 1 | 0 | 0 | 0 |
-| [es-MX](es-MX/android.md) | 2026-11-09 | incremental | `3c577835` | 2,486 | 115 | **130** | 75 | 12 | 0 | 0 | 0 |
-| [fa](fa/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **63** | 25 | 78 | 0 | 0 | 0 |
-| [fi](fi/android.md) | 2026-11-09 | incremental | `3c577835` | 2,555 | 46 | **44** | 16 | 0 | 0 | 0 | 0 |
-| [fr](fr/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **20** | 14 | 27 | 2 | 0 | 32 |
-| [fy-NL](fy-NL/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **17** | 9 | 87 | 7 | 0 | 24 |
-| [hi-IN](hi-IN/android.md) | 2026-11-09 | incremental | `3c577835` | 2,507 | 94 | **0** | 0 | 213 | 8 | 0 | 0 |
-| [hu](hu/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **128** | 67 | 0 | 0 | 0 | 0 |
-| [id](id/android.md) | 2026-11-09 | incremental | `3c577835` | 2,599 | 2 | **151** | 86 | 4 | 0 | 0 | 0 |
-| [it](it/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **0** | 0 | 43 | 11 | 4 | 0 |
-| [ja](ja/android.md) | 2026-11-09 | incremental | `3c577835` | 2,576 | 25 | **141** | 110 | 1 | 0 | 0 | 0 |
-| [ko](ko/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **81** | 39 | 0 | 0 | 0 | 0 |
-| [nl](nl/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **31** | 20 | 4 | 0 | 0 | 26 |
-| [pl](pl/android.md) | 2026-11-09 | incremental | `3c577835` | 2,576 | 25 | **79** | 55 | 5 | 1 | 0 | 0 |
-| [pt-BR](pt-BR/android.md) | 2026-11-09 | incremental | `3c577835` | 2,598 | 3 | **94** | 61 | 7 | 4 | 0 | 0 |
-| [pt-PT](pt-PT/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **73** | 24 | 2 | 0 | 0 | 0 |
-| [ro](ro/android.md) | 2026-11-09 | incremental | `3c577835` | 2,527 | 74 | **88** | 29 | 0 | 0 | 0 | 0 |
-| [ru](ru/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **144** | 81 | 1 | 0 | 0 | 0 |
-| [sk](sk/android.md) | 2026-11-09 | incremental | `3c577835` | 2,576 | 25 | **47** | 26 | 2 | 0 | 0 | 0 |
-| [sl](sl/android.md) | 2026-11-09 | incremental | `3c577835` | 2,542 | 59 | **8** | 5 | 38 | 5 | 0 | 48 |
-| [sv-SE](sv-SE/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **70** | 29 | 2 | 0 | 0 | 0 |
-| [th](th/android.md) | 2026-11-09 | incremental | `3c577835` | 2,410 | 191 | **46** | 26 | 0 | 0 | 0 | 0 |
-| [tr](tr/android.md) | 2026-11-09 | incremental | `3c577835` | 2,592 | 9 | **122** | 67 | 5 | 0 | 0 | 0 |
-| [uk](uk/android.md) | 2026-11-09 | incremental | `3c577835` | 2,525 | 76 | **46** | 21 | 3 | 0 | 0 | 0 |
-| [vi](vi/android.md) | 2026-11-09 | incremental | `3c577835` | 2,525 | 76 | **50** | 27 | 1 | 0 | 0 | 0 |
-| [zh-CN](zh-CN/android.md) | 2026-11-09 | incremental | `3c577835` | 2,521 | 80 | **127** | 87 | 0 | 0 | 0 | 0 |
-| [zh-TW](zh-TW/android.md) | 2026-11-09 | incremental | `3c577835` | 2,601 | 0 | **1** | 1 | 48 | 13 | 0 | 0 |
+| [ar](ar/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,371 | 249 | **122** | 49 | 0 | 0 | 0 | 0 |
+| [cs](cs/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **102** | 65 | 7 | 2 | 0 | 0 |
+| [de](de/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **2** | 0 | 52 | 6 | 0 | 43 |
+| [el](el/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,610 | 10 | **30** | 13 | 0 | 0 | 0 | 0 |
+| [en-CA](en-CA/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,576 | 44 | **0** | 0 | 0 | 0 | 0 | 0 |
+| [en-GB](en-GB/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **2** | 1 | 0 | 2 | 55 | 0 |
+| [es-AR](es-AR/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **102** | 41 | 7 | 0 | 0 | 0 |
+| [es-ES](es-ES/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,457 | 163 | **110** | 48 | 1 | 0 | 0 | 0 |
+| [es-MX](es-MX/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,486 | 134 | **130** | 75 | 12 | 0 | 0 | 0 |
+| [fa](fa/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,609 | 11 | **63** | 25 | 78 | 0 | 0 | 0 |
+| [fi](fi/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,611 | 9 | **44** | 16 | 0 | 0 | 0 | 0 |
+| [fr](fr/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **1** | 1 | 41 | 7 | 0 | 32 |
+| [fy-NL](fy-NL/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,606 | 14 | **4** | 3 | 87 | 7 | 0 | 37 |
+| [hi-IN](hi-IN/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,507 | 113 | **0** | 0 | 213 | 8 | 0 | 0 |
+| [hu](hu/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **128** | 67 | 0 | 0 | 0 | 0 |
+| [id](id/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,602 | 18 | **151** | 86 | 4 | 0 | 0 | 0 |
+| [it](it/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **0** | 0 | 43 | 11 | 4 | 0 |
+| [ja](ja/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,600 | 20 | **142** | 111 | 1 | 0 | 0 | 0 |
+| [ko](ko/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **81** | 39 | 0 | 0 | 0 | 0 |
+| [nl](nl/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,606 | 14 | **1** | 1 | 30 | 4 | 0 | 26 |
+| [pl](pl/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **79** | 55 | 5 | 1 | 0 | 0 |
+| [pt-BR](pt-BR/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,607 | 13 | **94** | 61 | 7 | 4 | 0 | 0 |
+| [pt-PT](pt-PT/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **74** | 24 | 2 | 0 | 0 | 0 |
+| [ro](ro/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,527 | 93 | **88** | 29 | 0 | 0 | 0 | 0 |
+| [ru](ru/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **146** | 83 | 1 | 0 | 0 | 0 |
+| [sk](sk/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **47** | 26 | 2 | 0 | 0 | 0 |
+| [sl](sl/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,582 | 38 | **1** | 1 | 45 | 6 | 0 | 48 |
+| [sv-SE](sv-SE/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **72** | 29 | 2 | 0 | 0 | 0 |
+| [th](th/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,438 | 182 | **47** | 27 | 0 | 0 | 0 | 0 |
+| [tr](tr/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,618 | 2 | **123** | 68 | 5 | 0 | 0 | 0 |
+| [uk](uk/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,525 | 95 | **46** | 21 | 3 | 0 | 0 | 0 |
+| [vi](vi/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,607 | 13 | **53** | 28 | 1 | 0 | 0 | 0 |
+| [zh-CN](zh-CN/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,521 | 99 | **127** | 87 | 0 | 0 | 0 | 0 |
+| [zh-TW](zh-TW/android.md) | 2026-11-16 | incremental | `cde0e6bf` | 2,620 | 0 | **0** | 0 | 48 | 14 | 0 | 0 |
 
 **Impact 1–2** is the queue that matters: broken output and wrong content. Impact 3–4 is language polish and typography.
 

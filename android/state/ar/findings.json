@@ -2594,6 +2594,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "ابدء",
+  "dismissed_because": "",
+  "fid": "44d6ce44533e",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "ar",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "The imperative of بدأ (\"start\") takes the hamza on alif: ابدأ. \"ابدء\" is a spelling error.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e010c2bb",
+  "string_id": "sign_in_promo_description",
+  "suggest": "ابدأ",
+  "summary": "The imperative of بدأ is misspelled as \"ابدء\" instead of \"ابدأ\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "المغقلة",
   "dismissed_because": "",
   "fid": "7b10889ded76",

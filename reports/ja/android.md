@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,576 |
+| **Strings reviewed this run** | 24 of 2,600 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The match status for a penalty shootout is rendered as 「ペナルティー」, which reads as a foul or punishment rather than the shootout phase.
+    - Current: `ペナルティー`
+    - Source: `Penalties`
+    - Suggest: `PK戦`
+    - The comment says this label is shown while a match is in its penalties phase, meaning the shootout. The standard Japanese soccer term for that is 「PK戦」. 「ペナルティー」 on its own suggests a penalty or foul.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,576 |
-| Missing strings | 25 |
+| Strings | 2,600 |
+| Missing strings | 20 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +66,10 @@ _Nothing retired._
 
 ### Completeness
 
-**25 strings** are not translated yet, concentrated in:
+**20 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 25
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 19
+- `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-ja/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -78,7 +83,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 727 | **punctuation** |
+| fullwidth | `punctuation` 733 | **punctuation** |
 
 ---
 
@@ -88,13 +93,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (141)
+## 3. Open findings (142)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 110 |
+| 2 | Wrong content (says something other than the English) | 111 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -404,7 +409,7 @@ _Nothing in this category._
     - Source: `Social Media Trackers`
     - Suggest: `ソーシャルメディアトラッカー`
     - The source refers to social media trackers; "SNS メディア" is a redundant/incorrect coinage and inconsistent with the description string which uses ソーシャルネットワーク.
-- _…and 53 more; see `state/` for the full list._
+- _…and 54 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

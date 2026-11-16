@@ -294,9 +294,14 @@
    "source": "Provide cryptographic authentication services",
    "original": "Fournir des services d’authentification chiffrée",
    "text": "Fournir des services d’authentification cryptographique",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "dismissal": "mozac_feature_addons_permissions_pkcs11_description @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373315,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206779",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -320,9 +325,14 @@
    "source": "Provide cryptographic authentication services.",
    "original": "Fournir des services d’authentification chiffrée.",
    "text": "Fournir des services d’authentification cryptographique.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "dismissal": "mozac_feature_addons_permissions_pkcs11_description_for_update @ mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373317,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321381",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -346,9 +356,14 @@
    "source": "Label for entering a text input field",
    "original": "Libellé pour la création d’un champ de saisie de texte",
    "text": "Libellé pour la saisie dans un champ de texte",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "dismissal": "mozac_feature_prompts_content_description_input_label @ mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12373319,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml/?string=196896",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-02",
@@ -493,9 +508,13 @@
    "source": "Available only when Google is enabled above and is your active search engine while browsing.",
    "original": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche principal lors de la navigation.",
    "text": "Disponible uniquement si Google est activé ci-dessus et défini comme moteur de recherche actif lors de la navigation.",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12373331,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=336850",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-02",
@@ -730,9 +749,13 @@
    "source": "{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> }\n{ <ul> }\n{ <li> }Have you disabled or blocked cookies required by this site?{ </li> }\n{ <li> }If accepting the site’s cookies does not resolve the problem, it is likely a server configuration issue and not your device.{ </li> }\n{ </ul> }",
    "original": "<p>Le navigateur a arrêté d’attendre une réponse du site. Le site crée une redirection de telle sorte que la requête ne peut jamais aboutir.</p>\n<ul>\n<li>Avez-vous désactivé ou bloqué les cookies nécessaires pour ce site ?</li>\n<li> Si le problème n’est pas résolu en acceptant les cookies de ce site, il s’agit probablement d’un problème de configuration du serveur et non de votre appareil.</li>\n</ul>",
    "text": "<p>Le navigateur a cessé d’essayer de récupérer l’élément demandé. Le site crée une redirection de telle sorte que la requête ne peut jamais aboutir.</p>\n<ul>\n<li>Avez-vous désactivé ou bloqué les cookies nécessaires pour ce site ?</li>\n<li> Si le problème n’est pas résolu en acceptant les cookies de ce site, il s’agit probablement d’un problème de configuration du serveur et non de votre appareil.</li>\n</ul>",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-11",
+   "comment": "",
+   "pontoon_pk": 12398702,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196837",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -756,9 +779,14 @@
    "source": "Malware site issue",
    "original": "Problème de logiciel malveillant",
    "text": "Problème de site malveillant",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "dismissal": "mozac_browser_errorpages_safe_browsing_malware_uri_title @ mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; likely reason (inferred): Likely rejected because the suggestion introduced a new error: \"site malveillant\" drops \"logiciel\", so the title no longer mentions malware, which the source names.",
+   "pontoon_pk": 12398703,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values/strings.xml/?string=196899",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-09",
@@ -782,9 +810,13 @@
    "source": "Extend developer tools to access your data in open tabs.",
    "original": "Permettre aux outils de développement d’accéder à vos données dans les onglets ouverts",
    "text": "Permettre aux outils de développement d’accéder à vos données dans les onglets ouverts.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398705,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321388",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -808,9 +840,13 @@
    "source": "Access your data on other domains.",
    "original": "Accéder aux données d’autres domaines.",
    "text": "Accéder à vos données d’autres domaines.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398707,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321392",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-09",
@@ -834,9 +870,13 @@
    "source": "Access your data on another domain",
    "original": "Accéder aux données d’un autre domaine",
    "text": "Accéder à vos données d’un autre domaine",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398704,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321360",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-09",
@@ -860,9 +900,13 @@
    "source": "Access your data on another domain.",
    "original": "Accéder aux données d’un autre domaine.",
    "text": "Accéder à vos données d’un autre domaine.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398706,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=321391",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-09",
@@ -886,9 +930,13 @@
    "source": "Cancel to keep your current version and settings, or update to get the new version and approve the changes.",
    "original": "Annulez pour conserver la version et les paramètres actuels, mettez à jour pour obtenir la nouvelle version et approuver les changements.",
    "text": "Annulez pour conserver la version et les paramètres actuels ou mettez à jour pour obtenir la nouvelle version et approuver les changements.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398708,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=343659",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -912,9 +960,13 @@
    "source": "%1$s will translate this language automatically when the page loads.",
    "original": "%1$s traduira automatiquement la page dans cette langue à son chargement.",
    "text": "%1$s traduira automatiquement cette langue au chargement de la page.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398713,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292108",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -938,9 +990,13 @@
    "source": "Couldn’t import bookmarks. Try again.",
    "original": "Impossible d’importer les marque-pages. Veuillez réessayez.",
    "text": "Impossible d’importer les marque-pages. Veuillez réessayer.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-11",
+   "comment": "",
+   "pontoon_pk": 12398710,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=333299",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -964,9 +1020,13 @@
    "source": "Debug locales to enable",
    "original": "Déboguer les locales à activer",
    "text": "Locales de débogage à activer",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-11",
+   "comment": "",
+   "pontoon_pk": 12398715,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=313832",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -990,9 +1050,14 @@
    "source": "Temporarily overrides the home and current region values for testing.",
    "original": "Remplace temporairement les valeurs de région actuelle et du domicile à fin de tests.",
    "text": "Remplace temporairement les valeurs de région actuelle et du domicile à des fins de test.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "dismissal": "debug_drawer_regin_tools_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-12): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12398716,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=317233",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-09",
@@ -1016,9 +1081,13 @@
    "source": "If you delete this language, %1$s will download partial languages to your cache as you translate.",
    "original": "Si vous supprimez cette langue, %1$s la téléchargera partiellement dans votre cache au fur et à mesure de vos demandes de traduction.",
    "text": "Si vous supprimez cette langue, %1$s téléchargera des langues partielles dans votre cache au fur et à mesure de vos demandes de traduction.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398714,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292311",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1042,9 +1111,13 @@
    "source": "Enables fingerprinting protection to stop suspected fingerprinters.",
    "original": "Activer la protection contre les empreintes numériques pour bloquer les détecteurs d’empreintes numériques suspectés.",
    "text": "Active la protection contre les empreintes numériques pour bloquer les détecteurs d’empreintes numériques suspectés.",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398711,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=309031",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1068,9 +1141,13 @@
    "source": "Translating",
    "original": "Traduction",
    "text": "Traduction en cours",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398712,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292275",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-09",
@@ -1094,9 +1171,13 @@
    "source": "Can’t pay, check out or shop",
    "original": "Je ne peux pas payer ou faire des achats",
    "text": "Je ne peux pas payer, finaliser la commande ou faire des achats",
-   "status": "pending",
-   "status_date": "2026-11-09",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-12",
+   "comment": "",
+   "pontoon_pk": 12398709,
+   "pontoon_url": "https://pontoon.mozilla.org/fr/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=318907",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

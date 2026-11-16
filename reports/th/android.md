@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `eb5867992b38` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,410 |
+| **Strings reviewed this run** | 30 of 2,438 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for th: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `snackbar_action_view` — `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — The action button "View" is translated with the noun "มุมมอง" (a viewpoint or display mode) instead of the verb "ดู".
+    - Current: `มุมมอง`
+    - Source: `View`
+    - Suggest: `ดู`
+    - The developer comment says tapping the button displays the tab group, so "View" is an imperative verb. "มุมมอง" means a view or perspective (a noun) and reads wrongly as a button label.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,410 |
-| Missing strings | 191 |
+| Strings | 2,438 |
+| Missing strings | 182 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,13 +66,13 @@ _Nothing retired._
 
 ### Completeness
 
-**191 strings** are not translated yet, concentrated in:
+**182 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — 140
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-th/strings.xml` — 28
+- `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — 137
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-th/strings.xml` — 27
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-th/strings.xml` — 8
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-th/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-th/strings.xml` — 6
+- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-th/strings.xml` — 5
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-th/strings.xml` — 3
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-th/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -93,7 +97,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (46)
+## 3. Open findings (47)
 
 > **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -133,7 +137,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 26 |
+| 2 | Wrong content (says something other than the English) | 27 |
 | 3 | Degraded language (grammar, spelling, terminology) | 16 |
 | 4 | Cosmetic (typography, spacing) | 4 |
 
@@ -268,6 +272,11 @@ _Nothing in this category._
     - Source: `Explore search widget`
     - Suggest: `สำรวจวิดเจ็ตการค้นหา`
     - The task is about the home-screen search widget. In Thai UI, เครื่องมือค้นหา means "search engine", which points users to a different feature. Widget is normally rendered as วิดเจ็ต.
+- `snackbar_action_view` — `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — The action button "View" is translated with the noun "มุมมอง" (a viewpoint or display mode) instead of the verb "ดู".
+    - Current: `มุมมอง`
+    - Source: `View`
+    - Suggest: `ดู`
+    - The developer comment says tapping the button displays the tab group, so "View" is an imperative verb. "มุมมอง" means a view or perspective (a noun) and reads wrongly as a button label.
 - `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — "check out" (complete a purchase) is translated as "ดำเนินการต่อ" (continue/proceed).
     - Current: `ดำเนินการต่อ`
     - Source: `Can’t pay, check out or shop`

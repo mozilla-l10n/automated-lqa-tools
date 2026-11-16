@@ -468,8 +468,8 @@
   "sponsored_suggestion_description": "0bbe1893 31b7b94f f5fe285f"
  },
  "mozilla-mobile/android-components/components/feature/importer/src/main/res/values/strings.xml": {
-  "mozac_feature_importer_dialog_cancel": "58931e85 871d661d 5e2970aa",
-  "mozac_feature_importer_dialog_description": "bc687243 9c1a9868 047447ad",
+  "mozac_feature_importer_dialog_cancel": "58931e85 871d661d e0c59daf",
+  "mozac_feature_importer_dialog_description": "bc687243 9c1a9868 4599741e",
   "mozac_feature_importer_dialog_title": "c57eca55 f19c2093 47e4e9a1"
  },
  "mozilla-mobile/android-components/components/feature/ipprotection/src/main/res/values/strings.xml": {

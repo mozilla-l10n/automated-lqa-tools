@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `3c577835f1fc` |
-| **Previous run** | 2026-11-09 @ `f7a886b5b048` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
+| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,366 |
+| **Strings reviewed this run** | 7 of 2,371 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ar: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The imperative of بدأ is misspelled as "ابدء" instead of "ابدأ".
+    - Current: `ابدء`
+    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
+    - Suggest: `ابدأ`
+    - The imperative of بدأ ("start") takes the hamza on alif: ابدأ. "ابدء" is a spelling error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,8 +49,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 42 |
-| Strings | 2,366 |
-| Missing strings | 235 |
+| Strings | 2,371 |
+| Missing strings | 249 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +66,9 @@ _Nothing retired._
 
 ### Completeness
 
-**235 strings** are not translated yet, concentrated in:
+**249 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 165
+- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 179
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
@@ -102,7 +106,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (121)
+## 3. Open findings (122)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -128,7 +132,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 49 |
-| 3 | Degraded language (grammar, spelling, terminology) | 67 |
+| 3 | Degraded language (grammar, spelling, terminology) | 68 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -610,6 +614,11 @@ _Nothing in this category._
     - Source: `We’re sorry you’re having issues. Let us know how we can improve %1$s.`
     - Suggest: `تحسين %1$s`
     - The source says "improve %1$s". Putting "خدماتنا" before the app name makes it read "improve our services Firefox", which is broken Arabic.
+- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The imperative of بدأ is misspelled as "ابدء" instead of "ابدأ".
+    - Current: `ابدء`
+    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
+    - Suggest: `ابدأ`
+    - The imperative of بدأ ("start") takes the hamza on alif: ابدأ. "ابدء" is a spelling error.
 - `snackbar_num_tabs_closed` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — Misspelling of "closed": المغقلة instead of المغلقة.
     - Current: `المغقلة`
     - Source: `Tabs closed: %1$s`
