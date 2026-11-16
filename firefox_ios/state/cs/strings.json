@@ -456,6 +456,7 @@
   "MainMenu.SettingsSection.WhatsNew.Title.v131": "dab8c86e 0068f643 4ce85dc8",
   "MainMenu.SiteProtection.AdBlocker.Title.v153": "94c03c09 ef07e8df 95558a54",
   "MainMenu.SiteProtection.ConnectionNotSecure.Title.v141": "9a78996b b3115394 c5f25825",
+  "MainMenu.SiteProtection.Protections.ReaderModeSubtitle.v162": "6ab89d2d 9dea0549 7e2681c9",
   "MainMenu.SiteProtection.Protections.Title.v153": "d13c96da 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "08557f39 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "29b1e16c 0f76f2fd 29145267",
@@ -1289,7 +1290,7 @@
   "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "dd77694d 978267cd 2699c015",
   "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "dc805e28 708e1251 d35af549",
   "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "d37933aa 819cf749 94973be0",
-  "VPN.ErrorBrowsingPopup.Continue.v160": "fc5b4ed5 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "fc5b4ed5 54cfcf7b 3c4d0ea1",
   "VPN.ErrorBrowsingPopup.Title.v160": "6a75369d 0df91faf 4881e8b2",
   "VPN.ErrorConnectingPopup.Body.v160": "9653a6df 4dad2f2b 518c5e81",
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "4a2eb779 0e7c6115 70cb9732",
@@ -1302,6 +1303,10 @@
   "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "dc805e28 708e1251 886535ab",
   "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "d37933aa 819cf749 db106b11",
   "VPN.ReachedDataLimitPopup.Title.v160": "3f7e4207 bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "aec42b63 d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "ada452bb 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "a846d559 3076b2c4 d1b45d55",

@@ -602,6 +602,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "gør %@ til dine egne",
+  "dismissed_because": "",
+  "fid": "2163b293fe5f",
+  "file": "Shared/Supporting Files/en-US.lproj/Wallpapers.strings",
+  "first_seen": "2026-11-16",
+  "impact": 3,
+  "last_seen": "2026-11-16",
+  "locale": "da",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "%@ is the app name (e.g. Firefox), a single thing. \"Make Firefox yours\" is \"gør Firefox til din egen\" in Danish, and the plural \"dine egne\" does not agree with it.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "1cca26fe",
+  "string_id": "Wallpapers.EngagementSheet.Title.v161",
+  "suggest": "gør %@ til din egen",
+  "summary": "The possessive \"dine egne\" is plural but refers to the singular app name %@.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "Webstedet er ikke brugbar",
   "dismissed_because": "",
   "fid": "eca05173b4f6",

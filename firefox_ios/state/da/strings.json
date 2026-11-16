@@ -40,6 +40,11 @@
   "Alerts.AddToCalendar.BodyDefault.v134": "35d1396b 70fe87b8 8dbcd3a5",
   "Alerts.AddToCalendar.Button.Add.v134": "c937ec56 01172d28 8f018583",
   "Alerts.AddToCalendar.Title.v134": "365ce440 08d8ff50 ea781d29",
+  "Alerts.ConfigurationProfile.Body.v160.1": "a0957b6f e60e0053 074a52b6",
+  "Alerts.ConfigurationProfile.BodyDefault.v160.1": "89d0b617 54eba705 c891871a",
+  "Alerts.ConfigurationProfile.Button.Cancel.v160.1": "2354e97f 871d661d 9f7d31af",
+  "Alerts.ConfigurationProfile.Button.Continue.v160.1": "c6786630 5009bc49 248707f1",
+  "Alerts.ConfigurationProfile.Title.v160.1": "01dc05eb 7ed5ad40 983f661d",
   "Alerts.FeltDeletion.Body.v122": "33f86b16 7183e636 a55c275d",
   "Alerts.FeltDeletion.Button.Cancel.v122": "2354e97f 871d661d 3e734601",
   "Alerts.FeltDeletion.Button.Cancel.v134": "2354e97f 871d661d 1bfe1810",
@@ -324,7 +329,9 @@
   "ExternalLink.ExternalSmsLinkConfirmation.v136": "00944092 bc105275 2d0a7110"
  },
  "Shared/Supporting Files/en-US.lproj/FirefoxHomepage.strings": {
+  "FirefoxHome.PrivacyNotice.Body.Markdown.v160": "fa7ac5c6 291c8443 5ce7ea0c",
   "FirefoxHome.PrivacyNotice.Body.v148": "dce11803 e9082260 fade0257",
+  "FirefoxHome.PrivacyNotice.Headline.v160": "0d623420 c8dc72ab 2bcb2a8c",
   "FirefoxHome.PrivacyNotice.LearnMoreLink.v148": "a53c05a2 8ed49578 79d95a90",
   "FirefoxHome.PrivacyNotice.PrivacyNoticeLink.v148": "895167f1 f90e5f8c 260331a6",
   "FirefoxHome.ScreenTitle.v144": "83a8899b 9e90592c a9e45512",
@@ -825,6 +832,7 @@
  },
  "Shared/Supporting Files/en-US.lproj/QuickAnswers.strings": {
   "QuickAnswers.AccessibilityLabels.Close.v158": "abee0a4d 0e7c6115 41e2a5cf",
+  "QuickAnswers.ContentView.NewQuestionButton.v161": "b02a3bb8 c8f2cc6e 139d73fc",
   "QuickAnswers.ContentView.Sources.v158": "714257c5 5eb95cd9 2d3bdb88",
   "QuickAnswers.Errors.Cancel.v158": "2354e97f 871d661d 584c7ac2",
   "QuickAnswers.Errors.OK.v158": "322b41af 322b41af 2a812743",
@@ -1033,7 +1041,9 @@
   "VPN.LocationPicker.FindingLocationsText.v160": "70272e85 43b0b6a7 ae6285e2",
   "VPN.LocationPicker.RecommendedMainText.v160": "39eb19ce 40b5cb8f 1eb33093",
   "VPN.LocationPicker.RecommendedSubText.v160": "c7ac4734 cce40e95 4da8d9f0",
+  "VPN.Settings.Connected.v161": "bbfd18f5 34f0ad6f ae1c1244",
   "VPN.Settings.Connecting.v160": "919608db 49447206 8b0ee67e",
+  "VPN.Settings.DataLimit.AccessibilityValue.v161": "bc400181 82627945 2fa27c62",
   "VPN.Settings.DataLimitResetFooter.v160": "29dd662a fbbabbae 1ed1a1cc",
   "VPN.Settings.DataLimitTitle.v160": "f89a3735 4c6e9549 a6cf0d3d",
   "VPN.Settings.DataUsage.AccessibilityLabel.v160": "15816dd0 c6eaf97e bcc8cae6",
@@ -1222,7 +1232,7 @@
   "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "5faa4836 978267cd 2699c015",
   "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "13434fe0 708e1251 d35af549",
   "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "75e3921a 819cf749 94973be0",
-  "VPN.ErrorBrowsingPopup.Continue.v160": "790f4b46 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "790f4b46 54cfcf7b 3c4d0ea1",
   "VPN.ErrorBrowsingPopup.Title.v160": "37702376 0df91faf 4881e8b2",
   "VPN.ErrorConnectingPopup.Body.v160": "e4756e59 4dad2f2b 518c5e81",
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "abee0a4d 0e7c6115 70cb9732",
@@ -1235,6 +1245,10 @@
   "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "13434fe0 708e1251 886535ab",
   "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "75e3921a 819cf749 db106b11",
   "VPN.ReachedDataLimitPopup.Title.v160": "a18176a2 bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "938a0aa2 d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "1cca26fe 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "623283a5 3076b2c4 d1b45d55",

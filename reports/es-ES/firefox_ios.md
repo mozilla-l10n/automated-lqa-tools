@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 1,848 |
 
@@ -46,9 +46,9 @@ _Nothing retired._
 |---|---|
 | Files | 95 |
 | Strings | 1,848 |
-| Missing strings | 135 |
+| Missing strings | 138 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 4 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,7 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**135 strings** are not translated yet, concentrated in:
+**138 strings** are not translated yet, concentrated in:
 
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 44
 - `es-ES/firefox-ios.xliff` — 26
@@ -70,6 +70,8 @@ _Nothing retired._
 - `es-ES/firefox-ios.xliff` — 5
 - `es-ES/firefox-ios.xliff` — 2
 - `es-ES/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
+- `es-ES/firefox-ios.xliff` — 1
 - `es-ES/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
@@ -77,6 +79,7 @@ _Nothing retired._
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings`
 - `Shared/Supporting Files/en-US.lproj/VPN.strings`
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

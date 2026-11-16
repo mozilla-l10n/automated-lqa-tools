@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 1,983 |
+| **Strings reviewed this run** | 2 of 1,984 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,10 +45,10 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,983 |
-| Missing strings | 0 |
+| Strings | 1,984 |
+| Missing strings | 2 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 0 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,7 +59,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**2 strings** are not translated yet, concentrated in:
+
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
+
+**Files absent from the locale:**
+
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,973 |
+| **Strings reviewed this run** | 14 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for fi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `Alerts.ConfigurationProfile.Button.Cancel.v160.1` — `fi/firefox-ios.xliff` — The Cancel button is translated as "Kumoa" (Undo), not "Peruuta" (Cancel).
+    - Current: `Kumoa`
+    - Source: `Cancel`
+    - Suggest: `Peruuta`
+    - The developer comment says the button cancels the download and closes the window. In Finnish, "Kumoa" means undoing or reverting an action already done. The standard Finnish UI word for Cancel is "Peruuta".
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +48,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,973 |
-| Missing strings | 10 |
+| Files | 99 |
+| Strings | 1,986 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,14 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**10 strings** are not translated yet, concentrated in:
-
-- `fi/firefox-ios.xliff` — 5
-- `fi/firefox-ios.xliff` — 2
-- `fi/firefox-ios.xliff` — 2
-- `fi/firefox-ios.xliff` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -86,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (41)
+## 3. Open findings (42)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -101,7 +98,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 18 |
+| 2 | Wrong content (says something other than the English) | 19 |
 | 3 | Degraded language (grammar, spelling, terminology) | 21 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
@@ -111,6 +108,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `Alerts.ConfigurationProfile.Button.Cancel.v160.1` — `fi/firefox-ios.xliff` — The Cancel button is translated as "Kumoa" (Undo), not "Peruuta" (Cancel).
+    - Current: `Kumoa`
+    - Source: `Cancel`
+    - Suggest: `Peruuta`
+    - The developer comment says the button cancels the download and closes the window. In Finnish, "Kumoa" means undoing or reverting an action already done. The standard Finnish UI word for Cancel is "Peruuta".
 - `Logins.PaymentMethods.DevicePasscodeRequired.Message.v124.v2` — `fi/firefox-ios.xliff` — "Autofill" is translated as plain "fill", so the word "automatically" is lost.
     - Current: `Tallentaaksesi ja täyttääksesi luottokorttitiedot`
     - Source: `To save and autofill credit cards, enable Face ID, Touch ID, or a device passcode.`

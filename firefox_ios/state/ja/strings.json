@@ -1289,7 +1289,7 @@
   "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "5b4e3cb8 978267cd 2699c015",
   "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "2f8dab1e 708e1251 d35af549",
   "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "682acdb5 819cf749 94973be0",
-  "VPN.ErrorBrowsingPopup.Continue.v160": "3c63f72e 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "3c63f72e 54cfcf7b 3c4d0ea1",
   "VPN.ErrorBrowsingPopup.Title.v160": "8e516707 0df91faf 4881e8b2",
   "VPN.ErrorConnectingPopup.Body.v160": "5264592f 4dad2f2b 518c5e81",
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "e8673d58 0e7c6115 70cb9732",
@@ -1302,6 +1302,10 @@
   "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "2f8dab1e 708e1251 886535ab",
   "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "682acdb5 819cf749 db106b11",
   "VPN.ReachedDataLimitPopup.Title.v160": "9ab914ed bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "65b52e7f d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "6d508b84 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "b9c33518 3076b2c4 d1b45d55",

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 1,983 |
+| **Strings reviewed this run** | 4 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,63 +22,9 @@ Also for de: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (11)
+### ✅ Fixed since the last run (0)
 
-- `Addresses.EditAddress.AutofillAddressState.v129` — `de/firefox-ios.xliff` — "State" as an administrative subdivision of an address is rendered as "Staat" (sovereign country) instead of "Bundesstaat".
-    - Current: `Staat`
-    - Source: `State`
-    - Suggest: `Bundesstaat`
-    - The developer comment says this is the state field within an address, especially in the USA. German "Staat" means country/nation; the address subdivision is "Bundesstaat", and next to the separate country field "Staat" is misleading.
-- `Engagement.Notification.Treatment.B.Body.v114` — `de/firefox-ios.xliff` — Sentence-final period from the source is missing, and the comma required before the infinitive clause is absent.
-    - Current: `Surfen Sie mit %@ ohne Cookies oder eine Chronik zu speichern`
-    - Source: `Browse with no saved cookies or history in %@.`
-    - Suggest: `Surfen Sie mit %@, ohne Cookies oder eine Chronik zu speichern.`
-    - The en-US string ends with a period; German also requires a comma before the "ohne … zu"-infinitive clause.
-- `Menu.EnhancedTrackingProtection.Details.TrackersStandardModeFooterText.v150` — `de/firefox-ios.xliff` — "after a page starts loading" is rendered as "nachdem eine Seite geladen wurde" (after a page has loaded).
-    - Current: `nachdem eine Seite geladen wurde`
-    - Source: `Standard blocks common trackers after a page starts loading, so you may see a higher tracker count. %@`
-    - Suggest: `nachdem eine Seite mit dem Laden begonnen hat`
-    - The source says blocking happens after the page starts loading, not after it has finished loading; this contrasts with the strict-mode string which blocks before the page loads.
-- `Menu.EnhancedTrackingProtection.On.Header.v128` — `de/firefox-ios.xliff` — Wrong pronoun order/case in "sagen wir Ihnen es".
-    - Current: `sagen wir Ihnen es`
-    - Source: `You’re protected. If we spot something, we’ll let you know.`
-    - Suggest: `sagen wir Ihnen Bescheid`
-    - German requires the pronoun order "sagen wir es Ihnen"; "sagen wir Ihnen es" is ungrammatical.
-- `Menu.EnhancedTrackingProtection.SwitchOn.Text.v128` — `de/firefox-ios.xliff` — "looks broken" mistranslated as "beschädigt aussieht" (looks damaged).
-    - Current: `Wenn etwas auf dieser Website beschädigt aussieht`
-    - Source: `If something looks broken on this site, try turning it off.`
-    - Suggest: `Wenn auf dieser Website etwas nicht richtig funktioniert`
-    - The source means the site appears not to work correctly, not that something looks physically damaged.
-- `MainMenu.ToolsSection.AccessibilityLabels.Save.v133` — `de/firefox-ios.xliff` — "Save submenu" is rendered as the imperative "Untermenü speichern" (save the submenu) instead of the noun phrase "submenu Save".
-    - Current: `Untermenü speichern`
-    - Source: `Save submenu`
-    - Suggest: `Untermenü „Speichern“`
-    - The source is a noun phrase naming the Save submenu (cf. the parallel string "Tools submenu" → "Untermenü „Werkzeuge“"). The German reads as a command to save the submenu, which is a different meaning.
-- `Microsurvey.Survey.RadioButton.Unselected.AccessibilityLabel.v129` — `de/firefox-ios.xliff` — "Unselected" (state: not selected) is rendered as "Auswahl aufgehoben" (selection removed/deselected), describing an action rather than the state.
-    - Current: `Auswahl aufgehoben`
-    - Source: `Unselected`
-    - Suggest: `Nicht ausgewählt`
-    - The developer comment says this accessibility label "states whether the survey option was not selected", i.e. a static state, not an action of deselecting.
-- `Onboarding.Notification.Title.v120` — `de/firefox-ios.xliff` — "Notifications help you stay safer with %@" is translated as helping to make Firefox safer instead of helping the user stay safer.
-    - Current: `Benachrichtigungen helfen Ihnen, %@ noch sicherer zu machen`
-    - Source: `Notifications help you stay safer with %@`
-    - Suggest: `Benachrichtigungen helfen Ihnen, mit %@ noch sicherer zu bleiben`
-    - The source says notifications help the user stay safer with Firefox; the German says they help the user make Firefox safer.
-- `BreachAlerts.Link` — `de/firefox-ios.xliff` — Informal imperative "Gehe zu" violates the locale's formal register.
-    - Current: `Gehe zu`
-    - Source: `Go to`
-    - Suggest: `Gehen Sie zu`
-    - The de locale uses the formal address (Sie) throughout; "Gehe zu" is the informal du-form.
-- `DownloadsPanel.Delete.Title` — `de/firefox-ios.xliff` — "Delete" rendered as "Entfernen" (remove) instead of "Löschen".
-    - Current: `Entfernen`
-    - Source: `Delete`
-    - Suggest: `Löschen`
-    - The source distinguishes "Delete" (files) from "Remove"; "Entfernen" is the standard German for "Remove" (see FirefoxHome.RecentHistory.Remove), so deleting downloaded files should be "Löschen".
-- `FirefoxHome.CustomizeHomeButton.Title` — `de/firefox-ios.xliff` — "Homepage" translated as "Startbildschirm" (home screen) instead of "Startseite".
-    - Current: `Startbildschirm anpassen`
-    - Source: `Customize Homepage`
-    - Suggest: `Startseite anpassen`
-    - en-US says "Customize Homepage"; elsewhere "Home Page" is rendered "Startseite" (Firefox.HomePage.Title), so "Startbildschirm" is inconsistent and names a different concept.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -98,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,983 |
+| Files | 99 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

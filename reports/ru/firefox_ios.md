@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `372c1b986f13` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,983 |
+| **Strings reviewed this run** | 4 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,983 |
+| Files | 99 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +70,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 23 | **guillemet** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 89, `formal` 298 | **formal** |
+| register | `informal` 89, `formal` 299 | **formal** |
 
 ---
 

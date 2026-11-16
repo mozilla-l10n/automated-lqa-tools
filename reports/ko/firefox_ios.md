@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `a6af93c85149` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,983 |
+| **Strings reviewed this run** | 4 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ko: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `Wallpapers.EngagementSheet.Title.v161` — `ko/firefox-ios.xliff` — The banner title writes '배경화면' without a space, but the button on the same banner writes '배경 화면'.
+    - Current: `새 배경화면을`
+    - Source: `Try New Wallpapers to Make %@ Yours`
+    - Suggest: `새 배경 화면을`
+    - The title and the primary button appear together on the same new-wallpapers banner. 'Wallpapers' is spaced differently in each, so the term is inconsistent on one screen. The button's '배경 화면' is the standard spacing.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,8 +48,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,983 |
+| Files | 99 |
+| Strings | 1,986 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -79,7 +83,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (97)
+## 3. Open findings (98)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -95,7 +99,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 44 |
-| 3 | Degraded language (grammar, spelling, terminology) | 53 |
+| 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -555,6 +559,11 @@ _Nothing in this category._
     - Source: `Privacy Notice`
     - Suggest: `개인정보 고지`
     - The description sentence (TermsOfUse.Description.v142) says '개인정보 고지' for the same document the link points to. The two terms should match on one screen.
+- `Wallpapers.EngagementSheet.Title.v161` — `ko/firefox-ios.xliff` — The banner title writes '배경화면' without a space, but the button on the same banner writes '배경 화면'.
+    - Current: `새 배경화면을`
+    - Source: `Try New Wallpapers to Make %@ Yours`
+    - Suggest: `새 배경 화면을`
+    - The title and the primary button appear together on the same new-wallpapers banner. 'Wallpapers' is spaced differently in each, so the term is inconsistent on one screen. The button's '배경 화면' is the standard spacing.
 - `Menu.Bookmarks.Label` — `ko/firefox-ios.xliff` — "Bookmarks" is rendered as 즐겨찾기 while the same menu uses 북마크 for bookmark (e.g. 북마크 추가됨).
     - Current: `즐겨찾기`
     - Source: `Bookmarks`

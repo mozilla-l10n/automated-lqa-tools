@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-09 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3d5d050768b7` |
-| **Previous run** | 2026-11-09 @ `372c1b986f13` |
+| **Generated** | 2026-11-16 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
+| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,927 |
+| **Strings reviewed this run** | 59 of 1,986 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for vi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `vi/firefox-ios.xliff` — "to reflect the latest features" is rendered as "to provide the latest features".
+    - Current: `để cung cấp các tính năng mới nhất`
+    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
+    - Suggest: `để phản ánh các tính năng mới nhất`
+    - The source says the Privacy Notice was updated to reflect (describe) new features; "cung cấp" means "provide", claiming the notice update delivers the features.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,11 +48,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 97 |
-| Strings | 1,927 |
-| Missing strings | 56 |
+| Files | 99 |
+| Strings | 1,986 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,21 +63,7 @@ _Nothing retired._
 
 ### Completeness
 
-**56 strings** are not translated yet, concentrated in:
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `vi/firefox-ios.xliff` — 19
-- `vi/firefox-ios.xliff` — 7
-- `vi/firefox-ios.xliff` — 5
-- `vi/firefox-ios.xliff` — 2
-- `vi/firefox-ios.xliff` — 2
-- `vi/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/VPN.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -83,7 +73,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-single` 5, `curly-double` 4 | _mixed_ |
 | apostrophe | `typographic` 5 | **typographic** |
-| ellipsis | `char` 28 | **char** |
+| ellipsis | `char` 31 | **char** |
 | dash | `em` 3, `en` 2 | _mixed_ |
 
 ---
@@ -94,7 +84,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (68)
+## 3. Open findings (69)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -119,7 +109,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 32 |
+| 2 | Wrong content (says something other than the English) | 33 |
 | 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
@@ -159,6 +149,11 @@ _Nothing in this category._
     - Source: `Standard blocks common trackers after a page starts loading, so you may see a higher tracker count. %@`
     - Suggest: `Chế độ tiêu chuẩn chặn`
     - “Standard” is the protection mode name (parallel to the Strict footer, rendered “Chế độ nghiêm ngặt”); “thường được sử dụng” (commonly used) is not in the source.
+- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `vi/firefox-ios.xliff` — "to reflect the latest features" is rendered as "to provide the latest features".
+    - Current: `để cung cấp các tính năng mới nhất`
+    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
+    - Suggest: `để phản ánh các tính năng mới nhất`
+    - The source says the Privacy Notice was updated to reflect (describe) new features; "cung cấp" means "provide", claiming the notice update delivers the features.
 - `Onboarding.MultiDay.NotificationCard.BodyText.v159` — `vi/firefox-ios.xliff` — The Vietnamese is garbled: it ends with the incomplete phrase "trình chống của %@" and no longer lists the three items the source lists.
     - Current: `Nhận thông tin cập nhật, mẹo và báo cáo về quyền riêng tư của bạn về trình chống của %@.`
     - Source: `Get %@ protection updates, tips, and your privacy report.`

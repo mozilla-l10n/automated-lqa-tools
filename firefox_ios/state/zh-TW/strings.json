@@ -372,7 +372,7 @@
   "LoginsList.Title.v122": "4d45d5ae c753abf4 c1ff0d5d"
  },
  "Shared/Supporting Files/en-US.lproj/FirefoxSync.strings": {
-  "FirefoxSync.AddressAutofillEngine.v124": "eeabbb4a eb89d4cc 305f23a0",
+  "FirefoxSync.AddressAutofillEngine.v124": "e4a06ac9 eb89d4cc 305f23a0",
   "FirefoxSync.CreditCardsEngine.v122": "238c72b5 04676441 2c30ab7f",
   "Sync.LoginsEngine.Title.v122": "a8936a2d 05ba3b72 24006274"
  },
@@ -456,6 +456,7 @@
   "MainMenu.SettingsSection.WhatsNew.Title.v131": "6f12acf3 0068f643 4ce85dc8",
   "MainMenu.SiteProtection.AdBlocker.Title.v153": "68e5b1ae ef07e8df 95558a54",
   "MainMenu.SiteProtection.ConnectionNotSecure.Title.v141": "d3485888 b3115394 c5f25825",
+  "MainMenu.SiteProtection.Protections.ReaderModeSubtitle.v162": "80eabe75 9dea0549 7e2681c9",
   "MainMenu.SiteProtection.Protections.Title.v153": "1b4120ae 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "e7881dc6 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "60105baa 0f76f2fd 29145267",
@@ -1289,7 +1290,7 @@
   "VPN.ErrorBrowsingPopup.CloseThisTab.v160": "03f33cfa 978267cd 2699c015",
   "VPN.ErrorBrowsingPopup.ClosedOneTab.v160": "792e5297 708e1251 d35af549",
   "VPN.ErrorBrowsingPopup.ClosedXTabs.v160": "33c3109f 819cf749 94973be0",
-  "VPN.ErrorBrowsingPopup.Continue.v160": "0330719c 54cfcf7b 52b7f4c5",
+  "VPN.ErrorBrowsingPopup.Continue.v160": "0330719c 54cfcf7b 3c4d0ea1",
   "VPN.ErrorBrowsingPopup.Title.v160": "ddbaf6d1 0df91faf 4881e8b2",
   "VPN.ErrorConnectingPopup.Body.v160": "772081ec 4dad2f2b 518c5e81",
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "7dc6e53a 0e7c6115 70cb9732",
@@ -1302,6 +1303,10 @@
   "VPN.ReachedDataLimitPopup.ClosedOneTab.v160": "792e5297 708e1251 886535ab",
   "VPN.ReachedDataLimitPopup.ClosedXTabs.v160": "33c3109f 819cf749 db106b11",
   "VPN.ReachedDataLimitPopup.Title.v160": "56fca8df bdf76995 86c18226"
+ },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Button.v161": "87f0db93 d7f64fa5 930ce1a6",
+  "Wallpapers.EngagementSheet.Title.v161": "a23b2c3d 2b7da448 4d9b8b51"
  },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "819c2574 3076b2c4 d1b45d55",
@@ -2170,7 +2175,7 @@
   "fi3W24-2GqvPe": "4d82e6d6 aa34086d 1fa6aaf5",
   "fi3W24-eHmH1H": "8234b2aa 45cbdcaa df11326b",
   "fi3W24-scEmjs": "74fba982 7b509dd2 ab3fb344",
-  "fi3W24-xRJbBP": "cbc9999f 7a03fcbe 8cb977a2",
+  "fi3W24-xRJbBP": "a3615a02 7a03fcbe 8cb977a2",
   "scEmjs": "fd28875d 4a6ae781 ef4648a3",
   "w9jdPK": "c3601b20 a20f907f c90faaed",
   "xRJbBP": "ef0c39c8 86881438 0d7a7b87"
