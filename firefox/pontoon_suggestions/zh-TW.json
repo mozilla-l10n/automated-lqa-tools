@@ -4236,9 +4236,13 @@
    "source": "&Revert",
    "original": "反向選擇(&R)",
    "text": "還原(&R)",
-   "status": "pending",
-   "status_date": "2026-11-08",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-17",
+   "comment": "93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>Both expains, I can not make sure which is correct.</p>",
+   "pontoon_pk": 12396463,
+   "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/toolkit/chrome/global/commonDialogs.properties/?string=81045",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-08",

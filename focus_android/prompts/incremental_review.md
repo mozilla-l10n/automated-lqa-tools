@@ -20,7 +20,9 @@ does more damage than a missed nitpick. When you are not sure, say nothing.
   Firefox, Focus, Mozilla, Pocket and add-on names stay as they are.
 - **Grammar, agreement, spelling, accents** — real errors, not preferences.
 - **Terminology inconsistency** — the same source term rendered differently
-  on the same surface, when one of them is clearly wrong.
+  on the same surface, when one of them is clearly wrong. Two renderings that are
+  both correct are not a defect, and aligning one with the other is not a
+  fix.
 - **Register** — a violation of the locale's established form of address.
 - **Typography** — only where it deviates from the conventions below.
 - **Length on small screens** — only when a developer comment sets a limit,
@@ -164,6 +166,9 @@ two words.
   a passive turned active, an idiom in place of a literal rendering, one
   sentence split into two. Report it only when the {language} lands on a
   different fact, not merely a different wording.
+- **Final punctuation that differs from the en-US** — a period, colon or
+  exclamation mark added or dropped at the end of a label, link, title or
+  short fragment. Each language decides that for itself.
 - **Anything the conventions section below marks as correct.**
 
 ## Android-specific context

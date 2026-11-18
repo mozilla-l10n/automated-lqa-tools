@@ -13,10 +13,14 @@ does more damage than a missed nitpick. When you are not sure, say nothing.
 - **Wrong names** — language, region and country names that name the wrong
   thing.
 - **Brand and do-not-translate** — a brand or product name translated when
-  it must not be. Firefox, Focus, Klar and Pocket stay as they are.
+  it must not be. Firefox, Focus, Klar and Pocket stay as they are. In
+  "Firefox Suggest" only "Firefox" is the brand: "Suggest" may be
+  translated, as the en-US definition of the term says.
 - **Grammar, agreement, spelling, accents** — real errors, not preferences.
 - **Terminology inconsistency** — the same source term rendered differently
-  on the same screen, when one of them is clearly wrong.
+  on the same screen, when one of them is clearly wrong. Two renderings that are
+  both correct are not a defect, and aligning one with the other is not a
+  fix.
 - **Register** — a violation of the locale's established form of address.
 - **Typography** — only where it deviates from the conventions below.
 - **Length** — only when the developer comment sets a limit or says the text
@@ -160,6 +164,9 @@ two words.
   a passive turned active, an idiom in place of a literal rendering, one
   sentence split into two. Report it only when the {language} lands on a
   different fact, not merely a different wording.
+- **Final punctuation that differs from the en-US** — a period, colon or
+  exclamation mark added or dropped at the end of a label, link, title or
+  short fragment. Each language decides that for itself.
 - **Anything the conventions section below marks as correct.**
 
 ## iOS-specific context

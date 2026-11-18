@@ -265,9 +265,13 @@
    "source": "Last updated: { $date }",
    "original": "Last updated: { DATETIME($date, day: \"numeric\", hour: \"numeric\", hour12: \"false\", minute: \"numeric\", month: \"numeric\", second: \"numeric\", year: \"numeric\") }",
    "text": "Lêst bywurke: { DATETIME($date, day: \"numeric\", hour: \"numeric\", hour12: \"false\", minute: \"numeric\", month: \"numeric\", second: \"numeric\", year: \"numeric\") }",
-   "status": "pending",
+   "status": "approved",
    "status_date": "2026-11-05",
-   "comment": ""
+   "comment": "",
+   "pontoon_pk": 8530592,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/aboutUnloads.ftl/?string=231461",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-05",
@@ -1463,13 +1467,13 @@
    "source": "Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.",
    "original": "Tank foar it brûken fan { -brand-short-name }, de iennige browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet  foar elkenien feiliger en mear tagonklik te meitsjen.",
    "text": "Tank foar it brûken fan { -brand-short-name }, de iennige browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet foar elkenien feiliger en mear tagonklik te meitsjen.",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12388071,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/newtab/onboarding.ftl/?string=329397",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -1553,13 +1557,13 @@
    "source": "title: Page Info — { $website }",
    "original": "Sydeynfo - { $website }",
    "text": "Sydeynfo – { $website }",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12388072,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/pageInfo.ftl/?string=195967",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -2666,13 +2670,13 @@
    "source": "<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.",
    "original": "<strong>{ $property }</strong> wurdt net stipe yn de folgjende browsers <strong>@position-try</strong>-regels:",
    "text": "<strong>{ $property }</strong> wurdt net stipe yn de folgjende browsers <strong>@position-try</strong>-regels.",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12388097,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/devtools/client/tooltips.ftl/?string=327742",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -3056,13 +3060,13 @@
    "source": "The certificate backup password you set here protects the backup file that you are about to create. You must set this password to proceed with the backup.",
    "original": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reserverkopybestân dat jo op it punt stean te meitsjen.  Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
    "text": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reserverkopybestân dat jo op it punt stean te meitsjen. Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12388102,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=207812",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -3206,13 +3210,13 @@
    "source": "title: Official extension built by Mozilla. Meets security and performance standards",
    "original": "Offisjele troch Mozilla Firefox boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen.",
    "text": "Offisjele troch Mozilla Firefox boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen",
-   "status": "approved",
-   "status_date": "2026-11-05",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12388108,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=315274",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-05",
@@ -6220,13 +6224,13 @@
    "source": "description: Sites use trackers to follow you online and show creepy ads. { -brand-short-name } shields you as you browse, blocking most trackers automatically so you’re in control of your digital trail.\nlabel: Advanced settings",
    "original": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
    "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-16",
    "comment": "",
    "pontoon_pk": 12391599,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330918",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-06",
@@ -9192,9 +9196,13 @@
    "source": "{$popupCount ->} [0] { -brand-short-name } prevented this site from redirecting. [1] { -brand-short-name } prevented this site from opening a pop-up window and redirecting. [other] { -brand-short-name } prevented this site from opening { $popupCount } pop-up windows and redirecting.",
    "original": "{ -brand-short-name } hat opkeard dat dizze website { $popupCount } pop-upfinsters iepene en trochstjoerde.",
    "text": "{ -brand-short-name } hat opkeard dat dizze website { $popupCount } pop-upfinsters iepene en trochstjoerde.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409075,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/browser.ftl/?string=323373",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9220,9 +9228,13 @@
    "text": "Sykjen mei trefwurden is útskeakele",
    "full_original": ".title = Sykje nei trefwurden is útskeakele",
    "full_text": ".title = Sykjen mei trefwurden is útskeakele",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409074,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/browser.ftl/?string=332821",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9246,9 +9258,13 @@
    "source": "{$total ->} [1] This will remove your password saved to { -brand-short-name } and any breach alerts. You cannot undo this action. [other] This will remove the passwords saved to { -brand-short-name } and any breach alerts. You cannot undo this action.",
    "original": "Dit smyt de wachtwurden dy’t bewarre binne yn { -brand-short-name } en alle warskôgingen oer datalekken fuort. Jo kinne dizze aksje net ûngedien meitsje.",
    "text": "Dit smyt de wachtwurden dy’t bewarre binne yn { -brand-short-name } en alle warskôgingen oer datalekken fuort. Jo kinne dizze aksje net ûngedien meitsje.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409076,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/contextual-manager.ftl/?string=316692",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9272,9 +9288,13 @@
    "source": "The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.",
    "original": "De download wurdt oanbean fia HTTP, ek al is it aktuele dokumint levere fia in befeilige HTTPS-ferbining. As jo trochgean, kin de download skansearre of manipulearre wurde wylst it downloadproses.",
    "text": "De download wurdt oanbean fia HTTP, ek al is it aktuele dokumint levere fia in befeilige HTTPS-ferbining. As jo trochgean, kin de download skansearre of manipulearre wurde tidens it downloadproses.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409077,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/downloads.ftl/?string=343612",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9298,9 +9318,13 @@
    "source": "This layout makes it easy to quickly scan your list of tabs. Plus, you can adjust the width to see more or less of your tab titles.",
    "original": "Dizze yndieling makket it maklik om jo list mei ljeppers fluch te scannen. Plus, jo kinne de breedte oanpasse om mear of minder fan jo ljepblêdtitels te sjen.",
    "text": "Dizze yndieling makket it maklik om jo list mei ljepblêden fluch te scannen. Plus, jo kinne de breedte oanpasse om mear of minder fan jo ljepblêdtitels te sjen.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409078,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/featureCallout.ftl/?string=316033",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9326,9 +9350,13 @@
    "text": "F",
    "full_original": ".accesskey = F\n.label = Fragen…",
    "full_text": ".accesskey = F\n.label = Freegje…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409080,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/genai.ftl/?string=335880",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9354,9 +9382,13 @@
    "text": "Omdat de side lang is, is dit in dielgearfetting.",
    "full_original": ".message = Omdat de side lang is, is dit foar in part de gearfetting.",
    "full_text": ".message = Omdat de side lang is, is dit in dielgearfetting.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409081,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/genai.ftl/?string=322643",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9382,9 +9414,13 @@
    "text": "Proeflêze",
    "full_original": ".label = Proeflêze\n.value = Proeflês de seleksje op stavering- en grammatikale flaters. Identifisearje flaters en bied in korrizjearre ferzje fan de tekst. Behâld de betsjutting en feitlike krekten en leverje earst de list mei foarstelde korreksjes, folge troch de úteinlik korrizjearre ferzje fan de tekst.",
    "full_text": ".label = Proeflêze\n.value = Proeflês de seleksje op stavering- en grammatikale flaters. Identifisearje flaters en bied in korrizjearre ferzje fan de tekst. Behâld de betsjutting en feitlike krektens en leverje earst de list mei foarstelde korreksjes, folge troch de úteinlik korrizjearre ferzje fan de tekst.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409079,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/genai.ftl/?string=313921",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9410,9 +9446,13 @@
    "text": "Bring beskerming fierder mei { -mozilla-vpn-brand-name }",
    "full_original": ".heading = Bring beskerming fierder mei { -mozilla-vpn-brand-name }\n.message = Kies út mear as300 lokaasjes en beskermje al jo apps op maksimaal fiif apparaten",
    "full_text": ".heading = Bring beskerming fierder mei { -mozilla-vpn-brand-name }\n.message = Kies út mear as 300 lokaasjes en beskermje al jo apps op maksimaal fiif apparaten",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409082,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/ipProtection.ftl/?string=333093",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9438,9 +9478,13 @@
    "text": "Jo naderje jo VPN-limyt",
    "full_original": ".heading = Jo naderje jo VPN-limyt\n.message = Jo hawwe noch { $usageLeft } GB fan { $maxUsage } GB oer dizze moanne",
    "full_text": ".heading = Jo naderje jo VPN-limyt\n.message = Jo hawwe noch { $usageLeft } GB fan { $maxUsage } GB oer dizze moanne.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409083,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/ipProtection.ftl/?string=329444",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9466,9 +9510,13 @@
    "text": "k",
    "full_original": ".accesskey = k\n.label = Ideeën en kommentaar diele",
    "full_text": ".accesskey = k\n.label = Ideeën en kommentaar diele…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409084,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/menubar.ftl/?string=242902",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9492,9 +9540,13 @@
    "source": "autofill data",
    "original": "gegevens automatysk ynfolje",
    "text": "gegevens foar automatysk ynfoljen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409085,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/migrationWizard.ftl/?string=278387",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9518,9 +9570,13 @@
    "source": "{$count ->} [one] You’ve been protected { $count } day in a row. [other] You’ve been protected { $count } days in a row.",
    "original": "Jo binne { $count } dagen op rige beskerme.",
    "text": "Jo binne { $count } dagen op rige beskerme.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409086,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/newtab/newtab.ftl/?string=336825",
+   "outcome": "adopted",
+   "note": "rejected, but the repository now has this text, through another submission"
   },
   {
    "date": "2026-11-13",
@@ -9544,9 +9600,13 @@
    "source": "{$limit ->} [one] You can add up to { $limit } stock. Remove one to add another. [other] You can add up to { $limit } stocks. Remove one to add another.",
    "original": "Jo kinne maksimaal { $limit } oandielen tafoegje. Ferwiderje ien om in oare ta te foegjen.",
    "text": "Jo kinne maksimaal { $limit } oandielen tafoegje. Smyt ien fuort om in oare ta te foegjen.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409087,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/newtab/newtab.ftl/?string=339280",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9570,9 +9630,13 @@
    "source": "Thank you for using { -brand-short-name }, the only major browser backed by a non-profit. With your support, we’re working to make the internet safer and more accessible for everyone.",
    "original": "Tank foar it brûken fan { -brand-short-name }, de iennige browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet foar elkenien feiliger en mear tagonklik te meitsjen.",
    "text": "Tank foar it brûken fan { -brand-short-name }, de iennige grutte browser dy’t stipe wurdt troch in non-profitorganisaasje. Mei jo stipe wurkje wy om it ynternet foar elkenien feiliger en mear tagonklik te meitsjen.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409088,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/newtab/onboarding.ftl/?string=329397",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9598,9 +9662,13 @@
    "text": "Side-ynfo – { $website }",
    "full_original": ".title = Sydeynfo – { $website }",
    "full_text": ".title = Side-ynfo – { $website }",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409089,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/pageInfo.ftl/?string=195967",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9624,9 +9692,13 @@
    "source": "Configures a list of bookmarks managed by an administrator that cannot be changed by the user.",
    "original": "Konfigurearret in list mei blêdwizers dy’t beheard wurde troch in behearder en dy’t net troch de brûker wizige wurde kin.",
    "text": "Konfigurearret in list mei blêdwizers dy’t beheard wurde troch in behearder en dy’t net troch de brûker wizige wurde kinne.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409090,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/policies/policies-descriptions.ftl/?string=215074",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9652,9 +9724,13 @@
    "text": "i",
    "full_original": ".accesskey = i\n.label = Freegje net om autentikaasje as wachtwurd bewarre is\n.tooltiptext = Dizze opsje autentisearret jo automatisysk by proxies as jo derfaor bewarre gegevens hawwe. Jo sille frege wurde as autentikaasje mislearret.",
    "full_text": ".accesskey = i\n.label = Freegje net om autentikaasje as wachtwurd bewarre is\n.tooltiptext = Dizze opsje autentisearret jo automatysk by proxies as jo derfoar bewarre gegevens hawwe. Jo sille frege wurde as autentikaasje mislearret.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409091,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/connection.ftl/?string=281356",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9680,9 +9756,13 @@
    "text": "t",
    "full_original": ".accesskey = t\n.label = Brûk de tab-toets om de fokus te ferpleatsen tusken formulierbesjoeringseleminten en keppelingen",
    "full_text": ".accesskey = t\n.label = Brûk de tab-toets om de fokus te ferpleatsen tusken formulierbestjoeringseleminten en keppelingen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409095,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=282148",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9706,9 +9786,13 @@
    "source": "Choose your preferred language for displaying pages",
    "original": "Talen kieze dêr’t websites yn werjûn wurde moatte.",
    "text": "Talen kieze dêr’t websites yn werjûn wurde moatte",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409092,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=176273",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9734,9 +9818,13 @@
    "text": "d",
    "full_original": ".accesskey = d\n.description = Dit helpt { -vendor-short-name } om aktive brûkers te skatten.\n.label = Ping foar deistich gebrûk nei { -vendor-short-name } ferstjoerd",
    "full_text": ".accesskey = d\n.description = Dit helpt { -vendor-short-name } om aktive brûkers te skatten.\n.label = Ping foar deistich gebrûk nei { -vendor-short-name } ferstjoere",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409099,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=331788",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9762,9 +9850,13 @@
    "text": "F",
    "full_original": ".accesskey = F\n.label = Freegje wêr’t bestannen bewarre moatte wurde foar it downloaden.",
    "full_text": ".accesskey = F\n.label = Freegje wêr’t bestannen bewarre moatte wurde foar it downloaden",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409094,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=333954",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9790,9 +9882,13 @@
    "text": "a",
    "full_original": ".accesskey = a\n.label = Haadwachtwurd wizigje",
    "full_text": ".accesskey = a\n.label = Haadwachtwurd wizigje…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 5370779,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=177590",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-13",
@@ -9818,9 +9914,13 @@
    "text": "s",
    "full_original": ".accesskey = s\n.label = Utsûndering beheare…",
    "full_text": ".accesskey = s\n.label = Utsûnderingen beheare…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409100,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=278598",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9846,9 +9946,13 @@
    "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t de measte trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
    "full_original": ".description = Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.\n.label = Avansearre ynstellingen",
    "full_text": ".description = Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t de measte trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.\n.label = Avansearre ynstellingen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409102,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330918",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9876,9 +9980,13 @@
    "text": "Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst jo sneupe, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.",
    "full_original": ".description = Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst it sneupen, wêrby’t de measte trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.\n.label = Ferbettere beskerming tsjin folgjen",
    "full_text": ".description = Websites brûke trackers om jo online te folgjen en aaklike advertinsjes te toanen. { -brand-short-name } skermet jo ôf wylst jo sneupe, wêrby’t trackers automatysk blokkearre wurde, sadat jo de kontrôle hawwe oer jo digitale spoar.\n.label = Ferbettere beskerming tsjin folgjen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409101,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330911",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9904,9 +10012,13 @@
    "text": "Sykfoarstellen wurde net yn lokaasjebalkeresultaten toand, omdat jo { -brand-short-name } konfigurearre hawwe om nea skiednis te ûnthâlden.",
    "full_original": ".message = Sykfoarstellen wurde net yn lokaasjebalkresultaten toand, omdat jo { -brand-short-name } konfigurearre hawwe om nea skiednis te ûnthâlden.",
    "full_text": ".message = Sykfoarstellen wurde net yn lokaasjebalkeresultaten toand, omdat jo { -brand-short-name } konfigurearre hawwe om nea skiednis te ûnthâlden.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409096,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=327715",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9932,9 +10044,13 @@
    "text": "DNS oer HTTPS ferstoppet foar jo ynternetoanbieder hokker websites jo besykje.",
    "full_original": ".description = DNS oer HTTPS ferstoppet foar jo netwurkbehearder hokker websites jo besykje.\n.label = DNS oer HTTPS is útskeakele",
    "full_text": ".description = DNS oer HTTPS ferstoppet foar jo ynternetoanbieder hokker websites jo besykje.\n.label = DNS oer HTTPS is útskeakele",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409103,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330945",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9960,9 +10076,13 @@
    "text": "Encrypted Client Hello ferstoppet foar jo ynternetoanbieder hokker websites jo besykje.",
    "full_original": ".description = Encrypted Client Hello ferstoppet foar jo netwurkbehearder hokker websites jo besykje.\n.label = Encrypted Client Hello is útskeakele",
    "full_text": ".description = Encrypted Client Hello ferstoppet foar jo ynternetoanbieder hokker websites jo besykje.\n.label = Encrypted Client Hello is útskeakele",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409104,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330946",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -9988,9 +10108,13 @@
    "text": "g",
    "full_original": ".accesskey = g\n.description = Kies hoe spesifike websites omgean mei cookies en websitegegevens.\n.label = Utsûnderingen beheare",
    "full_text": ".accesskey = g\n.description = Kies hoe’t spesifike websites omgean mei cookies en websitegegevens.\n.label = Utsûnderingen beheare",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409097,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330865",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10016,9 +10140,13 @@
    "text": "Staveringshifker brûke",
    "full_original": ".heading = Staveringshifker brûke\n.message = Klik mei jo rjochtermûsknop op in tekstfjild om staveringshifkjen yn of út te skeakeljen of om de taal te wizigjen. Net alle fjilden stypje staveringhifkjen.",
    "full_text": ".heading = Staveringshifker brûke\n.message = Klik mei jo rjochtermûsknop op in tekstfjild om staveringshifkjen yn of út te skeakeljen of om de taal te wizigjen. Net alle fjilden stypje staveringshifkjen.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409093,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=330845",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10044,9 +10172,13 @@
    "text": "U",
    "full_original": ".accesskey = U\n.label = Utsûndering beheare…",
    "full_text": ".accesskey = U\n.label = Utsûnderingen beheare…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409098,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/preferences/preferences.ftl/?string=192898",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10072,9 +10204,14 @@
    "text": "Dwaande mei wiskjen",
    "full_original": ".label = Wiskje",
    "full_text": ".label = Dwaande mei wiskjen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "sanitize-button-clearing @ browser/browser/sanitize.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409105,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/sanitize.ftl/?string=192601",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -10100,9 +10237,13 @@
    "text": "s",
    "full_original": ".accesskey = s\n.label = { $tabCount } ljepblêden sluten",
    "full_text": ".accesskey = s\n.label = { $tabCount } ljepblêden slute",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409106,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/tabContextMenu.ftl/?string=228613",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10126,9 +10267,13 @@
    "source": "Playing audio",
    "original": "Lûd ôfspylje",
    "text": "Lûd wurdt ôfspile",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409108,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/browser/browser/tabbrowser.ftl/?string=279382",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10154,9 +10299,13 @@
    "text": "Y",
    "full_original": ".accesskey = Y\n.tooltiptext = Ymportearje en pas ta op in besteand stylblêd op it dokumint",
    "full_text": ".accesskey = Y\n.tooltiptext = Ymportearje in besteand stylblêd en pas it ta op it dokumint",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409110,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/devtools/client/styleeditor.ftl/?string=208093",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10182,9 +10331,13 @@
    "text": "N",
    "full_original": ".accesskey = N\n.tooltiptext = Meitsje en pas in nije stylblêd ta op it dokumint",
    "full_text": ".accesskey = N\n.tooltiptext = Meitsje en pas in nij stylblêd ta op it dokumint",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409109,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/devtools/client/styleeditor.ftl/?string=208097",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10208,9 +10361,13 @@
    "source": "<strong>{ $property }</strong> is not supported in <strong>@position-try</strong> rules.",
    "original": "<strong>{ $property }</strong> wurdt net stipe yn de folgjende browsers <strong>@position-try</strong>-regels.",
    "text": "<strong>{ $property }</strong> wurdt net stipe yn <strong>@position-try</strong>-regels.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409111,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/devtools/client/tooltips.ftl/?string=327742",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10234,9 +10391,13 @@
    "source": ":block URL_STRING\n\nStart blocking network requests\n\n  It accepts only one URL_STRING argument, an unquoted string which will be used to block all requests whose URL includes this string.\n  Use :unblock or the Network Monitor request blocking sidebar to undo this.",
    "original": ":block URL_STRING\n\nBegjinne mei it blokkearje fan netwurkoanfragen\n\n  Akseptearret mar ien argumint URLSTRING, in tekenreeks sûnder oanhellingstekens dy’t brûkt wurde sil om alle oanfragen wêrfan de URL dizze tekenreeks befettet te blokkearjen.\n  Brûk :unblock of de oanfraachblokkearingssydbalke fan Netwurkmonitor om dit ûngedien te meitsjen.",
    "text": ":block URL_STRING\n\nBegjinne mei it blokkearje fan netwurkoanfragen\n\n  Akseptearret mar ien argumint URL_STRING, in tekenreeks sûnder oanhellingstekens dy’t brûkt wurde sil om alle oanfragen wêrfan de URL dizze tekenreeks befettet te blokkearjen.\n  Brûk :unblock of de oanfraachblokkearingssydbalke fan Netwurkmonitor om dit ûngedien te meitsjen.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409112,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/devtools/shared/webconsole-commands.ftl/?string=291062",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10260,9 +10421,13 @@
    "source": "The scope URL must be same origin as document.",
    "original": "De beryk-URL moat deselfe oarsprong hawwe as it dokumint.",
    "text": "De beryk-URL moat deselde oarsprong hawwe as it dokumint.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409113,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/dom/dom/manifest.ftl/?string=344106",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10286,9 +10451,13 @@
    "source": "Issuer’s Certificate Revocation List has an unknown version number.",
    "original": "Sertifikaateerroppingslist fan útjouwer hat in ûnbekend ferzjenûmer.",
    "text": "Sertifikaatwerroppingslist fan útjouwer hat in ûnbekend ferzjenûmer.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409115,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/chrome/pipnss/nsserrors.properties/?string=71096",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10312,9 +10481,13 @@
    "source": "Unable to change password.",
    "original": "Kin haadwachtwurd net wizigje.",
    "text": "Kin wachtwurd net wizigje.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409116,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=213659",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10338,9 +10511,13 @@
    "source": "You did not enter the correct current password. Please try again.",
    "original": "Jo ha net it korrekte haadwachtwurd ynfierd. Probearje it opnij.",
    "text": "Jo ha net it korrekte aktuele wachtwurd ynfierd. Probearje it opnij.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409117,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=213654",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10364,9 +10541,13 @@
    "source": "You are currently in FIPS mode. FIPS requires a non-empty password.",
    "original": "Jo binne no yn FIPS-modus. FIPS fereasket dat it haadwachtwurd net leech is.",
    "text": "Jo binne no yn FIPS-modus. FIPS fereasket dat it wachtwurd net leech is.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409120,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=213651",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10390,9 +10571,13 @@
    "source": "You have deleted your password. { pippki-pw-empty-warning }",
    "original": "Jo hawwe jo haadwachtwurd fuortsmiten. { pippki-pw-empty-warning }",
    "text": "Jo hawwe jo wachtwurd fuortsmiten. { pippki-pw-empty-warning }",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409118,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=213682",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10416,9 +10601,13 @@
    "source": "Warning! You have decided not to use a password. { pippki-pw-empty-warning }",
    "original": "Warskôging! Jo ha besletten gjin haadwachtwurd te brûken. { pippki-pw-empty-warning }",
    "text": "Warskôging! Jo ha besletten gjin wachtwurd te brûken. { pippki-pw-empty-warning }",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409119,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=213689",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10442,9 +10631,13 @@
    "source": "The certificate backup password you set here protects the backup file that you are about to create. You must set this password to proceed with the backup.",
    "original": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reserverkopybestân dat jo op it punt stean te meitsjen. Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
    "text": "It wachtwurd foar de reservekopy fan it sertifikaat dat jo hjir ynstelle beskermt it reservekopybestân dat jo op it punt stean te meitsjen. Jo moatte dit wachtwurd ynstelle foardat jo fierder gean mei de reservekopy.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409121,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/security/manager/security/pippki/pippki.ftl/?string=207812",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10470,9 +10663,13 @@
    "text": "Offisjele troch Mozilla boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen",
    "full_original": ".title = Offisjele troch Mozilla Firefox boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen",
    "full_text": ".title = Offisjele troch Mozilla boude útwreiding. Foldocht oan befeiligings- en prestaasjenoarmen",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409123,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=315274",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10498,9 +10695,13 @@
    "text": "F",
    "full_original": ".accesskey = F\n.label = Foarkarren\n.tooltiptext = Foarkarren fan dizze add-ons wizigje",
    "full_text": ".accesskey = F\n.label = Foarkarren\n.tooltiptext = Foarkarren fan dizze add-on wizigje",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409122,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutAddons.ftl/?string=192094",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10524,9 +10725,13 @@
    "source": "To browse debug tags, see full pings, see a live event stream, or view metric\nvisualizations, please consult the\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a>.",
    "original": "Besjoch om troch debuglabels te blêdzjen, folsleine pings te besjen, in live-barresstream te besjen of statistyk-\nfisualisaasjes te besjen de\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a>.",
    "text": "Besjoch om troch debuglabels te blêdzjen, folsleine pings te besjen, in live-barrensstream te besjen of statistyk-\nfisualisaasjes te besjen de\n<a data-l10n-name=\"glean-debug-ping-viewer\">{ glean-debug-ping-viewer-brand-name }</a>.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409125,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutGlean.ftl/?string=313849",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10550,9 +10755,13 @@
    "source": "To browse the list of data collected by { -glean-brand-name } per application, please consult the\n<a data-l10n-name=\"glean-dictionary-link\">{ -glean-brand-name } Dictionary</a>.",
    "original": "Besjoch, om troch de list mei troch { -glean-brand-name } sammele gegevens per tapassing te blêdzjen, de\n<a data-l10n-name=\"glean-dictionary-link\">{ -glean-brand-name }-biblioteek</a>.",
    "text": "Besjoch, om troch de list mei troch { -glean-brand-name } sammele gegevens per tapassing te blêdzjen, de\n<a data-l10n-name=\"glean-dictionary-link\">{ -glean-brand-name }-wurdboek</a>.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409124,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutGlean.ftl/?string=313844",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-13",
@@ -10576,9 +10785,13 @@
    "source": "Hide empty value rows",
    "original": "Regels mei lege wearden ferstopje",
    "text": "Rigen mei lege wearden ferstopje",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409126,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutGlean.ftl/?string=325012",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10602,9 +10815,13 @@
    "source": "Rate",
    "original": "Wurdearrring",
    "text": "Frekwinsje",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409130,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=194018",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10628,9 +10845,13 @@
    "source": "Size (KiB)",
    "original": "Grutte (KB)",
    "text": "Grutte (KiB)",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409127,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=263105",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10654,9 +10875,13 @@
    "source": "Reset on Next Restart",
    "original": "Opnij ynstelle nij werstart",
    "text": "Opnij ynstelle by de folgjende werstart",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409131,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=193889",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10680,9 +10905,13 @@
    "source": "Roundtrip latency (standard deviation)",
    "original": "Retinsjelatinsje (standertdeviaasje)",
    "text": "Retoerlatinsje (standertdeviaasje)",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409129,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=211053",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10706,9 +10935,13 @@
    "source": "Preferred Sample Rate",
    "original": "Oanrekommandearre foarbyldfrekwinsje",
    "text": "Oanrekommandearre samplefrekwinsje",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409128,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutSupport.ftl/?string=193951",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10732,9 +10965,13 @@
    "source": "Current Store:",
    "original": "Aktuele winkel:",
    "text": "Aktuele opslach:",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409132,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutTelemetry.ftl/?string=198604",
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-13",
@@ -10758,9 +10995,13 @@
    "source": "{$sampleCount ->} [one] { $sampleCount } sample, average = { $prettyAverage }, sum = { $sum } [other] { $sampleCount } samples, average = { $prettyAverage }, sum = { $sum }",
    "original": "{ $sampleCount } foarbylden, gemiddelde = { $prettyAverage }, som = { $sum }",
    "text": "{ $sampleCount } stekproeven, gemiddelde = { $prettyAverage }, som = { $sum }",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409134,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutTelemetry.ftl/?string=197677",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10784,9 +11025,13 @@
    "source": "Late Writes",
    "original": "Lêste add-ons",
    "text": "Lette skriuwaksjes",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409133,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutTelemetry.ftl/?string=197614",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10810,9 +11055,13 @@
    "source": "Memory map:",
    "original": "Unthâldtawizing:",
    "text": "Unthâldkaart:",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409135,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutTelemetry.ftl/?string=197662",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10836,9 +11085,13 @@
    "source": "This page shows the third-party modules which were injected into your\n{ -brand-short-name }. Any module that is not signed by Microsoft or\n{ -vendor-short-name } is considered to be a third-party module.",
    "original": "Dizze side toant de modulen fan tredden dy’t yn jo { -brand-short-name }\nynboud binne. Elke module dy’t net troch Microsoft of { -vendor-short-name }\nûndertekene is, wurdt beskôge as module fan tredden.",
    "text": "Dizze side toant de modulen fan tredden dy’t yn jo { -brand-short-name }\nynjektearre binne. Elke module dy’t net troch Microsoft of { -vendor-short-name }\nûndertekene is, wurdt beskôge as module fan tredden.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409136,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutThirdParty.ftl/?string=224208",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10864,9 +11117,13 @@
    "text": "Deblokkearje dizze funksje om tekst oer te setten",
    "full_original": ".heading = Deblokkearje dizze funksje om tekst oer te setten\n.message = It liket derop dat jo AI-betsjinningseleminten bywurke hawwe om dizze funksje te blokkearjen. Deblokkearje de funksje op elk winske momint om dizze brûken te gean.",
    "full_text": ".heading = Deblokkearje dizze funksje om tekst oer te setten\n.message = It liket derop dat jo AI-betsjinningseleminten bywurke hawwe om dizze funksje te blokkearjen. Deblokkearje de funksje op elk winske momint om dizze brûke te gean.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409137,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/aboutTranslations.ftl/?string=331259",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10890,9 +11147,14 @@
    "source": "Extended Key Usages",
    "original": "Wiidweidige brûksmooglikheden",
    "text": "Utwreide kaaibrûksmooglikheden",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "certificate-viewer-extended-key-usages @ toolkit/toolkit/about/certviewer.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409139,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/certviewer.ftl/?string=204053",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -10916,9 +11178,14 @@
    "source": "Key Usages",
    "original": "Wichtichste brûksmooglikheden",
    "text": "Kaaibrûksmooglikheden",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "certificate-viewer-key-usages @ toolkit/toolkit/about/certviewer.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409138,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/about/certviewer.ftl/?string=204036",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -10942,9 +11209,13 @@
    "source": "{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-short-name }? [other other] Stop { $downloadsCount } downloads and quit { -brand-short-name }?",
    "original": "{ $downloadsCount } downloads stopje en { -brand-short-name } ôfslute?",
    "text": "{ $downloadsCount } downloads stopje en { -brand-short-name } ôfslute?",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409140,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/downloads/downloadUI.ftl/?string=344090",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   },
   {
    "date": "2026-11-13",
@@ -10968,9 +11239,14 @@
    "source": "No slot or token was selected.",
    "original": "Gjin leech plak of token selektearre.",
    "text": "Gjin slot of token selektearre.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "sec-error-no-slot-selected @ toolkit/toolkit/neterror/nsserrors.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409142,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=262003",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -10994,9 +11270,13 @@
    "source": "Peer’s certificate issuer has been marked as not trusted by the user.",
    "original": "Sertifikaatútjouwer fan peer is oanmerke as net fertroud troch de brûker.",
    "text": "Sertifikaatútjouwer fan peer is oanmerkt as net fertroud troch de brûker.",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 12409141,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox/toolkit/toolkit/neterror/nsserrors.ftl/?string=261901",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
   }
  ]
 }

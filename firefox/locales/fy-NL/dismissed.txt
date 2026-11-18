@@ -138,3 +138,7 @@ sec-error-no-key @ toolkit/toolkit/neterror/nsserrors.ftl — auto-suggest (2026
 sec-error-not-a-recipient @ toolkit/toolkit/neterror/nsserrors.ftl — auto-suggest (2026-11-13, string 5b904c66): unreliable finding: The compound spelling of 'privee' + 'kaai' could not be checked against established fy-NL usage, so the change cannot be confirmed.
 printui-orientation-control @ toolkit/toolkit/printing/printUI.ftl — auto-suggest (2026-11-13, string edc65f9f): Frisian regularly writes Dutch '-ent' as '-int' (studint, presidint), so 'Oriïntaasje' is the correct Frisian spelling, not a misspelling of Dutch 'Oriëntatie'.
 webauthn-pin-not-set-prompt @ toolkit/toolkit/webauthnDialog.ftl — auto-suggest (2026-11-13, string 79d900d3): unreliable finding: Whether to use the linking 's' in this compound is a matter of style, and nothing shows 'Brûkerferifikaasje' is wrong.
+sanitize-button-clearing @ browser/browser/sanitize.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear
+certificate-viewer-extended-key-usages @ toolkit/toolkit/about/certviewer.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear
+certificate-viewer-key-usages @ toolkit/toolkit/about/certviewer.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear
+sec-error-no-slot-selected @ toolkit/toolkit/neterror/nsserrors.ftl — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear

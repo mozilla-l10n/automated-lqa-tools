@@ -727,10 +727,21 @@ def check_ui_references(locale, l10n, source, context_l10n=None,
     context_l10n = context_l10n or {}
     context_source = context_source or {}
     by_value: dict[str, list] = {}
+    # Attributes are candidates too, though never compared: a Fluent button
+    # is usually a `.label`. Left out, "Restore your data" looked like it
+    # could only name a heading with that value, and sl and de were told
+    # to match the heading while the two buttons said otherwise.
+    on_attribute: set = set()
     for key, msg in {**context_source, **source}.items():
-        value = msg.text().strip()
-        if _is_label(value) and len(value) <= 40:
-            by_value.setdefault(value.casefold(), []).append(key)
+        for prop, text in msg.props.items():
+            value = (text if prop else msg.text()).strip()
+            if not (_is_label(value) and len(value) <= 40):
+                continue
+            keys = by_value.setdefault(value.casefold(), [])
+            if key not in keys:
+                keys.append(key)
+            if prop:
+                on_attribute.add((value.casefold(), key))
 
     out = []
     seen: set = set()
@@ -745,6 +756,8 @@ def check_ui_references(locale, l10n, source, context_l10n=None,
             target = _nearest(key, candidates) if candidates else None
             if target is None:
                 continue  # nothing to point at, or too ambiguous to judge
+            if (fragment.strip().casefold(), target) in on_attribute:
+                continue  # it names an attribute, which is not compared
             targets = [target]
             referenced = l10n.get(target) or context_l10n.get(target)
             if referenced is None:

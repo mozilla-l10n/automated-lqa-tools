@@ -2341,9 +2341,13 @@
    "source": "Clear recent browsing history, cookies, and related data",
    "original": "Resinte browserskiednis, cookies en relatearre gegevens wiskje",
    "text": "Resinte sneupskiednis, cookies en relatearre gegevens wiskje",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "pontoon_pk": 6946739,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/android-components/components/feature/addons/src/main/res/values/strings.xml/?string=206790",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-13",
@@ -2367,9 +2371,14 @@
    "source": "Street Address",
    "original": "Adres",
    "text": "Strjitadres",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "addresses_street_address @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409145,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=243980",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -2393,9 +2402,14 @@
    "source": "Close custom tab menu sheet",
    "original": "Menublêd Ljepblêd oanpasse slute",
    "text": "Menublêd fan oanpast ljepblêd slute",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "browser_custom_tab_menu_handlebar_content_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
+   "pontoon_pk": 12409144,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=311096",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   },
   {
    "date": "2026-11-13",
@@ -2419,9 +2433,14 @@
    "source": "Translating",
    "original": "Oersette",
    "text": "Oersette…",
-   "status": "pending",
-   "status_date": "2026-11-13",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-16",
+   "comment": "",
+   "dismissal": "translations_bottom_sheet_translating_in_progress @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; likely reason (inferred): The suggestion only added an ellipsis that isn't in the English source and kept the same infinitive \"Oersette\", so it didn't fix the problem the finding raised.",
+   "pontoon_pk": 12409146,
+   "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=292275",
+   "outcome": "dismissed",
+   "note": "rejected with the translation unchanged; dismissed"
   }
  ]
 }

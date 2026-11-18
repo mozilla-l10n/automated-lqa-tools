@@ -351,6 +351,26 @@ def run(suite) -> None:
     found = _cc.check_ui_references("it", ctx_loc, ctx_src, loc, src)
     check(not found, "a context string is never the one a finding is raised on")
 
+    # sl and de rejected this in Pontoon, 2026-11: en-US backupSettings.ftl
+    # has "Restore your data" as a heading's value and as two buttons'
+    # `.label`, and the step quoting it means a button.
+    ftl = "browser/backupSettings.ftl"
+    step = (ftl, "backup-file-step")
+    head = (ftl, "restore-from-backup-header")
+    src = {step: _m(ftl, "backup-file-step", "Click “Restore your data”"),
+           head: _m(ftl, "restore-from-backup-header", "Restore your data")}
+    loc = {step: _m(ftl, "backup-file-step", "Kliknite “Obnovi podatke”"),
+           head: _m(ftl, "restore-from-backup-header", "Obnovite podatke")}
+    check([f.string_id for f in _cc.check_ui_references("sl", loc, src)] == ["backup-file-step"],
+          "a quote matching one value is paired with it")
+    button = (ftl, "restore-scheduled")
+    src[button] = Msg(file=ftl, id="restore-scheduled",
+                      props={"": "", "label": "Restore your data"})
+    loc[button] = Msg(file=ftl, id="restore-scheduled",
+                      props={"": "", "label": "Obnovi podatke"})
+    check(not _cc.check_ui_references("sl", loc, src),
+          "but not when an attribute reads the same: the quote may name it")
+
     from layout import Trees
     t = Trees(l10n={(own, "a"): _m(own, "a", "uno")},
               context_conventions={(ac, "b"): _m(ac, "b", "due")})
@@ -519,6 +539,18 @@ def run(suite) -> None:
         check(why == "merging failed: other", "any other merge failure is final")
     finally:
         digest.merge = real_merge
+
+    suite.section("The fixer sends nothing a Pontoon reviewer cannot see")
+    import suggest as _suggest
+    # zh-TW, 2026-11: rejected with "no difference from approved string?".
+    check(_suggest.unseen_only("透​明度", "透明度"),
+          "removing a zero-width space alone is an edit nobody can see")
+    check(not _suggest.unseen_only("透​明度", "透明"),
+          "an edit that also changes visible text is sent")
+    # fa, 2026-10: every ZWNJ edit was approved; it changes the shaping.
+    check(not _suggest.unseen_only("به‌روزرسانی‌", "به‌روزرسانی"),
+          "a ZWNJ edit is visible to a Persian reviewer, and is sent")
+    check(not _suggest.unseen_only("abc", "abc"), "no change is not an unseen change")
 
     suite.section("The fixer closes what it cannot stand behind, and only that")
     # fy-NL, 2026-11-05: "'Ljepblêd oanpasse' may be the localized name for
@@ -763,7 +795,8 @@ def run(suite) -> None:
     import dismiss as dismiss_mod
     import pontoon_review as pr
     import suggest
-    rec = {"file": "a.xml", "string_id": "s", "fids": ["f1"], "status": "pending",
+    rec = {"date": "2026-10-10", "file": "a.xml", "string_id": "s", "fids": ["f1"],
+           "status": "pending",
            "original": "vecchio", "text": "nuovo",
            "pontoon": {"server": "https://p", "project": "fx", "resource": "a.xml",
                        "key": ["s"]}}
@@ -774,7 +807,9 @@ def run(suite) -> None:
         return {"translation_pk": 1, "preview": preview, "value": [preview],
                 "properties": None, "format": "android", "status": status,
                 "date": "2026-10-10T00:00:00Z", "approved_date": None,
+                "unapproved_date": None,
                 "rejected_date": "2026-10-20T00:00:00Z" if status == "rejected" else None,
+                "unrejected_date": None, "restored": False,
                 "entity": entity, "resource": "a.xml", "project": "fx",
                 "locale": "it", "url": "https://p/x", "comments": list(comments)}
 
@@ -786,48 +821,35 @@ def run(suite) -> None:
           "a different suggestion on the same string is not this one")
     # Real cs answers from 2026-10-13: approved in Pontoon, read as pending.
     held = dict(rec, text="Smazáno „%1$s“ <b>teď</b>")
-    mf2 = "Smazáno „{$arg1 :string @source=|%1$s|}“ {|<b>| :html}teď{|</b>| :html}"
     check(pr.match(held, [res("approved", preview="Smazáno „%1$s“ <b>teď</b>")]),
           "the feed's preview matches the text that was sent")
     check(pr.match(held, [res("approved", preview="Smazáno „%2$s“ <b>teď</b>")]) is None,
           "but a different placeholder in it does not")
-    check(suggest.preview_of_api(mf2) == held["text"]
-          and suggest.preview_of_api(mf2.replace("%1$s", "%2$s")) != held["text"],
-          "the action log's raw MF2 reads back into the same form")
     # An upload whose text Pontoon already had: pt-BR, 2026-10-12. Pontoon
-    # revived the older translation rather than storing one by the bot, and
-    # the reviewer rejected that.
-    def act(kind, pk, string, user=31119, implicit=False, when="2026-10-12T08:00:00Z",
-            key=("s",), locale="it"):
-        return {"type": f"translation:{kind}", "is_implicit_action": implicit,
-                "date": when, "user": {"pk": user}, "locale": {"code": locale},
-                "entity": {"key": list(key)}, "resource": {"path": "a.xml"},
-                "translation": {"pk": pk, "string": string}}
-    own = [dict(res("unreviewed"), translation_pk=9, entity="other")]
-    anchor = act("created", 9, "x", key=("other",))
-    revival = act("unrejected", 5, "nuovo")
-    review = act("rejected", 5, "nuovo", user=377, when="2026-10-12T09:00:00Z")
-    got = pr.revived(rec, "it", own, [anchor, revival], [anchor, revival, review])
-    check(got and got["status"] == "rejected" and got["translation_pk"] == 5,
-          "a revived translation's review is the suggestion's answer")
+    # restored the older translation rather than storing one by the bot, and
+    # the reviewer rejected that. Since mozilla/pontoon#4649 the feed lists
+    # it, with its earlier life attached.
+    old = {"author": {"username": "x"}, "date": "2019-03-01T00:00:00Z",
+           "content": "typo"}
+    new = {"author": {"username": "y"}, "date": "2026-10-12T09:00:00Z",
+           "content": "no"}
+    restored = dict(res("rejected", comments=[old, new]), translation_pk=5,
+                    date="2019-02-01T00:00:00Z", restored=True,
+                    unrejected_date="2026-10-11T23:00:00Z",
+                    rejected_date="2026-10-12T09:00:00Z")
+    got = pr.answer(rec, pr.match(rec, [restored]))
+    check(got and pr.comment_text(got) == "y: no",
+          "a restored translation answers, with only the comments made since")
     check(pr.decide(rec, got, "vecchio", {"f1"})["outcome"] == "dismissed",
           "and is decided like any other rejection")
-    check(pr.revived(rec, "it", own, [anchor, revival], [anchor, revival]) is None,
-          "a revival nobody has reviewed yet stays pending")
-    check(pr.revived(rec, "it", own, [anchor, revival],
-                     [anchor, revival, dict(review, is_implicit_action=True)]) is None,
-          "and an implicit rejection -- another translation approved -- is not an answer")
-    check(pr.revived(rec, "it", own, [anchor, act("unrejected", 5, "nuovo", user=8)],
-                     [anchor, review]) is None,
-          "someone else reviving the same text is not the bot's suggestion")
-    check(pr.revived(rec, "it", [], [revival], [revival, review]) is None,
-          "with nothing of its own in the feed the bot cannot be told apart: pending")
-    check(pr.revived(rec, "it", own, [anchor, act("unrejected", 5, "altro")],
-                     [anchor, review]) is None,
-          "a revival of different text is not this suggestion")
-    check(pr.revived(rec, "it", own + [res("unreviewed")], [anchor, revival],
-                     [anchor, revival, review]) is None,
-          "and a string the bot's own feed has a row for is left to match()")
+    check(pr.answer(rec, dict(restored, rejected_date="2019-02-02T00:00:00Z"))
+          is None, "a rejection from before the suggestion was sent is not its answer")
+    check(pr.decide(rec, pr.answer(rec, dict(restored, status="unreviewed")),
+                    "vecchio", {"f1"}) is None,
+          "a restored translation nobody has reviewed again stays pending")
+    check(pr.match(rec, [dict(res("unreviewed"), unrejected_date="2026-10-30T0"),
+                         dict(res("rejected"), translation_pk=2)])["translation_pk"] == 1,
+          "the latest change wins, unrejection included")
     ios = dict(rec, pontoon=dict(rec["pontoon"], key=["Shared/x.strings", "s"]))
     check(pr.match(ios, [res("rejected", entity="s • Shared/x.strings")]),
           "a two-part key matches Pontoon's innermost-first entity")

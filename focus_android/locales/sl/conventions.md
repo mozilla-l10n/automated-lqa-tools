@@ -25,3 +25,7 @@ written here is what the model is told to treat as correct._
 - Short UI command labels (buttons, links, menu items, toggles and setting
   labels) use the informal 2nd-person singular imperative, e.g. `Obnovi
   podatke`, `Posodobi`, `Omogoči`. Never flag this form.
+
+- `preskusiti` and `preizkusiti` (`Preskusite`, `Preizkusite`) are both
+  correct. Never flag one for the other, or ask for strings to be aligned
+  on either.

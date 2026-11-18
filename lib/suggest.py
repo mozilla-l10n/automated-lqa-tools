@@ -69,7 +69,7 @@ import tracker  # noqa: E402
 
 from moz.l10n.formats import Format  # noqa: E402
 from moz.l10n.formats.fluent import fluent_serialize_message  # noqa: E402
-from moz.l10n.formats.mf2 import mf2_parse_message, mf2_serialize_message  # noqa: E402
+from moz.l10n.formats.mf2 import mf2_serialize_message  # noqa: E402
 from moz.l10n.message import message_from_json  # noqa: E402
 from moz.l10n.model import (  # noqa: E402
     CatchallKey,
@@ -193,6 +193,21 @@ def full_preview(fmt, entry) -> str:
     return "\n".join(parts)
 
 
+# Characters that render as nothing in any script. An edit that only adds
+# or removes these looks like no change at all to a Pontoon reviewer: zh-TW
+# rejected the removal of a U+200B from 透明度 with "no difference from
+# approved string?". ZWNJ is not here on purpose: it changes how Persian is
+# shaped, and fa reviewers approved every edit to it.
+UNSEEN = frozenset("\u200b\u2060\ufeff\u00ad")
+
+
+def unseen_only(before: str, after: str) -> bool:
+    """Do ``before`` and ``after`` differ only in `UNSEEN` characters?"""
+    def shown(s):
+        return "".join(ch for ch in s if ch not in UNSEEN)
+    return before != after and shown(before) == shown(after)
+
+
 def full_preview_of_feed(row: dict) -> str | None:
     """`full_preview` of a translation in the user translations feed.
 
@@ -224,24 +239,6 @@ def check_against_pontoon(change: dict, current: str) -> str:
     if current != change["old"]:
         return f"Pontoon has moved on: {current}"
     return ""
-
-
-def preview_of_api(string: str) -> str | None:
-    """A translation's raw `string`, in `pontoon_preview` form.
-
-    The user translations feed has `preview` for this; the action log and
-    the entities endpoint still return the raw `string`, which is
-    MessageFormat 2 for every non-Fluent format:
-    `Smazáno „{$arg1 :string @source=|%1$s|}“`, `{|<b>| :html}`. What was
-    sent, and what the records hold, is the preview form -- `Smazáno „%1$s“`
-    -- so the two only compare equal for a string with no placeholder or
-    markup in it. ``None`` when the string is not MF2 at all (Fluent).
-    """
-    try:
-        msg = mf2_parse_message(string)
-    except Exception:
-        return None
-    return "".join(_preview_part(p) for p in _simple_pattern(msg))
 
 
 def _placeables(entry) -> Counter:

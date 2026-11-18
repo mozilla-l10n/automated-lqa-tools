@@ -401,11 +401,19 @@ def run_locale(project, locale: str, groups: list[str], l10n_dir: str,
                     continue
                 saved = (copy.deepcopy(entry.value), copy.deepcopy(entry.properties))
                 before = suggest._placeables(entry)
+                fmt = resources[item["localized"]][0].format
+                shown = suggest.full_preview(fmt, entry)
                 why = apply_edits(entry, answer["edits"])
                 if not why and suggest._placeables(entry) != before:
                     why = "the edit changed a placeholder or markup"
                 if not why and (entry.value, entry.properties) == saved:
                     why = "the edit left the string as it was"
+                if not why and suggest.unseen_only(shown, suggest.full_preview(fmt, entry)):
+                    # Left open rather than sent: the reviewer would reject
+                    # what looks like no change, and that rejection would
+                    # dismiss a real defect.
+                    why = ("the edit only changes characters a Pontoon reviewer "
+                           "cannot see; a person has to fix this one")
                 if why:
                     entry.value, entry.properties = saved
                     skipped.append((item, f"edit refused: {why}"))

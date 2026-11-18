@@ -27,3 +27,7 @@ _Carried over from the hand-written review; these are maintainer decisions, not 
 - Prompt strings in `genai.ftl` use the informal imperative on purpose — they address the model, not the user.
 - Brand terms are declined with a `sklon` (case) parameter. This is correct Slovenian and has no en-US equivalent.
 - The typo in `cclear-data-for-site-permissions` is upstream in en-US.
+
+- `preskusiti` and `preizkusiti` (`Preskusite`, `Preizkusite`) are both
+  correct. Never flag one for the other, or ask for strings to be aligned
+  on either.

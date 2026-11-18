@@ -24,9 +24,13 @@
    "source": "Want to help? <label data-l10n-name=\"helpus-donateLink\">Make a donation</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">share { -brand-product-name }</label>, or <label data-l10n-name=\"helpus-getInvolvedLink\">get involved!</label>",
    "original": "Möchten Sie helfen? <label data-l10n-name=\"helpus-donateLink\">Spenden Sie</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">Teilen Sie { -brand-product-name }</label>, oder <label data-l10n-name=\"helpus-getInvolvedLink\">machen Sie mit!</label>",
    "text": "Möchten Sie helfen? <label data-l10n-name=\"helpus-donateLink\">Spenden Sie</label>, <label data-l10n-name=\"helpus-shareFirefoxLink\">Teilen Sie { -brand-product-name }</label> oder <label data-l10n-name=\"helpus-getInvolvedLink\">machen Sie mit!</label>",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "rejected",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12161859,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/aboutDialog.ftl/?string=339273",
+   "outcome": "kept",
+   "note": "rejected, but the string has 1 other open finding(s), and a dismissal would cover them too; not dismissed (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-02",
@@ -50,9 +54,13 @@
    "source": "See more",
    "original": "Mehr erfahren",
    "text": "Mehr anzeigen",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12234897,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/aboutRestartRequired.ftl/?string=340825",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-02",
@@ -76,9 +84,13 @@
    "source": "Sign in",
    "original": "Einloggen",
    "text": "Anmelden",
-   "status": "pending",
-   "status_date": "2026-11-02",
-   "comment": ""
+   "status": "approved",
+   "status_date": "2026-11-03",
+   "comment": "",
+   "pontoon_pk": 12234898,
+   "pontoon_url": "https://pontoon.mozilla.org/de/firefox/browser/browser/appmenu.ftl/?string=340828",
+   "outcome": "approved",
+   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text (Pontoon restored an existing translation with this text rather than storing a new one)"
   },
   {
    "date": "2026-11-02",

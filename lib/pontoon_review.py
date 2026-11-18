@@ -35,15 +35,14 @@ tool's to withdraw: if the outcome later changes, or the string moves after
 all, the line is removed and the finding comes back. A line a person wrote
 is never touched.
 
-An upload whose text Pontoon already has on that string -- an older
-translation by someone else, rejected or approved -- is not stored as a new
-translation by the submitting account: Pontoon revives the existing one
-(``translation:unrejected``), and the reviewer answers on *that*. The
-account's own feed then has nothing on the string at all, so for a record
-in that state the project's action log for the day it was sent is read
-(``/api/v2/user-actions/<date>/project/<slug>/``), and the revived
-translation's last explicit approval or rejection in range is its answer.
-See `revived`.
+An upload whose text Pontoon already has on that string as a rejected
+translation -- an older one by someone else -- is not stored as a new
+translation by the submitting account: Pontoon restores the existing one
+(unrejects it), and the reviewer answers on *that*. The feed lists those
+too when asked with ``include=restored`` (mozilla/pontoon#4649), flagged
+``restored``, so one endpoint answers for both. Such a translation can
+carry review history and comments from before it was restored; only what
+happened from the day the suggestion was sent counts as its answer.
 
 A suggestion Pontoon has not answered -- unreviewed, or simply absent from
 the window that was read -- stays ``pending``. Not hearing back is not an
@@ -111,12 +110,15 @@ def windows(start: datetime.date, end: datetime.date) -> list[tuple]:
 
 def fetch(server: str, user: str, slug: str, locale: str, start, end,
           token: str, get=suggest._get_json) -> list[dict]:
-    """Every translation by ``user`` created, approved or rejected in range."""
+    """Every translation by ``user``, or restored by them, that changed in range."""
     seen = {}
     for a, b in windows(start, end):
         query = urllib.parse.urlencode({
             "project": slug, "locale": locale,
             "start_date": a.isoformat(), "end_date": b.isoformat(),
+            # Translations by others the account restored by uploading
+            # their text (see the module docstring).
+            "include": "restored",
         })
         url = (f"{server}/api/v2/users/{urllib.parse.quote(user)}/translations/"
                f"?{query}")
@@ -152,95 +154,28 @@ def match(record: dict, results: list[dict]) -> dict | None:
     if not found:
         return None
     return max(found, key=lambda r: max(filter(None, (
-        r.get("date"), r.get("approved_date"), r.get("rejected_date")))))
+        r.get("date"), r.get("approved_date"), r.get("unapproved_date"),
+        r.get("rejected_date"), r.get("unrejected_date")))))
 
 
-REVIEWS = {"translation:approved": "approved", "translation:rejected": "rejected"}
-_actions_cache: dict[tuple, list] = {}
+def answer(record: dict, result: dict | None) -> dict | None:
+    """``result`` as an answer to ``record``, or None if it cannot be one.
 
-
-def fetch_actions(server: str, slug: str, day: datetime.date, token: str,
-                  get=suggest._get_json) -> list[dict]:
-    """Every translation action on project ``slug`` on ``day``, any locale.
-
-    Per project, not per locale, so it is cached across the locales of a run.
+    A restored translation keeps the dates and comments of its earlier life,
+    and an own translation can be matched by a later suggestion of the same
+    text. A review dated before the suggestion was sent answered something
+    else, and a comment from then explains something else. One day of slack:
+    the record's date is the runner's, Pontoon's is UTC.
     """
-    key = (server, slug, day, get)
-    if key not in _actions_cache:
-        url = f"{server}/api/v2/user-actions/{day.isoformat()}/project/{slug}/"
-        _actions_cache[key] = get(url, token).get("actions", [])
-    return _actions_cache[key]
-
-
-def bot_pks(results: list[dict], actions: list[dict]) -> set:
-    """The submitting account's user pk(s), as the action log names it.
-
-    The log identifies users by pk and display name only. Anchored on the
-    translations the account's own feed returned, so a display name -- which
-    anybody can share -- never decides whose action an entry was.
-    """
-    ours = {r["translation_pk"] for r in results}
-    return {a["user"]["pk"] for a in actions
-            if a.get("translation", {}).get("pk") in ours and a.get("user")}
-
-
-def in_feed(record: dict, results: list[dict]) -> bool:
-    """Has the account's own feed any translation at all on this string?"""
-    p = record["pontoon"]
-    entity = entity_of(p["key"])
-    return any(r["entity"] == entity and r["resource"] == p["resource"]
-               and r["project"] == p["project"] for r in results)
-
-
-def revived(record: dict, locale: str, results: list[dict], sent_actions: list[dict],
-            later_actions: list[dict]) -> dict | None:
-    """The answer to a suggestion Pontoon stored as an existing translation.
-
-    ``sent_actions`` are the project's actions around the day it was sent,
-    ``later_actions`` every action from then until the end of the range.
-    Only for a record the account's feed has no row for on this string at
-    all: anything there is the account's own translation, and `match`
-    decides it. The revival has to be the account's, on this string, with
-    exactly the text that was sent; the answer has to be an explicit review
-    of that same translation. Anything short of that is None -- pending.
-
-    Returns a result shaped like a feed row, so `decide` reads it as one.
-    """
-    p = record["pontoon"]
-    entity = entity_of(p["key"])
-    if in_feed(record, results):
+    if result is None:
         return None
-    bots = bot_pks(results, sent_actions)
-
-    def same_string(a) -> bool:
-        return ((a.get("locale") or {}).get("code") == locale
-                and (a.get("entity") or {}).get("key") == p["key"]
-                and (a.get("resource") or {}).get("path") == p["resource"])
-
-    revivals = [a for a in sent_actions
-                if a["type"] == "translation:unrejected" and same_string(a)
-                and (a.get("user") or {}).get("pk") in bots
-                and record["text"] in (a["translation"]["string"],
-                                       suggest.preview_of_api(a["translation"]["string"]))]
-    if not revivals:
+    sent = (datetime.date.fromisoformat(record["date"])
+            - datetime.timedelta(days=1)).isoformat()
+    status = result["status"]
+    if status in ANSWERED and (result.get(f"{status}_date") or result["date"])[:10] < sent:
         return None
-    pk = revivals[-1]["translation"]["pk"]
-    reviews = sorted((a for a in later_actions
-                      if a["type"] in REVIEWS and not a.get("is_implicit_action")
-                      and a["translation"]["pk"] == pk and same_string(a)),
-                     key=lambda a: a["date"])
-    if not reviews:
-        return None
-    last = reviews[-1]
-    status = REVIEWS[last["type"]]
-    string = last["translation"]["string"]
-    return {"translation_pk": pk,
-            "preview": suggest.preview_of_api(string) or string,
-            "status": status, "date": revivals[-1]["date"],
-            "approved_date": last["date"] if status == "approved" else None,
-            "rejected_date": last["date"] if status == "rejected" else None,
-            "entity": entity, "resource": p["resource"], "project": p["project"],
-            "locale": locale, "url": "", "comments": [], "revived": True}
+    return dict(result, comments=[c for c in result.get("comments") or []
+                                  if (c.get("date") or "9999")[:10] >= sent])
 
 
 # --- deciding --------------------------------------------------------------------
@@ -411,26 +346,10 @@ def reconcile(project, locale: str, *, l10n_dir: str, source_dir: str,
         results[(server, slug)] = fetch(server, user, slug, locale, start, end,
                                         token, get=get)
 
-    def actions(server, slug, first, last):
-        out, day = [], first
-        while day <= last:
-            out += fetch_actions(server, slug, day, token, get=get)
-            day += datetime.timedelta(days=1)
-        return out
-
     decided = []
     for record in records:
         server, slug = record["pontoon"]["server"], record["pontoon"]["project"]
-        found = match(record, results[(server, slug)])
-        sent = datetime.date.fromisoformat(record["date"])
-        if (found is None and record.get("status") == "pending"
-                and start <= sent <= end and not in_feed(record, results[(server, slug)])):
-            # The day after too: the record's date is the runner's, the
-            # log's is UTC.
-            around = min(end, sent + datetime.timedelta(days=1))
-            found = revived(record, locale, results[(server, slug)],
-                            actions(server, slug, sent, around),
-                            actions(server, slug, sent, end))
+        found = answer(record, match(record, results[(server, slug)]))
         now = current(record)
         change = decide(record, found, now,
                         open_by_string.get((record["file"], record["string_id"]), set()))
@@ -441,8 +360,8 @@ def reconcile(project, locale: str, *, l10n_dir: str, source_dir: str,
             change = {"outcome": "moved", "dismiss": False, "needs_reason": False,
                       "note": "rejected, then the translation changed; the "
                               "dismissal was withdrawn and the finding reopened"}
-        if change is not None and found and found.get("revived"):
-            change["note"] += (" (Pontoon revived an existing translation with "
+        if change is not None and found and found.get("restored"):
+            change["note"] += (" (Pontoon restored an existing translation with "
                                "this text rather than storing a new one)")
         if change is not None:
             decided.append((record, change))
