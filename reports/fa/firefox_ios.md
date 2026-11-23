@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 1,986 |
+| **Strings reviewed this run** | 0 of 1,982 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `ContextualHints.Translations.Title.v145` — `fa/firefox-ios.xliff` — Untranslated English word "Speaks" left in the string and word order is ungrammatical.
+    - Current: `%@ Speaks شما زبان`
+    - Suggest: `%@ به زبان شما صحبت می‌کند`
+    - The source "%@ Speaks Your Language" should be fully translated; "Speaks" remains in English and "شما زبان" is an incorrect possessive construction.
+- `WebCompatReporter.Fields.DetailsAccessibilityLabel.v154` — `fa/firefox-ios.xliff` — English words "Describe" and "detail" left untranslated.
+    - Current: `Describe مشکل در detail`
+    - Suggest: `مشکل را با جزئیات شرح دهید`
+    - Source "Describe the issue in detail" is partly untranslated.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Strings | 1,982 |
+| Missing strings | 11 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +66,16 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**11 strings** are not translated yet, concentrated in:
+
+- `fa/firefox-ios.xliff` — 3
+- `fa/firefox-ios.xliff` — 2
+- `fa/firefox-ios.xliff` — 2
+- `fa/firefox-ios.xliff` — 2
+- `fa/firefox-ios.xliff` — 1
+- `fa/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -80,13 +96,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (406)
+## 3. Open findings (404)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 207 |
+| 2 | Wrong content (says something other than the English) | 205 |
 | 3 | Degraded language (grammar, spelling, terminology) | 194 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
@@ -396,7 +412,7 @@ _Nothing in this category._
     - Source: `(no username)`
     - Suggest: `(بدون نام کاربری)`
     - The source means "no username saved"; "نه username" is ungrammatical and leaves the term in English.
-- _…and 128 more; see `state/` for the full list._
+- _…and 127 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -440,11 +456,6 @@ _Nothing in this category._
     - Source: `Go to Settings > %@ on your device to allow Firefox to use your camera.`
     - Suggest: `در دستگاه خود به تنظیمات > %@ بروید تا به Firefox اجازه دهید از دوربین شما استفاده کند.`
     - The source says "Go to Settings > %@ on your device to allow Firefox to use your camera." The target is a literal word-by-word rendering with wrong word order and wrong particles ("در شما دستگاه", "به اجازه", "استفاده شما دوربین"), which is not comprehensible Persian.
-- `ContextualHints.Translations.Title.v145` — `fa/firefox-ios.xliff` — Untranslated English word "Speaks" left in the string and word order is ungrammatical.
-    - Current: `%@ Speaks شما زبان`
-    - Source: `%@ Speaks Your Language`
-    - Suggest: `%@ به زبان شما صحبت می‌کند`
-    - The source "%@ Speaks Your Language" should be fully translated; "Speaks" remains in English and "شما زبان" is an incorrect possessive construction.
 - `Settings.Home.Option.ThoughtProvokingStories.subtitle.v116` — `fa/firefox-ios.xliff` — The English word "by" is left untranslated inside the Persian string.
     - Current: `مقاله‌ها ارائه‌شده by %@`
     - Source: `Articles powered by %@`
@@ -700,7 +711,12 @@ _Nothing in this category._
     - Source: `Allow %@ to access the Microphone.`
     - Suggest: `به %@ اجازه دسترسی به میکروفون را بدهید.`
     - Persian needs the indirect-object marker 'به' before the app name and a finite verb; the current calque misassigns the roles.
-- _…and 138 more; see `state/` for the full list._
+- `QuickAnswers.Errors.SpeechRecognitionPermissionMessage.v158` — `fa/firefox-ios.xliff` — 'گفتار تشخیص' reverses the Persian compound order for 'Speech Recognition'.
+    - Current: `اجازه دادن %@ به دسترسی گفتار تشخیص.`
+    - Source: `Allow %@ to access Speech Recognition.`
+    - Suggest: `به %@ اجازه دسترسی به تشخیص گفتار را بدهید.`
+    - Persian renders 'Speech Recognition' as 'تشخیص گفتار'; the current order is English word order and ungrammatical.
+- _…and 137 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 

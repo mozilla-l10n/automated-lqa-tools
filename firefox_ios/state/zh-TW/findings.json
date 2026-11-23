@@ -434,6 +434,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "無法取得位置資訊",
+  "dismissed_because": "",
+  "fid": "1364cd3cdd53",
+  "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+  "first_seen": "2026-11-23",
+  "impact": 2,
+  "last_seen": "2026-11-23",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Per the developer comment, the popup means the VPN server location the user picked can't be used right now; 無法取得位置資訊 reads as a failure to obtain (the device's) location information.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "221fab7c",
+  "string_id": "VPN.LocationPicker.LocationUnavailableTitle.v162",
+  "suggest": "此位置目前無法使用",
+  "summary": "Title says location information could not be obtained, rather than that the chosen VPN server location is unavailable.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "關閉 1 個分頁",
   "dismissed_because": "",
   "fid": "9c4295a8e1f1",

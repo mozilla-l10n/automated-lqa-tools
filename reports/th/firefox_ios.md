@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 32 of 1,917 |
+| **Strings reviewed this run** | 0 of 1,913 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for th: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Onboarding.MultiDay.NotificationCard.Title.v159` — `th/firefox-ios.xliff` — The idiom "Stay in the Loop" is translated word for word as "ยังอยู่ในแวดวง" ("still in the circle/scene"), not as "stay informed".
-    - Current: `ยังอยู่ในแวดวง`
-    - Source: `Stay in the Loop`
-    - Suggest: `ติดตามข่าวสารอยู่เสมอ`
-    - The developer comment says the phrase means "Remain informed". In Thai, "ยังอยู่ในแวดวง" reads as still being part of a circle or industry and says nothing about getting updates or notifications.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,917 |
-| Missing strings | 69 |
+| Strings | 1,913 |
+| Missing strings | 80 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,20 +59,20 @@ _Nothing retired._
 
 ### Completeness
 
-**69 strings** are not translated yet, concentrated in:
+**80 strings** are not translated yet, concentrated in:
 
-- `th/firefox-ios.xliff` — 14
+- `th/firefox-ios.xliff` — 16
+- `th/firefox-ios.xliff` — 13
 - `th/firefox-ios.xliff` — 12
-- `th/firefox-ios.xliff` — 11
-- `th/firefox-ios.xliff` — 9
+- `th/firefox-ios.xliff` — 12
 - `th/firefox-ios.xliff` — 7
 - `th/firefox-ios.xliff` — 3
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
 - `th/firefox-ios.xliff` — 2
-- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 - `th/firefox-ios.xliff` — 2
+- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 
 **Files absent from the locale:**
 

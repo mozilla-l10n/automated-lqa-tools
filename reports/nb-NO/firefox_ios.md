@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 4 of 1,986 |
 
@@ -18,9 +18,13 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `nb-NO/firefox-ios.xliff` — The adjective is in the plural but the noun it describes is singular.
+    - Current: `Plassering utilgjengelige`
+    - Source: `Location Unavailable`
+    - Suggest: `Plassering utilgjengelig`
+    - "Plassering" is singular. A predicative adjective after a singular noun takes the singular form "utilgjengelig", not the plural/definite "utilgjengelige".
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 99 |
 | Strings | 1,986 |
-| Missing strings | 0 |
+| Missing strings | 7 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +63,14 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**7 strings** are not translated yet, concentrated in:
+
+- `nb-NO/firefox-ios.xliff` — 2
+- `nb-NO/firefox-ios.xliff` — 2
+- `nb-NO/firefox-ios.xliff` — 2
+- `nb-NO/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -80,14 +91,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (31)
+## 3. Open findings (32)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 25 |
+| 3 | Degraded language (grammar, spelling, terminology) | 26 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -174,6 +185,11 @@ _Nothing in this category._
     - Source: `Scroll to Hide Tab and Address Bar`
     - Suggest: `Rull til skjul fane`
     - Norwegian doesn't use title case. The English title case shouldn't carry over to a word in the middle of a running phrase, and here the capital makes "Skjul" look like the name of a separate command.
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `nb-NO/firefox-ios.xliff` — The adjective is in the plural but the noun it describes is singular.
+    - Current: `Plassering utilgjengelige`
+    - Source: `Location Unavailable`
+    - Suggest: `Plassering utilgjengelig`
+    - "Plassering" is singular. A predicative adjective after a singular noun takes the singular form "utilgjengelig", not the plural/definite "utilgjengelige".
 - `DefaultBrowserCard.NextLevel.Description.v108` — `nb-NO/firefox-ios.xliff` — The Norwegian word for "speed" is misspelled as "fårt" instead of "fart".
     - Current: `få fårt`
     - Source: `Choose Firefox as your default browser to make speed, safety, and privacy automatic.`

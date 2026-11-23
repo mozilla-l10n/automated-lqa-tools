@@ -168,9 +168,7 @@
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "7711f9b7 bc9b006c ad456a71",
   "ContextualHints.Toolbar.GoogleLens.Description.v154": "b94a6437 b34060de 9b20dd7d",
-  "ContextualHints.Toolbar.GoogleLens.Title.v154": "6c96ad74 8f769d06 de7355f5",
-  "ContextualHints.Translations.Body.v145": "cfa9efd5 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "09c3bc98 7e00315a d883a703"
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "6c96ad74 8f769d06 de7355f5"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "f5780ff6 871d661d 6bb73e98",
@@ -456,6 +454,7 @@
   "MainMenu.SettingsSection.WhatsNew.Title.v131": "b6b4e668 0068f643 4ce85dc8",
   "MainMenu.SiteProtection.AdBlocker.Title.v153": "9e36847d ef07e8df 95558a54",
   "MainMenu.SiteProtection.ConnectionNotSecure.Title.v141": "f804ef14 b3115394 c5f25825",
+  "MainMenu.SiteProtection.Protections.ReaderModeSubtitle.v162": "4fa14f95 9dea0549 7e2681c9",
   "MainMenu.SiteProtection.Protections.Title.v153": "1b4120ae 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "9507eab0 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "0253d602 0f76f2fd 29145267",
@@ -1295,6 +1294,9 @@
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "e8673d58 0e7c6115 70cb9732",
   "VPN.ErrorConnectingPopup.RetryButtonText.v160": "2c90d8b1 67f53444 631d8583",
   "VPN.ErrorConnectingPopup.Title.v160": "94b3d77e dc30d148 ece5c8ec",
+  "VPN.LocationPicker.LocationUnavailableBody.v162": "de937029 451b6bc8 513f30ad",
+  "VPN.LocationPicker.LocationUnavailableButtonText.v162": "322b41af 322b41af c3ef37ac",
+  "VPN.LocationPicker.LocationUnavailableTitle.v162": "3edb1615 72e60a26 f4dfe9c5",
   "VPN.ReachedDataLimitPopup.AltPopupBody.v160": "06bf18cc 42e50fea 4c89c492",
   "VPN.ReachedDataLimitPopup.Body.v160": "b112f1de 78f113bb e7e25f42",
   "VPN.ReachedDataLimitPopup.CloseAllTabs.v160": "75c2561a 5f9d1590 4802c44c",
@@ -1319,11 +1321,9 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "67bbd067 6d872e60 f5634cc3",
   "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "95a917ec 49b21065 b7b7ff38",
   "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "928b9d53 73ba17c4 4b7bca50",
-  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "e2944160 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "23179ba4 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "1a069961 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84 8b45567b",
-  "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84 759d1ff9",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "09dbb4b3 56a75088 6efcf8d1",
   "WebCompatReporter.IssueSection.Title.v154": "1d771c4d 79a458bc 22e81da1",
   "WebCompatReporter.Preview.Data.AvailableMemory.v155": "60b3e2ca 7da17114 8fcc4ca5",

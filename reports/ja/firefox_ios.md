@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,985 |
+| **Strings reviewed this run** | 4 of 1,985 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ContextualHints.Translations.Title.v145` — `ja/firefox-ios.xliff` — Idiomatic "Speaks Your Language" rendered literally as "はあなたの言語で話します" (the app talks).
+    - Current: `%@ はあなたの言語で話します`
+    - Suggest: `%@ はあなたの言語に対応します`
+    - The en-US means the app supports/understands the user's language (translation feature), not that it literally speaks.
 
 ---
 
@@ -46,7 +49,7 @@ _Nothing retired._
 |---|---|
 | Files | 99 |
 | Strings | 1,985 |
-| Missing strings | 1 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,8 +62,12 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
+**8 strings** are not translated yet, concentrated in:
 
+- `ja/firefox-ios.xliff` — 2
+- `ja/firefox-ios.xliff` — 2
+- `ja/firefox-ios.xliff` — 2
+- `ja/firefox-ios.xliff` — 1
 - `ja/firefox-ios.xliff` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -83,7 +90,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (108)
+## 3. Open findings (107)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -104,7 +111,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 59 |
-| 3 | Degraded language (grammar, spelling, terminology) | 43 |
+| 3 | Degraded language (grammar, spelling, terminology) | 42 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -153,11 +160,6 @@ _Nothing in this category._
     - Source: `Search With Google Lens`
     - Suggest: `Google Lens で検索`
     - Product/brand names should not be translated; the source is "Google Lens".
-- `ContextualHints.Translations.Title.v145` — `ja/firefox-ios.xliff` — Idiomatic "Speaks Your Language" rendered literally as "はあなたの言語で話します" (the app talks).
-    - Current: `%@ はあなたの言語で話します`
-    - Source: `%@ Speaks Your Language`
-    - Suggest: `%@ はあなたの言語に対応します`
-    - The en-US means the app supports/understands the user's language (translation feature), not that it literally speaks.
 - `Addresses.EditAddress.AutofillAddressVillageTownship.v129` — `ja/firefox-ios.xliff` — "Township" is rendered as 郡区, an unusual/incorrect term for a township-level administrative division.
     - Current: `村または郡区`
     - Source: `Village or Township`
@@ -413,7 +415,12 @@ _Nothing in this category._
     - Source: `Use your fingerprint to access Logins now.`
     - Suggest: `指紋認証を利用してログイン情報にアクセスします。`
     - The source, per the developer comment, is a Touch ID prompt for accessing the saved logins list, not for signing in.
-- _…and 25 more; see `state/` for the full list._
+- `DefaultBrowserCard.BetterInternet.Title.v108` — `ja/firefox-ios.xliff` — "Default to a Better Internet" loses the "default browser" wordplay and reads as merely "choose a better internet".
+    - Current: `より良いインターネットを選択する`
+    - Source: `Default to a Better Internet`
+    - Suggest: `より良いインターネットをデフォルトに`
+    - The source title plays on setting Firefox as the default; the translation drops the notion of "default" entirely.
+- _…and 24 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

@@ -150,9 +150,7 @@
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "ff69b936 bc9b006c ad456a71",
   "ContextualHints.Toolbar.GoogleLens.Description.v154": "d6a237ae b34060de 9b20dd7d",
-  "ContextualHints.Toolbar.GoogleLens.Title.v154": "e791e6b2 8f769d06 de7355f5",
-  "ContextualHints.Translations.Body.v145": "23c67cbf 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "9b4ca62b 7e00315a d883a703"
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "e791e6b2 8f769d06 de7355f5"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "cf189968 871d661d 6bb73e98",
@@ -1238,11 +1236,9 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "314e0cc5 6d872e60 f5634cc3",
   "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "b5c5c89e 49b21065 b7b7ff38",
   "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "34dae4d3 73ba17c4 4b7bca50",
-  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "75cb1de4 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "6046f4ce 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "80d7c765 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "8fd0bfe6 c73efe84 8b45567b",
-  "WebCompatReporter.Fields.URLPlaceholder.v154": "8fd0bfe6 c73efe84 759d1ff9",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "350ff711 56a75088 6efcf8d1",
   "WebCompatReporter.IssueSection.Title.v154": "11bbbee2 79a458bc 22e81da1",
   "WebCompatReporter.Preview.Data.AvailableMemory.v155": "2260296f 7da17114 8fcc4ca5",

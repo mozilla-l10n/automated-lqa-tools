@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ContextualHints.Translations.Body.v145` — `hu/firefox-ios.xliff` — "when you are" is dropped from the translation.
+    - Current: `Gyors, privát fordítások készen állnak.`
+    - Suggest: `A gyors, privát fordítások készen állnak, amint Ön is.`
+    - The en-US "ready when you are" phrase is omitted, losing part of the message.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -79,7 +82,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (89)
+## 3. Open findings (88)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -95,7 +98,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 37 |
-| 3 | Degraded language (grammar, spelling, terminology) | 49 |
+| 3 | Degraded language (grammar, spelling, terminology) | 48 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
@@ -119,11 +122,6 @@ _Nothing in this category._
     - Source: `Use your camera or choose a photo to search what you see.`
     - Suggest: `keressen rá arra, amit lát`
     - The source means searching for the thing you see, not searching within it.
-- `ContextualHints.Translations.Body.v145` — `hu/firefox-ios.xliff` — "when you are" is dropped from the translation.
-    - Current: `Gyors, privát fordítások készen állnak.`
-    - Source: `Fast, private translations are ready when you are.`
-    - Suggest: `A gyors, privát fordítások készen állnak, amint Ön is.`
-    - The en-US "ready when you are" phrase is omitted, losing part of the message.
 - `Addresses.EditAddress.AutofillAddressNeighborhood.v129` — `hu/firefox-ios.xliff` — "Neighborhood" as an address field is rendered "Szomszédság" (the abstract state of being neighbours) instead of the district/quarter name.
     - Current: `Szomszédság`
     - Source: `Neighborhood`

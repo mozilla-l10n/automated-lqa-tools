@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 59 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for vi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `FirefoxHome.PrivacyNotice.Body.Markdown.v160` — `vi/firefox-ios.xliff` — "to reflect the latest features" is rendered as "to provide the latest features".
-    - Current: `để cung cấp các tính năng mới nhất`
-    - Source: `We’ve updated our [Privacy Notice](PRIVACY_NOTICE_URL) to reflect the latest features in %@.`
-    - Suggest: `để phản ánh các tính năng mới nhất`
-    - The source says the Privacy Notice was updated to reflect (describe) new features; "cung cấp" means "provide", claiming the notice update delivers the features.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |

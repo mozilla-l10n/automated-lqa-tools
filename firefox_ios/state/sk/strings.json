@@ -168,9 +168,7 @@
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "f1800c32 bc9b006c ad456a71",
   "ContextualHints.Toolbar.GoogleLens.Description.v154": "65d10834 b34060de 9b20dd7d",
-  "ContextualHints.Toolbar.GoogleLens.Title.v154": "ad3d6ab2 8f769d06 de7355f5",
-  "ContextualHints.Translations.Body.v145": "5504c530 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "7d5a2522 7e00315a d883a703"
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "ad3d6ab2 8f769d06 de7355f5"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "145c6d31 871d661d 6bb73e98",
@@ -189,10 +187,10 @@
  "Shared/Supporting Files/en-US.lproj/CustomizeFirefoxHome.strings": {
   "Settings.CustomizeFirefoxHome.PrivacyReport.v153": "1e0020eb f5ae9142 34b1cb66",
   "Settings.Home.Option.Bookmarks.v128": "d7cc0651 11ce5543 a7472323",
-  "Settings.Home.Option.Stories.v140": "9355ee2e 20f1be6a 442cb69c",
+  "Settings.Home.Option.Stories.v140": "38e7ed55 20f1be6a 442cb69c",
   "Settings.Home.Option.ThoughtProvokingStories.subtitle.v116": "ddacbc4f cd35b818 1867341f",
   "Settings.Home.Option.ThoughtProvokingStories.v116": "6087f9fe 42f18152 0a7597e4",
-  "Settings.Home.Option.TopStories.v143": "188993fb e11dfe2b 6745e331"
+  "Settings.Home.Option.TopStories.v143": "faf8ea08 e11dfe2b 6745e331"
  },
  "Shared/Supporting Files/en-US.lproj/DisplayCard.strings": {
   "CreditCard.DisplayCard.ExpiresLabel.v115": "53d6692a 25125bb0 754bfd32"
@@ -460,6 +458,7 @@
   "MainMenu.SiteProtection.Protections.Title.v153": "d13c96da 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "e323a07c 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "ee783a0c 0f76f2fd 29145267",
+  "MainMenu.SiteProtection.VPN.Title.v162": "ba165965 ba165965 6712916c",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToHomeScreen.Subtitle.v132": "7a5dcad4 3d4475ff 8c207f52",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToHomeScreen.Title.v132": "52dc9ad9 ac0715f9 c7af67f2",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToShortcuts.Subtitle.v132": "fc740ff8 de41b209 b0904a75",
@@ -806,7 +805,9 @@
   "VPN.Onboarding.LimitSubheading.v160": "5f5bd926 9fddebc0 f3cdbd32",
   "VPN.Onboarding.LocationsBody.v160": "b068c97a d1dbad46 958e7087",
   "VPN.Onboarding.LocationsSubheading.v160": "53f39241 da3baa74 27db0145",
+  "VPN.Onboarding.Subheading.v162": "7a4c087b a801e272 f66727c6",
   "VPN.Onboarding.Title.v160": "1dbcbc38 0996c1bd 414c90a4",
+  "VPN.Onboarding.TurnOnVPNButton.v162": "ae9b973b d0149e5d e16942a9",
   "VPN.Onboarding.WifiBody.v160": "6dbe463b f48475df 99388cdc",
   "VPN.Onboarding.WifiSubheading.v160": "e3883247 b2ff4b77 d4af947c"
  },
@@ -1096,6 +1097,8 @@
   "Settings.Translation.ToggleFooter.v151": "2f45c313 925a0171 a8fa2621",
   "Settings.Translation.ToggleTitle.v145": "4ec2a90f c640ad8b 22fa395f",
   "VPN.LocationPicker.FindingLocationsText.v160": "d39d95a6 43b0b6a7 ae6285e2",
+  "VPN.LocationPicker.NoLocationsSubtitle.v162": "ba3814d7 4dad2f2b e480d48f",
+  "VPN.LocationPicker.NoLocationsTitle.v162": "b493539f 75179b77 759e98e2",
   "VPN.LocationPicker.RecommendedMainText.v160": "ee62906f 40b5cb8f 1eb33093",
   "VPN.LocationPicker.RecommendedSubText.v160": "c6cfc160 cce40e95 4da8d9f0",
   "VPN.Settings.Connected.v161": "f6815abc 34f0ad6f ae1c1244",
@@ -1196,6 +1199,8 @@
   "TabTrayOneMonthAgoTitle.v140": "77a1e7a7 5987010f a59cae53",
   "TabTrayOneWeekAgoTitle.v140": "2d648f66 453eedaf 833ba343",
   "TabTraySelectorAccessibilityHint.v139": "30561331 1fe9192d e771ea46",
+  "TabsTray.Sync.RefreshButton.Title.v162": "88c5daa9 80a73a4c 2adabd80",
+  "TabsTray.Sync.SignIn.Description.v162": "c053b6cf 67d397b1 00211787",
   "TabsTray.Sync.SyncTabsDisabled.v116": "b4af0f48 59268edd 2162fbb7",
   "TabsTray.SyncTabs.SyncTabsButton.Title.v119": "5c425aba 71b176db 0e981ddf"
  },
@@ -1296,6 +1301,9 @@
   "VPN.ErrorConnectingPopup.CloseButtonText.v160": "e427821a 0e7c6115 70cb9732",
   "VPN.ErrorConnectingPopup.RetryButtonText.v160": "2e6e5d03 67f53444 631d8583",
   "VPN.ErrorConnectingPopup.Title.v160": "f295efbb dc30d148 ece5c8ec",
+  "VPN.LocationPicker.LocationUnavailableBody.v162": "e29a0ec1 451b6bc8 513f30ad",
+  "VPN.LocationPicker.LocationUnavailableButtonText.v162": "322b41af 322b41af c3ef37ac",
+  "VPN.LocationPicker.LocationUnavailableTitle.v162": "c7818d67 72e60a26 f4dfe9c5",
   "VPN.ReachedDataLimitPopup.AltPopupBody.v160": "18bd811c 42e50fea 4c89c492",
   "VPN.ReachedDataLimitPopup.Body.v160": "b1d8e99c 78f113bb e7e25f42",
   "VPN.ReachedDataLimitPopup.CloseAllTabs.v160": "d3adb8d6 5f9d1590 4802c44c",
@@ -1320,11 +1328,9 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "93ec0fdc 6d872e60 f5634cc3",
   "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "eb0f219c 49b21065 b7b7ff38",
   "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "1ede1081 73ba17c4 4b7bca50",
-  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "340d7a67 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "5ecc9987 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "9043bfb1 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "266a2064 c73efe84 8b45567b",
-  "WebCompatReporter.Fields.URLPlaceholder.v154": "266a2064 c73efe84 759d1ff9",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "5fba2b74 56a75088 6efcf8d1",
   "WebCompatReporter.IssueSection.Title.v154": "97a8d35d 79a458bc 22e81da1",
   "WebCompatReporter.Preview.Data.AvailableMemory.v155": "815025b4 7da17114 8fcc4ca5",
@@ -1961,6 +1967,7 @@
   "Settings.TrackingProtection.ProtectionCellFooter": "a1f079f9 41828a75 74b1ec2b",
   "Settings.TrackingProtection.ProtectionLevel.Footer": "adc868b3 44557f5b 1cbf119c",
   "Settings.TrackingProtection.ProtectionLevel.Footer.Lock": "adc868b3 44557f5b 1cbf119c",
+  "Settings.TrackingProtection.ProtectionLevel.Footer.Strict.v161": "83c5007e 3f835981 1cbf119c",
   "Settings.TrackingProtection.ProtectionLevelStandard.Description": "e589a017 f7865570 d3328cde",
   "Settings.TrackingProtection.ProtectionLevelStrict.Description": "3a2a0732 108edbae 6a35d06a",
   "Settings.TrackingProtection.ProtectionLevelTitle": "9984eed6 47824440 5d711e1f",

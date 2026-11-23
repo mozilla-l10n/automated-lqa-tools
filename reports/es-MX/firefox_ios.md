@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,896 |
+| **Strings reviewed this run** | 20 of 1,912 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ContextualHints.Translations.Body.v145` — `es-MX/firefox-ios.xliff` — Missing accent on the pronoun "tú".
+    - Current: `cuando tu lo estés`
+    - Suggest: `cuando tú lo estés`
+    - "tu" is the possessive adjective; the stressed subject pronoun requires the accent: "tú".
 
 ---
 
@@ -44,11 +47,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 96 |
-| Strings | 1,896 |
-| Missing strings | 90 |
+| Files | 98 |
+| Strings | 1,912 |
+| Missing strings | 81 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 3 |
+| Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,26 +62,22 @@ _Nothing retired._
 
 ### Completeness
 
-**90 strings** are not translated yet, concentrated in:
+**81 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 23
 - `es-MX/firefox-ios.xliff` — 19
 - `es-MX/firefox-ios.xliff` — 18
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `es-MX/firefox-ios.xliff` — 6
-- `es-MX/firefox-ios.xliff` — 5
+- `es-MX/firefox-ios.xliff` — 6
 - `es-MX/firefox-ios.xliff` — 3
 - `es-MX/firefox-ios.xliff` — 2
 - `es-MX/firefox-ios.xliff` — 2
-- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
 - `es-MX/firefox-ios.xliff` — 1
 - `es-MX/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 
-- `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings`
 - `Shared/Supporting Files/en-US.lproj/VPN.strings`
-- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,8 +91,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 8 | **typographic** |
 | ellipsis | `char` 27 | **char** |
 | dash | `em` 2 | **em** |
-| inverted marks | `open-question` 41, `open-exclamation` 8 | **open-question** |
-| register | `informal` 174, `formal` 5 | **informal** |
+| inverted marks | `open-question` 42, `open-exclamation` 8 | **open-question** |
+| register | `informal` 175, `formal` 5 | **informal** |
 
 ---
 
@@ -103,14 +102,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (125)
+## 3. Open findings (124)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 51 |
+| 3 | Degraded language (grammar, spelling, terminology) | 50 |
 | 4 | Cosmetic (typography, spacing) | 9 |
 
 ### A. Functional, markup, variables & plurals
@@ -447,11 +446,6 @@ _Nothing reported._
     - Source: `Add bookmarks as you browse so you can find your favorite sites later.`
     - Suggest: `Agrega marcadores mientras navegas`
     - The en-US "Add bookmarks as you browse" is an imperative addressed to the user; the rest of the sentence uses informal second person ("navegas", "puedas"), so the infinitive is inconsistent and ungrammatical here.
-- `ContextualHints.Translations.Body.v145` — `es-MX/firefox-ios.xliff` — Missing accent on the pronoun "tú".
-    - Current: `cuando tu lo estés`
-    - Source: `Fast, private translations are ready when you are.`
-    - Suggest: `cuando tú lo estés`
-    - "tu" is the possessive adjective; the stressed subject pronoun requires the accent: "tú".
 - `ContextualHints.FirefoxHomepage.JumpBackIn.SyncedTab.v106` — `es-MX/firefox-ios.xliff` — Missing accent on the imperative "Continúa".
     - Current: `Continua donde te quedaste`
     - Source: `Your tabs are syncing! Pick up where you left off on your other device.`

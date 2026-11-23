@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,909 |
+| **Strings reviewed this run** | 0 of 1,905 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,909 |
-| Missing strings | 77 |
+| Strings | 1,905 |
+| Missing strings | 88 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -59,18 +59,19 @@ _Nothing retired._
 
 ### Completeness
 
-**77 strings** are not translated yet, concentrated in:
+**88 strings** are not translated yet, concentrated in:
 
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `zh-CN/firefox-ios.xliff` — 19
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 23
+- `zh-CN/firefox-ios.xliff` — 21
+- `zh-CN/firefox-ios.xliff` — 13
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
-- `zh-CN/firefox-ios.xliff` — 11
 - `zh-CN/firefox-ios.xliff` — 5
 - `zh-CN/firefox-ios.xliff` — 3
 - `zh-CN/firefox-ios.xliff` — 2
 - `zh-CN/firefox-ios.xliff` — 2
+- `zh-CN/firefox-ios.xliff` — 2
+- `zh-CN/firefox-ios.xliff` — 2
 - `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
-- `zh-CN/firefox-ios.xliff` — 1
 - `zh-CN/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
@@ -89,8 +90,8 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 46 | **curly-double** |
 | ellipsis | `char` 26 | **char** |
-| fullwidth | `punctuation` 583 | **punctuation** |
-| register | `informal` 1, `formal` 144 | **formal** |
+| fullwidth | `punctuation` 581 | **punctuation** |
+| register | `informal` 1, `formal` 143 | **formal** |
 
 ---
 
