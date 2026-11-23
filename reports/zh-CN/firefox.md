@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 157 of 16,669 |
+| **Strings reviewed this run** | 268 of 16,854 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,63 @@ Also for zh-CN: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (11)
 
-- `urlbar-view-context-menu-search-in-tab` — `browser/browser/browser.ftl` — "新建新标签页搜索" says "新" twice, which makes the label ungrammatical.
-    - Current: `新建新标签页搜索`
-    - Source: `(value): Search in New Tab accesskey: w`
-    - Suggest: `在新标签页中搜索`
-    - en-US "Search in New Tab". "新建" plus "新标签页" says "new" twice ("create new new tab search"). The sibling labels do not have this redundancy.
-- `IDBObjectStoreMozGetAllWarning` — `dom/chrome/dom/dom.properties` — There is a stray space before the fullwidth full stop at the end of the message.
-    - Current: `IDBObjectStore.getAll() 。`
-    - Source: `IDBObjectStore.mozGetAll() is deprecated. Use IDBObjectStore.getAll() instead.`
-    - Suggest: `IDBObjectStore.getAll()。`
-    - In zh-CN, fullwidth punctuation follows the preceding text directly. The sibling strings (IDBIndexMozGetAllWarning, IDBIndexMozGetAllKeysWarning) have no space before 。.
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — "Reported Harmful Site!" is translated as an imperative "Report a harmful site!" instead of saying the site has been reported.
+    - Current: `举报恶意网站！`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `此网站被举报为恶意网站！`
+    - The en-US is a warning heading saying the site has been reported as harmful. "举报恶意网站" reads as an instruction to the user to report a harmful site.
+- `safebrowsing-not-an-attack-site-button` — `browser/browser/browser.ftl` — "attack site" is rendered as "有害网站" (harmful site), mixing it up with the separate harmful-site category.
+    - Current: `这不是一个有害网站…`
+    - Source: `accesskey: A label: This isn’t an attack site…`
+    - Suggest: `这不是攻击网站…`
+    - Safe Browsing tells attack sites and harmful sites apart, and the matching heading uses "攻击" (safebrowsing-reported-attack-site-message). Using "有害" here names the wrong warning type.
+- `smart-window-model-qwen` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Ready for a variety of tasks. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
+- `smart-window-model-mistral` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Good if you chat and browse in multiple languages. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
+- `un-refresh-page-title` — `browser/installer/custom.ftl` — There is a stray space before the fullwidth question mark.
+    - Current: `吗 ？`
+    - Source: `Refresh { $BrandShortName } Instead?`
+    - Suggest: `吗？`
+    - In zh-CN, fullwidth punctuation follows the preceding character with no space in between. This space shows up as a visible gap in the title.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — Informal 你 is used where the locale and the rest of the installer use the formal 您.
+    - Current: `告诉 Mozilla 你为什么卸载`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `告诉 Mozilla 您为什么卸载`
+    - The zh-CN register is formal 您, and the neighbouring installer strings (options-summary, option-custom-desc and others) use 您. This string mixes in 你.
+- `options-summary` — `browser/installer/custom.ftl` — A stray space sits before the fullwidth full stop.
+    - Current: `［下一步］ 。`
+    - Source: `Choose the type of setup you prefer, then click Next.`
+    - Suggest: `［下一步］。`
+    - Fullwidth punctuation is never preceded by a space in zh-CN, so this space shows up as a visible gap in the text.
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — Stray half-width period follows the fullwidth period.
+    - Current: `协议条款。.`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `协议条款。`
+    - Duplicated sentence-ending punctuation; zh-CN uses a single fullwidth 。.
+- `nsis-error-writing` — `browser/installer/override.ftl` — Extra space after fullwidth colon.
+    - Current: `提取： 写文件错误`
+    - Source: `Extract: error writing to file{   }`
+    - Suggest: `提取：写文件错误`
+    - Fullwidth punctuation already carries spacing; the added space is inconsistent with other strings such as 无法写入：.
+- `smart-window-model-flexible-v2` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated inside the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Ready for a variety of tasks. Full name: { $model } by { $ownerName } label: { $shortName }: Flexible`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - The en-US "Full name: X by Y" names the model and its owner. The zh-CN keeps the English preposition "by" in the middle of a Chinese sentence. Elsewhere the locale translates such connectives, so this reads as untranslated text.
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +88,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) translated as "更换清单" which reads as replacing the list.
+    - Current: `更换清单`
+    - Suggest: `切换清单`
+    - The developer comment states "Change" is a verb meaning the button switches which list is displayed; "更换" implies replacing/substituting the list itself.
 
 ---
 
@@ -53,11 +101,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,669 |
-| Missing strings | 214 |
+| Files | 336 |
+| Strings | 16,854 |
+| Missing strings | 266 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -72,24 +120,20 @@ _Nothing retired._
 
 ### Completeness
 
-**214 strings** are not translated yet, concentrated in:
+**266 strings** are not translated yet, concentrated in:
 
-- `browser/browser/ipProtection.ftl` — 52
-- `browser/browser/newtab/onboarding.ftl` — 45
+- `browser/browser/ipProtection.ftl` — 57
+- `browser/browser/newtab/onboarding.ftl` — 43
+- `browser/browser/aiWindow.ftl` — 28
 - `devtools/client/toolbox-options.ftl` — 18
-- `browser/browser/autoTabGrouping.ftl` — 15
-- `toolkit/toolkit/neterror/netError.ftl` — 13
+- `browser/browser/autoTabGrouping.ftl` — 13
 - `dom/chrome/dom/dom.properties` — 13
+- `toolkit/toolkit/neterror/netError.ftl` — 13
+- `browser/browser/preferences/preferences.ftl` — 7
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 7
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 6
 - `devtools/client/debugger.properties` — 6
 - `browser/browser/newtab/asrouter.ftl` — 5
-- `browser/browser/newtab/newtab.ftl` — 5
-- `toolkit/toolkit/about/aboutGlean.ftl` — 5
-- `browser/browser/preferences/preferences.ftl` — 3
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -99,12 +143,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 906, `straight-double` 46, `curly-single` 37 | **curly-double** |
+| quotes | `curly-double` 907, `straight-double` 46, `curly-single` 37 | **curly-double** |
 | apostrophe | `typographic` 42, `straight` 20 | _mixed_ |
-| ellipsis | `char` 381, `ascii` 12 | **char** |
+| ellipsis | `char` 390, `ascii` 12 | **char** |
 | dash | `em` 53, `en` 2 | **em** |
-| fullwidth | `punctuation` 8668 | **punctuation** |
-| register | `informal` 24, `formal` 1549 | **formal** |
+| fullwidth | `punctuation` 8833 | **punctuation** |
+| register | `informal` 25, `formal` 1583 | **formal** |
 
 ---
 
@@ -115,15 +159,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (80)
+## 3. Open findings (90)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 4 |
-| 2 | Wrong content (says something other than the English) | 22 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
-| 4 | Cosmetic (typography, spacing) | 36 |
+| 2 | Wrong content (says something other than the English) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 23 |
+| 4 | Cosmetic (typography, spacing) | 40 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -212,6 +256,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `An app or service may see your encrypted traffic from this site.`
     - Suggest: `某个应用或服务可能可以看到您来自此网站的加密流量。`
     - en-US says "An app or service may see"; "其他" implies other apps besides Firefox, a claim the source does not make.
+- `safebrowsing-not-an-attack-site-button` — `browser/browser/browser.ftl` — "attack site" is rendered as "有害网站" (harmful site), mixing it up with the separate harmful-site category.
+    - Current: `这不是一个有害网站…`
+    - Source: `accesskey: A label: This isn’t an attack site…`
+    - Suggest: `这不是攻击网站…`
+    - Safe Browsing tells attack sites and harmful sites apart, and the matching heading uses "攻击" (safebrowsing-reported-attack-site-message). Using "有害" here names the wrong warning type.
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — "Reported Harmful Site!" is translated as an imperative "Report a harmful site!" instead of saying the site has been reported.
+    - Current: `举报恶意网站！`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `此网站被举报为恶意网站！`
+    - The en-US is a warning heading saying the site has been reported as harmful. "举报恶意网站" reads as an instruction to the user to report a harmful site.
 - `downloads-content-analysis-invalid-agent-signature-error` — `browser/browser/downloads.ftl` — "failed signature verification" is rendered as "failed to perform signature verification" rather than "did not pass signature verification".
     - Current: `未能进行签名验证`
     - Source: `File was blocked because { $agent } failed signature verification.`
@@ -237,11 +291,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `aria-label: Your images, wallpapers that you have saved`
     - Suggest: `aria-label: 您的图片，您保存的壁纸`
     - en-US is "Your images, wallpapers that you have saved" — the folder name "Your images" followed by a description; the Chinese merges them into a list of two nouns and loses the folder name.
-- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) translated as "更换清单" which reads as replacing the list.
-    - Current: `更换清单`
-    - Source: `aria-label: Change list title: Change list`
-    - Suggest: `切换清单`
-    - The developer comment states "Change" is a verb meaning the button switches which list is displayed; "更换" implies replacing/substituting the list itself.
 - `containers-external-links-check` — `browser/browser/preferences/preferences.ftl` — Meaning reversed/garbled: source says links from external apps should not use containers, target reads as "do not use container tabs to open links from external apps" losing the intended structure.
     - Current: `不使用身份标签页打开来自外部应用的链接`
     - Source: `accesskey: D label: Don’t use containers for links opened from external apps`
@@ -314,6 +363,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### D. Terminology, register & consistency
 
+- `smart-window-model-flexible-v2` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated inside the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Ready for a variety of tasks. Full name: { $model } by { $ownerName } label: { $shortName }: Flexible`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - The en-US "Full name: X by Y" names the model and its owner. The zh-CN keeps the English preposition "by" in the middle of a Chinese sentence. Elsewhere the locale translates such connectives, so this reads as untranslated text.
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
+- `smart-window-model-mistral` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Good if you chat and browse in multiple languages. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
+- `smart-window-model-qwen` — `browser/browser/aiFeatures.ftl` — The English word "by" is left untranslated in the middle of the Chinese description.
+    - Current: `{ $model } by { $ownerName }`
+    - Source: `description: Ready for a variety of tasks. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `{ $ownerName } 的 { $model }`
+    - Only the variables are untranslatable. "by" is ordinary English text and should be rendered in Chinese.
 - `smartwindow-footer-history` — `browser/browser/aiWindow.ftl` — The same source word "History" is rendered inconsistently as 历史记录 (aria-label/tooltip) and 历史 (label).
     - Current: `label: 历史`
     - Source: `aria-label: History label: History tooltiptext: History`
@@ -338,6 +407,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `reload-tabs` — `browser/browser/tabContextMenu.ftl` — reload: reload-tab / reload-tabs (tabContextMenu.ftl) use 刷新 vs 重新加载 elsewhere → 重新加载.
     - Source: `accesskey: R label: Reload Tabs`
     - Suggest: `重新加载.`
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — Informal 你 is used where the locale and the rest of the installer use the formal 您.
+    - Current: `告诉 Mozilla 你为什么卸载`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `告诉 Mozilla 您为什么卸载`
+    - The zh-CN register is formal 您, and the neighbouring installer strings (options-summary, option-custom-desc and others) use 您. This string mixes in 你.
 - `inactive-css-not-grid-or-flex-container-or-multicol-container` — `devtools/client/tooltips.ftl` — multicolumn / flex / grid (devtools): inactive-css-not-grid-or-flex-container-or-multicol-container uses 多栏 + English "Flex 容器、Grid 容器" vs siblings' 多列 + 弹性/网格 → align to 多列 / 弹性容器 / 网格容器.
     - Source: `<strong>{ $property }</strong> has no effect on this element since it’s not a flex container, a grid container, or a multi-column container.`
 - `download-cert-message-desc` — `security/manager/security/pippki/pippki.ftl` — Certificate Authority: download-cert-message 认证机构 vs download-cert-message-desc/edit-trust-ca 颁发机构 → 颁发机构.
@@ -401,6 +475,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `unified-extensions-item-open-menu` — `browser/browser/unifiedExtensions.ftl` — Reversed / mismatched curly quotes (opening/closing swapped or mixed): load-module-help-root-certs-module-name (deviceManager.ftl, ”Root Certs“), amo-picker-subtitle (onboarding.ftl, ”小程序“), unified-extensions-item-open-menu (unifiedExtensions.ftl, ”{ $extensionName }”), profiles-delete-profile-confirm (aboutProfiles.ftl, curly “ opened, straight " closed) → use “…”.
     - Source: `aria-label: Open menu for { $extensionName }`
     - Suggest: `use “…”.`
+- `options-summary` — `browser/installer/custom.ftl` — A stray space sits before the fullwidth full stop.
+    - Current: `［下一步］ 。`
+    - Source: `Choose the type of setup you prefer, then click Next.`
+    - Suggest: `［下一步］。`
+    - Fullwidth punctuation is never preceded by a space in zh-CN, so this space shows up as a visible gap in the text.
+- `un-refresh-page-title` — `browser/installer/custom.ftl` — There is a stray space before the fullwidth question mark.
+    - Current: `吗 ？`
+    - Source: `Refresh { $BrandShortName } Instead?`
+    - Suggest: `吗？`
+    - In zh-CN, fullwidth punctuation follows the preceding character with no space in between. This space shows up as a visible gap in the title.
+- `nsis-error-writing` — `browser/installer/override.ftl` — Extra space after fullwidth colon.
+    - Current: `提取： 写文件错误`
+    - Source: `Extract: error writing to file{   }`
+    - Suggest: `提取：写文件错误`
+    - Fullwidth punctuation already carries spacing; the added space is inconsistent with other strings such as 无法写入：.
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — Stray half-width period follows the fullwidth period.
+    - Current: `协议条款。.`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `协议条款。`
+    - Duplicated sentence-ending punctuation; zh-CN uses a single fullwidth 。.
 - `about-debugging-setup-usb-status-updating` — `devtools/client/aboutdebugging.ftl` — ASCII ... → …. appmenu-fxa-setup-sync (appmenu.ftl), main-context-menu-video-take-snapshot (browserContext.ftl), cfr-doorhanger-bookmark-fxa-link-text (asrouter.ftl), about-debugging-sidebar-item-connect-button-connecting / about-debugging-setup-usb-status-updating (aboutdebugging.ftl), printui-system-dialog-link / printui-print-progress-indicator (printUI.ftl).
     - Current: `...`
     - Source: `Updating…`

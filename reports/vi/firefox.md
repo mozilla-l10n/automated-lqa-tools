@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 242 of 16,563 |
+| **Strings reviewed this run** | 324 of 16,784 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,52 +18,86 @@ Also for vi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (8)
+### 🆕 New findings (13)
 
-- `about-logins-confirm-delete-dialog-message2` — `browser/browser/aboutLogins.ftl` — The message says all saved passwords will be deleted, but the dialog deletes only one password.
-    - Current: `Hành động này sẽ xóa mọi mật khẩu đã lưu cho { -brand-short-name } trên các thiết bị khác.`
-    - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
-    - Suggest: `Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.`
-    - The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.
-- `about-logins-confirm-delete-all-sync-dialog-message` — `browser/browser/aboutLogins.ftl` — 'On every device that syncs your passwords' is rendered as 'on other devices'.
-    - Current: `trên các thiết bị khác`
-    - Source: `{$count ->} [1] This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this. [other] This deletes them from { -brand-short-name } on every device that syncs your passwords.…`
-    - Suggest: `trên mọi thiết bị đồng bộ mật khẩu của bạn`
-    - The source says the deletion happens on every device that syncs passwords, including the current one. 'các thiết bị khác' means 'other devices', which changes the scope. The equivalent string in contextual-manager.ftl already translates this correctly.
-- `customkeys-history-reopen-tab-current-window` — `browser/browser/customkeys.ftl` — A trailing full stop was added to a shortcut label that has none in the source.
-    - Current: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại.`
-    - Source: `Reopen Last Closed Tab of the Current Window`
-    - Suggest: `Mở lại thẻ đã đóng gần nhất của cửa sổ hiện tại`
-    - The en-US label has no final punctuation, and none of the other shortcut labels end with a period.
-- `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — A literal ">" was added after the chevron span, so the path shows two separators.
-    - Current: `<span data-l10n-name="chevron"></span> > Thẻ và duyệt web`
-    - Source: `You won’t see this menu when you select text. Visit Settings <span data-l10n-name="chevron"></span> Tabs and browsing to show it again.`
-    - Suggest: `<span data-l10n-name="chevron"></span> Thẻ và duyệt web`
-    - The developer comment says the span is a chevron shown in place of a ">" character, so the added ">" makes the separator appear twice.
-- `item-cookies-site-data-description2` — `browser/browser/sanitize.ftl` — This item description ends with a full stop that the source and the other descriptions in the dialog don't have.
-    - Current: `có thể xoá giỏ hàng.`
-    - Source: `Signs you out and may clear shopping carts`
-    - Suggest: `có thể xoá giỏ hàng`
-    - The en-US description has no final punctuation, and the other descriptions in this dialog (e.g. "Giúp trang web tải nhanh hơn") don't end with a period either.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" is rendered as the verb "duplicate the tabs" instead of the noun phrase "tabs that are duplicates".
-    - Current: `Nhân đôi các thẻ`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Các thẻ trùng lặp`
-    - The developer comment says this item sits under "Close Multiple" and closes duplicate tabs. "Nhân đôi các thẻ" means "duplicate (copy) the tabs", which is a different action.
-- `hnt-card-default-body` — `browser/browser/newtab/onboarding.ftl` — "major" is dropped, so the Vietnamese claims Firefox is the only browser (not the only major browser) built to protect users.
-    - Current: `là trình duyệt duy nhất được xây dựng`
-    - Source: `{ -brand-product-name } is the only major browser built to protect you, not track you.`
-    - Suggest: `là trình duyệt lớn duy nhất được xây dựng`
-    - The en-US limits the claim to "the only major browser". Without that qualifier, the Vietnamese makes a broader claim about Firefox compared with every other browser, and that claim is not true.
-- `experimental-features-resource-monitor-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — "unload tabs" is translated as "đóng các thẻ" (close tabs), which is a different action.
-    - Current: `đóng các thẻ bạn không sử dụng`
-    - Source: `See estimated memory and CPU use for your open tabs right in the sidebar, and unload tabs you’re not using to free up resources. <a data-l10n-name="connect">Share feedback</a>`
-    - Suggest: `dỡ (giải phóng) các thẻ bạn không sử dụng`
-    - In en-US, unloading a tab frees its memory but keeps the tab open. "Đóng" means closing the tab, so users would think the feature closes their tabs.
+- `aiwindow-input-model-select-auto-description` — `browser/browser/aiWindow.ftl` — "model" is rendered as "mẫu" (template/sample), but everywhere else in this surface, including identical strings, it is "mô hình".
+    - Current: `chọn mẫu phù hợp nhất`
+    - Source: `{ -smart-window-brand-name } picks the best model for your task`
+    - Suggest: `chọn mô hình phù hợp nhất`
+    - The en-US refers to the AI model. The identical strings smart-window-model-auto and smartwindow-onboarding-model-auto-description use "mô hình". "mẫu" means template or sample, which is the wrong term here.
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — "Báo cáo trang web độc hại!" reads as an instruction to report a harmful site, not a heading saying the site has been reported as harmful.
+    - Current: `Báo cáo trang web độc hại!`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `Trang web được báo cáo là có hại!`
+    - The en-US "Reported Harmful Site!" is a warning heading saying this site has already been reported as harmful. The Vietnamese reads like a request or button label ("Report harmful site"), which doesn't match how the other "Reported…" headings are worded.
+- `banner-check-existing` — `browser/installer/custom.ftl` — "Checking existing installation" is rendered as "Checking version".
+    - Current: `Đang kiểm tra phiên bản…`
+    - Source: `Checking existing installation…`
+    - Suggest: `Đang kiểm tra bản cài đặt hiện có…`
+    - "phiên bản" means "version". The en-US says the installer is checking for an existing installation.
+- `warn-restart-required-uninstall` — `browser/installer/custom.ftl` — "previous" is dropped, so the message no longer says the restart is for an earlier, pending uninstall.
+    - Current: `hoàn tất việc gỡ bỏ { $BrandShortName }`
+    - Source: `Your computer must be restarted to complete a previous uninstall of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `hoàn tất việc gỡ bỏ { $BrandShortName } trước đó`
+    - The en-US refers to a previous uninstall that is still pending. Without "trước đó", the Vietnamese reads as if it means the current operation.
+- `warn-restart-required-upgrade` — `browser/installer/custom.ftl` — "previous" is dropped, so the message no longer says the restart is for an earlier, pending upgrade.
+    - Current: `hoàn tất việc nâng cấp { $BrandShortName }`
+    - Source: `Your computer must be restarted to complete a previous upgrade of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `hoàn tất việc nâng cấp { $BrandShortName } trước đó`
+    - The en-US refers to a previous upgrade that is still pending. Without "trước đó", the Vietnamese reads as if it means the current operation.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The uninstall wizard is called "Trình cài đặt" (installer) instead of an uninstaller.
+    - Current: `Trình cài đặt này sẽ giúp bạn gỡ bỏ`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Trình gỡ bỏ này sẽ giúp bạn gỡ bỏ`
+    - The en-US says "This wizard", meaning the Uninstall Wizard. The title mui-untext-welcome-info-title calls it "trình gỡ bỏ", but the body calls it the installer.
+- `stub-blurb-third` — `browser/installer/nsisstrings.ftl` — "a better web" is rendered as "a better website".
+    - Current: `xây dựng một trang web tốt hơn`
+    - Source: `Thanks for building a better web with us`
+    - Suggest: `xây dựng một nền tảng web tốt hơn`
+    - en-US refers to the web as a whole, but "một trang web" means a single website.
+- `mui-untext-finish-info-text` — `browser/installer/mui.ftl` — The uninstall wizard is called an installer ("trình cài đặt").
+    - Current: `đóng trình cài đặt này`
+    - Source: `{ $BrandFullNameDA } has been uninstalled from your computer.  Click Finish to close this wizard.`
+    - Suggest: `đóng trình gỡ bỏ này`
+    - This string is shown on the uninstaller's finish page. "This wizard" means the uninstall wizard, which the locale elsewhere calls "trình gỡ bỏ" (mui-untext-abortwarning).
+- `nsis-symbol-not-found` — `browser/installer/override.ftl` — "Symbol" (a code symbol in a DLL) is translated as "biểu tượng" (icon).
+    - Current: `Không thể tìm biểu tượng:`
+    - Source: `Could not find symbol:{   }`
+    - Suggest: `Không thể tìm ký hiệu:`
+    - In this NSIS error, a symbol is an exported function name that could not be found when loading a DLL. "Biểu tượng" means an icon or emblem, so the message says the wrong thing.
+- `nsis-file-error` — `browser/installer/override.ftl` — The English button name in brackets is "(Cancel)", but the source and the dialog's button say "Abort".
+    - Current: `Nhấn “Hủy bỏ” (Cancel) để dừng cài đặt,`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Nhấn “Hủy bỏ” (Abort) để dừng cài đặt,`
+    - This message goes with an Abort/Retry/Ignore dialog. The source says "Click Abort", so the English label in brackets should be Abort. Cancel is used in the other dialog (nsis-file-error-no-ignore).
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — A stray period before the brand name breaks the sentence in two.
+    - Current: `trong khi bạn sử dụng. { -smart-window-brand-name }, vì vậy`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `trong khi bạn sử dụng { -smart-window-brand-name }, vì vậy`
+    - In en-US, 'while you use { -smart-window-brand-name }' is one clause. The period cuts the brand name off from its verb, which is ungrammatical.
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — 'May take time to be reflected' is rendered as 'may take time to be found again'.
+    - Current: `những diễn biến gần đây có thể cần thời gian để có thể tìm lại`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `hoạt động gần đây có thể cần thời gian để được cập nhật vào bộ nhớ ngữ cảnh`
+    - The source means recent activity may take a while to show up in memories. 'để có thể tìm lại' means 'to be retrievable/found again', which is a different idea.
+- `nsis-log-install` — `browser/installer/override.ftl` — 'Lưu kí' means deposit or custody, not logging.
+    - Current: `Lưu kí tiến trình cài đặt`
+    - Source: `Log install process`
+    - Suggest: `Ghi nhật ký tiến trình cài đặt`
+    - 'Log install process' means writing the installation process to a log. The standard Vietnamese for that is 'ghi nhật ký'. 'Lưu kí' (deposit/custody) does not carry that meaning.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
+    - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `Chế độ chia cửa sổ`
+    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — A stray period splits 'while you use { Smart Window }' into two broken sentences
+    - Current: `trong khi bạn sử dụng. { -smart-window-brand-name }, vì vậy,`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `trong khi bạn sử dụng { -smart-window-brand-name }, vì vậy,`
+    - en-US: 'They refresh a few times a day while you use { -smart-window-brand-name }, so…'. The period cuts the brand name away from its verb.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -83,9 +117,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,563 |
-| Missing strings | 320 |
+| Files | 336 |
+| Strings | 16,784 |
+| Missing strings | 336 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -94,24 +128,24 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 579 |
+| Access keys not in their label | 587 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 73 |
 
 ### Completeness
 
-**320 strings** are not translated yet, concentrated in:
+**336 strings** are not translated yet, concentrated in:
 
 - `devtools/client/debugger.properties` — 57
-- `toolkit/toolkit/about/aboutWebauthn.ftl` — 40
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 46
 - `dom/chrome/dom/dom.properties` — 31
 - `devtools/client/tooltips.ftl` — 28
+- `dom/chrome/layout/htmlparser.properties` — 19
 - `dom/chrome/security/csp.properties` — 18
 - `toolkit/toolkit/about/aboutWebrtc.ftl` — 17
 - `toolkit/toolkit/about/url-classifier.ftl` — 16
-- `dom/chrome/layout/htmlparser.properties` — 15
 - `toolkit/toolkit/about/aboutGlean.ftl` — 14
 - `devtools/client/perftools.ftl` — 11
 - `dom/chrome/accessibility/AccessFu.properties` — 10
@@ -125,9 +159,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 499, `curly-single` 134, `straight-double` 88 | **curly-double** |
+| quotes | `curly-double` 511, `curly-single` 134, `straight-double` 88 | **curly-double** |
 | apostrophe | `typographic` 135, `straight` 12 | **typographic** |
-| ellipsis | `char` 378, `ascii` 18 | **char** |
+| ellipsis | `char` 387, `ascii` 18 | **char** |
 | dash | `em` 69, `en` 3 | **em** |
 | nbsp | `space-before-punctuation` 6 | **space-before-punctuation** |
 
@@ -135,14 +169,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 579 strings** — 579 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 560 more
+- **accesskey — 587 strings** — 587 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addon-install-accept-button`, `addon-install-cancel-button`, `addon-manage-extensions-shortcuts`, `addon-open-about-debugging`, `addon-updates-reset-updates-to-automatic`, `addon-updates-reset-updates-to-manual`, `addon-updates-update-addons-automatically`, `addon-updates-view-updates`, `addressbar-locbar-bookmarks-option`, `addressbar-locbar-clipboard-option`, `addressbar-locbar-engines-option-1`, `addressbar-locbar-openpage-option` …and 568 more
 - **typography — 73 strings** — 73 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CookieRejectedAttributeExpiryOversize`, `FullscreenDeniedContainerNotAllowed`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn`, `about-debugging-network-location-form-duplicate`, `about-debugging-network-location-form-invalid`, `about-debugging-setup-usb-status-updating`, `about-debugging-setup-usb-updating-button` …and 60 more
 
 ---
 
-## 3. Open findings (509)
+## 3. Open findings (520)
 
 > **Reads as a deliberate edit (4).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -171,9 +205,9 @@ _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 212 |
-| 2 | Wrong content (says something other than the English) | 189 |
-| 3 | Degraded language (grammar, spelling, terminology) | 63 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 211 |
+| 2 | Wrong content (says something other than the English) | 198 |
+| 3 | Degraded language (grammar, spelling, terminology) | 66 |
 | 4 | Cosmetic (typography, spacing) | 45 |
 
 ### A. Functional, markup, variables & plurals
@@ -492,6 +526,11 @@ _Also listed under their own category below._
     - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
     - Suggest: `Hành động này sẽ xoá mật khẩu này khỏi { -brand-short-name } trên mọi thiết bị đồng bộ mật khẩu của bạn.`
     - The source and the developer comment both say this confirms deleting a single password ('deletes it'). The Vietnamese says every saved password ('mọi mật khẩu đã lưu') will be deleted, and only on 'other devices' rather than on every device that syncs passwords. That claims a much wider deletion than the product performs.
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — 'May take time to be reflected' is rendered as 'may take time to be found again'.
+    - Current: `những diễn biến gần đây có thể cần thời gian để có thể tìm lại`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `hoạt động gần đây có thể cần thời gian để được cập nhật vào bộ nhớ ngữ cảnh`
+    - The source means recent activity may take a while to show up in memories. 'để có thể tìm lại' means 'to be retrievable/found again', which is a different idea.
 - `decoder-doctor-decode-error-message` — `browser/browser/browser.ftl` — "decoding" is translated as "mã hóa" (encoding) instead of "giải mã".
     - Current: `khi mã hóa một tài nguyên`
     - Source: `An error occurred while decoding a media resource.`
@@ -502,6 +541,11 @@ _Also listed under their own category below._
     - Source: `A recoverable error occurred while decoding a media resource.`
     - Suggest: `Đã xảy ra lỗi có thể khôi phục khi giải mã`
     - In the source, "recoverable" describes the error. The Vietnamese turns it into a recovery process that hit an error, and it also uses "mã hóa" (encoding) where the source says decoding.
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — "Báo cáo trang web độc hại!" reads as an instruction to report a harmful site, not a heading saying the site has been reported as harmful.
+    - Current: `Báo cáo trang web độc hại!`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `Trang web được báo cáo là có hại!`
+    - The en-US "Reported Harmful Site!" is a warning heading saying this site has already been reported as harmful. The Vietnamese reads like a request or button label ("Report harmful site"), which doesn't match how the other "Reported…" headings are worded.
 - `downloads-file-moved-or-missing` — `browser/browser/downloads.ftl` — "Missing" is rendered as "deleted" (bị xoá), which states a cause the source does not claim.
     - Current: `bị di chuyển hoặc bị xoá`
     - Source: `File moved or missing`
@@ -532,6 +576,51 @@ _Also listed under their own category below._
     - Source: `accesskey: x label: Duplicate Tabs`
     - Suggest: `Các thẻ trùng lặp`
     - The developer comment says this item sits under "Close Multiple" and closes duplicate tabs. "Nhân đôi các thẻ" means "duplicate (copy) the tabs", which is a different action.
+- `banner-check-existing` — `browser/installer/custom.ftl` — "Checking existing installation" is rendered as "Checking version".
+    - Current: `Đang kiểm tra phiên bản…`
+    - Source: `Checking existing installation…`
+    - Suggest: `Đang kiểm tra bản cài đặt hiện có…`
+    - "phiên bản" means "version". The en-US says the installer is checking for an existing installation.
+- `warn-restart-required-uninstall` — `browser/installer/custom.ftl` — "previous" is dropped, so the message no longer says the restart is for an earlier, pending uninstall.
+    - Current: `hoàn tất việc gỡ bỏ { $BrandShortName }`
+    - Source: `Your computer must be restarted to complete a previous uninstall of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `hoàn tất việc gỡ bỏ { $BrandShortName } trước đó`
+    - The en-US refers to a previous uninstall that is still pending. Without "trước đó", the Vietnamese reads as if it means the current operation.
+- `warn-restart-required-upgrade` — `browser/installer/custom.ftl` — "previous" is dropped, so the message no longer says the restart is for an earlier, pending upgrade.
+    - Current: `hoàn tất việc nâng cấp { $BrandShortName }`
+    - Source: `Your computer must be restarted to complete a previous upgrade of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `hoàn tất việc nâng cấp { $BrandShortName } trước đó`
+    - The en-US refers to a previous upgrade that is still pending. Without "trước đó", the Vietnamese reads as if it means the current operation.
+- `mui-untext-finish-info-text` — `browser/installer/mui.ftl` — The uninstall wizard is called an installer ("trình cài đặt").
+    - Current: `đóng trình cài đặt này`
+    - Source: `{ $BrandFullNameDA } has been uninstalled from your computer.  Click Finish to close this wizard.`
+    - Suggest: `đóng trình gỡ bỏ này`
+    - This string is shown on the uninstaller's finish page. "This wizard" means the uninstall wizard, which the locale elsewhere calls "trình gỡ bỏ" (mui-untext-abortwarning).
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The uninstall wizard is called "Trình cài đặt" (installer) instead of an uninstaller.
+    - Current: `Trình cài đặt này sẽ giúp bạn gỡ bỏ`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Trình gỡ bỏ này sẽ giúp bạn gỡ bỏ`
+    - The en-US says "This wizard", meaning the Uninstall Wizard. The title mui-untext-welcome-info-title calls it "trình gỡ bỏ", but the body calls it the installer.
+- `stub-blurb-third` — `browser/installer/nsisstrings.ftl` — "a better web" is rendered as "a better website".
+    - Current: `xây dựng một trang web tốt hơn`
+    - Source: `Thanks for building a better web with us`
+    - Suggest: `xây dựng một nền tảng web tốt hơn`
+    - en-US refers to the web as a whole, but "một trang web" means a single website.
+- `nsis-file-error` — `browser/installer/override.ftl` — The English button name in brackets is "(Cancel)", but the source and the dialog's button say "Abort".
+    - Current: `Nhấn “Hủy bỏ” (Cancel) để dừng cài đặt,`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Nhấn “Hủy bỏ” (Abort) để dừng cài đặt,`
+    - This message goes with an Abort/Retry/Ignore dialog. The source says "Click Abort", so the English label in brackets should be Abort. Cancel is used in the other dialog (nsis-file-error-no-ignore).
+- `nsis-log-install` — `browser/installer/override.ftl` — 'Lưu kí' means deposit or custody, not logging.
+    - Current: `Lưu kí tiến trình cài đặt`
+    - Source: `Log install process`
+    - Suggest: `Ghi nhật ký tiến trình cài đặt`
+    - 'Log install process' means writing the installation process to a log. The standard Vietnamese for that is 'ghi nhật ký'. 'Lưu kí' (deposit/custody) does not carry that meaning.
+- `nsis-symbol-not-found` — `browser/installer/override.ftl` — "Symbol" (a code symbol in a DLL) is translated as "biểu tượng" (icon).
+    - Current: `Không thể tìm biểu tượng:`
+    - Source: `Could not find symbol:{   }`
+    - Suggest: `Không thể tìm ký hiệu:`
+    - In this NSIS error, a symbol is an exported function name that could not be found when loading a DLL. "Biểu tượng" means an icon or emblem, so the message says the wrong thing.
 - `mathmlroot` — `dom/chrome/accessibility/AccessFu.properties` — MathML 'root' is translated as 'gốc', which means a tree root or origin, not the math root (radical).
     - Current: `gốc`
     - Source: `root`
@@ -727,65 +816,15 @@ _Also listed under their own category below._
     - Source: `“<” in an unquoted attribute value. Probable cause: Missing “>” immediately before.`
     - Suggest: `“<” xuất hiện trong giá trị thuộc tính unquoted`
     - Source: “<” in an unquoted attribute value. The character is inside the value; it is not the value itself.
-- `errUnquotedAttributeStartEquals` — `dom/chrome/layout/htmlparser.properties` — Probable cause is translated as a missing pair of equals signs instead of a stray duplicate equals sign.
-    - Current: `Thiếu mất cặp dấu bằng`
-    - Source: `“=” at the start of an unquoted attribute value. Probable cause: Stray duplicate equals sign.`
-    - Suggest: `Dấu bằng bị lặp thừa`
-    - en-US says 'Stray duplicate equals sign' (an extra '='), the Vietnamese says a pair of '=' is missing — the opposite cause.
-- `ForcedLayoutStart` — `dom/chrome/layout/layout_errors.properties` — "Flash of unstyled content" is rendered as "content that is not edited", and "flash" is dropped.
-    - Current: `gây ra nội dung không được chỉnh sửa`
-    - Source: `Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content.`
-    - Suggest: `gây ra hiện tượng nháy nội dung chưa được định kiểu`
-    - "Unstyled" means the content has no CSS styling, not that it hasn't been edited. The brief flash, which is the point of the warning, is missing.
-- `17` — `dom/chrome/layout/xmlparser.properties` — The translation drops 'or text declaration' and changes 'entity' to 'external entity'.
-    - Current: `khai báo của xml không ở đầu đối tượng bên ngoài`
-    - Source: `XML or text declaration not at start of entity`
-    - Suggest: `khai báo XML hoặc khai báo văn bản không ở đầu đối tượng`
-    - The source reads 'XML or text declaration not at start of entity'. The Vietnamese leaves out text declarations and says the entity is external, which the source does not say.
-- `38` — `dom/chrome/layout/xmlparser.properties` — The negation is lost: the translation says the xml prefix must be declared or bound to another namespace, the opposite of the source.
-    - Current: `phải được khai báo hoặc gắn với namespace khác`
-    - Source: `reserved prefix (xml) must not be undeclared or bound to another namespace name`
-    - Suggest: `không được bỏ khai báo hoặc gắn với tên namespace khác`
-    - The source reads 'must not be undeclared or bound to another namespace name'. The Vietnamese says 'must be declared or bound to another namespace', which tells the user that binding to another namespace is required when it is actually forbidden.
-- `InvalidChild` — `dom/chrome/mathml/mathml.properties` — 'is not allowed as a child of' was translated as 'is not a child of'.
-    - Current: `không phải là con của`
-    - Source: `Invalid markup: <%1$S> is not allowed as a child of <%2$S>.`
-    - Suggest: `không được phép là con của`
-    - The source says the element is not permitted as a child. The translation instead states as a fact that it is not a child, so the constraint is lost.
-- `LengthParsingError` — `dom/chrome/mathml/mathml.properties` — The translation is garbled: it reads as 'error parsing the MathML attribute value, such as a length error' instead of 'error parsing the value as a length'.
-    - Current: `Lỗi phân tích '%1$S' giá trị thuộc tính MathML chẳng hạn như lỗi độ dài.`
-    - Source: `Error in parsing MathML attribute value ‘%1$S’ as length.  Attribute ignored.`
-    - Suggest: `Lỗi phân tích giá trị thuộc tính MathML ‘%1$S’ dưới dạng độ dài.`
-    - The source says the value could not be parsed as a length. 'chẳng hạn như lỗi độ dài' means 'such as a length error', which is a different meaning.
-- `CheckLoadURIError` — `dom/chrome/security/caps.properties` — "may not load" (not permitted) is rendered as "might not load".
-    - Current: `có thể không tải hoặc liên kết đến`
-    - Source: `Security Error: Content at %S may not load or link to %S.`
-    - Suggest: `không được phép tải hoặc liên kết đến`
-    - In a security error, "may not" means the content is not allowed to load. "có thể không" means it might fail to load, which is a different statement.
-- `CheckSameOriginError` — `dom/chrome/security/caps.properties` — "may not load data" (not permitted) is rendered as "might not load data".
-    - Current: `có thể không tải dữ liệu từ`
-    - Source: `Security Error: Content at %S may not load data from %S.`
-    - Suggest: `không được phép tải dữ liệu từ`
-    - Here "may not" means not permitted. "có thể không" means "might not", which is a possibility, not a prohibition.
-- `CreateWrapperDenied` — `dom/chrome/security/caps.properties` — "object of class %S" is rendered as "object or class %S".
-    - Current: `đối tượng hoặc lớp %S`
-    - Source: `Permission denied to create wrapper for object of class %S`
-    - Suggest: `đối tượng của lớp %S`
-    - The source refers to an object belonging to class %S. "hoặc" means "or", which changes the meaning.
-- `ExternalDataError` — `dom/chrome/security/caps.properties` — "may not load external data" (not permitted) is rendered as "might not load external data".
-    - Current: `nhưng có thể không nạp dữ liệu bên ngoài`
-    - Source: `Security Error: Content at %S attempted to load %S, but may not load external data when being used as an image.`
-    - Suggest: `nhưng không được phép nạp dữ liệu bên ngoài`
-    - The source states a prohibition: content used as an image is not allowed to load external data. The translation says it might not load it.
-- `ignoringReportOnlyDirective` — `dom/chrome/security/csp.properties` — "report-only" is left out, so the condition (the directive comes in a report-only policy) is lost.
-    - Current: `khi gửi với chính sách ‘%1$S’`
-    - Source: `Ignoring sandbox directive when delivered in a report-only policy ‘%1$S’`
-    - Suggest: `khi được gửi trong chính sách report-only ‘%1$S’`
-    - The source says the sandbox directive is ignored only when it is delivered in a report-only policy. The translation drops "report-only", so it reads as if the directive is ignored under any policy.
-- _…and 56 more; see `state/` for the full list._
+- _…and 67 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — A stray period before the brand name breaks the sentence in two.
+    - Current: `trong khi bạn sử dụng. { -smart-window-brand-name }, vì vậy`
+    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
+    - Suggest: `trong khi bạn sử dụng { -smart-window-brand-name }, vì vậy`
+    - In en-US, 'while you use { -smart-window-brand-name }' is one clause. The period cuts the brand name off from its verb, which is ungrammatical.
 - `aiwindow-input-model-select-button-label-custom` — `browser/browser/aiWindow.ftl` — 'Custom' model was translated as 'Tùy chọn' (Options), unlike 'Tùy chỉnh' used elsewhere
     - Current: `Tùy chọn`
     - Source: `Custom`
@@ -1081,12 +1120,7 @@ _Also listed under their own category below._
     - Source: `Cookie “%1$S” has been rejected for invalid domain.`
     - Suggest: `đã bị từ chối vì miền không hợp lệ`
     - In the source, "rejected for invalid domain" gives the reason. "cho" reads as "rejected to the invalid domain". The sibling strings correctly use "vì".
-- `CookieRejectedPartitionedRequiresSecure` — `netwerk/necko.properties` — "thuộc tinh" is missing the accent on "tính".
-    - Current: `thuộc tinh`
-    - Source: `Cookie “%1$S” has been rejected because it has the “Partitioned” attribute but is missing the “secure” attribute.`
-    - Suggest: `thuộc tính`
-    - Spelling error. The correct word for "attribute" is "thuộc tính", and the same sentence spells it correctly earlier.
-- _…and 23 more; see `state/` for the full list._
+- _…and 24 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -1125,6 +1159,11 @@ _Also listed under their own category below._
     - Source: `{$tabCount ->} [one] { $tabCount } tab has arrived from your connected devices [other] { $tabCount } tabs have arrived from your connected devices`
     - Suggest: `{ $tabCount } thẻ đã tới từ các thiết bị đã kết nối của bạn`
     - As written it reads 'N have arrived from your connected device', with no noun. The sibling strings include 'thẻ'.
+- `aiwindow-input-model-select-auto-description` — `browser/browser/aiWindow.ftl` — "model" is rendered as "mẫu" (template/sample), but everywhere else in this surface, including identical strings, it is "mô hình".
+    - Current: `chọn mẫu phù hợp nhất`
+    - Source: `{ -smart-window-brand-name } picks the best model for your task`
+    - Suggest: `chọn mô hình phù hợp nhất`
+    - The en-US refers to the AI model. The identical strings smart-window-model-auto and smartwindow-onboarding-model-auto-description use "mô hình". "mẫu" means template or sample, which is the wrong term here.
 - `identity-description-active-loaded-insecure` — `browser/browser/browser.ftl` — 'etc.' was written as 'vâng vâng' ('yes yes') instead of 'vân vân' / 'v.v.'
     - Current: `vâng vâng`
     - Source: `Information you share with this site could be viewed by others (like passwords, messages, credit cards, etc.).`
@@ -1170,11 +1209,6 @@ _Also listed under their own category below._
     - Source: `Blocked by Parental Controls`
     - Suggest: `Kiểm soát của phụ huynh`
     - The developer comment asks for the Windows feature name to be used consistently. "trình kiểm soát con" reads literally as "child controller" and does not match the Vietnamese Windows name for Parental Controls.
-- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Chế độ xem cửa sổ” but the string it names, `customkeys-view-add-split-view`, reads “Chế độ chia cửa sổ”
-    - Current: `Nhấp chuột phải vào thẻ này và chọn “Chế độ xem cửa sổ” để xem hai thẻ cùng một lúc.`
-    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
-    - Suggest: `Chế độ chia cửa sổ`
-    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firefox-relay-get-unlimited-masks` — `browser/browser/firefoxRelay.ftl` — Typo: 'Muản lý' instead of 'Quản lý' (Manage)
     - Current: `Muản lý mặt nạ`
     - Source: `accesskey: M label: Manage masks`
@@ -1394,11 +1428,6 @@ _Also listed under their own category below._
 
 ### E. Typography, punctuation & spacing
 
-- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — A stray period splits 'while you use { Smart Window }' into two broken sentences
-    - Current: `trong khi bạn sử dụng. { -smart-window-brand-name }, vì vậy,`
-    - Source: `description: Memories are stored locally on this device to help protect your privacy. They refresh a few times a day while you use { -smart-window-brand-name }, so recent activity may take time to be reflected. heading:…`
-    - Suggest: `trong khi bạn sử dụng { -smart-window-brand-name }, vì vậy,`
-    - en-US: 'They refresh a few times a day while you use { -smart-window-brand-name }, so…'. The period cuts the brand name away from its verb.
 - `default-browser-agent-task-description` — `browser/browser/backgroundtasks/defaultagent.ftl` — There is a stray space before the final period.
     - Current: `{ -brand-short-name } .`
     - Source: `The Default Browser Agent task checks when the default changes from { -brand-short-name } to another browser. If the change happens under suspicious circumstances, it will prompt users to change back to { -brand-short-n…`
@@ -1694,7 +1723,11 @@ _Also listed under their own category below._
     - Source: `Contact your network administrator to make sure the proxy server is working.`
     - Suggest: `proxy vẫn`
     - Two spaces where one is meant, in a user-visible message.
-- _…and 1 more; see `state/` for the full list._
+- `webauthn-uv-blocked-prompt` — `toolkit/toolkit/webauthnDialog.ftl` — Double space before the hostname in visible text
+    - Current: `trên  { $hostname }`
+    - Source: `User verification failed on { $hostname }. There were too many failed attempts and the built-in user verification method has been blocked.`
+    - Suggest: `trên { $hostname }`
+    - Two spaces where one is meant, in a user-visible message.
 
 ---
 
@@ -1722,6 +1755,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `ai-window-manage-memories-header` — `browser/browser/aiFeatures.ftl` — fixed 2026-11-23
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — fixed 2026-11-23

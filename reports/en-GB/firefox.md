@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,883 |
+| **Strings reviewed this run** | 317 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,8 +44,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,9 +71,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 550, `curly-single` 94, `straight-double` 55 | **curly-double** |
-| apostrophe | `typographic` 1037, `straight` 43 | **typographic** |
-| ellipsis | `char` 401, `ascii` 1 | **char** |
+| quotes | `curly-double` 549, `curly-single` 94, `straight-double` 55 | **curly-double** |
+| apostrophe | `typographic` 1068, `straight` 43 | **typographic** |
+| ellipsis | `char` 410, `ascii` 1 | **char** |
 | dash | `em` 83, `en` 4 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 

@@ -1,20 +1,20 @@
 {
  "_meta": {
   "locale": "ru",
-  "prose_chunks": 17710,
-  "strings": 16883
+  "prose_chunks": 17952,
+  "strings": 17120
  },
  "apostrophe": {
   "straight": 15,
   "typographic": 9
  },
  "dash": {
-  "em": 132,
+  "em": 135,
   "en": 5
  },
  "ellipsis": {
   "ascii": 5,
-  "char": 404
+  "char": 416
  },
  "fullwidth": {
   "punctuation": 0
@@ -32,11 +32,11 @@
  "quotes": {
   "curly-double": 4,
   "curly-single": 5,
-  "guillemet": 1074,
+  "guillemet": 1097,
   "straight-double": 28
  },
  "register": {
-  "formal": 3295,
-  "informal": 977
+  "formal": 3367,
+  "informal": 999
  }
 }

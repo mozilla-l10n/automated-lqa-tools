@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,127 |
+| **Strings reviewed this run** | 239 of 16,314 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,101 @@ Also for es-MX: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (16)
 
-_No new findings._
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — Affirmative "Sí" is missing its accent.
+    - Current: `Si, llévame`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Sí, llévame`
+    - "Yes" in Spanish is "Sí"; "Si" without the accent is the conjunction "if".
+- `maintenance-service-checkbox-desc` — `browser/installer/custom.ftl` — Checkbox label reads "Installation and maintenance service" instead of "Install Maintenance Service".
+    - Current: `Servicio de instalación y mantenimiento`
+    - Source: `(value): Install Maintenance Service accesskey: M`
+    - Suggest: `Instalar servicio de mantenimiento`
+    - The en-US is an action (install the Maintenance Service). The translation names a different service, "installation and maintenance service".
+- `safebrowsing-reported-unwanted-site-message` — `browser/browser/browser.ftl` — "Unwanted software" is translated as "software malicioso" (malware).
+    - Current: `software malicioso`
+    - Source: `Reported Unwanted Software Site!`
+    - Suggest: `software no deseado`
+    - Safe Browsing keeps unwanted software as a separate category from malware, which has its own warning. "Malicioso" mislabels the category.
+- `safebrowsing-reported-attack-site-message` — `browser/browser/browser.ftl` — "Reported Attack Site!" is rendered as "This website is dangerous!", which drops that the site was reported as an attack site.
+    - Current: `¡Este sitio web es peligroso!`
+    - Source: `Reported Attack Site!`
+    - Suggest: `¡Sitio de ataque reportado!`
+    - The source says the site was reported as an attack site. The translation drops both "reported" and "attack", which breaks consistency with the sibling strings (e.g. "¡Sitio peligroso reportado!").
+- `icons-taskbar` — `browser/installer/custom.ftl` — "Taskbar" is translated as "barra de herramientas" (toolbar).
+    - Current: `En mi barra de herramientas`
+    - Source: `(value): On my taskbar accesskey: t`
+    - Suggest: `En mi barra de tareas`
+    - The Windows taskbar is "barra de tareas". "Barra de herramientas" means toolbar, which is a different UI element.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — The preposition "a" is missing before the indirect object "Mozilla".
+    - Current: `Dile Mozilla`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `Dile a Mozilla`
+    - Spanish needs "a" before a named indirect object: "Dile a Mozilla por qué…".
+- `option-custom-desc` — `browser/installer/custom.ftl` — Uses the formal "Puede", but the locale convention is informal address.
+    - Current: `Puede elegir`
+    - Source: `You may choose individual options to be installed. Recommended for experienced users.`
+    - Suggest: `Puedes elegir`
+    - The es-MX register is informal (tú), and the surrounding installer strings use tú forms (Haz clic, Selecciona).
+- `create-icons-desc` — `browser/installer/custom.ftl` — The plural "icons" is rendered as the singular "el ícono".
+    - Current: `Crear el ícono para`
+    - Source: `Create icons for { $BrandShortName }:`
+    - Suggest: `Crear íconos para`
+    - The source offers several icons (desktop, Start menu, taskbar). A singular definite article suggests only one icon.
+- `warn-min-supported-cpu-msg` — `browser/installer/custom.ftl` — There is a stray space before the period.
+    - Current: `{ $MinSupportedCPU } .`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `{ $MinSupportedCPU }.`
+    - The space between the placeholder and the period shows up in the user-visible text. The source has none.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — There is a stray space before the period.
+    - Current: `{ $MinSupportedCPU } .`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `{ $MinSupportedCPU }.`
+    - The space between the placeholder and the period shows up in the user-visible text. The source has none.
+- `mui-text-abort-subtitle` — `browser/installer/mui.ftl` — The past-tense verb "completó" is missing its accent.
+    - Current: `no se completo correctamente`
+    - Source: `Setup was not completed successfully.`
+    - Suggest: `no se completó correctamente`
+    - Without the accent, "completo" reads as "I complete" (or the adjective "complete") instead of "was completed". The uninstall version of this string writes "completó" correctly.
+- `mui-untext-uninstalling-subtitle` — `browser/installer/mui.ftl` — This string uses the formal "Espere", but the locale addresses users informally.
+    - Current: `Espere mientras`
+    - Source: `Please wait while { $BrandFullNameDA } is being uninstalled.`
+    - Suggest: `Espera mientras`
+    - The locale convention is informal address, and the matching install string uses "Espera mientras".
+- `mui-untext-confirm-title` — `browser/installer/mui.ftl` — The confirmation page title says "Uninstalling" instead of "Uninstall".
+    - Current: `Desinstalando { $BrandFullNameDA }`
+    - Source: `Uninstall { $BrandFullNameDA }`
+    - Suggest: `Desinstalar { $BrandFullNameDA }`
+    - The en-US title is an action label on the confirmation page, shown before anything is removed. The progressive "Desinstalando" says uninstallation is already happening, and it repeats the separate "Uninstalling" title.
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — "Menú inicio" is capitalized differently from "menú Inicio" in the nearby strings.
+    - Current: `Menú inicio`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `menú Inicio`
+    - The Start menu title and subtitle strings use "menú Inicio", which matches how Windows names it in Spanish. "Menú inicio" is out of step with them.
+- `newtab-weather-menu-weather-display` — `browser/browser/newtab/newtab.ftl` — "Mostrar el clima" ("Show the weather") mistranslates the label for the weather display-mode submenu.
+    - Current: `Mostrar el clima`
+    - Source: `Weather Display`
+    - Suggest: `Vista del clima`
+    - In English, "Weather Display" is the label of a submenu for choosing a view (Simple or Detailed). "Mostrar el clima" reads as a command to show the weather, which is a different action.
+- `newtab-widget-lists-input-menu-move-down` — `browser/browser/newtab/newtab.ftl` — "Descender" doesn't match its paired item "Mover hacia arriba" and reads as "go down" rather than "move this item down".
+    - Current: `Descender`
+    - Source: `Move Down`
+    - Suggest: `Mover hacia abajo`
+    - The paired item Move Up is rendered "Mover hacia arriba". Move Down should be its counterpart, "Mover hacia abajo". "Descender" is inconsistent with it and less clear as a menu action.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
+    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si deseas deshabilitar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Qué hay de nuevo`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Temas guardados” but the string it names, `theme-disabled-heading2`, reads “Guardar temas”
+    - Current: `heading: Se eliminaron tus esquemas de colores. message: { -brand-product-name } actualizó su colección de esquemas de colores. Se eliminaron las versiones anteriores de tu lista de “Temas guardados”. Consigue las nueva…`
+    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
+    - Suggest: `Guardar temas`
+    - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +132,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 327 |
-| Strings | 16,127 |
-| Missing strings | 756 |
+| Files | 332 |
+| Strings | 16,314 |
+| Missing strings | 806 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 4 |
 | Files with no en-US counterpart | 0 |
@@ -55,28 +143,28 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
-| Access keys not in their label | 120 |
+| Access keys not in their label | 121 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 112 |
 
 ### Completeness
 
-**756 strings** are not translated yet, concentrated in:
+**806 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 135
-- `browser/browser/ipProtection.ftl` — 55
-- `browser/browser/newtab/onboarding.ftl` — 55
-- `browser/browser/preferences/preferences.ftl` — 51
-- `browser/browser/browser.ftl` — 25
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 25
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 25
+- `browser/browser/newtab/newtab.ftl` — 132
+- `browser/browser/ipProtection.ftl` — 60
+- `browser/browser/newtab/onboarding.ftl` — 53
+- `browser/browser/preferences/preferences.ftl` — 53
+- `browser/browser/aiWindow.ftl` — 28
+- `browser/browser/browser.ftl` — 26
 - `toolkit/services/aboutSyncLog.ftl` — 25
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 23
-- `toolkit/toolkit/about/aboutAddons.ftl` — 16
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 22
+- `browser/browser/miniWindow.ftl` — 17
+- `toolkit/toolkit/about/aboutAddons.ftl` — 17
 - `toolkit/toolkit/about/aboutPDF.ftl` — 16
-- `browser/browser/miniWindow.ftl` — 15
 
 **Files absent from the locale:**
 
@@ -95,24 +183,24 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 464, `straight-double` 134, `curly-single` 79, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 91, `straight` 37 | _mixed_ |
-| ellipsis | `char` 370, `ascii` 19 | **char** |
+| ellipsis | `char` 379, `ascii` 19 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 16, `narrow` 10, `before-punctuation` 12, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 329, `open-exclamation` 72 | **open-question** |
-| register | `informal` 1244, `formal` 209 | **informal** |
+| inverted marks | `open-question` 338, `open-exclamation` 78 | **open-question** |
+| register | `informal` 1253, `formal` 211 | **informal** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **accesskey — 120 strings** — 120 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
-    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 107 more
+- **accesskey — 121 strings** — 121 strings. The locale kept en-US access keys rather than remapping them to its own labels. Remapping is a single decision for the locale team; it is not tracked as individual defects.
+    - Affected: `addressbar-locbar-clipboard-option`, `addressbar-locbar-openpage-option`, `addressbar-locbar-quickactions-option`, `appmenu-addon-post-install-pin-toolbarbutton-checkbox`, `appmenu-help-more-troubleshooting-info`, `appmenu-help-not-deceptive`, `appmenu-homepage-controlled-changes`, `appmenu-new-tab-controlled-changes`, `appmenu-tab-hide-controlled`, `appmenu-theme-installed`, `appmenu-update-available2`, `appmenu-update-manual2` …and 108 more
 - **typography — 112 strings** — 112 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `BlockMixedActiveContent`, `BlockMixedDisplayContent`, `CORSPreflightDidNotSucceed3`, `CookieRejectedByPermissionManager`, `CookieRejectedInvalidCharName`, `CookieSameSiteValueInvalid2`, `FullscreenDeniedContainerNotAllowed`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError` …and 100 more
 
 ---
 
-## 3. Open findings (79)
+## 3. Open findings (93)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -127,9 +215,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 28 |
-| 3 | Degraded language (grammar, spelling, terminology) | 40 |
-| 4 | Cosmetic (typography, spacing) | 11 |
+| 2 | Wrong content (says something other than the English) | 32 |
+| 3 | Degraded language (grammar, spelling, terminology) | 48 |
+| 4 | Cosmetic (typography, spacing) | 13 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -162,6 +250,16 @@ _Nothing in this category._
     - Source: `Checking tabs for useful groups…`
     - Suggest: `Revisando las pestañas para formar grupos útiles…`
     - The developer comment says the model forms new groups from the open tabs and is not searching for existing tab groups. The Spanish suggests it is searching for tabs that already have groups.
+- `safebrowsing-reported-attack-site-message` — `browser/browser/browser.ftl` — "Reported Attack Site!" is rendered as "This website is dangerous!", which drops that the site was reported as an attack site.
+    - Current: `¡Este sitio web es peligroso!`
+    - Source: `Reported Attack Site!`
+    - Suggest: `¡Sitio de ataque reportado!`
+    - The source says the site was reported as an attack site. The translation drops both "reported" and "attack", which breaks consistency with the sibling strings (e.g. "¡Sitio peligroso reportado!").
+- `safebrowsing-reported-unwanted-site-message` — `browser/browser/browser.ftl` — "Unwanted software" is translated as "software malicioso" (malware).
+    - Current: `software malicioso`
+    - Source: `Reported Unwanted Software Site!`
+    - Suggest: `software no deseado`
+    - Safe Browsing keeps unwanted software as a separate category from malware, which has its own warning. "Malicioso" mislabels the category.
 - `toolbar-button-forget` — `browser/browser/browser.ftl` — Tooltip drops "some", claiming the button forgets the browsing history as a whole.
     - Current: `Olvidar el historial de navegación`
     - Source: `label: Forget tooltiptext: Forget about some browsing history`
@@ -192,6 +290,11 @@ _Nothing in this category._
     - Source: `Make { -brand-short-name } your go-to browser for built-in privacy.`
     - Suggest: `Haz de { -brand-short-name } tu navegador de referencia por su privacidad integrada.`
     - The en-US says to make Firefox your go-to browser thanks to its built-in privacy, not to set it as the system default browser (though the CTA is "Make default", the message itself does not say "predeterminado"); the Spanish also reverses the causal relation, stating the purpose is to get privacy protection.
+- `newtab-weather-menu-weather-display` — `browser/browser/newtab/newtab.ftl` — "Mostrar el clima" ("Show the weather") mistranslates the label for the weather display-mode submenu.
+    - Current: `Mostrar el clima`
+    - Source: `Weather Display`
+    - Suggest: `Vista del clima`
+    - In English, "Weather Display" is the label of a submenu for choosing a view (Simple or Detailed). "Mostrar el clima" reads as a command to show the weather, which is a different action.
 - `smartwindow-onboarding-title` — `browser/browser/newtab/onboarding.ftl` — "Make it your go-to" mistranslated as "use it as a starting point".
     - Current: `Utiliza { -smart-window-brand-name } como punto de partida`
     - Source: `Make { -smart-window-brand-name } your go-to`
@@ -232,6 +335,26 @@ _Nothing in this category._
     - Source: `Edit controls`
     - Suggest: `Controles de edición`
     - In customizableWidgets, "Edit controls" is the name of the toolbar widget containing Cut/Copy/Paste, i.e. "editing controls", not an instruction to edit controls.
+- `create-icons-desc` — `browser/installer/custom.ftl` — The plural "icons" is rendered as the singular "el ícono".
+    - Current: `Crear el ícono para`
+    - Source: `Create icons for { $BrandShortName }:`
+    - Suggest: `Crear íconos para`
+    - The source offers several icons (desktop, Start menu, taskbar). A singular definite article suggests only one icon.
+- `icons-taskbar` — `browser/installer/custom.ftl` — "Taskbar" is translated as "barra de herramientas" (toolbar).
+    - Current: `En mi barra de herramientas`
+    - Source: `(value): On my taskbar accesskey: t`
+    - Suggest: `En mi barra de tareas`
+    - The Windows taskbar is "barra de tareas". "Barra de herramientas" means toolbar, which is a different UI element.
+- `maintenance-service-checkbox-desc` — `browser/installer/custom.ftl` — Checkbox label reads "Installation and maintenance service" instead of "Install Maintenance Service".
+    - Current: `Servicio de instalación y mantenimiento`
+    - Source: `(value): Install Maintenance Service accesskey: M`
+    - Suggest: `Instalar servicio de mantenimiento`
+    - The en-US is an action (install the Maintenance Service). The translation names a different service, "installation and maintenance service".
+- `mui-untext-confirm-title` — `browser/installer/mui.ftl` — The confirmation page title says "Uninstalling" instead of "Uninstall".
+    - Current: `Desinstalando { $BrandFullNameDA }`
+    - Source: `Uninstall { $BrandFullNameDA }`
+    - Suggest: `Desinstalar { $BrandFullNameDA }`
+    - The en-US title is an action label on the confirmation page, shown before anything is removed. The progressive "Desinstalando" says uninstallation is already happening, and it repeats the separate "Uninstalling" title.
 - `perftools-presets-networking-with-logs-description` — `devtools/client/perftools.ftl` — "networking logs" rendered as "registros de tráfico" and "the URLs you visit" changed to past tense.
     - Current: `incluyendo registros de tráfico`
     - Source: `Preset for investigating networking bugs in { -brand-shorter-name }, including networking logs. These logs may contain sensitive information such as the URLs you visit.`
@@ -297,6 +420,11 @@ _Nothing in this category._
     - Source: `Try email masks`
     - Suggest: `correo electrónico`
     - The correct spelling is "electrónico", and the neighbouring strings use it.
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — Affirmative "Sí" is missing its accent.
+    - Current: `Si, llévame`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Sí, llévame`
+    - "Yes" in Spanish is "Sí"; "Si" without the accent is the conjunction "if".
 - `customize-mode-toolbarspring` — `browser/browser/customizeMode.ftl` — English-style title case: Spanish capitalizes only the first word of a label.
     - Current: `Espacio Flexible`
     - Source: `title: Flexible Space`
@@ -332,6 +460,16 @@ _Nothing in this category._
     - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
     - Suggest: `no es privada`
     - The subject is "Tu conexión", which is feminine.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — The preposition "a" is missing before the indirect object "Mozilla".
+    - Current: `Dile Mozilla`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `Dile a Mozilla`
+    - Spanish needs "a" before a named indirect object: "Dile a Mozilla por qué…".
+- `mui-text-abort-subtitle` — `browser/installer/mui.ftl` — The past-tense verb "completó" is missing its accent.
+    - Current: `no se completo correctamente`
+    - Source: `Setup was not completed successfully.`
+    - Suggest: `no se completó correctamente`
+    - Without the accent, "completo" reads as "I complete" (or the adjective "complete") instead of "was completed". The uninstall version of this string writes "completó" correctly.
 - `manifest-icon-img-title-no-sizes` — `devtools/client/application.ftl` — Wrong word / duplicated word: perftools-thread-jvm-pool ("creador" → "creados", devtools/perftools.ftl); manifest-icon-img-title-no-sizes (see devtools terminology); accessibility-text-label-issue-figure ("más más", devtools/accessibility.ftl); inactive-css-not-grid-or-flex-item ("un un ítem", devtools/tooltips.ftl); permissions-exceptions-manage-etp-desc ("clic en en", preferences/permissions.ft…
     - Source: `Unspecified size icon`
 - `url-classifier-content-classifier-col-exception` — `toolkit/toolkit/about/url-classifier.ftl` — Column header rendered in plural although the source is singular, unlike the matching verdict string.
@@ -387,16 +525,16 @@ _Nothing in this category._
     - Source: `Highlight text to choose an action`
     - Suggest: `Resalta el texto`
     - es-MX uses informal address throughout (e.g. "Selecciona" in the same file); "Resalte" is the usted form.
+- `newtab-widget-lists-input-menu-move-down` — `browser/browser/newtab/newtab.ftl` — "Descender" doesn't match its paired item "Mover hacia arriba" and reads as "go down" rather than "move this item down".
+    - Current: `Descender`
+    - Source: `Move Down`
+    - Suggest: `Mover hacia abajo`
+    - The paired item Move Up is rendered "Mover hacia arriba". Move Down should be its counterpart, "Mover hacia abajo". "Descender" is inconsistent with it and less clear as a menu action.
 - `desktop-to-mobile-subtitle` — `browser/browser/newtab/onboarding.ftl` — `desktop-to-mobile-subtitle` quotes “Sincronizar con el móvil” but the string it names, `sync-to-mobile-button-label`, reads “Sincronización con el móvil”
     - Current: `Escanea el código QR para descargar { -brand-product-name } para móvil. Una vez instalado, seleccione "Sincronizar con el móvil" para acceder a sus contraseñas, marcadores y mucho más sobre la marcha.`
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `Sincronización con el móvil`
     - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
-    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si deseas deshabilitar la página posterior a la actualización.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Qué hay de nuevo`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `content-blocking-fingerprinters` — `browser/browser/preferences/preferences.ftl` — Fingerprinters: "Huellas dactilares" (content-blocking-fingerprinters, content-blocking-fingerprinters-label) vs "Detectores de huellas digitales" (content-blocking-known-and-suspected-fingerprinters, content-blocking-known-fingerprinters-label).
     - Source: `Fingerprinters`
 - `content-blocking-known-and-suspected-fingerprinters` — `browser/browser/preferences/preferences.ftl` — Fingerprinters: "Huellas dactilares" (content-blocking-fingerprinters, content-blocking-fingerprinters-label) vs "Detectores de huellas digitales" (content-blocking-known-and-suspected-fingerprinters, content-blocking-known-fingerprinters-label).
@@ -408,6 +546,21 @@ _Nothing in this category._
     - Source: `accesskey: A label: Add application`
     - Suggest: `Agregar aplicación`
     - The prompt protocolhandler-add-handler-message asks '¿Agregar … como una aplicación…?' but the button that answers it uses 'Añadir'. The two terms are inconsistent on the same surface, and 'Agregar' is the usual Mexican choice.
+- `option-custom-desc` — `browser/installer/custom.ftl` — Uses the formal "Puede", but the locale convention is informal address.
+    - Current: `Puede elegir`
+    - Source: `You may choose individual options to be installed. Recommended for experienced users.`
+    - Suggest: `Puedes elegir`
+    - The es-MX register is informal (tú), and the surrounding installer strings use tú forms (Haz clic, Selecciona).
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — "Menú inicio" is capitalized differently from "menú Inicio" in the nearby strings.
+    - Current: `Menú inicio`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `menú Inicio`
+    - The Start menu title and subtitle strings use "menú Inicio", which matches how Windows names it in Spanish. "Menú inicio" is out of step with them.
+- `mui-untext-uninstalling-subtitle` — `browser/installer/mui.ftl` — This string uses the formal "Espere", but the locale addresses users informally.
+    - Current: `Espere mientras`
+    - Source: `Please wait while { $BrandFullNameDA } is being uninstalled.`
+    - Suggest: `Espera mientras`
+    - The locale convention is informal address, and the matching install string uses "Espera mientras".
 - `sidebar-item-session-history` — `devtools/client/application.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
     - Source: `(value): Session History alt: Session History Icon title: Session History`
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` quotes “Interrumpir en……” but the string it names, `watchpoints.submenu`, reads “Interrumpir en…”
@@ -424,11 +577,6 @@ _Nothing in this category._
     - Source: `FIPS mode requires that you have a Primary Password set for each security device. Please set the password before trying to enable FIPS mode.`
 - `addon-detail-rating-label` — `toolkit/toolkit/about/aboutAddons.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
     - Source: `Rating`
-- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Temas guardados” but the string it names, `theme-disabled-heading2`, reads “Guardar temas”
-    - Current: `heading: Se eliminaron tus esquemas de colores. message: { -brand-product-name } actualizó su colección de esquemas de colores. Se eliminaron las versiones anteriores de tu lista de “Temas guardados”. Consigue las nueva…`
-    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
-    - Suggest: `Guardar temas`
-    - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `detail-rating` — `toolkit/toolkit/about/aboutAddons.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
     - Source: `value: Rating`
 - `certificate-viewer-subject-alt-names` — `toolkit/toolkit/about/certviewer.ftl` — click: "haz clic" vs "da clic" (permissions.ftl); Subject (cert) certificate-viewer-subject-name "interesado" / certificate-viewer-subject-alt-names "sujeto" / certificate-viewer-subject-key-id "asunto"; Rating detail-rating "Clasificación" vs addon-detail-rating-label "Calificación"; Icon "Icono" vs "Ícono" (sidebar-item-session-history and siblings).
@@ -487,6 +635,16 @@ _Nothing in this category._
     - Source: `Delete “{ $profilename }” profile?`
     - Suggest: `¿Eliminar el perfil “{ $profilename }”?`
     - The source uses “…”; the localized string closes with a left double quotation mark, breaking the curly-double convention.
+- `warn-min-supported-cpu-msg` — `browser/installer/custom.ftl` — There is a stray space before the period.
+    - Current: `{ $MinSupportedCPU } .`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `{ $MinSupportedCPU }.`
+    - The space between the placeholder and the period shows up in the user-visible text. The source has none.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — There is a stray space before the period.
+    - Current: `{ $MinSupportedCPU } .`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `{ $MinSupportedCPU }.`
+    - The space between the placeholder and the period shows up in the user-visible text. The source has none.
 - `download-cert-trust-header` — `security/manager/security/pippki/pippki.ftl` — Straight double quotes used instead of the locale's curly double quotes.
     - Current: `"{ $caName }"`
     - Source: `Do you want to trust “{ $caName }” for the following purposes?`
@@ -523,8 +681,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (205)
+### Fixed to date (207)
 
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-23
 - `about-logins-os-auth-dialog-message` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `login-intro-instructions-fxa-settings` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
 - `account-tabs-closed-remotely` — `browser/browser/accounts.ftl` — fixed 2026-08-24
@@ -563,5 +723,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `media-count` — `browser/browser/pageInfo.ftl` — fixed 2026-08-24
 - `panic-button-delete-history` — `browser/browser/panicButton.ftl` — fixed 2026-08-24
 - `panic-button-open-new-window` — `browser/browser/panicButton.ftl` — fixed 2026-08-24
-- `places-forget-about-this-site-confirmation-msg` — `browser/browser/places.ftl` — fixed 2026-08-24
-- `places-load-js-data-url-error` — `browser/browser/placesPrompts.ftl` — fixed 2026-08-24

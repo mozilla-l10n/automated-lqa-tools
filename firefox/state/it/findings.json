@@ -286,7 +286,7 @@
   "file": "browser/browser/defaultBrowserNotification.ftl",
   "first_seen": "2026-08-20",
   "impact": 2,
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-23",
   "locale": "it",
   "origin": {},
   "rationale": "In the source this string quotes “Web browser”, which is exactly the value of `desktop-entry-generic-name` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.",
@@ -1129,6 +1129,30 @@
   "string_id": "select-translations-panel-try-another-language-label",
   "suggest": "",
   "summary": "⚠️ select-translations-panel-try-another-language-label — browser/browser/translations.ftl:213 — still lingua sorgente vs lingua di origine (line 85).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Fare clic su Annulla per terminare l’installazione",
+  "dismissed_because": "",
+  "fid": "4385c7474151",
+  "file": "browser/installer/override.ftl",
+  "first_seen": "2026-11-23",
+  "impact": 2,
+  "last_seen": "2026-11-23",
+  "locale": "it",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US names the Abort button. The dialog is the standard Windows message box (Abort/Retry/Ignore), and on Italian Windows its buttons read “Interrompi”, “Riprova” and “Ignora”. “Annulla” is the label of the Cancel button, which this dialog doesn't have, so the instruction names a button the user won't see.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "e21feb80",
+  "string_id": "nsis-file-error",
+  "suggest": "Fare clic su Interrompi per terminare l’installazione",
+  "summary": "The text tells users to click “Annulla” for Abort, but the Windows Abort/Retry/Ignore dialog labels that button “Interrompi”.",
   "suppressed_by": ""
  },
  {

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 78 of 16,883 |
+| **Strings reviewed this run** | 282 of 17,085 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,40 +20,59 @@ Also for cs: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ### 🆕 New findings (6)
 
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip translates "Open" as an imperative verb ("Otevírejte"), but it means tabs that are open.
-    - Current: `Otevírejte panely z ostatních zařízení`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Otevřené panely z ostatních zařízení`
-    - The developer comment says "Open tabs" is a modified noun (tabs that are open). The tooltip describes the synced data type, like the other engine tooltips ("Addresses you've saved"). The Czech reads as an instruction to open tabs.
-- `newtab-widget-wrexhamafc-menu-view` — `browser/browser/newtab/newtab.ftl` — "View" is translated as a verb ("Zobrazit"), but the comment says it is a noun.
-    - Current: `Zobrazit`
-    - Source: `View`
-    - Suggest: `Zobrazení`
-    - The developer comment says "View" is a noun here, as in the view the widget shows. It opens a submenu for switching views. "Zobrazit" means "to show/display".
-- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — Misspelled imperative "ciťte" instead of "cíťte".
-    - Current: `ciťte`
-    - Source: `Make this screen feel like home with a background you love.`
-    - Suggest: `cíťte`
-    - The imperative of "cítit" is "cíťte" with a long í.
-- `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — Agreement error in the few variant: neuter noun "stahování" used with masculine/feminine plural forms.
-    - Current: `Tyto stahování nebudou možné obnovit.`
-    - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
-    - Suggest: `Tato stahování nebude možné obnovit.`
-    - "Stahování" is neuter, so the plural is "tato stahování". The construction "nebude možné obnovit" is impersonal, as in the [other] variant.
-- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — Double space between words that users can see.
-    - Current: `stahování  a přejít`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
-    - Suggest: `stahování a přejít`
-    - The one, few and other variants contain two spaces between "stahování" and "a".
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" is rendered as the future "will block", which misrepresents a report-only policy.
-    - Current: `Nastavení této stránky zablokuje přesměrování`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `Nastavení této stránky by zablokovalo přesměrování`
-    - A Report-Only policy does not block. The source says the settings would block the redirect, but "zablokuje" states that it will be blocked.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — The Czech asks why the user installed the app instead of why they uninstalled it.
+    - Current: `proč jste si aplikaci { $BrandShortName } nainstalovali`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `proč jste aplikaci { $BrandShortName } odinstalovali`
+    - The en-US says "Tell Mozilla why you uninstalled". The Czech "nainstalovali" means "installed", which reverses the survey prompt shown in the uninstaller.
+- `warn-disk-space-quit` — `browser/installer/nsisstrings.ftl` — The noun after the preposition "na" has the wrong case: "na instalace" should be the accusative singular "na instalaci".
+    - Current: `na instalace aplikace`
+    - Source: `It looks like you don’t have enough storage on your device to install { $BrandShortName }.`
+    - Suggest: `na instalaci aplikace`
+    - "Na" meaning "for" takes the accusative, which is "instalaci". "Instalace" here reads as a plural or a wrong case, so the sentence is ungrammatical.
+- `nsis-file-error` — `browser/installer/override.ftl` — The third option tells the user to click Storno to stop the installation, but the English says to click Ignore to skip the file.
+    - Current: `nebo na Storno pro ukončení instalace.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `nebo na Ignorovat pro přeskočení tohoto souboru.`
+    - en-US: 'Ignore to skip this file'. The Czech repeats the abort instruction and names a button (Storno) that this dialog doesn't have, so the skip-file option is lost.
+- `nsis-components-text` — `browser/installer/override.ftl` — 'Uncheck' is rendered as 'nezatrhněte' ('do not check'), and the comma that should close the relative clause before 'a' is missing.
+    - Current: `které chcete nainstalovat a nezatrhněte součásti`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `které chcete nainstalovat, a zrušte zatržení u součástí`
+    - The English asks the user to clear checkboxes that are already ticked. 'Nezatrhněte' means 'don't tick', which doesn't help when the boxes are already checked. Czech also requires a comma to close a relative clause before 'a'.
+- `nsis-copy-details` — `browser/installer/override.ftl` — Wrong case: 'podrobnosti' should be genitive plural 'podrobností' after 'Zkopírování'.
+    - Current: `Zkopírování podrobnosti do schránky`
+    - Source: `Copy Details To Clipboard`
+    - Suggest: `Zkopírování podrobností do schránky`
+    - The verbal noun 'zkopírování' takes a genitive object, and 'Details' is plural, so the correct form is 'podrobností'.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — 'opcode' (operation code) is mistranslated as 'kontrolní kód' (check/control code).
+    - Current: `neplatný kontrolní kód`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `neplatný operační kód`
+    - An opcode is an instruction or operation code, not a checksum or control code. 'Kontrolní kód' points to a different kind of corruption than the one the source names.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (4)
 
-_Nothing was fixed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
+    - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Obnovení vašich dat`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
+    - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Obnovení vašich dat`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Uložené motivy” but the string it names, `theme-disabled-heading2`, reads “Uložené vzhledy”
+    - Current: `heading: Vaše palety barev byly odstraněny. message: {$sel_1 ->} [masculine] { -brand-product-name } aktualizoval svoji kolekci palet barev. Odstranili jsme staré verze z vašeho listu „Uložené motivy“. Získejte nové ver…`
+    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
+    - Suggest: `Uložené vzhledy`
+    - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `newtab-clock-widget-menu-switch-to-24h` — `browser/browser/newtab/newtab.ftl` — Compound numeral adjective is misspelled with a hyphen.
+    - Current: `24-hodinový`
+    - Source: `Switch to 24-Hour Format`
+    - Suggest: `24hodinový`
+    - In Czech, a numeral combined with an adjective is written together without a hyphen (24hodinový), as the sibling string correctly does with "12hodinový".
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -63,9 +82,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — "semi-finále" is written with a hyphen.
+    - Current: `Získejte novou tapetu pro semi-finále`
+    - Suggest: `Získejte novou tapetu pro semifinále`
+    - Czech spells it "semifinále" as one word; the same file already uses "Semifinále" in newtab-sports-widget-semi-finals.
 
 ---
 
@@ -73,9 +95,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
-| Missing strings | 0 |
+| Files | 336 |
+| Strings | 17,085 |
+| Missing strings | 35 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -84,7 +106,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 3 |
 | Plural variants (dead or missing forms) | 78 |
-| Text quoting a UI label that no longer matches | 6 |
+| Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -92,7 +114,22 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**35 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aiWindow.ftl` — 13
+- `browser/browser/ipProtection.ftl` — 5
+- `dom/chrome/layout/htmlparser.properties` — 4
+- `browser/browser/aiWindowContent.ftl` — 2
+- `browser/browser/browser.ftl` — 2
+- `dom/chrome/accessibility/win/accessible.properties` — 2
+- `dom/chrome/accessibility/mac/accessible.properties` — 2
+- `browser/browser/customkeys.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `browser/browser/migrationWizard.ftl` — 1
+- `browser/browser/preferences/preferences.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -100,10 +137,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 477, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
+| quotes | `german-double` 474, `curly-double` 215, `curly-single` 56, `straight-double` 43, `polish-double` 2 | _mixed_ |
 | apostrophe | `typographic` 70, `straight` 9 | **typographic** |
-| ellipsis | `char` 393, `ascii` 3 | **char** |
-| dash | `em` 67, `en` 30 | _mixed_ |
+| ellipsis | `char` 402, `ascii` 3 | **char** |
+| dash | `em` 68, `en` 30 | _mixed_ |
 | nbsp | `total` 14, `before-punctuation` 4, `space-before-punctuation` 7 | _mixed_ |
 
 ---
@@ -115,14 +152,14 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (264)
+## 3. Open findings (265)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 41 |
-| 2 | Wrong content (says something other than the English) | 132 |
-| 3 | Degraded language (grammar, spelling, terminology) | 66 |
+| 2 | Wrong content (says something other than the English) | 130 |
+| 3 | Degraded language (grammar, spelling, terminology) | 69 |
 | 4 | Cosmetic (typography, spacing) | 20 |
 
 ### A. Functional, markup, variables & plurals
@@ -521,6 +558,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: x label: Duplicate Tabs`
     - Suggest: `Duplicitní panely`
     - The comment says this item sits in the "Close Multiple" submenu and closes the selected tab's duplicates. "Duplicate" here is an adjective. The Czech verb tells the user it will duplicate tabs.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — The Czech asks why the user installed the app instead of why they uninstalled it.
+    - Current: `proč jste si aplikaci { $BrandShortName } nainstalovali`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `proč jste aplikaci { $BrandShortName } odinstalovali`
+    - The en-US says "Tell Mozilla why you uninstalled". The Czech "nainstalovali" means "installed", which reverses the survey prompt shown in the uninstaller.
+- `nsis-components-text` — `browser/installer/override.ftl` — 'Uncheck' is rendered as 'nezatrhněte' ('do not check'), and the comma that should close the relative clause before 'a' is missing.
+    - Current: `které chcete nainstalovat a nezatrhněte součásti`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `které chcete nainstalovat, a zrušte zatržení u součástí`
+    - The English asks the user to clear checkboxes that are already ticked. 'Nezatrhněte' means 'don't tick', which doesn't help when the boxes are already checked. Czech also requires a comma to close a relative clause before 'a'.
+- `nsis-file-error` — `browser/installer/override.ftl` — The third option tells the user to click Storno to stop the installation, but the English says to click Ignore to skip the file.
+    - Current: `nebo na Storno pro ukončení instalace.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `nebo na Ignorovat pro přeskočení tohoto souboru.`
+    - en-US: 'Ignore to skip this file'. The Czech repeats the abort instruction and names a button (Storno) that this dialog doesn't have, so the skip-file option is lost.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — 'opcode' (operation code) is mistranslated as 'kontrolní kód' (check/control code).
+    - Current: `neplatný kontrolní kód`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `neplatný operační kód`
+    - An opcode is an instruction or operation code, not a checksum or control code. 'Kontrolní kód' points to a different kind of corruption than the one the source names.
 - `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" is rendered as the future "will block", which misrepresents a report-only policy.
     - Current: `Nastavení této stránky zablokuje přesměrování`
     - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
@@ -594,21 +651,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Replace with`
     - Suggest: `Nahradit čím:`
     - "Nahradit s" is ungrammatical in Czech; the verb requires a bare instrumental object.
-- `newtab-clock-widget-menu-switch-to-24h` — `browser/browser/newtab/newtab.ftl` — "24-hodinový" is hyphenated, unlike "12hodinový" in the adjacent string.
-    - Current: `Přepnout na 24-hodinový formát`
-    - Source: `Switch to 24-hour format`
-    - Suggest: `Přepnout na 24hodinový formát`
-    - Czech joins a numeral to the adjective without a hyphen; newtab-clock-widget-menu-switch-to-12h correctly writes "12hodinový".
 - `newtab-label-sponsored` — `browser/browser/newtab/newtab.ftl` — "sponzrováno" is misspelled.
     - Current: `{ $sponsorOrSource } · sponzrováno`
     - Source: `{ $sponsorOrSource } · Sponsored`
     - Suggest: `{ $sponsorOrSource } · Sponzorováno`
     - Missing "o"; the parallel labels newtab-topsite-sponsored and newtab-label-sponsored-fixed use "Sponzorováno".
-- `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — "semi-finále" is written with a hyphen.
-    - Current: `Získejte novou tapetu pro semi-finále`
-    - Source: `Get a new wallpaper for the semi-finals`
-    - Suggest: `Získejte novou tapetu pro semifinále`
-    - Czech spells it "semifinále" as one word; the same file already uses "Semifinále" in newtab-sports-widget-semi-finals.
 - `newtab-stocks-widget-open-menu-button2` — `browser/browser/newtab/newtab.ftl` — "nabídku finance" needs the genitive plural, "financí".
     - Current: `nabídku finance`
     - Source: `aria-label: Open finance menu title: Open finance menu`
@@ -699,11 +746,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: Date and site`
     - Suggest: `Datum a server`
     - sidebar-history-sort-option-site = "Server" for en-US "Site" in the same dropdown; "název" refers to something else.
+- `warn-disk-space-quit` — `browser/installer/nsisstrings.ftl` — The noun after the preposition "na" has the wrong case: "na instalace" should be the accusative singular "na instalaci".
+    - Current: `na instalace aplikace`
+    - Source: `It looks like you don’t have enough storage on your device to install { $BrandShortName }.`
+    - Suggest: `na instalaci aplikace`
+    - "Na" meaning "for" takes the accusative, which is "instalaci". "Instalace" here reads as a plural or a wrong case, so the sentence is ungrammatical.
 - `WARN_DISK_SPACE_QUIT2` — `browser/installer/nsisstrings.properties` — Wrong case after "na": "na instalace" should be "na instalaci".
     - Current: `dostatek úložného prostoru na instalace aplikace $BrandShortName`
     - Source: `It looks like you don’t have enough storage on your device to install $BrandShortName.`
     - Suggest: `dostatek úložného prostoru na instalaci aplikace $BrandShortName`
     - "na" with this meaning takes the accusative singular "instalaci".
+- `nsis-copy-details` — `browser/installer/override.ftl` — Wrong case: 'podrobnosti' should be genitive plural 'podrobností' after 'Zkopírování'.
+    - Current: `Zkopírování podrobnosti do schránky`
+    - Source: `Copy Details To Clipboard`
+    - Suggest: `Zkopírování podrobností do schránky`
+    - The verbal noun 'zkopírování' takes a genitive object, and 'Details' is plural, so the correct form is 'podrobností'.
 - `CopyDetails` — `browser/installer/override.properties` — Wrong case: "podrobnosti" should be genitive plural "podrobností".
     - Current: `Zkopírování podrobnosti do schránky`
     - Source: `Copy Details To Clipboard`
@@ -827,16 +884,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Memories helped personalize this response.`
     - Suggest: `Vzpomínky pomohly přizpůsobit tuto odpověď.`
     - “vzpomínky” is feminine inanimate plural, so the participle ends in -y.
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
-    - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovení vašich dat`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnovit data” but the string it names, `restore-from-backup-header`, reads “Obnovení vašich dat”
-    - Current: `Klepněte na “Obnovit data” a vyberte tento soubor`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovení vašich dat`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `identity-etsi` — `browser/browser/browser.ftl` — Slovak abbreviation “EÚ” used instead of Czech “EU”.
     - Current: `Klasifikovaný podle nařízení (EÚ) 2024/1183.`
     - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
@@ -1092,7 +1139,17 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Failed to register/update a ServiceWorker for scope ‘%S’: Storage access is restricted in this context due to user settings or private browsing mode.`
     - Suggest: `omezený uživatelským nastavením nebo režimem anonymního prohlížení`
     - “omezený” governs the instrumental; the second conjunct must be “režimem”. The same error repeats in ServiceWorkerGetRegistrationStorageError, ServiceWorkerGetClientStorageError and ServiceWorkerPostMessageStorageError.
-- _…and 8 more; see `state/` for the full list._
+- `ReportingHeaderDuplicateGroup` — `dom/chrome/security/security.properties` — Accusative object with a reflexive passive verb.
+    - Current: `ignoruje se duplicitní skupinu s názvem “%S”`
+    - Source: `Reporting Header: ignoring duplicated group named “%S”.`
+    - Suggest: `ignoruje se duplicitní skupina s názvem “%S”`
+    - With “ignoruje se” the noun must be nominative; the adjacent ReportingHeaderInvalidItem is formed correctly.
+- `xslt-bad-recursion` — `dom/dom/xslt.ftl` — Wrong case: the subject “XSLT styl” appears as genitive “XSLT stylu”.
+    - Current: `XSLT stylu obsahuje (pravděpodobně) rekurzi.`
+    - Source: `XSLT Stylesheet (possibly) contains a recursion.`
+    - Suggest: `XSLT styl obsahuje (pravděpodobně) rekurzi.`
+    - The subject of “obsahuje” must be nominative; the same error exists in xslt.properties id 6.
+- _…and 5 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1184,7 +1241,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `netmonitor.context.perfTools` — `devtools/client/netmonitor.properties` — `netmonitor.context.perfTools` uses three dots where this locale uses …
     - Current: `Zahájit analýzu výkonu...`
     - Source: `Start Performance Analysis…`
-    - The tree uses … 393 times against 3 ASCII runs.
+    - The tree uses … 402 times against 3 ASCII runs.
 - `styleeditor-stylesheet-rule-count` — `devtools/client/styleeditor.ftl` — Doubled period in the [few] plural variant
     - Current: `{ $ruleCount } pravidla..`
     - Source: `{$ruleCount ->} [one] { $ruleCount } rule. [other] { $ruleCount } rules.`
@@ -1193,7 +1250,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `crashreporter-submit-waiting-hardware-tests` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-waiting-hardware-tests` uses three dots where this locale uses …
     - Current: `Probíhá kontrola problémů s hardwarem a konfigurací...`
     - Source: `Checking for hardware and configuration problems…`
-    - The tree uses … 393 times against 3 ASCII runs.
+    - The tree uses … 402 times against 3 ASCII runs.
 - `gpu-vendor-id` — `toolkit/toolkit/about/aboutSupport.ftl` — "Vendor" rendered as "prodejce" (seller), inconsistent with the rest of the page
     - Current: `ID prodejce`
     - Source: `Vendor ID`
@@ -1237,7 +1294,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `pdfjs-free-text2` — `toolkit/toolkit/pdfviewer/viewer.ftl` — `pdfjs-free-text2` uses three dots where this locale uses …
     - Current: `Začněte psát...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
-    - The tree uses … 393 times against 3 ASCII runs.
+    - The tree uses … 402 times against 3 ASCII runs.
 
 ---
 
@@ -1265,8 +1322,12 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (4)
+### Fixed to date (8)
 
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `newtab-clock-widget-menu-switch-to-24h` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-23
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-23
 - `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — fixed 2026-10-12
 - `main-context-menu-reveal-password` — `browser/browser/browserContext.ftl` — fixed 2026-09-14
 - `webext-perms-update-list-intro-with-data-collection` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-09-02

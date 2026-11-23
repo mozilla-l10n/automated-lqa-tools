@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 134 of 16,883 |
+| **Strings reviewed this run** | 310 of 17,112 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,40 @@ Also for pl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (3)
 
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` is missing the ['few', 'many'] plural forms
-    - Current: `{$count ->} [1] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowanie: { $purposes }. [other] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowania: { $purpo…`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - This locale uses ['few', 'many', 'one'] in most of its plurals, and en-US pluralizes this string. The catch-all variant will be shown instead, giving the wrong grammatical form.
-- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "zachowują się automatycznie" means "behave automatically", not "are auto-saved".
-    - Current: `Grupy kart zachowują się automatycznie.`
-    - Source: `Tab groups are auto-saved. Find them here.`
-    - Suggest: `Grupy kart są automatycznie zachowywane.`
-    - The en-US says tab groups are saved automatically. The reflexive "zachowywać się" means "to behave", so the Polish says the groups behave automatically. The passive "są zachowywane" is needed for "are saved".
+- `stub-cancel-prompt-button-continue` — `browser/installer/nsisstrings.ftl` — `stub-cancel-prompt-button-continue` drops ['BrandShortName'], which en-US passes
+    - Current: `Zainstaluj`
+    - Source: `Install { $BrandShortName }`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+- `nsis-file-error` — `browser/installer/override.ftl` — Button names are quoted with straight double quotes instead of the locale's Polish quotes „…”.
+    - Current: `Naciśnij "Przerwij", by zakończyć instalację, "Ponów próbę", by spróbować ponownie, albo "Zignoruj", by pominąć ten plik.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Naciśnij „Przerwij”, by zakończyć instalację, „Ponów próbę”, by spróbować ponownie, albo „Zignoruj”, by pominąć ten plik.`
+    - The pl conventions set „…” (U+201E/U+201D) as the quote style. The straight quotes here go against that.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — Button names are quoted with straight double quotes instead of the locale's Polish quotes „…”.
+    - Current: `Naciśnij "Ponów próbę", by spróbować ponownie, lub "Anuluj", by zakończyć instalację.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `Naciśnij „Ponów próbę”, by spróbować ponownie, lub „Anuluj”, by zakończyć instalację.`
+    - The pl conventions set „…” (U+201E/U+201D) as the quote style. The straight quotes here go against that.
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (3)
 
-- `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
-    - Current: `[1]`
-    - Source: `{$downloadsCount ->} [1] Cancel 1 Download [other] Cancel { $downloadsCount } Downloads`
-    - Suggest: `[other]`
-- `download-ui-confirm-leave-private-browsing-windows-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — A6, plural. All five use only [1] + [other] with "{ $downloadsCount } plików", so 2/3/4 render as "2 plików" instead of "2 pliki". Add a [few] variant to each.
-    - Current: `[1]`
-    - Source: `{$downloadsCount ->} [1] If you close all Private Browsing windows now, 1 download will be canceled. Are you sure you want to leave Private Browsing? [other] If you close all Private Browsing windows now, { $downloadsCo…`
-    - Suggest: `[other]`
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
+    - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Przywracanie danych`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
+    - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Przywracanie danych`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Co nowego” but the string it names, `releaseNotes-link`, reads “Informacje o wydaniu”
+    - Current: `Zastąpienie strony „Co nowego” wyświetlanej po aktualizacji. Ustawienie tej zasady na pustą wyłączy stronę wyświetlaną po aktualizacji.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Informacje o wydaniu`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -49,9 +61,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" rendered as "Przełącz listę" (toggle/switch the list) rather than changing which list is shown.
+    - Current: `aria-label: Przełącz listę`
+    - Suggest: `aria-label: Zmień listę`
+    - The comment says the button switches which list is shown; „Przełącz listę” suggests toggling a list on/off rather than selecting a different one.
 
 ---
 
@@ -59,18 +74,18 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
-| Missing strings | 0 |
+| Files | 336 |
+| Strings | 17,112 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 1 |
+| Variable & placeholder mismatches | 2 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 4 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -78,7 +93,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**8 strings** are not translated yet, concentrated in:
+
+- `browser/browser/preferences/preferences.ftl` — 2
+- `dom/chrome/accessibility/win/accessible.properties` — 2
+- `dom/chrome/accessibility/mac/accessible.properties` — 2
+- `browser/browser/ipProtection.ftl` — 1
+- `toolkit/toolkit/payments/payments.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -86,11 +109,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 1462, `straight-double` 36, `german-double` 7, `curly-double` 2 | **polish-double** |
+| quotes | `polish-double` 1463, `straight-double` 41, `german-double` 7, `curly-double` 2 | **polish-double** |
 | apostrophe | `straight` 1 | **straight** |
-| ellipsis | `char` 408 | **char** |
-| dash | `em` 125, `en` 14 | **em** |
-| nbsp | `total` 5007, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
+| ellipsis | `char` 417 | **char** |
+| dash | `em` 128, `en` 14 | **em** |
+| nbsp | `total` 5071, `narrow` 3, `before-punctuation` 39, `space-before-punctuation` 14 | **total** |
 | register | `informal` 82 | **informal** |
 
 ---
@@ -101,15 +124,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (84)
+## 3. Open findings (83)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 50 |
-| 3 | Degraded language (grammar, spelling, terminology) | 23 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 48 |
+| 3 | Degraded language (grammar, spelling, terminology) | 22 |
+| 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -138,6 +161,10 @@ _Nothing reported._
     - Current: `[one]`
     - Source: `{$numBreaches ->} [other] { $numBreachesResolved } out of { $numBreaches } breaches marked as resolved`
     - Suggest: `"{ $numBreachesResolved } z { $numBreaches } wycieków jest oznaczony jako rozwiązany".`
+- `stub-cancel-prompt-button-continue` — `browser/installer/nsisstrings.ftl` — `stub-cancel-prompt-button-continue` drops ['BrandShortName'], which en-US passes
+    - Current: `Zainstaluj`
+    - Source: `Install { $BrandShortName }`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — `dom-manifest-image-unsupported-purposes` is missing the ['few', 'many'] plural forms
     - Current: `{$count ->} [1] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowanie: { $purposes }. [other] Element „{ $memberName }” w { $index }. indeksie zawiera nieobsługiwane zastosowania: { $purpo…`
     - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
@@ -435,30 +462,10 @@ _Nothing reported._
 
 ### D. Terminology, register & consistency
 
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
-    - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Przywracanie danych`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Przywróć dane” but the string it names, `restore-from-backup-header`, reads “Przywracanie danych”
-    - Current: `Kliknij „Przywróć dane” i wybierz ten plik`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Przywracanie danych`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `newtab-sports-widget-round-16` — `browser/browser/newtab/newtab.ftl` — "Pierwsza runda" / "Druga runda" for "Round of 32" / "Round of 16"; Polish football usage names these by fraction, and the current wording is ambiguous against the preceding group stage. → "1/16 finału" / "1/8 finału".
     - Source: `Round of 16`
 - `newtab-sports-widget-round-32` — `browser/browser/newtab/newtab.ftl` — "Pierwsza runda" / "Druga runda" for "Round of 32" / "Round of 16"; Polish football usage names these by fraction, and the current wording is ambiguous against the preceding group stage. → "1/16 finału" / "1/8 finału".
     - Source: `Round of 32`
-- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" rendered as "Przełącz listę" (toggle/switch the list) rather than changing which list is shown.
-    - Current: `aria-label: Przełącz listę`
-    - Source: `aria-label: Change list title: Change list`
-    - Suggest: `aria-label: Zmień listę`
-    - The comment says the button switches which list is shown; „Przełącz listę” suggests toggling a list on/off rather than selecting a different one.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Co nowego” but the string it names, `releaseNotes-link`, reads “Informacje o wydaniu”
-    - Current: `Zastąpienie strony „Co nowego” wyświetlanej po aktualizacji. Ustawienie tej zasady na pustą wyłączy stronę wyświetlaną po aktualizacji.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Informacje o wydaniu`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `toolbox-local-mode-notice` — `devtools/client/toolbox.ftl` — `toolbox-local-mode-notice` quotes “trybu lokalnego” but the string it names, `options-local-mode-label`, reads “Tryb lokalny”
     - Current: `Ten dokument można także wczytać z „{ $url }” za pomocą „trybu lokalnego” narzędzi dla programistów, który można włączyć w panelu ustawień.`
     - Source: `This document could also be loaded from “{ $url }” using DevTools “Local Mode”, which can be enabled in the settings panel.`
@@ -479,14 +486,24 @@ _Nothing reported._
     - Source: `Refresh page to try again.`
     - Suggest: `Odśwież stronę, aby spróbować ponownie.`
     - The en-US string ends with a full stop ("Refresh page to try again."); the Polish drops it.
+- `nsis-file-error` — `browser/installer/override.ftl` — Button names are quoted with straight double quotes instead of the locale's Polish quotes „…”.
+    - Current: `Naciśnij "Przerwij", by zakończyć instalację, "Ponów próbę", by spróbować ponownie, albo "Zignoruj", by pominąć ten plik.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Naciśnij „Przerwij”, by zakończyć instalację, „Ponów próbę”, by spróbować ponownie, albo „Zignoruj”, by pominąć ten plik.`
+    - The pl conventions set „…” (U+201E/U+201D) as the quote style. The straight quotes here go against that.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — Button names are quoted with straight double quotes instead of the locale's Polish quotes „…”.
+    - Current: `Naciśnij "Ponów próbę", by spróbować ponownie, lub "Anuluj", by zakończyć instalację.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `Naciśnij „Ponów próbę”, by spróbować ponownie, lub „Anuluj”, by zakończyć instalację.`
+    - The pl conventions set „…” (U+201E/U+201D) as the quote style. The straight quotes here go against that.
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne dla GTK2: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1462 occurrences).
+    - The locale's quote convention is `polish-double` (1463 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `Zdarzenie klawisza jest niedostępne przy niektórych układach klawiatury: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (1462 occurrences).
+    - The locale's quote convention is `polish-double` (1463 occurrences).
 
 ---
 
@@ -518,8 +535,11 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (170)
+### Fixed to date (173)
 
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
 - `download-ui-cancel-downloads-ok` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-16
 - `download-ui-confirm-leave-private-browsing-windows-cancel-downloads` — `toolkit/toolkit/downloads/downloadUI.ftl` — fixed 2026-11-16
 - `tab-group-editor-action-copy-links` — `browser/browser/tabbrowser.ftl` — fixed 2026-09-03
@@ -557,6 +577,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `third-party-message-no-duration` — `toolkit/toolkit/about/aboutThirdParty.ftl` — fixed 2026-08-24
 - `about-webrtc-aec-logging-msg-label` — `toolkit/toolkit/about/aboutWebrtc.ftl` — fixed 2026-08-24
 - `experimental-features-cookie-samesite-none-requires-secure2` — `toolkit/toolkit/featuregates/features.ftl` — fixed 2026-08-24
-- `autofill-insecure-field-warning-description` — `toolkit/toolkit/formautofill/formAutofill.ftl` — fixed 2026-08-24
-- `csp-error-illegal-host-wildcard` — `toolkit/toolkit/global/cspErrors.ftl` — fixed 2026-08-24
-- `webext-perms-header-unsigned` — `toolkit/toolkit/global/extensions.ftl` — fixed 2026-08-24

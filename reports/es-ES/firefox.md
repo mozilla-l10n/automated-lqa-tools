@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,371 |
+| **Strings reviewed this run** | 1,672 of 17,008 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,86 @@ Also for es-ES: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (12)
 
-_No new findings._
+- `safebrowsing-reported-attack-site-message` — `browser/browser/browser.ftl` — The translation drops "Reported" and states as fact that the site is an attack site.
+    - Current: `¡Este sitio es una web atacante!`
+    - Source: `Reported Attack Site!`
+    - Suggest: `¡Sitio atacante denunciado!`
+    - The en-US says the site has been reported as an attack site; the Spanish states as fact that it attacks. The sibling strings ("sospechoso de", "identificado como") keep the reported/identified hedge.
+- `reg-app-desc` — `browser/installer/custom.ftl` — Spelling error: "usario" instead of "usuario".
+    - Current: `interfaz de usario`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `interfaz de usuario`
+    - "User interface" is "interfaz de usuario" in Spanish; "usario" is a typo.
+- `context-safe-mode` — `browser/installer/custom.ftl` — The label keeps the English word order and capitalisation ("{ $BrandShortName } Modo Seguro").
+    - Current: `{ $BrandShortName } Modo Seguro`
+    - Source: `(value): { $BrandShortName } Safe Mode accesskey: S`
+    - Suggest: `Modo seguro de { $BrandShortName }`
+    - Spanish needs the possessive construction here, as in the sibling string "Opciones de { $BrandShortName }". Spanish also does not capitalise common nouns this way: the policy string uses "modo seguro".
+- `warn-min-supported-osver-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer. Please click the OK button for additional information.`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings (warn-write-access, warn-disk-space) already say "Pulse Aceptar".
+- `warn-min-supported-cpu-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings already use it.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings already use it.
+- `un-refresh-page-explanation` — `browser/installer/custom.ftl` — "Refresh" rendered as "reparación" (repair), which doesn't match the "Restaurar" button on the same page.
+    - Current: `una reparación puede ayudar`
+    - Source: `If you’re having problems with { $BrandShortName }, a refresh can help.  This will restore the default settings and remove add-ons. Start fresh for optimal performance.`
+    - Suggest: `una restauración puede ayudar`
+    - The refresh feature resets settings and removes add-ons. It is not a repair. The button on the same page says "Restaurar { $BrandShortName }", so the explanation should use the same term.
+- `un-refresh-page-title` — `browser/installer/custom.ftl` — Title uses the calque "Refrescar" while the button on the same page says "Restaurar".
+    - Current: `¿Refrescar { $BrandShortName } en su lugar?`
+    - Source: `Refresh { $BrandShortName } Instead?`
+    - Suggest: `¿Restaurar { $BrandShortName } en su lugar?`
+    - The same feature has three names on one page (Refrescar / reparación / Restaurar). The title should match the action button.
+- `mui-text-startmenu-subtitle` — `browser/installer/mui.ftl` — Stray preposition: "accesos de directos" should be "accesos directos".
+    - Current: `accesos de directos`
+    - Source: `Choose a Start Menu folder for the { $BrandFullNameDA } shortcuts.`
+    - Suggest: `accesos directos`
+    - The Spanish term for 'shortcuts' is "accesos directos"; the extra "de" is ungrammatical, and the neighbouring string mui-innertext-startmenu-top correctly uses "accesos directos".
+- `nsis-unregistering` — `browser/installer/override.ftl` — "Deregistrando" is not a Spanish word; the reversal prefix in Spanish is "des-".
+    - Current: `Deregistrando:`
+    - Source: `Unregistering:{   }`
+    - Suggest: `Desregistrando:`
+    - en-US "Unregistering" is the reverse of "Registrando". Spanish forms that reverse with the prefix "des-" (desregistrar), not "de-". So "Deregistrando" is a misspelling.
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the console message.
+    - Current: `visite  https`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener`
+    - Suggest: `visite https`
+    - Users see this space when they read the message, and the en-US has a single space before the URL.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the console message.
+    - Current: `visite  https`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
+    - Suggest: `visite https`
+    - Users see this space when they read the message, and the en-US has a single space before the URL.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Qué hay de nuevo” but the string it names, `releaseNotes-link`, reads “Novedades”
+    - Current: `Anular la página "Qué hay de nuevo" posterior a la actualización. Deje esta política en blanco si quiere desactivar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Novedades`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the console message.
+    - Current: `visite  https`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener`
+    - Suggest: `visite https`
+    - Users see this space when they read the message, and the en-US has a single space before the URL.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the console message.
+    - Current: `visite  https`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
+    - Suggest: `visite https`
+    - Users see this space when they read the message, and the en-US has a single space before the URL.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,18 +117,18 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 321 |
-| Strings | 15,371 |
-| Missing strings | 1,512 |
+| Files | 336 |
+| Strings | 17,008 |
+| Missing strings | 112 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 10 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -63,33 +136,20 @@ _Nothing retired._
 
 ### Completeness
 
-**1,512 strings** are not translated yet, concentrated in:
+**112 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 230
-- `browser/browser/aiWindow.ftl` — 135
-- `browser/browser/newtab/onboarding.ftl` — 80
-- `browser/browser/appmenu.ftl` — 63
-- `browser/browser/browser.ftl` — 53
-- `browser/browser/aiWindowContent.ftl` — 51
-- `browser/browser/ipProtection.ftl` — 48
-- `browser/browser/preferences/preferences.ftl` — 48
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 33
-- `toolkit/toolkit/global/theme-picker.ftl` — 30
-- `browser/browser/tabContextMenu.ftl` — 28
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
-
-**Files absent from the locale:**
-
-- `browser/browser/autoTabGrouping.ftl`
-- `browser/browser/miniWindow.ftl`
-- `browser/browser/preferences/browserIcon.ftl`
-- `browser/browser/sharePanel.ftl`
-- `toolkit/services/aboutSyncLog.ftl`
-- `toolkit/toolkit/about/pdfFeaturesNotification.ftl`
-- `toolkit/toolkit/global/mozPromo.ftl`
-- `toolkit/toolkit/global/rosettaNotification.ftl`
-- `toolkit/toolkit/global/theme-picker.ftl`
-- `toolkit/toolkit/pdfviewer/embedFallback.ftl`
+- `devtools/client/toolbox-options.ftl` — 28
+- `dom/chrome/dom/dom.properties` — 15
+- `devtools/client/inspector.ftl` — 15
+- `devtools/client/debugger.properties` — 12
+- `dom/chrome/security/security.properties` — 8
+- `devtools/client/toolbox.ftl` — 5
+- `dom/chrome/layout/htmlparser.properties` — 4
+- `devtools/client/aboutdebugging.ftl` — 4
+- `devtools/shared/webconsole.properties` — 4
+- `devtools/client/perftools.ftl` — 3
+- `dom/chrome/accessibility/AccessFu.properties` — 2
+- `dom/chrome/accessibility/win/accessible.properties` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -99,13 +159,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 448, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
+| quotes | `curly-double` 464, `straight-double` 136, `curly-single` 42, `guillemet` 1 | **curly-double** |
 | apostrophe | `typographic` 57, `straight` 71 | _mixed_ |
-| ellipsis | `char` 376 | **char** |
-| dash | `em` 57, `en` 1 | **em** |
+| ellipsis | `char` 405 | **char** |
+| dash | `em` 59, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| inverted marks | `open-question` 301, `open-exclamation` 66 | **open-question** |
-| register | `informal` 4, `formal` 1195 | **formal** |
+| inverted marks | `open-question` 361, `open-exclamation` 77 | **open-question** |
+| register | `informal` 6, `formal` 1387 | **formal** |
 
 ---
 
@@ -116,15 +176,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (46)
+## 3. Open findings (53)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 24 |
-| 3 | Degraded language (grammar, spelling, terminology) | 19 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -183,6 +243,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `safebrowsing-reported-attack-site-message` — `browser/browser/browser.ftl` — The translation drops "Reported" and states as fact that the site is an attack site.
+    - Current: `¡Este sitio es una web atacante!`
+    - Source: `Reported Attack Site!`
+    - Suggest: `¡Sitio atacante denunciado!`
+    - The en-US says the site has been reported as an attack site; the Spanish states as fact that it attacks. The sibling strings ("sospechoso de", "identificado como") keep the reported/identified hedge.
 - `taskbar-tabs-media-callout-title-v3` — `browser/browser/featureCallout.ftl` — "Keep your streaming" rendered as "sus vídeos", narrowing/changing the meaning.
     - Current: `Mantenga sus vídeos en la barra de tareas`
     - Source: `Keep your streaming in your taskbar`
@@ -261,6 +326,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `label: No passports added`
     - Suggest: `No hay pasaportes añadidos`
     - en-US "No passports added" is an empty-state status message; the preterite "No se añadieron" reports a past action rather than the current absence of stored passports.
+- `context-safe-mode` — `browser/installer/custom.ftl` — The label keeps the English word order and capitalisation ("{ $BrandShortName } Modo Seguro").
+    - Current: `{ $BrandShortName } Modo Seguro`
+    - Source: `(value): { $BrandShortName } Safe Mode accesskey: S`
+    - Suggest: `Modo seguro de { $BrandShortName }`
+    - Spanish needs the possessive construction here, as in the sibling string "Opciones de { $BrandShortName }". Spanish also does not capitalise common nouns this way: the policy string uses "modo seguro".
+- `reg-app-desc` — `browser/installer/custom.ftl` — Spelling error: "usario" instead of "usuario".
+    - Current: `interfaz de usario`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `interfaz de usuario`
+    - "User interface" is "interfaz de usuario" in Spanish; "usario" is a typo.
+- `mui-text-startmenu-subtitle` — `browser/installer/mui.ftl` — Stray preposition: "accesos de directos" should be "accesos directos".
+    - Current: `accesos de directos`
+    - Source: `Choose a Start Menu folder for the { $BrandFullNameDA } shortcuts.`
+    - Suggest: `accesos directos`
+    - The Spanish term for 'shortcuts' is "accesos directos"; the extra "de" is ungrammatical, and the neighbouring string mui-innertext-startmenu-top correctly uses "accesos directos".
+- `nsis-unregistering` — `browser/installer/override.ftl` — "Deregistrando" is not a Spanish word; the reversal prefix in Spanish is "des-".
+    - Current: `Deregistrando:`
+    - Source: `Unregistering:{   }`
+    - Suggest: `Desregistrando:`
+    - en-US "Unregistering" is the reverse of "Registrando". Spanish forms that reverse with the prefix "des-" (desregistrar), not "de-". So "Deregistrando" is a misspelling.
 
 ### D. Terminology, register & consistency
 
@@ -271,11 +356,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `Sincronización con el móvil`
     - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Qué hay de nuevo” but the string it names, `releaseNotes-link`, reads “Novedades”
-    - Current: `Anular la página "Qué hay de nuevo" posterior a la actualización. Deje esta política en blanco si quiere desactivar la página posterior a la actualización.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Novedades`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `connection-proxy-socks-remote-dns` — `browser/browser/preferences/connection.ftl` — SOCKS DNS — connection-proxy-socks-remote-dns "Proxy DNS al usar SOCKS v4" vs -socks4-remote-dns "DNS proxy usando SOCKS v5".
     - Source: `accesskey: D label: Proxy DNS when using SOCKS v5`
     - Suggest: `-socks4-remote-dns`
@@ -296,6 +376,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Mozilla renamed "master password" to "primary password"; es-ES uses "contraseña principal" for "primary password", so this reintroduces the deprecated term.
 - `tracking-protection-icon-active` — `browser/browser/siteProtections.ftl` — "entre sitios" vs "sitios cruzados" (tracking-protection-icon-active and prefs). Unify to entre sitios.
     - Source: `Blocking social media trackers, cross-site tracking cookies, and fingerprinters.`
+- `un-refresh-page-explanation` — `browser/installer/custom.ftl` — "Refresh" rendered as "reparación" (repair), which doesn't match the "Restaurar" button on the same page.
+    - Current: `una reparación puede ayudar`
+    - Source: `If you’re having problems with { $BrandShortName }, a refresh can help.  This will restore the default settings and remove add-ons. Start fresh for optimal performance.`
+    - Suggest: `una restauración puede ayudar`
+    - The refresh feature resets settings and removes add-ons. It is not a repair. The button on the same page says "Restaurar { $BrandShortName }", so the explanation should use the same term.
+- `un-refresh-page-title` — `browser/installer/custom.ftl` — Title uses the calque "Refrescar" while the button on the same page says "Restaurar".
+    - Current: `¿Refrescar { $BrandShortName } en su lugar?`
+    - Source: `Refresh { $BrandShortName } Instead?`
+    - Suggest: `¿Restaurar { $BrandShortName } en su lugar?`
+    - The same feature has three names on one page (Refrescar / reparación / Restaurar). The title should match the action button.
+- `warn-min-supported-cpu-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings already use it.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings already use it.
+- `warn-min-supported-osver-msg` — `browser/installer/custom.ftl` — Button referred to as "OK" instead of the localized "Aceptar".
+    - Current: `Pulse el botón OK`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer. Please click the OK button for additional information.`
+    - Suggest: `Pulse el botón Aceptar`
+    - The Windows es-ES button is "Aceptar", and other installer strings (warn-write-access, warn-disk-space) already say "Pulse Aceptar".
 - `manifest-empty-intro2` — `devtools/client/application.ftl` — manifest — "Manifesto" (manifest-view-header, manifest-loading, etc.) vs "Manifiesto" (manifest-empty-intro2) → Manifiesto.
     - Source: `No web app manifest detected`
     - Suggest: `Manifiesto.`
@@ -324,16 +429,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Selecting ‘Clear Now’ will clear all cookies and site data stored by { -brand-short-name }. This may sign you out of websites and remove offline web content.`
     - Suggest: `“Limpiar ahora”`
     - The en-US uses typographic quotes and es-ES convention is curly double quotes; straight ASCII apostrophes deviate from it.
-- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
-    - Current: `visite  https`
-    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.addEventListener`
-    - Suggest: `visite https`
-    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
-- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — Double space between "visite" and the URL in the user-visible console message.
-    - Current: `visite  https`
-    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
-    - Suggest: `visite https`
-    - A doubled space shows up in the printed warning text. The en-US uses a single space before the URL.
 
 ---
 
@@ -362,8 +457,11 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (113)
+### Fixed to date (116)
 
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-23
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-23
 - `neterror-net-offline` — `toolkit/toolkit/neterror/netError.ftl` — fixed 2026-09-14
 - `manifest-loading` — `devtools/client/application.ftl` — fixed 2026-09-03
 - `about-logins-error-message-duplicate-login-with-link` — `browser/browser/aboutLogins.ftl` — fixed 2026-08-24
@@ -401,6 +499,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `manifest-loading` — `devtools/client/application.ftl` — fixed 2026-08-24
 - `options-show-user-agent-shadow-dom-label` — `devtools/client/toolbox-options.ftl` — fixed 2026-08-24
 - `inactive-css-no-width-height` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `inactive-css-not-grid-or-flex-item` — `devtools/client/tooltips.ftl` — fixed 2026-08-24
-- `cert-format-pkcs7-chain` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-08-24
-- `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-08-24

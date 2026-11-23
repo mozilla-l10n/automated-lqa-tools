@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,883 |
+| **Strings reviewed this run** | 318 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,27 +18,111 @@ Also for pt-PT: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (19)
 
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — Singular 'caractere' is the Brazilian spelling; pt-PT uses 'carácter'.
-    - Current: `Falta { $count } caractere`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `Falta { $count } carácter`
-    - In European Portuguese the singular of 'caracteres' is 'carácter'; 'caractere' is pt-BR.
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'Nickname' left untranslated in an otherwise Portuguese label.
-    - Current: `Nickname (opcional)`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `Nome personalizado (opcional)`
-    - The comment describes a user-defined label for a saved location; pt-PT would translate this (e.g. 'Nome personalizado' or 'Alcunha') rather than keep the English word mixed into a translated string.
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'nickname' left untranslated in placeholder.
-    - Current: `Adicionar um nickname`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `Adicionar um nome personalizado`
-    - Same English term left untranslated in a Portuguese sentence; should match the translated label.
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — Gender agreement error: "guardados" refers to the feminine "memórias".
+    - Current: `são guardados localmente`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `são guardadas localmente`
+    - The subject is "memórias" (feminine plural), as the earlier "São utilizadas" in the same sentence shows. The participle must be "guardadas".
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The idiom "when you're moving fast" is translated literally as physical movement instead of being in a hurry.
+    - Current: `quando está a mover-se rapidamente`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `quando está com pressa`
+    - "Moving fast" here means being in a hurry. The same source text is rendered "quando está com pressa" / "quando tem pressa" elsewhere in this batch, but this literal version suggests the user is physically moving.
+- `ipprotection-locations-subview-set-default-promo` — `browser/browser/ipProtection.ftl` — Feminine article used before the brand name, inconsistent with the masculine "o { -brand-short-name }" used in the same file.
+    - Current: `Predefina a { -brand-short-name }`
+    - Source: `heading: More locations. More protection. message: {$count ->} [one] Make { -brand-short-name } your default and get { $count } more location. Your links open here, where VPN is built in. [other] Make { -brand-short-nam…`
+    - Suggest: `Predefina o { -brand-short-name }`
+    - pt-PT treats Firefox as masculine ("com o { -brand-short-name }" in the button string right next to this one); "a" is an agreement error.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — Feminine article used before the brand name, inconsistent with the masculine form used elsewhere.
+    - Current: `Obrigado por predefinir a { -brand-short-name }`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `Obrigado por predefinir o { -brand-short-name }`
+    - The brand is masculine in pt-PT ("Abrir ligações com o { -brand-short-name }"); "a" is an agreement error.
+- `newsletter-settings-heading` — `browser/browser/preferences/preferences.ftl` — The label keeps English word order (brand + noun), which is ungrammatical in Portuguese.
+    - Current: `{ -brand-product-name } newsletter`
+    - Source: `description: Get how-tos, advice, and news to make your { -brand-product-name } experience work best for you. label: { -brand-product-name } newsletter`
+    - Suggest: `Newsletter do { -brand-product-name }`
+    - In Portuguese the noun has to come before the possessor, so "Firefox newsletter" should be "Newsletter do Firefox".
+- `newsletter-settings-heading` — `browser/browser/preferences/preferences.ftl` — A serial comma before "e" is not standard in Portuguese.
+    - Current: `tutoriais, dicas, e notícias`
+    - Source: `description: Get how-tos, advice, and news to make your { -brand-product-name } experience work best for you. label: { -brand-product-name } newsletter`
+    - Suggest: `tutoriais, dicas e notícias`
+    - Portuguese punctuation does not put a comma before the "e" that closes a simple list.
+- `payment-moz-box-item-with-security-code-3` — `browser/browser/preferences/preferences.ftl` — Plural participle used for a single security code.
+    - Current: `{ $securityCode } guardados`
+    - Source: `description: { $expDate } \| { $securityCode } saved label: { $cardNumber }`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is a single code name (e.g. CVV), so the participle must be singular; the sibling string already uses "guardado".
+- `reg-app-desc` — `browser/installer/custom.ftl` — "Interface" is feminine in Portuguese but has a masculine article here.
+    - Current: `Um interface familiar`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `Uma interface familiar`
+    - The standard pt-PT gender of "interface" is feminine.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "guiar" takes a direct object; "guiar-lhe" is ungrammatical.
+    - Current: `Este assistente irá guiar-lhe na instalação`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `Este assistente irá guiá-lo na instalação`
+    - In pt-PT "guiar" takes a direct object (guiá-lo), not the indirect pronoun "lhe".
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "fazer possível" is a calque of "make it possible"; Portuguese uses "tornar possível".
+    - Current: `Isto irá fazer possível atualizar`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `Isto irá tornar possível atualizar`
+    - "fazer possível" is not idiomatic Portuguese; the standard phrasing is "tornar possível".
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — "guiar" takes a direct object; "guiar-lhe" is ungrammatical.
+    - Current: `Este assistente irá guiar-lhe na desinstalação`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Este assistente irá guiá-lo na desinstalação`
+    - In pt-PT "guiar" takes a direct object (guiá-lo), not the indirect pronoun "lhe".
+- `mui-text-finish-info-title` — `browser/installer/mui.ftl` — The gerund "Concluindo" is Brazilian; pt-PT uses "A concluir".
+    - Current: `Concluindo o assistente`
+    - Source: `Completing the { $BrandFullNameDA } Setup Wizard`
+    - Suggest: `A concluir o assistente`
+    - pt-PT writes progressive forms as "a + infinitive", as this locale already does in "A instalar" and "A desinstalar".
+- `warn-min-supported-cpu-msg2` — `browser/installer/nsisstrings.ftl` — Spurious comma after "Parece que" separates the verb from its complement clause.
+    - Current: `Parece que, o { $BrandShortName }`
+    - Source: `It looks like { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `Parece que o { $BrandShortName }`
+    - A comma between "Parece que" and its subordinate clause is ungrammatical in Portuguese; the sibling strings correctly omit it.
+- `error-download-cont` — `browser/installer/nsisstrings.ftl` — Present "pode" used where the past "pôde" is needed for "couldn't be installed".
+    - Current: `não pode ser instalado`
+    - Source: `It looks like { $BrandShortName } couldn’t be installed. Choose OK to start over.`
+    - Suggest: `não pôde ser instalado`
+    - The en-US says the install failed ("couldn't be installed"), which takes the past tense "pôde" with an accent; "pode" means "can't".
+- `mui-untext-finish-info-title` — `browser/installer/mui.ftl` — Gerund "Concluindo" is Brazilian usage; pt-PT uses "a + infinitive".
+    - Current: `Concluindo o assistente`
+    - Source: `Completing the { $BrandFullNameDA } Uninstall Wizard`
+    - Suggest: `A concluir o assistente`
+    - European Portuguese uses the progressive "a concluir" rather than the gerund, as this locale does elsewhere (e.g. "A instalar agora…").
+- `nsis-click-install` — `browser/installer/override.ftl` — Missing preposition "em" after "Clique".
+    - Current: `Clique Instalar`
+    - Source: `Click Install to start the installation.`
+    - Suggest: `Clique em Instalar`
+    - In pt-PT "clicar" takes "em" here, and the other installer strings in this file say "Clique em Seguinte" and "Clique em Desinstalar".
+- `nsis-dir-text` — `browser/installer/override.ftl` — The text tells the user to click "Procurar", but the button is labelled "Explorar…".
+    - Current: `clique em Procurar`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `clique em Explorar`
+    - The en-US says "click Browse", which names the button in nsis-browse-btn. That button is translated "Explorar…", so the user is told to click a button that doesn't exist. The instruction and the button label should use the same word.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "Processing instruction targets" is misread as "the processing of instruction targets", and the verb does not agree with the singular subject.
+    - Current: `O processamento dos destinos de instrução “xml” e “xml-stylesheet” não são permitidos.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `Os destinos de instrução de processamento “xml” e “xml-stylesheet” não são permitidos.`
+    - The en-US refers to the targets of a processing instruction, and these targets are what is not allowed. The translation says the processing of the targets is not allowed, which changes the meaning. It also pairs the singular subject "O processamento" with the plural verb "são".
+- `credit-card-label-with-security-code-3` — `toolkit/toolkit/payments/payments.ftl` — The participle "guardados" is plural, but it refers to a single security code.
+    - Current: `{ $securityCode } guardados`
+    - Source: `(value): { $label } \| { $securityCode } saved aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } guardado`
+    - The developer comment says $securityCode is the name of the card's single security code (for example "CVV"). The participle should therefore be masculine singular "guardado". The same error appears in the aria-label.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Adicionar vista dividida” but the string it names, `customkeys-view-add-split-view`, reads “Adicionar Vista Dividida”
+    - Current: `Clique com o botão direito do rato neste separador e escolha “Adicionar vista dividida” para ver dois separadores em simultâneo.`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `Adicionar Vista Dividida`
+    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -58,8 +142,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -69,7 +153,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 2 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 23 |
 | Markup & `data-l10n-name` defects | 3 |
@@ -85,9 +169,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 570, `curly-single` 114, `straight-double` 40 | **curly-double** |
+| quotes | `curly-double` 569, `curly-single` 114, `straight-double` 40 | **curly-double** |
 | apostrophe | `typographic` 124, `straight` 31 | **typographic** |
-| ellipsis | `char` 374, `ascii` 28 | **char** |
+| ellipsis | `char` 383, `ascii` 28 | **char** |
 | dash | `em` 66, `en` 8 | **em** |
 | nbsp | `total` 42, `before-punctuation` 2, `space-before-punctuation` 6 | **total** |
 
@@ -100,15 +184,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (331)
+## 3. Open findings (349)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 183 |
-| 2 | Wrong content (says something other than the English) | 131 |
-| 3 | Degraded language (grammar, spelling, terminology) | 12 |
-| 4 | Cosmetic (typography, spacing) | 5 |
+| 2 | Wrong content (says something other than the English) | 132 |
+| 3 | Degraded language (grammar, spelling, terminology) | 28 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -394,6 +478,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The idiom "when you're moving fast" is translated literally as physical movement instead of being in a hurry.
+    - Current: `quando está a mover-se rapidamente`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `quando está com pressa`
+    - "Moving fast" here means being in a hurry. The same source text is rendered "quando está com pressa" / "quando tem pressa" elsewhere in this batch, but this literal version suggests the user is physically moving.
 - `perplexity-callout-theme-2-title` — `browser/browser/featureCallout.ftl` — The brand name Perplexity is misspelled as “Perflexity” throughout the Perplexity callout strings.
     - Current: `Perflexity`
     - Source: `Try Perplexity: a new way to search`
@@ -469,6 +558,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The MediaStream passed to createMediaStreamSource has a cross-origin resource, the node will output silence.`
     - Suggest: `O MediaStream passado para createMediaStreamSource`
     - The developer comment says “Do not translate MediaStream and createMediaStreamSource”; the translation copied the API name from the preceding string, naming the wrong function.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "Processing instruction targets" is misread as "the processing of instruction targets", and the verb does not agree with the singular subject.
+    - Current: `O processamento dos destinos de instrução “xml” e “xml-stylesheet” não são permitidos.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `Os destinos de instrução de processamento “xml” e “xml-stylesheet” não são permitidos.`
+    - The en-US refers to the targets of a processing instruction, and these targets are what is not allowed. The translation says the processing of the targets is not allowed, which changes the meaning. It also pairs the singular subject "O processamento" with the plural verb "são".
 - `CSPTrustedTypesPolicyViolation` — `dom/chrome/security/csp.properties` — Feature name “Trusted Types” translated despite the developer comment forbidding it.
     - Current: `uma política de Tipos de Confiança`
     - Source: `The page’s settings blocked creating a Trusted Types policy because it violates the following directive: “%1$S“`
@@ -612,6 +706,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
     - Suggest: `dispositivos que sincronizem`
     - The relative clause's subject is "dispositivos" (plural), so the verb must be "sincronizem", as in the sibling string about-logins-confirm-delete-all-sync-dialog-message.
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — Gender agreement error: "guardados" refers to the feminine "memórias".
+    - Current: `são guardados localmente`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `são guardadas localmente`
+    - The subject is "memórias" (feminine plural), as the earlier "São utilizadas" in the same sentence shows. The participle must be "guardadas".
 - `appmenu-addon-post-install-message3` — `browser/browser/appMenuNotifications.ftl` — “add-ons” rendered as “extensões”, narrowing the term the tree renders as “complementos”.
     - Current: `Controle as suas extensões e temas através do menu da aplicação.`
     - Source: `Manage your add-ons and themes through the application menu.`
@@ -642,6 +741,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `heading: AI chatbot won’t get your full selection message: {$selectionLength ->} [other] You’ve selected about { $selectionLength } characters. The number of characters we can send to the AI chatbot is about { $maxLengt…`
     - Suggest: `chatbot de IA`
     - The heading of the same message says “O chatbot de IA…”; the body switches to the English abbreviation.
+- `ipprotection-locations-subview-set-default-promo` — `browser/browser/ipProtection.ftl` — Feminine article used before the brand name, inconsistent with the masculine "o { -brand-short-name }" used in the same file.
+    - Current: `Predefina a { -brand-short-name }`
+    - Source: `heading: More locations. More protection. message: {$count ->} [one] Make { -brand-short-name } your default and get { $count } more location. Your links open here, where VPN is built in. [other] Make { -brand-short-nam…`
+    - Suggest: `Predefina o { -brand-short-name }`
+    - pt-PT treats Firefox as masculine ("com o { -brand-short-name }" in the button string right next to this one); "a" is an agreement error.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — Feminine article used before the brand name, inconsistent with the masculine form used elsewhere.
+    - Current: `Obrigado por predefinir a { -brand-short-name }`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `Obrigado por predefinir o { -brand-short-name }`
+    - The brand is masculine in pt-PT ("Abrir ligações com o { -brand-short-name }"); "a" is an agreement error.
 - `migration-wizard-safari-permissions-sub-header` — `browser/browser/migrationWizard.ftl` — Safari bookmarks are called "favoritos", the term this file reserves for Internet Explorer and Edge.
     - Current: `Para importar os favoritos e histórico de navegação do Safari:`
     - Source: `To import Safari bookmarks and browsing history:`
@@ -682,6 +791,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
     - Suggest: `Outras pessoas podem ver`
     - The subject "Outras pessoas" needs the conjugated verb "podem". "poder" is ungrammatical here.
+- `newsletter-settings-heading` — `browser/browser/preferences/preferences.ftl` — The label keeps English word order (brand + noun), which is ungrammatical in Portuguese.
+    - Current: `{ -brand-product-name } newsletter`
+    - Source: `description: Get how-tos, advice, and news to make your { -brand-product-name } experience work best for you. label: { -brand-product-name } newsletter`
+    - Suggest: `Newsletter do { -brand-product-name }`
+    - In Portuguese the noun has to come before the possessor, so "Firefox newsletter" should be "Newsletter do Firefox".
+- `payment-moz-box-item-with-security-code-3` — `browser/browser/preferences/preferences.ftl` — Plural participle used for a single security code.
+    - Current: `{ $securityCode } guardados`
+    - Source: `description: { $expDate } \| { $securityCode } saved label: { $cardNumber }`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is a single code name (e.g. CVV), so the participle must be singular; the sibling string already uses "guardado".
 - `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps the English word order, which is ungrammatical in Portuguese.
     - Current: `{ -brand-short-name } definições onde aplicável`
     - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
@@ -752,6 +871,41 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The page you are trying to view cannot be shown because it is contained in a file type that may not be safe to open. Please contact the website owners to inform them of this problem.`
     - Suggest: `cuja abertura pode não ser segura`
     - In Portuguese the relative possessive "cujo/cuja" is never followed by a definite article.
+- `reg-app-desc` — `browser/installer/custom.ftl` — "Interface" is feminine in Portuguese but has a masculine article here.
+    - Current: `Um interface familiar`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `Uma interface familiar`
+    - The standard pt-PT gender of "interface" is feminine.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "guiar" takes a direct object; "guiar-lhe" is ungrammatical.
+    - Current: `Este assistente irá guiar-lhe na instalação`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `Este assistente irá guiá-lo na instalação`
+    - In pt-PT "guiar" takes a direct object (guiá-lo), not the indirect pronoun "lhe".
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "fazer possível" is a calque of "make it possible"; Portuguese uses "tornar possível".
+    - Current: `Isto irá fazer possível atualizar`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `Isto irá tornar possível atualizar`
+    - "fazer possível" is not idiomatic Portuguese; the standard phrasing is "tornar possível".
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — "guiar" takes a direct object; "guiar-lhe" is ungrammatical.
+    - Current: `Este assistente irá guiar-lhe na desinstalação`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Este assistente irá guiá-lo na desinstalação`
+    - In pt-PT "guiar" takes a direct object (guiá-lo), not the indirect pronoun "lhe".
+- `error-download-cont` — `browser/installer/nsisstrings.ftl` — Present "pode" used where the past "pôde" is needed for "couldn't be installed".
+    - Current: `não pode ser instalado`
+    - Source: `It looks like { $BrandShortName } couldn’t be installed. Choose OK to start over.`
+    - Suggest: `não pôde ser instalado`
+    - The en-US says the install failed ("couldn't be installed"), which takes the past tense "pôde" with an accent; "pode" means "can't".
+- `warn-min-supported-cpu-msg2` — `browser/installer/nsisstrings.ftl` — Spurious comma after "Parece que" separates the verb from its complement clause.
+    - Current: `Parece que, o { $BrandShortName }`
+    - Source: `It looks like { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires a processor with { $MinSupportedCPU } support. Please click the OK button for additional information.`
+    - Suggest: `Parece que o { $BrandShortName }`
+    - A comma between "Parece que" and its subordinate clause is ungrammatical in Portuguese; the sibling strings correctly omit it.
+- `nsis-click-install` — `browser/installer/override.ftl` — Missing preposition "em" after "Clique".
+    - Current: `Clique Instalar`
+    - Source: `Click Install to start the installation.`
+    - Suggest: `Clique em Instalar`
+    - In pt-PT "clicar" takes "em" here, and the other installer strings in this file say "Clique em Seguinte" and "Clique em Desinstalar".
 - `DirText` — `browser/installer/override.properties` — Instruction names a button (“Procurar”) that is labelled “Explorar” in the same dialog.
     - Current: `clique em Procurar e selecione outra pasta`
     - Source: `Setup will install $BrandFullNameDA in the following folder. To install in a different folder, click Browse and select another folder. $_CLICK`
@@ -847,67 +1001,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Some features and extensions in { -brand-short-name } are powered by AI models that work locally on your device. This approach protects your privacy and, in many cases, speeds up performance. <a data-l10n-name="learn-mo…`
     - Suggest: `Algumas funcionalidades e extensões no { -brand-short-name } são suportadas`
     - “funcionalidades e extensões” are both feminine plural, so the participle must be “suportadas”.
-- `about-glean-about-data-description` — `toolkit/toolkit/about/aboutGlean.ftl` — Missing preposition after “dependendo”.
-    - Current: `dependendo     o que está à procura`
-    - Source: `There are a few different tools you can use to see your data, depending on what you are looking for.`
-    - Suggest: `dependendo do que está à procura`
-    - “Depender” requires “de”; “dependendo o que” is ungrammatical.
-- `about-glean-metrics-table-settings-timelines-circle-radius` — `toolkit/toolkit/about/aboutGlean.ftl` — Missing accent in “círculo”.
-    - Current: `Raio do circulo`
-    - Source: `Circle radius`
-    - Suggest: `Raio do círculo`
-    - “circulo” without the accent is a verb form; the noun is “círculo”.
-- `about-logging-preset-media-playback-description` — `toolkit/toolkit/about/aboutLogging.ftl` — Misspelled verb form “incluí” (1st person past) for “inclui”.
-    - Current: `não incluí problemas de videoconferência`
-    - Source: `Log modules to diagnose media playback issues (not video-conferencing issues)`
-    - Suggest: `não inclui problemas de videoconferência`
-    - The present-tense third person of “incluir” is “inclui”; “incluí” is the first-person preterite.
-- `about-logging-unknown-logging-preset` — `toolkit/toolkit/about/aboutLogging.ftl` — Gender disagreement: masculine “Modelo” with feminine “desconhecida”.
-    - Current: `Modelo de registo desconhecida`
-    - Source: `Unknown logging preset “{ $v }“`
-    - Suggest: `Modelo de registo desconhecido`
-    - “Modelo” is masculine; the neighbouring string about-logging-unknown-profiler-preset correctly uses “desconhecido”.
-- `about-logging-url-copied` — `toolkit/toolkit/about/aboutLogging.ftl` — Stray leading article makes the confirmation message an incomplete sentence.
-    - Current: `As definições de registo copiadas para a área de transferência como um URL modelo`
-    - Source: `Logging settings copied to the clipboard as a preset URL`
-    - Suggest: `Definições de registo copiadas para a área de transferência como um URL de modelo`
-    - With “As”, the clause has a subject and no predicate; en-US is a completed-action message (“Logging settings copied…”).
-- `about-pdf-tagline` — `toolkit/toolkit/about/aboutPDF.ftl` — Mixed noun/infinitive list after “para”.
-    - Current: `Uma ferramenta gratuita para leitura, fundir, assinar, comentar, e muito mais`
-    - Source: `A free tool for reading, merging, signing, commenting, and more — with privacy built in`
-    - Suggest: `Uma ferramenta gratuita para ler, fundir, assinar, comentar e muito mais`
-    - “para leitura, fundir, assinar” mixes a noun with infinitives in the same coordinated list, which is ungrammatical.
-- `profiles-delete-profile-confirm` — `toolkit/toolkit/about/aboutProfiles.ftl` — Stray “não” leaves a broken double negative in the deletion warning.
-    - Current: `e não esta ação não pode ser desfeita`
-    - Source: `Deleting a profile will remove the profile from the list of available profiles and cannot be undone. You may also choose to delete the profile data files, including your settings, certificates and other user-related dat…`
-    - Suggest: `e esta ação não pode ser desfeita`
-    - The first “não” is left over from an edit and makes the sentence ungrammatical in a destructive-action confirmation.
-- `about-reader-custom-colors-selection-highlight2` — `toolkit/toolkit/about/aboutReader.ftl` — Wrong word order in the idiom “em voz alta”.
-    - Current: `Realce para ler em alta voz`
-    - Source: `label: Highlighter for read aloud title: Edit color`
-    - Suggest: `Realce para ler em voz alta`
-    - The Portuguese idiom for “aloud” is “em voz alta”; “em alta voz” is a calque.
-- `about-telemetry-process` — `toolkit/toolkit/about/aboutTelemetry.ftl` — English word order leaves “content processo” in the subsection header.
-    - Current: `{ $process } processo`
-    - Source: `{ $process } process`
-    - Suggest: `processo { $process }`
-    - In Portuguese the noun precedes the qualifier; with $process = “content” the header currently reads “content processo”.
-- `about-telemetry-telemetry-client-doc` — `toolkit/toolkit/about/aboutTelemetry.ftl` — Misspelled verb “incluí” for “inclui”.
-    - Current: `incluí definições para conceitos`
-    - Source: `The <a data-l10n-name="client-doc-link">Firefox Telemetry client documentation</a> includes definitions for concepts, API documentation and data references.`
-    - Suggest: `inclui definições para conceitos`
-    - Third person present of “incluir” is “inclui”; “incluí” is the first-person preterite.
-- `certificate-viewer-exponent` — `toolkit/toolkit/about/certviewer.ftl` — Misspelling of “Expoente”.
-    - Current: `Exponente`
-    - Source: `Exponent`
-    - Suggest: `Expoente`
-    - The Portuguese term for the RSA exponent is “expoente”; “exponente” is not a Portuguese word.
-- `about-config-intro-warning-checkbox` — `toolkit/toolkit/about/config.ftl` — Indicative instead of future subjunctive after “quando”, plus redundant subject pronoun.
-    - Current: `Avisar-me quando eu tento aceder a estas preferências`
-    - Source: `Warn me when I attempt to access these preferences`
-    - Suggest: `Avisar-me quando tentar aceder a estas preferências`
-    - A future conditional clause with “quando” requires the future subjunctive (“tentar”); “quando eu tento” is ungrammatical here.
-- _…and 3 more; see `state/` for the full list._
+- _…and 16 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -971,11 +1065,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Get back your closed tabs in a snap`
     - Suggest: `num piscar de olhos`
     - pt-PT contracts em + um to “num”; “em um” is Brazilian usage.
-- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Adicionar vista dividida” but the string it names, `customkeys-view-add-split-view`, reads “Adicionar Vista Dividida”
-    - Current: `Clique com o botão direito do rato neste separador e escolha “Adicionar vista dividida” para ver dois separadores em simultâneo.`
-    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
-    - Suggest: `Adicionar Vista Dividida`
-    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `firefoxview-tabpickup-signed-out-description2` — `browser/browser/firefoxView.ftl` — Ungrammatical “obter aos seus separadores”.
     - Current: `Para reassociar e obter aos seus separadores, inicie sessão na sua conta`
     - Source: `To reconnect and grab your tabs, sign in to your account.`
@@ -1001,16 +1090,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Every month, { -brand-short-name } blocks an average of over 3,000 trackers per user. Because nothing, especially privacy nuisances like trackers, should stand between you and the good internet.`
     - Suggest: `Porque nada, especialmente empecilhos de privacidade como os rastreadores, deve ficar entre si`
     - The subject is the singular “nada”; the verb must be “deve”.
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'Nickname' left untranslated in an otherwise Portuguese label.
-    - Current: `Nickname (opcional)`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `Nome personalizado (opcional)`
-    - The comment describes a user-defined label for a saved location; pt-PT would translate this (e.g. 'Nome personalizado' or 'Alcunha') rather than keep the English word mixed into a translated string.
 - `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'nickname' left untranslated in placeholder.
     - Current: `Adicionar um nickname`
     - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
     - Suggest: `Adicionar um nome personalizado`
     - Same English term left untranslated in a Portuguese sentence; should match the translated label.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — English word 'Nickname' left untranslated in an otherwise Portuguese label.
+    - Current: `Nickname (opcional)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Nome personalizado (opcional)`
+    - The comment describes a user-defined label for a saved location; pt-PT would translate this (e.g. 'Nome personalizado' or 'Alcunha') rather than keep the English word mixed into a translated string.
 - `newtab-custom-stories-toggle` — `browser/browser/newtab/newtab.ftl` — Pre-AO90 spelling “excepcional” where the tree uses “excecional”.
     - Current: `Conteúdo excepcional com curadoria da família { -brand-product-name }`
     - Source: `description: Exceptional content curated by the { -brand-product-name } family label: Recommended stories`
@@ -1181,11 +1270,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The download is offered over HTTP even though the current document was delivered over a secure HTTPS connection. If you proceed, the download may be corrupted or tampered with during the download process.`
     - Suggest: `entregue através de uma ligação HTTPS segura`
     - "connection" is rendered "ligação" everywhere else in this partition (identity.notSecure.tooltip, connectionFailure, netInterrupt, netReset, proxyConnectFailure). "conexão" is the pt-BR term.
+- `mui-text-finish-info-title` — `browser/installer/mui.ftl` — The gerund "Concluindo" is Brazilian; pt-PT uses "A concluir".
+    - Current: `Concluindo o assistente`
+    - Source: `Completing the { $BrandFullNameDA } Setup Wizard`
+    - Suggest: `A concluir o assistente`
+    - pt-PT writes progressive forms as "a + infinitive", as this locale already does in "A instalar" and "A desinstalar".
+- `mui-untext-finish-info-title` — `browser/installer/mui.ftl` — Gerund "Concluindo" is Brazilian usage; pt-PT uses "a + infinitive".
+    - Current: `Concluindo o assistente`
+    - Source: `Completing the { $BrandFullNameDA } Uninstall Wizard`
+    - Suggest: `A concluir o assistente`
+    - European Portuguese uses the progressive "a concluir" rather than the gerund, as this locale does elsewhere (e.g. "A instalar agora…").
 - `MUI_TEXT_WELCOME_INFO_TEXT` — `browser/installer/mui.properties` — Wrong pronoun form: “guiar-lhe” instead of “guiá-lo”.
     - Current: `Este assistente irá guiar-lhe na instalação`
     - Source: `This wizard will guide you through the installation of $BrandFullNameDA.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files without…`
     - Suggest: `Este assistente irá guiá-lo na instalação`
     - “guiar” takes a direct object, so the clitic must be “-lo”, not the indirect “-lhe”; the same error appears in MUI_UNTEXT_WELCOME_INFO_TEXT.
+- `nsis-dir-text` — `browser/installer/override.ftl` — The text tells the user to click "Procurar", but the button is labelled "Explorar…".
+    - Current: `clique em Procurar`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `clique em Explorar`
+    - The en-US says "click Browse", which names the button in nsis-browse-btn. That button is translated "Explorar…", so the user is told to click a button that doesn't exist. The instruction and the button label should use the same word.
 - `accessibility.enable.enabledTitle` — `devtools/client/accessibility.properties` — Number agreement error: singular subject with plural verb and participle.
     - Current: `O serviço de acessibilidade serão ligados`
     - Source: `Accessibility service will be turned on for all tabs and windows.`
@@ -1201,17 +1305,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `There was an error while fetching individuals in the group`
     - Suggest: `Ocorreu um erro ao obter indivíduos no grupo`
     - “enquanto” and “ao” cannot be stacked; one of them must go.
-- `perftools-description-local-build` — `devtools/client/perftools.ftl` — The conditional clause is ungrammatical and missing prepositions.
-    - Current: `Se está criar um perfil uma compilação`
-    - Source: `If you’re profiling a build that you have compiled yourself, on this machine, please add your build’s objdir to the list below so that it can be used to look up symbol information.`
-    - Suggest: `Se está a criar um perfil de uma compilação`
-    - “está criar” lacks “a”, and “um perfil uma compilação” lacks the linking preposition, leaving the sentence unparseable.
-- `options-local-mode-behavior` — `devtools/client/toolbox-options.ftl` — Gender agreement error: “Os URLs … carregadas”.
-    - Current: `Os URLs só podem ser carregadas`
-    - Source: `Local Mode allows you to load local files via https URL without any external dependency. The URLs can only be loaded from tabs with DevTools opened.`
-    - Suggest: `Os URLs só podem ser carregados`
-    - The participle must agree with the masculine “Os URLs”.
-- _…and 25 more; see `state/` for the full list._
+- _…and 27 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1280,6 +1374,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Primary password is <strong>ON</strong>`
     - Suggest: `A palavra-passe principal está <strong>ATIVADA</strong>`
     - Every other string in this section (forms-primary-pw-use, -set, -change, -on) uses “palavra-passe principal”, so the same feature is named two ways on one screen.
+- `newsletter-settings-heading` — `browser/browser/preferences/preferences.ftl` — A serial comma before "e" is not standard in Portuguese.
+    - Current: `tutoriais, dicas, e notícias`
+    - Source: `description: Get how-tos, advice, and news to make your { -brand-product-name } experience work best for you. label: { -brand-product-name } newsletter`
+    - Suggest: `tutoriais, dicas e notícias`
+    - Portuguese punctuation does not put a comma before the "e" that closes a simple list.
 - `preferences-ai-controls-description` — `browser/browser/preferences/preferences.ftl` — Explicit “Você” subject, against the locale's null-subject address.
     - Current: `Você tem sempre uma escolha no { -brand-short-name }`
     - Source: `You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.`
@@ -1357,6 +1456,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — fixed 2026-11-23

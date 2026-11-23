@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 198 of 16,404 |
+| **Strings reviewed this run** | 247 of 16,573 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,28 +18,41 @@ Also for fi: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (4)
+### 🆕 New findings (7)
 
-- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — The Finnish makes "built-in" describe the rules instead of the VPN, so it reads as "set the built-in VPN rules".
-    - Current: `Aseta sisäänrakennetut VPN-säännöt`
-    - Source: `Set built-in VPN rules, then browse on`
-    - Suggest: `Aseta sisäänrakennetun VPN:n säännöt`
-    - The en-US means rules for the built-in VPN. In "sisäänrakennetut VPN-säännöt" the adjective agrees with "säännöt", so it describes predefined rules that come built in. That is not what the user is asked to do: they create their own rules.
-- `move-to-mini-window` — `browser/browser/miniWindow.ftl` — Plural variant says "go to" (Siirry) instead of "move" (Siirrä).
-    - Current: `Siirry pienoisikkunoihin`
-    - Source: `accesskey: M label: {$tabCount ->} [1] Move to Mini Window [other] Move to Mini Windows`
-    - Suggest: `Siirrä pienoisikkunoihin`
-    - en-US "Move to Mini Windows" is an action that moves tabs. "Siirry" means "go to", which doesn't match the source or the singular variants, which use "Siirrä".
-- `item-history-and-downloads-description3` — `browser/browser/sanitize.ftl` — Case agreement error: "tiedoston" should be plural genitive "tiedostojen".
-    - Current: `ladattujen tiedoston luettelo`
-    - Source: `Visited sites and downloads list`
-    - Suggest: `ladattujen tiedostojen luettelo`
-    - "ladattujen" is plural genitive, so the noun has to agree with it: "downloads list" = "ladattujen tiedostojen luettelo".
-- `sync-engine-payment-methods3` — `browser/browser/preferences/preferences.ftl` — Spelling error in "Tallennetamasi".
-    - Current: `Tallennetamasi`
-    - Source: `accesskey: n label: Payment methods tooltiptext: Payment methods you’ve saved`
-    - Suggest: `Tallentamasi`
-    - The correct agent participle of "tallentaa" with a possessive suffix is "tallentamasi".
+- `mui-text-finish-info-reboot` — `browser/installer/mui.ftl` — `mui-text-finish-info-reboot` drops ['BrandFullNameDA'], which en-US passes
+    - Current: `Viimeistele asennus käynnistämällä tietokone uudelleen. Käynnistetäänkö järjestelmä heti uudelleen?`
+    - Source: `Your computer must be restarted in order to complete the installation of { $BrandFullNameDA }. Do you want to reboot now?`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+- `mui-untext-finish-info-reboot` — `browser/installer/mui.ftl` — `mui-untext-finish-info-reboot` drops ['BrandFullNameDA'], which en-US passes
+    - Current: `Viimeistele asennuksen poisto käynnistämällä tietokone uudelleen. Käynnistetäänkö järjestelmä heti uudelleen?`
+    - Source: `Your computer must be restarted in order to complete the uninstallation of { $BrandFullNameDA }. Do you want to reboot now?`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+- `urlbar-result-menu-trending-dont-show3` — `browser/browser/browser.ftl` — Misspelling: "suositujja" should be "suosittuja".
+    - Current: `suositujja`
+    - Source: `(value): Don’t show trending searches accesskey: n`
+    - Suggest: `suosittuja`
+    - The partitive plural of "suosittu" ("popular", used here for "trending") is "suosittuja"; "suositujja" is not a Finnish word.
+- `error-create-directory-prefix` — `browser/installer/custom.ftl` — The word "kansiota" is misspelled as "kans1iota", with a stray digit 1 in it.
+    - Current: `kans1iota`
+    - Source: `Error creating directory:`
+    - Suggest: `kansiota`
+    - The en-US says "Error creating directory". The Finnish word for directory is "kansio", and its partitive form is "kansiota". The stray "1" is a plain spelling error that users will see.
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — Missing comma closing the relative clause before the coordinated main clause "tai kirjoita…".
+    - Current: `pikakuvakkeet tallennetaan tai kirjoita`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `pikakuvakkeet tallennetaan, tai kirjoita`
+    - In Finnish, a relative clause ("johon … tallennetaan") must be closed with a comma when the main clause continues with "tai kirjoita…". Without the comma, "tai kirjoita" reads as part of the relative clause.
+- `nsis-dir-text` — `browser/installer/override.ftl` — There is a stray comma before "ja" joining two commands in a row.
+    - Current: `valitse Selaa, ja valitse toinen kansio`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `valitse Selaa ja valitse toinen kansio`
+    - Finnish punctuation rules put no comma before "ja" when it simply joins two clauses, as it does here.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — The Cancel button is called "Hylkää" in the instructions, though Cancel is "Peruuta" elsewhere and "Hylkää" is already used for Abort.
+    - Current: `lopeta asennus valitsemalla Hylkää`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `lopeta asennus valitsemalla Peruuta`
+    - The en-US tells the user to click Cancel. The Finnish UI translates Cancel as "Peruuta" (see dialog-button-cancel), and the system button will likely carry that label, so pointing to "Hylkää" (used for Abort in nsis-file-error) names a button that is not there.
 
 ### ✅ Fixed since the last run (0)
 
@@ -63,15 +76,15 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,404 |
-| Missing strings | 479 |
+| Files | 336 |
+| Strings | 16,573 |
+| Missing strings | 547 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 0 |
+| Variable & placeholder mismatches | 2 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 2 |
@@ -82,20 +95,20 @@ _Nothing retired._
 
 ### Completeness
 
-**479 strings** are not translated yet, concentrated in:
+**547 strings** are not translated yet, concentrated in:
 
 - `dom/chrome/dom/dom.properties` — 75
 - `toolkit/toolkit/about/aboutGlean.ftl` — 63
 - `toolkit/toolkit/about/aboutLogging.ftl` — 40
 - `dom/chrome/security/csp.properties` — 34
 - `dom/chrome/security/security.properties` — 32
+- `browser/browser/aiWindow.ftl` — 29
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 28
 - `browser/browser/newtab/newtab.ftl` — 24
-- `toolkit/toolkit/about/aboutWebauthn.ftl` — 22
 - `toolkit/toolkit/about/url-classifier.ftl` — 21
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 15
 - `toolkit/toolkit/about/aboutSupport.ftl` — 15
-- `netwerk/necko.properties` — 13
-- `browser/browser/browser.ftl` — 11
+- `browser/browser/browser.ftl` — 13
 
 **Files present but identical to en-US:**
 
@@ -130,7 +143,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 309, `straight-double` 116, `curly-single` 70 | _mixed_ |
 | apostrophe | `typographic` 148, `straight` 33 | **typographic** |
-| ellipsis | `char` 401, `ascii` 1 | **char** |
+| ellipsis | `char` 410, `ascii` 1 | **char** |
 | dash | `em` 44, `en` 29 | _mixed_ |
 | nbsp | `total` 11, `before-punctuation` 3, `space-before-punctuation` 6 | _mixed_ |
 
@@ -142,15 +155,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (161)
+## 3. Open findings (168)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 108 |
-| 2 | Wrong content (says something other than the English) | 41 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
-| 4 | Cosmetic (typography, spacing) | 10 |
+| 2 | Wrong content (says something other than the English) | 43 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
+| 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -256,6 +269,14 @@ _Nothing reported._
     - Source: `Properties for “%S”`
     - Suggest: `Kohteen ”%S” ominaisuuksia`
     - The en-US title is type-neutral and this dialog title is also used for bookmark items, not only folders, so the Finnish asserts the edited item is a folder when it may not be.
+- `mui-text-finish-info-reboot` — `browser/installer/mui.ftl` — `mui-text-finish-info-reboot` drops ['BrandFullNameDA'], which en-US passes
+    - Current: `Viimeistele asennus käynnistämällä tietokone uudelleen. Käynnistetäänkö järjestelmä heti uudelleen?`
+    - Source: `Your computer must be restarted in order to complete the installation of { $BrandFullNameDA }. Do you want to reboot now?`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
+- `mui-untext-finish-info-reboot` — `browser/installer/mui.ftl` — `mui-untext-finish-info-reboot` drops ['BrandFullNameDA'], which en-US passes
+    - Current: `Viimeistele asennuksen poisto käynnistämällä tietokone uudelleen. Käynnistetäänkö järjestelmä heti uudelleen?`
+    - Source: `Your computer must be restarted in order to complete the uninstallation of { $BrandFullNameDA }. Do you want to reboot now?`
+    - The string renders, but the value en-US shows the user -- a count, a name, a size -- never appears.
 - `FileError_NoIgnore` — `browser/installer/override.properties` — Instructs the user to click "Hylkää" (Abort) where the dialog's button is Cancel ("Peruuta").
     - Current: `lopeta asennus valitsemalla Hylkää`
     - Source: `Error opening file for writing:   $0  Click Retry to try again, or Cancel to stop the installation.`
@@ -461,6 +482,11 @@ _Nothing reported._
 
 ### C. Grammar, agreement & spelling
 
+- `urlbar-result-menu-trending-dont-show3` — `browser/browser/browser.ftl` — Misspelling: "suositujja" should be "suosittuja".
+    - Current: `suositujja`
+    - Source: `(value): Don’t show trending searches accesskey: n`
+    - Suggest: `suosittuja`
+    - The partitive plural of "suosittu" ("popular", used here for "trending") is "suosittuja"; "suositujja" is not a Finnish word.
 - `cfr-doorhanger-doh-body` — `browser/browser/newtab/asrouter.ftl` — Wrong person on the purpose clause: "suojellaksesi sinua" says the user protects the user, not that Firefox protects them.
     - Current: `kumppanipalveluun suojellaksesi sinua, kun selaat verkkoa`
     - Source: `Your privacy matters. { -brand-short-name } now securely routes your DNS requests whenever possible to a partner service to protect you while you browse.`
@@ -516,11 +542,21 @@ _Nothing reported._
     - Source: `Visited sites and downloads list`
     - Suggest: `ladattujen tiedostojen luettelo`
     - "ladattujen" is plural genitive, so the noun has to agree with it: "downloads list" = "ladattujen tiedostojen luettelo".
+- `error-create-directory-prefix` — `browser/installer/custom.ftl` — The word "kansiota" is misspelled as "kans1iota", with a stray digit 1 in it.
+    - Current: `kans1iota`
+    - Source: `Error creating directory:`
+    - Suggest: `kansiota`
+    - The en-US says "Error creating directory". The Finnish word for directory is "kansio", and its partitive form is "kansiota". The stray "1" is a plain spelling error that users will see.
 - `ERROR_CREATE_DIRECTORY_PREFIX` — `browser/installer/custom.properties` — Garbled word in installer error message: "kans1iota" contains a stray digit.
     - Current: `Virhe luotaessa kans1iota:`
     - Source: `Error creating directory:`
     - Suggest: `Virhe luotaessa kansiota:`
     - "kans1iota" is not a Finnish word; the correct form is "kansiota". The typo is visible in the installer's error dialog.
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — Missing comma closing the relative clause before the coordinated main clause "tai kirjoita…".
+    - Current: `pikakuvakkeet tallennetaan tai kirjoita`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `pikakuvakkeet tallennetaan, tai kirjoita`
+    - In Finnish, a relative clause ("johon … tallennetaan") must be closed with a comma when the main clause continues with "tai kirjoita…". Without the comma, "tai kirjoita" reads as part of the relative clause.
 - `support-user-namespaces-unavailable` — `toolkit/toolkit/about/aboutSupport.ftl` — Brand name given the appositive “-palvelu” (service).
     - Current: `{ -brand-short-name } -palvelun suojausominaisuuksia`
     - Source: `{ $status } — This feature is not allowed by your system. This can restrict security features of { -brand-short-name }.`
@@ -719,6 +755,11 @@ _Nothing reported._
     - Source: `Firefox doesn’t know how to open this address, because one of the following protocols (%S) isn’t associated with any program or is not allowed in this context.`
     - Suggest: `tai sitä ei ole sallittua käyttää tässä yhteydessä`
     - "tässä tavalla" mixes two expressions ("tällä tavalla" / "tässä yhteydessä") and the passive "ei ole sallittu käyttää" lacks its object, leaving the sentence broken; en-US reads "is not allowed in this context".
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — The Cancel button is called "Hylkää" in the instructions, though Cancel is "Peruuta" elsewhere and "Hylkää" is already used for Abort.
+    - Current: `lopeta asennus valitsemalla Hylkää`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `lopeta asennus valitsemalla Peruuta`
+    - The en-US tells the user to click Cancel. The Finnish UI translates Cancel as "Peruuta" (see dialog-button-cancel), and the system button will likely carry that label, so pointing to "Hylkää" (used for Abort in nsis-file-error) names a button that is not there.
 - `math` — `dom/chrome/accessibility/mac/accessible.properties` — Misspelling of "matematiikka".
     - Current: `math = matemaatiikka`
     - Source: `math`
@@ -829,12 +870,7 @@ _Nothing reported._
     - Source: `{ -brand-short-name } stores information about your settings and preferences in your personal profile.`
     - Suggest: `henkilökohtaiseen profiiliisi`
     - "tallentaa … henkilökohtaiseen profiili-" requires the illative (profiiliisi) to agree with the illative adjective "henkilökohtaiseen"; "profiilisi" is nominative with a possessive suffix and does not agree.
-- `webext-perms-description-data-short-personalCommunications` — `toolkit/toolkit/global/extensionPermissions.ftl` — This list item is in the genitive case while every other short-form item in the list is nominative.
-    - Current: `henkilökohtaisen yhteydenpidon`
-    - Source: `personal communications`
-    - Suggest: `henkilökohtainen yhteydenpito`
-    - These short forms are joined with Intl.ListFormat into one list (see the section comment and webext-perms-description-data-some); mixing a genitive item into a list of nominatives produces an ungrammatical enumeration.
-- _…and 1 more; see `state/` for the full list._
+- _…and 2 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -893,6 +929,11 @@ _Nothing reported._
     - Source: `$BrandShortName Private Browsing`
     - Suggest: `$BrandShortName - Yksityinen selaus`
     - The developer comment states the non-variable portion MUST match private-browsing-shortcut-text-2 in browser.ftl, which reads "{ -brand-shortcut-name } - Yksityinen selaus".
+- `nsis-dir-text` — `browser/installer/override.ftl` — There is a stray comma before "ja" joining two commands in a row.
+    - Current: `valitse Selaa, ja valitse toinen kansio`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `valitse Selaa ja valitse toinen kansio`
+    - Finnish punctuation rules put no comma before "ja" when it simply joins two clauses, as it does here.
 - `styleeditor-no-stylesheet-tip` — `devtools/client/styleeditor.ftl` — `styleeditor-no-stylesheet-tip` uses a straight apostrophe
     - Current: `Perhaps you'd like to <a data-l10n-name="append-new-stylesheet">append a new style sheet</a>?`
     - Source: `Perhaps you’d like to <a data-l10n-name="append-new-stylesheet">append a new style sheet</a>?`
@@ -924,7 +965,7 @@ _Nothing reported._
 - `headerFooterCustom` — `toolkit/chrome/global/printdialog.properties` — `headerFooterCustom` uses three dots where this locale uses …
     - Current: `Oma...`
     - Source: `Custom…`
-    - The tree uses … 401 times against 1 ASCII runs.
+    - The tree uses … 410 times against 1 ASCII runs.
 - `addon-category-dictionary` — `toolkit/toolkit/about/aboutAddons.ftl` — “Dictionaries” rendered as “Oikoluvut” while the rest of the page uses “sanastot”.
     - Current: `Oikoluvut`
     - Source: `Dictionaries`

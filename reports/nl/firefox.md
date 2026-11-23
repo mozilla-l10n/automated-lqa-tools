@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,883 |
+| **Strings reviewed this run** | 320 of 17,112 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,39 @@ Also for nl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `options-page-subtitle` — `browser/installer/custom.ftl` — 'Choose setup options' is rendered as 'choose installation components'.
+    - Current: `Installatieonderdelen kiezen`
+    - Source: `Choose setup options`
+    - Suggest: `Installatieopties kiezen`
+    - The en-US subtitle is about choosing setup options on the Setup Type page (standard or custom). 'Installatieonderdelen' means installation components, which is a different thing.
+- `un-refresh-button` — `browser/installer/custom.ftl` — The Refresh button uses 'verversen' while the rest of the refresh dialog says 'opfrissen'.
+    - Current: `{ $BrandShortName } verversen`
+    - Source: `(value): Refresh { $BrandShortName } accesskey: R`
+    - Suggest: `{ $BrandShortName } opfrissen`
+    - The same feature (Refresh Firefox) is called 'opfrissen' in un-refresh-page-title, un-refresh-page-explanation and warn-manually-close-app-refresh. 'Verversen' normally means reloading a page, so the button does not match the action named on the same page.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (7)
 
-_Nothing was fixed._
+- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — The builder is given as 'Mozilla Firefox' when the source and comment say 'Mozilla'.
+    - Current: `door Mozilla Firefox gebouwde`
+    - Source: `title: Official extension built by Mozilla. Meets security and performance standards`
+    - Suggest: `door Mozilla gebouwde`
+    - The source and developer comment say the extension is built by Mozilla, the organization, and 'Mozilla' is hard-coded on purpose. 'Mozilla Firefox' is a product name, so it names the wrong builder.
+- `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
+    - Source: `heading: Getting close to your VPN limit message: You have { $usageLeft } GB of { $maxUsage } GB left this month.`
+    - Suggest: `.message`
+- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `Unable to change password.`
+- `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You did not enter the correct current password. Please try again.`
+- `pippki-pw-change2empty-in-fips-mode` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You are currently in FIPS mode. FIPS requires a non-empty password.`
+- `pippki-pw-erased-ok` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `You have deleted your password. { pippki-pw-empty-warning }`
+- `pippki-pw-not-wanted` — `security/manager/security/pippki/pippki.ftl` — pippki-failed-pw-change, pippki-incorrect-pw, pippki-pw-erased-ok, pippki-pw-not-wanted, pippki-pw-change2empty-in-fips-mode — security/.../pippki.ftl — these belong to the device password dialog (change-device-password-window); en-US says plain "password", but nl says "hoofdwachtwoord" (Primary Password). Suggest: use "wachtwoord" in these five; keep "hoofdwachtwoord" only in the reset-primary-p…
+    - Source: `Warning! You have decided not to use a password. { pippki-pw-empty-warning }`
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +70,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
-| Missing strings | 0 |
+| Files | 336 |
+| Strings | 17,112 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +89,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**8 strings** are not translated yet, concentrated in:
+
+- `browser/browser/preferences/preferences.ftl` — 2
+- `dom/chrome/accessibility/win/accessible.properties` — 2
+- `dom/chrome/accessibility/mac/accessible.properties` — 2
+- `browser/browser/ipProtection.ftl` — 1
+- `toolkit/toolkit/payments/payments.ftl` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,12 +105,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 825, `straight-double` 25, `curly-double` 9 | **curly-single** |
-| apostrophe | `typographic` 1048 | **typographic** |
-| ellipsis | `char` 401 | **char** |
+| quotes | `curly-single` 824, `straight-double` 25, `curly-double` 9 | **curly-single** |
+| apostrophe | `typographic` 1051 | **typographic** |
+| ellipsis | `char` 410 | **char** |
 | dash | `en` 113 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `formal` 2814 | **formal** |
+| register | `formal` 2880 | **formal** |
 
 ---
 
@@ -86,15 +120,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (340)
+## 3. Open findings (335)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 9 |
-| 2 | Wrong content (says something other than the English) | 118 |
-| 3 | Degraded language (grammar, spelling, terminology) | 194 |
-| 4 | Cosmetic (typography, spacing) | 19 |
+| 2 | Wrong content (says something other than the English) | 113 |
+| 3 | Degraded language (grammar, spelling, terminology) | 195 |
+| 4 | Cosmetic (typography, spacing) | 18 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -242,6 +276,11 @@ _Nothing reported._
 - `webrtc-sharing-menu` — `browser/browser/webrtcIndicator.ftl` — subject and object swapped. en-US "Tabs sharing devices". Current: "Apparaten die tabbladen delen" → Suggest: "Tabbladen die apparaten delen"
     - Source: `accesskey: d label: Tabs sharing devices`
     - Suggest: `"Tabbladen die apparaten delen"`
+- `options-page-subtitle` — `browser/installer/custom.ftl` — 'Choose setup options' is rendered as 'choose installation components'.
+    - Current: `Installatieonderdelen kiezen`
+    - Source: `Choose setup options`
+    - Suggest: `Installatieopties kiezen`
+    - The en-US subtitle is about choosing setup options on the Setup Type page (standard or custom). 'Installatieonderdelen' means installation components, which is a different thing.
 - `accessibility-best-practices` — `devtools/client/accessibility.ftl` — Current: "Goede voorbeelden" → Suggest: "Best practices"
     - Source: `alt: Best Practices`
     - Suggest: `"Best practices"`
@@ -294,9 +333,7 @@ _Nothing reported._
 - `certmgr-tab-ca` — `security/manager/security/certificates/certManager.ftl` — the tab lists certificate authorities. Current: "Organisaties" → Suggest: "Autoriteiten"
     - Source: `label: Authorities`
     - Suggest: `"Autoriteiten"`
-- `pkcs12-decode-err` — `security/manager/security/certificates/certManager.ftl` — "format" turned into "encrypted in the format". Suggest: "Het heeft niet de PKCS #12-indeling, is beschadigd, …"
-    - Source: `Failed to decode the file. Either it is not in PKCS #12 format, has been corrupted, or the password you entered was incorrect.`
-- _…and 61 more; see `state/` for the full list._
+- _…and 56 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -593,6 +630,11 @@ _Nothing reported._
     - Source: `tooltiptext: Apply video game controller avatar`
 - `protections-panel-cross-site-tracking-cookies` — `browser/browser/protectionsPanel.ftl` — "advertentiebureaus" (ad agencies) where the identical paragraph cookie-tab-content in protections.ftl says "adverteerders".
     - Source: `These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies.`
+- `un-refresh-button` — `browser/installer/custom.ftl` — The Refresh button uses 'verversen' while the rest of the refresh dialog says 'opfrissen'.
+    - Current: `{ $BrandShortName } verversen`
+    - Source: `(value): Refresh { $BrandShortName } accesskey: R`
+    - Suggest: `{ $BrandShortName } opfrissen`
+    - The same feature (Refresh Firefox) is called 'opfrissen' in un-refresh-page-title, un-refresh-page-explanation and warn-manually-close-app-refresh. 'Verversen' normally means reloading a page, so the button does not match the action named on the same page.
 - `about-debugging-setup-usb-disabled` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
     - Source: `Enabling this will download and add the required Android USB debugging components to { -brand-shorter-name }.`
 - `about-debugging-setup-usb-step-enable-debug2` — `devtools/client/aboutdebugging.ftl` — about-debugging-setup-usb-disabled, about-debugging-setup-usb-step-enable-debug2, about-debugging-sidebar — "debugging" vs "foutopsporing" for the same concept in one file.
@@ -606,10 +648,7 @@ _Nothing reported._
     - Source: `title: Size/transferred size of all requests`
 - `network-menu-summary-transferred` — `devtools/client/netmonitor.ftl` — network-menu-summary-transferred vs network-menu-summary-tooltip-transferred — "overgebracht" vs "overgedragen".
     - Source: `{ $formattedContentSize } / { $formattedTransferredSize } transferred`
-- `styleeditor-visibility-toggle-system` — `devtools/client/styleeditor.ftl` — styleeditor-visibility-toggle-system (.tooltiptext) — "Systeemstylesheets" while the file uses "stijlblad(en)".
-    - Source: `tooltiptext: System style sheets can’t be disabled`
-    - Suggest: `.tooltiptext`
-- _…and 43 more; see `state/` for the full list._
+- _…and 44 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -627,9 +666,6 @@ _Nothing reported._
     - Source: `heading: Take protection further with { -mozilla-vpn-brand-name } message: Choose from 300+ locations and protect all your apps on up to 5 devices.`
 - `ipprotection-locations-subview-promo` — `browser/browser/ipProtection.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
     - Source: `heading: Take protection further with { -mozilla-vpn-brand-name } message: Choose from 300+ locations and protect all your apps on up to 5 devices.`
-    - Suggest: `.message`
-- `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — Missing sentence-final period (present in en-US and in the sibling strings): ipprotection-message-bandwidth-warning (.message), ipprotection-locations-subview-promo (.message), inactive-css-first-line-pseudo-element-not-supported, inactive-css-first-letter-pseudo-element-not-supported, pippki-reset-password-confirmation-message, crashreporter-checkbox-send-report, policy-LegacyProfiles, policy-Di…
-    - Source: `heading: Getting close to your VPN limit message: You have { $usageLeft } GB of { $maxUsage } GB left this month.`
     - Suggest: `.message`
 - `july-jam-body` — `browser/browser/newtab/asrouter.ftl` — july-jam-body vs spotlight-peace-mind-body — newtab/asrouter.ftl — the same figure written "3.000" and "3000".
     - Source: `Every month, { -brand-short-name } blocks an average of 3,000+ trackers per user, giving you safe, speedy access to the good internet.`
@@ -710,8 +746,15 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (140)
+### Fixed to date (147)
 
+- `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — fixed 2026-11-23
+- `pippki-failed-pw-change` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-23
+- `pippki-incorrect-pw` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-23
+- `pippki-pw-change2empty-in-fips-mode` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-23
+- `pippki-pw-erased-ok` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-23
+- `pippki-pw-not-wanted` — `security/manager/security/pippki/pippki.ftl` — fixed 2026-11-23
+- `addon-badge-line4` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-23
 - `restart-required-single-instance-answer-2` — `browser/browser/aboutRestartRequired.ftl` — fixed 2026-11-09
 - `genai-more-actions-all-off-notice` — `browser/browser/genai.ftl` — fixed 2026-11-09
 - `policy-DisableThirdPartyModuleBlocking` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-05
@@ -745,10 +788,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `smart-window-switched-tab-label` — `browser/browser/aiWindowContent.ftl` — fixed 2026-08-10
 - `extension-firefox-alpenglow-description` — `browser/browser/appExtensionFields.ftl` — fixed 2026-08-10
 - `appmenu-update-other-instance` — `browser/browser/appMenuNotifications.ftl` — fixed 2026-08-10
-- `bookmarks-mobile-bookmarks-menu` — `browser/browser/browser.ftl` — fixed 2026-08-10
-- `quickactions-cmd-manageai` — `browser/browser/browser.ftl` — fixed 2026-08-10
-- `restore-session-startup-suggestion-button` — `browser/browser/browser.ftl` — fixed 2026-08-10
-- `search-one-offs-context-open-new-tab` — `browser/browser/browser.ftl` — fixed 2026-08-10
-- `main-context-menu-frame-add-bookmark` — `browser/browser/browserContext.ftl` — fixed 2026-08-10
-- `main-context-menu-send-to-mobile-enable-sync2` — `browser/browser/browserContext.ftl` — fixed 2026-08-10
-- `clear-data-for-site-cookies` — `browser/browser/clearDataForSite.ftl` — fixed 2026-08-10

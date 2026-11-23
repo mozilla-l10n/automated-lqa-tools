@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 69 of 16,069 |
+| **Strings reviewed this run** | 245 of 16,251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,67 +18,67 @@ Also for sl: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (11)
 
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Podvoji zavihke" is the command "duplicate tabs", but the item names the duplicate tabs that the Close Multiple submenu will close.
-    - Current: `Podvoji zavihke`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Podvojene zavihke`
-    - The developer comment says this label sits under "Close Multiple" and closes all duplicate tabs. The Slovenian imperative tells the user it will create duplicates, so the menu says the opposite of what it does.
-- `mini-window-overlay-instructions` — `browser/browser/miniWindow.ftl` — "Mini okno" is capitalized here, but every other string writes it as "mini okno".
-    - Current: `v Mini okno`
-    - Source: `Drag or click to select an area to move to a Mini Window. It’ll stay on top while you browse.`
-    - Suggest: `v mini okno`
-    - The other miniWindow.ftl strings (e.g. "Premakni v mini okno", "Izberite, kaj premakniti v mini okno") write the feature name in lowercase.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The aside is set off with hyphens; the locale uses the en dash for this.
+    - Current: `okrepljene varnostne možnosti - vključno z zaščito pred spletno krajo identitete - in`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `okrepljene varnostne možnosti – vključno z zaščito pred spletno krajo identitete – in`
+    - The sl conventions use the en dash (150 vs 13 em) for dashes. A spaced hyphen marking off an aside breaks that convention.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — Brand name is not declined in the genitive after "različica".
+    - Current: `Ta različica { $BrandShortName } zahteva`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `Ta različica { $BrandShortName }a zahteva`
+    - "Ta različica" needs the genitive form of the brand name. The sibling strings warn-min-supported-osver-msg and warn-min-supported-cpu-msg correctly use "{ $BrandShortName }a".
+- `warn-restart-required-upgrade` — `browser/installer/custom.ftl` — Double space after the comma.
+    - Current: `{ $BrandShortName },  morate`
+    - Source: `Your computer must be restarted to complete a previous upgrade of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `{ $BrandShortName }, morate`
+    - There are two spaces between words in the text the user reads.
+- `banner-check-existing` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `namestitve ...`
+    - Source: `Checking existing installation…`
+    - Suggest: `namestitve …`
+    - The locale convention is the single ellipsis character (420 vs 40), and en-US uses … with no space.
+- `status-install-app` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `{ $BrandShortName } ...`
+    - Source: `Installing { $BrandShortName }…`
+    - Suggest: `{ $BrandShortName } …`
+    - The locale convention is the single ellipsis character.
+- `status-uninstall-main` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `{ $BrandShortName } ...`
+    - Source: `Uninstalling { $BrandShortName }…`
+    - Suggest: `{ $BrandShortName } …`
+    - The locale convention is the single ellipsis character.
+- `status-cleanup` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `urejanje ...`
+    - Source: `A Little Housekeeping…`
+    - Suggest: `urejanje …`
+    - The locale convention is the single ellipsis character.
+- `mui-untext-confirm-title` — `browser/installer/mui.ftl` — The brand name follows the noun "Odstranjevanje" without being declined and without a governing noun, which is ungrammatical.
+    - Current: `Odstranjevanje { $BrandFullNameDA }`
+    - Source: `Uninstall { $BrandFullNameDA }`
+    - Suggest: `Odstranjevanje programa { $BrandFullNameDA }`
+    - After a verbal noun, Slovenian needs the genitive. The name can't be declined here, so the sibling strings put "programa" before it (e.g. "Zaključevanje odstranjevanja programa { $BrandFullNameDA }"). This title leaves the name as a bare nominative with no governing noun.
+- `nsis-browse-btn` — `browser/installer/override.ftl` — The label uses three ASCII dots with a space before them instead of the ellipsis character the locale uses by convention.
+    - Current: `Prebrskaj ...`
+    - Source: `(value): Browse… accesskey: r`
+    - Suggest: `Prebrskaj …`
+    - The en-US uses the ellipsis character (…), and the sl convention is the ellipsis character (420 against 40 uses of three dots). The space before it is also non-standard.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — There are two spaces between "če" and "želite" in text the user sees.
+    - Current: `če  želite`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `če želite`
+    - The extra space appears in the dialog text the user reads. The sister string nsis-file-error uses a single space in the same phrase.
+- `dialog-button-revert` — `toolkit/toolkit/global/dialog.ftl` — "Revert" is translated as "Obrni" (turn/flip over) instead of a word meaning restore to the previous state.
+    - Current: `Obrni`
+    - Source: `accesskey: R label: Revert`
+    - Suggest: `Povrni`
+    - en-US "Revert" means going back to the previous saved state. "Obrni" means turn, flip or reverse direction, so the button label says the wrong thing. "Povrni" is the usual Slovenian word for revert/restore. The access key will need updating to match.
 
-### ✅ Fixed since the last run (12)
+### ✅ Fixed since the last run (0)
 
-- `security-technical-weak-cipher` — `browser/browser/pageInfo.ftl` — Adjective–noun gender agreement error: masculine "Drugi" with feminine plural "osebe".
-    - Current: `Drugi osebe`
-    - Source: `Your connection to this website uses weak encryption and is not private. Other people can view your information or modify the website’s behavior.`
-    - Suggest: `Druge osebe`
-    - "Osebe" is feminine plural (nominative), so the adjective must be "druge". "Drugi osebe" is ungrammatical.
-- `policy-DisableThirdPartyModuleBlocking2` — `browser/browser/policies/policies-descriptions.ftl` — The participle "vstavljenih" (inserted) is in the wrong case; it should agree with "module" (modules, accusative plural).
-    - Current: `vstavljenih v proces`
-    - Source: `Prevent the user from using Third-party Module Information (about:third-party) to block third-party modules injected into the { -brand-short-name } process.`
-    - Suggest: `vstavljene v proces`
-    - It is the modules that are injected into the process, and "module" is the accusative object of "blokiral" (would block). The participle must therefore be accusative plural ("vstavljene"). The genitive "vstavljenih" is ungrammatical, or it wrongly attaches to "ponudnikov" (providers), as if the providers were injected.
-- `dom-manifest-id-not-same-origin` — `dom/dom/manifest.ftl` — This string translates "origin" as "poreklo", but the rest of the same file uses "izvor".
-    - Current: `enako poreklo`
-    - Source: `The id member must have the same origin as the start_url member.`
-    - Suggest: `enak izvor`
-    - In dom-manifest-scope-not-same-origin and dom-manifest-start-url-should-be-same-origin, the web-security term "origin" is translated "izvor" ("istega izvora"). "Poreklo" means ancestry or descent and is inconsistent within these manifest error messages.
-- `about-pdf-feature-organize-description` — `toolkit/toolkit/about/aboutPDF.ftl` — "export pages" rendered as "posamič izvozite" (export individually), adding a claim not in the source.
-    - Current: `jih odstranite, združite ali posamič izvozite`
-    - Source: `Reorder, remove, merge, and export pages.`
-    - Suggest: `jih odstranite, združite in izvozite`
-    - The source says "Reorder, remove, merge, and export pages" with no statement that export happens individually.
-- `about-pdf-feature-organize-heading` — `toolkit/toolkit/about/aboutPDF.ftl` — "Organize pages" translated as "Organizirajte dokumente" (organize documents) instead of pages.
-    - Current: `Organizirajte dokumente`
-    - Source: `Organize pages`
-    - Suggest: `Organizirajte strani`
-    - The en-US refers to pages within a PDF, not documents; the description in the same feature block also talks about reordering pages.
-- `content-sharing-modal-generic-error-2` — `browser/browser/contentSharing.ftl` — "Strani a deljenje…" → "Strani za deljenje…".
-    - Source: `heading: Something went wrong message: We couldn’t create your shared page this time. Try again later.`
-    - Suggest: `"Strani za deljenje…".`
-- `fonts-langgroup-kannada` — `browser/browser/preferences/fonts.ftl` — "Kannada" (Indic script) rendered "kanadsko" (reads as Canadian, colliding with fonts-langgroup-canadian). → "kannada".
-    - Source: `label: Kannada`
-    - Suggest: `"kannada".`
-- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — Wrong case. "…zbirko barvnih kombinacije." → "…kombinacij." (genitive plural).
-    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
-    - Suggest: `"…kombinacij."`
-- `touch-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
-    - Source: `async touch input disabled due to unsupported pref: { $preferenceKey }`
-    - Suggest: `"…nepodprte…"`
-- `wheel-warning` — `toolkit/toolkit/about/aboutSupport.ftl` — toolkit/toolkit/about/aboutSupport.ftl — "…zaradi nedpodprte nastavitve…" → "…nepodprte…" (both strings).
-    - Source: `async wheel input disabled due to unsupported pref: { $preferenceKey }`
-    - Suggest: `"…nepodprte…"`
-- `certificate-viewer-certificate-authority` — `toolkit/toolkit/about/certviewer.ftl` — certificate-viewer-certificate-authority (and authority-key-id, authority-info-aia) — toolkit/toolkit/about/certviewer.ftl — "Certificate Authority" rendered "uradna oseba za digitalna potrdila", but the CA tab (certificate-viewer-tab-ca) uses the standard "Overitelji". → align on "overitelj (digitalnih potrdil)".
-    - Source: `Certificate Authority`
-    - Suggest: `align on "overitelj`
-- `contentanalysis-slow-agent-dialog-body-file-and-more` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — contentanalysis-slow-agent-dialog-body-file-and-more ([one]) — toolkit/toolkit/contentanalysis/contentanalysis.ftl — Dual verb "sta" with singular adjective "skladen". → "skladna" (dual, agreeing with two subjects).
-    - Source: `{$count ->} [one] { $agent } is reviewing “{ $filename }” and { $count } additional item against your organization’s data policies. This may take a moment. [other] { $agent } is reviewing “{ $filename }” and { $count }…`
-    - Suggest: `"skladna"`
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -98,9 +98,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 330 |
-| Strings | 16,069 |
-| Missing strings | 814 |
+| Files | 335 |
+| Strings | 16,251 |
+| Missing strings | 869 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -109,7 +109,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 1 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -117,19 +117,19 @@ _Nothing retired._
 
 ### Completeness
 
-**814 strings** are not translated yet, concentrated in:
+**869 strings** are not translated yet, concentrated in:
 
-- `browser/browser/aiWindow.ftl` — 140
-- `browser/browser/ipProtection.ftl` — 86
-- `browser/browser/aiWindowContent.ftl` — 58
+- `browser/browser/aiWindow.ftl` — 156
+- `browser/browser/ipProtection.ftl` — 91
+- `browser/browser/aiWindowContent.ftl` — 61
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 54
 - `dom/chrome/dom/dom.properties` — 53
-- `toolkit/toolkit/about/aboutWebauthn.ftl` — 48
+- `browser/browser/preferences/preferences.ftl` — 46
 - `browser/browser/newtab/newtab.ftl` — 45
-- `browser/browser/preferences/preferences.ftl` — 42
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 33
+- `browser/browser/aiFeatures.ftl` — 33
 - `dom/chrome/security/security.properties` — 30
-- `browser/browser/aiFeatures.ftl` — 27
-- `browser/browser/newtab/onboarding.ftl` — 24
+- `toolkit/toolkit/about/aboutProcesses.ftl` — 30
+- `browser/browser/newtab/onboarding.ftl` — 25
 - `browser/browser/genai.ftl` — 20
 
 **Files absent from the locale:**
@@ -144,12 +144,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 268, `straight-double` 267, `curly-single` 50, `guillemet` 5 | _mixed_ |
+| quotes | `curly-double` 268, `straight-double` 264, `curly-single` 50, `guillemet` 5 | _mixed_ |
 | apostrophe | `typographic` 50, `straight` 51 | _mixed_ |
-| ellipsis | `char` 365, `ascii` 33 | **char** |
-| dash | `em` 15, `en` 119 | **en** |
+| ellipsis | `char` 369, `ascii` 38 | **char** |
+| dash | `em` 15, `en` 120 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 8 | _mixed_ |
-| register | `informal` 8, `formal` 543 | **formal** |
+| register | `informal` 8, `formal` 542 | **formal** |
 
 ---
 
@@ -160,15 +160,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (10)
+## 3. Open findings (21)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 3 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 4 |
+| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -196,10 +196,24 @@ _Nothing in this category._
     - Source: `title: List and view stylesheets in the debugger`
     - Suggest: `Prikaži seznam slogovnih predlog in si jih oglej v razhroščevalniku`
     - The en-US says "List and view stylesheets"; the Slovenian only mentions listing them.
+- `dialog-button-revert` — `toolkit/toolkit/global/dialog.ftl` — "Revert" is translated as "Obrni" (turn/flip over) instead of a word meaning restore to the previous state.
+    - Current: `Obrni`
+    - Source: `accesskey: R label: Revert`
+    - Suggest: `Povrni`
+    - en-US "Revert" means going back to the previous saved state. "Obrni" means turn, flip or reverse direction, so the button label says the wrong thing. "Povrni" is the usual Slovenian word for revert/restore. The access key will need updating to match.
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — Brand name is not declined in the genitive after "različica".
+    - Current: `Ta različica { $BrandShortName } zahteva`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `Ta različica { $BrandShortName }a zahteva`
+    - "Ta različica" needs the genitive form of the brand name. The sibling strings warn-min-supported-osver-msg and warn-min-supported-cpu-msg correctly use "{ $BrandShortName }a".
+- `mui-untext-confirm-title` — `browser/installer/mui.ftl` — The brand name follows the noun "Odstranjevanje" without being declined and without a governing noun, which is ungrammatical.
+    - Current: `Odstranjevanje { $BrandFullNameDA }`
+    - Source: `Uninstall { $BrandFullNameDA }`
+    - Suggest: `Odstranjevanje programa { $BrandFullNameDA }`
+    - After a verbal noun, Slovenian needs the genitive. The name can't be declined here, so the sibling strings put "programa" before it (e.g. "Zaključevanje odstranjevanja programa { $BrandFullNameDA }"). This title leaves the name as a bare nominative with no governing noun.
 
 ### D. Terminology, register & consistency
 
@@ -223,6 +237,46 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
+- `banner-check-existing` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `namestitve ...`
+    - Source: `Checking existing installation…`
+    - Suggest: `namestitve …`
+    - The locale convention is the single ellipsis character (420 vs 40), and en-US uses … with no space.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The aside is set off with hyphens; the locale uses the en dash for this.
+    - Current: `okrepljene varnostne možnosti - vključno z zaščito pred spletno krajo identitete - in`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `okrepljene varnostne možnosti – vključno z zaščito pred spletno krajo identitete – in`
+    - The sl conventions use the en dash (150 vs 13 em) for dashes. A spaced hyphen marking off an aside breaks that convention.
+- `status-cleanup` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `urejanje ...`
+    - Source: `A Little Housekeeping…`
+    - Suggest: `urejanje …`
+    - The locale convention is the single ellipsis character.
+- `status-install-app` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `{ $BrandShortName } ...`
+    - Source: `Installing { $BrandShortName }…`
+    - Suggest: `{ $BrandShortName } …`
+    - The locale convention is the single ellipsis character.
+- `status-uninstall-main` — `browser/installer/custom.ftl` — Uses a space plus three ASCII dots instead of the ellipsis character.
+    - Current: `{ $BrandShortName } ...`
+    - Source: `Uninstalling { $BrandShortName }…`
+    - Suggest: `{ $BrandShortName } …`
+    - The locale convention is the single ellipsis character.
+- `warn-restart-required-upgrade` — `browser/installer/custom.ftl` — Double space after the comma.
+    - Current: `{ $BrandShortName },  morate`
+    - Source: `Your computer must be restarted to complete a previous upgrade of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `{ $BrandShortName }, morate`
+    - There are two spaces between words in the text the user reads.
+- `nsis-browse-btn` — `browser/installer/override.ftl` — The label uses three ASCII dots with a space before them instead of the ellipsis character the locale uses by convention.
+    - Current: `Prebrskaj ...`
+    - Source: `(value): Browse… accesskey: r`
+    - Suggest: `Prebrskaj …`
+    - The en-US uses the ellipsis character (…), and the sl convention is the ellipsis character (420 against 40 uses of three dots). The space before it is also non-standard.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — There are two spaces between "če" and "želite" in text the user sees.
+    - Current: `če  želite`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `če želite`
+    - The extra space appears in the dialog text the user reads. The sister string nsis-file-error uses a single space in the same phrase.
 - `btp-warning-tracker-classified` — `toolkit/toolkit/global/antiTracking.ftl` — btp-warning-tracker-classified ([two]) — toolkit/toolkit/global/antiTracking.ftl — Missing space before the variable: "v naslednjih{ $gracePeriodSeconds } sekundah" → "v naslednjih { $gracePeriodSeconds } sekundah" (the [few]/[other] variants have the space).
     - Source: `{$gracePeriodSeconds ->} [other] “{ $siteHost }” has been classified as a bounce tracker. If it does not receive user activation within the next { $gracePeriodSeconds } seconds it will have its state purged.`
     - Suggest: `[few]`

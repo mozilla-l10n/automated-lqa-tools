@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 16,883 |
+| **Strings reviewed this run** | 318 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,86 @@ Also for ru: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (13)
 
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — The label and aria-label say «Ник» (an online username) while the placeholder says «псевдоним» (an alias), and the developer comment rules out both meanings.
-    - Current: `Ник (необязательно)`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `Название (необязательно)`
-    - The comment says this is a custom label for a saved location (Home, Office) and must not be translated as a username or alias. «Ник» means an online username, and the placeholder uses a different term, «псевдоним», so one field has two names.
-- `newtab-report-ads-reason-scam` — `browser/browser/newtab/newtab.ftl` — The slang loanword «Скам» is too colloquial for the UI's neutral, formal tone.
-    - Current: `Скам или мошенничество`
-    - Source: `label: Scam or fraudulent`
-    - Suggest: `Мошенничество или обман`
-    - «Скам» is internet slang. The other report reasons, and the locale in general, use neutral, formal vocabulary.
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — The purpose clause "to create memories" was rendered as a complement of "activity" ("your activity of creating memories").
+    - Current: `обучаться на основе ваших действий по созданию воспоминаний`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `обучаться на основе ваших действий, чтобы создавать воспоминания`
+    - en-US: learns from your activity in order to create memories. The Russian says it learns from your activities of creating memories, which is a different meaning.
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — The brand name is attached to "other apps", so the string reads as "other Firefox apps" instead of "when Firefox starts".
+    - Current: `Использовать его при запуске, перезапуске или открытии ссылок из других приложений { -brand-short-name }.`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `Использовать его, когда { -brand-short-name } запускается, перезапускается или открывает ссылки из других приложений.`
+    - en-US: use it when Firefox starts, restarts, or opens links from other apps. In the Russian, the brand name modifies "other apps".
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The idiom "when you're moving fast" (in a hurry) was translated literally as physically moving at speed.
+    - Current: `когда вы быстро движетесь`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" here means being in a hurry. "быстро движетесь" describes physical motion.
+- `aiwindow-input-model-select-fast-description` — `browser/browser/aiWindow.ftl` — The idiom "when you're moving fast" was translated literally as physical motion.
+    - Current: `когда вы быстро движетесь`
+    - Source: `Quick answers when you’re moving fast`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" means being in a hurry, not moving physically.
+- `smartwindow-onboarding-model-gemini-description` — `browser/browser/aiWindow.ftl` — The idiom "when you're moving fast" was translated literally as physical motion.
+    - Current: `когда вы быстро движетесь`
+    - Source: `Quick answers when you’re moving fast`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" means being in a hurry, not moving physically.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — The [few] variant puts the noun in the genitive plural, so it reads "2 дополнительных VPN-местоположений", which is wrong.
+    - Current: `[few] У вас { $additionalLocationsCount } дополнительных VPN-местоположений`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `[few] У вас { $additionalLocationsCount } дополнительных VPN-местоположения`
+    - After 2–4 Russian uses the genitive singular: "2 местоположения", not "2 местоположений". As written, the [few] text is the same as the [many] text and is wrong for counts like 2, 3 and 4.
+- `context-options` — `browser/installer/custom.ftl` — The brand name is placed before "Настройки" in English word order, which is ungrammatical in Russian.
+    - Current: `{ $BrandShortName } Настройки`
+    - Source: `(value): { $BrandShortName } Options accesskey: O`
+    - Suggest: `Настройки { $BrandShortName }`
+    - The en-US "{ $BrandShortName } Options" means the options of the product. In Russian the possessor comes after the noun: "Настройки Firefox". "Firefox Настройки" reads as a calque of the English.
+- `warn-write-access` — `browser/installer/custom.ftl` — "Click OK" is rendered as pressing a keyboard key («клавишу») instead of clicking a dialog button.
+    - Current: `нажмите клавишу «OK»`
+    - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
+    - Suggest: `нажмите кнопку «OK»`
+    - The en-US means clicking the OK button in the dialog. «Клавиша» means a keyboard key. Other strings in this file correctly use «кнопку».
+- `warn-disk-space` — `browser/installer/custom.ftl` — "Click OK" is rendered as pressing a keyboard key («клавишу») instead of clicking a dialog button.
+    - Current: `нажмите клавишу «OK»`
+    - Source: `You don’t have sufficient disk space to install to this location.  Click OK to select a different location.`
+    - Suggest: `нажмите кнопку «OK»`
+    - The en-US means clicking the OK button in the dialog. «Клавиша» means a keyboard key. Other strings in this file correctly use «кнопку».
+- `optional-components-desc` — `browser/installer/custom.ftl` — The common noun phrase «службы поддержки» has both words wrongly capitalised.
+    - Current: `Службы Поддержки`
+    - Source: `The Maintenance Service will allow you to update { $BrandShortName } silently in the background.`
+    - Suggest: `службы поддержки`
+    - Russian doesn't capitalise each word of a common noun phrase. The checkbox string maintenance-service-checkbox-desc uses lowercase «службу поддержки», so the two are also inconsistent.
+- `about-webauthn-logging-scope-note` — `toolkit/toolkit/about/aboutWebauthn.ftl` — "platform WebAuthn APIs" is rendered as just "WebAuthn API", and the subject «Он» has nothing to refer back to.
+    - Current: `Он не регистрирует запросы к WebAuthn API`
+    - Source: `This only logs requests to the native CTAP implementation of { -brand-short-name }. It does not log requests to platform WebAuthn APIs or browser extensions.`
+    - Suggest: `Запросы к платформенным WebAuthn API`
+    - The source excludes only the operating system's (platform) WebAuthn APIs. Without "platform", the Russian says requests to WebAuthn in general are never logged, which contradicts the purpose of the page. «Он» is masculine and has no antecedent in the sentence before it, which is impersonal («При этом будут записываться…»).
+- `dialog-button-revert` — `toolkit/toolkit/global/dialog.ftl` — "Revert" is translated as «Вернуться» ("go back / return") instead of a verb meaning "undo the changes".
+    - Current: `Вернуться`
+    - Source: `accesskey: R label: Revert`
+    - Suggest: `Вернуть`
+    - In a dialog, "Revert" means restoring the previous state or discarding changes. «Вернуться» is reflexive and means "to return / go back", as if moving somewhere. A transitive form such as «Вернуть» or «Отменить изменения» is needed.
+- `newtab-stocks-menu-search-stocks` — `browser/browser/newtab/newtab.ftl` — "Name or Symbol" (company name or ticker symbol) is rendered as "имени или символу", which reads as a person's name or a character.
+    - Current: `Поиск по имени или символу`
+    - Source: `Search by Name or Symbol`
+    - Suggest: `Поиск по названию или тикеру`
+    - The developer comment says this searches by company name or ticker symbol. In Russian finance terms a company has a «название», not an «имя», and a stock symbol is a «тикер». «Символ» here reads as a single character.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
+    - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Восстановите свои данные`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
+    - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Восстановите свои данные`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -43,9 +107,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — "browsing data" is translated as "данные своего веб-сёрфинга" here but as "данные просмотра" in the panel strings this button opens.
+    - Current: `Удалите некоторые или все данные своего веб-сёрфинга`
+    - Suggest: `Удалите некоторые или все данные просмотра`
+    - The same en-US term "browsing data" is rendered as "данные просмотра" in fire-button-panel-heading and fire-button-panel-complete. The button that opens that panel uses the colloquial, non-standard "данные веб-сёрфинга", so the two don't match within one feature.
+- `newtab-widget-lists-change-list` — `browser/browser/newtab/newtab.ftl` — "Change list" (switch which list is shown) rendered as "Изменить список" (edit the list).
+    - Current: `Изменить список`
+    - Suggest: `Сменить список`
+    - The developer comment states "Change" is a verb meaning the button switches which list is shown; «Изменить список» means to modify the list's contents.
+- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — Checkbox label rendered as an imperative command to the user instead of a statement about the setting.
+    - Current: `Всегда сохраняйте коды безопасности для способов оплаты.`
+    - Suggest: `Всегда сохранять коды безопасности для способов оплаты.`
+    - The en-US is a checkbox option label ("Always save security codes…"); Russian checkbox labels use the infinitive, not a second-person imperative addressed to the user.
 
 ---
 
@@ -53,8 +128,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -64,7 +139,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 3 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 162 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -80,12 +155,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1074, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
+| quotes | `guillemet` 1097, `straight-double` 28, `curly-single` 5, `curly-double` 4 | **guillemet** |
 | apostrophe | `typographic` 9, `straight` 15 | _mixed_ |
-| ellipsis | `char` 404, `ascii` 5 | **char** |
-| dash | `em` 132, `en` 5 | **em** |
+| ellipsis | `char` 416, `ascii` 5 | **char** |
+| dash | `em` 135, `en` 5 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 7 | _mixed_ |
-| register | `informal` 977, `formal` 3295 | **formal** |
+| register | `informal` 999, `formal` 3367 | **formal** |
 
 ---
 
@@ -96,7 +171,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (613)
+## 3. Open findings (621)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -111,8 +186,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 44 |
-| 2 | Wrong content (says something other than the English) | 276 |
-| 3 | Degraded language (grammar, spelling, terminology) | 232 |
+| 2 | Wrong content (says something other than the English) | 278 |
+| 3 | Degraded language (grammar, spelling, terminology) | 238 |
 | 4 | Cosmetic (typography, spacing) | 61 |
 
 ### A. Functional, markup, variables & plurals
@@ -266,15 +341,40 @@ _Also listed under their own category below._
     - Current: `{ -brand-short-name } может учиться на своей работе`
     - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help personalize responses and are stored locally on this device. label: Memories`
     - Suggest: `…может учиться на основе вашей активности`
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — The purpose clause "to create memories" was rendered as a complement of "activity" ("your activity of creating memories").
+    - Current: `обучаться на основе ваших действий по созданию воспоминаний`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `обучаться на основе ваших действий, чтобы создавать воспоминания`
+    - en-US: learns from your activity in order to create memories. The Russian says it learns from your activities of creating memories, which is a different meaning.
+- `smart-window-model-gemini` — `browser/browser/aiFeatures.ftl` — The idiom "when you're moving fast" (in a hurry) was translated literally as physically moving at speed.
+    - Current: `когда вы быстро движетесь`
+    - Source: `description: Quick answers when you’re moving fast. Full name: { $model } by { $ownerName } label: { $shortName }`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" here means being in a hurry. "быстро движетесь" describes physical motion.
 - `smart-window-model-radio-group` — `browser/browser/aiFeatures.ftl` — "Assistant model" rendered as "Модель-помощник", which reverses the modifier relationship.
     - Current: `Модель-помощник`
     - Source: `aria-label: Assistant model`
     - Suggest: `Модель помощника`
     - en-US "Assistant model" means the model used by the assistant (a radio group selecting the assistant's model), not a model that is an assistant.
+- `aiwindow-input-model-select-fast-description` — `browser/browser/aiWindow.ftl` — The idiom "when you're moving fast" was translated literally as physical motion.
+    - Current: `когда вы быстро движетесь`
+    - Source: `Quick answers when you’re moving fast`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" means being in a hurry, not moving physically.
 - `aiwindow-starter-writing-improve` — `browser/browser/aiWindow.ftl` — Current: Улучши правописание (spelling) → Suggest: Улучши текст
     - Current: `Улучши правописание`
     - Source: `Improve writing`
     - Suggest: `Улучши текст`
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — The brand name is attached to "other apps", so the string reads as "other Firefox apps" instead of "when Firefox starts".
+    - Current: `Использовать его при запуске, перезапуске или открытии ссылок из других приложений { -brand-short-name }.`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `Использовать его, когда { -brand-short-name } запускается, перезапускается или открывает ссылки из других приложений.`
+    - en-US: use it when Firefox starts, restarts, or opens links from other apps. In the Russian, the brand name modifies "other apps".
+- `smartwindow-onboarding-model-gemini-description` — `browser/browser/aiWindow.ftl` — The idiom "when you're moving fast" was translated literally as physical motion.
+    - Current: `когда вы быстро движетесь`
+    - Source: `Quick answers when you’re moving fast`
+    - Suggest: `когда вы спешите`
+    - "Moving fast" means being in a hurry, not moving physically.
 - `action-log-read-page` — `browser/browser/aiWindowContent.ftl` — the dev comment says "Read is past tense, to indicate that the action has been completed", but the value uses the same aspect as the in-progress action-log-reading-page. Current: Чтение содержимого страницы → Suggest: Содержимое страницы прочитано
     - Current: `Чтение содержимого страницы`
     - Source: `Read page content`
@@ -425,27 +525,7 @@ _Also listed under their own category below._
 - `ipprotection-message-bandwidth-warning` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
     - Source: `heading: Getting close to your VPN limit message: You have { $usageLeft } GB of { $maxUsage } GB left this month.`
     - Suggest: `Лимиты встроенного VPN…`
-- `ipprotection-message-continuous-onboarding-site-settings` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
-    - Source: `{ -brand-short-name } will remember which websites you’ve set to use VPN. Update these in <a data-l10n-name="setting-link">settings</a> anytime.`
-    - Suggest: `Лимиты встроенного VPN…`
-- `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — "location-based browsing" is rendered as the nonsensical tautology "местоположение в зависимости от местоположения".
-    - Current: `местоположение в зависимости от местоположения`
-    - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
-    - Suggest: `веб-сёрфинг с учётом местоположения`
-    - The en-US says the VPN can be turned on for location-based browsing. The Russian reads "location depending on location", which means nothing and does not convey the source.
-- `ipprotection-site-inclusions-callout-title-existing-users` — `browser/browser/ipProtection.ftl` — "Set built-in VPN rules" mistranslated as "Set built-in VPN rules" with the adjective attached to "rules".
-    - Current: `Установите встроенные правила VPN`
-    - Source: `Set built-in VPN rules, then browse on`
-    - Suggest: `Установите правила встроенного VPN`
-    - In en-US "built-in" modifies VPN, not the rules; the rules are user-defined, not built in.
-- `ipprotection-summer-promo-offramp-generic-title` — `browser/browser/ipProtection.ftl` — several: ipprotection-summer-promo-offramp-generic-title ("built-in" modifies VPN, not the limits → Лимиты встроенного VPN…); ipprotection-feature-introduction-link-text-privacy-2 and ipprotection-location-selection-callout-description-1 hardcode "5 местоположений" where en-US says "multiple"/"several"; ipprotection-feature-introduction-link-text-captive-portal-1 drops and inverts the "hide where…
-    - Source: `Your built-in VPN limits reset September 1`
-    - Suggest: `Лимиты встроенного VPN…`
-- `menu-bookmarks-all-tabs` — `browser/browser/menubar.ftl` — the target of the action is dropped. Current: Добавить все вкладки… → Suggest: Добавить все вкладки в закладки…
-    - Current: `Добавить все вкладки…`
-    - Source: `label: Bookmark All Tabs…`
-    - Suggest: `Добавить все вкладки в закладки…`
-- _…and 220 more; see `state/` for the full list._
+- _…and 229 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -557,6 +637,11 @@ _Also listed under their own category below._
     - Current: `на до 5 устройствах`
     - Source: `heading: Take protection further with { -mozilla-vpn-brand-name } message: Choose from 300+ locations and protect all your apps on up to 5 devices.`
     - Suggest: `не более чем на 5 устройствах`
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — The [few] variant puts the noun in the genitive plural, so it reads "2 дополнительных VPN-местоположений", which is wrong.
+    - Current: `[few] У вас { $additionalLocationsCount } дополнительных VPN-местоположений`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `[few] У вас { $additionalLocationsCount } дополнительных VPN-местоположения`
+    - After 2–4 Russian uses the genitive singular: "2 местоположения", not "2 местоположений". As written, the [few] text is the same as the [many] text and is wrong for counts like 2, 3 and 4.
 - `ipprotection-summer-promo-offramp-default-browser-incentive-description` — `browser/browser/ipProtection.ftl` — метоположений → местоположений
     - Current: `метоположений`
     - Source: `Make { -brand-product-name } your go-to browser and get more than 20 extra places to browse from after August 31.`
@@ -669,10 +754,7 @@ _Also listed under their own category below._
 - `info-known-breaches-resolved` — `browser/browser/protections.ftl` — Missing comma before a subordinate clause or participial phrase: permissions-site-notification-desc, -location-desc, -xr-desc, -camera-desc, -microphone-desc (permissions.ftl, 5 strings; the speaker and cookie siblings do it correctly); startup-cache-dialog-title2 (aboutSupport.ftl); about-logins-copy-password-os-auth-dialog-message-win and contextual-manager-passwords-copy-password-os-auth-dialo…
     - Source: `{$count ->} [one] Known data breach marked as resolved [other] Known data breaches marked as resolved`
     - Suggest: `-location-desc`
-- `privacy-metrics-cookies` — `browser/browser/protections.ftl` — privacy-metrics-cookies ([one], [few]) — protections.ftl — gender and number are wrong and inconsistent with bar-tooltip-cookie in the same file
-    - Source: `{$count ->} [one] { $count } tracking cookie [other] { $count } tracking cookies`
-    - Suggest: `[one]`
-- _…and 87 more; see `state/` for the full list._
+- _…and 89 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -701,21 +783,6 @@ _Also listed under their own category below._
     - Source: `label: Organize Tabs tooltiptext: Organize Tabs`
     - Suggest: `label: Организовать вкладки`
     - en-US "Organize Tabs" is a command label; Russian UI commands use the infinitive (compare "Создать все группы", "Разгруппировать вкладки" in the same file), not the imperative "Организуйте".
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
-    - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Восстановите свои данные`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Восстановить ваши данные” but the string it names, `restore-from-backup-header`, reads “Восстановите свои данные”
-    - Current: `Нажмите «Восстановить ваши данные» и выберите этот файл`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Восстановите свои данные`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — "browsing data" is translated as "данные своего веб-сёрфинга" here but as "данные просмотра" in the panel strings this button opens.
-    - Current: `Удалите некоторые или все данные своего веб-сёрфинга`
-    - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
-    - Suggest: `Удалите некоторые или все данные просмотра`
-    - The same en-US term "browsing data" is rendered as "данные просмотра" in fire-button-panel-heading and fire-button-panel-complete. The button that opens that panel uses the colloquial, non-standard "данные веб-сёрфинга", so the two don't match within one feature.
 - `firefox-relay-offer-legal-notice` — `browser/browser/browser.ftl` — firefox-relay-offer-legal-notice Примечанием о конфиденциальности vs Уведомлением… in -notice-1 right below
     - Source: `By clicking “Use email mask”, you agree to the <label data-l10n-name="tos-url">Terms of Service</label> and <label data-l10n-name="privacy-url">Privacy Notice</label>.`
     - Suggest: `Примечанием о конфиденциальности`
@@ -871,7 +938,15 @@ _Also listed under their own category below._
     - Source: `Rotate viewport`
 - `responsive.screenshot` — `devtools/client/responsive.properties` — responsive.leftAlignViewport / responsive.changeDevicePixelRatio leave viewport Latin while responsive.rotate / responsive.screenshot use окно просмотра
     - Source: `Take a screenshot of the viewport`
-- _…and 21 more; see `state/` for the full list._
+- `storage-tree-labels-session-storage` — `devtools/client/storage.ftl` — storage-tree-labels-session-storage-class and eventsTooltip.Capturing vs eventsTooltip.Bubbling (participle vs noun)
+    - Source: `Session Storage`
+- `toolbox-meatball-menu-splitconsole-label` — `devtools/client/toolbox.ftl` — toolbox-meatball-menu-splitconsole-label / -hideconsole-label use positional wording where toolbox-options.ftl uses разделённая консоль
+    - Source: `Show Split Console`
+    - Suggest: `-hideconsole-label`
+- `toolbox.parentProcessBrowserToolboxTitle` — `devtools/client/toolbox.properties` — toolbox.parentProcessBrowserToolboxTitle-class and options-enable-service-workers-http- (three forms of "Service Workers" in one file)
+    - Source: `Parent process Browser Toolbox`
+    - Suggest: `options-enable-service-workers-http-`
+- _…and 18 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -890,7 +965,7 @@ _Also listed under their own category below._
     - Current: `Выполняется резервное копирование...`
     - Source: `Backup in progress…`
     - Suggest: `…`
-    - The tree uses … 404 times against 5 ASCII runs.
+    - The tree uses … 416 times against 5 ASCII runs.
 - `content-analysis-panel-text-styled2` — `browser/browser/browser.ftl` — Missing comma before the subordinate clause introduced by "чтобы".
     - Current: `<b>{ $agentName }</b> чтобы контролировать`
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
@@ -941,7 +1016,7 @@ _Also listed under their own category below._
     - Current: `Отключает команды отправки отзывов в меню Справка («Отправить отзыв...» и «Сообщить о поддельном сайте...»).`
     - Source: `Disable commands to send feedback from the Help menu (Submit Feedback and Report Deceptive Site).`
     - Suggest: `…`
-    - The tree uses … 404 times against 5 ASCII runs.
+    - The tree uses … 416 times against 5 ASCII runs.
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
     - Source: `Configure generative AI features.`
 - `policy-LegacyProfiles` — `browser/browser/policies/policies-descriptions.ftl` — Trailing period added or dropped vs en-US: dropped in policy-GenerativeAI, policy-LegacyProfiles, multi-profile-spotlight-body, set-default-menu-message-split-layout-subtitle ([macos]), security-privacy-issue-warning-ech2, blocked-mismatched-version, menu-help-share-ideas (.label, missing the source's ellipsis), permission-dialog-set-change-app-link; added in browsing-use-full-keyboard-navigation…
@@ -974,7 +1049,7 @@ _Also listed under their own category below._
     - Current: `Вы ничего не синхронизируете... пока. Запустите синхронизацию, чтобы получить все ваши данные на всех ваших устройствах.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
     - Suggest: `…`
-    - The tree uses … 404 times against 5 ASCII runs.
+    - The tree uses … 416 times against 5 ASCII runs.
 - `protections-vpn-header-content-subscribed` — `browser/browser/protections.ftl` — Stray space before punctuation: protections-vpn-header-content-subscribed (Apple App Store .), extension-controlled-enable and settings-translations-subpage-never-translate-sites-description (preferences.ftl), fp-certerror-not-yet-valid-why-dangerous-body (certError.ftl), PEAttSelNoBar and PEAttSelUnexpected (css.properties), networkMenu.ws.summary.framesCount2 and charts.totalSecondsNonBlocking…
     - Source: `{$count ->} [other] Using the { -mozilla-vpn-brand-name } encrypts all your traffic and hides your location — on up to { $count } devices. Get the most from your subscription — add it from the <a data-l10n-name="playsto…`
     - Suggest: `Apple App Store .`
@@ -1045,7 +1120,7 @@ _Also listed under their own category below._
     - Current: `Начните ввод...`
     - Source: `aria-label: Text Editor default-content: Start typing…`
     - Suggest: `…`
-    - The tree uses … 404 times against 5 ASCII runs.
+    - The tree uses … 416 times against 5 ASCII runs.
 - _…and 1 more; see `state/` for the full list._
 
 ---
@@ -1074,8 +1149,10 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (182)
+### Fixed to date (184)
 
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
 - `smart-window-closed-tabs-summary` — `browser/browser/aiWindowContent.ftl` — fixed 2026-09-21
 - `smart-window-restore-success-summary` — `browser/browser/aiWindowContent.ftl` — fixed 2026-09-21
 - `preferences-etp-tracker-count-enabled` — `browser/browser/preferences/preferences.ftl` — fixed 2026-09-21
@@ -1114,5 +1191,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `genai-settings-chat-chatgpt-links` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `genai-shortcuts-selected-warning` — `browser/browser/genai.ftl` — fixed 2026-08-07
 - `migration-wizard-progress-done-with-warnings-header` — `browser/browser/migrationWizard.ftl` — fixed 2026-08-07
-- `spotlight-peace-mind-body` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-07
-- `windows-10-eos-feature-toast-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-08-07

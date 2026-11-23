@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 16,878 |
+| **Strings reviewed this run** | 324 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for el: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `smart-window-model-section-v2` — `browser/browser/aiFeatures.ftl` — The label is the Italian word "Modello" instead of the Greek "Μοντέλο".
+    - Current: `Modello`
+    - Source: `description: Models are what power chats and actions. label: Model`
+    - Suggest: `Μοντέλο`
+    - en-US "Model" is rendered in Italian. Greek uses "μοντέλο", as the description of this same string and the other model strings do.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — "Nickname" for a saved location is rendered as "Ψευδώνυμο" (pseudonym/alias), which the developer comment explicitly rules out.
+    - Current: `Ψευδώνυμο (προαιρετικό)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Ετικέτα (προαιρετικό)`
+    - The comment says the nickname is a user-defined label for a saved location such as Home or Office, and must not be translated as an alias. Ψευδώνυμο means pseudonym or alias. A label term such as Ετικέτα fits the meaning; the placeholder would need the same change (Προσθήκη ετικέτας).
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — There is a stray space between the brand name and the period at the end of the sentence.
+    - Current: `{ $BrandFullNameDA } .`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `{ $BrandFullNameDA }.`
+    - The en-US has no space before the period. In the Greek the space shows up in the text the user reads, so the period sits apart from the product name.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +58,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,878 |
-| Missing strings | 5 |
+| Files | 336 |
+| Strings | 17,120 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,12 +77,7 @@ _Nothing retired._
 
 ### Completeness
 
-**5 strings** are not translated yet, concentrated in:
-
-- `browser/browser/newtab/newtab.ftl` — 4
-- `browser/browser/preferences/preferences.ftl` — 1
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -76,9 +85,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1019, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
+| quotes | `guillemet` 1047, `curly-single` 94, `straight-double` 25, `curly-double` 2 | **guillemet** |
 | apostrophe | `typographic` 98, `straight` 5 | **typographic** |
-| ellipsis | `char` 400, `ascii` 2 | **char** |
+| ellipsis | `char` 409, `ascii` 2 | **char** |
 | dash | `em` 65, `en` 2 | **em** |
 | nbsp | `total` 15, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -90,15 +99,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (221)
+## 3. Open findings (224)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 142 |
-| 2 | Wrong content (says something other than the English) | 69 |
-| 3 | Degraded language (grammar, spelling, terminology) | 8 |
-| 4 | Cosmetic (typography, spacing) | 2 |
+| 2 | Wrong content (says something other than the English) | 70 |
+| 3 | Degraded language (grammar, spelling, terminology) | 9 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -410,11 +419,21 @@ _Nothing reported._
     - Source: `This deletes it from { -brand-short-name } on every device that syncs your passwords. You can’t undo this.`
     - Suggest: `Θα διαγραφεί ο κωδικός πρόσβασης`
     - The developer comment says this dialog deletes one saved password; nothing about it is a file.
+- `smart-window-model-section-v2` — `browser/browser/aiFeatures.ftl` — The label is the Italian word "Modello" instead of the Greek "Μοντέλο".
+    - Current: `Modello`
+    - Source: `description: Models are what power chats and actions. label: Model`
+    - Suggest: `Μοντέλο`
+    - en-US "Model" is rendered in Italian. Greek uses "μοντέλο", as the description of this same string and the other model strings do.
 - `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — The hedge "may be vulnerable" is rendered as a definite statement that libavcodec has security vulnerabilities.
     - Current: `παρουσιάζει ευπάθειες ασφάλειας`
     - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
     - Suggest: `ενδέχεται να παρουσιάζει ευπάθειες`
     - en-US says libavcodec "may be vulnerable or is not supported"; the Greek asserts it is vulnerable, stating as fact what the source presents only as a possibility.
+- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — "Nickname" for a saved location is rendered as "Ψευδώνυμο" (pseudonym/alias), which the developer comment explicitly rules out.
+    - Current: `Ψευδώνυμο (προαιρετικό)`
+    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
+    - Suggest: `Ετικέτα (προαιρετικό)`
+    - The comment says the nickname is a user-defined label for a saved location such as Home or Office, and must not be translated as an alias. Ψευδώνυμο means pseudonym or alias. A label term such as Ετικέτα fits the meaning; the placeholder would need the same change (Προσθήκη ετικέτας).
 - `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — "Duplicate Tabs" (an adjective describing tabs) is translated as the action "Copying tabs".
     - Current: `Αντιγραφή καρτελών`
     - Source: `accesskey: x label: Duplicate Tabs`
@@ -957,7 +976,7 @@ _Nothing reported._
 - `about-logins-menu-menuitem-export-logins2` — `browser/browser/aboutLogins.ftl` — `about-logins-menu-menuitem-export-logins2` uses three dots where this locale uses …
     - Current: `Εξαγωγή κωδικών πρόσβασης...`
     - Source: `Export Passwords…`
-    - The tree uses … 400 times against 2 ASCII runs.
+    - The tree uses … 409 times against 2 ASCII runs.
 - `bar-tooltip-social` — `browser/browser/protections.ftl` — The plural variant of the aria-label is missing the opening parenthesis before the percentage.
     - Current: `ιχνηλάτες κοινωνικών δικτύων { $percentage }%)`
     - Source: `aria-label: {$count ->} [one] { $count } social media tracker ({ $percentage }%) [other] { $count } social media trackers ({ $percentage }%) title: Social Media Trackers`
@@ -968,6 +987,11 @@ _Nothing reported._
     - Source: `{$numBreaches ->} [other] { $numBreachesResolved } out of { $numBreaches } breaches marked as resolved`
     - Suggest: `{ $numBreachesResolved } από { $numBreaches } παραβιάσεις`
     - The rendered text runs the count into «από» (e.g. "3από 5 παραβιάσεις"); the singular variant in the same message has the space.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — There is a stray space between the brand name and the period at the end of the sentence.
+    - Current: `{ $BrandFullNameDA } .`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `{ $BrandFullNameDA }.`
+    - The en-US has no space before the period. In the Greek the space shows up in the text the user reads, so the period sits apart from the product name.
 - `MUI_UNTEXT_WELCOME_INFO_TEXT` — `browser/installer/mui.properties` — Stray space between the brand variable and the full stop.
     - Current: `δεν εκτελείται το $BrandFullNameDA .`
     - Source: `This wizard will guide you through the uninstallation of $BrandFullNameDA.  Before starting the uninstallation, make sure $BrandFullNameDA is not running.  $_CLICK`
@@ -1036,7 +1060,7 @@ _Nothing reported._
 - `unknowncontenttype-other` — `toolkit/toolkit/global/unknownContentType.ftl` — `unknowncontenttype-other` uses three dots where this locale uses …
     - Current: `Άλλο...`
     - Source: `label: Other…`
-    - The tree uses … 400 times against 2 ASCII runs.
+    - The tree uses … 409 times against 2 ASCII runs.
 
 ---
 

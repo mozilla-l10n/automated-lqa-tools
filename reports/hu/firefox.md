@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 16,883 |
+| **Strings reviewed this run** | 332 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,41 @@ Also for hu: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — The definite article before the Smart Window brand name is missing in the label.
+    - Current: `Kezdés { -smart-window-brand-name }ban`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `Kezdés az { -smart-window-brand-name }ban`
+    - Every other string in this batch puts the article 'az' before this brand name (e.g. 'az { -smart-window-brand-name }ban'). Without it, 'Kezdés …ban' is ungrammatical in Hungarian.
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — The button uses the informal imperative "vigyél" instead of the formal address the locale uses everywhere else.
+    - Current: `Igen, vigyél ide`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Igen, vigyen ide`
+    - Hungarian Firefox uses the formal "you" (magázás) throughout, for example "Tegye", "Kapjon" and "Szerezze be" in this same batch. "vigyél" is the informal form, which breaks the established register.
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — "Select the first option below" is rendered as "choose from the options below", dropping "first".
+    - Current: `válasszon az alábbi lehetőségek közül`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `válassza az alábbi első lehetőséget`
+    - The source tells the user to select the first option to accept the license. The Hungarian only says to pick one of the options, so the user loses the instruction on which option accepts.
+- `nsis-file-error` — `browser/installer/override.ftl` — The Retry button is called "Ismét" here but "Újra" in the sibling string and in the standard Windows dialog button.
+    - Current: `az újrapróbálkozáshoz az Ismét gombra`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `az újrapróbálkozáshoz az Újra gombra`
+    - nsis-file-error-no-ignore refers to the same Retry button as "Újra", which is the Hungarian Windows label. "Ismét" names a button the user will not see.
+- `about-webauthn-logging-scope-note` — `toolkit/toolkit/about/aboutWebauthn.ftl` — The word "platform" is left out, so the note now says requests to any WebAuthn API go unlogged, not just requests to the platform (operating system) WebAuthn APIs.
+    - Current: `Nem naplózza a WebAuthn API-knak`
+    - Source: `This only logs requests to the native CTAP implementation of { -brand-short-name }. It does not log requests to platform WebAuthn APIs or browser extensions.`
+    - Suggest: `Nem naplózza a platform WebAuthn API-jainak`
+    - The en-US separates Firefox's own CTAP implementation from the operating system's WebAuthn APIs. Without "platform", the sentence says the tool logs no WebAuthn API requests at all. That is misleading, because the requests it does log come in through WebAuthn.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Hozzáadás osztott nézethez” but the string it names, `customkeys-view-add-split-view`, reads “Osztott nézet hozzáadása”
+    - Current: `Kattintson jobb gombbal erre a lapra, és válassza a „Hozzáadás osztott nézethez” lehetőséget, hogy egyszerre két lapot lásson.`
+    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
+    - Suggest: `Osztott nézet hozzáadása`
+    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +62,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-message-wallpapers-semifinals-body` — `browser/browser/newtab/newtab.ftl` — Informal second-person imperative in a file that consistently uses the formal address.
+    - Current: `Készítsd elő a színteret a világbajnokság legnagyobb mérkőzéseire!`
+    - Suggest: `Készítse elő a színteret a világbajnokság legnagyobb mérkőzéseire.`
+    - Every other imperative in this file uses the formal Ön form (e.g. "Válassza", "Kövesse", "Vigyen"); "Készítsd" is the informal te form.
 
 ---
 
@@ -44,8 +75,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -55,7 +86,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 2 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -71,9 +102,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 811, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
+| quotes | `polish-double` 810, `straight-double` 33, `german-double` 2, `curly-single` 1 | **polish-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
-| ellipsis | `char` 401, `ascii` 4 | **char** |
+| ellipsis | `char` 410, `ascii` 4 | **char** |
 | dash | `em` 2, `en` 134 | **en** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -85,7 +116,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (282)
+## 3. Open findings (285)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -105,9 +136,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 26 |
-| 2 | Wrong content (says something other than the English) | 135 |
-| 3 | Degraded language (grammar, spelling, terminology) | 90 |
-| 4 | Cosmetic (typography, spacing) | 27 |
+| 2 | Wrong content (says something other than the English) | 136 |
+| 3 | Degraded language (grammar, spelling, terminology) | 93 |
+| 4 | Cosmetic (typography, spacing) | 26 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -544,6 +575,11 @@ _Also listed under their own category below._
     - Source: `tooltiptext: Translate this page - Beta`
     - Suggest: `Oldal lefordítása – Beta`
     - The comment states: “Note that here "Beta" should not be translated, as it is a reflection of the un-localized BETA icon that is in the panel.”
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — "Select the first option below" is rendered as "choose from the options below", dropping "first".
+    - Current: `válasszon az alábbi lehetőségek közül`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `válassza az alábbi első lehetőséget`
+    - The source tells the user to select the first option to accept the license. The Hungarian only says to pick one of the options, so the user loses the instruction on which option accepts.
 - `serviceworker-empty-suggestions2` — `devtools/client/application.ftl` — "service worker" misspelled as "server worker" twice in the same string.
     - Current: `server workernek`
     - Source: `If the current page should have a service worker, you could look for errors in the <a>Console</a> or step through your service worker registration in the <span>Debugger</span>.`
@@ -584,6 +620,11 @@ _Also listed under their own category below._
     - Source: `Read, mark up, and sign PDFs right where you browse. It’s simple, free, and private.`
     - Suggest: `Egyszerű, ingyenes és privát.`
     - The source claims the tools are private; the Hungarian claims they are secure, a different assertion about the product.
+- `about-webauthn-logging-scope-note` — `toolkit/toolkit/about/aboutWebauthn.ftl` — The word "platform" is left out, so the note now says requests to any WebAuthn API go unlogged, not just requests to the platform (operating system) WebAuthn APIs.
+    - Current: `Nem naplózza a WebAuthn API-knak`
+    - Source: `This only logs requests to the native CTAP implementation of { -brand-short-name }. It does not log requests to platform WebAuthn APIs or browser extensions.`
+    - Suggest: `Nem naplózza a platform WebAuthn API-jainak`
+    - The en-US separates Firefox's own CTAP implementation from the operating system's WebAuthn APIs. Without "platform", the sentence says the tool logs no WebAuthn API requests at all. That is misleading, because the requests it does log come in through WebAuthn.
 - `contentanalysis-slow-agent-dialog-body-clipboard-copy` — `toolkit/toolkit/contentanalysis/contentanalysis.ftl` — "what you copied" was translated as "amit nyomtatott" (what you printed).
     - Current: `amit nyomtatott`
     - Source: `{ $agent } is reviewing what you copied against your organization’s data policies. This may take a moment.`
@@ -657,6 +698,11 @@ _Also listed under their own category below._
     - Source: `Use @ to mention recent tabs…`
     - Suggest: `A @ használatával említheti meg a legutóbbi lapokat…`
     - “a legutóbbi lapokat” is a definite object, requiring the definite conjugation “említheti”.
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — The definite article before the Smart Window brand name is missing in the label.
+    - Current: `Kezdés { -smart-window-brand-name }ban`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `Kezdés az { -smart-window-brand-name }ban`
+    - Every other string in this batch puts the article 'az' before this brand name (e.g. 'az { -smart-window-brand-name }ban'). Without it, 'Kezdés …ban' is ungrammatical in Hungarian.
 - `identity-etsi` — `browser/browser/browser.ftl` — Misspelling of “rendeletben”.
     - Current: `Az (EU) 2024/1183 rendeleteben meghatározottak szerint.`
     - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
@@ -895,6 +941,11 @@ _Also listed under their own category below._
     - Source: `aria-label: Memories`
     - Suggest: `Memóriák`
     - Every other Memories string in aiWindow.ftl, aiWindowContent.ftl and aiFeatures.ftl uses “Memóriák”, including the sibling popover label in the same block.
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — The button uses the informal imperative "vigyél" instead of the formal address the locale uses everywhere else.
+    - Current: `Igen, vigyél ide`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Igen, vigyen ide`
+    - Hungarian Firefox uses the formal "you" (magázás) throughout, for example "Tegye", "Kapjon" and "Szerezze be" in this same batch. "vigyél" is the informal form, which breaks the established register.
 - `confirmation-hint-pin-tab-description` — `browser/browser/confirmationHints.ftl` — “tab” rendered as “fül” although the tree consistently uses “lap”.
     - Current: `kattintson a fülre jobb egérgombbal`
     - Source: `Right-click the tab to unpin it.`
@@ -905,11 +956,6 @@ _Also listed under their own category below._
     - Source: `Key cannot be used`
     - Suggest: `A billentyű nem használható`
     - The whole file is about keyboard shortcuts and elsewhere uses “billentyű” (customkeys-new-key: “Nyomja meg az új billentyűt”); “kulcs” names the wrong object.
-- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — `splitview-onboarding-callout-subtitle-1` quotes “Hozzáadás osztott nézethez” but the string it names, `customkeys-view-add-split-view`, reads “Osztott nézet hozzáadása”
-    - Current: `Kattintson jobb gombbal erre a lapra, és válassza a „Hozzáadás osztott nézethez” lehetőséget, hogy egyszerre két lapot lásson.`
-    - Source: `Right-click this tab and choose “Add Split View” to see two tabs at once.`
-    - Suggest: `Osztott nézet hozzáadása`
-    - In the source this string quotes “Add Split View”, which is exactly the value of `customkeys-view-add-split-view` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `menu-application-hide-other` — `browser/browser/menubar.ftl` — “A több elrejtése” is not grammatical; the pronoun for “others” is “a többi”.
     - Current: `A több elrejtése`
     - Source: `label: Hide Others`
@@ -1120,6 +1166,11 @@ _Also listed under their own category below._
     - Source: `$BrandShortName &Options`
     - Suggest: `$BrandShortName &beállításai`
     - This is a shortcut context-menu entry naming the Options/Settings screen; "beállítása" reads as the act of configuring it, while the UI item is "beállításai".
+- `nsis-file-error` — `browser/installer/override.ftl` — The Retry button is called "Ismét" here but "Újra" in the sibling string and in the standard Windows dialog button.
+    - Current: `az újrapróbálkozáshoz az Ismét gombra`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `az újrapróbálkozáshoz az Újra gombra`
+    - nsis-file-error-no-ignore refers to the same Retry button as "Újra", which is the Hungarian Windows label. "Ismét" names a button the user will not see.
 - `accessibility-text-label-issue-dialog` — `devtools/client/accessibility.ftl` — Spelling error: "párbeszablakokat" instead of "párbeszédablakokat".
     - Current: `A párbeszablakokat címkézni kell.`
     - Source: `Dialogs should be labeled. <a>Learn more</a>`
@@ -1185,12 +1236,7 @@ _Also listed under their own category below._
     - Source: `Cookie “%1$S” has been rejected because its expiration date is over the limit.`
     - Suggest: `mert a lejáratidátum-attribútuma túl nagy`
     - Hungarian uses “a” before a consonant; “az lejárat…” is ungrammatical.
-- `SEC_ERROR_BAD_NICKNAME` — `security/manager/chrome/pipnss/nsserrors.properties` — The sentence starts with the conjunction “Ha” (if) instead of the article “A”.
-    - Current: `Ha tanúsítvány neve már használatban van.`
-    - Source: `Certificate nickname already in use.`
-    - Suggest: `A tanúsítvány neve már használatban van.`
-    - en-US: “Certificate nickname already in use.” As written the string is a dangling conditional clause, not a statement.
-- _…and 15 more; see `state/` for the full list._
+- _…and 16 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1199,11 +1245,6 @@ _Also listed under their own category below._
     - Source: `Your organization uses <b>{ $agentName }</b> to control how sensitive data may be shared. <a data-l10n-name="info">Learn more</a>`
     - Suggest: `<b>{ $agentName }</b> segítségével szabályozza az érzékeny adatok megosztását. <a data-l10n-name="info">Tudjon meg többet</a>`
     - The en-US has a space between the agent name and the following word, and no padding spaces inside the link; the Hungarian runs the words together and adds spaces inside the anchor text.
-- `newtab-sports-widget-message-wallpapers-semifinals-body` — `browser/browser/newtab/newtab.ftl` — Informal second-person imperative in a file that consistently uses the formal address.
-    - Current: `Készítsd elő a színteret a világbajnokság legnagyobb mérkőzéseire!`
-    - Source: `Set the stage for the World Cup’s biggest matches.`
-    - Suggest: `Készítse elő a színteret a világbajnokság legnagyobb mérkőzéseire.`
-    - Every other imperative in this file uses the formal Ön form (e.g. "Válassza", "Kövesse", "Vigyen"); "Készítsd" is the informal te form.
 - `onboarding-refresh-terms-of-use-with-links` — `browser/browser/newtab/onboarding.ftl` — Stray space before the closing anchor tag creates a space before the period in the rendered sentence.
     - Current: `Adatvédelmi nyilatkozatunkat </a>.`
     - Source: `By continuing, you agree to the <a data-l10n-name="terms_of_use">{ -brand-product-name } Terms of Use</a> and our <a data-l10n-name="privacy_notice">Privacy Notice</a>. To help improve the browser, { -brand-product-name…`
@@ -1242,7 +1283,7 @@ _Also listed under their own category below._
 - `Strings.InfoText` — `browser/updater/updater.ini` — `Strings.InfoText` uses three dots where this locale uses …
     - Current: `A %MOZ_APP_DISPLAYNAME% telepíti a frissítéseket, és pár pillanat múlva elindul...`
     - Source: `%MOZ_APP_DISPLAYNAME% is installing your updates and will start in a few moments…`
-    - The tree uses … 401 times against 4 ASCII runs.
+    - The tree uses … 410 times against 4 ASCII runs.
 - `heading` — `dom/chrome/accessibility/AccessFu.properties` — “heading” is translated as “fejléc”, the same word used for “header”, collapsing two distinct roles.
     - Current: `heading = fejléc`
     - Source: `heading`
@@ -1251,19 +1292,19 @@ _Also listed under their own category below._
 - `GTK2Conflict2` — `dom/chrome/dom/dom.properties` — `GTK2Conflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el GTK2 alatt: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on GTK2: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (811 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `WinConflict2` — `dom/chrome/dom/dom.properties` — `WinConflict2` uses straight double quotes
     - Current: `A billentyűesemény nem érhető el egyes billentyűzetkiosztások esetén: key="%S" modifiers="%S" id="%S"`
     - Source: `Key event not available on some keyboard layouts: key=“%S” modifiers=“%S” id=“%S”`
-    - The locale's quote convention is `polish-double` (811 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `TooLargeDashedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDashedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dashed" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dashed’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (811 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `TooLargeDottedRadius` — `dom/chrome/layout/css.properties` — `TooLargeDottedRadius` uses straight double quotes
     - Current: `A szegélysugár túl nagy a "dotted" stílushoz (a korlát 100000px). Megjelenítés tömörként.`
     - Source: `Border radius is too large for ‘dotted’ style (the limit is 100000px). Rendering as solid.`
-    - The locale's quote convention is `polish-double` (811 occurrences).
+    - The locale's quote convention is `polish-double` (810 occurrences).
 - `dom-manifest-image-url-is-invalid` — `dom/dom/manifest.ftl` — A final period was added after the URL value, which the developer comment explicitly forbids.
     - Current: `érvénytelen: { $value }.`
     - Source: `{ $memberName } item at index { $index } is invalid. The { $member } member is an invalid URL { $value }`
@@ -1272,15 +1313,15 @@ _Also listed under their own category below._
 - `crashreporter-button-details` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-button-details` uses three dots where this locale uses …
     - Current: `Részletek...`
     - Source: `Details…`
-    - The tree uses … 401 times against 4 ASCII runs.
+    - The tree uses … 410 times against 4 ASCII runs.
 - `crashreporter-resubmit-status` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-resubmit-status` uses three dots where this locale uses …
     - Current: `A korábban sikertelenül elküldött bejelentések újraküldése...`
     - Source: `Resending reports that previously failed to send…`
-    - The tree uses … 401 times against 4 ASCII runs.
+    - The tree uses … 410 times against 4 ASCII runs.
 - `crashreporter-submit-in-progress` — `toolkit/crashreporter/crashreporter.ftl` — `crashreporter-submit-in-progress` uses three dots where this locale uses …
     - Current: `Bejelentés elküldése...`
     - Source: `Submitting your report…`
-    - The tree uses … 401 times against 4 ASCII runs.
+    - The tree uses … 410 times against 4 ASCII runs.
 - `about-webrtc-consecutive-frames` — `toolkit/toolkit/about/aboutWebrtc.ftl` — Video "frames" rendered as "keretek" (borders) instead of "képkockák" used elsewhere in the file.
     - Current: `Egymást követő keretek`
     - Source: `Consecutive Frames`
@@ -1328,8 +1369,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (7)
+### Fixed to date (8)
 
+- `splitview-onboarding-callout-subtitle-1` — `browser/browser/featureCallout.ftl` — fixed 2026-11-23
 - `customkeys-shortcut-unassigned` — `browser/browser/customkeys.ftl` — fixed 2026-11-02
 - `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `pdfjs-editor-undo-bar-message-multiple` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-09-14
