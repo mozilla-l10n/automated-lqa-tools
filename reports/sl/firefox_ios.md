@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 1,903 |
+| **Strings reviewed this run** | 0 of 1,899 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for sl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `ErrorPages.CertWarning.Title` — `sl/firefox-ios.xliff` — Title says "Your connection is not private" instead of "This Connection is Untrusted".
-    - Current: `Vaša povezava ni zasebna`
-    - Source: `This Connection is Untrusted`
-    - Suggest: `Ta povezava ni zaupanja vredna`
-    - The en-US says the connection is untrusted; the Slovenian asserts it is not private, a different claim.
-- `ScanQRCode.PermissionError.Message.v100` — `sl/firefox-ios.xliff` — The instruction to go to the device settings is reduced to "Izberite" (Select), dropping "device".
-    - Current: `Izberite "Nastavitve" > "Firefox".`
-    - Source: `Go to device ‘Settings’ > ‘Firefox’. Allow Firefox to access camera.`
-    - Suggest: `Pojdite v "Nastavitve" naprave > "Firefox".`
-    - en-US says "Go to device ‘Settings’ > ‘Firefox’"; the reference to the device's Settings app is lost.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,903 |
-| Missing strings | 83 |
+| Strings | 1,899 |
+| Missing strings | 94 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -68,17 +59,18 @@ _Nothing retired._
 
 ### Completeness
 
-**83 strings** are not translated yet, concentrated in:
+**94 strings** are not translated yet, concentrated in:
 
 - `sl/firefox-ios.xliff` — 35
-- `sl/firefox-ios.xliff` — 20
+- `sl/firefox-ios.xliff` — 22
+- `sl/firefox-ios.xliff` — 11
 - `sl/firefox-ios.xliff` — 8
-- `sl/firefox-ios.xliff` — 6
 - `sl/firefox-ios.xliff` — 5
 - `sl/firefox-ios.xliff` — 2
 - `sl/firefox-ios.xliff` — 2
+- `sl/firefox-ios.xliff` — 2
+- `sl/firefox-ios.xliff` — 2
 - `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
-- `sl/firefox-ios.xliff` — 1
 - `sl/firefox-ios.xliff` — 1
 - `sl/firefox-ios.xliff` — 1
 
@@ -97,7 +89,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `straight-double` 15 | **straight-double** |
 | ellipsis | `char` 23 | **char** |
 | dash | `en` 11 | **en** |
-| register | `informal` 2, `formal` 63 | **formal** |
+| register | `informal` 2, `formal` 62 | **formal** |
 
 ---
 

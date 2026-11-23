@@ -40,6 +40,11 @@
   "Alerts.AddToCalendar.BodyDefault.v134": "3c78c241 70fe87b8 8dbcd3a5",
   "Alerts.AddToCalendar.Button.Add.v134": "43ee0759 01172d28 8f018583",
   "Alerts.AddToCalendar.Title.v134": "bbd1a73d 08d8ff50 ea781d29",
+  "Alerts.ConfigurationProfile.Body.v160.1": "ffa7913a e60e0053 074a52b6",
+  "Alerts.ConfigurationProfile.BodyDefault.v160.1": "4b02fa04 54eba705 c891871a",
+  "Alerts.ConfigurationProfile.Button.Cancel.v160.1": "b2eb5e2b 871d661d 9f7d31af",
+  "Alerts.ConfigurationProfile.Button.Continue.v160.1": "b9c2269a 5009bc49 248707f1",
+  "Alerts.ConfigurationProfile.Title.v160.1": "366c0864 7ed5ad40 983f661d",
   "Alerts.FeltDeletion.Body.v122": "148222c7 7183e636 a55c275d",
   "Alerts.FeltDeletion.Button.Cancel.v122": "b2eb5e2b 871d661d 3e734601",
   "Alerts.FeltDeletion.Button.Cancel.v134": "b2eb5e2b 871d661d 1bfe1810",
@@ -144,15 +149,20 @@
  "Shared/Supporting Files/en-US.lproj/BottomSheet.strings": {
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "70bf934a a78ab860 b56cb9e0"
  },
+ "Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings": {
+  "BrowserDataTransfer.ImportFailure.DismissButton.v160": "97469f03 b21634a9 ecd697d2",
+  "BrowserDataTransfer.ImportFailure.Message.v160": "485a0f9c 5f77c9f8 da9f3649",
+  "BrowserDataTransfer.ImportFailure.Title.v160": "b743a530 833c045e b24761ff",
+  "BrowserDataTransfer.ImportSuccess.GotItButton.v160": "322b41af 41cd3e20 600d26c1",
+  "BrowserDataTransfer.ImportSuccess.Message.v160": "9aab9aab 469f532a edc937f6"
+ },
  "Shared/Supporting Files/en-US.lproj/Camera.strings": {
   "CameraAccess.DisabledAlertMessage.v153": "41b1bb78 a6d5aa3e 22850307"
  },
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "d35c8939 bc9b006c ad456a71",
   "ContextualHints.Toolbar.GoogleLens.Description.v154": "d8e990b0 b34060de 9b20dd7d",
-  "ContextualHints.Toolbar.GoogleLens.Title.v154": "1b982d9d 8f769d06 de7355f5",
-  "ContextualHints.Translations.Body.v145": "f94fe4e2 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "7a25018d 7e00315a d883a703"
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "1b982d9d 8f769d06 de7355f5"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "b2eb5e2b 871d661d 6bb73e98",
@@ -439,6 +449,7 @@
   "MainMenu.SiteProtection.Protections.Title.v153": "2933ea17 4f5e721b a20472bf",
   "MainMenu.SiteProtection.ProtectionsOff.Title.v141": "905f41c2 54948b66 268a02d3",
   "MainMenu.SiteProtection.ProtectionsOn.Title.v141": "6d20dc1d 0f76f2fd 29145267",
+  "MainMenu.SiteProtection.VPN.Title.v162": "ba165965 ba165965 6712916c",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToHomeScreen.Subtitle.v132": "97ca8615 3d4475ff 8c207f52",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToHomeScreen.Title.v132": "2490df36 ac0715f9 c7af67f2",
   "MainMenu.Submenus.Save.AccessibilityLabels.AddToShortcuts.Subtitle.v132": "03857f11 de41b209 b0904a75",
@@ -763,7 +774,9 @@
   "Onboarding.Welcome.Link.Action.v114": "c001c679 e22c5bd6 68ce2114",
   "Onboarding.Welcome.Skip.v114": "16515b8e dfb31eca 2527904c",
   "Onboarding.Welcome.Title.TreatementA.v120": "0c2de303 8edee85e 42b6b9a4",
-  "Onboarding.Welcome.Title.v114": "48c6f433 309cad48 42b6b9a4"
+  "Onboarding.Welcome.Title.v114": "48c6f433 309cad48 42b6b9a4",
+  "VPN.Onboarding.Subheading.v162": "09f8719d a801e272 f66727c6",
+  "VPN.Onboarding.TurnOnVPNButton.v162": "e1d331d4 d0149e5d e16942a9"
  },
  "Shared/Supporting Files/en-US.lproj/PasswordAutofill.strings": {
   "PasswordAutofill.LoginListCellNoUsername.v129": "e36d773d 00ac2900 5441cc20",
@@ -1046,7 +1059,9 @@
   "Settings.Translation.SettingOn.v145": "9ac3e207 201cd7a0 33647977",
   "Settings.Translation.Title.v145": "0ae39468 9afb9485 e8e90a78",
   "Settings.Translation.ToggleFooter.v151": "98fb8f81 925a0171 a8fa2621",
-  "Settings.Translation.ToggleTitle.v145": "799311b7 c640ad8b 22fa395f"
+  "Settings.Translation.ToggleTitle.v145": "799311b7 c640ad8b 22fa395f",
+  "VPN.LocationPicker.NoLocationsSubtitle.v162": "a51314c5 4dad2f2b e480d48f",
+  "VPN.LocationPicker.NoLocationsTitle.v162": "99dd0362 75179b77 759e98e2"
  },
  "Shared/Supporting Files/en-US.lproj/Share.strings": {
   "SendTo.NoDevicesFound.Message.v119": "9749c1cb 285cd0fc 13fc1cc8",
@@ -1129,6 +1144,8 @@
   "TabTrayOneMonthAgoTitle.v140": "37d6532c 5987010f a59cae53",
   "TabTrayOneWeekAgoTitle.v140": "693f0263 453eedaf 833ba343",
   "TabTraySelectorAccessibilityHint.v139": "8bba481a 1fe9192d e771ea46",
+  "TabsTray.Sync.RefreshButton.Title.v162": "c47d3fec 80a73a4c 2adabd80",
+  "TabsTray.Sync.SignIn.Description.v162": "3f2e5b85 67d397b1 00211787",
   "TabsTray.Sync.SyncTabsDisabled.v116": "80df4645 59268edd 2162fbb7",
   "TabsTray.SyncTabs.SyncTabsButton.Title.v119": "151eab89 71b176db 0e981ddf"
  },
@@ -1215,6 +1232,9 @@
   "Upgrade.Welcome.Description.v114": "21980d27 5adaa1ee f468827a",
   "Upgrade.Welcome.Title.v114": "e43aed77 df7f4dbc a9213614"
  },
+ "Shared/Supporting Files/en-US.lproj/Wallpapers.strings": {
+  "Wallpapers.EngagementSheet.Title.v161": "2bc00147 2b7da448 4d9b8b51"
+ },
  "Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings": {
   "WebCompatReporter.AdditionalInfo.FooterText.v154": "506636b8 3076b2c4 d1b45d55",
   "WebCompatReporter.AdditionalInfo.IncludeBlockedList.v154": "2dbd10ff 5b689baa 2b8ce4c8",
@@ -1227,11 +1247,9 @@
   "WebCompatReporter.Category.VideoOrAudio.v154": "e8f90d78 6d872e60 f5634cc3",
   "WebCompatReporter.Fields.ChooseIssueTypeAccessibilityHint.v156": "327b1273 49b21065 b7b7ff38",
   "WebCompatReporter.Fields.ChooseSubOptionAccessibilityHint.v156": "a2215915 73ba17c4 4b7bca50",
-  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "e58bc9ea 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "a9f0a448 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "22d61f13 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84 8b45567b",
-  "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84 759d1ff9",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "07037156 56a75088 6efcf8d1",
   "WebCompatReporter.IssueSection.Title.v154": "aea4c6a7 79a458bc 22e81da1",
   "WebCompatReporter.Preview.Data.AvailableMemory.v155": "0aeab17a 7da17114 8fcc4ca5",
@@ -1288,6 +1306,7 @@
   "Copy URL": "adddffcb 0ebf2b8b 111efe11",
   "Menu.SendLinkToDevice": "f077bcce d015e941 2e440aaa",
   "Open Last Bookmark": "435c89e0 881fe42a f5c732fb",
+  "QuickActions.CombineWindows.Title.v155": "d1316f82 1e1ff656 c20aa1c1",
   "Send to Device": "b54c36da b6b743f8 749ef080",
   "TabPeek.RemoveBookmark.v146": "bb2078a4 02dc4436 304af0b9"
  },
@@ -1867,6 +1886,7 @@
   "Settings.TrackingProtection.ProtectionCellFooter": "353810ea 41828a75 74b1ec2b",
   "Settings.TrackingProtection.ProtectionLevel.Footer": "c25f6f17 44557f5b 1cbf119c",
   "Settings.TrackingProtection.ProtectionLevel.Footer.Lock": "c25f6f17 44557f5b 1cbf119c",
+  "Settings.TrackingProtection.ProtectionLevel.Footer.Strict.v161": "0ed6207f 3f835981 1cbf119c",
   "Settings.TrackingProtection.ProtectionLevelStandard.Description": "9f724e40 f7865570 d3328cde",
   "Settings.TrackingProtection.ProtectionLevelStrict.Description": "6c4b91a7 108edbae 6a35d06a",
   "Settings.TrackingProtection.ProtectionLevelTitle": "17b52c57 47824440 5d711e1f",

@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "de",
-  "prose_chunks": 1986,
-  "strings": 1986
+  "prose_chunks": 1993,
+  "strings": 1993
  },
  "apostrophe": {
   "straight": 0,
@@ -33,7 +33,7 @@
   "german-double": 17
  },
  "register": {
-  "formal": 479,
+  "formal": 483,
   "informal": 0
  }
 }

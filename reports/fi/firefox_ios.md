@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 14 of 1,986 |
+| **Strings reviewed this run** | 3 of 1,985 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for fi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Alerts.ConfigurationProfile.Button.Cancel.v160.1` — `fi/firefox-ios.xliff` — The Cancel button is translated as "Kumoa" (Undo), not "Peruuta" (Cancel).
-    - Current: `Kumoa`
-    - Source: `Cancel`
-    - Suggest: `Peruuta`
-    - The developer comment says the button cancels the download and closes the window. In Finnish, "Kumoa" means undoing or reverting an action already done. The standard Finnish UI word for Cancel is "Peruuta".
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
-| Missing strings | 0 |
+| Strings | 1,985 |
+| Missing strings | 8 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -63,7 +59,15 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**8 strings** are not translated yet, concentrated in:
+
+- `fi/firefox-ios.xliff` — 2
+- `fi/firefox-ios.xliff` — 2
+- `fi/firefox-ios.xliff` — 2
+- `fi/firefox-ios.xliff` — 1
+- `fi/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 

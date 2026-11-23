@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 1 of 1,980 |
+| **Strings reviewed this run** | 17 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -44,11 +44,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 98 |
-| Strings | 1,980 |
-| Missing strings | 6 |
+| Files | 99 |
+| Strings | 1,993 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -59,18 +59,7 @@ _Nothing retired._
 
 ### Completeness
 
-**6 strings** are not translated yet, concentrated in:
-
-- `en-CA/firefox-ios.xliff` — 2
-- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
-- `en-CA/firefox-ios.xliff` — 1
-- `en-CA/firefox-ios.xliff` — 1
-
-**Files absent from the locale:**
-
-- `Shared/Supporting Files/en-US.lproj/Wallpapers.strings`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -79,7 +68,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 10, `curly-double` 4 | _mixed_ |
-| apostrophe | `typographic` 105 | **typographic** |
+| apostrophe | `typographic` 109 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 3, `en` 2 | _mixed_ |
 

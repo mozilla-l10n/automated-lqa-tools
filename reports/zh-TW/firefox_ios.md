@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,22 +18,17 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox](firefox.md) · [F
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `zh-TW/firefox-ios.xliff` — Title says location information could not be obtained, rather than that the chosen VPN server location is unavailable.
+    - Current: `無法取得位置資訊`
+    - Source: `Location Unavailable`
+    - Suggest: `此位置目前無法使用`
+    - Per the developer comment, the popup means the VPN server location the user picked can't be used right now; 無法取得位置資訊 reads as a failure to obtain (the device's) location information.
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `FirefoxSync.AddressAutofillEngine.v124` — `zh-TW/firefox-ios.xliff` — "Addresses" (postal addresses for autofill) is translated as "網址", which means web address/URL.
-    - Current: `網址`
-    - Source: `Addresses`
-    - Suggest: `地址`
-    - The developer comment says this is the toggle for syncing address autofill data, meaning street or postal addresses. "網址" means URL, so users would think the toggle syncs web addresses.
-- `fi3W24-xRJbBP` — `zh-TW/firefox-ios.xliff` — The option name in quotes (進行新搜尋) doesn't match the menu item it refers to, which this file translates as 新搜尋.
-    - Current: `「進行新搜尋」`
-    - Source: `There are ${count} options matching ‘New Search’.`
-    - Suggest: `「新搜尋」`
-    - This label quotes the name of the 'New Search' option. The menu item xRJbBP is translated 新搜尋, so the name a user sees here is not the name they see in the menu.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -79,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `corner` 29 | **corner** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 2 | **em** |
-| fullwidth | `punctuation` 672 | **punctuation** |
+| fullwidth | `punctuation` 679 | **punctuation** |
 
 ---
 
@@ -89,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -105,7 +100,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `zh-TW/firefox-ios.xliff` — Title says location information could not be obtained, rather than that the chosen VPN server location is unavailable.
+    - Current: `無法取得位置資訊`
+    - Source: `Location Unavailable`
+    - Suggest: `此位置目前無法使用`
+    - Per the developer comment, the popup means the VPN server location the user picked can't be used right now; 無法取得位置資訊 reads as a failure to obtain (the device's) location information.
 
 ### C. Grammar, agreement & spelling
 

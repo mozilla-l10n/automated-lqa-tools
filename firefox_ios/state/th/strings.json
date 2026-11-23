@@ -158,9 +158,7 @@
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
   "ContextualHints.FeltDeletion.Body.v122": "1cbf1f40 bc9b006c ad456a71",
   "ContextualHints.Toolbar.GoogleLens.Description.v154": "5f76e066 b34060de 9b20dd7d",
-  "ContextualHints.Toolbar.GoogleLens.Title.v154": "0a175fd0 8f769d06 de7355f5",
-  "ContextualHints.Translations.Body.v145": "7ad7e277 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "86d433b5 7e00315a d883a703"
+  "ContextualHints.Toolbar.GoogleLens.Title.v154": "0a175fd0 8f769d06 de7355f5"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "d23e2db7 871d661d 6bb73e98",
@@ -1252,11 +1250,9 @@
   "WebCompatReporter.Category.Other.v154": "d1dd7484 a22b26b3 99e246b0",
   "WebCompatReporter.Category.SiteNotUsable.v154": "cc27f6ab e4a617a5 9819493c",
   "WebCompatReporter.Category.VideoOrAudio.v154": "71b88825 6d872e60 f5634cc3",
-  "WebCompatReporter.Fields.DetailsAccessibilityLabel.v154": "a13d8325 8ca4df18 1a96f349",
   "WebCompatReporter.Fields.DetailsPlaceholder.v154": "84192fb5 34d53241 c8f1bfb5",
   "WebCompatReporter.Fields.URLError.v155": "13ad5f14 093d858c d6c318ef",
   "WebCompatReporter.Fields.URLLabel.v154": "c73efe84 c73efe84 8b45567b",
-  "WebCompatReporter.Fields.URLPlaceholder.v154": "c73efe84 c73efe84 759d1ff9",
   "WebCompatReporter.IssueSection.CategoryPlaceholder.v154": "625d5623 56a75088 6efcf8d1",
   "WebCompatReporter.IssueSection.Title.v154": "96f1309f 79a458bc 22e81da1",
   "WebCompatReporter.Preview.Data.AvailableMemory.v155": "18fec492 7da17114 8fcc4ca5",

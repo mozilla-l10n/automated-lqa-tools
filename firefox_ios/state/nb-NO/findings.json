@@ -410,6 +410,30 @@
  {
   "category": "C",
   "check": "llm",
+  "current": "Plassering utilgjengelige",
+  "dismissed_because": "",
+  "fid": "527c14ae92af",
+  "file": "Shared/Supporting Files/en-US.lproj/VPN.strings",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "nb-NO",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "\"Plassering\" is singular. A predicative adjective after a singular noun takes the singular form \"utilgjengelig\", not the plural/definite \"utilgjengelige\".",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "28aea605",
+  "string_id": "VPN.LocationPicker.LocationUnavailableTitle.v162",
+  "suggest": "Plassering utilgjengelig",
+  "summary": "The adjective is in the plural but the noun it describes is singular.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
   "current": "få fårt",
   "dismissed_because": "",
   "fid": "47f5c275bd84",

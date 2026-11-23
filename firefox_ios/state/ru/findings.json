@@ -554,6 +554,30 @@
  {
   "category": "B",
   "check": "llm",
+  "current": "Помогите скрыть свое местоположение",
+  "dismissed_because": "",
+  "fid": "9ce54912775a",
+  "file": "Shared/Supporting Files/en-US.lproj/Onboarding.strings",
+  "first_seen": "2026-11-23",
+  "impact": 2,
+  "last_seen": "2026-11-23",
+  "locale": "ru",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The developer comment says the VPN helps hide the user's location from websites. In Russian, \"Помогите…\" is a request for help addressed to the reader, so the sentence reads as if the user is being asked to help, not offered a feature.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c0ff3cd0",
+  "string_id": "VPN.Onboarding.Subheading.v162",
+  "suggest": "Скройте своё местоположение",
+  "summary": "\"Помогите скрыть\" is a literal calque that asks the user to help hide the location, instead of describing what the VPN does.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
   "current": "На этой неделе заблокированы трекеры",
   "dismissed_because": "",
   "fid": "b6b295404a47",

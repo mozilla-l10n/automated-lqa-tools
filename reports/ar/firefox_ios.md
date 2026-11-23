@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,245 |
+| **Strings reviewed this run** | 0 of 1,243 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 72 |
-| Strings | 1,245 |
-| Missing strings | 741 |
+| Strings | 1,243 |
+| Missing strings | 750 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 27 |
 | Files with no en-US counterpart | 0 |
@@ -59,17 +59,17 @@ _Nothing retired._
 
 ### Completeness
 
-**741 strings** are not translated yet, concentrated in:
+**750 strings** are not translated yet, concentrated in:
 
-- `ar/firefox-ios.xliff` — 150
-- `ar/firefox-ios.xliff` — 98
-- `ar/firefox-ios.xliff` — 82
-- `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 52
+- `ar/firefox-ios.xliff` — 152
+- `ar/firefox-ios.xliff` — 100
+- `ar/firefox-ios.xliff` — 83
+- `Shared/Supporting Files/en-US.lproj/WebCompatReporter.strings` — 50
 - `Shared/Supporting Files/en-US.lproj/QuickAnswers.strings` — 44
 - `Shared/Supporting Files/en-US.lproj/NativeErrorPage.strings` — 38
 - `Shared/Supporting Files/en-US.lproj/Translations.strings` — 31
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 23
 - `Shared/Supporting Files/en-US.lproj/Summarizer.strings` — 21
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
 - `ar/firefox-ios.xliff` — 16
 - `ar/firefox-ios.xliff` — 14
 - `ar/firefox-ios.xliff` — 12

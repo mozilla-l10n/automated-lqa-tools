@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 6 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -22,18 +22,9 @@ Also for fr: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 _No new findings._
 
-### ✅ Fixed since the last run (2)
+### ✅ Fixed since the last run (0)
 
-- `NativeErrorPage.BadCertDomain.Description.v149` — `fr/firefox-ios.xliff` — "could also be set up incorrectly" (possibility) is rendered with the indicative "peuvent également être mal configurés", asserting it more strongly than the source.
-    - Current: `Vos paramètres de connexion peuvent également être mal configurés.`
-    - Source: `Someone pretending to be the site could try to steal your personal info. Your connection settings could also be set up incorrectly.`
-    - Suggest: `Vos paramètres de connexion pourraient également être mal configurés.`
-    - The source uses the conditional "could", matching the preceding "pourrait"; the indicative weakens the hypothetical framing.
-- `Settings.Search.GoogleLens.Footnote.v153` — `fr/firefox-ios.xliff` — "your active search engine" is translated as "moteur de recherche principal" (main/primary), changing the meaning.
-    - Current: `défini comme moteur de recherche principal lors de la navigation`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
-    - The source says the engine must be the active one while browsing, not the "main" one; French "principal" is also confusable with "par défaut" used elsewhere on this screen.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -54,7 +45,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -77,11 +68,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `guillemet` 18 | **guillemet** |
-| apostrophe | `typographic` 379 | **typographic** |
+| apostrophe | `typographic` 380 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 4, `en` 1 | **em** |
 | nbsp | `total` 167, `before-punctuation` 99 | _mixed_ |
-| register | `formal` 332 | **formal** |
+| register | `formal` 334 | **formal** |
 
 ---
 

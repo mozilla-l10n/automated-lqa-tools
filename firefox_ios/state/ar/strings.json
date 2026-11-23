@@ -123,9 +123,7 @@
   "Addresses.BottomSheet.UseSavedAddressBottomSheet.v124": "3774d42b a78ab860 b56cb9e0"
  },
  "Shared/Supporting Files/en-US.lproj/ContextualHints.strings": {
-  "ContextualHints.FeltDeletion.Body.v122": "304848c6 bc9b006c ad456a71",
-  "ContextualHints.Translations.Body.v145": "99b98322 98f2d06f 016cba54",
-  "ContextualHints.Translations.Title.v145": "27623f2b 7e00315a d883a703"
+  "ContextualHints.FeltDeletion.Body.v122": "304848c6 bc9b006c ad456a71"
  },
  "Shared/Supporting Files/en-US.lproj/CredentialProvider.strings": {
   "CredentialProvider.RetryAllert.CancelAction.Title.v137": "01b3ebd1 871d661d 6bb73e98",

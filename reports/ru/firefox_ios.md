@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for ru: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.Onboarding.Subheading.v162` — `ru/firefox-ios.xliff` — "Помогите скрыть" is a literal calque that asks the user to help hide the location, instead of describing what the VPN does.
+    - Current: `Помогите скрыть свое местоположение`
+    - Source: `Help hide your location from websites while you browse.`
+    - Suggest: `Скройте своё местоположение`
+    - The developer comment says the VPN helps hide the user's location from websites. In Russian, "Помогите…" is a request for help addressed to the reader, so the sentence reads as if the user is being asked to help, not offered a feature.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -70,7 +74,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | quotes | `guillemet` 23 | **guillemet** |
 | ellipsis | `char` 31 | **char** |
 | dash | `em` 6, `en` 1 | **em** |
-| register | `informal` 89, `formal` 299 | **formal** |
+| register | `informal` 90, `formal` 298 | **formal** |
 
 ---
 
@@ -80,13 +84,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (88)
+## 3. Open findings (89)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 38 |
+| 2 | Wrong content (says something other than the English) | 39 |
 | 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -156,6 +160,11 @@ _Nothing in this category._
     - Source: `Get %@ protection updates, tips, and your privacy report.`
     - Suggest: `Получайте обновления защиты %@, советы и отчёт о конфиденциальности.`
     - In the source "%@ protection updates" — the app name qualifies the protection updates; the Russian attaches it to the privacy report at the end of the list.
+- `VPN.Onboarding.Subheading.v162` — `ru/firefox-ios.xliff` — "Помогите скрыть" is a literal calque that asks the user to help hide the location, instead of describing what the VPN does.
+    - Current: `Помогите скрыть свое местоположение`
+    - Source: `Help hide your location from websites while you browse.`
+    - Suggest: `Скройте своё местоположение`
+    - The developer comment says the VPN helps hide the user's location from websites. In Russian, "Помогите…" is a request for help addressed to the reader, so the sentence reads as if the user is being asked to help, not offered a feature.
 - `PrivacyDashboard.HeaderLabel.v155` — `ru/firefox-ios.xliff` — Header is a label under a bold count; Russian phrasing loses the count-caption structure.
     - Current: `На этой неделе заблокированы трекеры`
     - Source: `Trackers blocked this week`

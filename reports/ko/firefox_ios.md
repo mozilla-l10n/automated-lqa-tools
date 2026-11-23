@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 4 of 1,986 |
+| **Strings reviewed this run** | 11 of 1,993 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ko: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Wallpapers.EngagementSheet.Title.v161` — `ko/firefox-ios.xliff` — The banner title writes '배경화면' without a space, but the button on the same banner writes '배경 화면'.
-    - Current: `새 배경화면을`
-    - Source: `Try New Wallpapers to Make %@ Yours`
-    - Suggest: `새 배경 화면을`
-    - The title and the primary button appear together on the same new-wallpapers banner. 'Wallpapers' is spaced differently in each, so the term is inconsistent on one screen. The button's '배경 화면' is the standard spacing.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `ContextualHints.Translations.Body.v145` — `ko/firefox-ios.xliff` — 'private' translations rendered as 'safe' (안전한).
+    - Current: `빠르고 안전한 번역`
+    - Suggest: `빠르고 비공개로 처리되는 번역`
+    - The source claims privacy, i.e. translation happens privately. 안전한 means safe or secure, which is a different property.
 
 ---
 
@@ -49,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 99 |
-| Strings | 1,986 |
+| Strings | 1,993 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,7 +82,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (98)
+## 3. Open findings (97)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -98,7 +97,7 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 44 |
+| 2 | Wrong content (says something other than the English) | 43 |
 | 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -123,11 +122,6 @@ _Nothing in this category._
     - Source: `Pride`
     - Suggest: `프라이드`
     - The developer comment says this is the LGBT+ pride fox logo. In Korean, Pride in this sense is usually called 프라이드 (e.g. 퀴어 프라이드). 자부심 means personal self-esteem, so the icon name loses what it refers to.
-- `ContextualHints.Translations.Body.v145` — `ko/firefox-ios.xliff` — 'private' translations rendered as 'safe' (안전한).
-    - Current: `빠르고 안전한 번역`
-    - Source: `Fast, private translations are ready when you are.`
-    - Suggest: `빠르고 비공개로 처리되는 번역`
-    - The source claims privacy, i.e. translation happens privately. 안전한 means safe or secure, which is a different property.
 - `Addresses.EditAddress.AutofillAddressCounty.v129` — `ko/firefox-ios.xliff` — 'County' translated as 주 (state/province) instead of a county-level term.
     - Current: `주`
     - Source: `County`

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 1,876 |
+| **Strings reviewed this run** | 0 of 1,872 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 96 |
-| Strings | 1,876 |
-| Missing strings | 110 |
+| Strings | 1,872 |
+| Missing strings | 121 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -59,20 +59,20 @@ _Nothing retired._
 
 ### Completeness
 
-**110 strings** are not translated yet, concentrated in:
+**121 strings** are not translated yet, concentrated in:
 
+- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 23
+- `hi-IN/firefox-ios.xliff` — 22
 - `hi-IN/firefox-ios.xliff` — 22
 - `hi-IN/firefox-ios.xliff` — 20
-- `Shared/Supporting Files/en-US.lproj/VPN.strings` — 20
-- `hi-IN/firefox-ios.xliff` — 18
 - `Shared/Supporting Files/en-US.lproj/BrowserDataTransfer.strings` — 11
 - `hi-IN/firefox-ios.xliff` — 6
 - `hi-IN/firefox-ios.xliff` — 5
 - `hi-IN/firefox-ios.xliff` — 2
 - `hi-IN/firefox-ios.xliff` — 2
+- `hi-IN/firefox-ios.xliff` — 2
+- `hi-IN/firefox-ios.xliff` — 2
 - `Shared/Supporting Files/en-US.lproj/Wallpapers.strings` — 2
-- `hi-IN/firefox-ios.xliff` — 1
-- `hi-IN/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
 

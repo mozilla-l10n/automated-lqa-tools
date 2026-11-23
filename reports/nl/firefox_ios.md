@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 4 of 1,986 |
 
@@ -18,9 +18,13 @@ Also for nl: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Focu
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `nl/firefox-ios.xliff` — The title uses the plural "Locaties", which says all locations are unavailable, but the source means the single location the user picked.
+    - Current: `Locaties niet beschikbaar`
+    - Source: `Location Unavailable`
+    - Suggest: `Locatie niet beschikbaar`
+    - The en-US "Location Unavailable" is singular. The developer comment says the popup appears when the one VPN server the user picked can't be used, and the body text says they were switched to the recommended location. The plural says something different.
 
 ### ✅ Fixed since the last run (0)
 
@@ -46,7 +50,7 @@ _Nothing retired._
 |---|---|
 | Files | 99 |
 | Strings | 1,986 |
-| Missing strings | 0 |
+| Missing strings | 7 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +63,14 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**7 strings** are not translated yet, concentrated in:
+
+- `nl/firefox-ios.xliff` — 2
+- `nl/firefox-ios.xliff` — 2
+- `nl/firefox-ios.xliff` — 2
+- `nl/firefox-ios.xliff` — 1
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +82,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 | apostrophe | `typographic` 29 | **typographic** |
 | ellipsis | `char` 31 | **char** |
 | dash | `en` 4 | **en** |
-| register | `formal` 311 | **formal** |
+| register | `formal` 310 | **formal** |
 
 ---
 
@@ -81,13 +92,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (52)
+## 3. Open findings (53)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 22 |
+| 2 | Wrong content (says something other than the English) | 23 |
 | 3 | Degraded language (grammar, spelling, terminology) | 29 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
@@ -187,6 +198,11 @@ _Nothing in this category._
     - Source: `Translating page`
     - Suggest: `Pagina wordt vertaald`
     - Per the comment the button indicates that the page is being translated; the Dutch reads as the action label instead, and duplicates Translations.Sheet.TitleLabel "Pagina vertalen".
+- `VPN.LocationPicker.LocationUnavailableTitle.v162` — `nl/firefox-ios.xliff` — The title uses the plural "Locaties", which says all locations are unavailable, but the source means the single location the user picked.
+    - Current: `Locaties niet beschikbaar`
+    - Source: `Location Unavailable`
+    - Suggest: `Locatie niet beschikbaar`
+    - The en-US "Location Unavailable" is singular. The developer comment says the popup appears when the one VPN server the user picked can't be used, and the body text says they were switched to the recommended location. The plural says something different.
 - `WebCompatReporter.Preview.Data.BlockedTrackers.v155` — `nl/firefox-ios.xliff` — The Dutch attaches "on this page" to the hostnames rather than to the blocking, changing the meaning.
     - Current: `Op deze pagina geblokkeerde hostnamen van trackers`
     - Source: `Hostnames of trackers blocked on this page`

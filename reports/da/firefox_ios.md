@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3575a882abe1` |
-| **Previous run** | 2026-11-09 @ `3d5d050768b7` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefoxios-l10n` @ `3a2fd7dbacf7` |
+| **Previous run** | 2026-11-16 @ `3575a882abe1` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 13 of 1,927 |
+| **Strings reviewed this run** | 0 of 1,923 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Findings are keyed by string id, never by line number. The locale is assessed ag
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `Wallpapers.EngagementSheet.Title.v161` — `da/firefox-ios.xliff` — The possessive "dine egne" is plural but refers to the singular app name %@.
-    - Current: `gør %@ til dine egne`
-    - Source: `Try New Wallpapers to Make %@ Yours`
-    - Suggest: `gør %@ til din egen`
-    - %@ is the app name (e.g. Firefox), a single thing. "Make Firefox yours" is "gør Firefox til din egen" in Danish, and the plural "dine egne" does not agree with it.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 98 |
-| Strings | 1,927 |
-| Missing strings | 59 |
+| Strings | 1,923 |
+| Missing strings | 70 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 1 |
 | Files with no en-US counterpart | 0 |
@@ -63,16 +59,19 @@ _Nothing retired._
 
 ### Completeness
 
-**59 strings** are not translated yet, concentrated in:
+**70 strings** are not translated yet, concentrated in:
 
 - `da/firefox-ios.xliff` — 34
-- `da/firefox-ios.xliff` — 11
-- `da/firefox-ios.xliff` — 6
+- `da/firefox-ios.xliff` — 13
+- `da/firefox-ios.xliff` — 8
+- `da/firefox-ios.xliff` — 3
 - `da/firefox-ios.xliff` — 2
 - `da/firefox-ios.xliff` — 2
+- `da/firefox-ios.xliff` — 2
+- `da/firefox-ios.xliff` — 2
+- `da/firefox-ios.xliff` — 1
 - `da/firefox-ios.xliff` — 1
 - `Shared/Supporting Files/en-US.lproj/Camera.strings` — 1
-- `da/firefox-ios.xliff` — 1
 - `da/firefox-ios.xliff` — 1
 
 **Files absent from the locale:**
