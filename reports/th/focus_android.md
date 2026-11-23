@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 244 |
+| **Strings reviewed this run** | 1 of 244 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 1 |
 | Strings | 244 |
-| Missing strings | 1 |
+| Missing strings | 7 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -61,9 +61,9 @@ _Nothing retired._
 
 ### Completeness
 
-**1 strings** are not translated yet, concentrated in:
+**7 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/focus-android/app/src/main/res/values-th/strings.xml` — 1
+- `mozilla-mobile/focus-android/app/src/main/res/values-th/strings.xml` — 7
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 

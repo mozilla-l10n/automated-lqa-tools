@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 245 |
+| **Strings reviewed this run** | 7 of 251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for el: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — "Qualified" here is the eIDAS legal term, and the Greek text of the Regulation uses «εγκεκριμένο», not «πιστοποιημένο».
+    - Current: `Πιστοποιημένο όπως ορίζει`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Εγκεκριμένο όπως ορίζει`
+    - The developer comment says the string marks a "qualified website authentication certificate" under Regulation (EU) 2024/1183. The official Greek version of eIDAS calls this «εγκεκριμένο πιστοποιητικό», while «πιστοποιημένο» means "certified". The text cites the Regulation by name, so it should use the Regulation's own term.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — "Qualified" here is the eIDAS legal term, and the Greek text of the Regulation uses «εγκεκριμένο», not «πιστοποιημένο».
+    - Current: `Πιστοποιημένο όπως ορίζει`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Εγκεκριμένο όπως ορίζει`
+    - The developer comment says the string marks a "qualified website authentication certificate" under Regulation (EU) 2024/1183. The official Greek version of eIDAS calls this «εγκεκριμένο πιστοποιητικό», while «πιστοποιημένο» means "certified". The text cites the Regulation by name, so it should use the Regulation's own term.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,7 +53,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 245 |
+| Strings | 251 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,7 +79,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 46 | **guillemet** |
+| quotes | `guillemet` 52 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 
@@ -83,7 +91,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (9)
+## 3. Open findings (8)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -99,7 +107,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -149,11 +157,6 @@ _Nothing in this category._
     - Source: `Drag from top & use back gesture to exit`
     - Suggest: `Σύρετε από πάνω και κάντε χειρονομία επιστροφής για έξοδο`
     - Developer comment: 'This text should be as short as possible, max 68 chars'; the current text is 78 characters and may be truncated.
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — "Qualified" in the eIDAS sense is translated as "Πιστοποιημένο" ("certified") instead of the regulation's Greek term "εγκεκριμένο".
-    - Current: `Πιστοποιημένο όπως ορίζει`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `Εγκεκριμένο όπως ορίζει`
-    - The developer comment says this is the eIDAS term "qualified" (as in QWAC). As I understand it, the Greek text of the regulation uses "εγκεκριμένο" (e.g. "εγκεκριμένο πιστοποιητικό"), so "πιστοποιημένο" doesn't match the legal wording.
 - `shortcut_erase_and_open_short_label` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — The short shortcut label is 20 characters, double the 10-character maximum set in the developer comment.
     - Current: `Διαγραφή και άνοιγμα`
     - Source: `Erase & open`
@@ -190,6 +193,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-el/strings.xml` — fixed 2026-11-23

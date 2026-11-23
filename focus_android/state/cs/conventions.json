@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "cs",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2840,
+  "strings": 2840
  },
  "apostrophe": {
   "straight": 0,
@@ -30,6 +30,6 @@
   "total": 0
  },
  "quotes": {
-  "german-double": 19
+  "german-double": 22
  }
 }

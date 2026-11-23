@@ -128,19 +128,19 @@
   "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
   "first_seen": "2026-10-16",
   "impact": 3,
-  "last_seen": "2026-10-16",
+  "last_seen": "2026-11-23",
   "locale": "el",
   "origin": {
    "confidence": "medium"
   },
-  "rationale": "The developer comment says this is the eIDAS term \"qualified\" (as in QWAC). As I understand it, the Greek text of the regulation uses \"εγκεκριμένο\" (e.g. \"εγκεκριμένο πιστοποιητικό\"), so \"πιστοποιημένο\" doesn't match the legal wording.",
+  "rationale": "The developer comment says the string marks a \"qualified website authentication certificate\" under Regulation (EU) 2024/1183. The official Greek version of eIDAS calls this «εγκεκριμένο πιστοποιητικό», while «πιστοποιημένο» means \"certified\". The text cites the Regulation by name, so it should use the Regulation's own term.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-11-23",
+  "status": "fixed",
   "string_hash": "ac644890",
   "string_id": "qualified_text",
   "suggest": "Εγκεκριμένο όπως ορίζει",
-  "summary": "\"Qualified\" in the eIDAS sense is translated as \"Πιστοποιημένο\" (\"certified\") instead of the regulation's Greek term \"εγκεκριμένο\".",
+  "summary": "\"Qualified\" here is the eIDAS legal term, and the Greek text of the Regulation uses «εγκεκριμένο», not «πιστοποιημένο».",
   "suppressed_by": ""
  },
  {

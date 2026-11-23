@@ -190,5 +190,29 @@
   "suggest": "Tự động điền URL",
   "summary": "Word order makes it mean \"a URL that autofills\" instead of the feature that autocompletes URLs.",
   "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Được chứng nhận/đủ điều kiện",
+  "dismissed_because": "",
+  "fid": "c18339e4ee81",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "vi",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The source says \"Qualified\" (as in a qualified website authentication certificate). Showing both options with a slash looks like an unfinished translation, and users see it in the security popup. One term should be chosen.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "feadef4f",
+  "string_id": "qualified_text",
+  "suggest": "Đủ điều kiện",
+  "summary": "The translation leaves two alternative renderings joined by a slash (\"chứng nhận/đủ điều kiện\") instead of choosing one.",
+  "suppressed_by": ""
  }
 ]
