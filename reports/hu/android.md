@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for hu: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `wrex_widget_match_canceled` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "Megszakítva" means the match was interrupted/abandoned mid-play, not that it was canceled.
+    - Current: `Megszakítva`
+    - Source: `Canceled`
+    - Suggest: `Elmaradt`
+    - The comment says this badge marks a match that has been canceled, i.e. one that will not take place. In Hungarian sports usage, "megszakítva" (interrupted) describes a match stopped after it started. "Elmaradt" (did not take place) or "Törölve" (cancelled) fits a canceled match.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "Extend developer tools" is mistranslated as "opening" the developer tools.
+    - Current: `Fejlesztőeszközök kinyitása, hogy elérje a nyitott lapokon lévő adatokat.`
+    - Suggest: `Fejlesztőeszközök kiterjesztése, hogy elérjék a nyitott lapokon lévő adatokat.`
+    - The source means extending (adding to) the developer tools, not opening them.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "extension" is rendered as "Bővítmény" here but as "Kiegészítő" in the non-update variant of the same permission.
+    - Current: `Bővítményhasználat monitorozása és témák kezelése.`
+    - Suggest: `Kiegészítőhasználat monitorozása és témák kezelése.`
+    - mozac_feature_addons_permissions_management_description uses "Kiegészítőhasználat" for the identical source text; the two must be consistent.
+- `mozac_feature_addons_permissions_sites_in_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "sites" is translated as "lapokhoz" (tabs) instead of "oldalakhoz" (sites).
+    - Current: `Az adatai elérése a(z) %1$s tartományban lévő lapokhoz.`
+    - Suggest: `Az adatai elérése a(z) %1$s tartományban lévő oldalakhoz.`
+    - The source refers to web sites in a domain; "lap" is the Firefox term for tab, inconsistent with the other site strings that use "oldal".
 
 ---
 
@@ -45,7 +60,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,7 +87,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `polish-double` 16 | **polish-double** |
+| quotes | `polish-double` 21 | **polish-double** |
 | ellipsis | `char` 23 | **char** |
 | dash | `en` 4 | **en** |
 
@@ -84,14 +99,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (128)
+## 3. Open findings (126)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 67 |
-| 3 | Degraded language (grammar, spelling, terminology) | 55 |
+| 2 | Wrong content (says something other than the English) | 66 |
+| 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
@@ -165,21 +180,11 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs`
     - Suggest: `Fejlesztőeszközök kiterjesztése, hogy elérjék a nyitott lapokon lévő adatokat`
     - The source means extending (adding to) the developer tools, not opening them; "kinyitása" says the extension opens the devtools.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "Extend developer tools" is mistranslated as "opening" the developer tools.
-    - Current: `Fejlesztőeszközök kinyitása, hogy elérje a nyitott lapokon lévő adatokat.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Fejlesztőeszközök kiterjesztése, hogy elérjék a nyitott lapokon lévő adatokat.`
-    - The source means extending (adding to) the developer tools, not opening them.
 - `mozac_feature_addons_permissions_sites_in_domain_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "sites" is translated as "lapok" (tabs) instead of "oldalak" (sites).
     - Current: `Az adatai elérése a(z) %1$s tartományban lévő lapokhoz`
     - Source: `Access your data for sites in the %1$s domain`
     - Suggest: `Az adatai elérése a(z) %1$s tartományban lévő oldalakhoz`
     - The source refers to web sites in a domain; "lap" means browser tab in Firefox terminology, and other strings in this batch use "oldal"/"weboldal" for site.
-- `mozac_feature_addons_permissions_sites_in_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "sites" is translated as "lapokhoz" (tabs) instead of "oldalakhoz" (sites).
-    - Current: `Az adatai elérése a(z) %1$s tartományban lévő lapokhoz.`
-    - Source: `Access your data for sites in the %1$s domain.`
-    - Suggest: `Az adatai elérése a(z) %1$s tartományban lévő oldalakhoz.`
-    - The source refers to web sites in a domain; "lap" is the Firefox term for tab, inconsistent with the other site strings that use "oldal".
 - `mozac_feature_customtabs_menu_button` — `mozilla-mobile/android-components/components/feature/customtabs/src/main/res/values-hu/strings.xml` — "More options" is rendered as "További beállítások" (more settings) instead of "További lehetőségek".
     - Current: `További beállítások`
     - Source: `More options`
@@ -400,7 +405,17 @@ _Nothing in this category._
     - Source: `Suggestions from sponsors`
     - Suggest: `Javaslatok szponzoroktól`
     - The source names the source of the suggestions (sponsors), parallel to "Suggestions from %1$s" which is correctly rendered as "Javaslatok a következőtől: %1$s".
-- _…and 8 more; see `state/` for the full list._
+- `remote_improvements_description` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — Source says Firefox will improve features, performance and stability; the target says it will install modifications affecting them.
+    - Current: `A Firefox funkciókat, teljesítményt és stabilitást érintő módosításokat fog telepíteni a frissítések között.`
+    - Source: `Firefox will improve features, performance, and stability between updates. Changes applied remotely.`
+    - Suggest: `A Firefox javítja a funkciókat, a teljesítményt és a stabilitást a frissítések között.`
+    - "improve features, performance, and stability" is not "install modifications affecting …"; the meaning is altered.
+- `restart_and_shortcuts_removal_warning_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-hu/strings.xml` — "A %1$s bezárhatja" reverses the meaning: the app may close, not close something else.
+    - Current: `A %1$s bezárhatja.`
+    - Source: `Changing the icon will remove any sites and shortcuts you’ve saved to your Home screen.   %1$s may close. Tap your new icon to reopen.`
+    - Suggest: `A %1$s bezáródhat.`
+    - Source says "%1$s may close" (the app itself may be closed); the Hungarian transitive "bezárhatja" means "it may close [something]".
+- _…and 7 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -622,11 +637,6 @@ _Nothing in this category._
     - Source: `Go Back`
     - Suggest: `Visszalépés`
     - The same source label "Go Back" is translated "Visszalépés" in mozac_browser_errorpages_security_bad_cert_back on the same error-page surface; the two buttons should match.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-hu/strings.xml` — "extension" is rendered as "Bővítmény" here but as "Kiegészítő" in the non-update variant of the same permission.
-    - Current: `Bővítményhasználat monitorozása és témák kezelése.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Kiegészítőhasználat monitorozása és témák kezelése.`
-    - mozac_feature_addons_permissions_management_description uses "Kiegészítőhasználat" for the identical source text; the two must be consistent.
 - `webauthn_related_origin_create_message` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-hu/strings.xml` — "passkey" is rendered as "jelkód" (passcode) instead of the established Hungarian term "jelszó nélküli belépési kulcs"/"belépési kulcs".
     - Current: `jelkódot akar létrehozni`
     - Source: `%1$s wants to create a passkey for %2$s.`

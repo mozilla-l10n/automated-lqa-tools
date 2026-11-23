@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for it: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_menu_customize_named_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-it/strings.xml` — Uses guillemets instead of the locale's curly double quotes.
+    - Current: `«%1$s»`
+    - Source: `Section “%1$s”: %2$s`
+    - Suggest: `“%1$s”`
+    - Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.
+- `mozac_menu_customize_unnamed_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-it/strings.xml` — Uses guillemets instead of the locale's curly double quotes.
+    - Current: `«%1$s»`
+    - Source: `Section “%1$s”`
+    - Suggest: `“%1$s”`
+    - Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,8 +81,8 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 22 | **curly-double** |
-| apostrophe | `typographic` 177 | **typographic** |
+| quotes | `curly-double` 25, `guillemet` 2 | **curly-double** |
+| apostrophe | `typographic` 173 | **typographic** |
 | ellipsis | `char` 23 | **char** |
 | dash | `em` 2 | **em** |
 | register | `informal` 87, `formal` 4 | **informal** |
@@ -86,7 +95,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
@@ -94,7 +103,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -114,7 +123,16 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `mozac_menu_customize_named_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-it/strings.xml` — Uses guillemets instead of the locale's curly double quotes.
+    - Current: `«%1$s»`
+    - Source: `Section “%1$s”: %2$s`
+    - Suggest: `“%1$s”`
+    - Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.
+- `mozac_menu_customize_unnamed_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-it/strings.xml` — Uses guillemets instead of the locale's curly double quotes.
+    - Current: `«%1$s»`
+    - Source: `Section “%1$s”`
+    - Suggest: `“%1$s”`
+    - Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,23 @@ Also for zh-TW: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `mozac_menu_customize_hide` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rTW/strings.xml` — "Section" is rendered as 段落 (paragraph) here, while every other customize-menu string uses 區段.
+    - Current: `隱藏段落`
+    - Source: `Hide section`
+    - Suggest: `隱藏區段`
+    - The other strings on this screen (named and unnamed section, moved, removed, added) all use 區段. 段落 means a text paragraph, which is wrong for a menu section.
+- `mozac_menu_customize_unhide` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rTW/strings.xml` — "Section" is rendered as 段落 (paragraph) instead of 區段, which the rest of the screen uses.
+    - Current: `取消隱藏段落`
+    - Source: `Unhide section`
+    - Suggest: `取消隱藏區段`
+    - This doesn't match the 區段 used by the other section strings on the same screen. 段落 means a text paragraph.
+- `mozac_feature_prompts_save_payment_method_dismiss` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rTW/strings.xml` — "Dismiss" is translated as 知道了！ ("Got it!"), which reads as acknowledging the prompt, not closing it without saving.
+    - Current: `知道了！`
+    - Source: `Dismiss`
+    - Suggest: `關閉`
+    - The comment says this button closes the save/update card dialog without saving. 知道了！ expresses acknowledgment, not declining.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +59,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,9 +86,9 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 26 | **corner** |
+| quotes | `corner` 31 | **corner** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1118 | **punctuation** |
+| fullwidth | `punctuation` 1090 | **punctuation** |
 
 ---
 
@@ -84,14 +98,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (3)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -100,7 +114,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `mozac_feature_prompts_save_payment_method_dismiss` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rTW/strings.xml` — "Dismiss" is translated as 知道了！ ("Got it!"), which reads as acknowledging the prompt, not closing it without saving.
+    - Current: `知道了！`
+    - Source: `Dismiss`
+    - Suggest: `關閉`
+    - The comment says this button closes the save/update card dialog without saving. 知道了！ expresses acknowledgment, not declining.
 
 ### C. Grammar, agreement & spelling
 
@@ -108,7 +126,16 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `mozac_menu_customize_hide` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rTW/strings.xml` — "Section" is rendered as 段落 (paragraph) here, while every other customize-menu string uses 區段.
+    - Current: `隱藏段落`
+    - Source: `Hide section`
+    - Suggest: `隱藏區段`
+    - The other strings on this screen (named and unnamed section, moved, removed, added) all use 區段. 段落 means a text paragraph, which is wrong for a menu section.
+- `mozac_menu_customize_unhide` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rTW/strings.xml` — "Section" is rendered as 段落 (paragraph) instead of 區段, which the rest of the screen uses.
+    - Current: `取消隱藏段落`
+    - Source: `Unhide section`
+    - Suggest: `取消隱藏區段`
+    - This doesn't match the 區段 used by the other section strings on the same screen. 段落 means a text paragraph.
 
 ### E. Typography, punctuation & spacing
 

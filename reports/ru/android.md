@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,9 @@ Also for ru: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (0)
 
-- `snackbar_action_view` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — The action button label "View" is translated as the noun «Вид» (appearance or view mode) instead of a verb meaning "show".
-    - Current: `Вид`
-    - Source: `View`
-    - Suggest: `Показать`
-    - The comment says that tapping the button shows the tab group, so it needs an action verb. «Вид» reads as a view or appearance setting.
-- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — «Не удалось скрыть» ("failed to hide") presents a by-design restriction as an error.
-    - Current: `Не удалось скрыть этот раздел`
-    - Source: `Can’t hide this section`
-    - Suggest: `Этот раздел нельзя скрыть`
-    - The comment says the message appears for a section that cannot be hidden, which is a fixed restriction. «Не удалось» suggests something went wrong while hiding it.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -43,9 +34,56 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (12)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_declarative_net_request_feedback_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "your browsing history" differently from the non-update variant of the same source string.
+    - Current: `Чтение истории просмотра.`
+    - Suggest: `Чтение истории браузера.`
+    - mozac_feature_addons_permissions_declarative_net_request_feedback_description translates the identical source as "истории браузера"; the two variants must be consistent.
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Meaning shifted: source says extend developer tools so they can access your data, not "extend the access of developer tools".
+    - Current: `Расширение доступа инструментов разработчика к вашим данным в открытых вкладках.`
+    - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках.`
+    - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
+- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wrong case ending: "вашим данных" instead of "вашим данным".
+    - Current: `Доступ к вашим данных на других сайтах.`
+    - Suggest: `Доступ к вашим данным на других сайтах.`
+    - Dative plural after "к" requires "данным"; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 uses the correct form.
+- `mozac_feature_addons_permissions_history_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "browsing history" differently from the non-update variant of the same source string.
+    - Current: `Доступ к истории просмотра.`
+    - Suggest: `Доступ к истории браузера.`
+    - mozac_feature_addons_permissions_history_description translates the identical source as "истории браузера"; the two variants of the same permission must match.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Uses "Мониторинг" where the non-update variant of the same source uses "Отслеживание".
+    - Current: `Мониторинг использования расширений и управление темами.`
+    - Suggest: `Отслеживание использования расширений и управление темами.`
+    - The identical source "Monitor extension usage and manage themes" is translated inconsistently between the two variants of the same permission.
+- `mozac_feature_addons_permissions_native_messaging_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent with the non-update variant and drops "other than this one" nuance.
+    - Current: `Обмен сообщениями с другими приложениями.`
+    - Suggest: `Обмен сообщениями с приложениями, помимо этого.`
+    - The same source phrase "Exchange messages with apps other than this one" is rendered differently from mozac_feature_addons_permissions_native_messaging_description; the update variant loses the "other than this one" qualifier.
+- `mozac_feature_addons_permissions_one_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent rendering of the same source string compared with mozac_feature_addons_permissions_one_site_description ("на %1$s" vs "для %1$s").
+    - Current: `Доступ к вашим данным для %1$s.`
+    - Suggest: `Доступ к вашим данным на %1$s.`
+    - The identical source "Access your data for %1$s" is translated two different ways in the same permission list surface.
+- `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "параметров приватности" is inconsistent with the non-update variant's "настроек приватности" for the same source term "privacy settings".
+    - Current: `Чтение и изменение параметров приватности.`
+    - Suggest: `Чтение и изменение настроек приватности.`
+    - Same permission, same source wording, translated with two different terms on the same surface.
+- `mozac_feature_addons_permissions_proxy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wording diverges from the non-update variant of the same "proxy" permission ("Контроль настроек прокси в браузере").
+    - Current: `Управление настройками прокси браузера.`
+    - Suggest: `Контроль настроек прокси в браузере.`
+    - The identical source "Control browser proxy settings" is rendered two different ways for the same permission on the same surface.
+- `mozac_feature_addons_permissions_top_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Доступ к истории просмотра" differs from the non-update variant of the same permission, which uses "Доступ к истории браузера".
+    - Current: `Доступ к истории просмотра.`
+    - Suggest: `Доступ к истории браузера.`
+    - Same source string "Access browsing history" is rendered two different ways on the same permission surface (mozac_feature_addons_permissions_top_sites_description).
+- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Imperative with mismatched aspect instead of the nominal permission-description form.
+    - Current: `Скачайте и запускайте ИИ-модели на вашем устройстве.`
+    - Suggest: `Скачивание и запуск ИИ-моделей на вашем устройстве.`
+    - Source "Download and run AI models on your device." is a permission description; other update descriptions in this file use nominal forms, and "Скачайте и запускайте" mixes perfective and imperfective imperatives.
+- `mozac_feature_addons_permissions_user_scripts_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Word order and phrasing diverge from the non-update variant of the same permission.
+    - Current: `Разрешение на доступ непроверенным сторонним скриптам к вашим данным.`
+    - Suggest: `Разрешение непроверенным сторонним скриптам доступа к вашим данным.`
+    - The same source "Allow unverified third-party scripts to access your data" is rendered differently, and the current split of "доступ … к вашим данным" around the dative phrase is awkward/ungrammatical.
 
 ---
 
@@ -54,7 +92,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -81,10 +119,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 43, `straight-double` 2 | **guillemet** |
+| quotes | `guillemet` 47, `straight-double` 2 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
-| dash | `em` 6 | **em** |
-| register | `informal` 150, `formal` 485 | **formal** |
+| dash | `em` 7 | **em** |
+| register | `informal` 157, `formal` 475 | **formal** |
 
 ---
 
@@ -94,14 +132,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (146)
+## 3. Open findings (134)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 83 |
-| 3 | Degraded language (grammar, spelling, terminology) | 58 |
+| 2 | Wrong content (says something other than the English) | 82 |
+| 3 | Degraded language (grammar, spelling, terminology) | 47 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -164,11 +202,6 @@ _Nothing in this category._
     - Current: `Расширение доступа инструментов разработчика к вашим данным в открытых вкладках`
     - Source: `Extend developer tools to access your data in open tabs`
     - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках`
-    - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Meaning shifted: source says extend developer tools so they can access your data, not "extend the access of developer tools".
-    - Current: `Расширение доступа инструментов разработчика к вашим данным в открытых вкладках.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Расширение инструментов разработчика для доступа к вашим данным в открытых вкладках.`
     - "Extend developer tools to access your data" means extending the devtools themselves; the translation reverses the object of extension.
 - `mozac_feature_addons_update_requires_new_settings` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — The Russian says the extension requires the new settings to be updated, rather than that it needs new settings in order to update.
     - Current: `%1$s требует обновления новых настроек.`
@@ -410,7 +443,12 @@ _Nothing in this category._
     - Source: `Blocked`
     - Suggest: `Заблокировано`
     - The developer comment says this label indicates a permission state (blocked), not an action.
-- _…and 26 more; see `state/` for the full list._
+- `preference_phone_feature_media_key_system_access` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — "DRM-controlled content" rendered as "copyright-protected content", losing the DRM term.
+    - Current: `Защищённое авторским правом содержимое`
+    - Source: `DRM-controlled content`
+    - Suggest: `Содержимое, защищённое DRM`
+    - The source and developer comment refer to DRM/EME-controlled content, not copyright protection generally.
+- _…and 25 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -429,21 +467,11 @@ _Nothing in this category._
     - Source: `Access your data on other domains`
     - Suggest: `Доступ к вашим данным на других доменах`
     - Dative plural after "к" requires "данным"; "данных" is genitive and does not agree with "вашим".
-- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wrong case ending: "вашим данных" instead of "вашим данным".
-    - Current: `Доступ к вашим данных на других сайтах.`
-    - Source: `Access your data on other sites.`
-    - Suggest: `Доступ к вашим данным на других сайтах.`
-    - Dative plural after "к" requires "данным"; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 uses the correct form.
 - `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Mixed verb forms: "Скачайте и запускайте" is imperative while the rest of the permission descriptions use nominal/infinitive form, and the two verbs disagree in aspect.
     - Current: `Скачайте и запускайте ИИ-модели на вашем устройстве`
     - Source: `Download and run AI models on your device`
     - Suggest: `Скачивание и запуск ИИ-моделей на вашем устройстве`
     - Source "Download and run AI models on your device" is a permission description, rendered elsewhere in this file with nominal forms ("Скрытие и отображение…", "Предоставление услуг…"); the current text is an imperative with inconsistent aspect.
-- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Imperative with mismatched aspect instead of the nominal permission-description form.
-    - Current: `Скачайте и запускайте ИИ-модели на вашем устройстве.`
-    - Source: `Download and run AI models on your device.`
-    - Suggest: `Скачивание и запуск ИИ-моделей на вашем устройстве.`
-    - Source "Download and run AI models on your device." is a permission description; other update descriptions in this file use nominal forms, and "Скачайте и запускайте" mixes perfective and imperfective imperatives.
 - `mozac_feature_addons_unavailable_section` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Ещё не доступно" should be written as one word "недоступно".
     - Current: `Ещё не доступно`
     - Source: `Not yet available`
@@ -577,51 +605,6 @@ _Nothing in this category._
     - Source: `Failed to uninstall %1$s`
     - Suggest: `Ошибка при удалении %1$s`
     - mozac_feature_addons_failed_to_remove uses "Ошибка при удалении %1$s" for the same pattern; the colon here is an inconsistent rendering of the same construction on the same surface.
-- `mozac_feature_addons_permissions_declarative_net_request_feedback_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "your browsing history" differently from the non-update variant of the same source string.
-    - Current: `Чтение истории просмотра.`
-    - Source: `Read your browsing history.`
-    - Suggest: `Чтение истории браузера.`
-    - mozac_feature_addons_permissions_declarative_net_request_feedback_description translates the identical source as "истории браузера"; the two variants must be consistent.
-- `mozac_feature_addons_permissions_history_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Renders "browsing history" differently from the non-update variant of the same source string.
-    - Current: `Доступ к истории просмотра.`
-    - Source: `Access browsing history.`
-    - Suggest: `Доступ к истории браузера.`
-    - mozac_feature_addons_permissions_history_description translates the identical source as "истории браузера"; the two variants of the same permission must match.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Uses "Мониторинг" where the non-update variant of the same source uses "Отслеживание".
-    - Current: `Мониторинг использования расширений и управление темами.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Отслеживание использования расширений и управление темами.`
-    - The identical source "Monitor extension usage and manage themes" is translated inconsistently between the two variants of the same permission.
-- `mozac_feature_addons_permissions_native_messaging_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent with the non-update variant and drops "other than this one" nuance.
-    - Current: `Обмен сообщениями с другими приложениями.`
-    - Source: `Exchange messages with apps other than this one.`
-    - Suggest: `Обмен сообщениями с приложениями, помимо этого.`
-    - The same source phrase "Exchange messages with apps other than this one" is rendered differently from mozac_feature_addons_permissions_native_messaging_description; the update variant loses the "other than this one" qualifier.
-- `mozac_feature_addons_permissions_one_site_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Inconsistent rendering of the same source string compared with mozac_feature_addons_permissions_one_site_description ("на %1$s" vs "для %1$s").
-    - Current: `Доступ к вашим данным для %1$s.`
-    - Source: `Access your data for %1$s.`
-    - Suggest: `Доступ к вашим данным на %1$s.`
-    - The identical source "Access your data for %1$s" is translated two different ways in the same permission list surface.
-- `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "параметров приватности" is inconsistent with the non-update variant's "настроек приватности" for the same source term "privacy settings".
-    - Current: `Чтение и изменение параметров приватности.`
-    - Source: `Read and modify privacy settings.`
-    - Suggest: `Чтение и изменение настроек приватности.`
-    - Same permission, same source wording, translated with two different terms on the same surface.
-- `mozac_feature_addons_permissions_proxy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Wording diverges from the non-update variant of the same "proxy" permission ("Контроль настроек прокси в браузере").
-    - Current: `Управление настройками прокси браузера.`
-    - Source: `Control browser proxy settings.`
-    - Suggest: `Контроль настроек прокси в браузере.`
-    - The identical source "Control browser proxy settings" is rendered two different ways for the same permission on the same surface.
-- `mozac_feature_addons_permissions_top_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — "Доступ к истории просмотра" differs from the non-update variant of the same permission, which uses "Доступ к истории браузера".
-    - Current: `Доступ к истории просмотра.`
-    - Source: `Access browsing history.`
-    - Suggest: `Доступ к истории браузера.`
-    - Same source string "Access browsing history" is rendered two different ways on the same permission surface (mozac_feature_addons_permissions_top_sites_description).
-- `mozac_feature_addons_permissions_user_scripts_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ru/strings.xml` — Word order and phrasing diverge from the non-update variant of the same permission.
-    - Current: `Разрешение на доступ непроверенным сторонним скриптам к вашим данным.`
-    - Source: `Allow unverified third-party scripts to access your data.`
-    - Suggest: `Разрешение непроверенным сторонним скриптам доступа к вашим данным.`
-    - The same source "Allow unverified third-party scripts to access your data" is rendered differently, and the current split of "доступ … к вашим данным" around the dative phrase is awkward/ungrammatical.
 - `mozac_feature_prompt_folder_upload_confirm_positive_button_text` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ru/strings.xml` — "Upload" is rendered as "Закачать", inconsistent with the dialog title/message which use "Загрузить".
     - Current: `Закачать`
     - Source: `Upload`
@@ -708,7 +691,7 @@ _Nothing in this category._
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Сетевой адрес должен содержать "https://" or "http://"`
     - Source: `Web address must contain “https://” or “http://”`
-    - The locale's quote convention is `guillemet` (43 occurrences).
+    - The locale's quote convention is `guillemet` (47 occurrences).
 - `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-ru/strings.xml` — Hyphen used instead of an em dash as separator.
     - Current: `Адресная строка - Firefox Suggest`
     - Source: `Address bar - Firefox Suggest`
@@ -718,7 +701,7 @@ _Nothing in this category._
     - Current: `Автоматически удаляет данные просмотра сети, когда вы выбираете "Выйти" в главном меню`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `«Выйти»`
-    - The locale's quote convention is `guillemet` (43 occurrences).
+    - The locale's quote convention is `guillemet` (47 occurrences).
 
 ---
 

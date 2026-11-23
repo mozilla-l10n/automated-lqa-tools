@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,525 |
+| **Strings reviewed this run** | 0 of 2,477 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -45,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,525 |
-| Missing strings | 95 |
+| Strings | 2,477 |
+| Missing strings | 148 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,12 +62,13 @@ _Nothing retired._
 
 ### Completeness
 
-**95 strings** are not translated yet, concentrated in:
+**148 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 73
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-uk/strings.xml` — 9
+- `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — 96
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-uk/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-uk/strings.xml` — 16
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-uk/strings.xml` — 10
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-uk/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-uk/strings.xml` — 5
 - `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-uk/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -81,7 +82,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-double` 13, `straight-double` 10 | _mixed_ |
-| apostrophe | `typographic` 111, `straight` 3 | **typographic** |
+| apostrophe | `typographic` 109, `straight` 3 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 9 | **en** |
 
@@ -335,11 +336,11 @@ _Nothing in this category._
 - `sync_send_tab_empty_state_link` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — `sync_send_tab_empty_state_link` uses a straight apostrophe
     - Current: `Дізнатися, як під'єднати пристрій`
     - Source: `Learn how to connect a device`
-    - The tree uses ’ 111 times against 3 straight.
+    - The tree uses ’ 109 times against 3 straight.
 - `sync_send_tab_empty_state_title` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — `sync_send_tab_empty_state_title` uses a straight apostrophe
     - Current: `Немає під'єднаних пристроїв`
     - Source: `No devices connected`
-    - The tree uses ’ 111 times against 3 straight.
+    - The tree uses ’ 109 times against 3 straight.
 - `sync_send_tab_empty_state_title` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — Straight apostrophe used instead of the locale's typographic apostrophe.
     - Current: `під'єднаних`
     - Source: `No devices connected`
@@ -353,7 +354,7 @@ _Nothing in this category._
 - `sync_send_tab_error_connection_title` — `mozilla-mobile/fenix/app/src/main/res/values-uk/strings.xml` — `sync_send_tab_error_connection_title` uses a straight apostrophe
     - Current: `Перевірте своє з'єднання з інтернетом`
     - Source: `Check your internet connection`
-    - The tree uses ’ 111 times against 3 straight.
+    - The tree uses ’ 109 times against 3 straight.
 
 ---
 

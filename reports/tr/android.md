@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 28 of 2,618 |
+| **Strings reviewed this run** | 50 of 2,620 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for tr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `wrex_widget_match_elapsed_minutes` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — The translation drops "in minutes", so the screen reader announces the elapsed time without a unit.
-    - Current: `Geçen süre: %1$s`
-    - Source: `Elapsed time in minutes: %1$s`
-    - Suggest: `Geçen süre (dakika): %1$s`
-    - The source says "Elapsed time in minutes". The placeholder is a bare number such as "72" or "90+3", so without the unit the announcement is ambiguous for screen-reader users.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,618 |
-| Missing strings | 2 |
+| Strings | 2,620 |
+| Missing strings | 5 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,8 +62,9 @@ _Nothing retired._
 
 ### Completeness
 
-**2 strings** are not translated yet, concentrated in:
+**5 strings** are not translated yet, concentrated in:
 
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-tr/strings.xml` — 3
 - `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -80,8 +77,8 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 14, `straight-double` 2 | **curly-double** |
-| apostrophe | `typographic` 148, `straight` 1 | **typographic** |
+| quotes | `curly-double` 19, `straight-double` 2 | **curly-double** |
+| apostrophe | `typographic` 147, `straight` 1 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | register | `formal` 18 | **formal** |
 
@@ -633,12 +630,12 @@ _Nothing in this category._
     - Current: `Çökme raporu %1$s'ya gönderiliyor`
     - Source: `Sending crash report to %1$s`
     - Suggest: `%1$s’ya`
-    - The tree uses ’ 148 times against 1 straight.
+    - The tree uses ’ 147 times against 1 straight.
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `Web adresi "https://" veya "http://" içermelidir`
     - Source: `Web address must contain “https://” or “http://”`
     - Suggest: `Web adresi “https://” veya “http://” içermelidir`
-    - The locale's quote convention is `curly-double` (14 occurrences).
+    - The locale's quote convention is `curly-double` (19 occurrences).
 - `ai_controls_block_dialog_what_will_be_blocked` — `mozilla-mobile/fenix/app/src/main/res/values-tr/strings.xml` — Source is a statement label ending with a colon, but the translation turns it into a question with a question mark.
     - Current: `Neler engellenecek?`
     - Source: `What will be blocked:`
@@ -653,7 +650,7 @@ _Nothing in this category._
     - Current: `Ana menüden "Çık"ı seçtiğinizde gezinti verilerini otomatik olarak siler`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `“Çık”ı`
-    - The locale's quote convention is `curly-double` (14 occurrences).
+    - The locale's quote convention is `curly-double` (19 occurrences).
 
 ---
 

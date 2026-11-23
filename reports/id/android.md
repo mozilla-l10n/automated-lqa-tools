@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 3 of 2,602 |
+| **Strings reviewed this run** | 0 of 2,554 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "recent" is attached to the wrong noun, changing the meaning from "recent browsing history" to "recent related data".
+    - Current: `Bersihkan riwayat penjelajahan, kuki, dan data terkait terkini.`
+    - Suggest: `Bersihkan riwayat penjelajahan terkini, kuki, dan data terkait.`
+    - The source is "Clear recent browsing history, cookies, and related data." — "recent" modifies "browsing history". The sibling string mozac_feature_addons_permissions_browser_data_description correctly renders it as "riwayat penjelajahan terbaru, kuki, dan data terkait".
+- `mozac_feature_addons_permissions_notifications_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "Display notifications to you" is rendered as "Tampilkan notifikasi untuk Anda", but the phrasing loses the sense of showing notifications to the user; more importantly it reads as "show notifications for you".
+    - Current: `Tampilkan notifikasi untuk Anda.`
+    - Suggest: `Tampilkan notifikasi kepada Anda.`
+    - "to you" is the recipient of the notifications; Indonesian "kepada Anda" conveys the recipient, while "untuk Anda" means "on your behalf/for your benefit".
+- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — Uses "otentikasi kriptografis" while the sibling string uses "autentikasi kriptografi" for the same source text.
+    - Current: `Menyediakan layanan otentikasi kriptografis.`
+    - Suggest: `Menyediakan layanan autentikasi kriptografi.`
+    - Same source phrase "Provide cryptographic authentication services" is rendered inconsistently; "autentikasi" is the standard KBBI form used in mozac_feature_addons_permissions_pkcs11_description.
+- `top_sites_max_limit_confirmation_button` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Added exclamation mark not present in the source button label.
+    - Current: `Oke, Paham!`
+    - Suggest: `Oke, Paham`
+    - The source "OK, Got It" has no exclamation mark; punctuation should mirror the source.
 
 ---
 
@@ -45,8 +60,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,602 |
-| Missing strings | 18 |
+| Strings | 2,554 |
+| Missing strings | 71 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,10 +77,13 @@ _Nothing retired._
 
 ### Completeness
 
-**18 strings** are not translated yet, concentrated in:
+**71 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 17
+- `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — 40
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-in/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-in/strings.xml` — 11
 - `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-in/strings.xml` — 1
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-in/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -89,15 +107,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (151)
+## 3. Open findings (147)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 86 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 2 | Wrong content (says something other than the English) | 84 |
+| 3 | Degraded language (grammar, spelling, terminology) | 60 |
+| 4 | Cosmetic (typography, spacing) | 3 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -165,21 +183,11 @@ _Nothing in this category._
     - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
     - Suggest: `Tanyakan pada administrator jaringan Anda atau Penyedia Jasa Layanan Internet (Internet Service Provider) untuk mendapatkan bantuan.`
     - The source ends with "for assistance", which is present in the parallel string mozac_browser_errorpages_proxy_connection_refused_message but omitted here.
-- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "recent" is attached to the wrong noun, changing the meaning from "recent browsing history" to "recent related data".
-    - Current: `Bersihkan riwayat penjelajahan, kuki, dan data terkait terkini.`
-    - Source: `Clear recent browsing history, cookies, and related data.`
-    - Suggest: `Bersihkan riwayat penjelajahan terkini, kuki, dan data terkait.`
-    - The source is "Clear recent browsing history, cookies, and related data." — "recent" modifies "browsing history". The sibling string mozac_feature_addons_permissions_browser_data_description correctly renders it as "riwayat penjelajahan terbaru, kuki, dan data terkait".
 - `mozac_feature_addons_permissions_devtools_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "Extend developer tools to access your data" is rendered as "Perpanjang akses alat pengembang" (extend the access of dev tools), altering the meaning and using "perpanjang" (prolong in time) instead of "perluas".
     - Current: `Perpanjang akses alat pengembang ke data Anda di dalam tab terbuka`
     - Source: `Extend developer tools to access your data in open tabs`
     - Suggest: `Perluas alat pengembang untuk mengakses data Anda di tab terbuka`
     - The source means extending the developer tools so they can access your data; the parallel string mozac_feature_addons_permissions_devtools_description_for_update correctly uses "Perluas alat pengembang untuk mengakses data Anda di tab terbuka."
-- `mozac_feature_addons_permissions_notifications_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "Display notifications to you" is rendered as "Tampilkan notifikasi untuk Anda", but the phrasing loses the sense of showing notifications to the user; more importantly it reads as "show notifications for you".
-    - Current: `Tampilkan notifikasi untuk Anda.`
-    - Source: `Display notifications to you.`
-    - Suggest: `Tampilkan notifikasi kepada Anda.`
-    - "to you" is the recipient of the notifications; Indonesian "kepada Anda" conveys the recipient, while "untuk Anda" means "on your behalf/for your benefit".
 - `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — Adds "lagi" ("more/again"), which is not in the source "Access your data on another domain".
     - Current: `Akses data Anda di domain lain lagi`
     - Source: `Access your data on another domain`
@@ -405,7 +413,17 @@ _Nothing in this category._
     - Source: `Speedy, safe, and won’t sell you out. Browsing just got better.`
     - Suggest: `tidak akan mengkhianati Anda`
     - "Sell you out" means betray/give away your data, not literally selling the user; the literal rendering conveys a different meaning.
-- _…and 28 more; see `state/` for the full list._
+- `open_all_warning_confirm` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Confirm button label translated as a noun phrase "open tabs" instead of the imperative action "Open tabs".
+    - Current: `Tab terbuka`
+    - Source: `Open tabs`
+    - Suggest: `Buka tab`
+    - The developer comment says this is the dialog button for confirming opening all tabs; "Tab terbuka" means "opened tabs" (a state), not the action command.
+- `open_tabs_menu` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — "Open tabs menu" (the menu of open tabs) rendered as the imperative "Buka menu tab".
+    - Current: `Buka menu tab`
+    - Source: `Open tabs menu`
+    - Suggest: `Menu tab terbuka`
+    - Per the developer comment this content description names the open-tabs menu; the Indonesian reads as a command to open a "tab menu".
+- _…and 26 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -537,11 +555,6 @@ _Nothing in this category._
     - Source: `authentication information`
     - Suggest: `informasi autentikasi`
     - The long description for the same permission uses "informasi autentikasi"; KBBI standard form is "autentikasi".
-- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — Uses "otentikasi kriptografis" while the sibling string uses "autentikasi kriptografi" for the same source text.
-    - Current: `Menyediakan layanan otentikasi kriptografis.`
-    - Source: `Provide cryptographic authentication services.`
-    - Suggest: `Menyediakan layanan autentikasi kriptografi.`
-    - Same source phrase "Provide cryptographic authentication services" is rendered inconsistently; "autentikasi" is the standard KBBI form used in mozac_feature_addons_permissions_pkcs11_description.
 - `mozac_feature_addons_successfully_installed` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-in/strings.xml` — "installed" translated as "menginstal" instead of the standard "memasang" used elsewhere (e.g. "dipasang").
     - Current: `Berhasil menginstal %1$s`
     - Source: `Successfully installed %1$s`
@@ -725,11 +738,6 @@ _Nothing in this category._
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `“Keluar”`
     - Source uses “Quit” with curly quotes; the id tree's detected convention is curly-double.
-- `top_sites_max_limit_confirmation_button` — `mozilla-mobile/fenix/app/src/main/res/values-in/strings.xml` — Added exclamation mark not present in the source button label.
-    - Current: `Oke, Paham!`
-    - Source: `OK, Got It`
-    - Suggest: `Oke, Paham`
-    - The source "OK, Got It" has no exclamation mark; punctuation should mirror the source.
 
 ---
 

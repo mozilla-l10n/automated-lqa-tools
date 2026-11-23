@@ -1,15 +1,15 @@
 {
  "_meta": {
   "locale": "ru",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 0,
   "typographic": 0
  },
  "dash": {
-  "em": 6,
+  "em": 7,
   "en": 0
  },
  "ellipsis": {
@@ -30,11 +30,11 @@
   "total": 0
  },
  "quotes": {
-  "guillemet": 43,
+  "guillemet": 47,
   "straight-double": 2
  },
  "register": {
-  "formal": 485,
-  "informal": 150
+  "formal": 475,
+  "informal": 157
  }
 }

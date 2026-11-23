@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 22 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,18 +18,28 @@ Also for sv-SE: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (4)
 
-- `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Wrong gender agreement: 'sektion' is a common-gender (en) noun, so the demonstrative must be 'Den här'.
-    - Current: `Det här sektionen`
-    - Source: `Can’t hide this section`
-    - Suggest: `Den här sektionen`
-    - 'en sektion' takes 'den här', not the neuter 'det här'.
-- `nova_onboarding_sync_pairing_scan_button` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — 'parningskod' is inconsistent with 'parkopplingen' used in the title on the same pairing card.
-    - Current: `Skanna parningskod`
-    - Source: `Scan pairing code`
-    - Suggest: `Skanna parkopplingskod`
-    - The title on the same card uses 'parkoppling' for pairing. 'Parning' in Swedish usually means animal mating, so 'parkoppling' is the right term here.
+- `mozac_feature_prompts_save_payment_method_prompt_body_with_security_code` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sv-rSE/strings.xml` — The neuter possessive "ditt" is shared with the common-gender noun "säkerhetskod", so the possessive doesn't agree.
+    - Current: `ditt kortnummer och säkerhetskod`
+    - Source: `%s encrypts your card number and security code for faster payments later.`
+    - Suggest: `ditt kortnummer och din säkerhetskod`
+    - "Kortnummer" is neuter (ditt) but "säkerhetskod" is common gender (din). When coordinated nouns have different genders, Swedish repeats the possessive with the correct form for each.
+- `mozac_feature_prompts_edit_credit_card_security_code_error` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sv-rSE/strings.xml` — The first part of the compound needs a hyphen to mark the left-out second part: "3- eller 4-siffrig".
+    - Current: `3 eller 4-siffrig`
+    - Source: `Enter a 3 or 4 digit security code`
+    - Suggest: `3- eller 4-siffrig`
+    - Swedish uses a hyphen to show that part of a compound has been left out in coordination (3-siffrig eller 4-siffrig → 3- eller 4-siffrig).
+- `wrex_widget_match_canceled` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Avbruten" means a match that was abandoned or interrupted, not a canceled match, which is "Inställd".
+    - Current: `Avbruten`
+    - Source: `Canceled`
+    - Suggest: `Inställd`
+    - In Swedish sports terminology, a match that is called off before it starts is "inställd". "Avbruten" is the separate status for a match stopped partway through, so the badge shows the wrong status.
+- `credit_cards_cvv_amex_validation_error_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The compound of brand name and noun is missing its hyphen (särskrivning).
+    - Current: `American Express säkerhetskoder`
+    - Source: `American Express security codes are 4 digits`
+    - Suggest: `American Express-säkerhetskoder`
+    - In Swedish, a multi-word proper name used as the first part of a compound is joined to the noun with a hyphen. Written as separate words, it is a grammar error.
 
 ### ✅ Fixed since the last run (0)
 
@@ -54,7 +64,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -81,7 +91,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 9, `curly-double` 6 | _mixed_ |
+| quotes | `curly-double` 10, `straight-double` 9 | _mixed_ |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 
@@ -93,14 +103,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (72)
+## 3. Open findings (76)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 43 |
+| 2 | Wrong content (says something other than the English) | 30 |
+| 3 | Degraded language (grammar, spelling, terminology) | 46 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -254,6 +264,11 @@ _Nothing in this category._
     - Source: `Site asked to turn off ad blocker`
     - Suggest: `Webbplatsen bad mig stänga av annonsblockeraren`
     - Source: 'Site asked to turn off ad blocker' means the site made the request. 'ombeds' is passive ('is asked'), so it reverses who is asking whom.
+- `wrex_widget_match_canceled` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "Avbruten" means a match that was abandoned or interrupted, not a canceled match, which is "Inställd".
+    - Current: `Avbruten`
+    - Source: `Canceled`
+    - Suggest: `Inställd`
+    - In Swedish sports terminology, a match that is called off before it starts is "inställd". "Avbruten" is the separate status for a match stopped partway through, so the badge shows the wrong status.
 - `wrex_widget_match_extra_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — "ET" (extra time) is translated as "Tilläggstid", which means stoppage time, not extra time.
     - Current: `Tilläggstid`
     - Source: `ET`
@@ -277,6 +292,16 @@ _Nothing in this category._
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
     - Suggest: `ladda om sidan`
     - "Ladda om" already means reload, so "igen" repeats it. The source says only "reload the page".
+- `mozac_feature_prompts_edit_credit_card_security_code_error` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sv-rSE/strings.xml` — The first part of the compound needs a hyphen to mark the left-out second part: "3- eller 4-siffrig".
+    - Current: `3 eller 4-siffrig`
+    - Source: `Enter a 3 or 4 digit security code`
+    - Suggest: `3- eller 4-siffrig`
+    - Swedish uses a hyphen to show that part of a compound has been left out in coordination (3-siffrig eller 4-siffrig → 3- eller 4-siffrig).
+- `mozac_feature_prompts_save_payment_method_prompt_body_with_security_code` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sv-rSE/strings.xml` — The neuter possessive "ditt" is shared with the common-gender noun "säkerhetskod", so the possessive doesn't agree.
+    - Current: `ditt kortnummer och säkerhetskod`
+    - Source: `%s encrypts your card number and security code for faster payments later.`
+    - Suggest: `ditt kortnummer och din säkerhetskod`
+    - "Kortnummer" is neuter (ditt) but "säkerhetskod" is common gender (din). When coordinated nouns have different genders, Swedish repeats the possessive with the correct form for each.
 - `mozac_feature_prompts_suggest_strong_password_description_3` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sv-rSE/strings.xml` — The pronoun "Den" doesn't agree with the neuter noun "lösenord" it refers to.
     - Current: `Den kommer att sparas`
     - Source: `Protect your account by using a strong, randomly generated password. It’ll be saved into your account for future use.`
@@ -342,6 +367,11 @@ _Nothing in this category._
     - Source: `On March 14, add-ons and other Firefox features will stop working because a root certificate is expiring.`
     - Suggest: `håller på att upphöra att gälla.`
     - "Upphöra" alone means "cease"; certificate expiry is "upphöra att gälla", consistent with hcr1_message.
+- `credit_cards_cvv_amex_validation_error_message` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — The compound of brand name and noun is missing its hyphen (särskrivning).
+    - Current: `American Express säkerhetskoder`
+    - Source: `American Express security codes are 4 digits`
+    - Suggest: `American Express-säkerhetskoder`
+    - In Swedish, a multi-word proper name used as the first part of a compound is joined to the noun with a hyphen. Written as separate words, it is a grammar error.
 - `customize_menu_cannot_hide_section` — `mozilla-mobile/fenix/app/src/main/res/values-sv-rSE/strings.xml` — Wrong gender agreement: 'sektion' is a common-gender (en) noun, so the demonstrative must be 'Den här'.
     - Current: `Det här sektionen`
     - Source: `Can’t hide this section`

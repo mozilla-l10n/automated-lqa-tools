@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 7 of 2,371 |
+| **Strings reviewed this run** | 11 of 2,337 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ar: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — The imperative of بدأ is misspelled as "ابدء" instead of "ابدأ".
-    - Current: `ابدء`
-    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
-    - Suggest: `ابدأ`
-    - The imperative of بدأ ("start") takes the hamza on alif: ابدأ. "ابدء" is a spelling error.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_find_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — "Read the text" is translated as "display the content".
+    - Current: `عرض محتوى جميع التبويبات المفتوحة.`
+    - Suggest: `قراءة نصوص جميع التبويبات المفتوحة.`
+    - The permission lets the add-on read the text of open tabs. عرض means display/view, which is not the same thing, and the non-update variant correctly uses قراءة.
+- `mozac_feature_addons_updater_notification_short_intro` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — The first letter has a double damma (ٌ) where a single damma (ُ) belongs.
+    - Current: `يٌرجى`
+    - Suggest: `يُرجى`
+    - The passive verb يُرجى takes a single damma. The double damma is a misspelling.
 
 ---
 
@@ -49,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 42 |
-| Strings | 2,371 |
-| Missing strings | 249 |
+| Strings | 2,337 |
+| Missing strings | 288 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 2 |
 | Files with no en-US counterpart | 0 |
@@ -66,13 +69,14 @@ _Nothing retired._
 
 ### Completeness
 
-**249 strings** are not translated yet, concentrated in:
+**288 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 179
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
+- `mozilla-mobile/fenix/app/src/main/res/values-ar/strings.xml` — 190
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 31
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 18
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ar/strings.xml` — 18
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-ar/strings.xml` — 9
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-ar/strings.xml` — 9
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml` — 7
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — 7
 - `mozilla-mobile/android-components/components/compose/awesomebar/src/main/res/values-ar/strings.xml` — 4
 - `mozilla-mobile/android-components/components/feature/protection-dashboard/src/main/res/values-ar/strings.xml` — 1
@@ -106,7 +110,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (122)
+## 3. Open findings (120)
 
 > **Reads as a deliberate edit (3).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -131,8 +135,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 49 |
-| 3 | Degraded language (grammar, spelling, terminology) | 68 |
+| 2 | Wrong content (says something other than the English) | 48 |
+| 3 | Degraded language (grammar, spelling, terminology) | 67 |
 | 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
@@ -171,11 +175,6 @@ _Nothing in this category._
     - Source: `Share website activity with extension developer`
     - Suggest: `مشاركة نشاط الموقع مع مطور الامتداد`
     - The source says 'website activity', and the matching short description correctly uses نشاط الموقع. The long description uses نشاط التصفح (browsing activity), which is the text of a different data-collection permission, so users cannot tell the two apart.
-- `mozac_feature_addons_permissions_find_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — "Read the text" is translated as "display the content".
-    - Current: `عرض محتوى جميع التبويبات المفتوحة.`
-    - Source: `Read the text of all open tabs.`
-    - Suggest: `قراءة نصوص جميع التبويبات المفتوحة.`
-    - The permission lets the add-on read the text of open tabs. عرض means display/view, which is not the same thing, and the non-update variant correctly uses قراءة.
 - `mozac_feature_addons_permissions_management_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — "Monitor extension usage" is translated as "manage extension usage".
     - Current: `إدارة استخدام الامتدادات`
     - Source: `Monitor extension usage and manage themes`
@@ -429,11 +428,6 @@ _Nothing in this category._
     - Source: `This extension is restricted and has been disabled. You can enable it, but this may be risky.`
     - Suggest: `قُيّد`
     - The passive verb قُيِّد takes a single damma on the first letter. The double damma is a noun ending and is wrong here.
-- `mozac_feature_addons_updater_notification_short_intro` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — The first letter has a double damma (ٌ) where a single damma (ُ) belongs.
-    - Current: `يٌرجى`
-    - Source: `Cancel to keep your current version and settings.`
-    - Suggest: `يُرجى`
-    - The passive verb يُرجى takes a single damma. The double damma is a misspelling.
 - `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ar/strings.xml` — The feminine 'إحدى' is used with the masculine noun 'امتداد'.
     - Current: `توقفت إحدى الامتدادات`
     - Source: `One or more extensions stopped working, making your system unstable.`

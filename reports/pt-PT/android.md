@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for pt-PT: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md)
 
 ### 🆕 New findings (1)
 
-- `certificate_details_panel_eu_trust_mark_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — The Portuguese text uses the English abbreviation "EU" where it should say "UE" (União Europeia).
-    - Current: `Marca de confiança da EU`
-    - Source: `EU trust mark`
-    - Suggest: `Marca de confiança da UE`
-    - In Portuguese, the European Union is abbreviated "UE". "EU" is the English form, and in Portuguese it also reads as the pronoun "eu" (I). That makes it confusing when a screen reader reads this content description aloud.
+- `mozac_menu_customize_unnamed_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pt-rPT/strings.xml` — Uses the Brazilian spelling "Seção" instead of the pt-PT "Secção" used in all sibling strings.
+    - Current: `Seção`
+    - Source: `Section “%1$s”`
+    - Suggest: `Secção`
+    - pt-PT spells it "Secção", and every other section string on the same customize-menu screen uses "Secção". "Seção" is the pt-BR form.
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +38,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — "developer tools" is translated as "ferramentas de programação" here but as "ferramentas de programador" in the install version of the same permission.
+    - Current: `ferramentas de programação`
+    - Suggest: `ferramentas de programador`
+    - The same source term should be translated the same way in both versions of this permission description. The install version uses "ferramentas de programador".
+- `mozac_feature_addons_permissions_downloads_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — A stray "e," makes the sentence ungrammatical.
+    - Current: `Transferir ficheiros e, ler e modificar`
+    - Suggest: `Transferir ficheiros, ler e modificar`
+    - "e, ler e modificar" has an extra conjunction and comma, which breaks the sentence. The install version of this string has the correct form: "Transferir ficheiros, ler e modificar…".
+- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — This uses "em outros" without the contraction, unlike the install version and the related sites strings, which all use "noutros".
+    - Current: `em outros domínios`
+    - Suggest: `noutros domínios`
+    - European Portuguese normally contracts "em outros" to "noutros". The install version of this string and both sites strings already say "noutros".
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — "manage themes" is rendered as the noun "gestão de temas", so the sentence says the extension monitors theme management rather than manages themes.
+    - Current: `e gestão de temas`
+    - Suggest: `e gerir temas`
+    - The source has two separate abilities: monitor extension usage, and manage themes. Using the noun "gestão" makes it the object of "Monitorizar", so the permission changes from managing themes to monitoring theme management. The version without the period correctly says "gerir temas".
 
 ---
 
@@ -49,7 +64,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -74,7 +89,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 13, `straight-double` 3 | **curly-double** |
+| quotes | `curly-double` 18, `straight-double` 3 | **curly-double** |
 | apostrophe | `typographic` 1 | **typographic** |
 | ellipsis | `char` 19 | **char** |
 | dash | `em` 1, `en` 1 | _mixed_ |
@@ -88,14 +103,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (74)
+## 3. Open findings (71)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 24 |
-| 3 | Degraded language (grammar, spelling, terminology) | 40 |
+| 2 | Wrong content (says something other than the English) | 23 |
+| 3 | Degraded language (grammar, spelling, terminology) | 38 |
 | 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
@@ -124,11 +139,6 @@ _Nothing in this category._
     - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
     - Suggest: `O dispositivo está ligado a uma rede ativa?`
     - The source says "Is the device connected to an active network?". On a mobile browser "computador" is wrong and inconsistent with "dispositivo" used elsewhere.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — "manage themes" is rendered as the noun "gestão de temas", so the sentence says the extension monitors theme management rather than manages themes.
-    - Current: `e gestão de temas`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `e gerir temas`
-    - The source has two separate abilities: monitor extension usage, and manage themes. Using the noun "gestão" makes it the object of "Monitorizar", so the permission changes from managing themes to monitoring theme management. The version without the period correctly says "gerir temas".
 - `mozac_feature_downloads_cancel_active_private_downloads_warning_content_body` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-pt-rPT/strings.xml` — The singular source (one download) is translated as plural, which doesn't work with a file-name placeholder.
     - Current: `%1$s transferências serão canceladas`
     - Source: `If you close all Private tabs now, %1$s download will be canceled. Are you sure you want to leave Private Browsing?`
@@ -237,21 +247,16 @@ _Nothing in this category._
     - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
     - Suggest: `cookies que são necessários`
     - The same string later uses "os cookies do site" (masculine), so the agreement in "necessárias" is wrong and inconsistent.
+- `mozac_menu_customize_unnamed_section` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pt-rPT/strings.xml` — Uses the Brazilian spelling "Seção" instead of the pt-PT "Secção" used in all sibling strings.
+    - Current: `Seção`
+    - Source: `Section “%1$s”`
+    - Suggest: `Secção`
+    - pt-PT spells it "Secção", and every other section string on the same customize-menu screen uses "Secção". "Seção" is the pt-BR form.
 - `mozac_feature_addons_installed_dialog_description_3` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — The preposition "no" (masculine singular) does not agree with the substituted link text "definições da extensão" (feminine plural).
     - Current: `no %1$s`
     - Source: `Update permissions and data preferences any time in the %1$s.`
     - Suggest: `nas %1$s`
     - Per the developer comment, %1$s is replaced by the link text from mozac_feature_addons_installed_dialog_description_link_text, which is "definições da extensão". So the user sees "no definições da extensão", which is ungrammatical. It should be "nas definições da extensão".
-- `mozac_feature_addons_permissions_downloads_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — A stray "e," makes the sentence ungrammatical.
-    - Current: `Transferir ficheiros e, ler e modificar`
-    - Source: `Download files and read and modify the browser’s download history.`
-    - Suggest: `Transferir ficheiros, ler e modificar`
-    - "e, ler e modificar" has an extra conjunction and comma, which breaks the sentence. The install version of this string has the correct form: "Transferir ficheiros, ler e modificar…".
-- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — This uses "em outros" without the contraction, unlike the install version and the related sites strings, which all use "noutros".
-    - Current: `em outros domínios`
-    - Source: `Access your data on other domains.`
-    - Suggest: `noutros domínios`
-    - European Portuguese normally contracts "em outros" to "noutros". The install version of this string and both sites strings already say "noutros".
 - `mozac_feature_addons_status_incompatible` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — The possessive is missing its definite article, which is a Brazilian construction and not correct pt-PT.
     - Current: `com sua versão`
     - Source: `%1$s is not compatible with your version of %2$s (version %3$s).`
@@ -375,11 +380,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rPT/strings.xml` — "developer tools" is translated as "ferramentas de programação" here but as "ferramentas de programador" in the install version of the same permission.
-    - Current: `ferramentas de programação`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `ferramentas de programador`
-    - The same source term should be translated the same way in both versions of this permission description. The install version uses "ferramentas de programador".
 - `certificate_warning_homepage_card_hcr1_title` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — Imperative uses informal 'tu' form (Atualiza) instead of the formal 'você' form used throughout the locale.
     - Current: `Atualiza antes`
     - Source: `Update before March 14`
@@ -446,7 +446,7 @@ _Nothing in this category._
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pt-rPT/strings.xml` — `mozac_browser_errorpages_offline_message` uses straight double quotes
     - Current: `{ <p> }O navegador está a operar no modo desligado e não consegue estabelecer ligação ao objeto solicitado.{ </p> } { <ul> } { <li> }O computador está ligado a uma rede ativa?{ </li> } { <li> }Pressione "Tentar novament…`
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - The locale's quote convention is `curly-double` (13 occurrences).
+    - The locale's quote convention is `curly-double` (18 occurrences).
 - `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-pt-rPT/strings.xml` — The quotes around the button name are straight, not the locale's curly double quotes.
     - Current: `"Tentar novamente"`
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
@@ -465,7 +465,7 @@ _Nothing in this category._
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
     - Current: `O endereço web deve conter "https://" ou "http://"`
     - Source: `Web address must contain “https://” or “http://”`
-    - The locale's quote convention is `curly-double` (13 occurrences).
+    - The locale's quote convention is `curly-double` (18 occurrences).
 - `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — This string uses straight double quotes, but the locale convention (and the source) uses curly double quotes.
     - Current: `"https://" ou "http://"`
     - Source: `Web address must contain “https://” or “http://”`
@@ -474,7 +474,7 @@ _Nothing in this category._
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
     - Current: `Exclui automaticamente os dados de navegação quando seleciona "Sair" no menu principal`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
-    - The locale's quote convention is `curly-double` (13 occurrences).
+    - The locale's quote convention is `curly-double` (18 occurrences).
 - `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rPT/strings.xml` — Straight double quotes are used where the locale convention and the source use curly quotes.
     - Current: `"Sair"`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`

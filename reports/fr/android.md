@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 33 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,101 +18,17 @@ Also for fr: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
-    - Current: `sur d’autres domaines`
-    - Source: `Access your data on another domain`
-    - Suggest: `sur un autre domaine`
-    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
-    - Current: `sur d’autres domaines.`
-    - Source: `Access your data on another domain.`
-    - Suggest: `sur un autre domaine.`
-    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
+- `unsubmitted_crash_dialog_positive_button_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The last word "Plantage" is in mixed case while the rest of the label is in capitals.
+    - Current: `ENVOYER LE RAPPORT DE Plantage`
+    - Source: `SEND CRASH REPORT`
+    - Suggest: `ENVOYER LE RAPPORT DE PLANTAGE`
+    - The button is meant to be in capitals, as the source and the developer comment show. The stray mixed-case word is inconsistent and looks like an editing slip.
 
-### ✅ Fixed since the last run (16)
+### ✅ Fixed since the last run (0)
 
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-fr/strings.xml` — "The browser has stopped trying to retrieve the requested item" is mistranslated as the browser stopping to wait for a response from the site.
-    - Current: `Le navigateur a arrêté d’attendre une réponse du site.`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `Le navigateur a cessé d’essayer de récupérer l’élément demandé.`
-    - The source states the browser stopped trying to retrieve the requested item, not that it stopped waiting for a response.
-- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — "Access your data on other domains." drops the possessive "your data".
-    - Current: `Accéder aux données d’autres domaines.`
-    - Source: `Access your data on other domains.`
-    - Suggest: `Accéder à vos données pour d’autres domaines.`
-    - The source refers to the user's data on other domains; the target says "the data of other domains", inconsistent with the parallel sites string which uses "vos données".
-- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
-    - Current: `sur d’autres domaines`
-    - Source: `Access your data on another domain`
-    - Suggest: `sur un autre domaine`
-    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
-    - Current: `sur d’autres domaines.`
-    - Source: `Access your data on another domain.`
-    - Suggest: `sur un autre domaine.`
-    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
-- `mozac_feature_addons_updater_permissions_dialog_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The "or" between the two choices is missing, so the sentence is two orders joined by a comma.
-    - Current: `actuels, mettez à jour`
-    - Source: `Cancel to keep your current version and settings, or update to get the new version and approve the changes.`
-    - Suggest: `actuels, ou mettez à jour`
-    - The source offers a choice: "Cancel ... or update ...". Without "ou", the French reads as two instructions in a row.
-- `automatic_translation_option_always_translate_summary_preference` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The translation reverses the meaning: the source says the app will translate this (source) language automatically, not translate the page into this language.
-    - Current: `%1$s traduira automatiquement la page dans cette langue à son chargement.`
-    - Source: `%1$s will translate this language automatically when the page loads.`
-    - Suggest: `%1$s traduira automatiquement cette langue au chargement de la page.`
-    - Source: "%1$s will translate this language automatically when the page loads." — the language is the one being translated from, matching the sibling strings ("ne proposera jamais de traduire les sites dans cette langue"). The current text says the page will be translated into that language.
-- `bookmark_import_failure_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Wrong verb form: "Veuillez réessayez" should be the infinitive "réessayer".
-    - Current: `Veuillez réessayez.`
-    - Source: `Couldn’t import bookmarks. Try again.`
-    - Suggest: `Veuillez réessayer.`
-    - After "Veuillez" the following verb must be in the infinitive; "réessayez" is a conjugated form and is a grammatical error.
-- `debug_drawer_addresses_debug_locales_header` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Debug locales to enable" is mistranslated as an imperative "Debug the locales to enable".
-    - Current: `Déboguer les locales à activer`
-    - Source: `Debug locales to enable`
-    - Suggest: `Locales de débogage à activer`
-    - "Debug locales" is a noun phrase (the list of debug locales that can be enabled), not a verb phrase; the header names a list, per the developer comment.
-- `delete_language_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The French says the app will download "this language" partially, whereas the source says it will download partial languages to the cache.
-    - Current: `%1$s la téléchargera partiellement dans votre cache`
-    - Source: `If you delete this language, %1$s will download partial languages to your cache as you translate.`
-    - Suggest: `%1$s téléchargera des langues partielles dans votre cache`
-    - Source: "%1$s will download partial languages to your cache as you translate." — the object is "partial languages", not the deleted language; the parallel string delete_language_all_languages_file_dialog_message renders it correctly.
-- `etp_suspected_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — Infinitive "Activer" used where the source is a descriptive third-person statement ("Enables").
-    - Current: `Activer la protection`
-    - Source: `Enables fingerprinting protection to stop suspected fingerprinters.`
-    - Suggest: `Active la protection`
-    - The developer comment says this is a description of fingerprinters blocked by the protection; the source "Enables fingerprinting protection" is descriptive, not an imperative, matching the other description strings in the same group ("Efface…", "Limite…", "Empêche…").
-- `preferences_google_lens_availability_caption` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "your active search engine" is translated as "moteur de recherche principal" (default/primary) instead of active/current.
-    - Current: `défini comme moteur de recherche principal lors de la navigation`
-    - Source: `Available only when Google is enabled above and is your active search engine while browsing.`
-    - Suggest: `défini comme moteur de recherche actif lors de la navigation`
-    - The source specifies the active search engine while browsing, not the primary/default one.
-- `webcompat_reporter_reason_checkout` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The dropdown option drops "check out" and switches to a first-person phrasing unlike the other options.
-    - Current: `Je ne peux pas payer ou faire des achats`
-    - Source: `Can’t pay, check out or shop`
-    - Suggest: `Impossible de payer, de finaliser la commande ou de faire des achats`
-    - Source is "Can’t pay, check out or shop"; the checkout step is omitted and the register differs from the parallel option webcompat_reporter_reason_account2 ("Impossible de se connecter ou de s’inscrire").
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — The final period is missing, even though the developer comment says it matters because descriptions are concatenated.
-    - Current: `dans les onglets ouverts`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `dans les onglets ouverts.`
-    - The comment says multiple permissions are joined with a space, which is why the period is important. Without it, the sentences run together in the update notification.
-- `mozac_feature_addons_permissions_one_extra_domain_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", even though this entry is only for exactly one extra domain.
-    - Current: `sur d’autres domaines`
-    - Source: `Access your data on another domain`
-    - Suggest: `sur un autre domaine`
-    - The comment says this entry is shown when one extra domain remains (5 domains, 4 listed). A separate string covers the plural case. Using the plural here tells the user about access to several domains when there is only one.
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fr/strings.xml` — Singular "another domain" is translated as plural "d’autres domaines", which makes it identical to the plural variant.
-    - Current: `sur d’autres domaines.`
-    - Source: `Access your data on another domain.`
-    - Suggest: `sur un autre domaine.`
-    - The comment says this string is used when exactly one extra domain remains (3 domains, 2 listed). The plural case has its own string, mozac_feature_addons_permissions_extra_domains_description_plural_for_update.
-- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — "Translating" (action in progress) is rendered as the noun "Traduction".
-    - Current: `Traduction`
-    - Source: `Translating`
-    - Suggest: `Traduction en cours`
-    - The comment states this button text indicates a translation is currently in progress; "Traduction" alone is ambiguous with the noun/label "Translation".
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -133,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -160,12 +76,12 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 23 | **guillemet** |
-| apostrophe | `typographic` 702 | **typographic** |
+| quotes | `guillemet` 28 | **guillemet** |
+| apostrophe | `typographic` 690 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| nbsp | `total` 217, `before-punctuation` 147, `space-before-punctuation` 62 | _mixed_ |
-| register | `formal` 450 | **formal** |
+| nbsp | `total` 231, `before-punctuation` 156, `space-before-punctuation` 62 | _mixed_ |
+| register | `formal` 443 | **formal** |
 
 ---
 
@@ -175,7 +91,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (1)
+## 3. Open findings (2)
 
 
 | Impact | Meaning | Count |
@@ -183,7 +99,7 @@ _Nothing reported._
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
-| 4 | Cosmetic (typography, spacing) | 0 |
+| 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -207,7 +123,11 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
-_Nothing in this category._
+- `unsubmitted_crash_dialog_positive_button_3` — `mozilla-mobile/fenix/app/src/main/res/values-fr/strings.xml` — The last word "Plantage" is in mixed case while the rest of the label is in capitals.
+    - Current: `ENVOYER LE RAPPORT DE Plantage`
+    - Source: `SEND CRASH REPORT`
+    - Suggest: `ENVOYER LE RAPPORT DE PLANTAGE`
+    - The button is meant to be in capitals, as the source and the developer comment show. The stray mixed-case word is inconsistent and looks like an editing slip.
 
 ---
 

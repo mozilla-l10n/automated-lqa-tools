@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 2,600 |
+| **Strings reviewed this run** | 20 of 2,572 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for ja: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `wrex_widget_match_penalties` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — The match status for a penalty shootout is rendered as 「ペナルティー」, which reads as a foul or punishment rather than the shootout phase.
-    - Current: `ペナルティー`
-    - Source: `Penalties`
-    - Suggest: `PK戦`
-    - The comment says this label is shown while a match is in its penalties phase, meaning the shootout. The standard Japanese soccer term for that is 「PK戦」. 「ペナルティー」 on its own suggests a penalty or foul.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "your data" is rendered as "ユーザーデータ" (user data) and "Extend" as "展開" (expand/unfold) instead of extending functionality.
+    - Current: `開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。`
+    - Suggest: `開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。`
+    - The source says "Extend developer tools to access your data in open tabs." "展開" means to unfold/deploy, not to extend capabilities; "拡張" is the established term. Also "your data" refers to the user's own data, not generic "user data".
 
 ---
 
@@ -49,8 +48,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,600 |
-| Missing strings | 20 |
+| Strings | 2,572 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,10 +65,12 @@ _Nothing retired._
 
 ### Completeness
 
-**20 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 19
-- `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-ja/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — 23
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ja/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ja/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ja/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -83,7 +84,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 |---|---|---|
 | quotes | `curly-double` 10, `corner` 2 | **curly-double** |
 | ellipsis | `char` 11, `ascii` 10 | _mixed_ |
-| fullwidth | `punctuation` 733 | **punctuation** |
+| fullwidth | `punctuation` 701 | **punctuation** |
 
 ---
 
@@ -93,13 +94,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (142)
+## 3. Open findings (141)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 111 |
+| 2 | Wrong content (says something other than the English) | 110 |
 | 3 | Degraded language (grammar, spelling, terminology) | 25 |
 | 4 | Cosmetic (typography, spacing) | 6 |
 
@@ -144,11 +145,6 @@ _Nothing in this category._
     - Source: `%1$s could not be installed because it can only be installed by an organization using enterprise policies, which isn‘t supported on this platform.`
     - Suggest: `これはエンタープライズポリシーを使用する組織によってのみインストールできますが、この方法はこのプラットフォームではサポートされていません。`
     - The source's "only be installed by" (排他) is dropped, changing the meaning of why installation failed.
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "your data" is rendered as "ユーザーデータ" (user data) and "Extend" as "展開" (expand/unfold) instead of extending functionality.
-    - Current: `開いているタブのユーザーデータへアクセスするため、開発ツールを展開します。`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `開いているタブ内のあなたのデータにアクセスできるよう、開発ツールを拡張します。`
-    - The source says "Extend developer tools to access your data in open tabs." "展開" means to unfold/deploy, not to extend capabilities; "拡張" is the established term. Also "your data" refers to the user's own data, not generic "user data".
 - `mozac_feature_addons_permissions_user_scripts_extra_warning` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ja/strings.xml` — "extensions or sources you trust" is mistranslated so that "trusted" only modifies sources, allowing any extension's scripts.
     - Current: `拡張機能や信頼できるソースからのスクリプト以外は実行しないでください。`
     - Source: `Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.`
@@ -409,7 +405,12 @@ _Nothing in this category._
     - Source: `Social Media Trackers`
     - Suggest: `ソーシャルメディアトラッカー`
     - The source refers to social media trackers; "SNS メディア" is a redundant/incorrect coinage and inconsistent with the description string which uses ソーシャルネットワーク.
-- _…and 54 more; see `state/` for the full list._
+- `extension_process_crash_dialog_retry_button_text` — `mozilla-mobile/fenix/app/src/main/res/values-ja/strings.xml` — Button label is translated as an instruction to the user rather than the action "Try restarting extensions".
+    - Current: `拡張機能を再起動してみてください`
+    - Source: `Try restarting extensions`
+    - Suggest: `拡張機能の再起動を試す`
+    - This is a button label; the source is an action the button performs, not a polite request to the user.
+- _…and 53 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 

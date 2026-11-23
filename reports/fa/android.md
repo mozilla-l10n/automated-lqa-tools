@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 10 of 2,609 |
+| **Strings reviewed this run** | 0 of 2,561 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "themes" translated as "پوسته‌ها" here but as "زمینه‌ها" in the parallel non-update string.
+    - Current: `پایش بر استفاده از افزونه و مدیریت پوسته‌ها.`
+    - Suggest: `پایش استفادهٔ افزونه‌ها و مدیریت زمینه‌ها.`
+    - mozac_feature_addons_permissions_management_description renders the same source "manage themes" as "مدیریت زمینه‌ها"; the two variants of the same permission text should be consistent.
+- `mozac_feature_addons_permissions_sessions_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Ungrammatical relative clause and missing ezafe: "زبانه‌های که اخیرا بسته‌شده".
+    - Current: `دسترسی به زبانه‌های که اخیرا بسته‌شده.`
+    - Suggest: `دسترسی به زبانه‌هایی که اخیراً بسته شده‌اند.`
+    - Persian requires the indefinite -yi marker (زبانه‌هایی) before the relative clause, and plural agreement; "اخیرا" also lacks the tanvin.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,609 |
-| Missing strings | 11 |
+| Strings | 2,561 |
+| Missing strings | 64 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +69,12 @@ _Nothing retired._
 
 ### Completeness
 
-**11 strings** are not translated yet, concentrated in:
+**64 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 11
+- `mozilla-mobile/fenix/app/src/main/res/values-fa/strings.xml` — 34
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fa/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fa/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fa/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -76,7 +86,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 23 | **guillemet** |
+| quotes | `guillemet` 22 | **guillemet** |
 | ellipsis | `char` 21 | **char** |
 
 ---
@@ -87,14 +97,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (63)
+## 3. Open findings (61)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 25 |
-| 3 | Degraded language (grammar, spelling, terminology) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 36 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -296,11 +306,6 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs`
     - Suggest: `گسترش ابزارهای توسعه‌دهندگان`
     - "ابزار" and "توسعه‌دهندگان" are run together without a space, producing a malformed word.
-- `mozac_feature_addons_permissions_sessions_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Ungrammatical relative clause and missing ezafe: "زبانه‌های که اخیرا بسته‌شده".
-    - Current: `دسترسی به زبانه‌های که اخیرا بسته‌شده.`
-    - Source: `Access recently closed tabs.`
-    - Suggest: `دسترسی به زبانه‌هایی که اخیراً بسته شده‌اند.`
-    - Persian requires the indefinite -yi marker (زبانه‌هایی) before the relative clause, and plural agreement; "اخیرا" also lacks the tanvin.
 - `mozac_feature_addons_rating_content_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — Leftover English word "of" in the translation produces "از of 5".
     - Current: `رتبه‌بندی: %1$.02f از of 5`
     - Source: `Rating: %1$.02f out of 5`
@@ -374,11 +379,6 @@ _Nothing in this category._
     - Source: `Block content on any page`
     - Suggest: `مسدود کردن محتوا در هر صفحه`
     - Other permission descriptions in the same dialog use the gerund form (e.g. "مسدود کردن محتوا در هر صفحه."); the informal imperative "مسدود کن" also breaks the locale's register.
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fa/strings.xml` — "themes" translated as "پوسته‌ها" here but as "زمینه‌ها" in the parallel non-update string.
-    - Current: `پایش بر استفاده از افزونه و مدیریت پوسته‌ها.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `پایش استفادهٔ افزونه‌ها و مدیریت زمینه‌ها.`
-    - mozac_feature_addons_permissions_management_description renders the same source "manage themes" as "مدیریت زمینه‌ها"; the two variants of the same permission text should be consistent.
 - `mozac_feature_autofill_search_hint` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-fa/strings.xml` — "Search logins" is rendered with a nonsensical term and a spacing error instead of the established Persian term for logins (ورودها/اطلاعات ورود).
     - Current: `جست‌وجو در واردشده ها`
     - Source: `Search logins`

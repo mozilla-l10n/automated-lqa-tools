@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,16 @@ Also for en-GB: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_prompts_edit_credit_card_expiry_month` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-en-rGB/strings.xml` — The en-US term "Expiration Date" is kept where British English uses "Expiry Date" for payment cards.
+    - Current: `Expiration Date Month`
+    - Suggest: `Expiry Date Month`
+    - In British English the standard term for a card's validity end date is "expiry date"; "expiration date" reads as American.
+- `mozac_feature_prompts_edit_credit_card_expiry_year` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-en-rGB/strings.xml` — The en-US term "Expiration Date" is kept where British English uses "Expiry Date" for payment cards.
+    - Current: `Expiration Date Year`
+    - Suggest: `Expiry Date Year`
+    - In British English the standard term for a card's validity end date is "expiry date"; "expiration date" reads as American.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +52,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,8 +79,8 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 14, `curly-single` 1 | **curly-double** |
-| apostrophe | `typographic` 176 | **typographic** |
+| quotes | `curly-double` 19, `curly-single` 1 | **curly-double** |
+| apostrophe | `typographic` 175 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 3 | **em** |
 
@@ -85,14 +92,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (4)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 1 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -113,6 +120,14 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
+- `mozac_feature_prompts_edit_credit_card_expiry_month` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-en-rGB/strings.xml` — The en-US term "Expiration Date" is kept where British English uses "Expiry Date" for payment cards.
+    - Current: `Expiration Date Month`
+    - Suggest: `Expiry Date Month`
+    - In British English the standard term for a card's validity end date is "expiry date"; "expiration date" reads as American.
+- `mozac_feature_prompts_edit_credit_card_expiry_year` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-en-rGB/strings.xml` — The en-US term "Expiration Date" is kept where British English uses "Expiry Date" for payment cards.
+    - Current: `Expiration Date Year`
+    - Suggest: `Expiry Date Year`
+    - In British English the standard term for a card's validity end date is "expiry date"; "expiration date" reads as American.
 - `wrex_widget_live_game_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-en-rGB/strings.xml` — The football widget uses the US term "game" where British English says "match".
     - Current: `live game`
     - Source: `%s, live game`

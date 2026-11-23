@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 46 of 2,620 |
+| **Strings reviewed this run** | 57 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sk/strings.xml` — "Clear" is translated as "Čítať" (read) in the update-notification version of the browsingData permission.
+    - Current: `Čítať nedávnu históriu prehliadania`
+    - Suggest: `Vymazať nedávnu históriu prehliadania`
+    - The source says the extension can clear recent browsing history, cookies and related data. The sk text says it reads them.
 
 ---
 
@@ -45,7 +48,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,7 +75,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 8, `german-double` 7, `straight-double` 4 | _mixed_ |
+| quotes | `curly-double` 13, `german-double` 7, `straight-double` 4 | _mixed_ |
 | apostrophe | `straight` 2 | **straight** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 4 | **en** |
@@ -86,13 +89,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (47)
+## 3. Open findings (46)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 26 |
+| 2 | Wrong content (says something other than the English) | 25 |
 | 3 | Degraded language (grammar, spelling, terminology) | 18 |
 | 4 | Cosmetic (typography, spacing) | 3 |
 
@@ -127,11 +130,6 @@ _Nothing in this category._
     - Source: `Clear recent browsing history, cookies, and related data`
     - Suggest: `Vymazať nedávnu históriu prehliadania`
     - The browsingData permission lets an extension clear recent history, cookies and related data. The sk text says the extension reads them instead.
-- `mozac_feature_addons_permissions_browsing_data_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-sk/strings.xml` — "Clear" is translated as "Čítať" (read) in the update-notification version of the browsingData permission.
-    - Current: `Čítať nedávnu históriu prehliadania`
-    - Source: `Clear recent browsing history, cookies, and related data.`
-    - Suggest: `Vymazať nedávnu históriu prehliadania`
-    - The source says the extension can clear recent browsing history, cookies and related data. The sk text says it reads them.
 - `mozac_feature_prompt_before_unload_dialog_body` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-sk/strings.xml` — The question is reversed: the source asks "Do you want to leave this site?" but the Slovak asks "Do you want to stay on this site?"
     - Current: `Chcete zostať na tejto stránke?`
     - Source: `Do you want to leave this site? Data you have entered may not be saved`

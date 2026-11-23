@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 2,607 |
+| **Strings reviewed this run** | 42 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for pt-BR: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `menu_customize_reset_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — The two clauses are joined only by a comma, and the second has no subject, so the sentence is ungrammatical.
+    - Current: `As personalizações são removidas, não pode ser desfeito.`
+    - Source: `This removes customizations and can’t be undone.`
+    - Suggest: `Isso remove as personalizações e não pode ser desfeito.`
+    - The en-US "This removes customizations and can’t be undone" is one sentence with one subject. In the Portuguese, "não pode ser desfeito" has no subject, and its masculine singular form appears to clash with "personalizações" (feminine plural), so the sentence reads as broken Portuguese.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +38,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rBR/strings.xml` — "developer tools" is rendered as "ferramentas de desenvolvimento" here but as "ferramentas do desenvolvedor" in the paired non-update string.
+    - Current: `Estender as ferramentas de desenvolvimento para acessar seus dados em abas abertas.`
+    - Suggest: `Estender as ferramentas do desenvolvedor para acessar seus dados nas abas abertas.`
+    - mozac_feature_addons_permissions_devtools_description translates the same source phrase as "ferramentas do desenvolvedor ... nas abas abertas"; the update variant must match for consistency on the same surface.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,607 |
-| Missing strings | 13 |
+| Strings | 2,601 |
+| Missing strings | 24 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +69,10 @@ _Nothing retired._
 
 ### Completeness
 
-**13 strings** are not translated yet, concentrated in:
+**24 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 13
+- `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — 23
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-pt-rBR/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -76,9 +84,9 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 14 | **curly-double** |
+| quotes | `curly-double` 19 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| register | `informal` 229 | **informal** |
+| register | `informal` 224 | **informal** |
 
 ---
 
@@ -483,6 +491,11 @@ _Nothing in this category._
     - Source: `Switched to the recommended location.`
     - Suggest: `Alterado para o local recomendado.`
     - The source is a passive/participial statement about the app having switched; "Mudou para" reads as "(You/it) switched", which is ambiguous and grammatically off for a status card.
+- `menu_customize_reset_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — The two clauses are joined only by a comma, and the second has no subject, so the sentence is ungrammatical.
+    - Current: `As personalizações são removidas, não pode ser desfeito.`
+    - Source: `This removes customizations and can’t be undone.`
+    - Suggest: `Isso remove as personalizações e não pode ser desfeito.`
+    - The en-US "This removes customizations and can’t be undone" is one sentence with one subject. In the Portuguese, "não pode ser desfeito" has no subject, and its masculine singular form appears to clash with "personalizações" (feminine plural), so the sentence reads as broken Portuguese.
 - `nova_onboarding_marketing_body_6` — `mozilla-mobile/fenix/app/src/main/res/values-pt-rBR/strings.xml` — Misspelling of "permitir" as "permitr".
     - Current: `ao permitr que a Mozilla`
     - Source: `Help us reach more people by allowing Mozilla to inform the platform you came from that you use Firefox. %1$s`
@@ -501,11 +514,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_permissions_devtools_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-pt-rBR/strings.xml` — "developer tools" is rendered as "ferramentas de desenvolvimento" here but as "ferramentas do desenvolvedor" in the paired non-update string.
-    - Current: `Estender as ferramentas de desenvolvimento para acessar seus dados em abas abertas.`
-    - Source: `Extend developer tools to access your data in open tabs.`
-    - Suggest: `Estender as ferramentas do desenvolvedor para acessar seus dados nas abas abertas.`
-    - mozac_feature_addons_permissions_devtools_description translates the same source phrase as "ferramentas do desenvolvedor ... nas abas abertas"; the update variant must match for consistency on the same surface.
 - `mozac_feature_contextmenu_open_link_in_external_app` — `mozilla-mobile/android-components/components/feature/contextmenu/src/main/res/values-pt-rBR/strings.xml` — "app" is used instead of "aplicativo", inconsistent with the other strings on the same surface.
     - Current: `Abrir link em app externo`
     - Source: `Open link in external app`

@@ -87,8 +87,8 @@
   },
   "rationale": "mozac_feature_addons_permissions_devtools_description translates the same source phrase as \"ferramentas do desenvolvedor ... nas abas abertas\"; the update variant must match for consistency on the same surface.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-11-23",
+  "status": "obsolete",
   "string_hash": "1786cfe7",
   "string_id": "mozac_feature_addons_permissions_devtools_description_for_update",
   "suggest": "Estender as ferramentas do desenvolvedor para acessar seus dados nas abas abertas.",
@@ -1771,6 +1771,30 @@
   "string_id": "logins_biometric_leave_button",
   "suggest": "Sair da tela",
   "summary": "\"Leave\" (leave the logins screen) is translated as \"Sair\", which in context reads as exiting/logging out.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "As personalizações são removidas, não pode ser desfeito.",
+  "dismissed_because": "",
+  "fid": "db895b65e814",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "pt-BR",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The en-US \"This removes customizations and can’t be undone\" is one sentence with one subject. In the Portuguese, \"não pode ser desfeito\" has no subject, and its masculine singular form appears to clash with \"personalizações\" (feminine plural), so the sentence reads as broken Portuguese.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0a8980c2",
+  "string_id": "menu_customize_reset_dialog_message",
+  "suggest": "Isso remove as personalizações e não pode ser desfeito.",
+  "summary": "The two clauses are joined only by a comma, and the second has no subject, so the sentence is ungrammatical.",
   "suppressed_by": ""
  },
  {

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,521 |
+| **Strings reviewed this run** | 0 of 2,473 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,24 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (4)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Access your data on other sites" is mistranslated as "data you use for other sites".
+    - Current: `访问您用于其他网站的数据。`
+    - Suggest: `访问您在其他网站的数据。`
+    - The source means data located on other sites, not data used for other sites; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 correctly uses 访问您在其他网站的数据.
+- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — The pkcs11 permission is translated as "密码认证服务" (password authentication) here while the non-update variant uses "密码学身份认证服务" (cryptographic authentication).
+    - Current: `提供密码认证服务。`
+    - Suggest: `提供密码学身份认证服务。`
+    - Source is "Provide cryptographic authentication services."; "密码认证" means password authentication, which is a different concept and inconsistent with mozac_feature_addons_permissions_pkcs11_description.
+- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "New required data collection" is translated as "新必要权限" (new required permissions), losing the data-collection meaning and duplicating the adjacent permissions string.
+    - Current: `新必要权限：开发者称此扩展将收集%1$s。`
+    - Suggest: `新增必要数据收集：开发者称此扩展将收集%1$s。`
+    - Source distinguishes data collection from permissions; the sibling string mozac_feature_addons_updater_notification_heading_permissions already uses 新必要权限, so this rendering is both wrong and ambiguous.
+- `shortcut_max_limit_title` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Shortcut limit reached" is rendered as "exceeded the shortcut limit".
+    - Current: `超出快捷方式限制`
+    - Suggest: `已达到快捷方式数量上限`
+    - The source states the limit has been reached, not exceeded.
 
 ---
 
@@ -45,8 +60,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,521 |
-| Missing strings | 99 |
+| Strings | 2,473 |
+| Missing strings | 152 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,12 +77,13 @@ _Nothing retired._
 
 ### Completeness
 
-**99 strings** are not translated yet, concentrated in:
+**152 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 77
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — 9
+- `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — 100
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-zh-rCN/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rCN/strings.xml` — 16
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-zh-rCN/strings.xml` — 10
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-zh-rCN/strings.xml` — 5
 - `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-zh-rCN/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -80,10 +96,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 74 | **curly-double** |
+| quotes | `curly-double` 72 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| fullwidth | `punctuation` 1019 | **punctuation** |
-| register | `informal` 1, `formal` 257 | **formal** |
+| fullwidth | `punctuation` 977 | **punctuation** |
+| register | `informal` 1, `formal` 243 | **formal** |
 
 ---
 
@@ -93,14 +109,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (127)
+## 3. Open findings (123)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 87 |
-| 3 | Degraded language (grammar, spelling, terminology) | 32 |
+| 2 | Wrong content (says something other than the English) | 84 |
+| 3 | Degraded language (grammar, spelling, terminology) | 31 |
 | 4 | Cosmetic (typography, spacing) | 8 |
 
 ### A. Functional, markup, variables & plurals
@@ -179,11 +195,6 @@ _Nothing in this category._
     - Source: `Access your data on other domains`
     - Suggest: `访问您在其他域名下的数据`
     - The source distinguishes domains from sites; the parallel _for_update string correctly uses 域名, and this string is identical to the "other sites" string, erasing the distinction.
-- `mozac_feature_addons_permissions_extra_sites_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Access your data on other sites" is mistranslated as "data you use for other sites".
-    - Current: `访问您用于其他网站的数据。`
-    - Source: `Access your data on other sites.`
-    - Suggest: `访问您在其他网站的数据。`
-    - The source means data located on other sites, not data used for other sites; the parallel string mozac_feature_addons_permissions_extra_sites_description_2 correctly uses 访问您在其他网站的数据.
 - `mozac_feature_addons_permissions_show_fewer_sites` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "Show fewer sites" is rendered as a generic "折叠" (collapse), dropping the "sites" content and mismatching the paired "显示所有网站" button.
     - Current: `折叠`
     - Source: `Show fewer sites`
@@ -194,11 +205,6 @@ _Nothing in this category._
     - Source: `Supported add-ons checker`
     - Suggest: `受支持的附加组件检查器`
     - The source names the channel "Supported add-ons checker"; "新" (new) is not present in the source string.
-- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — "New required data collection" is translated as "新必要权限" (new required permissions), losing the data-collection meaning and duplicating the adjacent permissions string.
-    - Current: `新必要权限：开发者称此扩展将收集%1$s。`
-    - Source: `New required data collection: The developer says the extension will collect %1$s.`
-    - Suggest: `新增必要数据收集：开发者称此扩展将收集%1$s。`
-    - Source distinguishes data collection from permissions; the sibling string mozac_feature_addons_updater_notification_heading_permissions already uses 新必要权限, so this rendering is both wrong and ambiguous.
 - `mozac_feature_autofill_search_suggestions` — `mozilla-mobile/android-components/components/feature/autofill/src/main/res/values-zh-rCN/strings.xml` — "Search %1$s" is expanded to "搜索保存于 %1$s 的登录信息", adding content not in the source.
     - Current: `搜索保存于 %1$s 的登录信息`
     - Source: `Search %1$s`
@@ -409,7 +415,17 @@ _Nothing in this category._
     - Source: `%1$d GB of VPN data used. Access will reset next month.`
     - Suggest: `已用完 %1$d GB VPN 流量，使用权限将于下个月重置。`
     - The source reads "%1$d GB of VPN data used"; the Chinese word order makes "%1$d GB VPN 流量" the subject of "已用完" awkwardly and reads as a fragment. Reordering keeps the meaning and grammar.
-- _…and 35 more; see `state/` for the full list._
+- `ip_protection_navigate_back_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Navigate back" is rendered as "浏览上一页" (browse the previous page), which describes page navigation rather than the back button of the settings screen.
+    - Current: `浏览上一页`
+    - Source: `Navigate back`
+    - Suggest: `返回`
+    - The developer comment says this is the content description for the settings screen top bar back button; "浏览上一页" wrongly implies browsing to a previous web page.
+- `lens_camera_permission_denied` — `mozilla-mobile/fenix/app/src/main/res/values-zh-rCN/strings.xml` — "Permission denied" is translated as "拒绝访问" (access denied/refuse access) instead of indicating the permission was denied.
+    - Current: `拒绝访问`
+    - Source: `Permission denied`
+    - Suggest: `权限被拒绝`
+    - The toast appears when the user denies the camera permission; "拒绝访问" loses the notion of a permission and reads as an imperative/ambiguous phrase.
+- _…and 32 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -461,11 +477,6 @@ _Nothing in this category._
     - Source: `Extend developer tools to access your data in open tabs`
     - Suggest: `让开发者工具可以获取您打开的标签页中的数据`
     - 存取 is not standard zh-CN terminology here; the paired _for_update string uses 获取 for the same source wording.
-- `mozac_feature_addons_permissions_pkcs11_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-zh-rCN/strings.xml` — The pkcs11 permission is translated as "密码认证服务" (password authentication) here while the non-update variant uses "密码学身份认证服务" (cryptographic authentication).
-    - Current: `提供密码认证服务。`
-    - Source: `Provide cryptographic authentication services.`
-    - Suggest: `提供密码学身份认证服务。`
-    - Source is "Provide cryptographic authentication services."; "密码认证" means password authentication, which is a different concept and inconsistent with mozac_feature_addons_permissions_pkcs11_description.
 - `mozac_ui_tabcounter_duplicate_tab` — `mozilla-mobile/android-components/components/ui/tabcounter/src/main/res/values-zh-rCN/strings.xml` — "Duplicate tab" is translated as "克隆标签页" (clone) instead of the standard 复制标签页.
     - Current: `克隆标签页`
     - Source: `Duplicate tab`
