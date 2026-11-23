@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 21 of 2,620 |
+| **Strings reviewed this run** | 53 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,24 @@ Also for ko: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (4)
 
-_No new findings._
+- `download_rename_error_exists_error` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `download_rename_error_exists_error` uses straight double quotes
+    - Current: `"%s" 파일이 이미 이 위치에 존재합니다`
+    - Source: `A file named “%s” already exists in this location`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `download_rename_error_invalid_name_error` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `download_rename_error_invalid_name_error` uses straight double quotes
+    - Current: `파일 이름에 "/"를 사용할 수 없음`
+    - Source: `File names can’t use “/”`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `주 메뉴에서 "종료"를 선택하면 탐색 데이터를 자동으로 삭제합니다`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `웹 주소에는 "https://" 또는 "http://"가 포함되어야 합니다.`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `curly-double` (14 occurrences).
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +49,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_web_navigation_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — The dependent noun "중" should be spaced from the noun before it.
+    - Current: `탐색중에`
+    - Suggest: `탐색 중에`
+    - Under standard Korean spacing rules, the dependent noun 중 is written with a space before it.
+- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — The translation adds "권한" (permission) after the placeholder, so it says the extension will collect permissions rather than the listed data.
+    - Current: `%1$s 권한을 수집할`
+    - Suggest: `%1$s 데이터를 수집할`
+    - The source says the extension will collect %1$s, which is the list of data types being collected. Adding "권한" makes it "collect the %1$s permission", which is wrong and makes no sense.
 
 ---
 
@@ -45,7 +67,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -58,7 +80,7 @@ _Nothing retired._
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 0 |
+| Typography deviations from this locale's own norm | 4 |
 
 ### Completeness
 
@@ -72,7 +94,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 9, `straight-double` 4, `curly-single` 1 | _mixed_ |
+| quotes | `curly-double` 14, `straight-double` 4, `curly-single` 1 | **curly-double** |
 | apostrophe | `typographic` 1, `straight` 1 | _mixed_ |
 | ellipsis | `char` 21 | **char** |
 
@@ -84,7 +106,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (81)
+## 3. Open findings (83)
 
 > **Reads as a deliberate edit (6).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -124,9 +146,9 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 39 |
-| 3 | Degraded language (grammar, spelling, terminology) | 34 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 38 |
+| 3 | Degraded language (grammar, spelling, terminology) | 33 |
+| 4 | Cosmetic (typography, spacing) | 12 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -159,11 +181,6 @@ _Nothing in this category._
     - Source: `%1$s requests additional data collection`
     - Suggest: `추가 데이터 수집을 요청함`
     - The source says "requests additional data collection". This dialog asks for optional permissions beyond those already granted. The sibling title keeps 추가 ("추가 설정을 요청함").
-- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — The translation adds "권한" (permission) after the placeholder, so it says the extension will collect permissions rather than the listed data.
-    - Current: `%1$s 권한을 수집할`
-    - Source: `New required data collection: The developer says the extension will collect %1$s.`
-    - Suggest: `%1$s 데이터를 수집할`
-    - The source says the extension will collect %1$s, which is the list of data types being collected. Adding "권한" makes it "collect the %1$s permission", which is wrong and makes no sense.
 - `mozac_feature_listentopage_error_could_not_finish_playing_audio` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ko/strings.xml` — "Couldn't finish playing" is rendered as "cannot end/stop playback".
     - Current: `오디오 재생을 종료할 수 없습니다.`
     - Source: `Couldn’t finish playing audio. Try again.`
@@ -352,11 +369,6 @@ _Nothing in this category._
     - Source: `Access browser activity during navigation`
     - Suggest: `탐색 중에`
     - Under standard Korean spacing rules, the dependent noun 중 is written with a space before it.
-- `mozac_feature_addons_permissions_web_navigation_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ko/strings.xml` — The dependent noun "중" should be spaced from the noun before it.
-    - Current: `탐색중에`
-    - Source: `Access browser activity during navigation.`
-    - Suggest: `탐색 중에`
-    - Under standard Korean spacing rules, the dependent noun 중 is written with a space before it.
 - `mozac_feature_downloads_again_dialog_title_with_unknown_size` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-ko/strings.xml` — Incorrect spacing in the verb "다운로드하다", which also differs from the sibling dialog title.
     - Current: `다운로드 하시겠습니까?`
     - Source: `Download file again?`
@@ -528,6 +540,18 @@ _Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
+- `add_login_hostname_invalid_text_3` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `add_login_hostname_invalid_text_3` uses straight double quotes
+    - Current: `웹 주소에는 "https://" 또는 "http://"가 포함되어야 합니다.`
+    - Source: `Web address must contain “https://” or “http://”`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `download_rename_error_exists_error` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `download_rename_error_exists_error` uses straight double quotes
+    - Current: `"%s" 파일이 이미 이 위치에 존재합니다`
+    - Source: `A file named “%s” already exists in this location`
+    - The locale's quote convention is `curly-double` (14 occurrences).
+- `download_rename_error_invalid_name_error` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `download_rename_error_invalid_name_error` uses straight double quotes
+    - Current: `파일 이름에 "/"를 사용할 수 없음`
+    - Source: `File names can’t use “/”`
+    - The locale's quote convention is `curly-double` (14 occurrences).
 - `etp_known_fingerprinters_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Missing space in "않도록합니다".
     - Current: `않도록합니다`
     - Source: `Stops uniquely identifiable data from being collected about your device that can be used for tracking purposes.`
@@ -538,6 +562,10 @@ _Nothing in this category._
     - Source: `DNS over HTTPS`
     - Suggest: `DNS over HTTPS`
     - The protocol's proper name is "DNS over HTTPS" with a lowercase "over". The source uses that form, and so does the Korean summary string (preference_doh_summary), so the title is inconsistent with it.
+- `preference_summary_delete_browsing_data_on_quit_2` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — `preference_summary_delete_browsing_data_on_quit_2` uses straight double quotes
+    - Current: `주 메뉴에서 "종료"를 선택하면 탐색 데이터를 자동으로 삭제합니다`
+    - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
+    - The locale's quote convention is `curly-double` (14 occurrences).
 - `protection_panel_banner_protected_blocked_trackers_description` — `mozilla-mobile/fenix/app/src/main/res/values-ko/strings.xml` — Double space between "추적기" and the tracker count in the visible text.
     - Current: `추적기  %1$d개`
     - Source: `{$quantity ->} [one] %1$d tracker blocked on this site. [other] %1$d trackers blocked on this site.`

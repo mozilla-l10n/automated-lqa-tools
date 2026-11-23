@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 30 of 2,438 |
+| **Strings reviewed this run** | 0 of 2,393 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,9 @@ Also for th: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (0)
 
-- `snackbar_action_view` — `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — The action button "View" is translated with the noun "มุมมอง" (a viewpoint or display mode) instead of the verb "ดู".
-    - Current: `มุมมอง`
-    - Source: `View`
-    - Suggest: `ดู`
-    - The developer comment says tapping the button displays the tab group, so "View" is an imperative verb. "มุมมอง" means a view or perspective (a noun) and reads wrongly as a button label.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -49,8 +45,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,438 |
-| Missing strings | 182 |
+| Strings | 2,393 |
+| Missing strings | 232 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,13 +62,14 @@ _Nothing retired._
 
 ### Completeness
 
-**182 strings** are not translated yet, concentrated in:
+**232 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — 137
+- `mozilla-mobile/fenix/app/src/main/res/values-th/strings.xml` — 158
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-th/strings.xml` — 27
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-th/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-th/strings.xml` — 14
 - `mozilla-mobile/android-components/components/feature/summarize/src/main/res/values-th/strings.xml` — 8
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-th/strings.xml` — 5
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-th/strings.xml` — 3
 - `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-th/strings.xml` — 2
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._

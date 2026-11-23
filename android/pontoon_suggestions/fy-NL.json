@@ -2405,11 +2405,10 @@
    "status": "rejected",
    "status_date": "2026-11-16",
    "comment": "",
-   "dismissal": "browser_custom_tab_menu_handlebar_content_description @ mozilla-mobile/fenix/app/src/main/res/values/strings.xml — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear",
    "pontoon_pk": 12409144,
    "pontoon_url": "https://pontoon.mozilla.org/fy-NL/firefox-for-android/mozilla-mobile/fenix/app/src/main/res/values/strings.xml/?string=311096",
-   "outcome": "dismissed",
-   "note": "rejected with the translation unchanged; dismissed"
+   "outcome": "moved",
+   "note": "rejected, then the translation changed; the dismissal was withdrawn and the finding reopened"
   },
   {
    "date": "2026-11-13",

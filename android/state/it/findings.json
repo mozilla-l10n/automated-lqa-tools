@@ -46,6 +46,54 @@
   "suppressed_by": ""
  },
  {
+  "category": "E",
+  "check": "llm",
+  "current": "«%1$s»",
+  "dismissed_because": "",
+  "fid": "911b085b7758",
+  "file": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 4,
+  "last_seen": "2026-11-23",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4eb90bf5",
+  "string_id": "mozac_menu_customize_named_section",
+  "suggest": "“%1$s”",
+  "summary": "Uses guillemets instead of the locale's curly double quotes.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "E",
+  "check": "llm",
+  "current": "«%1$s»",
+  "dismissed_because": "",
+  "fid": "6025a323a737",
+  "file": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 4,
+  "last_seen": "2026-11-23",
+  "locale": "it",
+  "origin": {
+   "confidence": "high"
+  },
+  "rationale": "Locale convention is curly-double quotes; sibling strings on the same screen use “%1$s”.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "bda89592",
+  "string_id": "mozac_menu_customize_unnamed_section",
+  "suggest": "“%1$s”",
+  "summary": "Uses guillemets instead of the locale's curly double quotes.",
+  "suppressed_by": ""
+ },
+ {
   "category": "C",
   "check": "llm",
   "current": "%1$s è stato disattivato in quanto non è può essere verificato come sicuro.",

@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "es-ES",
-  "prose_chunks": 2701,
-  "strings": 2701
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 0,
@@ -21,7 +21,7 @@
  },
  "inverted_marks": {
   "open-exclamation": 26,
-  "open-question": 104
+  "open-question": 110
  },
  "nbsp": {
   "before-punctuation": 0,
@@ -30,11 +30,11 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 12,
+  "curly-double": 17,
   "straight-double": 3
  },
  "register": {
-  "formal": 11,
-  "informal": 171
+  "formal": 9,
+  "informal": 184
  }
 }

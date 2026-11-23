@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 2 of 2,527 |
+| **Strings reviewed this run** | 95 of 2,572 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,41 @@ Also for ro: [Firefox iOS](firefox_ios.md) · [Focus for Android](focus_android.
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (3)
 
-_No new findings._
+- `menu_customize_reset_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "Va muta personalizările" means "will move the customizations", but the source says the customizations are removed.
+    - Current: `Va muta personalizările`
+    - Source: `This removes customizations and can’t be undone.`
+    - Suggest: `Va elimina personalizările`
+    - The source says "This removes customizations", and the developer comment confirms that resetting removes all user customizations. "A muta" means "to move", which looks like a typo for "a elimina" (remove) or "a șterge" (delete).
+- `download_item_source_data` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The data: URL scheme name was translated as the ordinary word "date".
+    - Current: `(date)`
+    - Source: `(data)`
+    - Suggest: `(data)`
+    - The developer comment says "data" refers to the data: URL scheme. That is a protocol name and should stay as "data", not be translated as the Romanian word for data.
+- `wrex_widget_match_full_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The abbreviated full-time badge "FT" is rendered as "Durată integrală" ("full duration"), which doesn't say the match has ended and is far too long for a badge.
+    - Current: `Durată integrală`
+    - Source: `FT`
+    - Suggest: `Final`
+    - The comment says this abbreviated status means the match has ended. "Durată integrală" describes a duration rather than the end of the match, and it is much longer than an abbreviated status label should be.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The few variant makes the group and the color plural, but the count is the number of tabs.
+    - Current: `Adaugă la %1$s grupuri de file, %2$d file, culorile %3$s`
+    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
+    - Suggest: `Adaugă la grupul de file %1$s, %2$d file, culoarea %3$s`
+    - In the source, the quantity only controls "tab/tabs". There is still one group (%1$s) with one color (%3$s), so "grupuri" and "culorile" are wrong.
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The other variant makes the group and the color plural, but the count is the number of tabs.
+    - Current: `Adaugă la %1$s de grupuri de file, %2$d de file, culorile %3$s`
+    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
+    - Suggest: `Adaugă la grupul de file %1$s, %2$d de file, culoarea %3$s`
+    - In the source, the quantity only controls "tabs". The group name and its color are singular, and "de" after the group name is wrong.
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Misspelling "coloarea" instead of "culoarea".
+    - Current: `coloarea %3$s`
+    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
+    - Suggest: `culoarea %3$s`
+    - The Romanian word for "color" is "culoare", so with the article it is "culoarea". "coloarea" is not a word.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +62,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — 'utilizarea extensiei' (use of the extension, singular) narrows 'extension usage', which refers to extensions generally.
+    - Current: `utilizarea extensiei`
+    - Suggest: `utilizarea extensiilor`
+    - The management permission covers monitoring the usage of all extensions, and the non-update string says 'utilizarea de extensii'. The singular suggests a single extension.
+- `mozac_feature_addons_permissions_tab_hide_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Uses cedilla 'ş' instead of the correct Romanian comma-below 'ș'.
+    - Current: `şi`
+    - Suggest: `și`
+    - Standard Romanian orthography uses ș (comma below); the rest of the batch uses ș, including the sibling string.
+- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Breaks the 'Să ...' subjunctive pattern used by all other permission descriptions and reads as a command or a statement of fact.
+    - Current: `Descarcă și rulează modele de inteligență artificială`
+    - Suggest: `Să descarce și să ruleze modele de inteligență artificială`
+    - Every other permission description, including the non-update version of this one, uses 'Să ...' to describe what the add-on may do. 'Descarcă și rulează' is inconsistent when these descriptions are appended together.
 
 ---
 
@@ -45,8 +84,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,527 |
-| Missing strings | 93 |
+| Strings | 2,572 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,13 +101,12 @@ _Nothing retired._
 
 ### Completeness
 
-**93 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 71
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ro/strings.xml` — 9
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ro/strings.xml` — 5
-- `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-ro/strings.xml` — 1
+- `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — 23
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-ro/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-ro/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-ro/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -92,15 +130,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (88)
+## 3. Open findings (85)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 29 |
-| 3 | Degraded language (grammar, spelling, terminology) | 52 |
-| 4 | Cosmetic (typography, spacing) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 50 |
+| 4 | Cosmetic (typography, spacing) | 6 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -113,11 +151,6 @@ _Nothing in this category._
     - Source: `Required data collection:`
     - Suggest: `Colectare de date necesară:`
     - In the source, "Required" describes the data collection (it is mandatory for the add-on). In the Romanian, "necesare" attaches to "datelor", so it says the data is required. The parallel heading for optional collection is rendered "Colectare nouă de date".
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — 'utilizarea extensiei' (use of the extension, singular) narrows 'extension usage', which refers to extensions generally.
-    - Current: `utilizarea extensiei`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `utilizarea extensiilor`
-    - The management permission covers monitoring the usage of all extensions, and the non-update string says 'utilizarea de extensii'. The singular suggests a single extension.
 - `switch_to_tab_description` — `mozilla-mobile/android-components/components/feature/awesomebar/src/main/res/values-ro/strings.xml` — "Switch to tab" is rendered as "Switch to another tab", which is vague for a suggestion that stands for one particular open tab.
     - Current: `Treci la o altă filă`
     - Source: `Switch to tab`
@@ -148,16 +181,6 @@ _Nothing in this category._
     - Source: `Completed task`
     - Suggest: `Sarcină finalizată`
     - The comment says this describes a check mark on a single completed task, but "Sarcini finalizate" means "completed tasks".
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The few variant makes the group and the color plural, but the count is the number of tabs.
-    - Current: `Adaugă la %1$s grupuri de file, %2$d file, culorile %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `Adaugă la grupul de file %1$s, %2$d file, culoarea %3$s`
-    - In the source, the quantity only controls "tab/tabs". There is still one group (%1$s) with one color (%3$s), so "grupuri" and "culorile" are wrong.
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The other variant makes the group and the color plural, but the count is the number of tabs.
-    - Current: `Adaugă la %1$s de grupuri de file, %2$d de file, culorile %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `Adaugă la grupul de file %1$s, %2$d de file, culoarea %3$s`
-    - In the source, the quantity only controls "tabs". The group name and its color are singular, and "de" after the group name is wrong.
 - `addons_permissions_heading_required_data_collection` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The heading reads "collection of the required data" instead of "required data collection". In English, "required" describes the collection, not the data.
     - Current: `Colectarea datelor necesare:`
     - Source: `Required data collection:`
@@ -193,6 +216,11 @@ _Nothing in this category._
     - Source: `%1$s • unknown time`
     - Suggest: `timp necunoscut`
     - The developer comment says the estimated time remaining for the download is unknown. "Oră" refers to a clock time or an hour, not a duration, so the Romanian text says something different; "timp" is the word for an amount of time.
+- `download_item_source_data` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The data: URL scheme name was translated as the ordinary word "date".
+    - Current: `(date)`
+    - Source: `(data)`
+    - Suggest: `(data)`
+    - The developer comment says "data" refers to the data: URL scheme. That is a protocol name and should stay as "data", not be translated as the Romanian word for data.
 - `etp_redirect_trackers_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The category title reads as "The redirection of trackers" instead of naming a type of tracker.
     - Current: `Redirecționarea elementelor de urmărire`
     - Source: `Redirect Trackers`
@@ -218,6 +246,11 @@ _Nothing in this category._
     - Source: `Set up a device lock pattern, PIN, or password to protect your saved passwords from being accessed if someone else has your device.`
     - Suggest: `parolele salvate`
     - en-US says 'to protect your saved passwords'; the Romanian extends this to 'your login data and saved passwords', content not in the source.
+- `menu_customize_reset_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — "Va muta personalizările" means "will move the customizations", but the source says the customizations are removed.
+    - Current: `Va muta personalizările`
+    - Source: `This removes customizations and can’t be undone.`
+    - Suggest: `Va elimina personalizările`
+    - The source says "This removes customizations", and the developer comment confirms that resetting removes all user customizations. "A muta" means "to move", which looks like a typo for "a elimina" (remove) or "a șterge" (delete).
 - `onboarding_redesign_tou_title` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The Romanian says 'the latest version of the Android browser' where the source says 'the ultimate Android browser'.
     - Current: `Lansează ultima versiune a browserului Android`
     - Source: `Launch the ultimate Android browser`
@@ -273,6 +306,11 @@ _Nothing in this category._
     - Source: `Preview Report`
     - Suggest: `Previzualizează raportul`
     - The developer comment says this is a button to view a preview of the report; 'Raport de previzualizare' means 'report of preview', not the action 'Preview the report'.
+- `wrex_widget_match_full_time_short` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The abbreviated full-time badge "FT" is rendered as "Durată integrală" ("full duration"), which doesn't say the match has ended and is far too long for a badge.
+    - Current: `Durată integrală`
+    - Source: `FT`
+    - Suggest: `Final`
+    - The comment says this abbreviated status means the match has ended. "Durată integrală" describes a duration rather than the end of the match, and it is much longer than an abbreviated status label should be.
 
 ### C. Grammar, agreement & spelling
 
@@ -331,11 +369,6 @@ _Nothing in this category._
     - Source: `New! %s email masks are now available on mobile.`
     - Suggest: `Măștile de e-mail %s sunt acum disponibile pe mobil.`
     - The developer comment says %s is "Firefox Relay". On screen this reads "disponibile Firefox Relay (de) măști de e-mail": "(de)" goes only between a number and a noun, so the result is broken Romanian.
-- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — Misspelling "coloarea" instead of "culoarea".
-    - Current: `coloarea %3$s`
-    - Source: `{$quantity ->} [one] Add to %1$s tab group, %2$d tab, color %3$s [other] Add to %1$s tab group, %2$d tabs, color %3$s`
-    - Suggest: `culoarea %3$s`
-    - The Romanian word for "color" is "culoare", so with the article it is "culoarea". "coloarea" is not a word.
 - `bookmark_add_folder` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — The screen title uses the definite form 'dosarul' ('the folder') for the generic 'Add folder'.
     - Current: `Adaugă dosarul`
     - Source: `Add folder`
@@ -459,11 +492,6 @@ _Nothing in this category._
     - Source: `Add-ons Manager`
     - Suggest: `Manager de suplimente`
     - en-US uses the same term, "Add-ons", in both strings. mozac_feature_addons_addons translates it as "Suplimente", and the usual Romanian Firefox term for the manager is "Manager de suplimente". Using "extensii" here is inconsistent.
-- `mozac_feature_addons_permissions_trial_ml_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Breaks the 'Să ...' subjunctive pattern used by all other permission descriptions and reads as a command or a statement of fact.
-    - Current: `Descarcă și rulează modele de inteligență artificială`
-    - Source: `Download and run AI models on your device.`
-    - Suggest: `Să descarce și să ruleze modele de inteligență artificială`
-    - Every other permission description, including the non-update version of this one, uses 'Să ...' to describe what the add-on may do. 'Descarcă și rulează' is inconsistent when these descriptions are appended together.
 - `mozac_feature_sitepermissions_media_key_system_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-ro/strings.xml` — Uses the formal/plural 'Permiteți', but the other permission dialog titles use the informal 'Permiți'.
     - Current: `Permiteți`
     - Source: `Allow %1$s to play DRM-controlled content?`
@@ -532,11 +560,6 @@ _Nothing in this category._
     - Source: `location`
     - Suggest: `locație`
     - Standard Romanian spelling uses the comma-below ț, and the rest of the batch does too (e.g. "îți"). The cedilla form is inconsistent with that.
-- `mozac_feature_addons_permissions_tab_hide_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-ro/strings.xml` — Uses cedilla 'ş' instead of the correct Romanian comma-below 'ș'.
-    - Current: `şi`
-    - Source: `Hide and show browser tabs.`
-    - Suggest: `și`
-    - Standard Romanian orthography uses ș (comma below); the rest of the batch uses ș, including the sibling string.
 - `my_longest_fox_is` — `mozilla-mobile/fenix/app/longfox/src/main/res/values-ro/strings.xml` — There is a double space before the score placeholder.
     - Current: `este de  %1$d`
     - Source: `My longest fox is %1$d! #longfox %2$s`
@@ -584,6 +607,8 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (3)
 
-_Nothing fixed yet._
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — fixed 2026-11-23
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — fixed 2026-11-23
+- `add_to_exiting_tab_group_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-ro/strings.xml` — fixed 2026-11-23

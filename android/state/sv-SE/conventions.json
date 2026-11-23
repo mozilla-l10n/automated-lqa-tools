@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "sv-SE",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 0,
@@ -30,7 +30,7 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 6,
+  "curly-double": 10,
   "straight-double": 9
  }
 }

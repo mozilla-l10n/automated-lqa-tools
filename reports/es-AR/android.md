@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 54 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for es-AR: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `mozac_feature_prompts_save_payment_method_prompt_body_without_security_code` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rAR/strings.xml` — Typo: "rápidosmen" fuses "rápidos" and "en" with a stray "m".
+    - Current: `rápidosmen el futuro`
+    - Source: `%s encrypts your card number for faster payments later.`
+    - Suggest: `rápidos en el futuro`
+    - The source says "for faster payments later"; the matching string with the security code correctly reads "pagos más rápidos en el futuro". Here a stray "m" replaced the space, producing a non-word.
+- `nova_onboarding_sync_pairing_body` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Uses formal usted ("Vaya… su computadora") instead of the voseo that es-AR uses to address the user.
+    - Current: `Vaya a { <b> }firefox.com/pair{ </b> } en su computadora`
+    - Source: `No QR code? Go to { <b> }firefox.com/pair{ </b> } on your computer.`
+    - Suggest: `Andá a { <b> }firefox.com/pair{ </b> } en tu computadora`
+    - es-AR Firefox speaks to the user with voseo (Andá, tu). Using the formal usted imperative and possessive here breaks that form of address.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +43,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_all_urls_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — The update variant uses the noun "Acceso" while the base string uses the infinitive "Acceder" for the same source.
+    - Current: `Acceso a los datos para todos los sitios web.`
+    - Suggest: `Acceder a los datos para todos los sitios web.`
+    - mozac_feature_addons_permissions_all_urls_description renders the identical source "Access your data for all websites" as "Acceder a los datos para todos los sitios web"; inconsistent verb form on the same permission list.
+- `mozac_feature_addons_permissions_browser_settings_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — "browser settings" is rendered as "configuración" here but as "ajustes" in the equivalent base permission string.
+    - Current: `Leer y modificar la configuración del navegador.`
+    - Suggest: `Leer y modificar los ajustes del navegador.`
+    - mozac_feature_addons_permissions_browser_setting_description translates the same source as "Leer y modificar los ajustes del navegador"; the pair shown together must use the same term.
+- `mozac_feature_addons_permissions_clipboard_write_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — The update-notification variant uses a different verb than the base string for the same source text "Input data to the clipboard".
+    - Current: `Enviar datos al portapapeles.`
+    - Suggest: `Ingresar datos al portapapeles.`
+    - mozac_feature_addons_permissions_clipboard_write_description translates the identical source as "Ingresar datos al portapapeles"; the update variant should be consistent on the same surface.
 
 ---
 
@@ -45,7 +65,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,9 +92,9 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 15 | **curly-double** |
+| quotes | `curly-double` 20 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
-| inverted marks | `open-question` 109, `open-exclamation` 26 | **open-question** |
+| inverted marks | `open-question` 111, `open-exclamation` 26 | **open-question** |
 
 ---
 
@@ -84,14 +104,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (102)
+## 3. Open findings (101)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 41 |
-| 3 | Degraded language (grammar, spelling, terminology) | 61 |
+| 3 | Degraded language (grammar, spelling, terminology) | 60 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -353,6 +373,11 @@ _Nothing in this category._
     - Source: `Not yet supported`
     - Suggest: `Todavía no compatibles`
     - The string labels a section of not-yet-supported add-ons; singular "es compatible" does not agree with the listed items.
+- `mozac_feature_prompts_save_payment_method_prompt_body_without_security_code` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rAR/strings.xml` — Typo: "rápidosmen" fuses "rápidos" and "en" with a stray "m".
+    - Current: `rápidosmen el futuro`
+    - Source: `%s encrypts your card number for faster payments later.`
+    - Suggest: `rápidos en el futuro`
+    - The source says "for faster payments later"; the matching string with the security code correctly reads "pagos más rápidos en el futuro". Here a stray "m" replaced the space, producing a non-word.
 - `bookmark_item_menu_button_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — "Menú ítem para %s" is ungrammatical; Spanish requires a preposition between the nouns.
     - Current: `Menú ítem para %s`
     - Source: `Item Menu for %s`
@@ -456,21 +481,6 @@ _Nothing in this category._
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
     - Suggest: `Probar de nuevo`
     - In the source this string quotes “Try Again”, which is exactly the value of `mozac_browser_errorpages_page_refresh` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `mozac_feature_addons_permissions_all_urls_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — The update variant uses the noun "Acceso" while the base string uses the infinitive "Acceder" for the same source.
-    - Current: `Acceso a los datos para todos los sitios web.`
-    - Source: `Access your data for all websites.`
-    - Suggest: `Acceder a los datos para todos los sitios web.`
-    - mozac_feature_addons_permissions_all_urls_description renders the identical source "Access your data for all websites" as "Acceder a los datos para todos los sitios web"; inconsistent verb form on the same permission list.
-- `mozac_feature_addons_permissions_browser_settings_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — "browser settings" is rendered as "configuración" here but as "ajustes" in the equivalent base permission string.
-    - Current: `Leer y modificar la configuración del navegador.`
-    - Source: `Read and modify browser settings.`
-    - Suggest: `Leer y modificar los ajustes del navegador.`
-    - mozac_feature_addons_permissions_browser_setting_description translates the same source as "Leer y modificar los ajustes del navegador"; the pair shown together must use the same term.
-- `mozac_feature_addons_permissions_clipboard_write_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — The update-notification variant uses a different verb than the base string for the same source text "Input data to the clipboard".
-    - Current: `Enviar datos al portapapeles.`
-    - Source: `Input data to the clipboard.`
-    - Suggest: `Ingresar datos al portapapeles.`
-    - mozac_feature_addons_permissions_clipboard_write_description translates the identical source as "Ingresar datos al portapapeles"; the update variant should be consistent on the same surface.
 - `mozac_feature_addons_permissions_trial_ml_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rAR/strings.xml` — Permission description rendered as an imperative command to the user instead of an infinitive describing what the add-on can do.
     - Current: `Descargá y ejecutá modelos de IA en tu dispositivo`
     - Source: `Download and run AI models on your device`
@@ -536,6 +546,11 @@ _Nothing in this category._
     - Source: `You’ve used all %1$d GB of your VPN data. Access resets next month.`
     - Suggest: `Usaste los %1$d GB de datos de tu VPN.`
     - The source "You’ve used all %1$d GB of your VPN data" addresses the user directly; the rest of the batch uses voseo/informal forms ("Probá de nuevo", "para vos"), so "su" breaks the locale's established form of address.
+- `nova_onboarding_sync_pairing_body` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Uses formal usted ("Vaya… su computadora") instead of the voseo that es-AR uses to address the user.
+    - Current: `Vaya a { <b> }firefox.com/pair{ </b> } en su computadora`
+    - Source: `No QR code? Go to { <b> }firefox.com/pair{ </b> } on your computer.`
+    - Suggest: `Andá a { <b> }firefox.com/pair{ </b> } en tu computadora`
+    - es-AR Firefox speaks to the user with voseo (Andá, tu). Using the formal usted imperative and possessive here breaks that form of address.
 - `phone_feature_blocked_step_settings` — `mozilla-mobile/fenix/app/src/main/res/values-es-rAR/strings.xml` — Uses the tuteo/usted form "Vaya" instead of the voseo form used in the surrounding steps.
     - Current: `1. Vaya a los ajustes de Android`
     - Source: `1. Go to Android Settings`

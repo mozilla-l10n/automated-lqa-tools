@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 84 of 2,607 |
+| **Strings reviewed this run** | 0 of 2,559 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,23 +18,9 @@ Also for vi: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (3)
+### 🆕 New findings (0)
 
-- `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — The screen reader state "Expanded" is translated as the action "Mở rộng" (Expand) instead of the state "Đã mở rộng".
-    - Current: `Mở rộng`
-    - Source: `Expanded`
-    - Suggest: `Đã mở rộng`
-    - The comment says this string is the state read out while the menu is open. The matching collapsed state is translated as a state ("Đã thu gọn"), but "Mở rộng" reads as a command to expand.
-- `sign_in_promo_description` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — "hóa" uses the old tone-mark placement, unlike the "hoá" style used elsewhere.
-    - Current: `đồng bộ hóa`
-    - Source: `Start syncing tabs, bookmarks, passwords, and more.`
-    - Suggest: `đồng bộ hoá`
-    - The surrounding strings consistently use the newer placement ("Đồng bộ hoá", "Huỷ", "Tuỳ", "Xoá").
-- `automotive_authentication_setup_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — The word for "sensitive" is misspelled as "nhảy cảm" instead of "nhạy cảm".
-    - Current: `nhảy cảm`
-    - Source: `Secure your sensitive data`
-    - Suggest: `nhạy cảm`
-    - "Sensitive" is "nhạy cảm", and the next string's message already spells it correctly. "Nhảy" means "jump", so the title has a misspelled word with the wrong tone mark.
+_No new findings._
 
 ### ✅ Fixed since the last run (0)
 
@@ -48,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_downloads_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — The translation drops "read" from "read and modify the browser's download history".
+    - Current: `Tải về các tập tin và chỉnh sửa lịch sử tải về của trình duyệt.`
+    - Suggest: `Tải về các tập tin, đọc và chỉnh sửa lịch sử tải về của trình duyệt.`
+    - The source says the permission lets the add-on both read and modify the download history. The Vietnamese only mentions modifying, so the permission description is incomplete.
+- `mozac_feature_addons_permissions_tab_hide_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — "hiển thị" is misspelled as "hiển thỉ" (wrong tone mark).
+    - Current: `hiển thỉ`
+    - Suggest: `hiển thị`
+    - The correct Vietnamese word for "show/display" is "hiển thị". "thỉ" is a misspelling, and the version of this string without the period uses a different, correctly spelled word.
 
 ---
 
@@ -59,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,607 |
-| Missing strings | 13 |
+| Strings | 2,559 |
+| Missing strings | 66 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -76,9 +69,12 @@ _Nothing retired._
 
 ### Completeness
 
-**13 strings** are not translated yet, concentrated in:
+**66 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 13
+- `mozilla-mobile/fenix/app/src/main/res/values-vi/strings.xml` — 36
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-vi/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-vi/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -102,7 +98,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (53)
+## 3. Open findings (51)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -122,8 +118,8 @@ _Also listed under their own category below._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 28 |
-| 3 | Degraded language (grammar, spelling, terminology) | 18 |
+| 2 | Wrong content (says something other than the English) | 27 |
+| 3 | Degraded language (grammar, spelling, terminology) | 17 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -171,11 +167,6 @@ _Nothing in this category._
     - Current: `Tải về các tập tin và chỉnh sửa lịch sử tải về của trình duyệt`
     - Source: `Download files and read and modify the browser’s download history`
     - Suggest: `Tải về các tập tin, đọc và chỉnh sửa lịch sử tải về của trình duyệt`
-    - The source says the permission lets the add-on both read and modify the download history. The Vietnamese only mentions modifying, so the permission description is incomplete.
-- `mozac_feature_addons_permissions_downloads_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — The translation drops "read" from "read and modify the browser's download history".
-    - Current: `Tải về các tập tin và chỉnh sửa lịch sử tải về của trình duyệt.`
-    - Source: `Download files and read and modify the browser’s download history.`
-    - Suggest: `Tải về các tập tin, đọc và chỉnh sửa lịch sử tải về của trình duyệt.`
     - The source says the permission lets the add-on both read and modify the download history. The Vietnamese only mentions modifying, so the permission description is incomplete.
 - `mozac_feature_listentopage_dropdown_expanded` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-vi/strings.xml` — The screen reader state "Expanded" is translated as the action "Mở rộng" (Expand) instead of the state "Đã mở rộng".
     - Current: `Mở rộng`
@@ -300,11 +291,6 @@ _Nothing in this category._
     - Source: `%1$s, %2$d of %3$d`
     - Suggest: `%2$d trên %3$d`
     - The comment says this reads like "2 of 6". "2 của 6" means "2 belonging to 6". Vietnamese uses "trên" for this kind of count.
-- `mozac_feature_addons_permissions_tab_hide_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-vi/strings.xml` — "hiển thị" is misspelled as "hiển thỉ" (wrong tone mark).
-    - Current: `hiển thỉ`
-    - Source: `Hide and show browser tabs.`
-    - Suggest: `hiển thị`
-    - The correct Vietnamese word for "show/display" is "hiển thị". "thỉ" is a misspelling, and the version of this string without the period uses a different, correctly spelled word.
 - `mozac_feature_media_sharing_camera_and_microphone_reminder_text_2` — `mozilla-mobile/android-components/components/feature/media/src/main/res/values-vi/strings.xml` — The word "Nhắc" is misspelled as "Nhăc" because its tone mark (dấu sắc) is missing.
     - Current: `Nhăc nhở`
     - Source: `Reminder: %1$s is still using your microphone and camera. Tap to open the tab.`

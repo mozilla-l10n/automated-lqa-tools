@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,486 |
+| **Strings reviewed this run** | 0 of 2,440 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — Plural "other domains" rendered as singular "otro dominio".
+    - Current: `Acceder a tus datos en otro dominio.`
+    - Suggest: `Acceder a tus datos en otros dominios.`
+    - The source says "Access your data on other domains." (plural, referring to the remaining collapsed domains); the translation says a single domain.
+- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — "manage" translated as "gestionar" while the identical non-update string uses "administrar".
+    - Current: `Monitorear el uso de extensiones y gestionar temas.`
+    - Suggest: `Monitorear el uso de extensiones y administrar temas.`
+    - Same source sentence is translated with two different verbs on the same surface; keep consistent with mozac_feature_addons_permissions_management_description.
 
 ---
 
@@ -45,8 +52,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,486 |
-| Missing strings | 134 |
+| Strings | 2,440 |
+| Missing strings | 185 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,12 +69,13 @@ _Nothing retired._
 
 ### Completeness
 
-**134 strings** are not translated yet, concentrated in:
+**185 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 96
+- `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — 118
 - `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-es-rMX/strings.xml` — 25
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-es-rMX/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rMX/strings.xml` — 16
 - `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rMX/strings.xml` — 5
 - `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-es-rMX/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
@@ -84,7 +92,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
 | inverted marks | `open-question` 104, `open-exclamation` 29 | **open-question** |
-| register | `informal` 188, `formal` 12 | **informal** |
+| register | `informal` 175, `formal` 12 | **informal** |
 
 ---
 
@@ -94,14 +102,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (130)
+## 3. Open findings (128)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 75 |
-| 3 | Degraded language (grammar, spelling, terminology) | 55 |
+| 2 | Wrong content (says something other than the English) | 74 |
+| 3 | Degraded language (grammar, spelling, terminology) | 54 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -140,11 +148,6 @@ _Nothing in this category._
     - Source: `%1$s requests additional data collection`
     - Suggest: `%1$s solicita recopilación de datos adicional`
     - The dialog asks for optional data collection permission; the source "requests" is a request, not a requirement. Also "recopilar/recopilación" is the term used elsewhere in this file (see data_collection_optional_description).
-- `mozac_feature_addons_permissions_extra_domains_description_plural_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — Plural "other domains" rendered as singular "otro dominio".
-    - Current: `Acceder a tus datos en otro dominio.`
-    - Source: `Access your data on other domains.`
-    - Suggest: `Acceder a tus datos en otros dominios.`
-    - The source says "Access your data on other domains." (plural, referring to the remaining collapsed domains); the translation says a single domain.
 - `mozac_feature_addons_permissions_extra_sites_description_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — "other sites" translated as "más sitios web" and verb form inconsistent with parallel strings.
     - Current: `Acceso a tus datos en más sitios web`
     - Source: `Access your data on other sites`
@@ -410,7 +413,12 @@ _Nothing in this category._
     - Source: `Known Fingerprinters`
     - Suggest: `Detectores de huellas digitales conocidos`
     - Fingerprinters are scripts/entities that perform digital fingerprinting; "huellas dactilares" (physical fingerprints) names the wrong thing.
-- _…and 18 more; see `state/` for the full list._
+- `preference_enhanced_tracking_protection_strict_description_4` — `mozilla-mobile/fenix/app/src/main/res/values-es-rMX/strings.xml` — "Stronger tracking protection" translated as "Protección contra rastreo mejorada", which duplicates the feature name "Enhanced Tracking Protection".
+    - Current: `Protección contra rastreo mejorada y mayor rendimiento`
+    - Source: `Stronger tracking protection and faster performance, but some sites may not work properly.`
+    - Suggest: `Protección contra rastreo más fuerte y mayor rendimiento`
+    - "Stronger" is a comparative describing the strict level; "mejorada" is the established rendering of "Enhanced" in preference_enhanced_tracking_protection, creating a confusing collision.
+- _…and 17 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -582,11 +590,6 @@ _Nothing in this category._
     - Source: `Open files downloaded to your device`
     - Suggest: `Abrir archivos descargados en tu dispositivo`
     - Source term "device" is rendered inconsistently on the same surface: the _for_update variant uses "dispositivo".
-- `mozac_feature_addons_permissions_management_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — "manage" translated as "gestionar" while the identical non-update string uses "administrar".
-    - Current: `Monitorear el uso de extensiones y gestionar temas.`
-    - Source: `Monitor extension usage and manage themes.`
-    - Suggest: `Monitorear el uso de extensiones y administrar temas.`
-    - Same source sentence is translated with two different verbs on the same surface; keep consistent with mozac_feature_addons_permissions_management_description.
 - `mozac_feature_extensions_manager_notification_content_text` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rMX/strings.xml` — Uses formal "su sistema" instead of the locale's informal register ("tu sistema").
     - Current: `lo que hizo que su sistema fuera inestable`
     - Source: `One or more extensions stopped working, making your system unstable.`

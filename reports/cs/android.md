@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 39 of 2,620 |
+| **Strings reviewed this run** | 23 of 2,595 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -20,11 +20,11 @@ Also for cs: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ### 🆕 New findings (1)
 
-- `addon_remove_dialog_body` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The passive participle doesn't agree with its subject: both nouns are neuter, so the plural should be "odstraněna", not "odstraněny".
-    - Current: `budou z tohoto zařízení odstraněny`
-    - Source: `This removes the extension and its settings from this device.`
-    - Suggest: `budou z tohoto zařízení odstraněna`
-    - The subject is "Rozšíření i jeho nastavení". Both nouns are neuter, and two neuter subjects take the neuter plural ending -a. The ending -y is for masculine inanimate or feminine plurals.
+- `mozac_feature_prompts_edit_credit_card_security_code_error` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — The compound "3 nebo 4 číselný" is malformed Czech: the numeral and adjective must be joined and "-místný" used for digit count.
+    - Current: `3 nebo 4 číselný`
+    - Source: `Enter a 3 or 4 digit security code`
+    - Suggest: `3- nebo 4místný`
+    - Czech writes a numeral plus an adjective as one word with a hyphen after the first numeral (e.g. "3- nebo 4místný"). "číselný" means "numeric", not "having N digits", so "4 číselný" is wrong in both spelling and meaning.
 
 ### ✅ Fixed since the last run (0)
 
@@ -38,9 +38,28 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (5)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — Wrong preposition: "z další domény" instead of "na další doméně".
+    - Current: `Přistupovat k vašim datům z další domény.`
+    - Suggest: `Přistupovat k vašim datům na další doméně.`
+    - The source is "Access your data on another domain."; the sibling domain string uses "na doméně %1$s".
+- `mozac_feature_addons_permissions_proxy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — "Control browser proxy settings." is rendered as "Změnit nastavení proxy.", dropping "browser" and altering the meaning.
+    - Current: `Změnit nastavení proxy.`
+    - Suggest: `Ovládat nastavení proxy prohlížeče.`
+    - The source refers to controlling the browser's proxy settings; the translation omits "prohlížeče" and uses a perfective one-off verb inconsistent with the rest of the permission list.
+- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — Tense mismatch: "The developer says" rendered in past tense "Vývojář řekl".
+    - Current: `Vývojář řekl, že rozšíření bude shromažďovat %1$s.`
+    - Suggest: `Vývojář uvádí, že rozšíření bude shromažďovat %1$s.`
+    - The source uses the present tense "says"; the Czech past tense changes the statement's timeframe.
+- `mozac_feature_addons_updater_notification_title_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — "%1$s has an update" is rendered as the add-on requiring an update rather than an update being available for it.
+    - Current: `Doplněk %1$s vyžaduje aktualizaci`
+    - Suggest: `Pro doplněk %1$s je dostupná aktualizace`
+    - The source says an update is available for the add-on; the Czech says the add-on requires/demands an update, which reverses who needs what.
+- `shortcut_max_limit_content` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Wrong form "na ní" instead of accusative "na ni", and the instruction to select "remove" is dropped.
+    - Current: `Stačí na ní podržet prst.`
+    - Suggest: `Podržte na ní prst a zvolte Odebrat.`
+    - The preposition "na" with a verb of location here requires "na ni" (accusative) — "na ní podržet prst" is incorrect; also the source's "select remove" step is missing.
 
 ---
 
@@ -49,8 +68,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
-| Missing strings | 0 |
+| Strings | 2,595 |
+| Missing strings | 30 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -66,7 +85,12 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**30 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — 23
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-cs/strings.xml` — 7
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -76,7 +100,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 19 | **german-double** |
+| quotes | `german-double` 22 | **german-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 1, `en` 4 | **en** |
 
@@ -88,14 +112,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (102)
+## 3. Open findings (98)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 65 |
-| 3 | Degraded language (grammar, spelling, terminology) | 37 |
+| 2 | Wrong content (says something other than the English) | 63 |
+| 3 | Degraded language (grammar, spelling, terminology) | 35 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -144,11 +168,6 @@ _Nothing in this category._
     - Source: `Control browser proxy settings`
     - Suggest: `Ovládat nastavení proxy prohlížeče`
     - The source says the extension controls the browser's proxy settings; the other permission descriptions in this set consistently use imperfective verbs (Číst a upravovat, Přistupovat) and keep "prohlížeče".
-- `mozac_feature_addons_permissions_proxy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — "Control browser proxy settings." is rendered as "Změnit nastavení proxy.", dropping "browser" and altering the meaning.
-    - Current: `Změnit nastavení proxy.`
-    - Source: `Control browser proxy settings.`
-    - Suggest: `Ovládat nastavení proxy prohlížeče.`
-    - The source refers to controlling the browser's proxy settings; the translation omits "prohlížeče" and uses a perfective one-off verb inconsistent with the rest of the permission list.
 - `mozac_feature_addons_settings_on` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — "On" (toggle state) is translated as "Povoleno" while the neighbouring "Run in private browsing" label is also translated as "Povoleno v režimu...", conflating label and state.
     - Current: `Povoleno`
     - Source: `On`
@@ -159,11 +178,6 @@ _Nothing in this category._
     - Source: `Run in private browsing`
     - Suggest: `Spouštět v režimu anonymního prohlížení`
     - The source is a settings label describing running the add-on in private browsing, not a status saying it is already allowed.
-- `mozac_feature_addons_updater_notification_title_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — "%1$s has an update" is rendered as the add-on requiring an update rather than an update being available for it.
-    - Current: `Doplněk %1$s vyžaduje aktualizaci`
-    - Source: `%1$s has an update`
-    - Suggest: `Pro doplněk %1$s je dostupná aktualizace`
-    - The source says an update is available for the add-on; the Czech says the add-on requires/demands an update, which reverses who needs what.
 - `mozac_feature_applinks_normal_confirm_dialog_message` — `mozilla-mobile/android-components/components/feature/app-links/src/main/res/values-cs/strings.xml` — The message says "allow the app to show this content" instead of asking whether the user wants to leave the browser to view the content.
     - Current: `Chcete aplikaci %1$s dovolit zobrazit tento obsah?`
     - Source: `Would you like to leave %s to view this content?`
@@ -404,7 +418,17 @@ _Nothing in this category._
     - Source: `Enter a web address`
     - Suggest: `Zadejte webovou adresu`
     - The source asks for a web address (URL), not a web page; the field is the hostname field.
-- _…and 10 more; see `state/` for the full list._
+- `search_suggestions_delete_history_item_snackbar` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation adds "Adresa" (address) although the placeholder may be a search term, not only a URL.
+    - Current: `Adresa %1$s byla smazána z historie`
+    - Source: `Deleted %1$s from history`
+    - Suggest: `%1$s bylo smazáno z historie`
+    - The developer comment says %1$s is the shortened URL OR the actual deleted search term; prefixing with "Adresa" (address) makes the message wrong for search terms.
+- `sync_connect_device_dialog` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Translation drops "at least one other device", rendering it as "on another device".
+    - Current: `na dalším zařízení`
+    - Source: `To send a tab, sign in to Firefox on at least one other device.`
+    - Suggest: `alespoň na jednom dalším zařízení`
+    - The source says "sign in to Firefox on at least one other device"; the Czech omits "at least one".
+- _…and 8 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -413,16 +437,6 @@ _Nothing in this category._
     - Source: `Access your data on another domain`
     - Suggest: `Přistupovat k vašim datům na další doméně`
     - The source is "Access your data on another domain"; the sibling string mozac_feature_addons_permissions_sites_in_domain_description uses "na doméně %1$s".
-- `mozac_feature_addons_permissions_one_extra_domain_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — Wrong preposition: "z další domény" instead of "na další doméně".
-    - Current: `Přistupovat k vašim datům z další domény.`
-    - Source: `Access your data on another domain.`
-    - Suggest: `Přistupovat k vašim datům na další doméně.`
-    - The source is "Access your data on another domain."; the sibling domain string uses "na doméně %1$s".
-- `mozac_feature_addons_updater_notification_heading_data_collection_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-cs/strings.xml` — Tense mismatch: "The developer says" rendered in past tense "Vývojář řekl".
-    - Current: `Vývojář řekl, že rozšíření bude shromažďovat %1$s.`
-    - Source: `New required data collection: The developer says the extension will collect %1$s.`
-    - Suggest: `Vývojář uvádí, že rozšíření bude shromažďovat %1$s.`
-    - The source uses the present tense "says"; the Czech past tense changes the statement's timeframe.
 - `mozac_feature_listentopage_notification_skip_back` — `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-cs/strings.xml` — The "one" variant uses the nominative "sekunda" without the preposition "o", breaking grammatical agreement and being inconsistent with the parallel forward string.
     - Current: `Zpět %1$d sekunda`
     - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
@@ -433,6 +447,11 @@ _Nothing in this category._
     - Source: `{$quantity ->} [one] Back %1$d second [other] Back %1$d seconds`
     - Suggest: `Zpět o %1$d sekundy`
     - The parallel string uses "Vpřed o %1$d sekundy"; "Zpět %1$d sekundy" is ungrammatical/inconsistent for expressing a skip amount.
+- `mozac_feature_prompts_edit_credit_card_security_code_error` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-cs/strings.xml` — The compound "3 nebo 4 číselný" is malformed Czech: the numeral and adjective must be joined and "-místný" used for digit count.
+    - Current: `3 nebo 4 číselný`
+    - Source: `Enter a 3 or 4 digit security code`
+    - Suggest: `3- nebo 4místný`
+    - Czech writes a numeral plus an adjective as one word with a hyphen after the first numeral (e.g. "3- nebo 4místný"). "číselný" means "numeric", not "having N digits", so "4 číselný" is wrong in both spelling and meaning.
 - `mozac_feature_sitepermissions_storage_access_title` — `mozilla-mobile/android-components/components/feature/sitepermissions/src/main/res/values-cs/strings.xml` — Wrong possessive pronoun: "své cookies" should be "jeho cookies" and the source has no "také".
     - Current: `Povolit serveru %1$s používat své cookies také na serveru %2$s?`
     - Source: `Allow %1$s to use its cookies on %2$s?`
@@ -493,11 +512,6 @@ _Nothing in this category._
     - Source: `Leave feedback`
     - Suggest: `Zanechat zpětnou vazbu`
     - "Leave feedback" — the verb zanechat takes the accusative; "zpětné vazby" is genitive/plural and ungrammatical here.
-- `shortcut_max_limit_content` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — Wrong form "na ní" instead of accusative "na ni", and the instruction to select "remove" is dropped.
-    - Current: `Stačí na ní podržet prst.`
-    - Source: `To add a new shortcut, remove one. Touch and hold the site and select remove.`
-    - Suggest: `Podržte na ní prst a zvolte Odebrat.`
-    - The preposition "na" with a verb of location here requires "na ni" (accusative) — "na ní podržet prst" is incorrect; also the source's "select remove" step is missing.
 - `startup_crash_body` — `mozilla-mobile/fenix/app/src/main/res/values-cs/strings.xml` — The sentence is broken by a stray line break inserted in the middle of it, splitting "Při otevírání %s." from "došlo k problému."
     - Current: `Při otevírání %s. došlo k problému.`
     - Source: `There was a problem opening %s.  Sending a crash report helps us diagnose and fix problems with the browser. Reports may include personal or sensitive data.`

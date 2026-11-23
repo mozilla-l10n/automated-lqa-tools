@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 29 of 2,606 |
+| **Strings reviewed this run** | 44 of 2,601 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,161 +18,21 @@ Also for nl: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (2)
+### 🆕 New findings (1)
 
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "device’s network connection" is rendered as the network connection of "de computer".
-    - Current: `Controleer de netwerkverbinding van de computer.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Controleer de netwerkverbinding van het apparaat.`
-    - The source says "the device’s network connection". On Android the user is on a phone or tablet, not a computer. This wording looks carried over from the desktop version.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "Is the device connected" is rendered as "Is de computer verbonden".
-    - Current: `Is de computer verbonden met een actief netwerk?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Is het apparaat verbonden met een actief netwerk?`
-    - The source says "device", and the proxy error message in this same batch correctly uses "Is het apparaat verbonden". Calling the phone a computer is wrong on Android.
+- `nova_onboarding_sync_pairing_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The verb used as a noun, 'koppelen', needs the article 'het' as the object of 'voltooien'.
+    - Current: `Scan om koppelen met uw computer te voltooien`
+    - Source: `Scan to finish pairing with your computer`
+    - Suggest: `Scan om het koppelen met uw computer te voltooien`
+    - In Dutch, a verb used as a noun as the object of 'om … te voltooien' needs the article 'het'. Without it the sentence is ungrammatical.
 
-### ✅ Fixed since the last run (28)
+### ✅ Fixed since the last run (1)
 
-- `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Untranslated English article "the" left in the Dutch sentence before "Internet Archive".
-    - Current: `vanuit %2$s van the Internet Archive`
-    - Source: `%1$s can look for an earlier version of this page from the Internet Archive’s %2$s.`
-    - Suggest: `vanuit %2$s van het Internet Archive`
-    - The source reads "the Internet Archive’s %2$s"; the Dutch keeps the English article "the" instead of the Dutch "het", which is a grammar/spelling error.
-- `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "Try again in a few moments" is rendered as "over een paar seconden" (a few seconds).
-    - Current: `Probeer het over een paar seconden opnieuw.`
-    - Source: `{ <p> }The browser connected successfully, but the connection was interrupted while transferring information. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again i…`
-    - Suggest: `Probeer het over enkele ogenblikken opnieuw.`
-    - The source says "in a few moments", not "in a few seconds"; other strings in the same file use "enkele ogenblikken".
-- `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Missing hyphen makes "de gegevens of Wi-Fi-verbinding" ungrammatical compared with the parallel strings.
-    - Current: `controleer dan de gegevens of Wi-Fi-verbinding van uw apparaat`
-    - Source: `{ <p> }The browser connected successfully, but the connection was interrupted while transferring information. Please try again.{ </p> } { <ul> } { <li> }The site could be temporarily unavailable or too busy. Try again i…`
-    - Suggest: `controleer dan de gegevens- of Wi-Fi-verbinding van uw apparaat`
-    - Source "check your device’s data or Wi-Fi connection" requires the elided compound hyphen ("gegevens-"), as done correctly in mozac_browser_errorpages_net_reset_message.
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "device’s network connection" is rendered as the network connection of "de computer".
-    - Current: `Controleer de netwerkverbinding van de computer.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Controleer de netwerkverbinding van het apparaat.`
-    - The source says "the device’s network connection". On Android the user is on a phone or tablet, not a computer. This wording looks carried over from the desktop version.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "Is the device connected" is rendered as "Is de computer verbonden".
-    - Current: `Is de computer verbonden met een actief netwerk?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Is het apparaat verbonden met een actief netwerk?`
-    - The source says "device", and the proxy error message in this same batch correctly uses "Is het apparaat verbonden". Calling the phone a computer is wrong on Android.
-- `mozac_browser_errorpages_redirect_loop_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — “your device” translated as “uw computer”.
-    - Current: `niet met uw computer`
-    - Source: `{ <p> }The browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.{ </p> } { <ul> } { <li> }Have you disabled or blocked cookies required by this…`
-    - Suggest: `niet met uw apparaat`
-    - Source: “not your device”; the Dutch names a computer instead of the device.
-- `mozac_browser_errorpages_security_bad_hsts_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — Missing subject pronoun 'u' in the relative clause.
-    - Current: `De pagina die probeert te bekijken kan niet worden getoond`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> } { <li> }The issue is most likely with the website, and there is nothing you can do to resolve…`
-    - Suggest: `De pagina die u probeert te bekijken kan niet worden getoond`
-    - Source: “The page you are trying to view”. The Dutch omits “u”, making the sentence ungrammatical; the parallel string mozac_browser_errorpages_security_ssl_message correctly has “De pagina die u wilt bekijken”.
-- `mozac_browser_errorpages_security_bad_hsts_cert_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — English word “issue” left untranslated where Dutch “probleem” is the established term.
-    - Current: `Het issue ligt waarschijnlijk bij de website`
-    - Source: `{ <ul> } { <li> }The page you are trying to view cannot be shown because this website requires a secure connection.{ </li> } { <li> }The issue is most likely with the website, and there is nothing you can do to resolve…`
-    - Suggest: `Het probleem ligt waarschijnlijk bij de website`
-    - Source “The issue is most likely with the website”; the same string translates “problem” as “probleem”, so “issue” is an inconsistent anglicism.
-- `mozac_browser_errorpages_unknown_proxy_host_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — “device” translated as “computer”.
-    - Current: `Is de computer verbonden met een actief netwerk?`
-    - Source: `{ <p> }The browser is configured to use a proxy server, but the proxy could not be found.{ </p> } { <ul> } { <li> }Is the browser’s proxy configuration correct? Check the settings and try again.{ </li> } { <li> }Is the…`
-    - Suggest: `Is het apparaat verbonden met een actief netwerk?`
-    - Source: “Is the device connected to an active network?”; “computer” is the wrong referent on Android.
-- `mozac_feature_addons_author` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-nl/strings.xml` — "Author" of an add-on is rendered as "Schrijver" (writer of texts) instead of the established "Auteur"/"Ontwikkelaar".
-    - Current: `Schrijver`
-    - Source: `Author`
-    - Suggest: `Auteur`
-    - The developer comment says this is the author (developer) of an add-on; Dutch "Schrijver" refers to a writer of text and is the wrong term in a software context.
-- `mozac_feature_addons_optional_permissions_with_data_collection_dialog_title` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-nl/strings.xml` — Missing preposition "om" makes the sentence ungrammatical and inconsistent with the parallel string.
-    - Current: `%1$s vraagt aanvullende instellingen`
-    - Source: `%1$s requests additional settings`
-    - Suggest: `%1$s vraagt om aanvullende instellingen`
-    - Dutch "vragen" requires "om" here; the parallel string mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title correctly uses "vraagt om aanvullende gegevensverzameling".
-- `close_tabs_manually` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Never" is translated as "Handmatig" (Manually) instead of "Nooit".
-    - Current: `Handmatig`
-    - Source: `Never`
-    - Suggest: `Nooit`
-    - The source option label is "Never"; the summary string separately renders "Close manually". Rendering the option itself as "Handmatig" changes the displayed content.
-- `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "Neutral" is rendered as "Gemiddeld" (average) instead of the neutral midpoint term.
-    - Current: `Gemiddeld`
-    - Source: `Neutral`
-    - Suggest: `Neutraal`
-    - The likert midpoint "Neutral" means neither satisfied nor dissatisfied; "Gemiddeld" means "average", a different concept.
-- `microsurvey_homepage_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Translation adds "ervaring" (experience), which is not in the source.
-    - Current: `Hoe tevreden bent u met uw Firefox Startpagina-ervaring?`
-    - Source: `How satisfied are you with your Firefox homepage?`
-    - Suggest: `Hoe tevreden bent u met uw Firefox-startpagina?`
-    - Source: "How satisfied are you with your Firefox homepage?" — no "experience"; also "Startpagina" is wrongly capitalised mid-compound.
-- `microsurvey_prompt_search_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The translation drops "search", making the string about Firefox in general rather than search in Firefox.
-    - Current: `Help Firefox te verbeteren. Het duurt maar een minuutje`
-    - Source: `Help make search in Firefox better. It only takes a minute`
-    - Suggest: `Help zoeken in Firefox te verbeteren. Het duurt maar een minuutje`
-    - Source is "Help make search in Firefox better"; the parallel sync/printing strings do keep the feature name.
-- `nova_onboarding_marketing_body` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "marketing partners" is rendered as "marketingtechnologiepartners", adding "technologie" which is not in the source.
-    - Current: `Mozilla’s marketingtechnologiepartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold. %1$s`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "technology" is not mentioned.
-- `nova_onboarding_marketing_body_2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "marketing partners" is rendered as "marketingtechnologiepartners", adding "technologie" which is not in the source.
-    - Current: `Mozilla’s marketingtechnologiepartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - The source says "Mozilla’s marketing partners"; "technology" is not mentioned.
-- `onboarding_marketing_body_1` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "marketing partners" is rendered as "marketingtechnologiepartners", adding "technologie" which is not in the source.
-    - Current: `Mozilla’s marketingtechnologiepartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - Source says "Mozilla’s marketing partners", not "marketing technology partners".
-- `onboarding_marketing_redesign_opt_out_checkbox` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "marketing partners" is rendered as "marketingtechnologiepartners", adding "technologie" which is not in the source.
-    - Current: `Mozilla’s marketingtechnologiepartners`
-    - Source: `Share how you discovered Firefox, and that you use it, with Mozilla’s marketing partners. This data is never sold.`
-    - Suggest: `Mozilla’s marketingpartners`
-    - Source says "Mozilla’s marketing partners", not "marketing technology partners".
-- `onboarding_redesign_set_default_browser_body` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Sentence is ungrammatical: missing subject/verb agreement for "One tap helps stop…".
-    - Current: `Met één tik voorkomen dat bedrijven uw tikken bespioneren.`
-    - Source: `One tap helps stop companies spying on your clicks.`
-    - Suggest: `Met één tik voorkomt u dat bedrijven uw klikken bespioneren.`
-    - The Dutch clause has no subject; "Met één tik voorkomen dat…" is not a well-formed sentence, unlike the source "One tap helps stop companies spying on your clicks."
-- `search_bar_with_lens_widget_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Without hyphens marking the shared compound part, 'afbeelding' reads as a separate noun, so the text says 'search bar with an image' rather than 'with image search'.
-    - Current: `met afbeelding, privé en gesproken zoekopdrachten`
-    - Source: `Search bar with image, private and voice search`
-    - Suggest: `met afbeeldings-, privé- en gesproken zoekopdrachten`
-    - The source lists three search types (image, private, voice). In Dutch, compound parts that share a head noun need a hyphen ('afbeeldingszoekopdrachten' becomes 'afbeeldings-'). Without it, 'afbeelding' reads as a separate item in the list, so the description names an image rather than image search.
-- `uninstall_survey_error_failed` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "system uninstall prompt" mistranslated as prompt for uninstalling the system.
-    - Current: `Het openen van de prompt voor het de-installeren van het systeem is mislukt`
-    - Source: `Failed to open the system uninstall prompt, please use the system uninstall action directly.`
-    - Suggest: `Het openen van de de-installatieprompt van het systeem is mislukt`
-    - The source means the system's uninstall prompt (for the app), not a prompt to uninstall the system.
-- `uninstall_survey_option_1_v2` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "or" translated as "en", changing the meaning of the survey option.
-    - Current: `De browser is traag en onbetrouwbaar`
-    - Source: `It’s slow or unreliable`
-    - Suggest: `De browser is traag of onbetrouwbaar`
-    - Source is "It’s slow or unreliable" — a disjunction, not a conjunction.
-- `unsubmitted_crash_requested_by_devs_dialog_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — Subject mismatch: "Door dit te verzenden, helpt het ons" is ungrammatical and inconsistent with the plural variant.
-    - Current: `Door dit te verzenden, helpt het ons %1$s te verbeteren.`
-    - Source: `You have an unsent crash report related to crashes being investigated. Sending it will help us improve %1$s. Closing this notification will ignore this report.`
-    - Suggest: `Als u dit verzendt, helpt u ons %1$s te verbeteren.`
-    - Source: "Sending it will help us improve %1$s." The Dutch mixes an implicit subject with "het"; the parallel plural string correctly uses "Als u deze verzendt, helpt u ons…".
-- `mozac_browser_errorpages_net_timeout_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "device’s network connection" is rendered as the network connection of "de computer".
-    - Current: `Controleer de netwerkverbinding van de computer.`
-    - Source: `{ <p> }The requested site did not respond to a connection request and the browser has stopped waiting for a reply.{ </p> } { <ul> } { <li> }Could the server be experiencing high demand or a temporary outage? Try again l…`
-    - Suggest: `Controleer de netwerkverbinding van het apparaat.`
-    - The source says "the device’s network connection". On Android the user is on a phone or tablet, not a computer. This wording looks carried over from the desktop version.
-- `mozac_browser_errorpages_offline_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — "Is the device connected" is rendered as "Is de computer verbonden".
-    - Current: `Is de computer verbonden met een actief netwerk?`
-    - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
-    - Suggest: `Is het apparaat verbonden met een actief netwerk?`
-    - The source says "device", and the proxy error message in this same batch correctly uses "Is het apparaat verbonden". Calling the phone a computer is wrong on Android.
-- `mozac_menu_customize_reset_to_default` — `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — Button label drops the action 'reset' and reads only as 'Default values'.
-    - Current: `Standaardwaarden`
-    - Source: `Reset to default`
-    - Suggest: `Standaardwaarden herstellen`
-    - Source 'Reset to default' is a button that resets the menu configuration; 'Standaardwaarden' is just a noun ('default values') and does not convey the reset action.
-- `sent_from_firefox_template_short` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The blank line separating the shared link from the footer is missing in the translation.
-    - Current: `%1$s Verzonden vanuit %2$s 🦊 %3$s`
-    - Source: `%1$s  Sent from %2$s 🦊 %3$s`
-    - Suggest: `%1$s  Verzonden vanuit %2$s 🦊 %3$s`
-    - The source has an empty line between %1$s and the footer, matching the long template; the Dutch short template drops it, changing the shared message layout.
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "custom tab" is mistranslated as "Tabblad aanpassen" (customize tab) instead of the noun "aangepast tabblad".
+    - Current: `Menublad Tabblad aanpassen sluiten`
+    - Source: `Close custom tab menu sheet`
+    - Suggest: `Menublad van aangepast tabblad sluiten`
+    - The source refers to the menu sheet of a custom tab (aangepast tabblad), not to an action of customizing a tab.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -193,8 +53,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,606 |
-| Missing strings | 14 |
+| Strings | 2,601 |
+| Missing strings | 24 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -210,9 +70,10 @@ _Nothing retired._
 
 ### Completeness
 
-**14 strings** are not translated yet, concentrated in:
+**24 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 14
+- `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — 23
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-nl/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -224,11 +85,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 15 | **curly-single** |
-| apostrophe | `typographic` 46 | **typographic** |
+| quotes | `curly-single` 20 | **curly-single** |
+| apostrophe | `typographic` 50 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 439 | **formal** |
+| register | `formal` 429 | **formal** |
 
 ---
 
@@ -244,8 +105,8 @@ _Nothing reported._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 1 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 0 |
+| 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -254,15 +115,15 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — "custom tab" is mistranslated as "Tabblad aanpassen" (customize tab) instead of the noun "aangepast tabblad".
-    - Current: `Menublad Tabblad aanpassen sluiten`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `Menublad van aangepast tabblad sluiten`
-    - The source refers to the menu sheet of a custom tab (aangepast tabblad), not to an action of customizing a tab.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `nova_onboarding_sync_pairing_title` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — The verb used as a noun, 'koppelen', needs the article 'het' as the object of 'voltooien'.
+    - Current: `Scan om koppelen met uw computer te voltooien`
+    - Source: `Scan to finish pairing with your computer`
+    - Suggest: `Scan om het koppelen met uw computer te voltooien`
+    - In Dutch, a verb used as a noun as the object of 'om … te voltooien' needs the article 'het'. Without it the sentence is ungrammatical.
 
 ### D. Terminology, register & consistency
 
@@ -326,8 +187,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (30)
+### Fixed to date (31)
 
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-nl/strings.xml` — fixed 2026-11-23
 - `mozac_browser_errorpages_archive_description` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — fixed 2026-11-16
 - `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — fixed 2026-11-16
 - `mozac_browser_errorpages_net_interrupt_message` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-nl/strings.xml` — fixed 2026-11-16

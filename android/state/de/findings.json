@@ -956,6 +956,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "D",
+  "check": "llm",
+  "current": "Bild-in-Bild-Fenster schließen",
+  "dismissed_because": "",
+  "fid": "10e313b821cf",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "Both strings describe the same toolbar button, which opens or closes the same feature. German Firefox uses \"Bild-im-Bild\", as the open-PiP string in this batch does. The close string uses a different form, so screen readers announce two different names for the feature.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "0eb69594",
+  "string_id": "browser_toolbar_picture_in_picture_close",
+  "suggest": "Bild-im-Bild-Fenster schließen",
+  "summary": "Picture-in-picture is rendered \"Bild-in-Bild\" here but \"Bild-im-Bild\" in the companion toolbar string browser_toolbar_picture_in_picture.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Ein Stammzertifikat läuft ab, und Ihre Firefox-Version funktioniert nicht mehr richtig.",
@@ -2561,6 +2585,30 @@
   "string_id": "webcompat_reporter_reason_checkout",
   "suggest": "Ich kann nicht bezahlen, den Kauf abschließen oder einkaufen",
   "summary": "\"check out\" (Kaufabschluss/Bezahlvorgang) was mistranslated as \"den Warenkorb leeren\" (empty the shopping cart).",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "Abgebrochen",
+  "dismissed_because": "",
+  "fid": "0d080929dff4",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 2,
+  "last_seen": "2026-11-23",
+  "locale": "de",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says the badge shows that a match has been canceled. In German sports usage a canceled match is \"abgesagt\". \"Abgebrochen\" is a different status (a match stopped while in progress), and sports widgets often show both.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "c37c53dd",
+  "string_id": "wrex_widget_match_canceled",
+  "suggest": "Abgesagt",
+  "summary": "\"Abgebrochen\" means a match that was started and stopped (abandoned), not one that was canceled.",
   "suppressed_by": ""
  },
  {

@@ -50,6 +50,54 @@
  {
   "category": "D",
   "check": "llm",
+  "current": "隱藏段落",
+  "dismissed_because": "",
+  "fid": "79d42f8fd384",
+  "file": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The other strings on this screen (named and unnamed section, moved, removed, added) all use 區段. 段落 means a text paragraph, which is wrong for a menu section.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "d93f5762",
+  "string_id": "mozac_menu_customize_hide",
+  "suggest": "隱藏區段",
+  "summary": "\"Section\" is rendered as 段落 (paragraph) here, while every other customize-menu string uses 區段.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
+  "current": "取消隱藏段落",
+  "dismissed_because": "",
+  "fid": "8787edda1b02",
+  "file": "mozilla-mobile/android-components/components/compose/menu/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "This doesn't match the 區段 used by the other section strings on the same screen. 段落 means a text paragraph.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "011da093",
+  "string_id": "mozac_menu_customize_unhide",
+  "suggest": "取消隱藏區段",
+  "summary": "\"Section\" is rendered as 段落 (paragraph) instead of 區段, which the rest of the screen uses.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "D",
+  "check": "llm",
   "current": "啟用",
   "dismissed_because": "pontoon-rejected (2026-11-04): rejected in Pontoon: 93Rx_ofmgBDhnz4QZD1aHlOg0uY: <p>chinese does not have a past perfect tense, simply use 啟用 for indicators</p>",
   "fid": "80a94e47a916",
@@ -237,6 +285,30 @@
   "string_id": "mozac_feature_ipprotection_unavaliable_dialog_body",
   "suggest": "您的所在位置可能會被看見",
   "summary": "\"your location may be visible\" is rendered as \"your actual location may be tracked by someone\".",
+  "suppressed_by": ""
+ },
+ {
+  "category": "B",
+  "check": "llm",
+  "current": "知道了！",
+  "dismissed_because": "",
+  "fid": "f6f971f11e94",
+  "file": "mozilla-mobile/android-components/components/feature/prompts/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 2,
+  "last_seen": "2026-11-23",
+  "locale": "zh-TW",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The comment says this button closes the save/update card dialog without saving. 知道了！ expresses acknowledgment, not declining.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "58d69fa5",
+  "string_id": "mozac_feature_prompts_save_payment_method_dismiss",
+  "suggest": "關閉",
+  "summary": "\"Dismiss\" is translated as 知道了！ (\"Got it!\"), which reads as acknowledging the prompt, not closing it without saving.",
   "suppressed_by": ""
  },
  {

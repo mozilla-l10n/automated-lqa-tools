@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 2,457 |
+| **Strings reviewed this run** | 212 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -34,9 +34,20 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (3)
 
-_Nothing retired._
+- `mozac_feature_addons_permissions_all_urls_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Uses formal "sus" while the sibling string and locale convention use informal "tus".
+    - Current: `Acceder a sus datos de todos los sitios web.`
+    - Suggest: `Acceder a tus datos de todos los sitios web.`
+    - es-ES uses the informal register, and the parallel string mozac_feature_addons_permissions_all_urls_description translates the same source as "Acceder a tus datos de todos los sitios web".
+- `mozac_feature_addons_permissions_geolocation_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Formal "su" used instead of the informal "tu" that the locale and the sibling string use.
+    - Current: `Acceder a su ubicación.`
+    - Suggest: `Acceder a tu ubicación.`
+    - es-ES uses the informal register, and the non-update variant (mozac_feature_addons_permissions_geolocation_description) reads "Acceder a tu ubicación".
+- `mozac_feature_addons_updater_notification_short_intro` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Formal address "su" used where the locale convention is informal.
+    - Current: `conservar su versión y configuración actuales`
+    - Suggest: `conservar tu versión y configuración actuales`
+    - es-ES convention is informal (tú); the source "your current version and settings" should use "tu".
 
 ---
 
@@ -44,11 +55,11 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 43 |
-| Strings | 2,457 |
-| Missing strings | 163 |
+| Files | 44 |
+| Strings | 2,625 |
+| Missing strings | 0 |
 | Obsolete strings | 0 |
-| Files absent from the locale | 1 |
+| Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
@@ -62,20 +73,7 @@ _Nothing retired._
 
 ### Completeness
 
-**163 strings** are not translated yet, concentrated in:
-
-- `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — 114
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml` — 32
-- `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — 7
-- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-es-rES/strings.xml` — 6
-- `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — 3
-- `mozilla-mobile/android-components/components/feature/importer/src/main/res/values-es-rES/strings.xml` — 1
-
-**Files absent from the locale:**
-
-- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values/strings.xml`
-
-_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
+The locale is complete against the en-US source.
 
 ### Conventions detected in this locale
 
@@ -85,11 +83,11 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 12, `straight-double` 3 | **curly-double** |
+| quotes | `curly-double` 17, `straight-double` 3 | **curly-double** |
 | ellipsis | `char` 21 | **char** |
 | dash | `em` 2 | **em** |
-| inverted marks | `open-question` 104, `open-exclamation` 26 | **open-question** |
-| register | `informal` 171, `formal` 11 | **informal** |
+| inverted marks | `open-question` 110, `open-exclamation` 26 | **open-question** |
+| register | `informal` 184, `formal` 9 | **informal** |
 
 ---
 
@@ -99,14 +97,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (110)
+## 3. Open findings (107)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 48 |
-| 3 | Degraded language (grammar, spelling, terminology) | 55 |
+| 3 | Degraded language (grammar, spelling, terminology) | 52 |
 | 4 | Cosmetic (typography, spacing) | 7 |
 
 ### A. Functional, markup, variables & plurals
@@ -436,11 +434,6 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_permissions_all_urls_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Uses formal "sus" while the sibling string and locale convention use informal "tus".
-    - Current: `Acceder a sus datos de todos los sitios web.`
-    - Source: `Access your data for all websites.`
-    - Suggest: `Acceder a tus datos de todos los sitios web.`
-    - es-ES uses the informal register, and the parallel string mozac_feature_addons_permissions_all_urls_description translates the same source as "Acceder a tus datos de todos los sitios web".
 - `mozac_feature_addons_permissions_data_collection_optional_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Formal address "identificarle" conflicts with the locale's informal register convention.
     - Current: `El desarrollador dice que esta extensión quiere recopilar: %1$s`
     - Source: `The developer says the extension wants to collect: %1$s`
@@ -461,16 +454,6 @@ _Nothing in this category._
     - Source: `Required data collection:`
     - Suggest: `Recopilación de datos requerida:`
     - Inconsistent terminology on the same dialog: mozac_feature_addons_permissions_dialog_heading_optional_data_collection uses "Nueva recopilación de datos:" and the none-required string uses "recopilación de datos".
-- `mozac_feature_addons_permissions_geolocation_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Formal "su" used instead of the informal "tu" that the locale and the sibling string use.
-    - Current: `Acceder a su ubicación.`
-    - Source: `Access your location.`
-    - Suggest: `Acceder a tu ubicación.`
-    - es-ES uses the informal register, and the non-update variant (mozac_feature_addons_permissions_geolocation_description) reads "Acceder a tu ubicación".
-- `mozac_feature_addons_updater_notification_short_intro` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — Formal address "su" used where the locale convention is informal.
-    - Current: `conservar su versión y configuración actuales`
-    - Source: `Cancel to keep your current version and settings.`
-    - Suggest: `conservar tu versión y configuración actuales`
-    - es-ES convention is informal (tú); the source "your current version and settings" should use "tu".
 - `mozac_feature_addons_user_rating_count_2` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-es-rES/strings.xml` — "Reviews" for add-on ratings is rendered as "Revisiones" instead of the established "Reseñas".
     - Current: `Revisiones: %1$s`
     - Source: `Reviews: %1$s`
@@ -643,7 +626,7 @@ _Nothing in this category._
     - Current: `{ <p> }El navegador está operando en modo sin conexión y no puede conectarse con el elemento solicitado.{ </p> } { <ul> } { <li> }¿Está conectado el equipo a una red activa?{ </li> } { <li> }Pulsa "Volver a intentarlo"…`
     - Source: `{ <p> }The browser is operating in its offline mode and cannot connect to the requested item.{ </p> } { <ul> } { <li> }Is the device connected to an active network?{ </li> } { <li> }Press “Try Again” to switch to online…`
     - Suggest: `Pulsa “Volver a intentarlo”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
+    - The locale's quote convention is `curly-double` (17 occurrences).
 - `mozac_browser_errorpages_security_bad_cert_techInfo` — `mozilla-mobile/android-components/components/browser/errorpages/src/main/res/values-es-rES/strings.xml` — Stray space before the closing label tag after the first sentence.
     - Current: `no deberías continuar. { </label> }`
     - Source: `{ <label> }Someone could be trying to impersonate the site and you should not continue.{ </label> } { <br> }{ <br> } { <label> }Websites prove their identity via certificates. %1$s does not trust { <b> }%2$s{ </b> } bec…`
@@ -658,7 +641,7 @@ _Nothing in this category._
     - Current: `La dirección web debe contener "https://" o "http://"`
     - Source: `Web address must contain “https://” or “http://”`
     - Suggest: `“https://” o “http://”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
+    - The locale's quote convention is `curly-double` (17 occurrences).
 - `automatic_translation_header_preference` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Curly quotation marks are reversed (closing mark used as opening and vice versa).
     - Current: `”traducir siempre“ y ”no traducir nunca“`
     - Source: `Select a language to manage ”always translate“ and ”never translate“ preferences.`
@@ -668,7 +651,7 @@ _Nothing in this category._
     - Current: `Eliminar automáticamente los datos de navegación cuando selecciones "Salir" en el menú principal`
     - Source: `Automatically deletes browsing data when you select “Quit” from the main menu`
     - Suggest: `“Salir”`
-    - The locale's quote convention is `curly-double` (12 occurrences).
+    - The locale's quote convention is `curly-double` (17 occurrences).
 - `preferences_android_autofill` — `mozilla-mobile/fenix/app/src/main/res/values-es-rES/strings.xml` — Trailing period added to a preference title that has none in the source.
     - Current: `Autocompletar en otras aplicaciones.`
     - Source: `Autofill in other apps`

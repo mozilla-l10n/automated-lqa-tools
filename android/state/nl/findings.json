@@ -375,8 +375,8 @@
   },
   "rationale": "The source refers to the menu sheet of a custom tab (aangepast tabblad), not to an action of customizing a tab.",
   "reads_as_deliberate": false,
-  "resolved_on": "",
-  "status": "open",
+  "resolved_on": "2026-11-23",
+  "status": "fixed",
   "string_hash": "8a2a2559",
   "string_id": "browser_custom_tab_menu_handlebar_content_description",
   "suggest": "Menublad van aangepast tabblad sluiten",
@@ -981,6 +981,30 @@
   "string_id": "nova_onboarding_marketing_body_line_two",
   "suggest": "Firefox is trots op zijn onafhankelijkheid",
   "summary": "\"trots onafhankelijk\" is ungrammatical as an adverbial modifier in Dutch.",
+  "suppressed_by": ""
+ },
+ {
+  "category": "C",
+  "check": "llm",
+  "current": "Scan om koppelen met uw computer te voltooien",
+  "dismissed_because": "",
+  "fid": "f5c5a9a36d2d",
+  "file": "mozilla-mobile/fenix/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "nl",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "In Dutch, a verb used as a noun as the object of 'om … te voltooien' needs the article 'het'. Without it the sentence is ungrammatical.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "099bac2c",
+  "string_id": "nova_onboarding_sync_pairing_title",
+  "suggest": "Scan om het koppelen met uw computer te voltooien",
+  "summary": "The verb used as a noun, 'koppelen', needs the article 'het' as the object of 'voltooien'.",
   "suppressed_by": ""
  },
  {

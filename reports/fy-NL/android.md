@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 5 of 2,606 |
+| **Strings reviewed this run** | 17 of 2,572 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,26 @@ Also for fy-NL: [Firefox](firefox.md) · [Focus for Android](focus_android.md)
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `search_suggestions_onboarding_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The compound noun is written as two words: "standert sykmasine" instead of "standertsykmasine".
+    - Current: `standert sykmasine`
+    - Source: `%s will share everything you type in the address bar with your default search engine.`
+    - Suggest: `standertsykmasine`
+    - Frisian writes compound nouns as one word. "Default search engine" is the compound "standertsykmasine", the usual Frisian form.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `mozac_feature_addons_permissions_browser_data_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — "browsing history" is rendered as "browserskiednis" here but as "sneupskiednis" in the parallel _for_update string.
+    - Current: `Resinte browserskiednis, cookies en relatearre gegevens wiskje`
+    - Source: `Clear recent browsing history, cookies, and related data`
+    - Suggest: `Resinte sneupskiednis, cookies en relatearre gegevens wiskje`
+    - The same source sentence ("Clear recent browsing history, cookies, and related data") is translated with two different terms on the same surface; fy-NL uses "sneup-" for browsing (cf. sneupaktiviteit for "browsing activity").
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Custom tab menu sheet" rendered as "Menublêd Ljepblêd oanpasse", turning the noun phrase into an imperative "customize tab".
+    - Current: `Menublêd Ljepblêd oanpasse slute`
+    - Source: `Close custom tab menu sheet`
+    - Suggest: `Menublêd fan oanpast ljepblêd slute`
+    - The source describes closing the menu sheet of a custom tab; the translation reads as "Customize tab menu sheet close", changing the meaning.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -45,8 +58,8 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,606 |
-| Missing strings | 14 |
+| Strings | 2,572 |
+| Missing strings | 53 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -62,9 +75,12 @@ _Nothing retired._
 
 ### Completeness
 
-**14 strings** are not translated yet, concentrated in:
+**53 strings** are not translated yet, concentrated in:
 
-- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 14
+- `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — 23
+- `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — 18
+- `mozilla-mobile/android-components/components/compose/menu/src/main/res/values-fy-rNL/strings.xml` — 11
+- `mozilla-mobile/android-components/components/feature/listentopage/src/main/res/values-fy-rNL/strings.xml` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -77,7 +93,7 @@ The count includes Focus for Android's strings for this locale, which the same t
 | Convention | Counts | Inferred |
 |---|---|---|
 | quotes | `curly-single` 16 | **curly-single** |
-| apostrophe | `typographic` 104 | **typographic** |
+| apostrophe | `typographic` 103 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
 
@@ -89,13 +105,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (4)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 3 |
+| 2 | Wrong content (says something other than the English) | 0 |
 | 3 | Degraded language (grammar, spelling, terminology) | 1 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -105,33 +121,19 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-- `addresses_street_address` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Street Address" is translated as just "Adres", losing the street distinction and colliding with the generic address label.
-    - Current: `Adres`
-    - Source: `Street Address`
-    - Suggest: `Strjitte en hûsnûmer`
-    - The source specifically labels the street address line; rendering it as the generic "Adres" makes it indistinguishable from other address labels in the same form.
-- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Custom tab menu sheet" rendered as "Menublêd Ljepblêd oanpasse", turning the noun phrase into an imperative "customize tab".
-    - Current: `Menublêd Ljepblêd oanpasse slute`
-    - Source: `Close custom tab menu sheet`
-    - Suggest: `Menublêd fan oanpast ljepblêd slute`
-    - The source describes closing the menu sheet of a custom tab; the translation reads as "Customize tab menu sheet close", changing the meaning.
-- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — "Translating" (in-progress state) is translated as the infinitive "Oersette", identical to the "Translate" button, losing the progress meaning.
-    - Current: `Oersette`
-    - Source: `Translating`
-    - Suggest: `Oersette…`
-    - The developer comment states this is the inactive button text indicating a translation is currently in progress; rendering it identically to translations_bottom_sheet_positive_button ("Translate" = "Oersette") removes the distinction between the two states.
+_Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `search_suggestions_onboarding_text` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — The compound noun is written as two words: "standert sykmasine" instead of "standertsykmasine".
+    - Current: `standert sykmasine`
+    - Source: `%s will share everything you type in the address bar with your default search engine.`
+    - Suggest: `standertsykmasine`
+    - Frisian writes compound nouns as one word. "Default search engine" is the compound "standertsykmasine", the usual Frisian form.
 
 ### D. Terminology, register & consistency
 
-- `mozac_feature_addons_permissions_browser_data_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — "browsing history" is rendered as "browserskiednis" here but as "sneupskiednis" in the parallel _for_update string.
-    - Current: `Resinte browserskiednis, cookies en relatearre gegevens wiskje`
-    - Source: `Clear recent browsing history, cookies, and related data`
-    - Suggest: `Resinte sneupskiednis, cookies en relatearre gegevens wiskje`
-    - The same source sentence ("Clear recent browsing history, cookies, and related data") is translated with two different terms on the same surface; fy-NL uses "sneup-" for browsing (cf. sneupaktiviteit for "browsing activity").
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -141,14 +143,16 @@ _Nothing in this category._
 
 ## 4. Appendix
 
-### Dismissed by hand (7)
+### Dismissed by hand (9)
 
+- `addresses_street_address` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; reason unclear
 - `firefox_suggest_header` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 2, and both strings use "Firefox Suggestjes", so this looks like a deliberate local rendering of the feature name, not a mistake.
 - `homepage_shortcuts_show_all_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
 - `mozac_feature_addons_permissions_dialog_heading_required_permissions` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
 - `mozac_feature_addons_permissions_privacy_description_for_update` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; reason unclear
 - `preference_search_address_bar_fx_suggest` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The reviewer also rejected the same change in ref 0, and both strings use "Firefox Suggestjes", so this looks like a deliberate local rendering of the feature name, not a mistake.
 - `preferences_passwords_exceptions` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-08): rejected in Pontoon without comment; likely reason (inferred): The finding contradicts itself: the spelling it says is correct is the original exactly, so the reviewer probably didn't accept that there was an error.
+- `translations_bottom_sheet_translating_in_progress` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-16): rejected in Pontoon without comment; likely reason (inferred): The suggestion only added an ellipsis that isn't in the English source and kept the same infinitive "Oersette", so it didn't fix the problem the finding raised.
 - `webcompat_reporter_label_mandatory_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — pontoon-rejected (2026-11-05): rejected in Pontoon without comment; likely reason (inferred): The original ("so that we can investigate it") already gets the meaning across correctly, so the more literal rewording was probably seen as an unnecessary style change.
 
 _One line each in `locales/fy-NL/dismissed.txt`. Delete the line and the finding returns._
@@ -205,8 +209,10 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (87)
+### Fixed to date (89)
 
+- `mozac_feature_addons_permissions_browser_data_description` — `mozilla-mobile/android-components/components/feature/addons/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-23
+- `browser_custom_tab_menu_handlebar_content_description` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-23
 - `mozac_feature_downloads_file_failure_no_connection` — `mozilla-mobile/android-components/components/feature/downloads/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-09
 - `mozac_feature_prompts_expand_credit_cards_content_description_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-09
 - `mozac_feature_prompts_expand_logins_content_description_2` — `mozilla-mobile/android-components/components/feature/prompts/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-09
@@ -245,5 +251,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `create_collection_default_name` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
 - `create_collection_deselect_all` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
 - `delete_language_all_languages_file_dialog_message` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
-- `exit_fullscreen_with_back_button_short` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08
-- `likert_scale_option_3` — `mozilla-mobile/fenix/app/src/main/res/values-fy-rNL/strings.xml` — fixed 2026-11-08

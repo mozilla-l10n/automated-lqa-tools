@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cde0e6bfbfd2` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cde0e6bfbfd2` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 19 of 2,620 |
+| **Strings reviewed this run** | 54 of 2,625 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,18 @@ Also for de: [Firefox](firefox.md) · [Firefox iOS](firefox_ios.md) · [Focus fo
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (2)
 
-_No new findings._
+- `browser_toolbar_picture_in_picture_close` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Picture-in-picture is rendered "Bild-in-Bild" here but "Bild-im-Bild" in the companion toolbar string browser_toolbar_picture_in_picture.
+    - Current: `Bild-in-Bild-Fenster schließen`
+    - Source: `Close picture-in-picture`
+    - Suggest: `Bild-im-Bild-Fenster schließen`
+    - Both strings describe the same toolbar button, which opens or closes the same feature. German Firefox uses "Bild-im-Bild", as the open-PiP string in this batch does. The close string uses a different form, so screen readers announce two different names for the feature.
+- `wrex_widget_match_canceled` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Abgebrochen" means a match that was started and stopped (abandoned), not one that was canceled.
+    - Current: `Abgebrochen`
+    - Source: `Canceled`
+    - Suggest: `Abgesagt`
+    - The comment says the badge shows that a match has been canceled. In German sports usage a canceled match is "abgesagt". "Abgebrochen" is a different status (a match stopped while in progress), and sports widgets often show both.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +54,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 44 |
-| Strings | 2,620 |
+| Strings | 2,625 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -72,10 +81,10 @@ The count includes Focus for Android's strings for this locale, which the same t
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `german-double` 23, `curly-double` 1 | **german-double** |
+| quotes | `german-double` 27, `curly-double` 1 | **german-double** |
 | ellipsis | `char` 22 | **char** |
 | dash | `en` 7 | **en** |
-| register | `formal` 660 | **formal** |
+| register | `formal` 653 | **formal** |
 
 ---
 
@@ -85,14 +94,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (2)
+## 3. Open findings (4)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
+| 2 | Wrong content (says something other than the English) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -101,7 +110,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `wrex_widget_match_canceled` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — "Abgebrochen" means a match that was started and stopped (abandoned), not one that was canceled.
+    - Current: `Abgebrochen`
+    - Source: `Canceled`
+    - Suggest: `Abgesagt`
+    - The comment says the badge shows that a match has been canceled. In German sports usage a canceled match is "abgesagt". "Abgebrochen" is a different status (a match stopped while in progress), and sports widgets often show both.
 
 ### C. Grammar, agreement & spelling
 
@@ -118,7 +131,11 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `browser_toolbar_picture_in_picture_close` — `mozilla-mobile/fenix/app/src/main/res/values-de/strings.xml` — Picture-in-picture is rendered "Bild-in-Bild" here but "Bild-im-Bild" in the companion toolbar string browser_toolbar_picture_in_picture.
+    - Current: `Bild-in-Bild-Fenster schließen`
+    - Source: `Close picture-in-picture`
+    - Suggest: `Bild-im-Bild-Fenster schließen`
+    - Both strings describe the same toolbar button, which opens or closes the same feature. German Firefox uses "Bild-im-Bild", as the open-PiP string in this batch does. The close string uses a different form, so screen readers announce two different names for the feature.
 
 ### E. Typography, punctuation & spacing
 
