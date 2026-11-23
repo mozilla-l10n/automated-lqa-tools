@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "es-MX",
-  "prose_chunks": 2730,
-  "strings": 2730
+  "prose_chunks": 2684,
+  "strings": 2684
  },
  "apostrophe": {
   "straight": 0,
@@ -34,6 +34,6 @@
  },
  "register": {
   "formal": 12,
-  "informal": 188
+  "informal": 175
  }
 }

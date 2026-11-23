@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
 | **Strings reviewed this run** | 0 of 245 |
 
@@ -46,7 +46,7 @@ _Nothing retired._
 |---|---|
 | Files | 1 |
 | Strings | 245 |
-| Missing strings | 0 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -61,7 +61,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/focus-android/app/src/main/res/values-nl/strings.xml` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,11 +75,11 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-single` 15 | **curly-single** |
-| apostrophe | `typographic` 46 | **typographic** |
+| quotes | `curly-single` 20 | **curly-single** |
+| apostrophe | `typographic` 50 | **typographic** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 6 | **en** |
-| register | `formal` 439 | **formal** |
+| register | `formal` 429 | **formal** |
 
 ---
 

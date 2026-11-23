@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "fr",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 702
+  "typographic": 690
  },
  "dash": {
   "em": 2,
@@ -24,16 +24,16 @@
   "open-question": 0
  },
  "nbsp": {
-  "before-punctuation": 147,
+  "before-punctuation": 156,
   "narrow": 0,
   "space-before-punctuation": 62,
-  "total": 217
+  "total": 231
  },
  "quotes": {
-  "guillemet": 23
+  "guillemet": 28
  },
  "register": {
-  "formal": 450,
+  "formal": 443,
   "informal": 0
  }
 }

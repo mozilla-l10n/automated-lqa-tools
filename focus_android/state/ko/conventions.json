@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "ko",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 1,
@@ -30,7 +30,7 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 9,
+  "curly-double": 14,
   "curly-single": 1,
   "straight-double": 4
  }

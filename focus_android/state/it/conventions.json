@@ -1,12 +1,12 @@
 {
  "_meta": {
   "locale": "it",
-  "prose_chunks": 2865,
-  "strings": 2865
+  "prose_chunks": 2876,
+  "strings": 2876
  },
  "apostrophe": {
   "straight": 0,
-  "typographic": 177
+  "typographic": 173
  },
  "dash": {
   "em": 2,
@@ -30,7 +30,8 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 22
+  "curly-double": 25,
+  "guillemet": 2
  },
  "register": {
   "formal": 4,

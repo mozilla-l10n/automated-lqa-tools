@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 245 |
+| **Strings reviewed this run** | 7 of 251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for sk: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `certificate_details_verified_by_label` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The feminine pronoun "ju" does not agree with the masculine "certifikát" it refers to.
+    - Current: `Overil ju:`
+    - Source: `Verified by:`
+    - Suggest: `Overil:`
+    - The label names the certificate authority that verified the certificate. "Certifikát" is masculine, so "ju" (feminine accusative) is the wrong form; it should be "ho". A bare "Overil:" also avoids the problem. The neighbouring nouns do not explain "ju" either: "pripojenie" is neuter.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 245 |
+| Strings | 251 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,7 +75,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 8, `german-double` 7, `straight-double` 4 | _mixed_ |
+| quotes | `curly-double` 13, `german-double` 7, `straight-double` 4 | _mixed_ |
 | apostrophe | `straight` 2 | **straight** |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 4 | **en** |
@@ -85,14 +89,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (7)
+## 3. Open findings (8)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 2 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -119,6 +123,11 @@ _Nothing in this category._
     - Source: `{ <p> }%1$s puts you in control.{ </p> } { <p> }Use it as a private browser: { <ul> } { <li> }Search and browse right in the app{ </li> } { <li> }Block trackers (or update settings to allow trackers){ </li> } { <li> }Er…`
     - Suggest: `Naším poslaním`
     - Instrumental singular of "náš" is "naším" (long í); "našim" is the dative plural form.
+- `certificate_details_verified_by_label` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — The feminine pronoun "ju" does not agree with the masculine "certifikát" it refers to.
+    - Current: `Overil ju:`
+    - Source: `Verified by:`
+    - Suggest: `Overil:`
+    - The label names the certificate authority that verified the certificate. "Certifikát" is masculine, so "ju" (feminine accusative) is the wrong form; it should be "ho". A bare "Overil:" also avoids the problem. The neighbouring nouns do not explain "ju" either: "pripojenie" is neuter.
 - `preference_privacy_block_ads_summary` — `mozilla-mobile/focus-android/app/src/main/res/values-sk/strings.xml` — Missing comma before the subordinate clause "aj keď".
     - Current: `Niektoré reklamy vás sledujú aj keď na ne nekliknete`
     - Source: `Some ads track site visits, even if you don’t click the ads`

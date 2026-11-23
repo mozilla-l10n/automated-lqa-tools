@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 245 |
+| **Strings reviewed this run** | 1 of 245 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,21 @@ Also for fi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — "Qualified" in the eIDAS sense is translated as "kelvollinen" (valid/eligible) instead of the official Finnish eIDAS term "hyväksytty".
+    - Current: `kelvollinen`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `hyväksytty`
+    - The developer comment says this string marks a qualified website authentication certificate (QWAC) under the eIDAS Regulation. The Finnish version of eIDAS uses "hyväksytty" for "qualified" (e.g. "hyväksytty luottamuspalvelu", "hyväksytty varmenne verkkosivuston todentamista varten"). "Kelvollinen" means valid or eligible, which is a different idea and does not match the legal status the string i…
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — eIDAS term 'qualified' rendered as 'kelvollinen' (valid) instead of the regulation's official Finnish term 'hyväksytty'.
+    - Current: `kelvollinen`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `hyväksytty`
+    - The comment explains this is the eIDAS 'qualified' certificate status; the Finnish version of the eIDAS regulation uses 'hyväksytty' (e.g. 'hyväksytty varmenne'), while 'kelvollinen' means valid/eligible.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -46,7 +54,7 @@ _Nothing retired._
 |---|---|
 | Files | 1 |
 | Strings | 245 |
-| Missing strings | 0 |
+| Missing strings | 6 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -61,7 +69,11 @@ _Nothing retired._
 
 ### Completeness
 
-The locale is complete against the en-US source.
+**6 strings** are not translated yet, concentrated in:
+
+- `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — 6
+
+_Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
 ### Conventions detected in this locale
 
@@ -71,7 +83,7 @@ The count includes Firefox for Android's strings for this locale, which the same
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 9, `straight-double` 7 | _mixed_ |
+| quotes | `curly-double` 13, `straight-double` 7 | _mixed_ |
 | ellipsis | `char` 21 | **char** |
 | dash | `en` 3 | **en** |
 
@@ -89,8 +101,8 @@ _Nothing reported._
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 4 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
+| 2 | Wrong content (says something other than the English) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 2 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -119,6 +131,11 @@ _Nothing in this category._
     - Source: `Remove search engines`
     - Suggest: `Poista hakukoneita`
     - Source title is 'Remove search engines' (plural, a screen for removing engines from the list); Finnish says 'Remove search engine'.
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — "Qualified" in the eIDAS sense is translated as "kelvollinen" (valid/eligible) instead of the official Finnish eIDAS term "hyväksytty".
+    - Current: `kelvollinen`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `hyväksytty`
+    - The developer comment says this string marks a qualified website authentication certificate (QWAC) under the eIDAS Regulation. The Finnish version of eIDAS uses "hyväksytty" for "qualified" (e.g. "hyväksytty luottamuspalvelu", "hyväksytty varmenne verkkosivuston todentamista varten"). "Kelvollinen" means valid or eligible, which is a different idea and does not match the legal status the string i…
 
 ### C. Grammar, agreement & spelling
 
@@ -135,11 +152,7 @@ _Nothing in this category._
 
 ### D. Terminology, register & consistency
 
-- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — eIDAS term 'qualified' rendered as 'kelvollinen' (valid) instead of the regulation's official Finnish term 'hyväksytty'.
-    - Current: `kelvollinen`
-    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
-    - Suggest: `hyväksytty`
-    - The comment explains this is the eIDAS 'qualified' certificate status; the Finnish version of the eIDAS regulation uses 'hyväksytty' (e.g. 'hyväksytty varmenne'), while 'kelvollinen' means valid/eligible.
+_Nothing in this category._
 
 ### E. Typography, punctuation & spacing
 
@@ -175,6 +188,6 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (1)
 
-_Nothing fixed yet._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-fi/strings.xml` — fixed 2026-11-23

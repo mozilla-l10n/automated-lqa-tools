@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cdac82987f75` |
-| **Previous run** | 2026-11-09 @ `3c577835f1fc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **en-US reference** | `https://github.com/mozilla-l10n/android-l10n` @ `cfdda3ae820f` |
+| **Previous run** | 2026-11-16 @ `cdac82987f75` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 245 |
+| **Strings reviewed this run** | 7 of 251 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for vi: [Firefox for Android](android.md) · [Firefox](firefox.md) · [Fire
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — The translation leaves two alternative renderings joined by a slash ("chứng nhận/đủ điều kiện") instead of choosing one.
+    - Current: `Được chứng nhận/đủ điều kiện`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Đủ điều kiện`
+    - The source says "Qualified" (as in a qualified website authentication certificate). Showing both options with a slash looks like an unfinished translation, and users see it in the security popup. One term should be chosen.
 
 ### ✅ Fixed since the last run (0)
 
@@ -45,7 +49,7 @@ _Nothing retired._
 | Check | Result |
 |---|---|
 | Files | 1 |
-| Strings | 245 |
+| Strings | 251 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,7 +87,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (8)
+## 3. Open findings (9)
 
 > **Reads as a deliberate edit (1).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -99,7 +103,7 @@ _Also listed under their own category below._
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 3 |
-| 3 | Degraded language (grammar, spelling, terminology) | 5 |
+| 3 | Degraded language (grammar, spelling, terminology) | 6 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
@@ -151,6 +155,11 @@ _Nothing in this category._
     - Source: `URL Autocomplete`
     - Suggest: `Tự động điền URL`
     - Vietnamese puts the head word first, so "URL tự động điền" describes a kind of URL. The setting is the URL autocomplete feature, which is "Tự động điền URL".
+- `qualified_text` — `mozilla-mobile/focus-android/app/src/main/res/values-vi/strings.xml` — The translation leaves two alternative renderings joined by a slash ("chứng nhận/đủ điều kiện") instead of choosing one.
+    - Current: `Được chứng nhận/đủ điều kiện`
+    - Source: `Qualified as specified in Regulation (EU) 2024/1183.`
+    - Suggest: `Đủ điều kiện`
+    - The source says "Qualified" (as in a qualified website authentication certificate). Showing both options with a slash looks like an unfinished translation, and users see it in the security popup. One term should be chosen.
 
 ### D. Terminology, register & consistency
 

@@ -24,6 +24,30 @@
   "suppressed_by": ""
  },
  {
+  "category": "C",
+  "check": "llm",
+  "current": "Overil ju:",
+  "dismissed_because": "",
+  "fid": "04bcda4fef48",
+  "file": "mozilla-mobile/focus-android/app/src/main/res/values/strings.xml",
+  "first_seen": "2026-11-23",
+  "impact": 3,
+  "last_seen": "2026-11-23",
+  "locale": "sk",
+  "origin": {
+   "confidence": "medium"
+  },
+  "rationale": "The label names the certificate authority that verified the certificate. \"Certifikát\" is masculine, so \"ju\" (feminine accusative) is the wrong form; it should be \"ho\". A bare \"Overil:\" also avoids the problem. The neighbouring nouns do not explain \"ju\" either: \"pripojenie\" is neuter.",
+  "reads_as_deliberate": false,
+  "resolved_on": "",
+  "status": "open",
+  "string_hash": "4200e6c4",
+  "string_id": "certificate_details_verified_by_label",
+  "suggest": "Overil:",
+  "summary": "The feminine pronoun \"ju\" does not agree with the masculine \"certifikát\" it refers to.",
+  "suppressed_by": ""
+ },
+ {
   "category": "B",
   "check": "llm",
   "current": "Prehliadanie podľa vás",
