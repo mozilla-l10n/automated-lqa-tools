@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 42 of 17,112 |
+| **Strings reviewed this run** | 317 of 17,349 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,86 +18,37 @@ Also for fr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (5)
 
-- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The singular variant says "le passer hors connexion", which takes the download offline instead of the browser.
-    - Current: `Arrêter 1 téléchargement et le passer hors connexion ?`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
-    - Suggest: `Arrêter 1 téléchargement et passer hors connexion ?`
-    - In en-US, "go offline" means the browser goes offline, not the download. The pronoun "le" makes the download the thing going offline, which is wrong and reads badly. The plural variant gets it right with "et passer hors connexion".
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — "from other apps" is rendered as "depuis { -brand-short-name }", so the French talks about links opened from Firefox itself.
+    - Current: `à l’ouverture de liens depuis { -brand-short-name }`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `à l’ouverture de liens depuis d’autres applications, au démarrage ou au redémarrage de { -brand-short-name }`
+    - The en-US means links opened from other apps when Firefox starts or restarts. The French drops "other apps" and says the links come from Firefox, which is a different fact.
+- `smartwindow-onboarding-memories-description` — `browser/browser/aiWindow.ftl` — The indirect object pronoun "leur" is wrongly written "leurs".
+    - Current: `Ces souvenirs leurs permettent`
+    - Source: `{ -smart-window-brand-name } can learn from chats, browsing, or both to create memories. It uses them to personalize your experience over time.`
+    - Suggest: `Ces souvenirs leur permettent`
+    - Before a verb, the pronoun "leur" never takes an s.
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — "Memories" is rendered as "mémoires" in the description but as "Souvenirs" in the label of the same string and in the onboarding strings.
+    - Current: `pour créer des mémoires. Elles sont utilisées`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `pour créer des souvenirs. Ils sont utilisés`
+    - The feature is called "Souvenirs" everywhere else. "Des mémoires" can read as memoirs or computer memory, so it is the wrong term here.
+- `about-webauthn-logging-warning` — `toolkit/toolkit/about/aboutWebauthn.ftl` — The pronoun "la" is feminine but refers to the masculine noun "journal".
+    - Current: `avant de la partager`
+    - Source: `The log may contain personal information, such as user names, account identifiers and website addresses. Review it before sharing.`
+    - Suggest: `avant de le partager`
+    - "Le journal" is masculine. The earlier "Vérifiez-le" is correct, so "la partager" is an agreement error.
+- `credit-card-label-with-security-code-3` — `toolkit/toolkit/payments/payments.ftl` — In the aria-label, "saved" is translated as "économisés" (saved money), and in the plural.
+    - Current: `{ $securityCode } économisés`
+    - Source: `(value): { $label } \| { $securityCode } saved aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } enregistré`
+    - Here "saved" means stored, as the visible label shows with "enregistré". "Économisés" means saved as in money, and it doesn't agree with the single code either. Screen-reader users would hear a different and wrong label.
 
-### ✅ Fixed since the last run (14)
+### ✅ Fixed since the last run (0)
 
-- `toolbar-switcher-customizable-label-v2` — `browser/browser/aiWindow.ftl` — The tooltip omits the term "fenêtre" for the Classic window, producing the ungrammatical/incomplete "entre une { -smart-window-brand-name } et classique".
-    - Current: `Basculer entre une { -smart-window-brand-name } et classique`
-    - Source: `label: { -smart-window-brand-name } switcher tooltiptext: Switch between Smart and Classic Windows`
-    - Suggest: `Basculer entre les fenêtres { -smart-window-brand-name } et classiques`
-    - en-US says "Switch between Smart and Classic Windows"; the French drops the noun for the second item, leaving "et classique" dangling without a noun.
-- `genai-menu-summarize-with-ai` — `browser/browser/genai.ftl` — The menu command uses the imperative instead of the infinitive used for French menu items.
-    - Current: `Résumez avec l’IA`
-    - Source: `Summarize with AI`
-    - Suggest: `Résumer avec l’IA`
-    - French Firefox menu commands use the infinitive, as the sibling string "Demander à l’IA…" does. The imperative "Résumez" is inconsistent with that.
-- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — In football, “Table” means the league table, which is “Classement” in French, not “Tableau”.
-    - Current: `Tableau`
-    - Source: `Table`
-    - Suggest: `Classement`
-    - The view options Matches/Table/Fixtures are football terms. Here “Table” is the league standings, and French says “classement” for that. “Tableau” reads as a generic table or chart.
-- `hnt-card-extensions-header` — `browser/browser/newtab/onboarding.ftl` — The header is garbled and ungrammatical, and does not say "Boost Firefox with extensions".
-    - Current: `Plus de { -brand-short-name } d’extensions`
-    - Source: `Boost { -brand-short-name } with extensions`
-    - Suggest: `Boostez { -brand-short-name } avec des extensions`
-    - The en-US says "Boost {brand} with extensions". The French "Plus de Firefox d’extensions" reads roughly as "more of Firefox of extensions". It is ungrammatical and does not get the meaning across.
-- `tab-groups-onboarding-session-restore-title-3` — `browser/browser/newtab/onboarding.ftl` — The phrase « à tout moment » appears twice in the same sentence.
-    - Current: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets » à tout moment.`
-    - Source: `Reopen your tab groups from the “Search and manage tabs” menu anytime.`
-    - Suggest: `Rouvrez à tout moment vos groupes d’onglets depuis le menu « Rechercher et gérer les onglets ».`
-    - The en-US has 'anytime' only once. Saying « à tout moment » twice is a redundancy error that makes the sentence ungrammatical in French.
-- `preferences-ai-controls-sidebar-chatbot-group-3` — `browser/browser/preferences/preferences.ftl` — "Keep a chatbot in view" rendered as "Gardez un œil sur un chatbot" (keep an eye on a chatbot), reversing who watches whom.
-    - Current: `Gardez un œil sur un chatbot pendant votre navigation.`
-    - Source: `description: Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime. label: AI chatbot providers in sidebar`
-    - Suggest: `Gardez un chatbot sous les yeux pendant votre navigation.`
-    - The en-US means the chatbot stays visible while browsing, not that the user should monitor the chatbot.
-- `sync-engine-settings2` — `browser/browser/preferences/preferences.ftl` — The tooltip keeps English word order and isn't grammatical French.
-    - Current: `{ -brand-short-name } paramètres le cas échéant`
-    - Source: `accesskey: s label: Settings tooltiptext: { -brand-short-name } settings where applicable`
-    - Suggest: `Paramètres de { -brand-short-name }, le cas échéant`
-    - French needs "Paramètres de X". A brand name placed before the noun is not grammatical.
-- `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate identifier Connection-Allowlist was translated as « Connexion-Allowlist ».
-    - Current: `Connexion-Allowlist`
-    - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
-    - Suggest: `Connection-Allowlist`
-    - The developer comment says not to translate Connection-Allowlist. It is a header/policy name, and the sibling string keeps it in English.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — "Redirect of %1$S" became "redirection vers %1$S" (redirect to).
-    - Current: `une redirection vers %1$S`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `une redirection de %1$S`
-    - The comment says %1$S is the URI of the resource that was redirected, not where it was redirected to. The sibling string correctly uses « de ».
-- `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — The plural variant uses « fins » for "purposes" while the singular variant and sibling strings use « objectif(s) ».
-    - Current: `contient des fins non prises en charge`
-    - Source: `{$count ->} [one] { $memberName } item at index { $index } includes an unsupported purpose: { $purposes }. [other] { $memberName } item at index { $index } includes unsupported purposes: { $purposes }.`
-    - Suggest: `possède des objectifs non pris en charge`
-    - The same term "purpose" is translated differently within one message and across the manifest strings.
-- `dom-manifest-scope-not-same-origin` — `dom/dom/manifest.ftl` — "The scope URL" was rendered as « La portée de l’URL » (the scope of the URL).
-    - Current: `La portée de l’URL doit`
-    - Source: `The scope URL must be same origin as document.`
-    - Suggest: `L’URL de portée doit`
-    - It is the scope URL that must share the document's origin, not the scope of a URL.
-- `dom-manifest-scope-url-invalid` — `dom/dom/manifest.ftl` — "The scope URL" was rendered as « La portée de l’URL » (the scope of the URL).
-    - Current: `La portée de l’URL est invalide.`
-    - Source: `The scope URL is invalid.`
-    - Suggest: `L’URL de portée est invalide.`
-    - The message is about the manifest's scope URL being invalid, not about the scope of some URL.
-- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — "progress may be lost" is rendered as a progress being interrupted.
-    - Current: `mais une progression pourra être interrompue`
-    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
-    - Suggest: `mais leur progression pourrait être perdue`
-    - The source says progress may be lost, not interrupted. The matching quit message correctly uses "perdue".
-- `download-ui-confirm-offline-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — The [1] variant adds a spurious pronoun, giving the ungrammatical "et le passer hors connexion".
-    - Current: `et le passer hors connexion`
-    - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
-    - Suggest: `et passer hors connexion`
-    - The source says "Stop 1 download and go offline?". "le passer" makes the download the object of going offline, which is ungrammatical and doesn't match the other variants.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -117,8 +68,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 341 |
-| Strings | 17,112 |
+| Files | 346 |
+| Strings | 17,349 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -128,7 +79,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 1 |
+| Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -159,12 +110,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `guillemet` 1053, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
-| apostrophe | `typographic` 5197, `straight` 10 | **typographic** |
-| ellipsis | `char` 411 | **char** |
+| quotes | `guillemet` 1078, `straight-double` 31, `curly-double` 2, `curly-single` 1 | **guillemet** |
+| apostrophe | `typographic` 5289, `straight` 10 | **typographic** |
+| ellipsis | `char` 421 | **char** |
 | dash | `em` 45, `en` 9 | **em** |
-| nbsp | `total` 4080, `before-punctuation` 1784 | _mixed_ |
-| register | `formal` 2931 | **formal** |
+| nbsp | `total` 4209, `before-punctuation` 1833 | _mixed_ |
+| register | `formal` 2982 | **formal** |
 
 ---
 
@@ -174,14 +125,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (7)
+## 3. Open findings (12)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 5 |
-| 3 | Degraded language (grammar, spelling, terminology) | 0 |
+| 2 | Wrong content (says something other than the English) | 7 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
 | 4 | Cosmetic (typography, spacing) | 2 |
 
 ### A. Functional, markup, variables & plurals
@@ -190,6 +141,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — "from other apps" is rendered as "depuis { -brand-short-name }", so the French talks about links opened from Firefox itself.
+    - Current: `à l’ouverture de liens depuis { -brand-short-name }`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `à l’ouverture de liens depuis d’autres applications, au démarrage ou au redémarrage de { -brand-short-name }`
+    - The en-US means links opened from other apps when Firefox starts or restarts. The French drops "other apps" and says the links come from Firefox, which is a different fact.
 - `contextual-manager-passwords-delete-all-confirm-button` — `browser/browser/contextual-manager.ftl` — The singular variant says “Tout supprimer” (Delete all), but the source says just “Delete” when there is one password.
     - Current: `[one] Tout supprimer`
     - Source: `{$total ->} [1] Delete [other] Delete all`
@@ -215,23 +171,41 @@ _Nothing in this category._
     - Source: `{$downloadsCount ->} [1] Stop 1 download and go offline? [other] Stop { $downloadsCount } downloads and go offline?`
     - Suggest: `Arrêter 1 téléchargement et passer hors connexion ?`
     - In en-US, "go offline" means the browser goes offline, not the download. The pronoun "le" makes the download the thing going offline, which is wrong and reads badly. The plural variant gets it right with "et passer hors connexion".
+- `credit-card-label-with-security-code-3` — `toolkit/toolkit/payments/payments.ftl` — In the aria-label, "saved" is translated as "économisés" (saved money), and in the plural.
+    - Current: `{ $securityCode } économisés`
+    - Source: `(value): { $label } \| { $securityCode } saved aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } enregistré`
+    - Here "saved" means stored, as the visible label shows with "enregistré". "Économisés" means saved as in money, and it doesn't agree with the single code either. Screen-reader users would hear a different and wrong label.
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `smartwindow-onboarding-memories-description` — `browser/browser/aiWindow.ftl` — The indirect object pronoun "leur" is wrongly written "leurs".
+    - Current: `Ces souvenirs leurs permettent`
+    - Source: `{ -smart-window-brand-name } can learn from chats, browsing, or both to create memories. It uses them to personalize your experience over time.`
+    - Suggest: `Ces souvenirs leur permettent`
+    - Before a verb, the pronoun "leur" never takes an s.
+- `about-webauthn-logging-warning` — `toolkit/toolkit/about/aboutWebauthn.ftl` — The pronoun "la" is feminine but refers to the masculine noun "journal".
+    - Current: `avant de la partager`
+    - Source: `The log may contain personal information, such as user names, account identifiers and website addresses. Review it before sharing.`
+    - Suggest: `avant de le partager`
+    - "Le journal" is masculine. The earlier "Vérifiez-le" is correct, so "la partager" is an agreement error.
 
 ### D. Terminology, register & consistency
 
-_Nothing in this category._
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — "Memories" is rendered as "mémoires" in the description but as "Souvenirs" in the label of the same string and in the onboarding strings.
+    - Current: `pour créer des mémoires. Elles sont utilisées`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `pour créer des souvenirs. Ils sont utilisés`
+    - The feature is called "Souvenirs" everywhere else. "Des mémoires" can read as memoirs or computer memory, so it is the wrong term here.
 
 ### E. Typography, punctuation & spacing
 
 - `felt-error-warning-download-attempt-failed-contact-admin` — `browser/browser/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5197 times against 10 straight.
+    - The tree uses ’ 5289 times against 10 straight.
 - `felt-error-warning-download-attempt-failed-contact-admin` — `toolkit/toolkit/enterprise/felt.ftl` — `felt-error-warning-download-attempt-failed-contact-admin` uses a straight apostrophe
     - Current: `La dernière mise à jour n'a pas pu être téléchargée. Si le problème persiste, contactez votre administrateur pour obtenir de l’aide.`
-    - The tree uses ’ 5197 times against 10 straight.
+    - The tree uses ’ 5289 times against 10 straight.
 
 ---
 

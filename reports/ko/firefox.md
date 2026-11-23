@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 9 of 16,883 |
+| **Strings reviewed this run** | 318 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,63 @@ Also for ko: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (11)
 
-_No new findings._
+- `reg-app-desc` — `browser/installer/custom.ftl` — "protection from online identity theft" is mistranslated as defence against "online-specific attacks", losing identity theft.
+    - Current: `온라인 고유의 공격으로부터의 방어`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `온라인 신원 도용으로부터의 보호`
+    - en-US names protection from online identity theft; "온라인 고유의 공격" means "attacks specific to online" and does not convey identity theft (신원 도용).
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The negation is dropped: the Korean tells the user to check whether the app is running, not to make sure it is not running.
+    - Current: `{ $BrandFullNameDA }가 실행되고 있는지 먼저 확인하세요`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `{ $BrandFullNameDA }가 실행되고 있지 않은지 확인하세요`
+    - en-US says "make sure { $BrandFullNameDA } is not running". The Korean leaves out the "not", so the instruction no longer tells the user to close the app before uninstalling.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "업데이트 할" should be written as one word, "업데이트할".
+    - Current: `업데이트 할`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `업데이트할`
+    - 업데이트하다 is a single verb, so Korean spelling rules write it without a space.
+- `mui-untext-finish-info-text` — `browser/installer/mui.ftl` — The uninstall wizard's finish text calls itself the installation wizard (설치 마법사).
+    - Current: `설치 마법사를 종료하려면`
+    - Source: `{ $BrandFullNameDA } has been uninstalled from your computer.  Click Finish to close this wizard.`
+    - Suggest: `제거 마법사를 종료하려면`
+    - This text appears when uninstalling finishes, and "this wizard" means the uninstall wizard. The title string mui-untext-finish-info-title also calls it '제거 마법사'. '설치 마법사' means installation wizard, which is the wrong thing.
+- `nsis-file-error` — `browser/installer/override.ftl` — The compound verb 건너뛰다 is wrongly split with a space.
+    - Current: `건너 뛰려면`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `건너뛰려면`
+    - Standard Korean spelling treats 건너뛰다 (to skip) as a single word, so it should have no space.
+- `errInvalidFirstCharacterOfProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Invalid first character of processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - 'Processing instruction' is a technical term, rendered '처리 명령어' earlier in the same string. '처리중인 명령어' means 'the instruction currently being processed', and the dependent noun 중 must be spaced ('처리 중인').
+- `errInvalidProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Invalid character in processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - 'Processing instruction' is an XML technical term, rendered '처리 명령어' elsewhere. '처리중인 명령어' means 'the instruction being processed', and 중 should be spaced.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - The same string first renders the term correctly as '처리 명령어 대상'. The later '처리중인 명령어' means 'the instruction being processed', which is a mistranslation of the technical term, and it also misses the space before 중.
+- `newtab-stocks-menu-search-stocks` — `browser/browser/newtab/newtab.ftl` — "Symbol" (stock ticker symbol) is rendered as 기호, which means a sign or character, not a ticker.
+    - Current: `이름 또는 기호로 검색`
+    - Source: `Search by Name or Symbol`
+    - Suggest: `이름 또는 티커로 검색`
+    - The developer comment says this searches stocks by company name or ticker symbol. 기호 is the literal word for a symbol or sign, which is the wrong sense in a stock context. 티커 or 종목 코드 is the expected term.
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — The space between the method name and 메소드 is missing.
+    - Current: `addEventListener()메소드`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener`
+    - Suggest: `addEventListener() 메소드`
+    - The identifier and the following Korean noun are separate words and need a space between them.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The space between the method name and 메소드 is missing.
+    - Current: `removeEventListener()메소드`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
+    - Suggest: `removeEventListener() 메소드`
+    - The identifier and the following Korean noun are separate words and need a space between them.
 
 ### ✅ Fixed since the last run (0)
 
@@ -34,9 +88,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `aiwindow-input-model-select-menu-item-description` — `browser/browser/aiWindow.ftl` — The space between the owner name and the model name was dropped.
+    - Current: `{ $ownerName }{ $model }`
+    - Suggest: `{ $ownerName } { $model }`
+    - en-US has '{ $ownerName } { $model }'. Without the space, the provider and model names merge into one word on screen.
 
 ---
 
@@ -44,8 +101,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -71,9 +128,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 406, `straight-double` 207, `curly-single` 89 | _mixed_ |
+| quotes | `curly-double` 405, `straight-double` 207, `curly-single` 89 | _mixed_ |
 | apostrophe | `typographic` 89, `straight` 91 | _mixed_ |
-| ellipsis | `char` 394, `ascii` 5 | **char** |
+| ellipsis | `char` 403, `ascii` 5 | **char** |
 | dash | `em` 44, `en` 1 | **em** |
 | nbsp | `space-before-punctuation` 5 | **space-before-punctuation** |
 
@@ -85,15 +142,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (295)
+## 3. Open findings (305)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 159 |
-| 2 | Wrong content (says something other than the English) | 124 |
-| 3 | Degraded language (grammar, spelling, terminology) | 3 |
-| 4 | Cosmetic (typography, spacing) | 9 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 158 |
+| 2 | Wrong content (says something other than the English) | 128 |
+| 3 | Degraded language (grammar, spelling, terminology) | 8 |
+| 4 | Cosmetic (typography, spacing) | 11 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -399,6 +456,11 @@ _Nothing reported._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
+- `newtab-stocks-menu-search-stocks` — `browser/browser/newtab/newtab.ftl` — "Symbol" (stock ticker symbol) is rendered as 기호, which means a sign or character, not a ticker.
+    - Current: `이름 또는 기호로 검색`
+    - Source: `Search by Name or Symbol`
+    - Suggest: `이름 또는 티커로 검색`
+    - The developer comment says this searches stocks by company name or ticker symbol. 기호 is the literal word for a symbol or sign, which is the wrong sense in a stock context. 티커 or 종목 코드 is the expected term.
 - `newtab-widget-wrexhamafc-view-matches` — `browser/browser/newtab/newtab.ftl` — "Matches" (football games) is translated as "일치" (agreement/correspondence).
     - Current: `일치`
     - Source: `Matches`
@@ -409,6 +471,21 @@ _Nothing reported._
     - Source: `accesskey: x label: Duplicate Tabs`
     - Suggest: `중복 탭`
     - The developer comment says this item sits under "Close Multiple" and closes the duplicate tabs of the selected tab. "탭 복제" reads as the command to duplicate a tab, which is a different action.
+- `reg-app-desc` — `browser/installer/custom.ftl` — "protection from online identity theft" is mistranslated as defence against "online-specific attacks", losing identity theft.
+    - Current: `온라인 고유의 공격으로부터의 방어`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `온라인 신원 도용으로부터의 보호`
+    - en-US names protection from online identity theft; "온라인 고유의 공격" means "attacks specific to online" and does not convey identity theft (신원 도용).
+- `mui-untext-finish-info-text` — `browser/installer/mui.ftl` — The uninstall wizard's finish text calls itself the installation wizard (설치 마법사).
+    - Current: `설치 마법사를 종료하려면`
+    - Source: `{ $BrandFullNameDA } has been uninstalled from your computer.  Click Finish to close this wizard.`
+    - Suggest: `제거 마법사를 종료하려면`
+    - This text appears when uninstalling finishes, and "this wizard" means the uninstall wizard. The title string mui-untext-finish-info-title also calls it '제거 마법사'. '설치 마법사' means installation wizard, which is the wrong thing.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The negation is dropped: the Korean tells the user to check whether the app is running, not to make sure it is not running.
+    - Current: `{ $BrandFullNameDA }가 실행되고 있는지 먼저 확인하세요`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `{ $BrandFullNameDA }가 실행되고 있지 않은지 확인하세요`
+    - en-US says "make sure { $BrandFullNameDA } is not running". The Korean leaves out the "not", so the instruction no longer tells the user to close the app before uninstalling.
 - `DocumentReleaseCaptureWarning` — `dom/chrome/dom/dom.properties` — The do-not-translate identifier "Element.releasePointerCapture()" has lost its "Element." prefix.
     - Current: `대신 releasePointerCapture()를 사용하세요`
     - Source: `Document.releaseCapture() is deprecated. Use Element.releasePointerCapture() instead. For more help https://developer.mozilla.org/docs/Web/API/Element/releasePointerCapture`
@@ -419,6 +496,21 @@ _Nothing reported._
     - Source: `Gamepad.hapticActuators is non-standard and deprecated.`
     - Suggest: `Gamepad.hapticActuators는`
     - The comment says not to translate "Gamepad.hapticActuators". The target adds an 'r' and drops the final 's', so it names an API that doesn't exist.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - The same string first renders the term correctly as '처리 명령어 대상'. The later '처리중인 명령어' means 'the instruction being processed', which is a mistranslation of the technical term, and it also misses the space before 중.
+- `errInvalidFirstCharacterOfProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Invalid first character of processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - 'Processing instruction' is a technical term, rendered '처리 명령어' earlier in the same string. '처리중인 명령어' means 'the instruction currently being processed', and the dependent noun 중 must be spaced ('처리 중인').
+- `errInvalidProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "processing instruction" (XML PI) is rendered as "처리중인 명령어" (instruction being processed) and 중 is not spaced.
+    - Current: `처리중인 명령어를 주석으로 취급합니다.`
+    - Source: `Invalid character in processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `처리 명령어를 주석으로 취급합니다.`
+    - 'Processing instruction' is an XML technical term, rendered '처리 명령어' elsewhere. '처리중인 명령어' means 'the instruction being processed', and 중 should be spaced.
 - `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The conditional "would block" of a report-only policy is translated as a plain statement that the redirect is blocked.
     - Current: `페이지 설정에서 %1$S의 리디렉션을 차단합니다.`
     - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
@@ -522,6 +614,16 @@ _Nothing reported._
     - Source: `Firefox cannot guarantee the safety of your data on %S because it uses SSLv3, a broken security protocol.`
     - Suggest: `데이터의 안전성을`
     - en-US: 'Firefox cannot guarantee the safety of your data'. 안정성 means stability, a different word from 안전성 (safety/security). As written, the warning says Firefox cannot guarantee the data's stability, not its safety from SSLv3 attacks.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — "업데이트 할" should be written as one word, "업데이트할".
+    - Current: `업데이트 할`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `업데이트할`
+    - 업데이트하다 is a single verb, so Korean spelling rules write it without a space.
+- `nsis-file-error` — `browser/installer/override.ftl` — The compound verb 건너뛰다 is wrongly split with a space.
+    - Current: `건너 뛰려면`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `건너뛰려면`
+    - Standard Korean spelling treats 건너뛰다 (to skip) as a single word, so it should have no space.
 - `netmonitor.context.saveResponseAs` — `devtools/client/netmonitor.properties` — 'Response' is rendered as '답변' here, but as '응답' everywhere else in the Network panel
     - Current: `다른 이름으로 답변 저장`
     - Source: `Save Response As`
@@ -732,17 +834,7 @@ _Nothing reported._
     - Source: `Montenegro`
     - Suggest: `몬테네그로`
     - Spelling error.
-- `region-name-mg` — `toolkit/toolkit/intl/regionNames.ftl` — Madagascar is misspelled as 마다카스카르.
-    - Current: `마다카스카르`
-    - Source: `Madagascar`
-    - Suggest: `마다가스카르`
-    - Spelling error.
-- `region-name-mm` — `toolkit/toolkit/intl/regionNames.ftl` — Myanmar is misspelled as 미안마.
-    - Current: `미안마`
-    - Source: `Burma`
-    - Suggest: `미얀마`
-    - Spelling error.
-- _…and 3 more; see `state/` for the full list._
+- _…and 5 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -957,20 +1049,15 @@ _Nothing reported._
 - `ai-window-delete-all-memories-message` — `browser/browser/aiFeatures.ftl` — `ai-window-delete-all-memories-message` uses three dots where this locale uses …
     - Current: `기존에 저장된 기억이 모두 삭제됩니다. 새로운 기억이 생성되는 것을 원치 않으시면 { -smart-window-brand-name } 설정에서 '...에서 학습' 옵션을 끄세요.`
     - Source: `Existing memories will be deleted. If you don’t want any new memories created, uncheck the options to “Learn from…” in { -smart-window-brand-name } settings.`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `aiwindow-input-cta-menu-label-search-with` — `browser/browser/aiWindow.ftl` — `aiwindow-input-cta-menu-label-search-with` uses three dots where this locale uses …
     - Current: `다음으로 검색...`
     - Source: `Search with…`
-    - The tree uses … 394 times against 5 ASCII runs.
-- `aiwindow-input-model-select-menu-item-description` — `browser/browser/aiWindow.ftl` — The space between the owner name and the model name was dropped.
-    - Current: `{ $ownerName }{ $model }`
-    - Source: `{ $ownerName } { $model }`
-    - Suggest: `{ $ownerName } { $model }`
-    - en-US has '{ $ownerName } { $model }'. Without the space, the provider and model names merge into one word on screen.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `smartbar-placeholder-hint-1` — `browser/browser/aiWindow.ftl` — `smartbar-placeholder-hint-1` uses three dots where this locale uses …
     - Current: `@로 최근 탭 지정...`
     - Source: `Use @ to mention recent tabs…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `crashed-subframe-title` — `browser/browser/contentCrash.ftl` — A space is missing between the two sentences.
     - Current: `손상되었습니다.{ -brand-product-name }`
     - Source: `title: Part of this page crashed. To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.`
@@ -984,7 +1071,7 @@ _Nothing reported._
 - `genai-input-ask-provider` — `browser/browser/genai.ftl` — `genai-input-ask-provider` uses three dots where this locale uses …
     - Current: `{ $provider }에게 물어보기...`
     - Source: `placeholder: Ask { $provider }…`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `more-from-moz-firefox-relay-button` — `browser/browser/preferences/moreFromMozilla.ftl` — The space between the brand name and 받기 is missing.
     - Current: `{ -relay-brand-short-name }받기`
     - Source: `Get { -relay-brand-short-name }`
@@ -993,7 +1080,7 @@ _Nothing reported._
 - `noDomMutationBreakpoints.notice` — `devtools/client/debugger.properties` — `noDomMutationBreakpoints.notice` uses three dots where this locale uses …
     - Current: `검사기에서 요소를 마우스 오른쪽 버튼으로 누르고 "중단..."을 선택하여 중단점 추가`
     - Source: `Right click an element in the Inspector and select “Break on…” to add a breakpoint`
-    - The tree uses … 394 times against 5 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `netmonitor.status.tooltip.cached` — `devtools/client/netmonitor.properties` — The space between status code and status text is missing
     - Current: `%1$S%2$S (캐시)`
     - Source: `%1$S %2$S (cached)`
@@ -1004,6 +1091,16 @@ _Nothing reported._
     - Source: `%1$S %2$S`
     - Suggest: `%1$S %2$S`
     - en-US '%1$S %2$S' renders as '200 OK'. Without the space the tooltip reads '200OK'. The sibling worker strings keep the space.
+- `UseOfCaptureEventsWarning` — `dom/chrome/dom/dom.properties` — The space between the method name and 메소드 is missing.
+    - Current: `addEventListener()메소드`
+    - Source: `Use of captureEvents() is deprecated. To upgrade your code, use the DOM 2 addEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener`
+    - Suggest: `addEventListener() 메소드`
+    - The identifier and the following Korean noun are separate words and need a space between them.
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The space between the method name and 메소드 is missing.
+    - Current: `removeEventListener()메소드`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
+    - Suggest: `removeEventListener() 메소드`
+    - The identifier and the following Korean noun are separate words and need a space between them.
 - `shortcuts-remove-button` — `toolkit/toolkit/about/aboutAddons.ftl` — 'Shortcut' is rendered as 바로 가기 here but as 단축키 in every other string in the shortcut-management UI.
     - Current: `바로 가기 제거`
     - Source: `aria-label: Remove shortcut`

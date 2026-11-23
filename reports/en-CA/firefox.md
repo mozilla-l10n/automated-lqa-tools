@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 129 of 16,884 |
+| **Strings reviewed this run** | 317 of 17,154 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,11 @@ Also for en-CA: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `main-context-menu-open-link-split-view-2` — `browser/browser/browserContext.ftl` — Access key `M` of `main-context-menu-open-link-split-view-2` is not present in its label
+    - Current: `M`
+    - The label is “Open in Split View”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,12 +46,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,884 |
+| Files | 337 |
+| Strings | 17,154 |
 | Missing strings | 0 |
-| Obsolete strings | 1 |
+| Obsolete strings | 26 |
 | Files absent from the locale | 0 |
-| Files with no en-US counterpart | 0 |
+| Files with no en-US counterpart | 1 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -57,7 +59,7 @@ _Nothing retired._
 | Plural variants (dead or missing forms) | 0 |
 | Text quoting a UI label that no longer matches | 0 |
 | Source-language spellings left unchanged | 1 |
-| Access keys not in their label | 0 |
+| Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
 | Typography deviations from this locale's own norm | 0 |
 
@@ -65,15 +67,21 @@ _Nothing retired._
 
 The locale is complete against the en-US source.
 
+### Files with no en-US counterpart
+
+- `browser/browser/windowLock.ftl`
+
+_8 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+
 ### Conventions detected in this locale
 
 Counted over the whole tree. Checks flag deviations from the locale's **own** majority, so a convention that reads _mixed_ produces no findings at all.
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 700, `curly-single` 64, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1024, `straight` 4 | **typographic** |
-| ellipsis | `char` 401 | **char** |
+| quotes | `curly-double` 699, `curly-single` 64, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1058, `straight` 4 | **typographic** |
+| ellipsis | `char` 411 | **char** |
 | dash | `em` 84, `en` 3 | **em** |
 | nbsp | `total` 5, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -85,19 +93,21 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
 ### A. Functional, markup, variables & plurals
 
-_Nothing in this category._
+- `main-context-menu-open-link-split-view-2` — `browser/browser/browserContext.ftl` — Access key `M` of `main-context-menu-open-link-split-view-2` is not present in its label
+    - Current: `M`
+    - The label is “Open in Split View”. An access key not in the label cannot be underlined and is unreachable by keyboard.
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 

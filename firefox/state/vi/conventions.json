@@ -1,8 +1,8 @@
 {
  "_meta": {
   "locale": "vi",
-  "prose_chunks": 17382,
-  "strings": 16563
+  "prose_chunks": 17608,
+  "strings": 16784
  },
  "apostrophe": {
   "straight": 12,
@@ -14,7 +14,7 @@
  },
  "ellipsis": {
   "ascii": 18,
-  "char": 378
+  "char": 387
  },
  "fullwidth": {
   "punctuation": 0
@@ -30,7 +30,7 @@
   "total": 0
  },
  "quotes": {
-  "curly-double": 499,
+  "curly-double": 511,
   "curly-single": 134,
   "straight-double": 88
  }

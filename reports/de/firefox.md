@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 16 of 17,112 |
+| **Strings reviewed this run** | 319 of 17,349 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,41 +18,27 @@ Also for de: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (3)
 
-- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
-    - Current: `unerwartet wechseln`
-    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
-    - Suggest: `sich unerwartet verschieben`
-    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
+- `error-create-directory-suffix` — `browser/installer/custom.ftl` — The button name "Wiederholen" is written in lowercase, so it reads as a verb rather than a button label.
+    - Current: `wiederholen, um es erneut zu versuchen.`
+    - Source: `Click Cancel to stop the installation or Retry to try again.`
+    - Suggest: `auf Wiederholen, um es erneut zu versuchen.`
+    - The en-US names the "Retry" button, just as it names "Cancel" (rendered as "Abbrechen" in this string). The German button label is "Wiederholen" and must be capitalized like "Abbrechen". Lowercase "wiederholen" does not read as a button name.
+- `nsis-components-text` — `browser/installer/override.ftl` — Missing comma closing the relative clause before the second main clause.
+    - Current: `die Sie installieren möchten und wählen Sie`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `die Sie installieren möchten, und wählen Sie`
+    - In German, a comma must close the relative clause "die Sie installieren möchten" before the sentence carries on with "und wählen Sie …". Without it the sentence is punctuated wrongly.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "Processing instruction" is rendered as "Verarbeitungsanleitung" in the second sentence, though the first sentence and the related strings use "Verarbeitungsanweisung".
+    - Current: `Verarbeitungsanleitung wird als Kommentar behandelt.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `Die Verarbeitungsanweisung wird als Kommentar behandelt.`
+    - The same technical term (XML processing instruction) appears twice in this one message. The sibling parser errors use "Verarbeitungsanweisung" throughout and "Die Verarbeitungsanweisung wird als Kommentar behandelt." "Verarbeitungsanleitung" means a set of processing directions (a manual), not the XML construct, and the article is also missing.
 
-### ✅ Fixed since the last run (5)
+### ✅ Fixed since the last run (0)
 
-- `restart-required-why-now-answer` — `browser/browser/aboutRestartRequired.ftl` — Brand placeable replaced with hardcoded "Firefox" in the first occurrence.
-    - Current: `wenn ein anderes Firefox-Profil`
-    - Source: `This can happen when another { -brand-short-name } profile or instance updates, or when an update can’t wait until your next restart.`
-    - Suggest: `wenn ein anderes { -brand-short-name }-Profil`
-    - The en-US uses { -brand-short-name } for the profile reference; hardcoding "Firefox" breaks brand substitution for other builds.
-- `permissions-allow-app-links` — `browser/browser/preferences/preferences.ftl` — The German drops "ask", so it says sites may open app links rather than ask to open them.
-    - Current: `Websites erlauben, App-Links zu öffnen.`
-    - Source: `accesskey: A label: Allow sites to ask to open app links.`
-    - Suggest: `Websites erlauben, das Öffnen von App-Links anzufragen.`
-    - The en-US "Allow sites to ask to open app links" grants permission to ask, which matches the related strings ("Fragen, ob App-Links geöffnet werden sollen"). The German claims sites may open app links directly, a wider permission than the setting gives.
-- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
-    - Current: `unerwartet wechseln`
-    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
-    - Suggest: `sich unerwartet verschieben`
-    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
-- `download-ui-confirm-quit-title` — `toolkit/toolkit/downloads/downloadUI.ftl` — "Stop" is rendered as "abbrechen" (cancel) in one variant, while the other variants of the same message use "anhalten"/"stoppen".
-    - Current: `1 Download abbrechen und { -brand-short-name } beenden?`
-    - Source: `{$sel_1, downloadsCount ->} [windows 1] Stop 1 download and exit { -brand-short-name }? [windows other] Stop { $downloadsCount } downloads and exit { -brand-short-name }? [other 1] Stop 1 download and quit { -brand-shor…`
-    - Suggest: `1 Download stoppen und { -brand-short-name } beenden?`
-    - The en-US uses "Stop" in every variant, and the follow-up message says the download will be resumed. "abbrechen" means cancel, which contradicts that. The other macOS/Linux variants use "stoppen".
-- `EditContextCharacterBoundsWarning` — `dom/chrome/dom/dom.properties` — "move around unexpectedly" is rendered as "unerwartet wechseln" (switch/change) instead of describing movement of the IME interface.
-    - Current: `unerwartet wechseln`
-    - Source: `EditContext.updateCharacterBounds() was not called synchronously in characterboundsupdate event listener. IME interface may move around unexpectedly for some users. More information: https://developer.mozilla.org/docs/W…`
-    - Suggest: `sich unerwartet verschieben`
-    - The en-US says the IME interface may physically move around on screen. "wechseln" means to change or switch, which describes a different behaviour.
+_Nothing was fixed._
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -72,8 +58,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 341 |
-| Strings | 17,112 |
+| Files | 346 |
+| Strings | 17,349 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,7 +69,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 6 |
+| Text quoting a UI label that no longer matches | 4 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 1 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -118,12 +104,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 750, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
+| quotes | `straight-double` 752, `curly-double` 69, `german-double` 14, `curly-single` 2 | **straight-double** |
 | apostrophe | `typographic` 6, `straight` 115 | **straight** |
-| ellipsis | `char` 416 | **char** |
+| ellipsis | `char` 425 | **char** |
 | dash | `em` 19, `en` 70 | **en** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 12, `formal` 4057 | **formal** |
+| register | `informal` 12, `formal` 4147 | **formal** |
 
 ---
 
@@ -133,14 +119,14 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (3)
+## 3. Open findings (6)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
 | 2 | Wrong content (says something other than the English) | 1 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
 | 4 | Cosmetic (typography, spacing) | 1 |
 
 ### A. Functional, markup, variables & plurals
@@ -156,7 +142,16 @@ _Nothing in this category._
 
 ### C. Grammar, agreement & spelling
 
-_Nothing in this category._
+- `error-create-directory-suffix` — `browser/installer/custom.ftl` — The button name "Wiederholen" is written in lowercase, so it reads as a verb rather than a button label.
+    - Current: `wiederholen, um es erneut zu versuchen.`
+    - Source: `Click Cancel to stop the installation or Retry to try again.`
+    - Suggest: `auf Wiederholen, um es erneut zu versuchen.`
+    - The en-US names the "Retry" button, just as it names "Cancel" (rendered as "Abbrechen" in this string). The German button label is "Wiederholen" and must be capitalized like "Abbrechen". Lowercase "wiederholen" does not read as a button name.
+- `nsis-components-text` — `browser/installer/override.ftl` — Missing comma closing the relative clause before the second main clause.
+    - Current: `die Sie installieren möchten und wählen Sie`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `die Sie installieren möchten, und wählen Sie`
+    - In German, a comma must close the relative clause "die Sie installieren möchten" before the sentence carries on with "und wählen Sie …". Without it the sentence is punctuated wrongly.
 
 ### D. Terminology, register & consistency
 
@@ -165,6 +160,11 @@ _Nothing in this category._
     - Source: `Want to help? <label data-l10n-name="helpus-donateLink">Make a donation</label>, <label data-l10n-name="helpus-shareFirefoxLink">share { -brand-product-name }</label>, or <label data-l10n-name="helpus-getInvolvedLink">g…`
     - Suggest: `empfehlen Sie { -brand-product-name }`
     - The developer comments for the parallel referral strings state that "Share" means recommending/referring the browser; the de tree consistently uses "empfehlen", so "Teilen" (file sharing sense) is inconsistent and misleading.
+- `errDisallowedProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "Processing instruction" is rendered as "Verarbeitungsanleitung" in the second sentence, though the first sentence and the related strings use "Verarbeitungsanweisung".
+    - Current: `Verarbeitungsanleitung wird als Kommentar behandelt.`
+    - Source: `Processing instruction targets “xml” and “xml-stylesheet” are not allowed. Treating the processing instruction as a comment.`
+    - Suggest: `Die Verarbeitungsanweisung wird als Kommentar behandelt.`
+    - The same technical term (XML processing instruction) appears twice in this one message. The sibling parser errors use "Verarbeitungsanweisung" throughout and "Die Verarbeitungsanweisung wird als Kommentar behandelt." "Verarbeitungsanleitung" means a set of processing directions (a manual), not the XML construct, and the article is also missing.
 
 ### E. Typography, punctuation & spacing
 

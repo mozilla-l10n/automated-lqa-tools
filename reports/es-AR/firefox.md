@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 11 of 16,848 |
+| **Strings reviewed this run** | 313 of 17,081 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,121 @@ Also for es-AR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (21)
 
-- `newtab-clock-widget-input-nickname2` — `browser/browser/newtab/newtab.ftl` — "caracter" is missing its written accent; the correct spelling is "carácter".
-    - Current: `{ $count } caracter restante`
-    - Source: `aria-label: Nickname (optional) description: {$count ->} [one] { $count } character left [other] { $count } characters left label: Nickname (optional) placeholder: Add a nickname`
-    - Suggest: `{ $count } carácter restante`
-    - The singular of "caracteres" is spelled "carácter" in Spanish (it's stressed on the second-to-last syllable and ends in -r, so it takes an accent). Without the accent it's a spelling error.
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — Misspelling "incie" instead of "inicie".
+    - Current: `se incie`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `se inicie`
+    - Typo in the verb iniciar (subjunctive "inicie").
+- `smartwindow-onboarding-welcome-subtitle` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Trabaja a su lado para hacer las cosas. Planifique, compare, explore y mucho más.`
+    - Source: `It works alongside you to get stuff done. Plan, compare, explore, and more.`
+    - Suggest: `Trabaja a tu lado para hacer las cosas. Planificá, compará, explorá y mucho más.`
+    - es-AR addresses the user with vos/tu, as the other Smart Window strings here do ("chateás", "tu tarea"). These onboarding strings switch to usted.
+- `smartwindow-onboarding-subtitle` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Configure { -smart-window-brand-name } a su gusto. Puede hacer cambios`
+    - Source: `Set up { -smart-window-brand-name } the way you like. Make changes anytime in settings.`
+    - Suggest: `Configurá { -smart-window-brand-name } a tu gusto. Podés hacer cambios`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-model-label` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Elija su modelo de IA`
+    - Source: `Pick your AI model`
+    - Suggest: `Elegí tu modelo de IA`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-memories-label` — `browser/browser/aiWindow.ftl` — Uses formal "usted" where es-AR uses vos.
+    - Current: `aprende sobre usted`
+    - Source: `Choose how { -smart-window-brand-name } learns about you`
+    - Suggest: `aprende sobre vos`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-memories-none-description` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Verá menos sugerencias personalizadas y es posible que tenga que repetir`
+    - Source: `You’ll see fewer tailored suggestions and may need to repeat details across chats.`
+    - Suggest: `Vas a ver menos sugerencias personalizadas y es posible que tengas que repetir`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — Typo "TiTiene" in the plural heading variant.
+    - Current: `TiTiene`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `Tiene`
+    - Duplicated syllable; the word is "Tiene" as in the singular variant.
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — Affirmative "Sí" is missing its accent.
+    - Current: `Si, ir a`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Sí, ir a`
+    - en-US "Yes" is the adverb "sí", which needs an accent. Without it, "si" means "if".
+- `reg-app-desc` — `browser/installer/custom.ftl` — Spurious accent in "obtenér".
+    - Current: `obtenér`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `obtener`
+    - "obtener" is a word stressed on the last syllable and ending in r, so it takes no written accent.
+- `payment-moz-box-item-with-security-code-3` — `browser/browser/preferences/preferences.ftl` — Plural "guardados" does not agree with the singular security code name.
+    - Current: `{ $securityCode } guardados`
+    - Source: `description: { $expDate } \| { $securityCode } saved label: { $cardNumber }`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name (e.g. CVV). The sibling string payment-moz-box-item-security-code-only-3 correctly uses "guardado".
+- `warn-write-access` — `browser/installer/custom.ftl` — Leftover English fragment duplicated after the translated instruction.
+    - Current: `un directorio diferente OK to select a different directory.`
+    - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
+    - Suggest: `un directorio diferente.`
+    - The second sentence contains the untranslated English tail 'OK to select a different directory.' appended after the Spanish, producing garbled text.
+- `warn-write-access` — `browser/installer/custom.ftl` — Translation drops 'to write' and has a stray space before the period.
+    - Current: `No tiene acceso al directorio de instalación .`
+    - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
+    - Suggest: `No tiene permiso para escribir en el directorio de instalación.`
+    - en-US says the user lacks write access to the installation directory; the es-AR says they have no access at all, and includes a space before the period.
+- `warn-restart-required-uninstall` — `browser/installer/custom.ftl` — 'previous uninstall' translated as 'previous installation'.
+    - Current: `una instalación previa`
+    - Source: `Your computer must be restarted to complete a previous uninstall of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `una desinstalación previa`
+    - The source refers to completing a previous uninstall; 'instalación' states the opposite operation.
+- `mui-text-welcome-info-title` — `browser/installer/mui.ftl` — There's a double space between "de" and "instalación" in the welcome title.
+    - Current: `asistente de  instalación`
+    - Source: `Welcome to the { $BrandFullNameDA } Setup Wizard`
+    - Suggest: `asistente de instalación`
+    - Users see this extra space in the welcome screen title. The en-US has a single space there.
+- `nsis-file-error` — `browser/installer/override.ftl` — The English conjunction "or" was left in the Spanish sentence instead of "o".
+    - Current: `tratar nuevamente or en`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `tratar nuevamente o en`
+    - "or" is English, so the sentence is ungrammatical in Spanish. The sibling string nsis-file-error-no-ignore correctly uses "o en".
+- `nsis-click-uninstall` — `browser/installer/override.ftl` — The button name "Desinstalar" is lowercase, unlike the other button names in the installer instructions.
+    - Current: `Haga clic en desinstalar`
+    - Source: `Click Uninstall to start the uninstallation.`
+    - Suggest: `Haga clic en Desinstalar`
+    - The source refers to the Uninstall button by name. The other instructions capitalize button labels ("Siguiente", "Instalar", "Examinar"), so the lowercase form is inconsistent and does not read as a button label.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — "invalid opcode" is still in English inside an otherwise translated sentence.
+    - Current: `invalid opcode`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `código de operación no válido`
+    - The rest of the string is translated, so the English fragment is a partial translation slip that users will see in the middle of a Spanish message.
+- `errInvalidFirstCharacterOfProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "caracter" is missing its written accent; the standard spelling is "carácter".
+    - Current: `Primer caracter`
+    - Source: `Invalid first character of processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `Primer carácter`
+    - Standard Spanish spelling (RAE) writes the singular as "carácter", with an accent.
+- `errInvalidProcessingInstructionTarget` — `dom/chrome/layout/htmlparser.properties` — "Caracter" is missing its written accent; the standard spelling is "Carácter".
+    - Current: `Caracter inválido`
+    - Source: `Invalid character in processing instruction target. Treating the processing instruction as a comment.`
+    - Suggest: `Carácter inválido`
+    - Standard Spanish spelling (RAE) writes the singular as "carácter", with an accent.
+- `credit-card-label-with-security-code-3` — `toolkit/toolkit/payments/payments.ftl` — The participle is plural, but it refers to one security code (such as "CVV"), so it should be singular.
+    - Current: `{ $securityCode } guardados`
+    - Source: `(value): { $label } \| { $securityCode } saved aria-label: { $ariaLabel }, { $securityCode } saved`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name, for example "CVV" (el CVV), so the participle should be masculine singular. This applies to both the value and the aria-label.
+- `dialog-button-dont-save` — `toolkit/toolkit/global/dialog.ftl` — The label capitalizes the second word, which Spanish sentence case doesn't do.
+    - Current: `No Guardar`
+    - Source: `accesskey: n label: Don’t Save`
+    - Suggest: `No guardar`
+    - Spanish button labels use sentence case. The sibling labels follow it ("Más información", "Copiar detalles al portapapeles"), and the English title case should not be copied.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
+    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Qué hay de nuevo`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +142,12 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label uses plural "guardados" while the parallel value and all other CVV strings use singular "guardado".
+    - Current: `aria-label: { $ariaLabel }, CVV guardados`
+    - Suggest: `aria-label: { $ariaLabel }, CVV guardado`
+    - "CVV saved" refers to a single security code; the visible value in the same message and the credit-card-doorhanger-details-* strings use "CVV guardado". The plural is an agreement error and an inconsistency.
 
 ---
 
@@ -48,9 +155,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,848 |
-| Missing strings | 35 |
+| Files | 336 |
+| Strings | 17,081 |
+| Missing strings | 39 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +166,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 2 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 2 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -67,20 +174,20 @@ _Nothing retired._
 
 ### Completeness
 
-**35 strings** are not translated yet, concentrated in:
+**39 strings** are not translated yet, concentrated in:
 
 - `browser/browser/newtab/newtab.ftl` — 10
 - `toolkit/toolkit/about/url-classifier.ftl` — 6
 - `browser/browser/newtab/onboarding.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 4
 - `browser/browser/featureCallout.ftl` — 3
-- `browser/browser/preferences/preferences.ftl` — 3
+- `browser/browser/aiWindow.ftl` — 2
 - `toolkit/toolkit/about/aboutProcesses.ftl` — 2
 - `browser/browser/newtab/asrouter.ftl` — 1
-- `toolkit/toolkit/global/processTypes.ftl` — 1
-- `toolkit/toolkit/firefoxlabs/features.ftl` — 1
-- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `dom/chrome/layout/htmlparser.properties` — 1
 - `dom/chrome/dom/dom.properties` — 1
-- `devtools/client/debugger.properties` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
+- `toolkit/toolkit/global/processTypes.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -90,12 +197,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 478, `straight-double` 140, `curly-single` 94 | **curly-double** |
+| quotes | `curly-double` 477, `straight-double` 140, `curly-single` 94 | **curly-double** |
 | apostrophe | `typographic` 106, `straight` 67 | _mixed_ |
-| ellipsis | `char` 401, `ascii` 1 | **char** |
+| ellipsis | `char` 410, `ascii` 1 | **char** |
 | dash | `em` 63, `en` 1 | **em** |
 | nbsp | `total` 5, `before-punctuation` 3, `space-before-punctuation` 7 | _mixed_ |
-| inverted marks | `open-question` 355, `open-exclamation` 69 | **open-question** |
+| inverted marks | `open-question` 364, `open-exclamation` 74 | **open-question** |
 
 ---
 
@@ -106,15 +213,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (299)
+## 3. Open findings (318)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 48 |
-| 2 | Wrong content (says something other than the English) | 113 |
-| 3 | Degraded language (grammar, spelling, terminology) | 102 |
-| 4 | Cosmetic (typography, spacing) | 31 |
+| 2 | Wrong content (says something other than the English) | 115 |
+| 3 | Degraded language (grammar, spelling, terminology) | 117 |
+| 4 | Cosmetic (typography, spacing) | 33 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -515,6 +622,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
     - Suggest: `Pestañas abiertas en los otros dispositivos`
     - The developer comment says "Open tabs" is a modified noun (tabs that are open). The translation turns it into an instruction to open tabs.
+- `warn-restart-required-uninstall` — `browser/installer/custom.ftl` — 'previous uninstall' translated as 'previous installation'.
+    - Current: `una instalación previa`
+    - Source: `Your computer must be restarted to complete a previous uninstall of { $BrandShortName }. Do you want to reboot now?`
+    - Suggest: `una desinstalación previa`
+    - The source refers to completing a previous uninstall; 'instalación' states the opposite operation.
+- `warn-write-access` — `browser/installer/custom.ftl` — Leftover English fragment duplicated after the translated instruction.
+    - Current: `un directorio diferente OK to select a different directory.`
+    - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
+    - Suggest: `un directorio diferente.`
+    - The second sentence contains the untranslated English tail 'OK to select a different directory.' appended after the Spanish, producing garbled text.
+- `warn-write-access` — `browser/installer/custom.ftl` — Translation drops 'to write' and has a stray space before the period.
+    - Current: `No tiene acceso al directorio de instalación .`
+    - Source: `You don’t have access to write to the installation directory.  Click OK to select a different directory.`
+    - Suggest: `No tiene permiso para escribir en el directorio de instalación.`
+    - en-US says the user lacks write access to the installation directory; the es-AR says they have no access at all, and includes a space before the period.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — "invalid opcode" is still in English inside an otherwise translated sentence.
+    - Current: `invalid opcode`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `código de operación no válido`
+    - The rest of the string is translated, so the English fragment is a partial translation slip that users will see in the middle of a Spanish message.
 - `DrawWindowCanvasRenderingContext2DWarning` — `dom/chrome/dom/dom.properties` — The API name tabs.captureTab was translated to “pestañas.captureTab”.
     - Current: `Usar las pestañas.captureTab extensions API en lugar de`
     - Source: `Use of drawWindow method from CanvasRenderingContext2D is deprecated. Use tabs.captureTab extensions API instead https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab`
@@ -658,6 +785,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ### C. Grammar, agreement & spelling
 
+- `smartwindow-onboarding-default-window` — `browser/browser/aiWindow.ftl` — Misspelling "incie" instead of "inicie".
+    - Current: `se incie`
+    - Source: `description: Use it when { -brand-short-name } starts, restarts, or opens links from other apps. label: Start in { -smart-window-brand-name }`
+    - Suggest: `se inicie`
+    - Typo in the verb iniciar (subjunctive "inicie").
 - `appmenu-sync-promo-connectdevice` — `browser/browser/appmenu.ftl` — Heading begins with a stray infinitive marker "A traer", which is not idiomatic Spanish for the imperative heading.
     - Current: `A traer las pestañas del dispositivo móvil`
     - Source: `heading: Grab your mobile tabs`
@@ -668,6 +800,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn how`
     - Suggest: `Aprender cómo`
     - In "Learn how", "how" is an indirect interrogative, so Spanish requires the accented "cómo".
+- `keyword-uri-fixup-go-to-button` — `browser/browser/browser.ftl` — Affirmative "Sí" is missing its accent.
+    - Current: `Si, ir a`
+    - Source: `accesskey: Y label: Yes, take me to { $hostName }`
+    - Suggest: `Sí, ir a`
+    - en-US "Yes" is the adverb "sí", which needs an accent. Without it, "si" means "if".
 - `downloads-unblock-type-uncommon` — `browser/browser/downloads.ftl` — Missing accent in "comunmente".
     - Current: `comunmente`
     - Source: `This file is not commonly downloaded and may not be safe to open. It may contain a virus or make unexpected changes to your programs and settings.`
@@ -678,6 +815,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Help hide your location as you browse. Set rules to turn on VPN when you want <a data-l10n-name="learn-more-vpn">extra privacy</a> or location-based browsing, and off when you don’t.`
     - Suggest: `no quiera`
     - The intended phrase is "cuando no quiera" ("when you don't"). As written, the text has a garbled word.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — Typo "TiTiene" in the plural heading variant.
+    - Current: `TiTiene`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `Tiene`
+    - Duplicated syllable; the word is "Tiene" as in the singular variant.
 - `ipprotection-site-inclusions-callout-description-lapsed-users` — `browser/browser/ipProtection.ftl` — Typo in the verb: "Establezcam" should be "Establezca".
     - Current: `Establezcam`
     - Source: `Set rules to turn on VPN when you want extra privacy or location-based browsing, and off when you don’t.`
@@ -738,6 +880,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
     - Suggest: `Las conexiones a localhost, 127.0.0.1/8 y ::1 nunca pasan por proxy.`
     - The developer comment says: Do not translate "localhost", "127.0.0.1/8" and "::1". The CIDR suffix /8 was dropped, changing the technical statement.
+- `payment-moz-box-item-with-security-code-3` — `browser/browser/preferences/preferences.ftl` — Plural "guardados" does not agree with the singular security code name.
+    - Current: `{ $securityCode } guardados`
+    - Source: `description: { $expDate } \| { $securityCode } saved label: { $cardNumber }`
+    - Suggest: `{ $securityCode } guardado`
+    - $securityCode is one code name (e.g. CVV). The sibling string payment-moz-box-item-security-code-only-3 correctly uses "guardado".
 - `preferences-connection-link-section` — `browser/browser/preferences/preferences.ftl` — Missing accent on "cómo" in the interrogative/relative clause.
     - Current: `Vea como las conexiones`
     - Source: `description: See how connections stay secure, harmful software is blocked, and websites are verified. label: Connection and software security`
@@ -903,11 +1050,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Firefox doesn’t know how to open this address, because one of the following protocols (%S) isn’t associated with any program or is not allowed in this context.`
     - Suggest: `Firefox no sabe cómo abrir esta dirección`
     - Indirect interrogative "cómo" is always accented. Same error in clientSocketMisconfiguration and unknownSocketType ("no sabe como comunicarse").
+- `reg-app-desc` — `browser/installer/custom.ftl` — Spurious accent in "obtenér".
+    - Current: `obtenér`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `obtener`
+    - "obtener" is a word stressed on the last syllable and ending in r, so it takes no written accent.
 - `REG_APP_DESC` — `browser/installer/custom.properties` — Misspelled infinitive "obtenér" with a spurious accent.
     - Current: `obtenér`
     - Source: `$BrandShortName delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
     - Suggest: `obtener`
     - Infinitives ending in -er carry no written accent; "obtenér" is a spelling error.
+- `nsis-file-error` — `browser/installer/override.ftl` — The English conjunction "or" was left in the Spanish sentence instead of "o".
+    - Current: `tratar nuevamente or en`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `tratar nuevamente o en`
+    - "or" is English, so the sentence is ungrammatical in Spanish. The sibling string nsis-file-error-no-ignore correctly uses "o en".
 - `serviceworker-list-aboutdebugging` — `devtools/client/application.ftl` — "domínios" is misspelled (Portuguese form); Spanish is "dominios".
     - Current: `de otros domínios`
     - Source: `Open <a>about:debugging</a> for Service Workers from other domains`
@@ -928,40 +1085,35 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `The page you are trying to view cannot be shown because it is contained in a file type that may not be safe to open. Please contact the website owners to inform them of this problem.`
     - Suggest: `Contacte a los dueños del sitio web para informarles`
     - The English source phrase was pasted into the middle of the Spanish sentence, producing visibly broken user-facing text.
-- `weakCryptoUsed` — `dom/chrome/appstrings.properties` — Sentence starts with “EL” instead of “El”.
-    - Current: `EL dueño de %S`
-    - Source: `The owner of %S has configured their website improperly. To protect your information from being stolen, the connection to this website has not been established.`
-    - Suggest: `El dueño de %S`
-    - Spelling/capitalization error in a user-facing error page.
-- `DocumentWriteIgnored` — `dom/chrome/dom/dom.properties` — Typo “ingorada”.
-    - Current: `fue ingorada`
-    - Source: `A call to document.write() from an asynchronously-loaded external script was ignored.`
-    - Suggest: `fue ignorada`
-    - Misspelling of “ignorada”. The same typo appears in IgnoringWillChangeOverBudgetWarning (“ingoradas”).
-- `FormValidationDateTimeRangeUnderflow` — `dom/chrome/dom/dom.properties` — Typo “Seleccone”.
-    - Current: `Seleccone un valor que no sea anterior a %S.`
-    - Source: `Please select a value that is no earlier than %S.`
-    - Suggest: `Seleccione un valor que no sea anterior a %S.`
-    - Misspelling of “Seleccione” in a form-validation bubble shown to end users.
-- `FullscreenDeniedContainerNotAllowed` — `dom/chrome/dom/dom.properties` — Untranslated English word “attribute” left at the end.
-    - Current: `no tiene un atributo "allowfullscreen" attribute.`
-    - Source: `Request for fullscreen was denied because at least one of the document’s containing elements is not an iframe or does not have an “allowfullscreen” attribute.`
-    - Suggest: `no tiene un atributo “allowfullscreen”.`
-    - Leftover from the English source; the noun is duplicated.
-- `ImportMapNotAllowedMultiple` — `dom/chrome/dom/dom.properties` — Wrong accent: “sé” instead of the pronoun “se”.
-    - Current: `No sé permite la importación múltiple de mapas.`
-    - Source: `Multiple import maps are not allowed.`
-    - Suggest: `No se permiten varios mapas de importación.`
-    - “sé” is the verb form; the impersonal pronoun “se” is required.
-- `JSONCharsetWarning` — `dom/chrome/dom/dom.properties` — Typo “recueprada”.
-    - Current: `para JSON recueprada usando XMLHttpRequest`
-    - Source: `An attempt was made to declare a non-UTF-8 encoding for JSON retrieved using XMLHttpRequest. Only UTF-8 is supported for decoding JSON.`
-    - Suggest: `para JSON recuperada usando XMLHttpRequest`
-    - Misspelling of “recuperada”.
-- _…and 31 more; see `state/` for the full list._
+- _…and 40 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
+- `smartwindow-onboarding-memories-label` — `browser/browser/aiWindow.ftl` — Uses formal "usted" where es-AR uses vos.
+    - Current: `aprende sobre usted`
+    - Source: `Choose how { -smart-window-brand-name } learns about you`
+    - Suggest: `aprende sobre vos`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-memories-none-description` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Verá menos sugerencias personalizadas y es posible que tenga que repetir`
+    - Source: `You’ll see fewer tailored suggestions and may need to repeat details across chats.`
+    - Suggest: `Vas a ver menos sugerencias personalizadas y es posible que tengas que repetir`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-model-label` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Elija su modelo de IA`
+    - Source: `Pick your AI model`
+    - Suggest: `Elegí tu modelo de IA`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-subtitle` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Configure { -smart-window-brand-name } a su gusto. Puede hacer cambios`
+    - Source: `Set up { -smart-window-brand-name } the way you like. Make changes anytime in settings.`
+    - Suggest: `Configurá { -smart-window-brand-name } a tu gusto. Podés hacer cambios`
+    - Doesn't match the locale's voseo, which the other Smart Window strings use.
+- `smartwindow-onboarding-welcome-subtitle` — `browser/browser/aiWindow.ftl` — Uses formal usted forms where es-AR uses voseo.
+    - Current: `Trabaja a su lado para hacer las cosas. Planifique, compare, explore y mucho más.`
+    - Source: `It works alongside you to get stuff done. Plan, compare, explore, and more.`
+    - Suggest: `Trabaja a tu lado para hacer las cosas. Planificá, compará, explorá y mucho más.`
+    - es-AR addresses the user with vos/tu, as the other Smart Window strings here do ("chateás", "tu tarea"). These onboarding strings switch to usted.
 - `callout-pdfjs-draw-body-a` — `browser/browser/featureCallout.ftl` — Uses the peninsular "usted" imperative forms instead of the es-AR voseo/register used elsewhere.
     - Current: `Haga anotaciones en los archivos PDF y luego guarde los cambios.`
     - Source: `Mark up PDFs, then save your changes.`
@@ -972,11 +1124,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Please summarize the webpage at { $url } using precise and concise language. Use headers and bulleted lists in the summary, to make it scannable. Maintain the meaning and factual accuracy.`
     - Suggest: `Resuma la página web en { $url } usando un lenguaje preciso y conciso. Use encabezados y listas con viñetas en el resumen para hacerlo escaneable. Mantenga el significado y la exactitud fáctica.`
     - es-AR Firefox consistently addresses with usted (e.g. "Obtenga acceso rápido…", "Seleccione { -brand-short-name }…" in this batch); this string switches to tú/vos forms.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Novedades” but the string it names, `releaseNotes-link`, reads “Qué hay de nuevo”
-    - Current: `Anular la página "Novedades" posterior a la actualización. Establecer esta política en blanco si quiere deshabilitar la página posterior a la actualización.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Qué hay de nuevo`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `notifications-filter` — `browser/browser/preferences/preferences.ftl` — "sitios Web" is capitalized, inconsistent with "sitios web" used in the adjacent strings of the same panel.
     - Current: `Buscar sitios Web`
     - Source: `placeholder: Search websites`
@@ -992,6 +1139,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Get Involved`
     - Suggest: `Participá`
     - The neighbouring bookmark titles use the Argentine voseo imperative ("Obtené ayuda", "Personalizá Firefox"); "Participa" is the tuteo form and breaks that form of address within the same surface.
+- `nsis-click-uninstall` — `browser/installer/override.ftl` — The button name "Desinstalar" is lowercase, unlike the other button names in the installer instructions.
+    - Current: `Haga clic en desinstalar`
+    - Source: `Click Uninstall to start the uninstallation.`
+    - Suggest: `Haga clic en Desinstalar`
+    - The source refers to the Uninstall button by name. The other instructions capitalize button labels ("Siguiente", "Instalar", "Examinar"), so the lowercase form is inconsistent and does not read as a button label.
 - `preventedConsoleClear` — `devtools/shared/webconsole.properties` — `preventedConsoleClear` quotes “Registros presistentes” but the string it names, `webconsole.console.settings.menu.item.enablePersistentLogs.label`, reads “Registros persistentes”
     - Current: `console.clear() se evitó debido a “Registros presistentes”`
     - Source: `console.clear() was prevented due to “Persist Logs”`
@@ -1200,6 +1352,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `You can also skip troubleshooting and refresh { -brand-short-name }, instead.`
     - Suggest: `También puede omitir`
     - The rest of the file uses usted ("Sus complementos", "Puede intentar"), and usted is overwhelmingly dominant across the locale.
+- `mui-text-welcome-info-title` — `browser/installer/mui.ftl` — There's a double space between "de" and "instalación" in the welcome title.
+    - Current: `asistente de  instalación`
+    - Source: `Welcome to the { $BrandFullNameDA } Setup Wizard`
+    - Suggest: `asistente de instalación`
+    - Users see this extra space in the welcome screen title. The en-US has a single space there.
 - `ImageMapPolyWrongNumberOfCoords` — `dom/chrome/layout/layout_errors.properties` — `ImageMapPolyWrongNumberOfCoords` uses three dots where this locale uses …
     - Current: `El atributo "coords" del tag <area shape="poly"> no tiene el formato "x1,y1,x2,y2 ...".`
     - Source: `The “coords” attribute of the <area shape="poly"> tag is not in the “x1,y1,x2,y2 …” format.`
@@ -1292,8 +1449,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (144)
+### Fixed to date (145)
 
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
 - `tab-context-move-tab-to-group` — `browser/browser/tabbrowser.ftl` — fixed 2026-11-08
 - `about-pdf-features-intro` — `toolkit/toolkit/about/aboutPDF.ftl` — fixed 2026-09-28
 - `tou-existing-user-spotlight-body` — `browser/browser/termsofuse.ftl` — fixed 2026-09-01
@@ -1333,4 +1491,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `genai-prompts-quiz` — `browser/browser/genai.ftl` — fixed 2026-08-25
 - `link-preview-optin-message` — `browser/browser/genai.ftl` — fixed 2026-08-25
 - `ipprotection-come-back-title` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25
-- `ipprotection-locations-unavailable-label-1` — `browser/browser/ipProtection.ftl` — fixed 2026-08-25

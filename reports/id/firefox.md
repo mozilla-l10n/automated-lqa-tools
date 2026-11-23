@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,922 |
+| **Strings reviewed this run** | 210 of 14,096 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,41 @@ Also for id: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — The warning title is translated as an instruction ("Report Harmful Site!") instead of the statement "Reported Harmful Site!".
+    - Current: `Laporkan Situs Berbahaya!`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `Telah Dilaporkan Sebagai Situs Berbahaya!`
+    - The en-US "Reported Harmful Site!" is a warning that the site has already been reported as harmful. "Laporkan" is an imperative telling the user to report it. The sibling strings use "Telah Dilaporkan Sebagai…".
+- `option-custom-radio` — `browser/installer/custom.ftl` — "Custom" setup type is translated as "Kesukaan" (favourite/liking).
+    - Current: `Kesukaan`
+    - Source: `(value): Custom accesskey: C`
+    - Suggest: `Khusus`
+    - The en-US "Custom" names the custom installation type, where the user picks the options. "Kesukaan" means "favourite" or "preference", so it doesn't name that option. "Khusus" (or "Ubahsuai") would be correct.
+- `options-summary` — `browser/installer/custom.ftl` — The translation asks the user to choose additional components instead of the setup type.
+    - Current: `Pilih komponen tambahan yang ingin Anda pasang`
+    - Source: `Choose the type of setup you prefer, then click Next.`
+    - Suggest: `Pilih jenis pemasangan yang Anda inginkan`
+    - The en-US says "Choose the type of setup you prefer". The page offers a choice between Standard and Custom setup. The Indonesian says "choose additional components you want to install", which describes a different action.
+- `mui-text-finish-subtitle` — `browser/installer/mui.ftl` — The translation says Setup itself "has been successfully installed" instead of saying the setup process finished successfully.
+    - Current: `Setup telah berhasil dipasang.`
+    - Source: `Setup was completed successfully.`
+    - Suggest: `Setup telah berhasil diselesaikan.`
+    - en-US "Setup was completed successfully" means the setup process finished. "dipasang" (installed) makes Setup the thing that was installed, which is a different statement. It also doesn't match the paired string mui-text-abort-subtitle, which uses "diselesaikan".
+- `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The word "usang" is misspelled as "usangi".
+    - Current: `sudah usangi`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
+    - Suggest: `sudah usang`
+    - "Usangi" is not a word. The correct word for "deprecated" is "usang", which is how the matching captureEvents string spells it.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (1)
 
-_Nothing was fixed._
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yang Baru” but the string it names, `releaseNotes-link`, reads “Yang baru”
+    - Current: `Ganti laman "Yang Baru" yang tampil setelah pembaruan. Setel kebijakan ini menjadi kosong jika ingin menonaktifkan laman setelah pembaruan.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yang baru`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +72,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 324 |
-| Strings | 13,922 |
-| Missing strings | 2,961 |
+| Files | 329 |
+| Strings | 14,096 |
+| Missing strings | 3,024 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 7 |
 | Files with no en-US counterpart | 0 |
@@ -55,7 +83,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 7 |
-| Text quoting a UI label that no longer matches | 7 |
+| Text quoting a UI label that no longer matches | 6 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 13 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -63,20 +91,20 @@ _Nothing retired._
 
 ### Completeness
 
-**2,961 strings** are not translated yet, concentrated in:
+**3,024 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 502
-- `browser/browser/preferences/preferences.ftl` — 468
-- `browser/browser/ipProtection.ftl` — 160
-- `browser/browser/newtab/onboarding.ftl` — 155
+- `browser/browser/newtab/newtab.ftl` — 498
+- `browser/browser/preferences/preferences.ftl` — 470
+- `browser/browser/ipProtection.ftl` — 165
+- `browser/browser/newtab/onboarding.ftl` — 153
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 89
 - `browser/browser/newtab/asrouter.ftl` — 87
-- `toolkit/toolkit/about/aboutAddons.ftl` — 62
+- `toolkit/toolkit/about/aboutAddons.ftl` — 63
 - `browser/browser/featureCallout.ftl` — 57
 - `browser/browser/profiles.ftl` — 57
 - `browser/browser/tabbrowser.ftl` — 45
+- `browser/browser/customkeys.ftl` — 44
 - `toolkit/toolkit/about/aboutGlean.ftl` — 44
-- `browser/browser/customkeys.ftl` — 43
 
 **Files absent from the locale:**
 
@@ -98,7 +126,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 413, `straight-double` 112, `curly-single` 79 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 41 | _mixed_ |
-| ellipsis | `char` 355, `ascii` 9 | **char** |
+| ellipsis | `char` 364, `ascii` 9 | **char** |
 | dash | `em` 52, `en` 1 | **em** |
 | nbsp | `total` 8, `before-punctuation` 2, `space-before-punctuation` 6 | _mixed_ |
 
@@ -111,13 +139,13 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (291)
+## 3. Open findings (294)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 65 |
-| 2 | Wrong content (says something other than the English) | 155 |
+| 2 | Wrong content (says something other than the English) | 158 |
 | 3 | Degraded language (grammar, spelling, terminology) | 51 |
 | 4 | Cosmetic (typography, spacing) | 19 |
 
@@ -453,6 +481,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Something went wrong. Please try again.`
     - Suggest: `Silakan coba lagi.`
     - The en-US says "Please try again" — invite to retry immediately; "nanti" means "later", changing the instruction.
+- `safebrowsing-reported-harmful-site-message` — `browser/browser/browser.ftl` — The warning title is translated as an instruction ("Report Harmful Site!") instead of the statement "Reported Harmful Site!".
+    - Current: `Laporkan Situs Berbahaya!`
+    - Source: `Reported Harmful Site!`
+    - Suggest: `Telah Dilaporkan Sebagai Situs Berbahaya!`
+    - The en-US "Reported Harmful Site!" is a warning that the site has already been reported as harmful. "Laporkan" is an imperative telling the user to report it. The sibling strings use "Telah Dilaporkan Sebagai…".
 - `contextual-manager-passwords-os-auth-dialog-caption` — `browser/browser/contextual-manager.ftl` — Brand term duplicated in OS auth dialog caption
     - Current: `{ -brand-full-name }{ -brand-full-name }`
     - Source: `{ -brand-full-name }`
@@ -513,6 +546,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Townland`
     - Suggest: `Townland`
     - Per the developer comment this is the Irish sublocality unit "townland", a rural land division, not a small town ("kota kecil"); it is normally kept as "Townland".
+- `option-custom-radio` — `browser/installer/custom.ftl` — "Custom" setup type is translated as "Kesukaan" (favourite/liking).
+    - Current: `Kesukaan`
+    - Source: `(value): Custom accesskey: C`
+    - Suggest: `Khusus`
+    - The en-US "Custom" names the custom installation type, where the user picks the options. "Kesukaan" means "favourite" or "preference", so it doesn't name that option. "Khusus" (or "Ubahsuai") would be correct.
+- `options-summary` — `browser/installer/custom.ftl` — The translation asks the user to choose additional components instead of the setup type.
+    - Current: `Pilih komponen tambahan yang ingin Anda pasang`
+    - Source: `Choose the type of setup you prefer, then click Next.`
+    - Suggest: `Pilih jenis pemasangan yang Anda inginkan`
+    - The en-US says "Choose the type of setup you prefer". The page offers a choice between Standard and Custom setup. The Indonesian says "choose additional components you want to install", which describes a different action.
+- `mui-text-finish-subtitle` — `browser/installer/mui.ftl` — The translation says Setup itself "has been successfully installed" instead of saying the setup process finished successfully.
+    - Current: `Setup telah berhasil dipasang.`
+    - Source: `Setup was completed successfully.`
+    - Suggest: `Setup telah berhasil diselesaikan.`
+    - en-US "Setup was completed successfully" means the setup process finished. "dipasang" (installed) makes Setup the thing that was installed, which is a different statement. It also doesn't match the paired string mui-text-abort-subtitle, which uses "diselesaikan".
 - `accessibility-text-label-issue-document-title` — `devtools/client/accessibility.ftl` — The HTML element name inside <code> was translated.
     - Current: `<code>judul</code>`
     - Source: `Documents must have a <code>title</code>. <a>Learn more</a>`
@@ -753,9 +801,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - The developer comment says do not translate "HTMLOptionsCollection.length"; the localized identifier is missing the "s" and does not exist.
 - `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — The word "usang" is misspelled as "usangi".
     - Current: `sudah usangi`
-    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help http://developer.mozilla.org/en/docs/DOM:element.removeEventListener`
+    - Source: `Use of releaseEvents() is deprecated. To upgrade your code, use the DOM 2 removeEventListener() method. For more help https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener`
     - Suggest: `sudah usang`
-    - "Deprecated" is rendered as "sudah usang", and that is how the matching captureEvents string has it. "Usangi" is not an Indonesian word.
+    - "Usangi" is not a word. The correct word for "deprecated" is "usang", which is how the matching captureEvents string spells it.
 - `WebExtContentScriptModuleSourceNotAllowed` — `dom/chrome/dom/dom.properties` — URL scheme miscapitalized as moz-Extension.
     - Current: `URL moz-Extension`
     - Source: `WebExtension content scripts may only load modules with moz-extension URLs and not: “%S”.`
@@ -939,11 +987,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Enable or disable Encrypted Media Extensions and optionally lock it.`
     - Suggest: `kuncilah secara opsional`
     - “dia” refers to persons and cannot be used as an object pronoun for an inanimate setting; the enclitic “-nya” is required.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yang Baru” but the string it names, `releaseNotes-link`, reads “Yang baru”
-    - Current: `Ganti laman "Yang Baru" yang tampil setelah pembaruan. Setel kebijakan ini menjadi kosong jika ingin menonaktifkan laman setelah pembaruan.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Yang baru`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `fonts-allow-own` — `browser/browser/preferences/fonts.ftl` — "daripada" written as two words
     - Current: `dari pada menggunakan pilihan Anda di atas`
     - Source: `accesskey: A label: Allow pages to choose their own fonts, instead of your selections above`
@@ -1119,7 +1162,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Afrikaans`
     - Suggest: `Afrikaans`
     - The language name is "Afrikaans" in Indonesian as in English; "Afrikaan" is not a language name.
-- _…and 5 more; see `state/` for the full list._
+- `language-name-ce` — `toolkit/toolkit/intl/languageNames.ftl` — Chechen is spelled "Checnya" (misspelled, and names the region rather than the language).
+    - Current: `Checnya`
+    - Source: `Chechen`
+    - Suggest: `Chechen`
+    - en-US `language-name-ce = Chechen`; the localized form is a misspelling of the place name Chechnya.
+- _…and 4 more; see `state/` for the full list._
 
 ### E. Typography, punctuation & spacing
 
@@ -1256,8 +1304,9 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (3)
+### Fixed to date (4)
 
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
 - `UseOfReleaseEventsWarning` — `dom/chrome/dom/dom.properties` — fixed 2026-11-08
 - `appmenu-search-history` — `browser/browser/appmenu.ftl` — fixed 2026-10-19
 - `genai-settings-chat-gemini-links` — `browser/browser/genai.ftl` — fixed 2026-09-01

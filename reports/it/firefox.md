@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 8 of 17,163 |
+| **Strings reviewed this run** | 317 of 17,396 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,13 @@ Also for it: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (1)
 
-_No new findings._
+- `nsis-file-error` — `browser/installer/override.ftl` — The text tells users to click “Annulla” for Abort, but the Windows Abort/Retry/Ignore dialog labels that button “Interrompi”.
+    - Current: `Fare clic su Annulla per terminare l’installazione`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Fare clic su Interrompi per terminare l’installazione`
+    - The en-US names the Abort button. The dialog is the standard Windows message box (Abort/Retry/Ignore), and on Italian Windows its buttons read “Interrompi”, “Riprova” and “Ignora”. “Annulla” is the label of the Cancel button, which this dialog doesn't have, so the instruction names a button the user won't see.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,12 +48,12 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 341 |
-| Strings | 17,163 |
+| Files | 347 |
+| Strings | 17,396 |
 | Missing strings | 0 |
-| Obsolete strings | 51 |
+| Obsolete strings | 39 |
 | Files absent from the locale | 0 |
-| Files with no en-US counterpart | 10 |
+| Files with no en-US counterpart | 11 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
@@ -72,13 +76,14 @@ The locale is complete against the en-US source.
 - `browser/browser/enterprise/enterprise-policies-descriptions.ftl`
 - `browser/browser/enterprise/enterprise.ftl`
 - `browser/browser/enterprise/felt.ftl`
+- `browser/browser/windowLock.ftl`
 - `browser/chrome/overrides/enterprise.properties`
 - `dom/chrome/enterprise.properties`
 - `toolkit/crashreporter/crashreporter-enterprise.ftl`
 - `toolkit/toolkit/enterprise/enterprise.ftl`
 - `toolkit/toolkit/enterprise/felt.ftl`
 
-_229 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
+_237 strings. These files exist in the locale tree but not in the en-US reference — they are maintained elsewhere. The model review is a comparison against en-US, so it skips them entirely; only the checks that need no reference ran. Nothing reported from these files means nothing was looked for, not that they are clean._
 
 ### Conventions detected in this locale
 
@@ -86,12 +91,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 981, `straight-double` 25 | **curly-double** |
-| apostrophe | `typographic` 1795, `straight` 6 | **typographic** |
-| ellipsis | `char` 420 | **char** |
-| dash | `em` 53, `en` 17 | **em** |
+| quotes | `curly-double` 978, `straight-double` 25 | **curly-double** |
+| apostrophe | `typographic` 1820, `straight` 6 | **typographic** |
+| ellipsis | `char` 430 | **char** |
+| dash | `em` 53, `en` 18 | _mixed_ |
 | nbsp | `total` 12, `before-punctuation` 4, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 749, `formal` 47 | **informal** |
+| register | `informal` 752, `formal` 47 | **informal** |
 
 ---
 
@@ -101,13 +106,13 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (0)
+## 3. Open findings (1)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 0 |
-| 2 | Wrong content (says something other than the English) | 0 |
+| 2 | Wrong content (says something other than the English) | 1 |
 | 3 | Degraded language (grammar, spelling, terminology) | 0 |
 | 4 | Cosmetic (typography, spacing) | 0 |
 
@@ -117,7 +122,11 @@ _Nothing in this category._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
-_Nothing in this category._
+- `nsis-file-error` — `browser/installer/override.ftl` — The text tells users to click “Annulla” for Abort, but the Windows Abort/Retry/Ignore dialog labels that button “Interrompi”.
+    - Current: `Fare clic su Annulla per terminare l’installazione`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `Fare clic su Interrompi per terminare l’installazione`
+    - The en-US names the Abort button. The dialog is the standard Windows message box (Abort/Retry/Ignore), and on Italian Windows its buttons read “Interrompi”, “Riprova” and “Ignora”. “Annulla” is the label of the Cancel button, which this dialog doesn't have, so the instruction names a button the user won't see.
 
 ### C. Grammar, agreement & spelling
 

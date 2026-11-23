@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 24 of 16,861 |
+| **Strings reviewed this run** | 307 of 17,085 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,17 +18,76 @@ Also for tr: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (8)
 
-- `newtab-custom-widget-wrexhamafc` — `browser/browser/newtab/newtab.ftl` — The club's proper name “Wrexham AFC” is changed to “Wrexham ASC” in .label and .title.
-    - Current: `Wrexham ASC`
-    - Source: `label: Wrexham AFC menu-label: Open Wrexham AFC menu title: Wrexham AFC`
-    - Suggest: `Wrexham AFC`
-    - “Wrexham AFC” is the official name of a football club. It should be kept as is, not partly translated or altered. The same message's .menu-label keeps “Wrexham AFC”, so the widget now shows two different names for the same club.
+- `reg-app-desc` — `browser/installer/custom.ftl` — "safe, easy web browsing" is rendered as "safe and fast browsing" ("güvenli ve hızlı").
+    - Current: `güvenli ve hızlı gezinti`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `güvenli ve kolay gezinti`
+    - The en-US says "easy". "Hızlı" means "fast", which is a different quality from the one in the source.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — The OS version and CPU requirements are merged into one phrase that asks for a "{CPU}-supported {OS} or newer processor".
+    - Current: `{ $MinSupportedCPU } destekli { $MinSupportedVer } veya daha yeni bir işlemci gerekiyor`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `{ $MinSupportedVer } veya daha yeni bir sürüm ve { $MinSupportedCPU } destekli bir işlemci gerekiyor`
+    - The en-US names two separate requirements: { $MinSupportedVer } or newer, plus a processor with { $MinSupportedCPU } support. The Turkish makes the OS version describe the processor, so the requirement it states is wrong.
+- `summary-upgrade-click` — `browser/installer/custom.ftl` — The instruction names a "Güncelle" button, but the button it refers to is labelled "Yükselt".
+    - Current: `Güncelle düğmesine`
+    - Source: `Click Upgrade to continue.`
+    - Suggest: `Yükselt düğmesine`
+    - upgrade-button, which replaces the Install button on the summary page, is translated "Yükselt". The instruction should use the button's actual label so the user can find it.
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — The object of “oluşturmak” has the wrong case: it takes the dative “klasöre” when it should be the indefinite object “klasör”.
+    - Current: `Yeni bir klasöre oluşturmak`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `Yeni bir klasör oluşturmak`
+    - The source says “enter a name to create a new folder”. In Turkish, “oluşturmak” takes a direct object, so the correct form is “bir klasör oluşturmak”. The dative “klasöre oluşturmak” is ungrammatical.
+- `warn-min-supported-osver-cpu-msg2` — `browser/installer/nsisstrings.ftl` — The OS version requirement and the CPU requirement are merged into one wrong phrase, "a processor of version X or newer".
+    - Current: `{ $MinSupportedCPU } destekli { $MinSupportedVer } veya daha yeni bir işlemci gerekiyor`
+    - Source: `It looks like { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for addition…`
+    - Suggest: `{ $MinSupportedVer } veya daha yeni bir sürüm ve { $MinSupportedCPU } destekli bir işlemci gerekiyor`
+    - The en-US requires { $MinSupportedVer } or newer (an OS version) and, separately, a processor with { $MinSupportedCPU } support. The Turkish turns the OS version into a description of the processor, so the OS requirement is lost.
+- `nsis-click-install` — `browser/installer/override.ftl` — The instruction tells users to press a "Kur" button, but the Install button is labelled "Yükle".
+    - Current: `Kur düğmesine basın`
+    - Source: `Click Install to start the installation.`
+    - Suggest: `Yükle düğmesine basın`
+    - nsis-install-btn is translated "Yükle", so a button called "Kur" does not exist. The instruction points users at a button they cannot find.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — The Cancel button is called “Dur” (the Abort label), so the text names a button this dialog does not have.
+    - Current: `yüklemeyi durdurmak için Dur düğmesine tıklayın.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `yüklemeyi durdurmak için İptal düğmesine tıklayın.`
+    - en-US says 'Cancel to stop the installation'. This is a Retry/Cancel dialog. “Dur” is the label used for Abort in nsis-file-error, so the user is told to click a button that is not shown.
+- `nsis-symbol-not-found` — `browser/installer/override.ftl` — “symbol” (a DLL code symbol) is translated as “Simge”, which means icon.
+    - Current: `Simge bulunamadı:`
+    - Source: `Could not find symbol:{   }`
+    - Suggest: `Sembol bulunamadı:`
+    - In this installer error, 'symbol' is an exported function or symbol in a DLL. “Simge” means icon or graphic symbol, which is the wrong concept. The technical term is “sembol”.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (5)
 
-_Nothing was fixed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Verilerimi geri yükle” but the string it names, `restore-from-backup-header`, reads “Verilerinizi geri yükleyin”
+    - Current: `“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Verilerinizi geri yükleyin`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Verilerimi geri yükle” but the string it names, `restore-from-backup-header`, reads “Verilerinizi geri yükleyin”
+    - Current: `“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Verilerinizi geri yükleyin`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is translated as "Remove from favorites", losing the object and changing the meaning.
+    - Current: `(value): Sık kullanılanlardan kaldır`
+    - Source: `(value): Remove this top site accesskey: T`
+    - Suggest: `(value): Bu sık kullanılan siteyi kaldır`
+    - The en-US removes a specific top site entry; the Turkish says "remove from favorites", which names a different concept (bookmarks/favorites) and omits that it is this site being removed.
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yenilikler” but the string it names, `releaseNotes-link`, reads “Yeni neler var?”
+    - Current: `Güncelleme sonrası “Yenilikler” sayfasını değiştir. Güncelleme sonrası sayfasını devre dışı bırakmak istiyorsanız bu ilkeyi boş olarak ayarlayabilirsiniz.`
+    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
+    - Suggest: `Yeni neler var?`
+    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
+    - Current: `Daha fazla bilgi al`
+    - Source: `Learn More`
+    - Suggest: `Daha fazla bilgi alın`
+    - The locale convention is formal siz; informal singular imperative violates the established register.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -38,9 +97,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — The label uses first person ("verilerimin", my data) where the source has "your", which breaks the locale's formal siz register.
+    - Current: `Gezinti verilerimin bir kısmını veya tamamını sil`
+    - Suggest: `Gezinti verilerinizin bir kısmını veya tamamını silin`
+    - en-US says "your browsing data". The tr convention is formal siz, so the possessive should be -iniz rather than first-person -im. This applies to both the label and the tooltiptext.
+- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label variant drops the comma separating the card description from "CVV saved".
+    - Current: `aria-label: { $ariaLabel } CVV kaydedildi`
+    - Suggest: `aria-label: { $ariaLabel }, CVV kaydedildi`
+    - The developer comment states the accessibility label uses a comma so it is read as part of the same sentence; the source is "{ $ariaLabel }, CVV saved" but the Turkish omits the comma.
 
 ---
 
@@ -48,9 +114,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,861 |
-| Missing strings | 22 |
+| Files | 336 |
+| Strings | 17,085 |
+| Missing strings | 35 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
@@ -59,7 +125,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 6 |
+| Text quoting a UI label that no longer matches | 3 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -67,16 +133,17 @@ _Nothing retired._
 
 ### Completeness
 
-**22 strings** are not translated yet, concentrated in:
+**35 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/onboarding.ftl` — 7
-- `toolkit/toolkit/downloads/downloadUI.ftl` — 5
-- `browser/browser/browser.ftl` — 4
-- `browser/browser/newtab/newtab.ftl` — 2
-- `browser/browser/confirmationHints.ftl` — 1
-- `browser/browser/genai.ftl` — 1
-- `browser/browser/preferences/preferences.ftl` — 1
-- `browser/browser/newtab/asrouter.ftl` — 1
+- `browser/browser/aiWindow.ftl` — 16
+- `browser/browser/aiFeatures.ftl` — 4
+- `dom/chrome/layout/htmlparser.properties` — 4
+- `browser/browser/ipProtection.ftl` — 3
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 3
+- `browser/browser/preferences/preferences.ftl` — 2
+- `browser/browser/customkeys.ftl` — 1
+- `browser/browser/menubar.ftl` — 1
+- `toolkit/toolkit/about/aboutAddons.ftl` — 1
 
 _Completeness is reported, never raised as a finding: a missing string needs translating, not fixing._
 
@@ -86,12 +153,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 623, `curly-single` 157, `straight-double` 29 | **curly-double** |
-| apostrophe | `typographic` 904, `straight` 47 | **typographic** |
-| ellipsis | `char` 399 | **char** |
+| quotes | `curly-double` 621, `curly-single` 157, `straight-double` 29 | **curly-double** |
+| apostrophe | `typographic` 911, `straight` 47 | **typographic** |
+| ellipsis | `char` 408 | **char** |
 | dash | `em` 46, `en` 2 | **em** |
 | nbsp | `total` 6, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| register | `informal` 2, `formal` 48 | **formal** |
+| register | `informal` 2, `formal` 47 | **formal** |
 
 ---
 
@@ -102,15 +169,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (171)
+## 3. Open findings (172)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 3 |
-| 2 | Wrong content (says something other than the English) | 61 |
+| 2 | Wrong content (says something other than the English) | 63 |
 | 3 | Degraded language (grammar, spelling, terminology) | 70 |
-| 4 | Cosmetic (typography, spacing) | 37 |
+| 4 | Cosmetic (typography, spacing) | 36 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -144,11 +211,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Dusk`
     - Suggest: `Alacakaranlık`
     - The developer comment says the name refers to the sky just after sunset; "Şafak" means dawn/daybreak.
-- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — "Remove this top site" is translated as "Remove from favorites", losing the object and changing the meaning.
-    - Current: `(value): Sık kullanılanlardan kaldır`
-    - Source: `(value): Remove this top site accesskey: T`
-    - Suggest: `(value): Bu sık kullanılan siteyi kaldır`
-    - The en-US removes a specific top site entry; the Turkish says "remove from favorites", which names a different concept (bookmarks/favorites) and omits that it is this site being removed.
 - `urlbar-result-weather-title` — `browser/browser/browser.ftl` — city and region swapped: { $region }, { $city } → { $city }, { $region } (cf. urlbar-result-weather-title-with-country).
     - Current: `{ $region }, { $city }`
     - Source: `<strong>{ $temperature }°{ $unit }</strong> in { $city }, { $region }`
@@ -256,6 +318,31 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: d label: Tabs sharing devices`
     - Suggest: `Cihaz paylaşan sekmeler`
     - The en-US means tabs that are sharing devices (camera/microphone); the Turkish says devices sharing tabs.
+- `reg-app-desc` — `browser/installer/custom.ftl` — "safe, easy web browsing" is rendered as "safe and fast browsing" ("güvenli ve hızlı").
+    - Current: `güvenli ve hızlı gezinti`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `güvenli ve kolay gezinti`
+    - The en-US says "easy". "Hızlı" means "fast", which is a different quality from the one in the source.
+- `warn-min-supported-osver-cpu-msg` — `browser/installer/custom.ftl` — The OS version and CPU requirements are merged into one phrase that asks for a "{CPU}-supported {OS} or newer processor".
+    - Current: `{ $MinSupportedCPU } destekli { $MinSupportedVer } veya daha yeni bir işlemci gerekiyor`
+    - Source: `Sorry, { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for additional info…`
+    - Suggest: `{ $MinSupportedVer } veya daha yeni bir sürüm ve { $MinSupportedCPU } destekli bir işlemci gerekiyor`
+    - The en-US names two separate requirements: { $MinSupportedVer } or newer, plus a processor with { $MinSupportedCPU } support. The Turkish makes the OS version describe the processor, so the requirement it states is wrong.
+- `warn-min-supported-osver-cpu-msg2` — `browser/installer/nsisstrings.ftl` — The OS version requirement and the CPU requirement are merged into one wrong phrase, "a processor of version X or newer".
+    - Current: `{ $MinSupportedCPU } destekli { $MinSupportedVer } veya daha yeni bir işlemci gerekiyor`
+    - Source: `It looks like { $BrandShortName } can’t be installed. This version of { $BrandShortName } requires { $MinSupportedVer } or newer and a processor with { $MinSupportedCPU } support. Please click the OK button for addition…`
+    - Suggest: `{ $MinSupportedVer } veya daha yeni bir sürüm ve { $MinSupportedCPU } destekli bir işlemci gerekiyor`
+    - The en-US requires { $MinSupportedVer } or newer (an OS version) and, separately, a processor with { $MinSupportedCPU } support. The Turkish turns the OS version into a description of the processor, so the OS requirement is lost.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — The Cancel button is called “Dur” (the Abort label), so the text names a button this dialog does not have.
+    - Current: `yüklemeyi durdurmak için Dur düğmesine tıklayın.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `yüklemeyi durdurmak için İptal düğmesine tıklayın.`
+    - en-US says 'Cancel to stop the installation'. This is a Retry/Cancel dialog. “Dur” is the label used for Abort in nsis-file-error, so the user is told to click a button that is not shown.
+- `nsis-symbol-not-found` — `browser/installer/override.ftl` — “symbol” (a DLL code symbol) is translated as “Simge”, which means icon.
+    - Current: `Simge bulunamadı:`
+    - Source: `Could not find symbol:{   }`
+    - Suggest: `Sembol bulunamadı:`
+    - In this installer error, 'symbol' is an exported function or symbol in a DLL. “Simge” means icon or graphic symbol, which is the wrong concept. The technical term is “sembol”.
 - `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label says "do not specify any preference" instead of "Enable no preference for reduced motion emulation", dropping the "enable" action.
     - Current: `Daha az hareket öykünümü için herhangi bir tercih belirtme`
     - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
@@ -359,16 +446,7 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 - `sec-error-unsupported-elliptic-curve` — `toolkit/toolkit/neterror/nsserrors.ftl` — sec-error-unsupported-elliptic-curve, sec-error-unsupported-ec-point-form — "oval eğri" → "eliptik eğri".
     - Source: `Unsupported elliptic curve.`
     - Suggest: `"eliptik eğri".`
-- `ssl-error-handshake-failure-alert` — `toolkit/toolkit/neterror/nsserrors.ftl` — "kabul edilebilir sayıda güvenlik değişkeniyle" ≠ en "an acceptable set of security parameters".
-    - Source: `SSL peer was unable to negotiate an acceptable set of security parameters.`
-- `ssl-error-md5-digest-failure` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-md5-digest-failure, ssl-error-sha-digest-failure — "derleme" (compilation) → "özet" (en "digest"); sec-error-digest-not-found already uses "özet".
-    - Source: `MD5 digest function failed.`
-- `ssl-error-sha-digest-failure` — `toolkit/toolkit/neterror/nsserrors.ftl` — ssl-error-md5-digest-failure, ssl-error-sha-digest-failure — "derleme" (compilation) → "özet" (en "digest"); sec-error-digest-not-found already uses "özet".
-    - Source: `SHA-1 digest function failed.`
-- `xp-java-cert-not-exists-error` — `toolkit/toolkit/neterror/nsserrors.ftl` — xp-java-remove-principal-error, xp-java-cert-not-exists-error — "Baş bölüm" → "Asıl (principal)".
-    - Source: `This principal doesn’t have a certificate`
-    - Suggest: `"Asıl`
-- _…and 2 more; see `state/` for the full list._
+- _…and 6 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -402,6 +480,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn more`
 - `translations-panel-learn-more-link` — `browser/browser/translations.ftl` — "Learn more" rendered as the informal singular "Daha fazla bilgi al" where the locale otherwise uses "Daha fazla bilgi alın": protections-panel-description-shim-allowed-learn-more (browser/protectionsPanel.ftl), restored-profile-page-learn-more (browser/profiles.ftl), translations-panel-learn-more-link (browser/translations.ftl), existing-user-tou-learn-more (browser/termsofuse.ftl). (The locale…
     - Source: `Learn more`
+- `mui-innertext-startmenu-top` — `browser/installer/mui.ftl` — The object of “oluşturmak” has the wrong case: it takes the dative “klasöre” when it should be the indefinite object “klasör”.
+    - Current: `Yeni bir klasöre oluşturmak`
+    - Source: `Select the Start Menu folder in which you would like to create the program’s shortcuts. You can also enter a name to create a new folder.`
+    - Suggest: `Yeni bir klasör oluşturmak`
+    - The source says “enter a name to create a new folder”. In Turkish, “oluşturmak” takes a direct object, so the correct form is “bir klasör oluşturmak”. The dative “klasöre oluşturmak” is ungrammatical.
 - `whypaused-breakpoint` — `devtools/shared/debugger-paused-reasons.ftl` — the identical en pattern "Paused on X" takes three different verb forms in one file.
     - Source: `Paused on breakpoint`
 - `whypaused-event-breakpoint` — `devtools/shared/debugger-paused-reasons.ftl` — the identical en pattern "Paused on X" takes three different verb forms in one file.
@@ -428,21 +511,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Sign in`
     - Suggest: `Giriş yapın`
     - The established register for tr is formal siz.
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Verilerimi geri yükle” but the string it names, `restore-from-backup-header`, reads “Verilerinizi geri yükleyin”
-    - Current: `“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Verilerinizi geri yükleyin`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Verilerimi geri yükle” but the string it names, `restore-from-backup-header`, reads “Verilerinizi geri yükleyin”
-    - Current: `“Verilerimi geri yükle”ye tıklayıp bu dosyayı seçin`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Verilerinizi geri yükleyin`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `fire-button-toolbar-button` — `browser/browser/browser.ftl` — The label uses first person ("verilerimin", my data) where the source has "your", which breaks the locale's formal siz register.
-    - Current: `Gezinti verilerimin bir kısmını veya tamamını sil`
-    - Source: `label: Delete some or all of your browsing data tooltiptext: Delete some or all of your browsing data`
-    - Suggest: `Gezinti verilerinizin bir kısmını veya tamamını silin`
-    - en-US says "your browsing data". The tr convention is formal siz, so the possessive should be -iniz rather than first-person -im. This applies to both the label and the tooltiptext.
 - `fire-button-toolbar-button2` — `browser/browser/browser.ftl` — The tooltip uses first person ('verilerimin', my data) where the source says 'your', which breaks the formal siz form of address.
     - Current: `Gezinti verilerimin`
     - Source: `label: Delete some or all data tooltiptext: Delete some or all of your browsing data`
@@ -473,11 +541,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - "farklılık" means dissimilarity/diversity, not a numeric time offset; the standard Turkish term for UTC offset is "UTC farkı".
 - `newtab-clock-widget-input-nickname` — `browser/browser/newtab/newtab.ftl` — ".label = Ad" for en "Nickname"; newtab-clock-widget-edit-item-with-nickname uses "takma adı", and plain "Ad" collides with a real name field (the dev comment warns about this).
     - Source: `aria-label: Nickname (optional) label: Nickname (optional) placeholder: Add a nickname`
-- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — "Learn more" rendered in informal imperative ("al") instead of the formal "Daha fazla bilgi alın".
-    - Current: `Daha fazla bilgi al`
-    - Source: `Learn more`
-    - Suggest: `Daha fazla bilgi alın`
-    - The locale convention is formal siz; informal singular imperative violates the established register.
 - `newtab-spaces-tab-widgets` — `browser/browser/newtab/newtab.ftl` — "Widgets" rendered as "Araçlar" (tools) instead of the established Turkish term for widgets.
     - Current: `Araçlar`
     - Source: `Widgets`
@@ -495,11 +558,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Scan the QR code to download { -brand-product-name } for mobile. Once installed, select “Sync to mobile” to access your passwords, bookmarks, and more on the go.`
     - Suggest: `Mobil cihazla eşitleyin`
     - In the source this string quotes “Sync to mobile”, which is exactly the value of `sync-to-mobile-button-label` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OverridePostUpdatePage` quotes “Yenilikler” but the string it names, `releaseNotes-link`, reads “Yeni neler var?”
-    - Current: `Güncelleme sonrası “Yenilikler” sayfasını değiştir. Güncelleme sonrası sayfasını devre dışı bırakmak istiyorsanız bu ilkeyi boş olarak ayarlayabilirsiniz.`
-    - Source: `Override the post-update “What’s New” page. Set this policy to blank if you want to disable the post-update page.`
-    - Suggest: `Yeni neler var?`
-    - In the source this string quotes “What’s New”, which is exactly the value of `releaseNotes-link` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `autofill-addresses-add-button` — `browser/browser/preferences/preferences.ftl` — see also S4.
     - Source: `Add new address`
 - `preferences-ai-controls-translations-control` — `browser/browser/preferences/preferences.ftl` — "Çeviri" vs "Çeviriler" everywhere else.
@@ -512,6 +570,16 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Learn more about harmful and unwanted software at <a data-l10n-name='learn_more_link'>Unwanted Software Policy</a>. Learn more about { -brand-short-name }’s Phishing and Malware Protection at <a data-l10n-name='firefox_…`
 - `add-engine-dialog2` — `browser/browser/search.ftl` — see also S4.
     - Source: `buttonaccesskeyaccept: A buttonlabelaccept: Add Engine buttonlabelextra1: Advanced`
+- `summary-upgrade-click` — `browser/installer/custom.ftl` — The instruction names a "Güncelle" button, but the button it refers to is labelled "Yükselt".
+    - Current: `Güncelle düğmesine`
+    - Source: `Click Upgrade to continue.`
+    - Suggest: `Yükselt düğmesine`
+    - upgrade-button, which replaces the Install button on the summary page, is translated "Yükselt". The instruction should use the button's actual label so the user can find it.
+- `nsis-click-install` — `browser/installer/override.ftl` — The instruction tells users to press a "Kur" button, but the Install button is labelled "Yükle".
+    - Current: `Kur düğmesine basın`
+    - Source: `Click Install to start the installation.`
+    - Suggest: `Yükle düğmesine basın`
+    - nsis-install-btn is translated "Yükle", so a button called "Kur" does not exist. The instruction points users at a button they cannot find.
 - `styleeditor-new-button` — `devtools/client/styleeditor.ftl` — "stil dosyası" vs "stil sayfası" for stylesheet in adjacent strings.
     - Source: `accesskey: N tooltiptext: Create and append a new style sheet to the document`
 - `styleeditor-save-button` — `devtools/client/styleeditor.ftl` — "stil dosyası" vs "stil sayfası" for stylesheet in adjacent strings.
@@ -715,11 +783,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `save about:webrtc as`
 - `experimental-features-media-jxl-description` — `toolkit/toolkit/firefoxlabs/features.ftl` — reader-view-enter-button.aria-label (browser/browser.ftl), menu-view-enter-readerview.label (browser/menubar.ftl), connection-dns-over-https-url-item-default.tooltiptext (browser/preferences/connection.ftl), policy-DisableSafeMode, policy-FirefoxHome2 (browser/policies/policies-descriptions.ftl), about-glean-label-for-tag-pings-with-requirements (toolkit/about/aboutGlean.ftl), profiles-opendir (t…
     - Source: `With this feature enabled, { -brand-short-name } supports the JPEG XL (JXL) format. This is an enhanced image file format that supports lossless transition from traditional JPEG files. See <a data-l10n-name="bugzilla">b…`
-- `credit-card-label-with-security-code` — `toolkit/toolkit/payments/payments.ftl` — The aria-label variant drops the comma separating the card description from "CVV saved".
-    - Current: `aria-label: { $ariaLabel } CVV kaydedildi`
-    - Source: `(value): { $label } \| CVV saved aria-label: { $ariaLabel }, CVV saved`
-    - Suggest: `aria-label: { $ariaLabel }, CVV kaydedildi`
-    - The developer comment states the accessibility label uses a comma so it is read as part of the same sentence; the source is "{ $ariaLabel }, CVV saved" but the Turkish omits the comma.
 
 ---
 
@@ -747,8 +810,13 @@ _No suppression rules have matched._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (195)
+### Fixed to date (200)
 
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `urlbar-result-menu-remove-top-site` — `browser/browser/browser.ftl` — fixed 2026-11-23
+- `newtab-recent-searches-menu-learn-more` — `browser/browser/newtab/newtab.ftl` — fixed 2026-11-23
+- `policy-OverridePostUpdatePage` — `browser/browser/policies/policies-descriptions.ftl` — fixed 2026-11-23
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-09
 - `dom-manifest-image-unsupported-purposes` — `dom/dom/manifest.ftl` — fixed 2026-11-09
 - `add-exception-valid-long` — `security/manager/security/certificates/certManager.ftl` — fixed 2026-09-14
@@ -784,8 +852,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `preferences-copy-profile-header` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `preferences-etp-advanced-settings-group` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
 - `preferences-text-zoom-override-warning2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `sitedata-total-size` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `space-alert-over-5gb-message2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `space-alert-under-5gb-message2` — `browser/browser/preferences/preferences.ftl` — fixed 2026-08-24
-- `site-data-settings-description` — `browser/browser/preferences/siteDataSettings.ftl` — fixed 2026-08-24
-- `profiles-cyan-theme-title` — `browser/browser/profiles.ftl` — fixed 2026-08-24

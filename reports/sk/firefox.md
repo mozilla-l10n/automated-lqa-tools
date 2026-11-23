@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 62 of 16,883 |
+| **Strings reviewed this run** | 337 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,51 @@ Also for sk: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (5)
 
-_No new findings._
+- `un-refresh-page-explanation` — `browser/installer/custom.ftl` — The final sentence "Start fresh for optimal performance." is missing from the Slovak text.
+    - Current: `Obnovené budú predvolené nastavenia a budú odstránené doplnky.`
+    - Source: `If you’re having problems with { $BrandShortName }, a refresh can help.  This will restore the default settings and remove add-ons. Start fresh for optimal performance.`
+    - Suggest: `Obnovené budú predvolené nastavenia a budú odstránené doplnky. Začnite odznova a získajte optimálny výkon.`
+    - The en-US explanation ends with "Start fresh for optimal performance." The Slovak has nothing that matches this sentence, so part of the source is not translated.
+- `mui-text-startmenu-title` — `browser/installer/mui.ftl` — The title says 'shortcut' (odkazu) where the source says 'folder'.
+    - Current: `Výber odkazu v ponuke Štart`
+    - Source: `Choose Start Menu Folder`
+    - Suggest: `Výber priečinka v ponuke Štart`
+    - en-US 'Choose Start Menu Folder' is about choosing a folder; the subtitle and body correctly use 'priečinok', but the title says 'choose a shortcut in the Start Menu'.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — "Opcode" is translated as "kontrolný kód", which means a check code, not an operation code.
+    - Current: `nesprávny kontrolný kód`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `neplatný operačný kód`
+    - en-US "invalid opcode" refers to an invalid instruction (operation code). "Kontrolný kód" suggests a checksum or control code, which is a different thing.
+- `nsis-file-error` — `browser/installer/override.ftl` — The line break comes before the comma, so the second instruction line starts with a comma.
+    - Current: `tlačidlo Prerušiť , alebo`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `tlačidlo Prerušiť, alebo`
+    - The user sees a line that begins with ", alebo". The comma should end the previous line, as in the en-US layout and in nsis-file-error-no-ignore.
+- `newtab-empty-section-topstories-generic` — `browser/browser/newtab/newtab.ftl` — "Už ste prečítali." is missing an object, so the sentence reads as cut off.
+    - Current: `Už ste prečítali.`
+    - Source: `You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.`
+    - Suggest: `Už ste prečítali všetko.`
+    - The en-US "You've caught up" means the user has seen everything. The transitive verb "prečítať" ("to read") needs an object, so "Už ste prečítali." is incomplete Slovak.
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (3)
 
-_Nothing was fixed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnoviť údaje” but the string it names, `restore-from-backup-header`, reads “Obnovte svoje údaje”
+    - Current: `Kliknite na “Obnoviť údaje” a vyberte tento súbor`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Obnovte svoje údaje`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnoviť údaje” but the string it names, `restore-from-backup-header`, reads “Obnovte svoje údaje”
+    - Current: `Kliknite na “Obnoviť údaje” a vyberte tento súbor`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Obnovte svoje údaje`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Uložené témy” but the string it names, `theme-disabled-heading2`, reads “Uložené témy vzhľadu”
+    - Current: `heading: Vaše farebné témy boli odstránené. message: { -brand-product-name } aktualizoval svoju kolekciu farebných tém. Starú verziu (verzie) sme odstránili zo zoznamu „Uložené témy“. Nové verzie nájdete na stránke s do…`
+    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
+    - Suggest: `Uložené témy vzhľadu`
+    - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -34,9 +72,16 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (2)
 
-_Nothing retired._
+- `smart-window-model-personal` — `browser/browser/aiFeatures.ftl` — “Most tailored answers” rendered as “most accurate answers”.
+    - Current: `Osobný: najpresnejšie odpovede`
+    - Suggest: `Osobný: najprispôsobenejšie odpovede`
+    - “najpresnejšie” claims accuracy rather than personalization; the same en-US phrase is rendered “Najprispôsobenejšie odpovede” in aiWindow.ftl (aiwindow-firstrun-model-personal-body), so the surface is also inconsistent.
+- `payment-moz-box-item-security-code-only` — `browser/browser/preferences/preferences.ftl` — Gender disagreement: “CVV je uložené” vs “CVV je uložený” in the sibling string.
+    - Current: `CVV je uložené`
+    - Suggest: `CVV je uložený`
+    - payment-moz-box-item-with-security-code in the same list renders the same en-US phrase “CVV saved” as “CVV je uložený”; one of the two agreements must be wrong, and the neuter form does not match the masculine treatment used there.
 
 ---
 
@@ -44,8 +89,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -54,8 +99,8 @@ _Nothing retired._
 | Reference files that did not parse | 0 |
 | Variable & placeholder mismatches | 0 |
 | Term parameter mismatches | 0 |
-| Plural variants (dead or missing forms) | 94 |
-| Text quoting a UI label that no longer matches | 4 |
+| Plural variants (dead or missing forms) | 96 |
+| Text quoting a UI label that no longer matches | 1 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 0 |
@@ -71,18 +116,18 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 525, `curly-single` 79, `straight-double` 78, `german-double` 10 | **curly-double** |
+| quotes | `curly-double` 524, `curly-single` 79, `straight-double` 78, `german-double` 10 | **curly-double** |
 | apostrophe | `typographic` 89, `straight` 54 | _mixed_ |
-| ellipsis | `char` 403 | **char** |
-| dash | `em` 29, `en` 67 | _mixed_ |
-| nbsp | `total` 118, `before-punctuation` 4, `space-before-punctuation` 7 | **total** |
+| ellipsis | `char` 412 | **char** |
+| dash | `em` 29, `en` 70 | _mixed_ |
+| nbsp | `total` 117, `before-punctuation` 4, `space-before-punctuation` 7 | **total** |
 
 ---
 
 ## 2. Systemic items (decisions, not line items)
 
-- **plurals — 94 strings** — 94 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
-    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-bulk-selected-count`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames` …and 82 more
+- **plurals — 96 strings** — 96 strings. The locale's plural variants differ from what the rest of its tree does. At this scale it is a convention to settle once, not a defect per string.
+    - Affected: `about-logins-confirm-delete-all-sync-dialog-title`, `about-processes-active-threads`, `about-processes-bulk-selected-count`, `about-processes-inactive-threads`, `about-processes-profile-process`, `about-processes-site-tab-count`, `about-processes-tab-count`, `about-sync-log-clear-confirm-message`, `about-sync-log-count`, `about-telemetry-histogram-stats`, `about-webrtc-channels`, `about-webrtc-frames` …and 84 more
 - **typography — 42 strings** — 42 strings. These deviate from the convention the rest of the tree follows. Whether to normalize them is one decision.
     - Affected: `CookieAttributeIgnored`, `ImageMapCircleNegativeRadius`, `ImageMapCircleWrongNumberOfCoords`, `ImageMapPolyOddNumberOfCoords`, `ImageMapPolyWrongNumberOfCoords`, `ImageMapRectBoundsError`, `LenientThisWarning`, `MediaLoadSourceMissingSrc`, `MediaLoadUnsupportedMimeType`, `MediaLoadUnsupportedTypeAttribute`, `MimeNotCss`, `MimeNotCssWarn` …and 30 more
 
@@ -93,10 +138,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 152 |
-| 2 | Wrong content (says something other than the English) | 70 |
-| 3 | Degraded language (grammar, spelling, terminology) | 2 |
-| 4 | Cosmetic (typography, spacing) | 4 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 151 |
+| 2 | Wrong content (says something other than the English) | 69 |
+| 3 | Degraded language (grammar, spelling, terminology) | 3 |
+| 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -105,11 +150,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [1] Remove [other] Remove All`
     - Suggest: `[1] Odstrániť`
     - en-US has [1] “Remove” vs [other] “Remove All”; the sk uses “Odstrániť všetky” in every variant, so a one-password dialog offers to remove all.
-- `smart-window-model-personal` — `browser/browser/aiFeatures.ftl` — “Most tailored answers” rendered as “most accurate answers”.
-    - Current: `Osobný: najpresnejšie odpovede`
-    - Source: `description: Model { $model } by { $ownerName } label: Personal: Most tailored answers`
-    - Suggest: `Osobný: najprispôsobenejšie odpovede`
-    - “najpresnejšie” claims accuracy rather than personalization; the same en-US phrase is rendered “Najprispôsobenejšie odpovede” in aiWindow.ftl (aiwindow-firstrun-model-personal-body), so the surface is also inconsistent.
 - `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — “Open Smart Windows” (adjective) was read as a verb, so the sk says opening them causes the switch.
     - Current: `prepnete na klasické okná`
     - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
@@ -400,7 +440,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Call to the key function not allowed.`
     - Suggest: `Volanie funkcie key() nie je povolené.`
     - en-US "Call to the key function not allowed" refers to the XSLT key() function; "kľúčová funkcia" reads as "a crucial function", naming something that does not exist.
-- _…and 38 more; see `state/` for the full list._
+- `SEC_ERROR_CRL_NOT_YET_VALID` — `security/manager/chrome/pipnss/nsserrors.properties` — Certificate revocation list rendered as key revocation list.
+    - Current: `Zoznam odvolania kľúčov tohto certifikátu zatiaľ nie je platný.`
+    - Source: `The certificate revocation list for this certificate is not yet valid.`
+    - Suggest: `Zoznam odvolania certifikátov tohto certifikátu zatiaľ nie je platný.`
+    - en-US is "The certificate revocation list…"; the sk says "key revocation list", making this string identical to SEC_ERROR_KRL_NOT_YET_VALID and naming the wrong object. Elsewhere in the file CRL is correctly "zoznam odvolania certifikátov".
+- _…and 37 more; see `state/` for the full list._
 
 ### B. Mistranslation, reversed meaning, wrong names & brand
 
@@ -429,6 +474,21 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Choose a new tab layout`
     - Suggest: `Vyberte si rozloženie novej karty`
     - In en-US "new tab" modifies "layout": this is the layout of the New Tab page. "nové rozloženie kariet" means a new arrangement of tabs, which is a different thing.
+- `un-refresh-page-explanation` — `browser/installer/custom.ftl` — The final sentence "Start fresh for optimal performance." is missing from the Slovak text.
+    - Current: `Obnovené budú predvolené nastavenia a budú odstránené doplnky.`
+    - Source: `If you’re having problems with { $BrandShortName }, a refresh can help.  This will restore the default settings and remove add-ons. Start fresh for optimal performance.`
+    - Suggest: `Obnovené budú predvolené nastavenia a budú odstránené doplnky. Začnite odznova a získajte optimálny výkon.`
+    - The en-US explanation ends with "Start fresh for optimal performance." The Slovak has nothing that matches this sentence, so part of the source is not translated.
+- `mui-text-startmenu-title` — `browser/installer/mui.ftl` — The title says 'shortcut' (odkazu) where the source says 'folder'.
+    - Current: `Výber odkazu v ponuke Štart`
+    - Source: `Choose Start Menu Folder`
+    - Suggest: `Výber priečinka v ponuke Štart`
+    - en-US 'Choose Start Menu Folder' is about choosing a folder; the subtitle and body correctly use 'priečinok', but the title says 'choose a shortcut in the Start Menu'.
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — "Opcode" is translated as "kontrolný kód", which means a check code, not an operation code.
+    - Current: `nesprávny kontrolný kód`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `neplatný operačný kód`
+    - en-US "invalid opcode" refers to an invalid instruction (operation code). "Kontrolný kód" suggests a checksum or control code, which is a different thing.
 - `dom-manifest-start-url-invalid` — `dom/dom/manifest.ftl` — "Start URL" is translated as "the beginning of the URL" instead of the start URL.
     - Current: `Začiatok URL adresy je neplatný.`
     - Source: `The start URL is invalid.`
@@ -522,6 +582,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Use your { $maxUsage } GB and 6 locations for extra privacy to make your browsing harder to trace back to you.`
     - Suggest: `aby vás bolo pri prehliadaní webu ťažšie vysledovať`
     - “pri” requires the locative “prehliadaní”; the same broken phrase also appears in ipprotection-summer-promo-offramp-generic-description-default-browser-users-no-upgrade.
+- `newtab-empty-section-topstories-generic` — `browser/browser/newtab/newtab.ftl` — "Už ste prečítali." is missing an object, so the sentence reads as cut off.
+    - Current: `Už ste prečítali.`
+    - Source: `You’ve caught up. Check back later for more stories. Can’t wait? Select a popular topic to find more great stories from around the web.`
+    - Suggest: `Už ste prečítali všetko.`
+    - The en-US "You've caught up" means the user has seen everything. The transitive verb "prečítať" ("to read") needs an object, so "Už ste prečítali." is incomplete Slovak.
 - `sidebar-button.tooltiptext2` — `browser/chrome/browser/customizableui/customizableWidgets.properties` — Missing accent: "bočne" instead of the adjective "bočné"
     - Current: `Zobrazí bočne panely`
     - Source: `Show sidebars`
@@ -705,16 +770,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [other] <span>Existing entries updated:</span> <span data-l10n-name="count">{ $count }</span>`
     - Suggest: `Aktualizované existujúce záznamy:`
     - The parallel report string about-logins-import-report-modified2 correctly uses “záznam/záznamy”; the dialog and the report now name the same count differently.
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Obnoviť údaje” but the string it names, `restore-from-backup-header`, reads “Obnovte svoje údaje”
-    - Current: `Kliknite na “Obnoviť údaje” a vyberte tento súbor`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovte svoje údaje`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Obnoviť údaje” but the string it names, `restore-from-backup-header`, reads “Obnovte svoje údaje”
-    - Current: `Kliknite na “Obnoviť údaje” a vyberte tento súbor`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Obnovte svoje údaje`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `trustpanel-etp-description-disabled` — `browser/browser/browser.ftl` — “trackers” rendered as “sledovacích zariadení” (tracking devices).
     - Current: `zablokujeme čo najviac sledovacích zariadení`
     - Source: `{ -brand-product-name } thinks companies should follow you less. We block as many trackers as we can when you turn on protections.`
@@ -800,11 +855,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `accesskey: b label: Show alerts about passwords for breached websites`
     - Suggest: `na ktorých došlo k úniku dát`
     - Standard Slovak uses “dôjsť k niečomu” for an event occurring; “prísť k úniku” is a calque and is not correct here.
-- `payment-moz-box-item-security-code-only` — `browser/browser/preferences/preferences.ftl` — Gender disagreement: “CVV je uložené” vs “CVV je uložený” in the sibling string.
-    - Current: `CVV je uložené`
-    - Source: `description: CVV saved label: { $cardNumber }`
-    - Suggest: `CVV je uložený`
-    - payment-moz-box-item-with-security-code in the same list renders the same en-US phrase “CVV saved” as “CVV je uložený”; one of the two agreements must be wrong, and the neuter form does not match the masculine treatment used there.
 - `preferences-copy-profile-header` — `browser/browser/preferences/preferences.ftl` — Case mismatch in the coordinated subject list: “históriu” among nominatives.
     - Current: `skopírujú vaše nastavenia, doplnky, históriu a uložené údaje`
     - Source: `description: The new profile will copy your settings, add-ons, history, and saved data like bookmarks and passwords — but not your account or sync info. label: Copy an existing profile`
@@ -890,11 +940,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Failed to load ‘%S’. A ServiceWorker intercepted the request and encountered an unexpected error.`
     - Suggest: `ServiceWorker zachytil požiadavku`
     - The developer comment says "Do not translate 'ServiceWorker'". The locale renders it as "skript typu worker" here and in roughly twenty further strings (CorsResponseForSameOriginRequest, ServiceWorker* registration errors, PushMessage* etc.), which also loses the distinction from the plain Worker API that the same phrase is used for.
-- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — `colorway-removal-notice-message` quotes “Uložené témy” but the string it names, `theme-disabled-heading2`, reads “Uložené témy vzhľadu”
-    - Current: `heading: Vaše farebné témy boli odstránené. message: { -brand-product-name } aktualizoval svoju kolekciu farebných tém. Starú verziu (verzie) sme odstránili zo zoznamu „Uložené témy“. Nové verzie nájdete na stránke s do…`
-    - Source: `heading: Your colorway theme(s) were removed. message: { -brand-product-name } updated its colorways collection. We removed the old version(s) from your “Saved Themes” list. Get new versions on the add-ons site.`
-    - Suggest: `Uložené témy vzhľadu`
-    - In the source this string quotes “Saved Themes”, which is exactly the value of `theme-disabled-heading2` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `plugins-widevine-description` — `toolkit/toolkit/about/aboutAddons.ftl` — Typo “požívané” (consumed) for “používané” (used).
     - Current: `Šifrované médiá sú typicky požívané`
     - Source: `This plugin enables playback of encrypted media in compliance with the Encrypted Media Extensions specification. Encrypted media is typically used by sites to protect against copying of premium media content. Visit http…`
@@ -993,6 +1038,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Properties for “%S”`
     - Suggest: `Vlastnosti „%S“`
     - The adjacent dialogTitleEditBookmark uses curly quotes (“%S”), as does the en-US source here; the straight quotes in this string are inconsistent within the same dialog family.
+- `nsis-file-error` — `browser/installer/override.ftl` — The line break comes before the comma, so the second instruction line starts with a comma.
+    - Current: `tlačidlo Prerušiť , alebo`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Abort to stop the installation, Retry to try again, or Ignore to skip this file.`
+    - Suggest: `tlačidlo Prerušiť, alebo`
+    - The user sees a line that begins with ", alebo". The comma should end the previous line, as in the en-US layout and in nsis-file-error-no-ignore.
 - `storage-table-type-localstorage-hint` — `devtools/client/storage.ftl` — “local storage” rendered as “Miestne úložisko” while the tree label uses “Lokálne úložisko”.
     - Current: `Miestne úložisko môžete zobraziť a upraviť zvolením servera.`
     - Source: `View and edit the local storage by selecting a host. <a data-l10n-name="learn-more-link">Learn more</a>`
@@ -1090,8 +1140,11 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (3)
+### Fixed to date (6)
 
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `colorway-removal-notice-message` — `toolkit/toolkit/about/aboutAddons.ftl` — fixed 2026-11-23
 - `newTabAlwaysContainer.tooltip` — `browser/chrome/browser/browser.properties` — fixed 2026-11-09
 - `home-prefs-recommended-by-option-sponsored-stories` — `browser/browser/preferences/preferences.ftl` — fixed 2026-10-26
 - `pdfjs-editor-add-signature-type-button` — `toolkit/toolkit/pdfviewer/viewer.ftl` — fixed 2026-10-26

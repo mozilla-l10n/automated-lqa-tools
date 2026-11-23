@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 18 of 16,883 |
+| **Strings reviewed this run** | 327 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,66 +18,51 @@ Also for zh-TW: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (1)
+### 🆕 New findings (7)
 
-- `confirmation-hint-tab-group-button-removed` — `browser/browser/confirmationHints.ftl` — "Find" (locate) is rendered as 搜尋 (search), wrongly suggesting the menu lets you search tab groups.
-    - Current: `可在此選單搜尋分頁群組`
-    - Source: `Find tab groups in this menu`
-    - Suggest: `可在此選單找到分頁群組`
-    - Per the developer comment, this hint points to the app menu where tab groups can still be found after the toolbar button is removed. 'Find' means 'locate', not 'search'; 搜尋 implies a search function in the menu.
+- `smartwindow-onboarding-model-label` — `browser/browser/aiWindow.ftl` — Uses informal 你 instead of the polite 您 used throughout the surrounding onboarding strings.
+    - Current: `挑選你的 AI 模型`
+    - Source: `Pick your AI model`
+    - Suggest: `挑選您的 AI 模型`
+    - All sibling strings in the Smart Window onboarding flow (e.g. 依照您的喜好設定, 選擇…要如何了解您) address the user with 您; this label breaks the established form of address.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — The heading leaves out "more", so the additional locations read as the total number of locations.
+    - Current: `您已獲得 { $additionalLocationsCount } 個 VPN 連線位置`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `您已額外獲得 { $additionalLocationsCount } 個 VPN 連線位置`
+    - The en-US says "You've got N more VPN locations", and the developer comment describes the variable as the number of additional locations. The translation says the user has N locations, which gets the count wrong.
+- `ipprotection-unlimited-bandwidth-promo` — `browser/browser/ipProtection.ftl` — There is a space after the date placeholder, but the zh-TW date ends in a Chinese character.
+    - Current: `{ $endDate } 前`
+    - Source: `Unlimited bandwidth until { $endDate }`
+    - Suggest: `{ $endDate }前`
+    - $endDate is a month-day date, which renders as something like 1月31日 in zh-TW and ends in 日. The locale's convention is to space a placeholder by what it expands to, so no space should come before 前.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — The translation says updating system files may require a reboot, but the source says closing other apps lets setup update them without rebooting.
+    - Current: `為了更新相關的系統檔案可能必須重新啟動電腦。`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `如此一來，更新相關系統檔案時就不必重新啟動電腦。`
+    - The en-US gives the reason for closing other applications: it makes it possible to update system files without rebooting. The zh-TW drops that reason and says a reboot may be needed to update system files. That is the opposite of what the en-US says.
+- `stub-blurb-first` — `browser/installer/nsisstrings.ftl` — "open web" is left in English as "Open Web", while the matching Developer Edition string translates it as 開放的網路環境.
+    - Current: `準備好在 Open Web 中漫遊`
+    - Source: `Get ready to roam on the open web`
+    - Suggest: `準備好在開放的網路環境中漫遊`
+    - "open web" is an ordinary phrase, not a brand. The same installer surface translates it in stub-blurb-first-devedition (開放的網路環境), so leaving it in English here is inconsistent.
+- `nsis-dir-browse-text` — `browser/installer/override.ftl` — Sentence lacks the object 'folder', leaving 「選擇要將…安裝到：」 grammatically incomplete.
+    - Current: `選擇要將 { $BrandFullNameDA } 安裝到：`
+    - Source: `Select the folder to install { $BrandFullNameDA } in:`
+    - Suggest: `選擇要將 { $BrandFullNameDA } 安裝到的資料夾：`
+    - en-US 'Select the folder to install X in:' asks the user to select a folder; the translation reads 'Select to install X to:' with no object for 選擇.
+- `nsis-dir-text` — `browser/installer/override.ftl` — Extra space after the full-width period before the placeable.
+    - Current: `選擇其他資料夾。 { $ClickInstructions }`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `選擇其他資料夾。{ $ClickInstructions }`
+    - Locale convention forbids spaces adjacent to full-width punctuation; sibling strings (e.g. nsis-license-text-rb) have no space here.
 
-### ✅ Fixed since the last run (10)
+### ✅ Fixed since the last run (1)
 
-- `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — The praise message 'Nice work organizing your tabs' is rendered as an instruction, 'Organize your tabs well'.
-    - Current: `好好整理您的分頁`
-    - Source: `Nice work organizing your tabs`
-    - Suggest: `分頁整理得真好`
-    - The comment says this is shown when every suggested group has already been created. The translation tells the user to organize their tabs instead of acknowledging that they already did.
-- `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — 必須的 is used where 必需的 is meant ("required").
-    - Current: `必須的視訊解碼器`
-    - Source: `To play video, you may need to install the required video codecs.`
-    - Suggest: `必需的視訊解碼器`
-    - en-US says "required video codecs". The adjective for "needed" is 必需; 必須 is an adverb meaning "must", so 必須的 is wrong here.
-- `identity-https-only-info-turn-on3` — `browser/browser/browser.ftl` — The verb 'turn on' is missing: 請對此網站 HTTPS 升級.
-    - Current: `請對此網站 HTTPS 升級`
-    - Source: `Turn on HTTPS upgrades for this site if you want { -brand-short-name } to upgrade the connection when possible.`
-    - Suggest: `請對此網站開啟 HTTPS 升級`
-    - en-US: 'Turn on HTTPS upgrades for this site...'. Without 開啟 the sentence has no action verb. The sibling turn-off string correctly says 關閉 HTTPS 升級.
-- `customkeys-description` — `browser/browser/customkeys.ftl` — 'Control how you move around and interact with Firefox' is rendered as 'control how you move the cursor'.
-    - Current: `控制您如何移動游標以及與 { -brand-short-name } 互動。`
-    - Source: `Control how you move around and interact with { -brand-short-name }.`
-    - Suggest: `控制您如何在 { -brand-short-name } 中瀏覽與互動。`
-    - In this context 'move around' means navigating the browser with shortcuts, not moving a cursor. The translation narrows the meaning of the keyboard-shortcuts page.
-- `ip-protection-not-opted-in-inclusions-enabled` — `browser/browser/ipProtection.ftl` — "免費" ("free") appears twice in the same sentence.
-    - Current: `每月免費獲得 { $maxUsage } GB 的免費流量`
-    - Source: `heading: Ready to try it? message: Get { $maxUsage } GB free each month and choose which sites use VPN.`
-    - Suggest: `每月免費獲得 { $maxUsage } GB 流量`
-    - Saying "free" twice ("get free … of free data") is redundant and reads awkwardly. The source says "free" only once.
-- `connection-dns-over-https-url-item` — `browser/browser/preferences/preferences.ftl` — Typo: 使用者 ("user") is written where 使用 ("use") is meant.
-    - Current: `使用者此提供者進行 DNS over HTTPS 解析`
-    - Source: `label: { $name } tooltiptext: Use this provider for resolving DNS over HTTPS`
-    - Suggest: `使用此提供者進行 DNS over HTTPS 解析`
-    - The en-US is "Use this provider…". As written, the tooltip reads "user this provider…", which is ungrammatical. Compare the matching string in connection.ftl: 使用預設網址來解析 DNS over HTTPS.
-- `inspector-emulation-panel-reduced-motion-no-preference` — `devtools/client/inspector.ftl` — The aria-label reads as 'do not prefer the reduced-motion emulation' instead of 'enable no-preference reduced-motion emulation'.
-    - Current: `不偏好減少動畫模擬功能`
-    - Source: `(value): No preference aria-label: Enable no preference for reduced motion emulation`
-    - Suggest: `啟用「無偏好」減少動畫模擬功能`
-    - en-US: 'Enable no preference for reduced motion emulation'. The sibling labels start with 啟用 or 停用. This one drops the action, and its wording suggests declining the emulation.
-- `styleeditor-new-button` — `devtools/client/styleeditor.ftl` — 'append' is translated 擴充 ('expand / extend') instead of 附加.
-    - Current: `建立並將新的樣式表擴充至文件尾端`
-    - Source: `accesskey: N tooltiptext: Create and append a new style sheet to the document`
-    - Suggest: `建立並將新的樣式表附加到文件尾端`
-    - en-US: 'Create and append a new style sheet to the document'. The import button right next to it correctly uses 附加到文件尾端. 擴充 doesn't mean 'append'.
-- `url-classifier-content-classifier-col-important` — `toolkit/toolkit/about/url-classifier.ftl` — 'Important' was translated although the comment says not to
-    - Current: `重要`
-    - Source: `Important`
-    - Suggest: `Important`
-    - The comment says 'Important' refers to the filter-syntax option and should not be translated, because it is technical syntax.
-- `password-manager-update-password-button-delete` — `toolkit/toolkit/passwordmgr/passwordmgr.ftl` — The button label says it deletes ALL saved passwords, but the action removes only the one saved password
-    - Current: `刪除所有已儲存的密碼`
-    - Source: `accesskey: R label: Remove saved password`
-    - Suggest: `移除已儲存的密碼`
-    - en-US 'Remove saved password' acts on the single login in the update doorhanger. The Chinese tells the user the button wipes every stored password, so it claims a much wider deletion than the product performs.
+- `Revert` — `toolkit/chrome/global/commonDialogs.properties` — The 'Revert' dialog button is translated as 'invert selection'
+    - Current: `反向選擇(&R)`
+    - Source: `&Revert`
+    - Suggest: `還原(&R)`
+    - 反向選擇 means 'invert selection', a different command from 'revert' (go back to the previous state).
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -97,8 +82,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -128,12 +113,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `corner` 907, `straight-double` 25, `curly-single` 9, `curly-double` 6 | **corner** |
+| quotes | `corner` 931, `straight-double` 25, `curly-single` 9, `curly-double` 6 | **corner** |
 | apostrophe | `typographic` 9, `straight` 9 | _mixed_ |
-| ellipsis | `char` 405 | **char** |
+| ellipsis | `char` 414 | **char** |
 | dash | `em` 54, `en` 1 | **em** |
 | nbsp | `total` 1, `space-before-punctuation` 5 | **space-before-punctuation** |
-| fullwidth | `punctuation` 8580 | **punctuation** |
+| fullwidth | `punctuation` 8778 | **punctuation** |
 
 ---
 
@@ -143,15 +128,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (33)
+## 3. Open findings (39)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 10 |
-| 2 | Wrong content (says something other than the English) | 14 |
-| 3 | Degraded language (grammar, spelling, terminology) | 1 |
-| 4 | Cosmetic (typography, spacing) | 8 |
+| 2 | Wrong content (says something other than the English) | 15 |
+| 3 | Degraded language (grammar, spelling, terminology) | 4 |
+| 4 | Cosmetic (typography, spacing) | 10 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -238,11 +223,6 @@ _Nothing reported._
     - Source: `A script from the extension “%1$S” is running on this page, and making %2$S unresponsive.  It may be busy, or it may have stopped responding permanently. You can stop the script now, or you can continue to see if it wil…`
     - Suggest: `該指令碼可能還在忙碌中，或是已經永久停止回應。您可以現在就中斷該指令碼，或是繼續等待它完成工作。`
     - In en-US, 'It may be busy … see if it will complete' refers to the extension's script. Plugins are a different and obsolete concept.
-- `Revert` — `toolkit/chrome/global/commonDialogs.properties` — The 'Revert' dialog button is translated as 'invert selection'
-    - Current: `反向選擇(&R)`
-    - Source: `&Revert`
-    - Suggest: `還原(&R)`
-    - 反向選擇 means 'invert selection', a different command from 'revert' (go back to the previous state).
 - `about-glean-label-for-ping-names` — `toolkit/toolkit/about/aboutGlean.ftl` — The code literal 'events' was changed to 'event', and the sentence no longer says the default is a ping
     - Current: `否則預設的 <code>event</code> 指標是 <code>event</code>`
     - Source: `Select from the preceding list the ping your instrumentation is in. If it’s in a <a data-l10n-name="custom-ping-link">custom ping</a>, choose that one. Otherwise, the default for <code>event</code> metrics is the <code>…`
@@ -260,6 +240,11 @@ _Nothing reported._
     - Source: `Find tab groups in this menu`
     - Suggest: `可在此選單找到分頁群組`
     - Per the developer comment, this hint points to the app menu where tab groups can still be found after the toolbar button is removed. 'Find' means 'locate', not 'search'; 搜尋 implies a search function in the menu.
+- `ipprotection-message-default-browser-confirmation` — `browser/browser/ipProtection.ftl` — The heading leaves out "more", so the additional locations read as the total number of locations.
+    - Current: `您已獲得 { $additionalLocationsCount } 個 VPN 連線位置`
+    - Source: `heading: {$additionalLocationsCount ->} [one] You’ve got { $additionalLocationsCount } more VPN location [other] You’ve got { $additionalLocationsCount } more VPN locations message: Thanks for making { -brand-short-name…`
+    - Suggest: `您已額外獲得 { $additionalLocationsCount } 個 VPN 連線位置`
+    - The en-US says "You've got N more VPN locations", and the developer comment describes the variable as the number of additional locations. The translation says the user has N locations, which gets the count wrong.
 - `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — The tooltip turns the noun phrase 'open tabs from your other devices' into the command 'open the tabs on your other devices'.
     - Current: `開啟您其他裝置上的分頁`
     - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
@@ -280,6 +265,11 @@ _Nothing reported._
     - Source: `Ask to open app links`
     - Suggest: `詢問是否可開啟應用程式鏈結`
     - The developer comment says this permission controls whether the site may ask to open app links. The translation describes the browser asking the user before it opens app links, which is a different setting.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — The translation says updating system files may require a reboot, but the source says closing other apps lets setup update them without rebooting.
+    - Current: `為了更新相關的系統檔案可能必須重新啟動電腦。`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `如此一來，更新相關系統檔案時就不必重新啟動電腦。`
+    - The en-US gives the reason for closing other applications: it makes it possible to update system files without rebooting. The zh-TW drops that reason and says a reboot may be needed to update system files. That is the opposite of what the en-US says.
 - `download-ui-confirm-private-browsing-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The singular variant uses the plural 「這些檔案」 (these files) for a single download.
     - Current: `[1] 將無法繼續下載這些檔案。`
     - Source: `{$downloadsCount ->} [1] You won’t be able to resume this download. [other] You won’t be able to resume these downloads.`
@@ -298,6 +288,11 @@ _Nothing reported._
     - Source: `accesskey: G label: {$tabCount ->} [1] Add to Group [other] Add { $tabCount } Tabs to Group`
     - Suggest: `將 { $tabCount } 個分頁加入至群組`
     - The en-US is 'Add N Tabs to Group'. A number in Chinese needs the classifier 個, as in the sibling string 移動 { $tabCount } 個分頁到. With 的 the phrase is ungrammatical.
+- `nsis-dir-browse-text` — `browser/installer/override.ftl` — Sentence lacks the object 'folder', leaving 「選擇要將…安裝到：」 grammatically incomplete.
+    - Current: `選擇要將 { $BrandFullNameDA } 安裝到：`
+    - Source: `Select the folder to install { $BrandFullNameDA } in:`
+    - Suggest: `選擇要將 { $BrandFullNameDA } 安裝到的資料夾：`
+    - en-US 'Select the folder to install X in:' asks the user to select a folder; the translation reads 'Select to install X to:' with no object for 選擇.
 
 ### D. Terminology, register & consistency
 
@@ -306,11 +301,21 @@ _Nothing reported._
     - Source: `Row { $number }`
     - Suggest: `第 { $number } 行`
     - This labels a single row index in the import report. Chinese needs the ordinal 第 here. Without it the text reads as a count.
+- `smartwindow-onboarding-model-label` — `browser/browser/aiWindow.ftl` — Uses informal 你 instead of the polite 您 used throughout the surrounding onboarding strings.
+    - Current: `挑選你的 AI 模型`
+    - Source: `Pick your AI model`
+    - Suggest: `挑選您的 AI 模型`
+    - All sibling strings in the Smart Window onboarding flow (e.g. 依照您的喜好設定, 選擇…要如何了解您) address the user with 您; this label breaks the established form of address.
 - `smartwindow-nl-retry-message` — `browser/browser/aiWindowContent.ftl` — The phrase 關閉分頁起來 is ungrammatical.
     - Current: `若您還是想要關閉分頁起來`
     - Source: `If you still want to close tabs, choose <strong>Retry</strong> and make your selection in the card that opens.`
     - Suggest: `若您還是想要關閉分頁`
     - The complement 起來 does not combine with 關閉. It looks copied from the group-tabs sibling string (將分頁群組起來).
+- `stub-blurb-first` — `browser/installer/nsisstrings.ftl` — "open web" is left in English as "Open Web", while the matching Developer Edition string translates it as 開放的網路環境.
+    - Current: `準備好在 Open Web 中漫遊`
+    - Source: `Get ready to roam on the open web`
+    - Suggest: `準備好在開放的網路環境中漫遊`
+    - "open web" is an ordinary phrase, not a brand. The same installer surface translates it in stub-blurb-first-devedition (開放的網路環境), so leaving it in English here is inconsistent.
 
 ### E. Typography, punctuation & spacing
 
@@ -324,6 +329,16 @@ _Nothing reported._
     - Source: `label: Settings`
     - Suggest: `設定`
     - en-US now says 'Settings'. The appmenu comment says Settings is used on all platforms, and appmenuitem-settings in the same file is 設定.
+- `ipprotection-unlimited-bandwidth-promo` — `browser/browser/ipProtection.ftl` — There is a space after the date placeholder, but the zh-TW date ends in a Chinese character.
+    - Current: `{ $endDate } 前`
+    - Source: `Unlimited bandwidth until { $endDate }`
+    - Suggest: `{ $endDate }前`
+    - $endDate is a month-day date, which renders as something like 1月31日 in zh-TW and ends in 日. The locale's convention is to space a placeholder by what it expands to, so no space should come before 前.
+- `nsis-dir-text` — `browser/installer/override.ftl` — Extra space after the full-width period before the placeable.
+    - Current: `選擇其他資料夾。 { $ClickInstructions }`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `選擇其他資料夾。{ $ClickInstructions }`
+    - Locale convention forbids spaces adjacent to full-width punctuation; sibling strings (e.g. nsis-license-text-rb) have no space here.
 
 ---
 
@@ -376,8 +391,9 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (196)
+### Fixed to date (197)
 
+- `Revert` — `toolkit/chrome/global/commonDialogs.properties` — fixed 2026-11-23
 - `smartwindow-group-tabs-all-sorted` — `browser/browser/autoTabGrouping.ftl` — fixed 2026-11-16
 - `decoder-doctor-no-codecs-linux-message` — `browser/browser/browser.ftl` — fixed 2026-11-16
 - `identity-https-only-info-turn-on3` — `browser/browser/browser.ftl` — fixed 2026-11-16
@@ -417,4 +433,3 @@ _A finding is withdrawn when a check stops raising it while the string itself ne
 - `multi-cta-fox-doodle-privacy-focused-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-11-09
 - `root-certificate-succession-infobar-january-message` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-11-09
 - `set-default-menu-message-row-layout-subtitle-variant` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-11-09
-- `windows-10-eos-challenger-pin-callout-subtitle` — `browser/browser/newtab/asrouter.ftl` — fixed 2026-11-09

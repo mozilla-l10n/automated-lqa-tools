@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 145 of 16,883 |
+| **Strings reviewed this run** | 246 of 17,085 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,74 +18,58 @@ Also for ja: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (9)
+### 🆕 New findings (7)
 
-- `tab-context-separate-split-view-alt` — `browser/browser/tabbrowser.ftl` — "Separate Tabs" (undo split view) is rendered as "split the tabs", the opposite action.
-    - Current: `タブを分割`
-    - Source: `accesskey: t label: Separate Tabs`
-    - Suggest: `タブの分割を解除`
-    - The comment says this separates the two split-view tabs back to normal display; 分割 means 'split', which describes creating the split view, not ending it.
-- `newtab-widget-wrexhamafc-view-table` — `browser/browser/newtab/newtab.ftl` — Football "Table" (league standings) is translated as 対戦表 (fixture/match chart).
-    - Current: `対戦表`
-    - Source: `Table`
-    - Suggest: `順位表`
-    - Alongside Matches and Fixtures, 'Table' is the league standings table; 対戦表 means a match schedule/bracket, duplicating Fixtures.
-- `tab-groups-onboarding-auto-saved-title` — `browser/browser/newtab/onboarding.ftl` — "Find them here" is rendered as "search here".
-    - Current: `ここで検索してください`
-    - Source: `Tab groups are auto-saved. Find them here.`
-    - Suggest: `ここから見つけられます`
-    - The comment says 'here' is the application menu button; the message tells users where saved groups are, not to perform a search.
-- `newtab-privacy-empty-state-small-message` — `browser/browser/newtab/newtab.ftl` — "Browse to start blocking" is reduced to "Blocking started", dropping the instruction to browse.
-    - Current: `ブロック開始。`
-    - Source: `Browse to start blocking.`
-    - Suggest: `ブラウジングしてブロックを開始しましょう。`
-    - The source tells the user that browsing will start blocking; the translation states only 'start of blocking', losing the condition.
-- `hnt-card-last-card-header-start` — `browser/browser/newtab/onboarding.ftl` — The header "All set. Go do your thing." has been translated as "You can configure it however you like", which loses both the meaning that setup is complete and the idiom.
-    - Current: `思いのままに設定できます。`
-    - Source: `All set. Go do your thing.`
-    - Suggest: `準備完了です。思いのままにブラウジングしましょう。`
-    - "All set" means setup is complete. Per the developer comment, "Go do your thing" is an idiom inviting the user to do what interests them. The Japanese instead tells the user they can configure settings freely, which is a different message.
-- `ConnectionAllowlistRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate keyword “Connection-Allowlist” has been translated.
-    - Current: `接続許可リスト:`
-    - Source: `Connection-Allowlist: The page’s settings blocked a redirect of %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The localization note says explicitly: Do not translate Connection-Allowlist. It is a policy or header identifier that developers search for in the console.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — The do-not-translate keyword “Connection-Allowlist” has been translated.
-    - Current: `接続許可リスト:`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The localization note says explicitly: Do not translate Connection-Allowlist.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — “would block” is rendered as an actual block, although a Report-Only policy does not block anything.
-    - Current: `リダイレクトをブロックします。`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `リダイレクトがブロックされるところでした。`
-    - en-US uses the conditional “would block” because under a Report-Only policy the redirect is only reported, not blocked. “ブロックします” says the block actually happens.
-- `about-processes-shutdown-process` — `toolkit/toolkit/about/aboutProcesses.ftl` — “Unload tabs” is translated as “close tabs”.
-    - Current: `タブを閉じて`
-    - Source: `title: Unload tabs and kill process`
-    - Suggest: `タブを解放して`
-    - Unloading a tab is not the same as closing it. The same file renders “Unload tab” as “タブを解放します” and “Close tab” as “タブを閉じます”.
+- `option-custom-desc` — `browser/installer/custom.ftl` — `option-custom-desc` references ['BrandShortName'], which en-US does not pass
+    - Current: `構成を選択して { $BrandShortName } をインストールします。(上級ユーザー向け)`
+    - Source: `You may choose individual options to be installed. Recommended for experienced users.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `mui-text-finish-subtitle` — `browser/installer/mui.ftl` — `mui-text-finish-subtitle` references ['BrandFullNameDA'], which en-US does not pass
+    - Current: `{ $BrandFullNameDA } が正常にインストールされました。`
+    - Source: `Setup was completed successfully.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `mui-text-abort-subtitle` — `browser/installer/mui.ftl` — `mui-text-abort-subtitle` references ['BrandFullNameDA'], which en-US does not pass
+    - Current: `{ $BrandFullNameDA } を正常にインストールできませんでした。`
+    - Source: `Setup was not completed successfully.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The translation adds a whole sentence about countless customisation add-ons that is not in the en-US source.
+    - Current: `さらにデザインや機能を自由自在にカスタマイズする無数のアドオンにより、あなたの好みに応じたブラウザーにすることもできます。`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - The en-US description mentions only a familiar interface, security features and integrated search. It says nothing about add-ons or customisation, so the final sentence is added content, probably left over from an older source string, and should be removed.
+- `banner-check-existing` — `browser/installer/custom.ftl` — "Checking existing installation" is rendered as "checking current settings".
+    - Current: `現在の設定を確認しています...`
+    - Source: `Checking existing installation…`
+    - Suggest: `既存のインストールを確認しています...`
+    - The en-US refers to the existing installation, not settings; 設定 means settings/configuration.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — There is a double space after the brand name placeable in user-visible text.
+    - Current: `{ $BrandFullNameDA }  のインストール`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `{ $BrandFullNameDA } のインストール`
+    - A doubled space appears in the displayed text; the locale uses a single space around placeables.
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — The label translates "Clean up and speed up" as "Reinstall and speed up" (再インストールして高速化する).
+    - Current: `再インストールして高速化する`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `クリーンアップして高速化する`
+    - The en-US says "Clean up", meaning reset to default settings and remove old add-ons. It does not say reinstall. The cleanup screen offers both an Update (paveover) path and a Re-install path, so on the Update path a label saying "reinstall" misdescribes what the checkbox does.
 
-### ✅ Fixed since the last run (1)
+### ✅ Fixed since the last run (0)
 
-- `dom-manifest-image-repeated-purposes` — `dom/dom/manifest.ftl` — The manifest keyword “purpose” is misspelled as “porpose”.
-    - Current: `porpose`
-    - Source: `{ $memberName } item at index { $index } includes repeated purpose(s): { $purposes }.`
-    - Suggest: `purpose`
-    - The en-US refers to the manifest member “purpose”, which the sibling string dom-manifest-image-unusable spells correctly. “porpose” is a typo, and it makes the message name a member that doesn't exist.
+_Nothing was fixed._
 
-### ↩︎ Withdrawn — no longer considered a defect (0)
+### ↩︎ Withdrawn — no longer considered a defect (1)
 
-_Nothing withdrawn._
+- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — "Always save security codes for payment methods" is rendered as saving security codes *to* payment methods, reversing the grammatical relation.
+    - Current: `常にセキュリティコードを支払い方法に保存する`
+    - Suggest: `支払い方法のセキュリティコードを常に保存する`
+    - The en-US means the security code belonging to a payment method is always saved; the Japanese says the security code is saved into the payment method, which states a different operation.
 
 ### 🔁 String changed, defect not verifiable — needs a re-read (0)
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (1)
+### 🗑 Retired — the string no longer exists upstream (0)
 
-- `newtab-picture-show-button` — `browser/browser/newtab/newtab.ftl` — browser/browser/newtab/newtab.ftl — 今日の写真 vs 今日の一枚 in four other strings for the same object.
-    - Suggest: `今日の写真`
+_Nothing retired._
 
 ---
 
@@ -93,15 +77,15 @@ _Nothing to re-read._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
-| Missing strings | 0 |
-| Obsolete strings | 0 |
+| Files | 336 |
+| Strings | 17,085 |
+| Missing strings | 71 |
+| Obsolete strings | 36 |
 | Files absent from the locale | 0 |
 | Files with no en-US counterpart | 0 |
 | Fluent / properties syntax errors | 0 |
 | Reference files that did not parse | 0 |
-| Variable & placeholder mismatches | 0 |
+| Variable & placeholder mismatches | 3 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 18 |
 | Text quoting a UI label that no longer matches | 1 |
@@ -111,6 +95,21 @@ _Nothing to re-read._
 | Typography deviations from this locale's own norm | 0 |
 
 ### Completeness
+
+**71 strings** are not translated yet, concentrated in:
+
+- `browser/browser/aiWindow.ftl` — 28
+- `browser/browser/aiFeatures.ftl` — 6
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 6
+- `browser/browser/ipProtection.ftl` — 5
+- `browser/browser/preferences/preferences.ftl` — 4
+- `dom/chrome/layout/htmlparser.properties` — 4
+- `browser/browser/aiWindowContent.ftl` — 3
+- `browser/browser/browser.ftl` — 2
+- `browser/browser/migrationWizard.ftl` — 2
+- `browser/browser/miniWindow.ftl` — 2
+- `dom/chrome/accessibility/win/accessible.properties` — 2
+- `dom/chrome/accessibility/mac/accessible.properties` — 2
 
 **Files present but identical to en-US:**
 
@@ -127,10 +126,10 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 |---|---|---|
 | quotes | `curly-double` 448, `curly-single` 182, `straight-double` 120, `corner` 5 | _mixed_ |
 | apostrophe | `typographic` 259, `straight` 11 | **typographic** |
-| ellipsis | `ascii` 399 | **ascii** |
+| ellipsis | `ascii` 408 | **ascii** |
 | dash | `em` 57, `en` 1 | **em** |
 | nbsp | `total` 4, `before-punctuation` 2, `space-before-punctuation` 5 | _mixed_ |
-| fullwidth | `punctuation` 5178 | **punctuation** |
+| fullwidth | `punctuation` 5288 | **punctuation** |
 
 ---
 
@@ -140,7 +139,7 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (157)
+## 3. Open findings (163)
 
 > **Reads as a deliberate edit (2).** The translation makes the product assert something the en-US never said. Whether that was intended cannot be told from the text, which is the problem: a user cannot tell either. Read these first.
 
@@ -159,10 +158,10 @@ _Also listed under their own category below._
 
 | Impact | Meaning | Count |
 |---|---|---|
-| 1 | Broken output (blank value, broken markup, wrong variable) | 8 |
-| 2 | Wrong content (says something other than the English) | 77 |
+| 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
+| 2 | Wrong content (says something other than the English) | 79 |
 | 3 | Degraded language (grammar, spelling, terminology) | 41 |
-| 4 | Cosmetic (typography, spacing) | 31 |
+| 4 | Cosmetic (typography, spacing) | 32 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -249,6 +248,18 @@ _Also listed under their own category below._
     - Current: `{$tabCount ->} [one] タブのミュートを解除します ({ $shortcut }) [other] { $tabCount } 個のタブのミュートを解除します ({ $shortcut })`
     - Source: `label: {$tabCount ->} [one] Unmute tab ({ $shortcut }) [other] Unmute { $tabCount } tabs ({ $shortcut })`
     - ja has the categories ['other']. A variant whose category the language never produces is never selected, so the text written there never appears. Nothing is broken -- the catch-all is shown -- but the variant is dead.
+- `option-custom-desc` — `browser/installer/custom.ftl` — `option-custom-desc` references ['BrandShortName'], which en-US does not pass
+    - Current: `構成を選択して { $BrandShortName } をインストールします。(上級ユーザー向け)`
+    - Source: `You may choose individual options to be installed. Recommended for experienced users.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `mui-text-abort-subtitle` — `browser/installer/mui.ftl` — `mui-text-abort-subtitle` references ['BrandFullNameDA'], which en-US does not pass
+    - Current: `{ $BrandFullNameDA } を正常にインストールできませんでした。`
+    - Source: `Setup was not completed successfully.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
+- `mui-text-finish-subtitle` — `browser/installer/mui.ftl` — `mui-text-finish-subtitle` references ['BrandFullNameDA'], which en-US does not pass
+    - Current: `{ $BrandFullNameDA } が正常にインストールされました。`
+    - Source: `Setup was completed successfully.`
+    - A variable the code does not pass renders as an empty string, so the sentence loses the value it was built around.
 - `xpath-binary-expected` — `dom/dom/xslt.ftl` — A6 — Fluent value-concatenation format broken (dom/dom/xslt.ftl). These strings are concatenated at runtime with the offending URL / character / expression, so en-US ends each with :. ja replaced the colon with 。, orphaning the appended detail. Affects xslt-load-recursion, xpath-illegal-char, xpath-binary-expected. Sibling xpath- strings in the same file correctly keep the colon, confirming these…
     - Source: `XPath parse failure: binary operator expected:`
     - Suggest: `:`
@@ -522,6 +533,20 @@ _Also listed under their own category below._
     - Source: `Learn how`
     - Suggest: `詳細情報`
     - en-US "Learn how" links to help content; "利用方法" states the page is about how to use something, which is not what the source says.
+- `banner-check-existing` — `browser/installer/custom.ftl` — "Checking existing installation" is rendered as "checking current settings".
+    - Current: `現在の設定を確認しています...`
+    - Source: `Checking existing installation…`
+    - Suggest: `既存のインストールを確認しています...`
+    - The en-US refers to the existing installation, not settings; 設定 means settings/configuration.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The translation adds a whole sentence about countless customisation add-ons that is not in the en-US source.
+    - Current: `さらにデザインや機能を自由自在にカスタマイズする無数のアドオンにより、あなたの好みに応じたブラウザーにすることもできます。`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - The en-US description mentions only a familiar interface, security features and integrated search. It says nothing about add-ons or customisation, so the final sentence is added content, probably left over from an older source string, and should be removed.
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — The label translates "Clean up and speed up" as "Reinstall and speed up" (再インストールして高速化する).
+    - Current: `再インストールして高速化する`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `クリーンアップして高速化する`
+    - The en-US says "Clean up", meaning reset to default settings and remove old add-ons. It does not say reinstall. The cleanup screen offers both an Update (paveover) path and a Re-install path, so on the Update path a label saying "reinstall" misdescribes what the checkbox does.
 - `colorPickerTooltip.contrastAgainstBgTitle` — `devtools/client/inspector.properties` — "Calculated against background" is rendered as "背景に対応する色" (color corresponding to the background), losing the meaning of the contrast ratio being calculated against that background.
     - Current: `背景に対応する色: %S`
     - Source: `Calculated against background: %S`
@@ -531,22 +556,7 @@ _Also listed under their own category below._
     - Source: `<strong>{ $property }</strong> has no effect on this element since it does not create a principal box.`
 - `inactive-css-no-size-containment` — `devtools/client/tooltips.ftl` — the topic { $property } is attached to the subordinate clause, so it says the property does not create a principal box rather than the element.
     - Source: `<strong>{ $property }</strong> has no effect on this element since it has no size containment.`
-- `treetable` — `dom/chrome/accessibility/AccessFu.properties` — "tree table" is rendered as 「折りたたみリスト」 (collapsible list), which names a different accessibility role.
-    - Current: `折りたたみリスト`
-    - Source: `tree table`
-    - Suggest: `ツリーテーブル`
-    - The source is the accessibility role name "tree table"; "折りたたみリスト" (collapsible list) does not denote a table role and mis-announces the element to screen reader users.
-- `SpeechRecognitionIsolatedTrackWarning` — `dom/chrome/dom/dom.properties` — The warning says silence "will be returned" instead of silence being fed to SpeechRecognition.
-    - Current: `沈黙のみが返されます`
-    - Source: `The MediaStreamTrack passed to SpeechRecognition.start() carries cross-origin content, so SpeechRecognition will only be fed silence.`
-    - Suggest: `SpeechRecognition には無音のみが入力されます`
-    - en-US: "SpeechRecognition will only be fed silence" — the recognizer receives silence as input; the ja reverses the direction to silence being returned.
-- `ConnectionAllowlistBlocked` — `dom/chrome/security/security.properties` — The do-not-translate header name "Connection-Allowlist" was translated as 接続許可リスト.
-    - Current: `接続許可リスト:`
-    - Source: `Connection-Allowlist: The page’s settings blocked %1$S.`
-    - Suggest: `Connection-Allowlist:`
-    - The developer comment says explicitly: "Do not translate Connection-Allowlist". It is the literal name of a header or policy that developers need to recognize.
-- _…and 28 more; see `state/` for the full list._
+- _…and 30 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -605,7 +615,6 @@ _Also listed under their own category below._
     - Source: `{$count ->} [other] <span>Duplicate entries found:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>`
     - Suggest: `(インポートされませんでした)`
 - `aiwindow-firstrun-model-personal-label` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-model-personal-label, aiwindow-input-model-select-button-label-personal — browser/browser/aiWindow.ftl — the "Personal" model is パーソナル in aiFeatures.ftl but 私的 here.
-    - Source: `Personal`
 - `aiwindow-input-model-select-button-label-personal` — `browser/browser/aiWindow.ftl` — aiwindow-firstrun-model-personal-label, aiwindow-input-model-select-button-label-personal — browser/browser/aiWindow.ftl — the "Personal" model is パーソナル in aiFeatures.ftl but 私的 here.
     - Source: `Personal`
 - `settings-data-toggle-encryption-label2` — `browser/browser/backupSettings.ftl` — same en-US sentence as settings-sensitive-data-encryption-description, but "Back up" → 保護. → バックアップし
@@ -690,6 +699,11 @@ _Also listed under their own category below._
     - Source: `To add a site, open the <img data-l10n-name="translations-icon"/> translation panel, select <img data-l10n-name="settings-icon"/> translation settings, then choose “Never translate this site”`
 - `sync-mobile-promo` — `browser/browser/preferences/preferences.ftl` — translate-attribution, extension-controlled-enable, settings-translations-subpage-never-translate-sites-description, sync-mobile-promo — browser/browser/preferences/preferences.ftl. Verified (translate-attribution).
     - Source: `Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.`
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — There is a double space after the brand name placeable in user-visible text.
+    - Current: `{ $BrandFullNameDA }  のインストール`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `{ $BrandFullNameDA } のインストール`
+    - A doubled space appears in the displayed text; the locale uses a single space around placeables.
 - `columnBreakpoint.label` — `devtools/client/debugger.properties` — ASCII comma used between the line and column instead of the fullwidth punctuation convention.
     - Current: `列ブレークポイント: 行 %1$S, 列 %2$S`
     - Source: `Column breakpoint at line %1$S, column %2$S`
@@ -725,8 +739,9 @@ _The Pontoon suggestions workflow's model judged these wrong, or could not confi
 
 _No suppression rules have matched._
 
-### Withdrawn to date (2)
+### Withdrawn to date (3)
 
+- `credit-card-doorhanger-save-security-codes-checkbox` — `toolkit/toolkit/formautofill/formAutofill.ftl` — raised by `llm`, withdrawn 2026-11-23
 - `ip-protection-site-rules-button` — `browser/browser/ipProtection.ftl` — raised by `llm`, withdrawn 2026-11-05
 - `autofill-address-family-name` — `browser/browser/preferences/formAutofill.ftl` — raised by `legacy`, withdrawn 2026-08-21
 

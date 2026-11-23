@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 82 of 16,883 |
+| **Strings reviewed this run** | 317 of 17,120 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,33 +18,57 @@ Also for pt-BR: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.m
 
 ## Changes in this run
 
-### 🆕 New findings (5)
+### 🆕 New findings (10)
 
-- `sync-engine-tabs2` — `browser/browser/preferences/preferences.ftl` — “Open tabs” is translated as the verb “Abrir abas” instead of the noun phrase “Abas abertas”.
-    - Current: `Abrir abas`
-    - Source: `accesskey: t label: Open tabs tooltiptext: Open tabs from your other devices`
-    - Suggest: `Abas abertas`
-    - The developer comment says this is a modified noun (tabs that are open). The label and the tooltip (“Abrir abas de seus outros dispositivos”) both read as a command to open tabs. Here they should name the open tabs synced from other devices, e.g. “Abas abertas em seus outros dispositivos”.
-- `tab-context-close-duplicate-tabs-alt` — `browser/browser/tabContextMenu.ftl` — “Duplicate Tabs” (tabs that are duplicates) is translated as the verb “Duplicar abas” (duplicate the tabs).
-    - Current: `Duplicar abas`
-    - Source: `accesskey: x label: Duplicate Tabs`
-    - Suggest: `Abas duplicadas`
-    - This item sits under “Close Multiple” and closes tabs that are duplicates. “Duplicar abas” reads as an action that creates duplicates, which is the wrong meaning.
-- `hnt-card-wallpaper-body` — `browser/browser/newtab/onboarding.ftl` — The preposition "em" is missing from the idiom "se sentir em casa".
-    - Current: `se sentir casa`
-    - Source: `Make this screen feel like home with a background you love.`
-    - Suggest: `se sentir em casa`
-    - The idiom for "feel like home" is "sentir-se em casa". Without "em", the sentence is ungrammatical.
-- `download-ui-confirm-offline-message` — `toolkit/toolkit/downloads/downloadUI.ftl` — The preposition "a" is missing in "voltar ter", which should read "voltar a ter".
-    - Current: `Quando voltar ter a conexão`
-    - Source: `{ -brand-short-name } will try to resume downloads when you’re back online, but progress may be lost.`
-    - Suggest: `Quando voltar a ter conexão`
-    - "Voltar" in the sense of "to do something again" needs the preposition "a" before the infinitive. As written, "voltar ter" is ungrammatical.
-- `ConnectionAllowlistReportOnlyRedirectBlocked` — `dom/chrome/security/security.properties` — There is a stray space before the closing parenthesis.
-    - Current: `(diretiva Report-Only )`
-    - Source: `Connection-Allowlist: (Report-Only policy) The page’s settings would block a redirect of %1$S.`
-    - Suggest: `(diretiva Report-Only)`
-    - The space before ")" is part of the text the user reads, and the en-US source does not have it.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page2` uses three dots where this locale uses …
+    - Current: `Salvar seleção como...`
+    - Source: `accesskey: S label: Save selection as…`
+    - The tree uses … 403 times against 5 ASCII runs.
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — Gender agreement error: "armazenados" refers to the feminine "memórias".
+    - Current: `são armazenados localmente`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `são armazenadas localmente`
+    - The subject is "memórias" (feminine plural), and the earlier participle "Usadas" is already feminine, so "armazenados" must be "armazenadas".
+- `smartwindow-onboarding-memories-none-description` — `browser/browser/aiWindow.ftl` — Subject–verb agreement error: singular "Aparece" with the plural subject "menos sugestões personalizadas".
+    - Current: `Aparece menos sugestões personalizadas`
+    - Source: `You’ll see fewer tailored suggestions and may need to repeat details across chats.`
+    - Suggest: `Aparecerão menos sugestões personalizadas`
+    - The subject "sugestões" is plural, so the verb must be plural ("Aparecem" or "Aparecerão"). As written, the sentence is ungrammatical.
+- `newsletter-sign-up-link` — `browser/browser/preferences/preferences.ftl` — The button that signs up for the newsletter is translated as "create an account".
+    - Current: `Criar uma conta`
+    - Source: `label: Sign up`
+    - Suggest: `Inscrever-se`
+    - In the newsletter settings section, "Sign up" means subscribing to the newsletter. "Criar uma conta" means creating an account, which is a different action.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — The label uses three periods instead of the ellipsis character the locale uses.
+    - Current: `Salvar seleção como...`
+    - Source: `accesskey: S label: Save selection as…`
+    - Suggest: `Salvar seleção como…`
+    - The en-US source uses the single ellipsis character (…), and so does the pt-BR tree by convention (454 vs 3).
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — An indirect question should use "por que" (two words), not "porque".
+    - Current: `porque você desinstalou`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `por que você desinstalou`
+    - The en-US "why you uninstalled" is an indirect question. In pt-BR, that needs the two-word form "por que". "Porque" means "because".
+- `nsis-show-details-btn` — `browser/installer/override.ftl` — Button label uses the conjugated verb form "Mostra" instead of the infinitive "Mostrar".
+    - Current: `Mostra detalhes`
+    - Source: `(value): Show details accesskey: d`
+    - Suggest: `Mostrar detalhes`
+    - "Show details" is a button label; the third-person form "Mostra" is grammatically wrong here and reads like a typo for "Mostrar".
+- `nsis-invalid-opcode` — `browser/installer/override.ftl` — "invalido" is missing its accent.
+    - Current: `opcode invalido`
+    - Source: `Installer corrupted: invalid opcode`
+    - Suggest: `opcode inválido`
+    - The correct Portuguese spelling is "inválido".
+- `nsis-created-uninstaller` — `browser/installer/override.ftl` — The log line "Created uninstaller" (an action already done) is rendered as the instruction "Criar desinstalador".
+    - Current: `Criar desinstalador:`
+    - Source: `Created uninstaller:{   }`
+    - Suggest: `Desinstalador criado:`
+    - The source reports that the uninstaller has already been created. The translation instead reads as a command to create it.
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — Straight double quotes are used where the locale convention is curly double quotes.
+    - Current: `Clique em "Tentar novamente", ou em "Cancelar" para parar a instalação.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `Clique em “Tentar novamente”, ou em “Cancelar” para parar a instalação.`
+    - The locale convention is curly double quotes, and the sibling string nsis-file-error already uses “ ”.
 
 ### ✅ Fixed since the last run (0)
 
@@ -58,9 +82,10 @@ _Nothing withdrawn._
 
 _Nothing to re-read._
 
-### 🗑 Retired — the string no longer exists upstream (0)
+### 🗑 Retired — the string no longer exists upstream (1)
 
-_Nothing retired._
+- `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — semi-finais → semifinais (the file's own newtab-sports-widget-semi-finals uses "Semifinais")
+    - Suggest: `semifinais`
 
 ---
 
@@ -68,8 +93,8 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 331 |
-| Strings | 16,883 |
+| Files | 336 |
+| Strings | 17,120 |
 | Missing strings | 0 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 0 |
@@ -83,7 +108,7 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 3 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 23 |
+| Typography deviations from this locale's own norm | 24 |
 
 ### Completeness
 
@@ -95,12 +120,12 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 600, `curly-single` 124, `straight-double` 64 | **curly-double** |
+| quotes | `curly-double` 610, `curly-single` 124, `straight-double` 66 | **curly-double** |
 | apostrophe | `typographic` 137, `straight` 106 | _mixed_ |
-| ellipsis | `char` 395, `ascii` 4 | **char** |
+| ellipsis | `char` 403, `ascii` 5 | **char** |
 | dash | `em` 49, `en` 1 | **em** |
 | nbsp | `total` 10, `narrow` 10, `before-punctuation` 5, `space-before-punctuation` 6 | _mixed_ |
-| register | `informal` 1550 | **informal** |
+| register | `informal` 1583 | **informal** |
 
 ---
 
@@ -110,15 +135,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (555)
+## 3. Open findings (564)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 11 |
-| 2 | Wrong content (says something other than the English) | 183 |
-| 3 | Degraded language (grammar, spelling, terminology) | 268 |
-| 4 | Cosmetic (typography, spacing) | 93 |
+| 2 | Wrong content (says something other than the English) | 185 |
+| 3 | Degraded language (grammar, spelling, terminology) | 272 |
+| 4 | Cosmetic (typography, spacing) | 96 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -370,6 +395,11 @@ _Nothing reported._
     - Current: `Downloads mais recentes`
     - Source: `label: Most recent download`
     - Suggest: `Download mais recente`
+- `newsletter-sign-up-link` — `browser/browser/preferences/preferences.ftl` — The button that signs up for the newsletter is translated as "create an account".
+    - Current: `Criar uma conta`
+    - Source: `label: Sign up`
+    - Suggest: `Inscrever-se`
+    - In the newsletter settings section, "Sign up" means subscribing to the newsletter. "Criar uma conta" means creating an account, which is a different action.
 - `permissions-header3` — `browser/browser/preferences/preferences.ftl` — en-US "Manage what websites can access…". Current: Gerencie quais sites podem acessar, controlar ou acionar. → Suggest: Gerencie o que os sites podem acessar, controlar ou acionar.
     - Current: `Gerencie quais sites podem acessar, controlar ou acionar.`
     - Source: `description: Manage what websites can access, control, or trigger. label: Permissions`
@@ -406,11 +436,7 @@ _Nothing reported._
     - Current: `para direita`
     - Source: `Move Sidebar to Right`
     - Suggest: `para a esquerda`
-- `permission.canvas.label` — `browser/chrome/browser/sitePermissions.properties` — permission.canvas.label (sitePermissions.properties) — "canvas" rendered as tela, colliding with permission.screen.label (Compartilhar a tela); browser.properties keeps "canvas". Current: Extrair dados da tela → Suggest: Extrair dados do canvas
-    - Current: `Extrair dados da tela`
-    - Source: `Extract canvas data`
-    - Suggest: `Extrair dados do canvas`
-- _…and 122 more; see `state/` for the full list._
+- _…and 124 more; see `state/` for the full list._
 
 ### C. Grammar, agreement & spelling
 
@@ -455,6 +481,11 @@ _Nothing reported._
     - Current: `Aprender da navegação em`
     - Source: `label: Learn from browsing in Classic and { -smart-window-brand-name }`
     - Suggest: `Aprender com a navegação em`
+- `ai-window-memories-section-v2` — `browser/browser/aiFeatures.ftl` — Gender agreement error: "armazenados" refers to the feminine "memórias".
+    - Current: `são armazenados localmente`
+    - Source: `description: { -brand-short-name } can learn from your activity to create memories. They’re used to help tailor your experience and are stored locally on your device. label: Memories`
+    - Suggest: `são armazenadas localmente`
+    - The subject is "memórias" (feminine plural), and the earlier participle "Usadas" is already feminine, so "armazenados" must be "armazenadas".
 - `smart-window-model-custom-name` — `browser/browser/aiFeatures.ftl` — aiFeatures.ftl — Examplo: → Exemplo: (2 instances)
     - Current: `Examplo:`
     - Source: `label: Model name placeholder: Example: glm4`
@@ -474,6 +505,11 @@ _Nothing reported._
 - `fxa-signout-dialog-body-aiwindow` — `browser/browser/aiWindow.ftl` — -smart-window-brand-name gender — browser/browser/aiWindow.ftl — the term is feminine in pt-BR ("Janela inteligente"), but ~9 strings use masculine articles: aiwindow-firstrun-title, -model-subtitle, -memories-subtitle, -memories-relevance-body, -memories-choose-label, -memories-checkbox-chats, -memories-no-create, -default-title, aiwindow-history-menu-settings. appmenuitem-new-ai-window and fxa-…
     - Source: `Synced data will remain in your account. Open { -smart-window-brand-name } will switch to Classic Windows.`
     - Suggest: `Elas tornam`
+- `smartwindow-onboarding-memories-none-description` — `browser/browser/aiWindow.ftl` — Subject–verb agreement error: singular "Aparece" with the plural subject "menos sugestões personalizadas".
+    - Current: `Aparece menos sugestões personalizadas`
+    - Source: `You’ll see fewer tailored suggestions and may need to repeat details across chats.`
+    - Suggest: `Aparecerão menos sugestões personalizadas`
+    - The subject "sugestões" is plural, so the verb must be plural ("Aparecem" or "Aparecerão"). As written, the sentence is ungrammatical.
 - `action-log-searching-web-with-exa` — `browser/browser/aiWindowContent.ftl` — an in-progress action as infinitive: Pesquisar na web com <a…>Exa</a> → Pesquisando na web com <a…>Exa</a> (cf. action-log-searching-web)
     - Source: `Searching the web with <a data-l10n-name="exa-link">Exa</a>`
 - `appmenuitem-monitor-title2` — `browser/browser/appmenu.ftl` — Esteja à frente de roubo de identidade → Fique à frente do roubo de identidade
@@ -596,9 +632,6 @@ _Nothing reported._
     - Current: `Não aparecerá mais histórias`
     - Source: `message: You won’t see stories about { $topic } anymore.`
     - Suggest: `Não aparecerão mais histórias`
-- `newtab-sports-widget-message-wallpapers-semifinals-title` — `browser/browser/newtab/newtab.ftl` — semi-finais → semifinais (the file's own newtab-sports-widget-semi-finals uses "Semifinais")
-    - Source: `Get a new wallpaper for the semi-finals`
-    - Suggest: `semifinais`
 - `newtab-topsites-url-validation` — `browser/browser/newtab/newtab.ftl` — É necessário uma URL válida → É necessária uma URL válida
     - Current: `É necessário uma URL válida`
     - Source: `Valid URL required`
@@ -641,11 +674,7 @@ _Nothing reported._
     - Current: `Alterne facilmente entre navegação de trabalho ou diversão.`
     - Source: `Easily switch between browsing for work and fun. Profiles keep your browsing info, including search history and passwords, totally separate so you can stay organized.`
     - Suggest: `…entre navegação de trabalho e diversão.`
-- `onboarding-infrequent-import-subtitle` — `browser/browser/newtab/onboarding.ftl` — lembre que pode importar → lembre-se de que pode importar
-    - Current: `lembre que pode importar`
-    - Source: `Whether you’re settling in or just stopping by, remember you can import your bookmarks, passwords, and more.`
-    - Suggest: `lembre-se de que pode importar`
-- _…and 96 more; see `state/` for the full list._
+- _…and 100 more; see `state/` for the full list._
 
 ### D. Terminology, register & consistency
 
@@ -863,7 +892,16 @@ _Nothing reported._
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `Salvar seleção como...`
     - Source: `label: Save selection as…`
-    - The tree uses … 395 times against 4 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page2` uses three dots where this locale uses …
+    - Current: `Salvar seleção como...`
+    - Source: `accesskey: S label: Save selection as…`
+    - The tree uses … 403 times against 5 ASCII runs.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — The label uses three periods instead of the ellipsis character the locale uses.
+    - Current: `Salvar seleção como...`
+    - Source: `accesskey: S label: Save selection as…`
+    - Suggest: `Salvar seleção como…`
+    - The en-US source uses the single ellipsis character (…), and so does the pt-BR tree by convention (454 vs 3).
 - `contextual-manager-passwords-no-passwords-message` — `browser/browser/contextual-manager.ftl` — Comma where a period belongs: contextual-manager-passwords-no-passwords-message (contextual-manager.ftl) — são criptografadas, Estamos atentos → criptografadas. Estamos atentos
     - Current: `são criptografadas, Estamos atentos`
     - Source: `All passwords are encrypted and we’ll watch out for breaches and alerts if you’re affected.`
@@ -900,7 +938,7 @@ _Nothing reported._
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — `newtab-discovery-empty-section-topstories-loading` uses three dots where this locale uses …
     - Current: `Carregando...`
     - Source: `Loading…`
-    - The tree uses … 395 times against 4 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `newtab-discovery-empty-section-topstories-loading` — `browser/browser/newtab/newtab.ftl` — main-context-menu-pdfjs-save-page (.label, browserContext.ftl), home-homepage-custom-url (.placeholder, preferences.ftl), newtab-discovery-empty-section-topstories-loading (newtab.ftl).
     - Source: `Loading…`
     - Suggest: `.label`
@@ -931,11 +969,11 @@ _Nothing reported._
 - `policy-DisableForgetButton` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableForgetButton` uses straight double quotes
     - Current: `Impedir acesso ao botão "Esquecer".`
     - Source: `Prevent access to the Forget button.`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `policy-DisableProfileRefresh` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página about:support.`
     - Source: `Disable the Refresh { -brand-short-name } button in the about:support page.`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
     - Current: `"Restaurar o { -brand-short-name }"`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
@@ -944,21 +982,21 @@ _Nothing reported._
 - `policy-DisableProfileRefresh2` — `browser/browser/policies/policies-descriptions.ftl` — `policy-DisableProfileRefresh2` uses straight double quotes
     - Current: `Desativar o botão "Restaurar o { -brand-short-name }" na página de informações para solução de problemas (about:support) e em support.mozilla.org, bem como o aviso que oferece restaurar o { -brand-short-name } quando nã…`
     - Source: `Disable the Refresh { -brand-short-name } button in Troubleshooting Information (about:support) and on support.mozilla.org, as well as the prompt offering to refresh { -brand-short-name } when it hasn’t been used for a…`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `policy-Extensions` — `browser/browser/policies/policies-descriptions.ftl` — `policy-Extensions` uses straight double quotes
     - Current: `Instalar, desinstalar e bloquear extensões. A opção “Instalar” recebe URLs ou caminhos como parâmetros. As opções “Desinstalar” e "Bloqueado" usam IDs de extensões.`
     - Source: `Install, uninstall or lock extensions. The Install option takes URLs or paths as parameters. The Uninstall and Locked options take extension IDs.`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `policy-GenerativeAI` — `browser/browser/policies/policies-descriptions.ftl` — Final period dropped: ipprotection-feature-introduction-link-text-captive-portal-1 (ipProtection.ftl), policy-GenerativeAI (policies-descriptions.ftl)
     - Source: `Configure generative AI features.`
 - `policy-HardwareAcceleration` — `browser/browser/policies/policies-descriptions.ftl` — `policy-HardwareAcceleration` uses straight double quotes
     - Current: `Caso definido como "false", desativar a aceleração de hardware.`
     - Source: `If false, turn off hardware acceleration.`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `policy-OfferToSaveLogins` — `browser/browser/policies/policies-descriptions.ftl` — `policy-OfferToSaveLogins` uses straight double quotes
     - Current: `Impor as configurações para permitir que o { -brand-short-name } ofereça memorizar contas de acesso e senhas salvas. Tanto "true" como "false" são valores aceitos.`
     - Source: `Enforce the setting to allow { -brand-short-name } to offer to remember saved logins and passwords. Both true and false values are accepted.`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
 - `connection-proxy-noproxy-localhost-desc-2` — `browser/browser/preferences/connection.ftl` — serial comma before "e" is not pt-BR usage: 127.0.0.1/8, e ::1 → 127.0.0.1/8 e ::1
     - Source: `Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.`
 - `autofill-card-expires-year` — `browser/browser/preferences/formAutofill.ftl` — autofill-card-expires-month, autofill-card-expires-year — preferences/formAutofill.ftl — Mês de Expiração / Ano de Expiração → sentence case (the -2 variants are correct)
@@ -981,7 +1019,7 @@ _Nothing reported._
 - `home-homepage-custom-url` — `browser/browser/preferences/preferences.ftl` — `home-homepage-custom-url` uses three dots where this locale uses …
     - Current: `Cole uma URL...`
     - Source: `placeholder: Paste a URL…`
-    - The tree uses … 395 times against 4 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `security-privacy-issue-warning-third-party-cookies` — `browser/browser/preferences/preferences.ftl` — Trailing period added where en-US has none: ipprotection-connection-status-blocked-error-title-1 (.aria-label too), security-privacy-issue-warning-third-party-cookies (.label, preferences.ftl), newtab-wallpaper-sky-with-pink-clouds, newtab-shortcuts-highlight-title, newtab-report-ads-reason-seen-it-too-many-times (.label) (newtab.ftl), windows-10-eos-callout-addons-title (asrouter.ftl), tab-group…
     - Source: `description: Third-party cookies are used to track you across websites. label: Third-party cookies are enabled`
     - Suggest: `.aria-label`
@@ -993,7 +1031,7 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `Não está sincronizando nada... ainda. Escolha o que sincronizar neste dispositivo.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 395 times against 4 ASCII runs.
+    - The tree uses … 403 times against 5 ASCII runs.
 - `update-setting-write-failure-message2` — `browser/browser/preferences/preferences.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
     - Source: `{ -brand-short-name } encountered an error and didn’t save this change. Note that changing this update setting requires permission to write to the file below. You or a system administrator may be able to resolve the err…`
 - `tabbrowser-tab-label-tab-split-view-right` — `browser/browser/tabbrowser.ftl` — , Exibição dividida à direita → lowercase (the -left pair is lowercase)
@@ -1011,7 +1049,12 @@ _Nothing reported._
 - `webrtc-indicator-menuitem-sharing-browser-with` — `browser/browser/webrtcIndicator.ftl` — `webrtc-indicator-menuitem-sharing-browser-with` uses straight double quotes
     - Current: `Compartilhando uma aba com "{ $streamTitle }"`
     - Source: `label: Sharing a Tab with “{ $streamTitle }”`
-    - The locale's quote convention is `curly-double` (600 occurrences).
+    - The locale's quote convention is `curly-double` (610 occurrences).
+- `nsis-file-error-no-ignore` — `browser/installer/override.ftl` — Straight double quotes are used where the locale convention is curly double quotes.
+    - Current: `Clique em "Tentar novamente", ou em "Cancelar" para parar a instalação.`
+    - Source: `Error opening file for writing:  { $FilePath }  Click Retry to try again, or Cancel to stop the installation.`
+    - Suggest: `Clique em “Tentar novamente”, ou em “Cancelar” para parar a instalação.`
+    - The locale convention is curly double quotes, and the sibling string nsis-file-error already uses “ ”.
 - `storage-add-button` — `devtools/client/storage.ftl` — storage-add-button (.title), storage-context-menu-add-item (.label) — devtools/client/storage.ftl — Adicionar Item → Adicionar item
     - Current: `Adicionar Item`
     - Source: `title: Add Item`
@@ -1026,17 +1069,7 @@ _Nothing reported._
     - Current: `Não há suporte para<strong>`
     - Source: `<strong>{ $property }</strong> is not supported on ::cue pseudo-elements.`
     - Suggest: `para <strong>`
-- `inactive-css-first-letter-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — inactive-css-first-letter-pseudo-element-not-supported, inactive-css-placeholder-pseudo-element-not-supported, inactive-css-cue-pseudo-element-not-supported — devtools/client/tooltips.ftl — Não há suporte para<strong> → para <strong> (the first-line sibling has the space)
-    - Current: `Não há suporte para<strong>`
-    - Source: `<strong>{ $property }</strong> is not supported on ::first-letter pseudo-elements.`
-    - Suggest: `para <strong>`
-- `inactive-css-placeholder-pseudo-element-not-supported` — `devtools/client/tooltips.ftl` — inactive-css-first-letter-pseudo-element-not-supported, inactive-css-placeholder-pseudo-element-not-supported, inactive-css-cue-pseudo-element-not-supported — devtools/client/tooltips.ftl — Não há suporte para<strong> → para <strong> (the first-line sibling has the space)
-    - Current: `Não há suporte para<strong>`
-    - Source: `<strong>{ $property }</strong> is not supported on ::placeholder pseudo-elements.`
-    - Suggest: `para <strong>`
-- `inactive-css-resize` — `devtools/client/tooltips.ftl` — restore-page-problem-desc (aboutSessionRestore.ftl), crashed-single-offer-help-message, crashed-multiple-offer-help-message (aboutTabCrashed.ftl), enable-devtools-popup-description2 (browser.ftl), pin-tabs-callout-1-subtitle, pin-tabs-callout-2-subtitle (featureCallout.ftl), permissions-exceptions-manage-etp-desc (preferences/permissions.ftl), update-setting-write-failure-message2 (preferences.ft…
-    - Source: `<strong>{ $property }</strong> has no effect on this element since it can only be applied to elements with an overflow value other than visible, and to certain replaced elements, such as textareas.`
-- _…and 27 more; see `state/` for the full list._
+- _…and 30 more; see `state/` for the full list._
 
 ---
 

@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 13,569 |
+| **Strings reviewed this run** | 240 of 13,776 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,9 +18,87 @@ Also for ar: [Firefox for Android](android.md) · [Firefox iOS](firefox_ios.md) 
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (16)
 
-_No new findings._
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page2` uses three dots where this locale uses …
+    - Current: `احفظ التحديد باسم...`
+    - Source: `accesskey: S label: Save selection as…`
+    - The tree uses … 381 times against 14 ASCII runs.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The word for "easy" is misspelled: "سها" is missing its lām and should be "سهلا".
+    - Current: `تصفحا سها وآمنا`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `تصفحا سهلا وآمنا`
+    - en-US says "safe, easy web browsing". "سها" is a typo for "سهلا" (easy).
+- `summary-page-subtitle` — `browser/installer/custom.ftl` — The noun "start" is written with the wrong hamza: "لبدأ" should be "لبدء".
+    - Current: `لبدأ`
+    - Source: `Ready to start installing { $BrandShortName }`
+    - Suggest: `لبدء`
+    - "بدأ" is the verb. The noun (verbal noun) needed after the preposition is "بدء".
+- `safebrowsing-reported-unwanted-site-message` — `browser/browser/browser.ftl` — The translation drops "Software", so it calls the site itself unwanted instead of a site reported for unwanted software.
+    - Current: `موقع غير مرغوب فيه مبلّغ عنه!`
+    - Source: `Reported Unwanted Software Site!`
+    - Suggest: `موقع برمجيات غير مرغوب فيها مبلّغ عنه!`
+    - en-US "Reported Unwanted Software Site!" refers to a site that distributes unwanted software, not a site that is unwanted.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — Three ASCII periods are used where the locale uses the single ellipsis character.
+    - Current: `احفظ التحديد باسم...`
+    - Source: `accesskey: S label: Save selection as…`
+    - Suggest: `احفظ التحديد باسم…`
+    - The locale's convention is the ellipsis character (…), used 366 times against 13 ASCII uses.
+- `warn-manually-close-app-install` — `browser/installer/custom.ftl` — The installation warning says "uninstall" (الإزالة) instead of "installation".
+    - Current: `لتواصِل الإزالة`
+    - Source: `{ $BrandShortName } must be closed to proceed with the installation.  Please close { $BrandShortName } to continue.`
+    - Suggest: `لتواصِل التثبيت`
+    - The en-US says "to proceed with the installation". The Arabic copies the uninstall string's wording, so it tells the user an uninstall is happening during an install.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — Spelling error: the noun "start" should be written بدء, not بدأ.
+    - Current: `قبل بدأ التثبيت`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `قبل بدء التثبيت`
+    - After قبل this needs to be the verbal noun بدء. بدأ is the past-tense verb ("he started"), which is wrong here.
+- `mui-buttontext-finish` — `browser/installer/mui.ftl` — The imperative "Finish" is missing its hamza (انهِ instead of أنهِ).
+    - Current: `انهِ`
+    - Source: `(value): Finish accesskey: F`
+    - Suggest: `أنهِ`
+    - The imperative of أنهى is أنهِ, spelled with a hamza. The finish-info texts tell users to click "أنهِ", so the button label also doesn't match the instruction.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The verbal noun "start" is misspelled as بدأ (a past-tense verb) instead of بدء.
+    - Current: `قبل بدأ الإزالة`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `قبل بدء الإزالة`
+    - After قبل, the verbal noun بدء is required. بدأ is the past-tense verb "he started".
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — "Clean up and speed up" is rendered as cleaning and speeding up "the system", which is not what the option does.
+    - Current: `نظف النظام وسرعه`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `نظّف وسرّع`
+    - The source refers to cleaning up the Firefox install: resetting default settings and deleting old add-ons. The translation says it cleans the (operating) system, which overstates what the option does.
+- `stub-blurb-first-devedition` — `browser/installer/nsisstrings.ftl` — Ungrammatical phrase: "لبناء لشبكة" puts an extra لـ after the noun لبناء.
+    - Current: `استعد لبناء لشبكة مفتوحة`
+    - Source: `Get ready to build for the open web`
+    - Suggest: `استعد للبناء للوِب المفتوح`
+    - The verbal noun لبناء cannot be followed by the preposition لـ in this construction. As written, the sentence is broken Arabic for "Get ready to build for the open web".
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — The two nouns are reversed: "رخصة الاتفاقية" means "the agreement's licence", not "licence agreement".
+    - Current: `بنود رخصة الاتفاقية`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `بنود اتفاقية الرخصة`
+    - The en-US says "license agreement". The other installer strings, such as nsis-accept-btn, correctly use اتفاقية الرخصة.
+- `nsis-components-text` — `browser/installer/override.ftl` — The conjunction و is written as a separate word.
+    - Current: `و لا تختر`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `ولا تختر`
+    - In Arabic spelling, the conjunction و attaches to the word that follows it.
+- `nsis-dir-text` — `browser/installer/override.ftl` — The conjunction و is written as a separate word.
+    - Current: `و اختر`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `واختر`
+    - In Arabic spelling, the conjunction و attaches to the word that follows it.
+- `nsis-byte` — `browser/installer/override.ftl` — The Arabic word for 'byte' is misspelled 'بابت' instead of 'بايت'.
+    - Current: `بابت`
+    - Source: `B`
+    - Suggest: `بايت`
+    - The en-US 'B' is the byte unit, and the standard Arabic spelling is 'بايت'. 'بابت' is a typo.
+- `nsis-error-decompressing` — `browser/installer/override.ftl` — The wrong preposition 'عن' is used where 'عند' ('when/while') is needed.
+    - Current: `خطأ عن فك ضغط البيانات`
+    - Source: `Error decompressing data! Corrupted installer?`
+    - Suggest: `خطأ عند فك ضغط البيانات`
+    - 'خطأ عن' is ungrammatical here. The source means 'error while decompressing', which is 'خطأ عند' or 'خطأ أثناء', the same wording other strings in this file use.
 
 ### ✅ Fixed since the last run (0)
 
@@ -44,9 +122,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 326 |
-| Strings | 13,569 |
-| Missing strings | 3,314 |
+| Files | 331 |
+| Strings | 13,776 |
+| Missing strings | 3,344 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 5 |
 | Files with no en-US counterpart | 0 |
@@ -59,24 +137,24 @@ _Nothing retired._
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 8 |
 | Markup & `data-l10n-name` defects | 0 |
-| Typography deviations from this locale's own norm | 13 |
+| Typography deviations from this locale's own norm | 14 |
 
 ### Completeness
 
-**3,314 strings** are not translated yet, concentrated in:
+**3,344 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 361
+- `browser/browser/newtab/newtab.ftl` — 357
 - `dom/chrome/dom/dom.properties` — 218
-- `browser/browser/aiWindow.ftl` — 160
+- `browser/browser/aiWindow.ftl` — 176
+- `dom/chrome/layout/htmlparser.properties` — 98
 - `devtools/client/tooltips.ftl` — 98
-- `dom/chrome/layout/htmlparser.properties` — 94
 - `devtools/client/netmonitor.properties` — 92
+- `browser/browser/ipProtection.ftl` — 87
 - `dom/chrome/security/security.properties` — 85
 - `devtools/client/debugger.properties` — 83
-- `browser/browser/ipProtection.ftl` — 82
-- `browser/browser/newtab/onboarding.ftl` — 71
+- `browser/browser/newtab/onboarding.ftl` — 69
+- `toolkit/toolkit/about/aboutWebauthn.ftl` — 69
 - `toolkit/toolkit/about/aboutGlean.ftl` — 67
-- `toolkit/toolkit/about/aboutSupport.ftl` — 66
 
 **Files absent from the locale:**
 
@@ -94,11 +172,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `straight-double` 96, `curly-double` 74, `curly-single` 9, `guillemet` 4 | _mixed_ |
+| quotes | `straight-double` 96, `curly-double` 75, `curly-single` 9, `guillemet` 4 | _mixed_ |
 | apostrophe | `typographic` 55 | **typographic** |
-| ellipsis | `char` 373, `ascii` 13 | **char** |
+| ellipsis | `char` 381, `ascii` 14 | **char** |
 | dash | `em` 37 | **em** |
-| nbsp | `total` 164, `space-before-punctuation` 3 | **total** |
+| nbsp | `total` 167, `space-before-punctuation` 3 | **total** |
 
 ---
 
@@ -108,15 +186,15 @@ _Nothing reported._
 
 ---
 
-## 3. Open findings (363)
+## 3. Open findings (379)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 200 |
-| 2 | Wrong content (says something other than the English) | 121 |
-| 3 | Degraded language (grammar, spelling, terminology) | 29 |
-| 4 | Cosmetic (typography, spacing) | 13 |
+| 2 | Wrong content (says something other than the English) | 124 |
+| 3 | Degraded language (grammar, spelling, terminology) | 40 |
+| 4 | Cosmetic (typography, spacing) | 15 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -411,6 +489,11 @@ _Nothing reported._
     - Source: `Private Windows help keep your browsing private from others on this device. They don’t make you anonymous or clear all of your data.`
     - Suggest: `الحفاظ على خصوصية تصفحك عن الآخرين الذين يستخدمون هذا الجهاز`
     - The source limits the protection to other people using this device. Without that, the sentence no longer says who the browsing is hidden from.
+- `safebrowsing-reported-unwanted-site-message` — `browser/browser/browser.ftl` — The translation drops "Software", so it calls the site itself unwanted instead of a site reported for unwanted software.
+    - Current: `موقع غير مرغوب فيه مبلّغ عنه!`
+    - Source: `Reported Unwanted Software Site!`
+    - Suggest: `موقع برمجيات غير مرغوب فيها مبلّغ عنه!`
+    - en-US "Reported Unwanted Software Site!" refers to a site that distributes unwanted software, not a site that is unwanted.
 - `unsigned-addons-disabled-message` — `browser/browser/browser.ftl` — "One or more" add-ons is rendered as "one of" the add-ons, so the plural case is lost; the masculine أحد is also wrong with the feminine noun الإضافات.
     - Current: `تعذّر التحقق من أحد الإضافات المثبتة لذا عُطّلت.`
     - Source: `One or more installed add-ons cannot be verified and have been disabled.`
@@ -431,6 +514,16 @@ _Nothing reported._
     - Source: `Encryption makes it difficult for unauthorized people to view information traveling between computers. It is therefore unlikely that anyone read this page as it traveled across the network.`
     - Suggest: `تصعّب التعمية على غير المخوّلين الاطلاع على المعلومات`
     - The source says encryption makes it difficult for unauthorized people to view information. The Arabic leaves out "الاطلاع" (view) and puts the preposition in the wrong place, so the sentence does not say what is made difficult.
+- `warn-manually-close-app-install` — `browser/installer/custom.ftl` — The installation warning says "uninstall" (الإزالة) instead of "installation".
+    - Current: `لتواصِل الإزالة`
+    - Source: `{ $BrandShortName } must be closed to proceed with the installation.  Please close { $BrandShortName } to continue.`
+    - Suggest: `لتواصِل التثبيت`
+    - The en-US says "to proceed with the installation". The Arabic copies the uninstall string's wording, so it tells the user an uninstall is happening during an install.
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — "Clean up and speed up" is rendered as cleaning and speeding up "the system", which is not what the option does.
+    - Current: `نظف النظام وسرعه`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `نظّف وسرّع`
+    - The source refers to cleaning up the Firefox install: resetting default settings and deleting old add-ons. The translation says it cleans the (operating) system, which overstates what the option does.
 - `ForgotFileEnctypeWarning` — `dom/chrome/layout/HtmlForm.properties` — Space inserted inside the code value “multipart/form-data”.
     - Current: `enctype=multipart /form-data`
     - Source: `Form contains a file input, but is missing method=POST and enctype=multipart/form-data on the form.  The file will not be sent.`
@@ -579,6 +672,61 @@ _Nothing reported._
     - Source: `Firefox doesn’t know how to communicate with the server.`
     - Suggest: `لا يعرف Firefox كيف يتصل بالخادوم.`
     - Every other string in this file (fileNotFound, connectionFailure, netOffline, proxyResolveFailure, …) writes the brand as “Firefox”; this single transliteration is inconsistent within the same error-page surface.
+- `reg-app-desc` — `browser/installer/custom.ftl` — The word for "easy" is misspelled: "سها" is missing its lām and should be "سهلا".
+    - Current: `تصفحا سها وآمنا`
+    - Source: `{ $BrandShortName } delivers safe, easy web browsing. A familiar user interface, enhanced security features including protection from online identity theft, and integrated search let you get the most out of the web.`
+    - Suggest: `تصفحا سهلا وآمنا`
+    - en-US says "safe, easy web browsing". "سها" is a typo for "سهلا" (easy).
+- `summary-page-subtitle` — `browser/installer/custom.ftl` — The noun "start" is written with the wrong hamza: "لبدأ" should be "لبدء".
+    - Current: `لبدأ`
+    - Source: `Ready to start installing { $BrandShortName }`
+    - Suggest: `لبدء`
+    - "بدأ" is the verb. The noun (verbal noun) needed after the preposition is "بدء".
+- `mui-buttontext-finish` — `browser/installer/mui.ftl` — The imperative "Finish" is missing its hamza (انهِ instead of أنهِ).
+    - Current: `انهِ`
+    - Source: `(value): Finish accesskey: F`
+    - Suggest: `أنهِ`
+    - The imperative of أنهى is أنهِ, spelled with a hamza. The finish-info texts tell users to click "أنهِ", so the button label also doesn't match the instruction.
+- `mui-text-welcome-info-text` — `browser/installer/mui.ftl` — Spelling error: the noun "start" should be written بدء, not بدأ.
+    - Current: `قبل بدأ التثبيت`
+    - Source: `This wizard will guide you through the installation of { $BrandFullNameDA }.  It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files wit…`
+    - Suggest: `قبل بدء التثبيت`
+    - After قبل this needs to be the verbal noun بدء. بدأ is the past-tense verb ("he started"), which is wrong here.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — The verbal noun "start" is misspelled as بدأ (a past-tense verb) instead of بدء.
+    - Current: `قبل بدأ الإزالة`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `قبل بدء الإزالة`
+    - After قبل, the verbal noun بدء is required. بدأ is the past-tense verb "he started".
+- `stub-blurb-first-devedition` — `browser/installer/nsisstrings.ftl` — Ungrammatical phrase: "لبناء لشبكة" puts an extra لـ after the noun لبناء.
+    - Current: `استعد لبناء لشبكة مفتوحة`
+    - Source: `Get ready to build for the open web`
+    - Suggest: `استعد للبناء للوِب المفتوح`
+    - The verbal noun لبناء cannot be followed by the preposition لـ in this construction. As written, the sentence is broken Arabic for "Get ready to build for the open web".
+- `nsis-byte` — `browser/installer/override.ftl` — The Arabic word for 'byte' is misspelled 'بابت' instead of 'بايت'.
+    - Current: `بابت`
+    - Source: `B`
+    - Suggest: `بايت`
+    - The en-US 'B' is the byte unit, and the standard Arabic spelling is 'بايت'. 'بابت' is a typo.
+- `nsis-components-text` — `browser/installer/override.ftl` — The conjunction و is written as a separate word.
+    - Current: `و لا تختر`
+    - Source: `Check the components you want to install and uncheck the components you don’t want to install. { $ClickInstructions }`
+    - Suggest: `ولا تختر`
+    - In Arabic spelling, the conjunction و attaches to the word that follows it.
+- `nsis-dir-text` — `browser/installer/override.ftl` — The conjunction و is written as a separate word.
+    - Current: `و اختر`
+    - Source: `Setup will install { $BrandFullNameDA } in the following folder. To install in a different folder, click Browse and select another folder. { $ClickInstructions }`
+    - Suggest: `واختر`
+    - In Arabic spelling, the conjunction و attaches to the word that follows it.
+- `nsis-error-decompressing` — `browser/installer/override.ftl` — The wrong preposition 'عن' is used where 'عند' ('when/while') is needed.
+    - Current: `خطأ عن فك ضغط البيانات`
+    - Source: `Error decompressing data! Corrupted installer?`
+    - Suggest: `خطأ عند فك ضغط البيانات`
+    - 'خطأ عن' is ungrammatical here. The source means 'error while decompressing', which is 'خطأ عند' or 'خطأ أثناء', the same wording other strings in this file use.
+- `nsis-license-text-rb` — `browser/installer/override.ftl` — The two nouns are reversed: "رخصة الاتفاقية" means "the agreement's licence", not "licence agreement".
+    - Current: `بنود رخصة الاتفاقية`
+    - Source: `Please review the license agreement before installing { $BrandFullNameDA }. If you accept all terms of the agreement, select the first option below. { $ClickInstructions }`
+    - Suggest: `بنود اتفاقية الرخصة`
+    - The en-US says "license agreement". The other installer strings, such as nsis-accept-btn, correctly use اتفاقية الرخصة.
 - `ExecShell` — `browser/installer/override.properties` — The NSIS internal identifier “ExecShell” is translated as “install shell”.
     - Current: `قشرة التثبيت:`
     - Source: `"ExecShell: "`
@@ -1004,7 +1152,7 @@ _Nothing reported._
 - `appmenu-help-share-ideas` — `browser/browser/appmenu.ftl` — `appmenu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والتعليقات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `decoder-doctor-unsupported-libavcodec-message` — `browser/browser/browser.ftl` — Stray space after the conjunction و, which is written joined to the next word in Arabic.
     - Current: `و يجب`
     - Source: `libavcodec may be vulnerable or is not supported, and should be updated to play video.`
@@ -1013,15 +1161,24 @@ _Nothing reported._
 - `menu-share-mac-picker-multiple` — `browser/browser/browser.ftl` — `menu-share-mac-picker-multiple` uses three dots where this locale uses …
     - Current: `الرسائل والبريد والمزيد...`
     - Source: `accesskey: M label: Messages, Mail, and More…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `main-context-menu-pdfjs-save-page` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page` uses three dots where this locale uses …
     - Current: `احفظ التحديد باسم...`
     - Source: `label: Save selection as…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — `main-context-menu-pdfjs-save-page2` uses three dots where this locale uses …
+    - Current: `احفظ التحديد باسم...`
+    - Source: `accesskey: S label: Save selection as…`
+    - The tree uses … 381 times against 14 ASCII runs.
+- `main-context-menu-pdfjs-save-page2` — `browser/browser/browserContext.ftl` — Three ASCII periods are used where the locale uses the single ellipsis character.
+    - Current: `احفظ التحديد باسم...`
+    - Source: `accesskey: S label: Save selection as…`
+    - Suggest: `احفظ التحديد باسم…`
+    - The locale's convention is the ellipsis character (…), used 366 times against 13 ASCII uses.
 - `content-sharing-modal-generating-page` — `browser/browser/contentSharing.ftl` — `content-sharing-modal-generating-page` uses three dots where this locale uses …
     - Current: `يولّد الصفحة...`
     - Source: `label: Generating page…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `continuous-onboarding-firefox-view-tab-pickup-subtitle` — `browser/browser/featureCallout.ftl` — “bookmarks” rendered with a term the rest of the tree never uses.
     - Current: `الإشارات المرجعية`
     - Source: `Access your open tabs from any device. Plus sync your bookmarks, passwords, and more.`
@@ -1040,15 +1197,15 @@ _Nothing reported._
 - `ipprotection-connection-status-connecting-1` — `browser/browser/ipProtection.ftl` — `ipprotection-connection-status-connecting-1` uses three dots where this locale uses …
     - Current: `يتصل VPN...`
     - Source: `(value): VPN is connecting… aria-label: VPN is connecting…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `menu-file-share-qrcode` — `browser/browser/menubar.ftl` — `menu-file-share-qrcode` uses three dots where this locale uses …
     - Current: `ولّد رمز QR...`
     - Source: `accesskey: Q label: Generate QR Code…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `menu-help-share-ideas` — `browser/browser/menubar.ftl` — `menu-help-share-ideas` uses three dots where this locale uses …
     - Current: `شارك الأفكار والانطباعات...`
     - Source: `accesskey: S label: Share Ideas and Feedback…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `menu-profiles-manage-profiles` — `browser/browser/menubar.ftl` — “Profiles” rendered as ملفات الإعدادات (settings files) in the same menu that uses ملفات شخصية.
     - Current: `أدِر ملفات الإعدادات`
     - Source: `label: Manage Profiles`
@@ -1072,11 +1229,11 @@ _Nothing reported._
 - `onboarding-live-language-installing` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-installing` uses three dots where this locale uses …
     - Current: `جارٍ تثبيت حزمة اللغة لـ{ $negotiatedLanguage }...`
     - Source: `Installing the language pack for { $negotiatedLanguage }…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `onboarding-live-language-waiting-button` — `browser/browser/newtab/onboarding.ftl` — `onboarding-live-language-waiting-button` uses three dots where this locale uses …
     - Current: `جارٍ الحصول على اللغات المتاحة...`
     - Source: `Getting available languages…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `panic-button-delete-history` — `browser/browser/panicButton.ftl` — “History” rendered as السجل where the locale uses التأريخ.
     - Current: `تحذف <strong>السجل</strong> الحديث`
     - Source: `Delete Recent <strong>History</strong>`
@@ -1095,11 +1252,11 @@ _Nothing reported._
 - `sync-syncing-across-devices-empty-state2` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state2` uses three dots where this locale uses …
     - Current: `أنت لا تُزامن أي شيء... حتى الآن. ابدأ المزامنة للحصول على جميع بياناتك على جميع أجهزتك.`
     - Source: `description: You aren’t syncing anything… yet. Start syncing to get all of your data on all your devices. label: Manage synced data`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `sync-syncing-across-devices-empty-state3` — `browser/browser/preferences/preferences.ftl` — `sync-syncing-across-devices-empty-state3` uses three dots where this locale uses …
     - Current: `لم تُزامِن أي شيء... حتى الآن. اختر ما تريد مُزامنته على هذا الجهاز.`
     - Source: `description: You aren’t syncing anything… yet. Choose what to sync on this device. label: Manage synced data`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `site-data-removing-header` — `browser/browser/preferences/siteDataSettings.ftl` — “Cookies” rendered as “ملفات تعريف الارتباط” in the Removing section while the rest of the same dialog uses “الكعكات”
     - Current: `إزالة ملفات تعريف الارتباط و بيانات المواقع`
     - Source: `Removing Cookies and Site Data`
@@ -1128,7 +1285,7 @@ _Nothing reported._
 - `sanitize-calculating-size` — `browser/browser/sanitize.ftl` — `sanitize-calculating-size` uses three dots where this locale uses …
     - Current: `يحسب...`
     - Source: `Calculating…`
-    - The tree uses … 373 times against 13 ASCII runs.
+    - The tree uses … 381 times against 14 ASCII runs.
 - `sanitize-dialog-title2` — `browser/browser/sanitize.ftl` — Dialog title calls cookies ملفات تعريف الارتباط while its own checkbox calls them الكعكات.
     - Current: `امحُ بيانات التصفح وملفات تعريف الارتباط`
     - Source: `style: min-width: 34em title: Clear browsing data and cookies`

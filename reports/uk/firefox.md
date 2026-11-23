@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Generated** | 2026-11-16 |
-| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `d1d139c060cf` |
-| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `256910d2ac36` |
-| **Previous run** | 2026-11-09 @ `74047c5347bc` |
+| **Generated** | 2026-11-23 |
+| **Locale tree** | `https://github.com/mozilla-l10n/firefox-l10n` @ `4f181c236f19` |
+| **en-US reference** | `https://github.com/mozilla-l10n/firefox-l10n-source` @ `aadbf7c9bb44` |
+| **Previous run** | 2026-11-16 @ `d1d139c060cf` |
 | **Mode** | incremental |
-| **Strings reviewed this run** | 0 of 15,393 |
+| **Strings reviewed this run** | 232 of 15,584 |
 
 Findings are keyed by string id, never by line number. The locale is assessed against its source only.
 
@@ -18,13 +18,56 @@ Also for uk: [Firefox for Android](android.md) · [Focus for Android](focus_andr
 
 ## Changes in this run
 
-### 🆕 New findings (0)
+### 🆕 New findings (7)
 
-_No new findings._
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — Missing comma before the subordinate clause introduced by «чому».
+    - Current: `Розкажіть Mozilla чому ви видалили`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `Розкажіть Mozilla, чому ви видалили`
+    - Ukrainian punctuation rules require a comma before a subordinate clause, here one starting with «чому». The current text lacks that comma, so it is ungrammatical.
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — Incorrect imperative form "Очистьте"; the correct form is "Очистіть".
+    - Current: `Очистьте`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `Очистіть`
+    - The plural imperative of the verb очистити is "очистіть". "Очистьте" is not a valid Ukrainian form.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — A comma is missing after the clause "Перш ніж почати".
+    - Current: `Перш ніж почати переконайтеся`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Перш ніж почати, переконайтеся`
+    - Ukrainian punctuation rules require a comma to separate the adverbial clause introduced by "перш ніж" from the main clause.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — "Wizard" is translated as "помічник" here, but as "майстер" in every other installer string.
+    - Current: `Цей помічник допоможе`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Цей майстер допоможе`
+    - The title of the same page and all other installer and uninstaller strings use "майстер" for "wizard". "помічник" is inconsistent within the same wizard surface.
+- `stub-blurb-first` — `browser/installer/nsisstrings.ftl` — "Інтернетом" is capitalized, contrary to current Ukrainian spelling and the lowercase "інтернет" used in stub-blurb-third.
+    - Current: `відкритим Інтернетом`
+    - Source: `Get ready to roam on the open web`
+    - Suggest: `відкритим інтернетом`
+    - Under the 2019 Ukrainian orthography "інтернет" is a common noun written in lowercase; the same installer surface uses lowercase in stub-blurb-third, so this is inconsistent.
+- `error-download-cont` — `browser/installer/nsisstrings.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"ОК"`
+    - Source: `It looks like { $BrandShortName } couldn’t be installed. Choose OK to start over.`
+    - Suggest: `«ОК»`
+    - The locale convention for quotes is curly double; straight quotes deviate from it.
+- `dialog-button-accept` — `toolkit/toolkit/global/dialog.ftl` — The OK button label seems to mix scripts: a Latin "O" followed by a Cyrillic "К".
+    - Current: `OК`
+    - Source: `label: OK`
+    - Suggest: `OK`
+    - The label seems to combine the Latin letter O with the Cyrillic letter К. Mixing scripts in one word looks the same on screen but breaks text matching and screen-reader output. The label should use one script throughout, like the en-US "OK".
 
-### ✅ Fixed since the last run (0)
+### ✅ Fixed since the last run (2)
 
-_Nothing was fixed._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Відновити дані” but the string it names, `restore-from-backup-header`, reads “Відновіть свої дані”
+    - Current: `Натисніть “Відновити дані” та виберіть цей файл`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Відновіть свої дані`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Відновити дані” but the string it names, `restore-from-backup-header`, reads “Відновіть свої дані”
+    - Current: `Натисніть “Відновити дані” та виберіть цей файл`
+    - Source: `Click “Restore your data” and select this file`
+    - Suggest: `Відновіть свої дані`
+    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 
 ### ↩︎ Withdrawn — no longer considered a defect (0)
 
@@ -44,9 +87,9 @@ _Nothing retired._
 
 | Check | Result |
 |---|---|
-| Files | 328 |
-| Strings | 15,393 |
-| Missing strings | 1,490 |
+| Files | 333 |
+| Strings | 15,584 |
+| Missing strings | 1,536 |
 | Obsolete strings | 0 |
 | Files absent from the locale | 3 |
 | Files with no en-US counterpart | 0 |
@@ -55,7 +98,7 @@ _Nothing retired._
 | Variable & placeholder mismatches | 1 |
 | Term parameter mismatches | 0 |
 | Plural variants (dead or missing forms) | 0 |
-| Text quoting a UI label that no longer matches | 4 |
+| Text quoting a UI label that no longer matches | 2 |
 | Source-language spellings left unchanged | 0 |
 | Access keys not in their label | 0 |
 | Markup & `data-l10n-name` defects | 1 |
@@ -63,19 +106,19 @@ _Nothing retired._
 
 ### Completeness
 
-**1,490 strings** are not translated yet, concentrated in:
+**1,536 strings** are not translated yet, concentrated in:
 
-- `browser/browser/newtab/newtab.ftl` — 378
-- `browser/browser/newtab/onboarding.ftl` — 80
-- `browser/browser/ipProtection.ftl` — 67
-- `browser/browser/preferences/preferences.ftl` — 67
+- `browser/browser/newtab/newtab.ftl` — 374
+- `browser/browser/newtab/onboarding.ftl` — 78
+- `browser/browser/ipProtection.ftl` — 72
+- `browser/browser/preferences/preferences.ftl` — 69
+- `browser/browser/aiWindow.ftl` — 45
 - `browser/browser/newtab/asrouter.ftl` — 39
 - `toolkit/toolkit/pdfviewer/viewer.ftl` — 37
-- `toolkit/toolkit/formautofill/formAutofill.ftl` — 34
+- `browser/browser/browser.ftl` — 30
 - `toolkit/toolkit/global/theme-picker.ftl` — 30
-- `browser/browser/browser.ftl` — 29
 - `browser/browser/genai.ftl` — 28
-- `toolkit/toolkit/about/aboutProcesses.ftl` — 28
+- `toolkit/toolkit/about/aboutAddons.ftl` — 27
 - `browser/browser/firefoxView.ftl` — 26
 
 **Files absent from the locale:**
@@ -92,9 +135,9 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 | Convention | Counts | Inferred |
 |---|---|---|
-| quotes | `curly-double` 510, `straight-double` 128, `curly-single` 112 | **curly-double** |
-| apostrophe | `typographic` 127, `straight` 728 | **straight** |
-| ellipsis | `char` 384, `ascii` 4 | **char** |
+| quotes | `curly-double` 510, `straight-double` 129, `curly-single` 112 | **curly-double** |
+| apostrophe | `typographic` 127, `straight` 739 | **straight** |
+| ellipsis | `char` 394, `ascii` 4 | **char** |
 | dash | `em` 14, `en` 99 | **en** |
 | nbsp | `total` 4, `space-before-punctuation` 7 | _mixed_ |
 
@@ -107,15 +150,15 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
 
 ---
 
-## 3. Open findings (203)
+## 3. Open findings (208)
 
 
 | Impact | Meaning | Count |
 |---|---|---|
 | 1 | Broken output (blank value, broken markup, wrong variable) | 112 |
-| 2 | Wrong content (says something other than the English) | 82 |
-| 3 | Degraded language (grammar, spelling, terminology) | 6 |
-| 4 | Cosmetic (typography, spacing) | 3 |
+| 2 | Wrong content (says something other than the English) | 80 |
+| 3 | Degraded language (grammar, spelling, terminology) | 11 |
+| 4 | Cosmetic (typography, spacing) | 5 |
 
 ### A. Functional, markup, variables & plurals
 
@@ -524,6 +567,26 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `title: Cryptominers Blocked`
     - Suggest: `Заблоковано криптомайнерів`
     - “криптомайренів” is a typo; every other occurrence in the tree spells it “криптомайнер(ів)”.
+- `un-survey-checkbox-label` — `browser/installer/custom.ftl` — Missing comma before the subordinate clause introduced by «чому».
+    - Current: `Розкажіть Mozilla чому ви видалили`
+    - Source: `Tell Mozilla why you uninstalled { $BrandShortName }`
+    - Suggest: `Розкажіть Mozilla, чому ви видалили`
+    - Ukrainian punctuation rules require a comma before a subordinate clause, here one starting with «чому». The current text lacks that comma, so it is ungrammatical.
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — A comma is missing after the clause "Перш ніж почати".
+    - Current: `Перш ніж почати переконайтеся`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Перш ніж почати, переконайтеся`
+    - Ukrainian punctuation rules require a comma to separate the adverbial clause introduced by "перш ніж" from the main clause.
+- `stub-blurb-first` — `browser/installer/nsisstrings.ftl` — "Інтернетом" is capitalized, contrary to current Ukrainian spelling and the lowercase "інтернет" used in stub-blurb-third.
+    - Current: `відкритим Інтернетом`
+    - Source: `Get ready to roam on the open web`
+    - Suggest: `відкритим інтернетом`
+    - Under the 2019 Ukrainian orthography "інтернет" is a common noun written in lowercase; the same installer surface uses lowercase in stub-blurb-third, so this is inconsistent.
+- `stub-cleanup-checkbox-label` — `browser/installer/nsisstrings.ftl` — Incorrect imperative form "Очистьте"; the correct form is "Очистіть".
+    - Current: `Очистьте`
+    - Source: `Clean up and speed up. Go back to default settings and delete old add-ons.`
+    - Suggest: `Очистіть`
+    - The plural imperative of the verb очистити is "очистіть". "Очистьте" is not a valid Ukrainian form.
 - `inactive-css-position-property-on-unpositioned-box-fix` — `devtools/client/tooltips.ftl` — The CSS property name inside <strong> is translated, although the section comment says CSS properties must not be translated.
     - Current: `Спробуйте налаштувати його властивість <strong>позиції</strong> на щось інше, ніж <strong>static</strong>.`
     - Source: `Try setting its <strong>position</strong> property to something other than <strong>static</strong>. { learn-more }`
@@ -617,16 +680,6 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `{$count ->} [1] This will remove the password saved to { -brand-short-name } on all your synced devices. This will also remove any breach alerts that appear here. You cannot undo this action. [other] This will remove al…`
     - Suggest: `[1] Ця дія призведе до вилучення пароля, збереженого у { -brand-short-name }, на всіх синхронізованих пристроях`
     - en-US uses the singular "the password" in the [1] variant, and the non-synced counterpart about-logins-confirm-remove-all-dialog-message2 correctly uses "пароля" there; this variant claims all passwords will be deleted.
-- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — `backup-file-moz-browser-restore-step-2-1` quotes “Відновити дані” but the string it names, `restore-from-backup-header`, reads “Відновіть свої дані”
-    - Current: `Натисніть “Відновити дані” та виберіть цей файл`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Відновіть свої дані`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
-- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — `backup-file-other-browser-restore-step-3-1` quotes “Відновити дані” but the string it names, `restore-from-backup-header`, reads “Відновіть свої дані”
-    - Current: `Натисніть “Відновити дані” та виберіть цей файл`
-    - Source: `Click “Restore your data” and select this file`
-    - Suggest: `Відновіть свої дані`
-    - In the source this string quotes “Restore your data”, which is exactly the value of `restore-from-backup-header` -- it is naming a piece of UI. The two have been translated differently, so the message points at a label the user cannot see. Fixing either string resolves this, and the check is re-derived every run.
 - `menu-edit-bidi-switch-text-direction` — `browser/browser/menubar.ftl` — “Switch Text Direction” is rendered identically to “Switch Page Direction”.
     - Current: `Перемкнути напрям тексту на сторінці`
     - Source: `accesskey: w label: Switch Text Direction`
@@ -692,6 +745,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Tell Mozilla why you uninstalled $BrandShortName`
     - Suggest: `Розкажіть Mozilla, чому ви видалили $BrandShortName`
     - Ukrainian punctuation requires a comma before a subordinate clause introduced by "чому".
+- `mui-untext-welcome-info-text` — `browser/installer/mui.ftl` — "Wizard" is translated as "помічник" here, but as "майстер" in every other installer string.
+    - Current: `Цей помічник допоможе`
+    - Source: `This wizard will guide you through the uninstallation of { $BrandFullNameDA }.  Before starting the uninstallation, make sure { $BrandFullNameDA } is not running.  { $ClickInstructions }`
+    - Suggest: `Цей майстер допоможе`
+    - The title of the same page and all other installer and uninstaller strings use "майстер" for "wizard". "помічник" is inconsistent within the same wizard surface.
 - `MUI_UNTEXT_WELCOME_INFO_TEXT` — `browser/installer/mui.properties` — Missing comma after the fronted adverbial clause.
     - Current: `Перш ніж почати переконайтеся, що $BrandFullNameDA не запущено.`
     - Source: `This wizard will guide you through the uninstallation of $BrandFullNameDA.  Before starting the uninstallation, make sure $BrandFullNameDA is not running.  $_CLICK`
@@ -915,6 +973,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Stop Sharing`
     - Suggest: `Припинити спільний доступ`
     - The en-US button label has no terminal punctuation, and no other button label in this file carries one.
+- `error-download-cont` — `browser/installer/nsisstrings.ftl` — Straight double quotes are used instead of the locale's curly double quotes.
+    - Current: `"ОК"`
+    - Source: `It looks like { $BrandShortName } couldn’t be installed. Choose OK to start over.`
+    - Suggest: `«ОК»`
+    - The locale convention for quotes is curly double; straight quotes deviate from it.
 - `accessibility.badge.textLabel` — `devtools/client/accessibility.properties` — “text label” on the badge uses “ярлик” while the matching filter and tooltips use “мітка”.
     - Current: `accessibility.badge.textLabel = текстовий ярлик`
     - Source: `text label`
@@ -970,6 +1033,11 @@ Counted over the whole tree. Checks flag deviations from the locale's **own** ma
     - Source: `Split, merge, and more. <a data-l10n-name="features-link">See PDF features</a>`
     - Suggest: `об'єднання`
     - The uk tree uses the straight apostrophe as its convention (717 straight vs 126 typographic).
+- `dialog-button-accept` — `toolkit/toolkit/global/dialog.ftl` — The OK button label seems to mix scripts: a Latin "O" followed by a Cyrillic "К".
+    - Current: `OК`
+    - Source: `label: OK`
+    - Suggest: `OK`
+    - The label seems to combine the Latin letter O with the Cyrillic letter К. Mixing scripts in one word looks the same on screen but breaks text matching and screen-reader output. The label should use one script throughout, like the en-US "OK".
 
 ---
 
@@ -997,6 +1065,7 @@ _Nothing withdrawn._
 
 _A finding is withdrawn when a check stops raising it while the string itself never changed: the check was wrong, not the translation. Kept separate from fixes so the fixed count stays honest._
 
-### Fixed to date (0)
+### Fixed to date (2)
 
-_Nothing fixed yet._
+- `backup-file-moz-browser-restore-step-2-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23
+- `backup-file-other-browser-restore-step-3-1` — `browser/browser/backupSettings.ftl` — fixed 2026-11-23

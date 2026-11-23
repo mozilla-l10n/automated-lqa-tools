@@ -2460,13 +2460,13 @@
    "source": "Your computer must be restarted to complete a previous upgrade of $BrandShortName. Do you want to reboot now?",
    "original": "您的電腦必須重新啟動以完成升級 $BrandShortName。您想要立刻重新啟動電腦嗎？",
    "text": "您的電腦必須重新啟動以完成先前的 $BrandShortName 升級。您想要立刻重新啟動電腦嗎？",
-   "status": "approved",
-   "status_date": "2026-11-08",
+   "status": "rejected",
+   "status_date": "2026-11-21",
    "comment": "",
    "pontoon_pk": 12396404,
    "pontoon_url": "https://pontoon.mozilla.org/zh-TW/firefox/browser/installer/custom.properties/?string=79043",
-   "outcome": "approved",
-   "note": "approved in Pontoon; the finding closes as fixed when the repository has the new text"
+   "outcome": "moved",
+   "note": "rejected, and the translation has changed since the suggestion; the finding stays open for the next review"
   },
   {
    "date": "2026-11-08",
